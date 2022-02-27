@@ -18,9 +18,6 @@ scenario_file = INPUT_FOLDER + scenario_file_name
 
 
 def evaluate_brain():
-    # f = open(scenario_json_file, )
-    # scenario = json.load(f)
-
     # Create Brains
 
     # Brain object in Python, fresh Dataset

@@ -1,60 +1,152 @@
+""" Filename:     main.py
+    Author(s):    Thomas Bellucci
+    Description:  This file contains the interaction loop for the Chatbot defined in chatbots.py. By
+                  typing 'plot' the chatbot will plot a graph with learnt thought statistics (if mode='RL')
+                  and 'quit' ends the interaction.
+    Date created: Nov. 11th, 2021
+"""
+import argparse
 import json
 import os
-from pathlib import Path
+from datetime import date
+from random import getrandbits
 
-from cltl.brain.long_term_memory import LongTermMemory
-from cltl.brain.utils.helper_functions import brain_response_to_json
-from cltl.combot.backend.api.discrete import UtteranceType
-from cltl.reply_generation.rl_replier import RLReplier
-from tqdm import tqdm
+import requests
 
-# Read scenario from file
+from src.chatbot.chatbots import Chatbot
+
 ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
-DATA_FOLDER = ABSOLUTE_PATH + f'/../data'
-INPUT_FOLDER = DATA_FOLDER + f'/combots_convos_capsules/'
-OUTPUT_FOLDER = DATA_FOLDER + f'/processed/'
+RESOURCES_PATH = ABSOLUTE_PATH + "/../../resources/"
+THOUGHTS_FILE = "thoughts.json"
 
-scenario_file_name = '0.json'
-scenario_json_file = INPUT_FOLDER + scenario_file_name
+context_id = getrandbits(8)
+place_id = getrandbits(8)
+location = requests.get("https://ipinfo.io").json()
+
+carl_scenario = [
+    {
+        "chat": 1,
+        "turn": 1,
+        "author": "carl",  # speaker of scenario
+        "utterance": "I need to take my cough syrup, but I cannot find it.",  # sequence of mention
+        "utterance_type": "STATEMENT",
+        "position": "0-25",  # segment of the annotation
+        "subject": {"label": "carl", "type": ["person"],
+                    'uri': "http://cltl.nl/leolani/world/carl-1"},  # annotations of type NER
+        "predicate": {"label": "see", "uri": "http://cltl.nl/leolani/n2mu/see"},  # annotation of type x
+        "object": {"label": "cough syrup", "type": ["object", "medicine"],
+                   'uri': "http://cltl.nl/leolani/world/cough-syrup"},  # annotations of type NER
+        "perspective": {"certainty": 1, "polarity": -1, "sentiment": -1},  # annotation of type x (still to be done)
+        "context_id": context_id,
+        "date": date(2021, 3, 12).isoformat(),  # we take them from the temporal container of scenario
+        "place": "Carl's room",
+        "place_id": place_id,
+        "country": location['country'],
+        "region": location['region'],
+        "city": location['city'],
+        "objects": [{'type': 'chair', 'confidence': 0.68, 'id': 1},
+                    {'type': 'table', 'confidence': 0.79, 'id': 1}],  # Usually come from Vision
+        "people": [{'name': 'Carl', 'confidence': 0.94, 'id': 1}]  # Usually come from Vision
+    },
+    {
+        "chat": 1,
+        "turn": 2,
+        "author": "leolani",
+        "utterance": "I found them. They are under the table.",
+        "utterance_type": "STATEMENT",
+        "position": "0-25",
+        "subject": {"label": "pills", "type": ["object"], 'uri': "http://cltl.nl/leolani/world/pills"},
+        "predicate": {"label": "located under", "uri": "http://cltl.nl/leolani/n2mu/located-under"},
+        "object": {"label": "table", "type": ["object"], 'uri': "http://cltl.nl/leolani/world/table"},
+        "perspective": {"certainty": 1, "polarity": 1, "sentiment": 0},
+        "context_id": context_id,
+        "date": date(2021, 3, 12).isoformat(),
+        "place": "Carl's room",
+        "place_id": place_id,
+        "country": location['country'],
+        "region": location['region'],
+        "city": location['city'],
+        "objects": [{'type': 'chair', 'confidence': 0.56, 'id': 1},
+                    {'type': 'table', 'confidence': 0.87, 'id': 1},
+                    {'type': 'pillbox', 'confidence': 0.92, 'id': 1}],
+        "people": []
+    },
+    {
+        "chat": 1,
+        "turn": 3,
+        "author": "carl",
+        "utterance": "Oh! Got it. Thank you.",
+        "utterance_type": "STATEMENT",
+        "position": "0-25",
+        "subject": {"label": "carl", "type": ["person"], 'uri': "http://cltl.nl/leolani/world/carl-1"},
+        "predicate": {"label": "see", "uri": "http://cltl.nl/leolani/n2mu/see"},
+        "object": {"label": "pills", "type": ["object"], 'uri': "http://cltl.nl/leolani/world/pills"},
+        "perspective": {"certainty": 1, "polarity": 1, "sentiment": 1},
+        "context_id": context_id,
+        "date": date(2021, 3, 12).isoformat(),
+        "place": "Carl's room",
+        "place_id": place_id,
+        "country": location['country'],
+        "region": location['region'],
+        "city": location['city'],
+        "objects": [{'type': 'chair', 'confidence': 0.59, 'id': 1},
+                    {'type': 'table', 'confidence': 0.73, 'id': 1},
+                    {'type': 'pillbox', 'confidence': 0.32, 'id': 1}],
+        "people": [{'name': 'Carl', 'confidence': 0.98, 'id': 1}]
+    }
+]
 
 
-def converse():
-    f = open(scenario_json_file, )
-    scenario = json.load(f)
+def main(args):
+    """Runs the main interaction loop of the chatbot."""
+    # Sets up chatbot with a Lenka-, RL- or NSPReplier
+    chatbot = Chatbot(args.speaker, args.mode, args.savefile)
+    print("\nBot:", chatbot.greet)
 
-    # Create objects
-    brain = LongTermMemory(address="http://localhost:7200/repositories/thought-selection",
-                           log_dir=Path("../logs"),
-                           clear_all=True)
+    # Interaction loop
+    # for capsule in carl_scenario:
+    while True:
+        capsule = input("\nYou: ")
 
-    replier = RLReplier(brain, Path(ABSOLUTE_PATH + "/../resources/thoughts.json"))
+        if capsule == "quit":
+            break
 
-    # Recreate conversation through ingesting capsules
-    for capsule in tqdm(scenario):
-        # Add information to the brain
-        print(f"\n\n---------------------------------------------------------------\n")
+        if capsule == "plot":
+            chatbot.replier.thought_selector.plot()
+            continue
 
-        # STATEMENT
-        if capsule["utterance_type"] in [UtteranceType.STATEMENT, 'STATEMENT']:
-            # Update Brain -> communicate a thought
-            brain_response = brain.update(capsule, reason_types=True, create_label=True)
-            brain_response = brain_response_to_json(brain_response)
+        capsule, capsule_user, brain_response = chatbot.respond(capsule)
+        print("\nCarl:", json.dumps(brain_response['statement'], indent=2))
+        print("\nBot:", capsule)
+        print("\nCarl desired:", json.dumps(capsule_user, indent=2))
 
-            # Romanas chimp here between brain before and after update,
-            # get data as trig from triple store
-
-            # Reward chosen thought
-            replier.reward_thought()
-            reply = replier.reply_to_statement(brain_response)
-
-            # Report
-            print(f"\n{capsule['triple']}\n")
-            print(f"{capsule['author']}: {capsule['utterance']}")
-            print(f"Leolani: {reply}")
-            print(f"Brain states: {replier.brain_states}")
+    # Farewell + update savefile
+    print("\nBot:", chatbot.farewell)
+    chatbot.close()
 
 
 if __name__ == "__main__":
-    converse()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--speaker", default="john", type=str, help="Name of the speaker (e.g. 'john')"
+    )
+    parser.add_argument(
+        "--mode",
+        default="RL",
+        type=str,
+        choices=["RL", "NSP", "Lenka"],
+        help="Thought selection method: {'RL', 'NSP', 'Lenka'}",
+    )
+    parser.add_argument(
+        "--savefile",
+        default=THOUGHTS_FILE,
+        type=str,
+        help="Path to BERT for NSP (--method=NSP) or RL JSON (--method=RL)",
+    )
+    args = parser.parse_args()
+    print(
+        "\nUsing mode=%s with %s and speaker %s.\n"
+        % (args.mode, args.savefile, args.speaker)
+    )
 
-    print('ALL DONE')
+    main(args)
