@@ -5,7 +5,7 @@ import requests
 from cltl.brain.long_term_memory import LongTermMemory
 from rdflib import Graph
 
-from src.metrics.ontology_measures import *
+from src.chatbot.metrics.ontology_measures import get_number_classes
 
 # Read scenario from file
 ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
@@ -22,7 +22,7 @@ def evaluate_brain():
 
     # Brain object in Python, fresh Dataset
     brain = LongTermMemory(address="http://localhost:7200/repositories/thought-selection",
-                           log_dir=Path("../logs"),
+                           log_dir=Path("../../logs"),
                            clear_all=False)
 
     # Final log from corresponding convo
