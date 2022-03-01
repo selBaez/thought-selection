@@ -465,7 +465,7 @@ def phrase_trust(trust: float, utterance: dict) -> Tuple[Optional[dict], Optiona
 
     # Capsule with speaker trusts entity
     capsule_user = copy.deepcopy(BASE_CAPSULE)
-    capsule_user['subject'] = utterance['subject']
+    capsule_user['subject'] = {"label": utterance['author'], "type": [], "uri": None}
     capsule_user['predicate'] = {'label': 'trust', 'uri': 'http://cltl.nl/leolani/n2mu/trust'}
 
     return say, capsule_user
@@ -482,7 +482,7 @@ def phrase_fallback() -> Tuple[Optional[dict], Optional[dict]]:
     return say, capsule_user
 
 
-def structure_correct_thought(capsule_in, thought_type, thought_info, fallback=False):
+def structure_correct_thought(capsule_in, thought_type, thought_info, fallback=True):
     capsule_user = None
     reply = None
 

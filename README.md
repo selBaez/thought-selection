@@ -25,6 +25,16 @@ The code base consists of the following files:
 
 In order to run the code, install the required dependencies in `requirements.txt` using `pip install -r requirements.txt`; then run one of the following commands in the `src` directory:
 
+```bash
+conda create --name thought-selection python=3.7
+conda activate thought-selection
+pip install --upgrade pip
+pip install -r requirements.txt --no-cache
+python -m ipykernel install --name=thought-selection
+
+jupyter-lab
+```
+
 **Windows:**<br>
 
 RL:      `$ py -3 main.py --speaker=john --mode=RL --savefile=/../../resources/thoughts.json `<br>

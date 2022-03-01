@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Leolani, {{ reply.say }}!</h1>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.subject_label.label }}<br>
+        {{ form.subject_label(size=32) }}<br>
+        {% for error in form.subject_label.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.subject_types.label }}<br>
+        {{ form.subject_types(size=32) }}<br>
+        {% for error in form.subject_types.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{ form.subject_from_label() }} {{ form.subject_from_label.label }}</p>
+
+    <p>
+        {{ form.predicate_label.label }}<br>
+        {{ form.predicate_label(size=32) }}<br>
+        {% for error in form.predicate_label.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{ form.predicate_from_label() }} {{ form.predicate_from_label.label }}</p>
+
+    <p>
+        {{ form.object_label.label }}<br>
+        {{ form.object_label(size=32) }}<br>
+        {% for error in form.object_label.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.object_types.label }}<br>
+        {{ form.object_types(size=32) }}<br>
+        {% for error in form.object_types.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{ form.object_from_label() }} {{ form.object_from_label.label }}</p>
+
+    <p>
+        {{ form.perspective_certainty.label }}<br>
+        {{ form.perspective_certainty() }}<br>
+        {% for error in form.perspective_certainty.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+
+    <p>
+        {{ form.perspective_polarity.label }}<br>
+        {{ form.perspective_polarity() }}<br>
+        {% for error in form.perspective_polarity.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+
+    <p>
+        {{ form.perspective_sentiment.label }}<br>
+        {{ form.perspective_sentiment() }}<br>
+        {% for error in form.perspective_sentiment.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+
+
+    <p>{{ form.submit() }}</p>
+</form>
+
+{% for capsule in capsules %}
+<div><p> {{ capsule.speaker }} says: <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{
+    capsule.object.label }}</b></p></div>
+{% endfor %}
+
+{% endblock %}

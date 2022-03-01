@@ -12,12 +12,13 @@ from datetime import date
 from random import getrandbits
 
 import requests
+from cltl.brain.utils.base_cases import statements
 
 from src.chatbot.chatbots import Chatbot
 
 ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
-RESOURCES_PATH = ABSOLUTE_PATH + "/../../resources/"
-THOUGHTS_FILE = "thoughts.json"
+RESOURCES_PATH = ABSOLUTE_PATH + "/../resources/"
+THOUGHTS_FILE = RESOURCES_PATH + "thoughts.json"
 
 context_id = getrandbits(8)
 place_id = getrandbits(8)
@@ -104,24 +105,29 @@ def main(args):
     print("\nBot:", chatbot.greet)
 
     # Interaction loop
-    # for capsule in carl_scenario:
-    while True:
-        capsule = input("\nYou: ")
+    for capsule in statements:
+        # while True:
+        #     capsule = input("\nYou: ")
+        #     json.loads(capsule)
 
         if capsule == "quit":
             break
 
         if capsule == "plot":
-            chatbot.replier.thought_selector.plot()
+            chatbot.replier._RLReplier__thought_selector.plot(filename=RESOURCES_PATH)
             continue
 
-        capsule, capsule_user, brain_response = chatbot.respond(capsule)
-        print("\nCarl:", json.dumps(brain_response['statement'], indent=2))
-        print("\nBot:", capsule)
-        print("\nCarl desired:", json.dumps(capsule_user, indent=2))
+        try:
+            say, capsule_user, brain_response = chatbot.respond(capsule)
+            print("\nCarl:", json.dumps(brain_response['statement'], indent=2))
+            print("\nBot:", say)
+            print("\nCarl desired:", json.dumps(capsule_user, indent=2))
+        except:
+            break
 
     # Farewell + update savefile
     print("\nBot:", chatbot.farewell)
+    chatbot.replier._RLReplier__thought_selector.plot(filename=RESOURCES_PATH)
     chatbot.close()
 
 

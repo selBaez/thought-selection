@@ -18,20 +18,20 @@ from random import choice
 # Pip-installed ctl repositories
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.brain.utils.helper_functions import brain_response_to_json
+from cltl.combot.backend.api.discrete import UtteranceType
 from cltl.combot.backend.utils.casefolding import casefold_capsule
-from cltl.reply_generation.data.sentences import (GOODBYE, GREETING, SORRY,
-                                                  TALK_TO_ME)
+from cltl.reply_generation.data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
 from cltl.reply_generation.lenka_replier import LenkaReplier
 from cltl.reply_generation.nsp_replier import NSPReplier
 from cltl.reply_generation.rl_replier import RLReplier
 from cltl.reply_generation.utils.replier_utils import thoughts_from_brain
 
-from utils.chatbot_utils import capsule_for_query
-from utils.thoughts_utils import structure_correct_thought, copy_capsule_context, BASE_CAPSULE
+from src.chatbot.utils.chatbot_utils import capsule_for_query
+from src.chatbot.utils.thoughts_utils import structure_correct_thought, copy_capsule_context, BASE_CAPSULE
 
 
 class Chatbot:
-    def __init__(self, speaker, mode, savefile=None):
+    def __init__(self, chat_id, speaker, mode, savefile=None):
         """Sets up a Chatbot with a Leolani backend.
 
         params
@@ -43,14 +43,14 @@ class Chatbot:
         """
         # Set up Leolani backend modules
         self.__address = "http://localhost:7200/repositories/sandbox"
-        self.__brain = LongTermMemory(
-            address=self.__address, log_dir=Path("./../../logs"), clear_all=False
-        )
+        self.__brain = LongTermMemory(address=self.__address, log_dir=Path("./../../logs"), clear_all=False)
+        self.__brain_stats = []
 
         self.__mode = mode
         self.__savefile = savefile
-        self.__turns = 0
-        self.__speaker = speaker
+        self._chat_id = chat_id
+        self._speaker = speaker
+        self._turns = 0
 
         if mode == "RL":
             self.__replier = RLReplier(self.__brain, Path(savefile))
@@ -69,7 +69,7 @@ class Chatbot:
         """
         # Writes (optionally) a utilities JSON to disk
         if self.__savefile and self.__mode == "RL":
-            self.__replier.thought_selector.save(self.__savefile)
+            self.__replier._RLReplier__thought_selector.save(self.__savefile)
 
     @property
     def replier(self):
@@ -116,6 +116,34 @@ class Chatbot:
 
         return reply, capsule_user
 
+    def _score_brain(self, brain_response):
+        # Grab the thoughts
+        thoughts = brain_response['thoughts']
+
+        # Gather stats
+        stats = {
+            'turn': brain_response['statement']['turn'],
+            'cardinality conflicts': len(thoughts['_complement_conflict']),
+            'negation conflicts': len(thoughts['_negation_conflicts']),
+            'subject gaps': len(thoughts['_subject_gaps']),
+            'object gaps': len(thoughts['_complement_gaps']),
+            'statement novelty': len(thoughts['_statement_novelty']),
+            'subject novelty': thoughts['_entity_novelty']['_subject'],
+            'object novelty': thoughts['_entity_novelty']['_complement'],
+            'overlaps subject-predicate': len(thoughts['_overlaps']['_subject']),
+            'overlaps on predicate-object': len(thoughts['_overlaps']['_complement']),
+            'trust': thoughts['_trust'],
+
+            'Total explicit triples': len(self.__brain.dataset),
+            'Total semantic statements': self.__brain.count_statements(),
+            'Total perspectives': self.__brain.count_statements(),
+            'Total sources': self.__brain.count_friends(),
+            'Total predicates': len(self.__brain.get_predicates()),
+            'Total classes': len(self.__brain.get_classes())
+        }
+
+        self.__brain_stats.append(stats)
+
     def respond(self, capsule, return_br=True):
         """Parses the user input (as a capsule), queries and/or updates the brain
         and returns a reply by consulting the replier.
@@ -126,7 +154,7 @@ class Chatbot:
 
         returns: reply to input
         """
-        self.__turns += 1
+        self._turns += 1
 
         # ERROR
         say, capsule_user, brain_response = None, None, None
@@ -134,7 +162,7 @@ class Chatbot:
             say = choice(SORRY) + " I could not parse that. Can you rephrase?"
 
         # QUESTION
-        elif capsule["utterance_type"] == "QUESTION":
+        elif capsule["utterance_type"] in ["QUESTION", UtteranceType.QUESTION]:
             # Query Brain -> try to answer
             brain_response = self.__brain.query_brain(capsule_for_query(capsule))
             brain_response = brain_response_to_json(brain_response)
@@ -142,10 +170,10 @@ class Chatbot:
             if isinstance(self.__replier, RLReplier):
                 self.__replier.reward_thought()
 
-            say = self.__replier.reply_to_question(brain_response)
+            say, capsule_user = self.__replier.reply_to_question(brain_response), BASE_CAPSULE
 
         # STATEMENT
-        elif capsule["utterance_type"] == "STATEMENT":
+        elif capsule["utterance_type"] in ["STATEMENT", UtteranceType.STATEMENT]:
             # Update Brain -> communicate a thought
             brain_response = self.__brain.update(capsule, reason_types=True, create_label=True)
             brain_response = brain_response_to_json(brain_response)
@@ -154,10 +182,13 @@ class Chatbot:
                 self.__replier.reward_thought()
 
             say, capsule_user = self._select_rl_thought(brain_response)
+            self._score_brain(brain_response)
 
-        capsule_user['turn'] = self.__turns
-        capsule_user['author'] = self.__speaker
-        capsule_user = copy_capsule_context(capsule_user, brain_response['statement'])
+            capsule_user['chat'] = self._chat_id
+            capsule_user['turn'] = self._turns + 1
+            capsule_user['author'] = self._speaker
+            capsule_user['utterance_type'] = "STATEMENT"
+            capsule_user = copy_capsule_context(capsule_user, brain_response['statement'])
 
         if return_br:
             return say, capsule_user, brain_response
