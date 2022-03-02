@@ -9,22 +9,40 @@ location = requests.get("https://ipinfo.io").json()
 
 
 def capsule_to_form(capsule, form):
+    # Triple
     form.subject_label.data = capsule["subject"]["label"]
     form.subject_types.data = ','.join(capsule["subject"]["type"])
     form.predicate_label.data = capsule["predicate"]["label"]
     form.object_label.data = capsule["object"]["label"]
     form.object_types.data = ','.join(capsule["object"]["type"])
+
+    # perspective
     form.perspective_certainty.data = capsule["perspective"]["certainty"]
     form.perspective_polarity.data = capsule["perspective"]["polarity"]
     form.perspective_sentiment.data = capsule["perspective"]["sentiment"]
 
+    # chat
+    form.chat_id.data = capsule["chat"]
+    form.turn_id.data = capsule["turn"]
+    form.author.data = capsule["author"]
+
+    # utterance
+    form.utterance.data = capsule["utterance"]
+    form.utterance_type.data = capsule["utterance_type"]
+    form.position.data = capsule["position"]
+
+    # context
     form.context_id.data = capsule["context_id"]
-    # form.context_date.data = capsule["date"]# datetime.strftime(capsule["date"], "%Y-%m-%d")
+    # form.context_date.data = capsule["date"]# datetime.strptime(capsule["date"], "%Y-%m-%d")
+
+    # place
     form.place_label.data = capsule["place"]
     form.place_id.data = capsule["place_id"]
     form.country.data = capsule["country"]
     form.region.data = capsule["region"]
     form.city.data = capsule["city"]
+
+    # multimodal
     # form.objects.data = ','.join(capsule["objects"])
     # form.people.data = '.'.join(capsule["people"])
 
@@ -36,9 +54,9 @@ def form_to_capsule(form, chatbot):
     capsule["chat"] = chatbot._chat_id
     capsule["turn"] = chatbot._turns
     capsule["author"] = chatbot._speaker
-    capsule["utterance"] = ""
-    capsule["utterance_type"] = "STATEMENT"
-    capsule["position"] = ""
+    capsule["utterance"] = form.utterance.data
+    capsule["utterance_type"] = form.utterance_type.data
+    capsule["position"] = form.position.data
 
     capsule["subject"] = {"label": form.subject_label.data,
                           "type": form.subject_types.data.split(','),
@@ -53,7 +71,7 @@ def form_to_capsule(form, chatbot):
                               "sentiment": form.perspective_sentiment.data}
 
     capsule["context_id"] = form.context_id.data
-    capsule["date"] = "2021-03-12" # datetime.strptime(form.context_date.data, "%Y-%m-%d")
+    capsule["date"] = datetime.strftime(form.context_date.data, "%Y-%m-%d")
     capsule["place"] = form.place_label.data
     capsule["place_id"] = form.place_id.data
     capsule["country"] = form.country.data
@@ -109,7 +127,7 @@ def begin_form(form, chatbot):
             "sentiment": 1
         },
         "context_id": context_id,
-        "date": "2021-03-12",#datetime.now().date(),
+        "date": "2021-03-12",  # datetime.now().date(),
         "place": "office",
         "place_id": place_id,
         "country": location['country'],

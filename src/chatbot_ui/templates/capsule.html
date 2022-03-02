@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% block content %}
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -23,8 +24,7 @@
     </style>
 </head>
 
-{% block content %}
-<body>
+
 <h1>Leolani, {{ reply.say }}!</h1>
 
 <div class="row">
@@ -46,7 +46,6 @@
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-            <p>{{ form.subject_from_label() }} {{ form.subject_from_label.label }}</p>
 
             <p>
                 {{ form.predicate_label.label }}<br>
@@ -55,7 +54,6 @@
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-            <p>{{ form.predicate_from_label() }} {{ form.predicate_from_label.label }}</p>
 
             <p>
                 {{ form.object_label.label }}<br>
@@ -71,7 +69,6 @@
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-            <p>{{ form.object_from_label() }} {{ form.object_from_label.label }}</p>
             <!--Perspective info-->
             <p>
                 {{ form.perspective_certainty.label }}<br>
@@ -94,6 +91,50 @@
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
+            <!--Utterance info-->
+            <p>
+                {{ form.utterance.label }}<br>
+                {{ form.utterance(size=32) }}<br>
+                {% for error in form.utterance.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.utterance_type.label }}<br>
+                {{ form.utterance_type() }}<br>
+                {% for error in form.utterance_type.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.position.label }}<br>
+                {{ form.position() }}<br>
+                {% for error in form.position.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <!--Chat info-->
+            <p>
+                {{ form.chat_id.label }}<br>
+                {{ form.chat_id() }}<br>
+                {% for error in form.chat_id.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.turn_id.label }}<br>
+                {{ form.turn_id() }}<br>
+                {% for error in form.turn_id.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.author.label }}<br>
+                {{ form.author(size=32) }}<br>
+                {% for error in form.author.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
             <!--Context info-->
             <p>
                 {{ form.context_id.label }}<br>
@@ -109,6 +150,7 @@
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
+
             <!--Place info-->
             <p>
                 {{ form.place_id.label }}<br>
@@ -145,32 +187,18 @@
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-            <!--Multimodal info-->
-            <p>
-                {{ form.objects.label }}<br>
-                {{ form.objects(size=32) }}<br>
-                {% for error in form.objects.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>
-                {{ form.people.label }}<br>
-                {{ form.people(size=32) }}<br>
-                {% for error in form.people.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
+
 
             <p>{{ form.submit() }}</p>
         </form>
     </div>
-    <div class="column" style="background-color:#bbb;">
+    <div class="column">
         {% for capsule in capsules %}
-        <div><p> {{ capsule.speaker }} says: <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{
-            capsule.object.label }}</b></p></div>
+        <div><p> {{ capsule.turn }}, {{ capsule.author }} says:
+            <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{ capsule.object.label }}</b>
+            reward: {{ capsule.brain_state.label }}</p></div>
         {% endfor %}
     </div>
 </div>
-</body>
 {% endblock %}
 

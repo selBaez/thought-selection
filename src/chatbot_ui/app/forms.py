@@ -9,19 +9,30 @@ class TurnForm(FlaskForm):
     # Triple information
     subject_label = StringField('Subject label', validators=[DataRequired()])
     subject_types = StringField('Subject types', validators=[DataRequired()])
-    subject_from_label = BooleanField('Create URI from label')
+    # subject_from_label = BooleanField('Create URI from label')
 
     predicate_label = StringField('Predicate label', validators=[DataRequired()])
-    predicate_from_label = BooleanField('Create URI from label')
+    # predicate_from_label = BooleanField('Create URI from label')
 
     object_label = StringField('Object label', validators=[DataRequired()])
     object_types = StringField('Object types', validators=[DataRequired()])
-    object_from_label = BooleanField('Create URI from label')
+    # object_from_label = BooleanField('Create URI from label')
 
     # Perspective information
     perspective_certainty = FloatField('Certainty', validators=[DataRequired()])
     perspective_polarity = FloatField('Polarity', validators=[DataRequired()])
     perspective_sentiment = FloatField('Sentiment', validators=[DataRequired()])
+
+    # Chat information
+    chat_id = IntegerField('Chat ID', validators=[DataRequired()])
+    turn_id = IntegerField('Turn ID', validators=[DataRequired()])
+    author = StringField('Author', validators=[DataRequired()])
+
+    # Utterance info
+    utterance_types = ["STATEMENT", "QUESTION"]
+    utterance = StringField('Utterance', validators=[DataRequired()])
+    utterance_type = SelectField('Utterance type', choices=utterance_types, validators=[DataRequired()])
+    position = StringField('Position', default="", validators=[DataRequired()])
 
     # Context information
     context_id = IntegerField('Context ID', default=56, validators=[DataRequired()])
@@ -35,8 +46,8 @@ class TurnForm(FlaskForm):
     city = StringField('City', default='Amsterdam', validators=[DataRequired()])
 
     # Multimodal information
-    objects = StringField('Objects in the room', default='', validators=[DataRequired()])
-    people = StringField('People in the room', default='', validators=[DataRequired()])
+    # objects = StringField('Objects in the room', default='', validators=[DataRequired()])
+    # people = StringField('People in the room', default='', validators=[DataRequired()])
 
     submit = SubmitField('Submit capsule')
 

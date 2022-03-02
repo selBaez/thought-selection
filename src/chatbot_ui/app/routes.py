@@ -15,8 +15,8 @@ CAPSULES_SUBMITTED = []
 CAPSULES_SUGGESTED = []
 SAY_HISTORY = []
 
-def create_endpoints(app):
 
+def create_endpoints(app):
     @app.route('/', methods=['GET', 'POST'])
     @app.route('/index', methods=['GET', 'POST'])
     def index():
@@ -50,6 +50,9 @@ def create_endpoints(app):
             # if form has data, assign it to the capsule and send to chatbot
             form_in = TurnForm()
             form_out, reply, capsule, capsule_user = digest_form(form_in, CHATBOT)
+
+            # add reply and reward
+            capsule["brain_state"] = CHATBOT.replier.brain_states[-1]
             CAPSULES_SUBMITTED.append(capsule)
             SAY_HISTORY.append(reply)
             CAPSULES_SUGGESTED.append(capsule_user)
