@@ -35,6 +35,9 @@ pip install -r requirements.txt --no-cache
 python -m ipykernel install --name=thought-selection
 ```
 
+**Important* We are using the latest versions of cltl.brain and cltl.reply-generation so please clone the repo, pull the
+latests verions and install the packages into the virtual env.
+
 **Important:** In order to run NSP, make sure to download the NSP model and place the resource files into a
 directory `\next_sentence_prediction\model`. The model files can be found in the
 following [Google Drive folder](https://drive.google.com/drive/folders/10GEpnjqXn4DfyKjFjJG7KbJEygvdAI2J?usp=sharing).
@@ -64,6 +67,7 @@ Lenka: `$ python3 main.py --speaker=john --mode=Lenka `
 Initialize a Jupyter Lab session like so:
 
 ```bash
+cd src
 jupyter-lab
 ```
 
@@ -71,15 +75,14 @@ Now run the `interactive_chatbot.ipynb` notebook to begin chatting.
 
 ### Web based
 
-Run the backend API like so:
+Run the backend API from the `chatbot_ui` forlder, like so:
 
 ```bash
+cd src/chatbot_ui
 python application.py
 ```
 
 Now you can access [`http://127.0.0.1:5000/`](http://127.0.0.1:5000/) to begin chatting.
-
-
 
 ## Authors
 

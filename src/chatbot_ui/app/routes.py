@@ -20,14 +20,13 @@ def create_endpoints(app):
     @app.route('/', methods=['GET', 'POST'])
     @app.route('/index', methods=['GET', 'POST'])
     def index():
+        global CHATBOT
 
         # handle the POST request
         if request.method == 'POST':
-            form_in = ChatForm()
-
             # Create chatbot
-            global CHATBOT
-            CHATBOT = Chatbot(form_in.chat_id.data, form_in.speaker.data, "RL", THOUGHTS_FILE)
+            form_in = ChatForm()
+            CHATBOT = Chatbot(form_in.chat_id.data, form_in.speaker.data, "RL", form_in.reward.data, THOUGHTS_FILE)
             reply = {'say': CHATBOT.greet}
             form_out = TurnForm()
 
@@ -44,6 +43,8 @@ def create_endpoints(app):
         global CAPSULES_SUBMITTED
         global CAPSULES_SUGGESTED
         global SAY_HISTORY
+        global CHATBOT
+
         # handle the POST request
         if request.method == 'POST':
             # if form has data, assign it to the capsule and send to chatbot
@@ -52,33 +53,30 @@ def create_endpoints(app):
             CAPSULES_SUBMITTED.append(capsule)
             SAY_HISTORY.append(reply)
             CAPSULES_SUGGESTED.append(capsule_user)
-            print("I AM HERE, IN THE POST REQUEST")
 
-            return redirect(
-                url_for('capsule', title='Submit Capsule', form=form_out, reply=reply, capsules=CAPSULES_SUBMITTED))
+            return redirect(url_for('capsule', title='Submit Capsule',
+                                    form=form_out, reply=reply, capsules=CAPSULES_SUBMITTED))
 
         # handle the GET request
         elif request.method == 'GET':
-            # if form does not have data, try to prefill somethings from capsule_user or use template for first time
+            # if form does not have data, use templates
             form_in = TurnForm()
             if CHATBOT._turns == 0:
                 # First time, template
                 form_out, reply, capsule_user = begin_form(form_in, CHATBOT)
                 CAPSULES_SUGGESTED.append(capsule_user)
-                print("I AM HERE, IN THE FIRST GET REQUEST")
 
             else:
                 # Next times, use suggested templates
                 form_out = capsule_to_form(CAPSULES_SUGGESTED[-1], form_in)
                 reply = SAY_HISTORY[-1]
-                print("I AM HERE, IN THE OTHER GET REQUEST")
 
             if form_out.validate_on_submit():
                 flash('Fields missing for user {}, remember_me={}'.format(
                     form_out.subject_label.data, form_out.subject_from_label.data))
                 return redirect('/index')
 
-            return render_template('capsule.html', title='Submit Capsule', form=form_out, reply=reply,
-                                   capsules=CAPSULES_SUBMITTED)
+            return render_template('capsule.html', title='Submit Capsule',
+                                   form=form_out, reply=reply, capsules=CAPSULES_SUBMITTED)
 
     return app

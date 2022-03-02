@@ -1,3 +1,13 @@
+from datetime import datetime
+from random import getrandbits
+
+import requests
+
+context_id = getrandbits(8)
+place_id = getrandbits(8)
+location = requests.get("https://ipinfo.io").json()
+
+
 def capsule_to_form(capsule, form):
     form.subject_label.data = capsule["subject"]["label"]
     form.subject_types.data = ','.join(capsule["subject"]["type"])
@@ -7,6 +17,16 @@ def capsule_to_form(capsule, form):
     form.perspective_certainty.data = capsule["perspective"]["certainty"]
     form.perspective_polarity.data = capsule["perspective"]["polarity"]
     form.perspective_sentiment.data = capsule["perspective"]["sentiment"]
+
+    form.context_id.data = capsule["context_id"]
+    form.context_date.data = capsule["date"]
+    form.place_label.data = capsule["place"]
+    form.place_id.data = capsule["place_id"]
+    form.country.data = capsule["country"]
+    form.region.data = capsule["region"]
+    form.city.data = capsule["city"]
+    # form.objects.data = ','.join(capsule["objects"])
+    # form.people.data = '.'.join(capsule["people"])
 
     return form
 
@@ -21,21 +41,26 @@ def form_to_capsule(form, chatbot):
     capsule["position"] = ""
 
     capsule["subject"] = {"label": form.subject_label.data,
-                          "type": form.subject_types.data.split(',')}
-    capsule["predicate"] = {"label": form.predicate_label.data}
+                          "type": form.subject_types.data.split(','),
+                          "uri": f"http://cltl.nl/leolani/world/{form.subject_label.data}"}
+    capsule["predicate"] = {"label": form.predicate_label.data,
+                            "uri": f"http://cltl.nl/leolani/n2mu/{form.predicate_label.data}"}
     capsule["object"] = {"label": form.object_label.data,
-                         "type": form.object_types.data.split(',')}
+                         "type": form.object_types.data.split(','),
+                         "uri": f"http://cltl.nl/leolani/world/{form.object_label.data}"}
     capsule["perspective"] = {"certainty": form.perspective_certainty.data,
                               "polarity": form.perspective_polarity.data,
                               "sentiment": form.perspective_sentiment.data}
 
-    capsule["context_id"] = 170
-    capsule["date"] = "2021-03-12"
-    capsule["place"] = "office"
-    capsule["place_id"] = 98
-    capsule["country"] = "NL"
-    capsule["region"] = "North Holland"
-    capsule["city"] = "Amsterdam"
+    capsule["context_id"] = form.context_id.data
+    capsule["date"] = form.context_date.data
+    capsule["place"] = form.place_label.data
+    capsule["place_id"] = form.place_id.data
+    capsule["country"] = form.country.data
+    capsule["region"] = form.region.data
+    capsule["city"] = form.city.data
+    # capsule["objects"] = form.objects.data.split(',')
+    # capsule["people"] = form.people.data.split(',')
     capsule["objects"] = []
     capsule["people"] = []
 
@@ -65,9 +90,9 @@ def begin_form(form, chatbot):
         "utterance_type": "STATEMENT",
         "position": "",
         "subject": {
-            "label": "selene",
+            "label": chatbot._speaker,
             "type": ["person"],
-            "uri": f"http://cltl.nl/leolani/world/selene"
+            "uri": f"http://cltl.nl/leolani/world/{chatbot._speaker}"
         },
         "predicate": {
             "label": "know",
@@ -83,21 +108,19 @@ def begin_form(form, chatbot):
             "polarity": 1,
             "sentiment": 1
         },
-        "context_id": 170,
-        "date": "2021-03-12",
+        "context_id": context_id,
+        "date": datetime.now().date(),
         "place": "office",
-        "place_id": 98,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
+        "place_id": place_id,
+        "country": location['country'],
+        "region": location['region'],
+        "city": location['city'],
         "objects": [],
         "people": []
     }
 
     # use capsule user to fill in next form
     form = capsule_to_form(capsule, form)
-
-    say = 'Nice to meet you, what is your name?'
-    reply = {'say': say}
+    reply = {'say': chatbot.greet}
 
     return form, reply, capsule

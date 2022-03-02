@@ -1,27 +1,27 @@
 <html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - microblog</title>
-        {% else %}
-        <title>microblog</title>
-        {% endif %}
-    </head>
-    <body>
-        <div>
-            Chat with Leolani:
-            <a href="/index">Start chat</a>
-            <a href="/capsule">Submit Capsule</a>
-        </div>
-        <hr>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        {% endwith %}
-        {% block content %}{% endblock %}
-    </body>
+<head>
+    {% if title %}
+    <title>{{ title }} - Leolani chatbot - thought selection</title>
+    {% else %}
+    <title>Chatbot</title>
+    {% endif %}
+</head>
+<body>
+<div>
+    Chat with Leolani:
+    <a href="/index">Start chat</a>
+    <a href="/capsule">Submit Capsule</a>
+</div>
+<hr>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+{% block content %}{% endblock %}
+</body>
 </html>
