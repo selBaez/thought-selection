@@ -1,33 +1,67 @@
 {% extends "base.html" %}
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
 {% block content %}
+<body>
 <h1>Hi, my name is Leolani, would you like to chat?</h1>
 
-<form action="" method="post" novalidate>
-    {{ form.hidden_tag() }}
-    <p>
-        {{ form.chat_id.label }}<br>
-        {{ form.chat_id() }}<br>
-        {% for error in form.chat_id.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.speaker.label }}<br>
-        {{ form.speaker(size=32) }}<br>
-        {% for error in form.speaker.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.reward.label }}<br>
-        {{ form.reward() }}<br>
-        {% for error in form.reward.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>{{ form.submit() }}</p>
-</form>
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.chat_id.label }}<br>
+                {{ form.chat_id() }}<br>
+                {% for error in form.chat_id.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.speaker.label }}<br>
+                {{ form.speaker(size=32) }}<br>
+                {% for error in form.speaker.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.reward.label }}<br>
+                {{ form.reward() }}<br>
+                {% for error in form.reward.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+    <h2>Instructions</h2>
+    <p>This is a capsule based chatbot</p>
+    </div>
+</div>
+</body>
 {% endblock %}
 
 

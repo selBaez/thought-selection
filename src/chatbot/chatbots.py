@@ -21,9 +21,9 @@ from cltl.brain.utils.helper_functions import brain_response_to_json
 from cltl.combot.backend.api.discrete import UtteranceType
 from cltl.reply_generation.data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
 
-from src.chatbot.replier import RLCapsuleReplier
-from src.chatbot.utils.chatbot_utils import capsule_for_query
-from src.chatbot.utils.thoughts_utils import copy_capsule_context, BASE_CAPSULE
+from chatbot.replier import RLCapsuleReplier
+from chatbot.utils.chatbot_utils import capsule_for_query
+from chatbot.utils.thoughts_utils import copy_capsule_context, BASE_CAPSULE
 
 
 class Chatbot:

@@ -5,7 +5,7 @@ import requests
 from cltl.brain.long_term_memory import LongTermMemory
 from rdflib import Graph
 
-from src.chatbot.metrics.ontology_measures import get_number_classes
+from chatbot.metrics.ontology_measures import get_number_classes
 
 # Read scenario from file
 ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))

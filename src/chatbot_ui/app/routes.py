@@ -2,9 +2,9 @@ import os
 
 from flask import render_template, flash, redirect, request, url_for
 
-from src.chatbot.chatbots import Chatbot
-from src.chatbot_ui.app.forms import TurnForm, ChatForm
-from src.chatbot_ui.app.utils.capsule_utils import digest_form, begin_form, capsule_to_form
+from chatbot.chatbots import Chatbot
+from chatbot_ui.app.forms import TurnForm, ChatForm
+from chatbot_ui.app.utils.capsule_utils import digest_form, begin_form, capsule_to_form
 
 ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
 RESOURCES_PATH = ABSOLUTE_PATH + "/../../../resources/"

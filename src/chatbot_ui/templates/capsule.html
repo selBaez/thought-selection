@@ -1,145 +1,177 @@
 {% extends "base.html" %}
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
 {% block content %}
+<body>
 <h1>Leolani, {{ reply.say }}!</h1>
-<form action="" method="post" novalidate>
-    {{ form.hidden_tag() }}
-    <!--Triple info-->
-    <p>
-        {{ form.subject_label.label }}<br>
-        {{ form.subject_label(size=32) }}<br>
-        {% for error in form.subject_label.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.subject_types.label }}<br>
-        {{ form.subject_types(size=32) }}<br>
-        {% for error in form.subject_types.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>{{ form.subject_from_label() }} {{ form.subject_from_label.label }}</p>
 
-    <p>
-        {{ form.predicate_label.label }}<br>
-        {{ form.predicate_label(size=32) }}<br>
-        {% for error in form.predicate_label.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>{{ form.predicate_from_label() }} {{ form.predicate_from_label.label }}</p>
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!--Triple info-->
+            <p>
+                {{ form.subject_label.label }}<br>
+                {{ form.subject_label(size=32) }}<br>
+                {% for error in form.subject_label.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.subject_types.label }}<br>
+                {{ form.subject_types(size=32) }}<br>
+                {% for error in form.subject_types.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.subject_from_label() }} {{ form.subject_from_label.label }}</p>
 
-    <p>
-        {{ form.object_label.label }}<br>
-        {{ form.object_label(size=32) }}<br>
-        {% for error in form.object_label.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.object_types.label }}<br>
-        {{ form.object_types(size=32) }}<br>
-        {% for error in form.object_types.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>{{ form.object_from_label() }} {{ form.object_from_label.label }}</p>
-    <!--Perspective info-->
-    <p>
-        {{ form.perspective_certainty.label }}<br>
-        {{ form.perspective_certainty() }}<br>
-        {% for error in form.perspective_certainty.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.perspective_polarity.label }}<br>
-        {{ form.perspective_polarity() }}<br>
-        {% for error in form.perspective_polarity.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.perspective_sentiment.label }}<br>
-        {{ form.perspective_sentiment() }}<br>
-        {% for error in form.perspective_sentiment.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <!--Context info-->
-    <p>
-        {{ form.context_id.label }}<br>
-        {{ form.context_id() }}<br>
-        {% for error in form.context_id.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.context_date.label }}<br>
-        {{ form.context_date() }}<br>
-        {% for error in form.context_date.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <!--Place info-->
-    <p>
-        {{ form.place_id.label }}<br>
-        {{ form.place_id() }}<br>
-        {% for error in form.place_id.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.place_label.label }}<br>
-        {{ form.place_label(size=32) }}<br>
-        {% for error in form.place_label.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.country.label }}<br>
-        {{ form.country(size=32) }}<br>
-        {% for error in form.country.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.region.label }}<br>
-        {{ form.region(size=32) }}<br>
-        {% for error in form.region.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.city.label }}<br>
-        {{ form.city(size=32) }}<br>
-        {% for error in form.city.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <!--Multimodal info-->
-    <p>
-        {{ form.objects.label }}<br>
-        {{ form.objects(size=32) }}<br>
-        {% for error in form.objects.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.people.label }}<br>
-        {{ form.people(size=32) }}<br>
-        {% for error in form.people.errors %}
-        <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
+            <p>
+                {{ form.predicate_label.label }}<br>
+                {{ form.predicate_label(size=32) }}<br>
+                {% for error in form.predicate_label.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.predicate_from_label() }} {{ form.predicate_from_label.label }}</p>
 
-    <p>{{ form.submit() }}</p>
-</form>
+            <p>
+                {{ form.object_label.label }}<br>
+                {{ form.object_label(size=32) }}<br>
+                {% for error in form.object_label.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.object_types.label }}<br>
+                {{ form.object_types(size=32) }}<br>
+                {% for error in form.object_types.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.object_from_label() }} {{ form.object_from_label.label }}</p>
+            <!--Perspective info-->
+            <p>
+                {{ form.perspective_certainty.label }}<br>
+                {{ form.perspective_certainty() }}<br>
+                {% for error in form.perspective_certainty.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.perspective_polarity.label }}<br>
+                {{ form.perspective_polarity() }}<br>
+                {% for error in form.perspective_polarity.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.perspective_sentiment.label }}<br>
+                {{ form.perspective_sentiment() }}<br>
+                {% for error in form.perspective_sentiment.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <!--Context info-->
+            <p>
+                {{ form.context_id.label }}<br>
+                {{ form.context_id() }}<br>
+                {% for error in form.context_id.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.context_date.label }}<br>
+                {{ form.context_date() }}<br>
+                {% for error in form.context_date.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <!--Place info-->
+            <p>
+                {{ form.place_id.label }}<br>
+                {{ form.place_id() }}<br>
+                {% for error in form.place_id.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.place_label.label }}<br>
+                {{ form.place_label(size=32) }}<br>
+                {% for error in form.place_label.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.country.label }}<br>
+                {{ form.country(size=32) }}<br>
+                {% for error in form.country.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.region.label }}<br>
+                {{ form.region(size=32) }}<br>
+                {% for error in form.region.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.city.label }}<br>
+                {{ form.city(size=32) }}<br>
+                {% for error in form.city.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <!--Multimodal info-->
+            <p>
+                {{ form.objects.label }}<br>
+                {{ form.objects(size=32) }}<br>
+                {% for error in form.objects.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.people.label }}<br>
+                {{ form.people(size=32) }}<br>
+                {% for error in form.people.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
 
-{% for capsule in capsules %}
-<div><p> {{ capsule.speaker }} says: <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{
-    capsule.object.label }}</b></p></div>
-{% endfor %}
-
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+        {% for capsule in capsules %}
+        <div><p> {{ capsule.speaker }} says: <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{
+            capsule.object.label }}</b></p></div>
+        {% endfor %}
+    </div>
+</div>
+</body>
 {% endblock %}
+

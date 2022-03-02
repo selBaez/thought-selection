@@ -13,6 +13,7 @@ The code base consists of the following files:
 | ----------------------- |:--------------|
 | main.py                 | Runs an interaction with the chatbot via command line.|
 | interactive_chatbot.py  | Runs an interaction with the chatbot via a Jupyter notebook|
+| web_app.py              | Runs an interaction with the chatbot via a web app|
 | requirements.txt        | Requirements file containing the minimum number of packages needed to run the implementation. |
 
 <p> The implementations of the chatbot functionality and the UI for ease of interaction are divided in different folders:</p>
@@ -76,11 +77,11 @@ Now run the `interactive_chatbot.ipynb` notebook to begin chatting.
 
 ### Web based
 
-Run the backend API from the `chatbot_ui` forlder, like so:
+Run the web app like so:
 
 ```bash
-cd src/chatbot_ui
-python application.py
+cd src/
+python web_app.py
 ```
 
 Now you can access [`http://127.0.0.1:5000/`](http://127.0.0.1:5000/) to begin chatting.

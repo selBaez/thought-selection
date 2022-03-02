@@ -12,7 +12,7 @@ import traceback
 
 from cltl.brain.utils.base_cases import statements
 
-from src.chatbot.chatbots import Chatbot
+from chatbot.chatbots import Chatbot
 
 ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
 RESOURCES_PATH = ABSOLUTE_PATH + "/../resources/"
