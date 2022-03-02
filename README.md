@@ -47,6 +47,7 @@ following [Google Drive folder](https://drive.google.com/drive/folders/10GEpnjqX
 The code has been tested on both Windows 10 and Ubuntu 20.04.
 
 ## Usage
+Please remember to have your [GraphDB Free](http://graphdb.ontotext.com/) called `sandbox`. 
 
 ### Command line
 
@@ -77,7 +78,7 @@ Now run the `interactive_chatbot.ipynb` notebook to begin chatting.
 
 ### Web based
 
-Run the web app like so:
+Run the web app from the `src` folder, like so:
 
 ```bash
 cd src/

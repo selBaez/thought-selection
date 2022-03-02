@@ -15,8 +15,8 @@ CAPSULES_SUBMITTED = []
 CAPSULES_SUGGESTED = []
 SAY_HISTORY = []
 
-
 def create_endpoints(app):
+
     @app.route('/', methods=['GET', 'POST'])
     @app.route('/index', methods=['GET', 'POST'])
     def index():
