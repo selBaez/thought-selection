@@ -19,7 +19,7 @@ def capsule_to_form(capsule, form):
     form.perspective_sentiment.data = capsule["perspective"]["sentiment"]
 
     form.context_id.data = capsule["context_id"]
-    form.context_date.data = capsule["date"]
+    # form.context_date.data = capsule["date"]# datetime.strftime(capsule["date"], "%Y-%m-%d")
     form.place_label.data = capsule["place"]
     form.place_id.data = capsule["place_id"]
     form.country.data = capsule["country"]
@@ -53,7 +53,7 @@ def form_to_capsule(form, chatbot):
                               "sentiment": form.perspective_sentiment.data}
 
     capsule["context_id"] = form.context_id.data
-    capsule["date"] = form.context_date.data
+    capsule["date"] = "2021-03-12" # datetime.strptime(form.context_date.data, "%Y-%m-%d")
     capsule["place"] = form.place_label.data
     capsule["place_id"] = form.place_id.data
     capsule["country"] = form.country.data
@@ -109,7 +109,7 @@ def begin_form(form, chatbot):
             "sentiment": 1
         },
         "context_id": context_id,
-        "date": datetime.now().date(),
+        "date": "2021-03-12",#datetime.now().date(),
         "place": "office",
         "place_id": place_id,
         "country": location['country'],

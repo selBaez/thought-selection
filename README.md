@@ -35,7 +35,8 @@ pip install -r requirements.txt --no-cache
 python -m ipykernel install --name=thought-selection
 ```
 
-**Important* We are using the latest versions of cltl.brain and cltl.reply-generation so please clone the repo, pull the
+**Important** We are using the latest versions of [cltl.brain](https://github.com/leolani/cltl-knowledgerepresentation)
+and [cltl.reply-generation](https://github.com/leolani/cltl-languagegeneration) so please clone the repo, pull the
 latests verions and install the packages into the virtual env.
 
 **Important:** In order to run NSP, make sure to download the NSP model and place the resource files into a
