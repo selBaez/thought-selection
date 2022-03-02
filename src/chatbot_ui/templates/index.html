@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block content %}
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -23,8 +25,6 @@
     </style>
 </head>
 
-<!--{% block content %}-->
-<body>
 <h1>Hi, my name is Leolani, would you like to chat?</h1>
 
 <div class="row">
@@ -56,11 +56,8 @@
         </form>
     </div>
     <div class="column" style="background-color:#bbb;">
-    <h2>Instructions</h2>
-    <p>This is a capsule based chatbot</p>
+        <h2>Instructions</h2>
+        <p>This is a capsule based chatbot</p>
     </div>
 </div>
-</body>
-<!--{% endblock %}-->
-
-
+{% endblock %}
