@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from flask_wtf import FlaskForm
-from wtforms import StringField, BooleanField, SubmitField, IntegerField, FloatField, SelectField, DateTimeField
+from wtforms import StringField, SubmitField, IntegerField, FloatField, SelectField, DateTimeField
 from wtforms.validators import DataRequired
 
 
@@ -53,11 +53,27 @@ class TurnForm(FlaskForm):
 
 
 class ChatForm(FlaskForm):
-    rewards = ['Total explicit triples', 'Total classes', 'Total predicates', 'Total semantic statements',
-               'Total perspectives', 'Total sources', 'Total conflicts']
-
     chat_id = IntegerField('Chat ID', validators=[DataRequired()])
     speaker = StringField('Speaker', validators=[DataRequired()])
+
+    rewards = ['Total triples',
+               # 'Total classes', 'Total predicates',
+               # 'Total statements', 'Total perspectives', 'Total conflicts',
+               # 'Total sources',
+               'Ratio statement to triples', 'Ratio perspective to triples', 'Ratio conflicts to triples',
+               'Ratio perspective to statement', 'Ratio conflicts to statement'
+               ]
     reward = SelectField('Reward function', choices=rewards, validators=[DataRequired()])
 
-    submit = SubmitField('Star chat')
+    submit = SubmitField('Start chat')
+
+
+class SaveForm(FlaskForm):
+    session_folder = StringField('Session folder', validators=[DataRequired()])
+    database_address = StringField('Address for the triple store', default="http://localhost:7200/repositories/sandbox",
+                                   validators=[DataRequired()])
+    rdf_folder = StringField('RDF logs folder', validators=[DataRequired()])
+    thoughts_file = StringField('Thoughts file', validators=[DataRequired()])
+    capsules_file = StringField('Capsules file', validators=[DataRequired()])
+
+    submit = SubmitField('Save session')

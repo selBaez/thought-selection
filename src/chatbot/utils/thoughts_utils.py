@@ -175,7 +175,7 @@ def phrase_type_novelty(novelties: dict, utterance: dict) -> Tuple[Optional[dict
         if entity_role == 'subject' else utterance['triple']['_complement']['_label']
     novelty = novelties['_subject'] if entity_role == 'subject' else novelties['_complement']
 
-    if novelty:
+    if not novelty:
         say = random.choice(NEW_KNOWLEDGE)
         if entity_label != 'you':
             say += ' I had never heard about %s before!' % entity_label
@@ -220,10 +220,7 @@ def phrase_subject_gaps(all_gaps: dict, utterance: dict) -> Tuple[Optional[dict]
             capsule_user = copy.deepcopy(BASE_CAPSULE)
             capsule_user['subject'] = utterance["subject"]
             capsule_user['predicate'] = utterance["predicate"]
-            capsule_user['object'] = {
-                "label": random.choice(utterance["object"]["type"]) if utterance["object"]["type"] else None,
-                "type": [],
-                "uri": None}
+            capsule_user['object'] = {"label": None, "type": utterance["object"]["type"], "uri": None}
 
         else:
             gap = random.choice(gaps)
@@ -262,10 +259,7 @@ def phrase_subject_gaps(all_gaps: dict, utterance: dict) -> Tuple[Optional[dict]
 
             # Capsule with original triple, user should add subject type # TODO(? - ? - carl)
             capsule_user = copy.deepcopy(BASE_CAPSULE)
-            capsule_user['subject'] = {
-                "label": random.choice(utterance["subject"]["type"]) if utterance["subject"]["type"] else None,
-                "type": [],
-                "uri": None}
+            capsule_user['subject'] = {"label": None, "type": utterance["subject"]["type"], "uri": None}
             capsule_user['predicate'] = utterance["predicate"]
             capsule_user['object'] = utterance["object"]
 
@@ -311,10 +305,7 @@ def phrase_complement_gaps(all_gaps: dict, utterance: dict) -> Tuple[Optional[di
             capsule_user = copy.deepcopy(BASE_CAPSULE)
             capsule_user['subject'] = utterance["subject"]
             capsule_user['predicate'] = utterance["predicate"]
-            capsule_user['object'] = {
-                "label": random.choice(utterance["object"]["type"]) if utterance["object"]["type"] else None,
-                "type": [],
-                "uri": None}
+            capsule_user['object'] = {"label": None, "type": utterance["object"]["type"], "uri": None}
 
         else:
             gap = random.choice(gaps)
@@ -348,10 +339,7 @@ def phrase_complement_gaps(all_gaps: dict, utterance: dict) -> Tuple[Optional[di
 
             # Capsule with original predicate and complement type, user should add object label # TODO(? - ? - pills)
             capsule_user = copy.deepcopy(BASE_CAPSULE)
-            capsule_user['subject'] = {
-                "label": random.choice(utterance["subject"]["type"]) if utterance["subject"]["type"] else None,
-                "type": [],
-                "uri": None}
+            capsule_user['subject'] = {"label": None, "type": utterance["subject"]["type"], "uri": None}
             capsule_user['predicate'] = utterance["predicate"]
             capsule_user['object'] = {"label": None, "type": utterance["object"]["type"], "uri": None}
 

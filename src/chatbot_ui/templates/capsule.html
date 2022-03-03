@@ -25,7 +25,7 @@
 </head>
 
 
-<h1>Leolani, {{ reply.say }}!</h1>
+<h1>Leolani: {{ reply.say }}</h1>
 
 <div class="row">
     <div class="column" style="background-color:#aaa;">
@@ -194,9 +194,12 @@
     </div>
     <div class="column">
         {% for capsule in capsules %}
-        <div><p> {{ capsule.turn }}, {{ capsule.author }} says:
-            <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{ capsule.object.label }}</b>
-            reward: {{ capsule.brain_state.label }}</p></div>
+        <div>
+            <p>Turn: {{ capsule.turn }}, {{ capsule.author }} says:
+                <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{ capsule.object.label }}</b>, </p>
+            <p> Reward: {{ capsule.brain_state }}, other metrics: {{ capsule.brain_stats }}</p>
+            <p> Reply: {{ capsule.reply }}</p>
+        </div>
         {% endfor %}
     </div>
 </div>

@@ -2,6 +2,7 @@ from datetime import datetime
 from random import getrandbits
 
 import requests
+from cltl.brain.utils.helper_functions import brain_response_to_json
 
 context_id = getrandbits(8)
 place_id = getrandbits(8)
@@ -51,9 +52,9 @@ def capsule_to_form(capsule, form):
 
 def form_to_capsule(form, chatbot):
     capsule = {}
-    capsule["chat"] = chatbot._chat_id
-    capsule["turn"] = chatbot._turns
-    capsule["author"] = chatbot._speaker
+    capsule["chat"] = chatbot.chat_id
+    capsule["turn"] = chatbot.turns
+    capsule["author"] = chatbot.speaker
     capsule["utterance"] = form.utterance.data
     capsule["utterance_type"] = form.utterance_type.data
     capsule["position"] = form.position.data
@@ -86,6 +87,7 @@ def form_to_capsule(form, chatbot):
 
 
 def digest_form(form, chatbot):
+    # turn form into capsule so it can be picked up by the brain
     capsule = form_to_capsule(form, chatbot)
 
     # process with brain
@@ -93,24 +95,31 @@ def digest_form(form, chatbot):
 
     # use capsule user to fill in next form
     form = capsule_to_form(capsule_user, form)
-
     reply = {'say': say}
+
+    # arrange all response info to be saved
+    capsule["brain_state"] = chatbot.replier.brain_states[-1]
+    capsule["brain_stats"] = chatbot.replier.brain_stats[-1]
+    capsule["reply"] = say
+    chatbot.capsules_submitted.append(brain_response_to_json(capsule))
+    chatbot.say_history.append(reply)
+    chatbot.capsules_suggested.append(capsule_user)
 
     return form, reply, capsule, capsule_user
 
 
 def begin_form(form, chatbot):
     capsule = {
-        "chat": chatbot._chat_id,
-        "turn": chatbot._turns,
-        "author": chatbot._speaker,
+        "chat": chatbot.chat_id,
+        "turn": chatbot.turns,
+        "author": chatbot.speaker,
         "utterance": "",
         "utterance_type": "STATEMENT",
         "position": "",
         "subject": {
-            "label": chatbot._speaker,
+            "label": chatbot.speaker,
             "type": ["person"],
-            "uri": f"http://cltl.nl/leolani/world/{chatbot._speaker}"
+            "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker}"
         },
         "predicate": {
             "label": "know",
@@ -127,7 +136,7 @@ def begin_form(form, chatbot):
             "sentiment": 1
         },
         "context_id": context_id,
-        "date": "2021-03-12",  # datetime.now().date(),
+        "date": datetime.now().date().isoformat(),
         "place": "office",
         "place_id": place_id,
         "country": location['country'],
@@ -140,5 +149,8 @@ def begin_form(form, chatbot):
     # use capsule user to fill in next form
     form = capsule_to_form(capsule, form)
     reply = {'say': chatbot.greet}
+
+    # arrange all response info to be saved
+    chatbot.capsules_suggested.append(capsule)
 
     return form, reply, capsule

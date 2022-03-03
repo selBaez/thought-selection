@@ -31,40 +31,53 @@
     <div class="column" style="background-color:#aaa;">
         <form action="" method="post" novalidate>
             {{ form.hidden_tag() }}
-            <p>
-                {{ form.chat_id.label }}<br>
-                {{ form.chat_id() }}<br>
-                {% for error in form.chat_id.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>
-                {{ form.speaker.label }}<br>
-                {{ form.speaker(size=32) }}<br>
-                {% for error in form.speaker.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>
-                {{ form.reward.label }}<br>
-                {{ form.reward() }}<br>
-                {% for error in form.reward.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>{{ form.submit() }}</p>
+
+            <div class="column" style="background-color:#aaa;">
+                <p>
+                    {{ form.chat_id.label }}<br>
+                    {{ form.chat_id() }}<br>
+                    {% for error in form.chat_id.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.speaker.label }}<br>
+                    {{ form.speaker(size=32) }}<br>
+                    {% for error in form.speaker.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.reward.label }}<br>
+                    {{ form.reward() }}<br>
+                    {% for error in form.reward.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+            </div>
+            <div class="column">
+                <p>{{ form.submit() }}</p>
+            </div>
         </form>
     </div>
     <div class="column">
         <h2>Instructions</h2>
-        <p>This is a capsule based chatbot. On every turn you will be asked to fill in a form to represent the
-            structured knowledge in your utterance. The form will be prefilled with suggestions for certain fields. You
-            can always change the fields manually, though. Please focus on filling the triple (subject, predicate,
-            object fields) and perspective (certainty, polarity, sentiment) parts of the form.
+        <p>This interface aims to facilitate the interaction with a chatbot that ingests structured data in the form of
+            SPO triples</p>
+        <p>On every turn you will be asked to fill in a form to represent the structured knowledge in your utterance.
+            The form will be prefilled with suggestions for certain fields. You can always change the fields manually,
+            if you'd prefer. </p>
+        <p>Please focus on filling the triple (subject, predicate, object fields) and perspective (certainty, polarity,
+            sentiment) parts of the form. As a secondary goal, you could input the utterance in natural language, but
+            this is not strictly necessary.</p>
+        <p>Certainty values should range from 0 (uncertain) to 1 (certain).</p>
+        <p>Polarity values may be 1 (affirmative) or -1 (negation).</p>
+        <p>Sentiment values may be 1 (positive), -1 (negative), or 0 (neutral).</p>
+        <p>Submit as many capsules as you wish in a chat. When want to stop the chat, finish session via the top menu
+            bar.</p>
 
-            Certainty values should range from 0 (uncertain) to 1 (certain).
-            Polarity values may be 1 (affirmative) or -1 (negation).
-            Sentiment values may be 1 (positive), -1 (negative), or 0 (neutral).</p>
+        <h2>Notes</h2>
+        <p>Please pay attention to be use lowercase wherever possible.</p>
     </div>
 </div>
 {% endblock %}

@@ -1,85 +1,102 @@
 import os
+from pathlib import Path
 
-from flask import render_template, flash, redirect, request, url_for
+from flask import render_template, redirect, request, url_for
 
-from chatbot.chatbots import Chatbot
-from chatbot_ui.app.forms import TurnForm, ChatForm
+from chatbot_ui.app.forms import TurnForm, ChatForm, SaveForm
 from chatbot_ui.app.utils.capsule_utils import digest_form, begin_form, capsule_to_form
 
 ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
 RESOURCES_PATH = ABSOLUTE_PATH + "/../../../resources/"
-THOUGHTS_FILE = RESOURCES_PATH + "thoughts.json"
-
-CHATBOT = None
-CAPSULES_SUBMITTED = []
-CAPSULES_SUGGESTED = []
-SAY_HISTORY = []
 
 
-def create_endpoints(app):
+def create_endpoints(app, chatbot):
     @app.route('/', methods=['GET', 'POST'])
     @app.route('/index', methods=['GET', 'POST'])
     def index():
-        global CHATBOT
-
         # handle the POST request
         if request.method == 'POST':
-            # Create chatbot
             form_in = ChatForm()
-            CHATBOT = Chatbot(form_in.chat_id.data, form_in.speaker.data, "RL", form_in.reward.data, THOUGHTS_FILE)
-            reply = {'say': CHATBOT.greet}
-            form_out = TurnForm()
 
+            # Create folder to store session
+            session_folder = Path(RESOURCES_PATH +
+                                  f"{form_in.reward.data.replace(' ', '-')}_"
+                                  f"{form_in.chat_id.data}_"
+                                  f"{form_in.speaker.data.replace(' ', '-')}/")
+            session_folder.mkdir(parents=True, exist_ok=True)
+
+            # Create chatbot
+            chatbot.begin_session(form_in.chat_id.data, form_in.speaker.data, form_in.reward.data, session_folder)
+            reply = {'say': chatbot.greet}
+
+            # Go to capsule page
+            form_out = TurnForm()
             return redirect(url_for('capsule', title='Submit Capsule', form=form_out, reply=reply, capsules=[]))
 
         # handle the GET request
         elif request.method == 'GET':
+            # Empty form
             form_out = ChatForm()
-
             return render_template('index.html', title='Start chat', form=form_out)
 
     @app.route('/capsule', methods=['GET', 'POST'])
     def capsule():
-        global CAPSULES_SUBMITTED
-        global CAPSULES_SUGGESTED
-        global SAY_HISTORY
-        global CHATBOT
-
         # handle the POST request
         if request.method == 'POST':
-            # if form has data, assign it to the capsule and send to chatbot
             form_in = TurnForm()
-            form_out, reply, capsule, capsule_user = digest_form(form_in, CHATBOT)
 
-            # add reply and reward
-            capsule["brain_state"] = CHATBOT.replier.brain_states[-1]
-            CAPSULES_SUBMITTED.append(capsule)
-            SAY_HISTORY.append(reply)
-            CAPSULES_SUGGESTED.append(capsule_user)
+            # assign form data to the capsule and send to chatbot
+            form_out, reply, capsule_in, capsule_user = digest_form(form_in, chatbot)
 
             return redirect(url_for('capsule', title='Submit Capsule',
-                                    form=form_out, reply=reply, capsules=CAPSULES_SUBMITTED))
+                                    form=form_out, reply=reply, capsules=chatbot.capsules_submitted))
 
         # handle the GET request
         elif request.method == 'GET':
-            # if form does not have data, use templates
             form_in = TurnForm()
-            if CHATBOT._turns == 0:
-                # First time, template
-                form_out, reply, capsule_user = begin_form(form_in, CHATBOT)
-                CAPSULES_SUGGESTED.append(capsule_user)
+
+            # form does not have data, use templates
+            if chatbot.turns == 0:
+                # First time, template is hard coded
+                form_out, reply, capsule_user = begin_form(form_in, chatbot)
 
             else:
-                # Next times, use suggested templates
-                form_out = capsule_to_form(CAPSULES_SUGGESTED[-1], form_in)
-                reply = SAY_HISTORY[-1]
+                # Use last suggested template
+                form_out = capsule_to_form(chatbot.capsules_suggested[-1], form_in)
+                reply = chatbot.say_history[-1]
 
             if form_out.validate_on_submit():
-                flash('Fields missing for user {}, remember_me={}'.format(
-                    form_out.subject_label.data, form_out.subject_from_label.data))
                 return redirect('/index')
 
             return render_template('capsule.html', title='Submit Capsule',
-                                   form=form_out, reply=reply, capsules=CAPSULES_SUBMITTED)
+                                   form=form_out, reply=reply, capsules=chatbot.capsules_submitted)
+
+    @app.route('/save', methods=['GET', 'POST'])
+    def save():
+        # handle the POST request
+        if request.method == 'POST':
+            # Save capsules, thoughts, RDF path
+            form_in = SaveForm()
+
+            chatbot.close_session()
+
+            form_out = ChatForm()
+
+            return redirect(url_for('index', title='Start chat', form=form_out))
+
+        # handle the GET request
+        elif request.method == 'GET':
+            # Show details form
+            form_out = SaveForm()
+
+            form_out.session_folder.data = chatbot.scenario_folder
+            form_out.database_address.data = chatbot.address
+            form_out.rdf_folder.data = chatbot.brain.log_dir
+            form_out.thoughts_file.data = chatbot.thoughts_file
+            form_out.capsules_file.data = chatbot.capsules_file
+
+            reply = {'say': chatbot.farewell}
+
+            return render_template('save.html', title='Save session', form=form_out, reply=reply)
 
     return app

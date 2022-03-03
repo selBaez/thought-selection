@@ -7,12 +7,8 @@
     Date created: Nov. 11th, 2021
 """
 
-# Set up Java PATH (required for Windows)
+import json
 import os
-
-os.environ["JAVAHOME"] = "C:/Program Files/Java/jre1.8.0_311/bin/java.exe"
-
-from pathlib import Path
 from random import choice
 
 # Pip-installed ctl repositories
@@ -25,37 +21,26 @@ from chatbot.replier import RLCapsuleReplier
 from chatbot.utils.chatbot_utils import capsule_for_query
 from chatbot.utils.thoughts_utils import copy_capsule_context, BASE_CAPSULE
 
+# Set up Java PATH (required for Windows)
+os.environ["JAVAHOME"] = "C:/Program Files/Java/jre1.8.0_311/bin/java.exe"
+
 
 class Chatbot:
-    def __init__(self, chat_id, speaker, mode, reward, savefile=None):
+    def __init__(self):
         """Sets up a Chatbot with a Leolani backend.
-
-        params
-        str speaker:  name of speaker
-        str mode:     method used to select thoughts: ['Lenka', 'RL', 'NSP']
-        str savefile: path to NSP model or utilities file needed by the replier.
 
         returns: None
         """
-        # Set up Leolani backend modules
-        self._address = "http://localhost:7200/repositories/sandbox"
-        self._brain = LongTermMemory(address=self._address, log_dir=Path("./../../logs"), clear_all=False)
-
-        self._mode = mode
-        self._savefile = savefile
-        self._chat_id = chat_id
-        self._speaker = speaker
-        self._turns = 0
-
-        if mode == "RL":
-            self._replier = RLCapsuleReplier(self._brain, Path(savefile), reward)
-        else:
-            raise Exception("unknown replier mode %s (choose RL)" % mode)
 
     @property
     def replier(self):
         """Provides access to the replier."""
         return self._replier
+
+    @property
+    def brain(self):
+        """Provides access to the brain."""
+        return self._brain
 
     @property
     def greet(self):
@@ -69,15 +54,51 @@ class Chatbot:
         string = choice(GOODBYE)
         return string
 
-    def close(self):
-        """Ends interaction and writes all learnt thought utility files
-        (if method='RL') .
+    def begin_session(self, chat_id, speaker, reward, scenario_folder):
+        """Sets up a session .
+
+        params
+        str chat_id:  id of chat
+        str speaker:  name of speaker
+        str reward:     method used to use as reward for RL
+        str scenario_folder: path to write session data.
 
         returns: None
         """
-        # Writes (optionally) a utilities JSON to disk
-        if self._savefile and self._mode == "RL":
-            self._replier.thought_selector.save(self._savefile)
+        # Set up Leolani backend modules
+        self.address = "http://localhost:7200/repositories/sandbox"
+        self._brain = LongTermMemory(address=self.address, log_dir=scenario_folder, clear_all=False)
+
+        # Chat information
+        self.chat_id = chat_id
+        self.speaker = speaker
+        self.turns = 0
+
+        # data to be recreate conversation
+        self.scenario_folder = scenario_folder
+        self.capsules_file = self.scenario_folder / "capsules.json"
+        self.capsules_submitted = []
+        self.capsules_suggested = []
+        self.say_history = []
+
+        # RL information
+        self.thoughts_file = self.scenario_folder / "thoughts.json"
+        self._replier = RLCapsuleReplier(self._brain, self.thoughts_file, reward)
+
+    def close_session(self):
+        """Ends interaction and writes all learnt thought utility files.
+
+        returns: None
+        """
+        # Writes a utilities JSON to disk
+        self.replier.thought_selector.save(self.thoughts_file)
+
+        # Write capsules file
+        with open(self.capsules_file, "w") as file:
+            json.dump(self.capsules_submitted, file, indent=4)
+
+        # Plot
+        self.replier.thought_selector.plot(filename=self.scenario_folder)
 
     def respond(self, capsule, return_br=True):
         """Parses the user input (as a capsule), queries and/or updates the brain
@@ -89,7 +110,7 @@ class Chatbot:
 
         returns: reply to input
         """
-        self._turns += 1
+        self.turns += 1
 
         # ERROR
         say, capsule_user, brain_response = None, None, None
@@ -117,12 +138,11 @@ class Chatbot:
                 self._replier.reward_thought()
 
             say, capsule_user = self._replier.reply_to_statement(brain_response)
-            # say, capsule_user = self._select_rl_thought(brain_response)
 
         if capsule_user:
-            capsule_user['chat'] = self._chat_id
-            capsule_user['turn'] = self._turns + 1
-            capsule_user['author'] = self._speaker
+            capsule_user['chat'] = self.chat_id
+            capsule_user['turn'] = self.turns + 1
+            capsule_user['author'] = self.speaker
             capsule_user['utterance_type'] = "STATEMENT"
             capsule_user = copy_capsule_context(capsule_user, brain_response['statement'])
 

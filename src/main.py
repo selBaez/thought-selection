@@ -50,7 +50,7 @@ def main(args):
     # Farewell + update savefile
     print("\nBot:", chatbot.farewell)
     chatbot.replier.thought_selector.plot(filename=RESOURCES_PATH)
-    chatbot.close()
+    chatbot.close_session()
 
 
 if __name__ == "__main__":
@@ -70,9 +70,9 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--reward",
-        default="Total explicit triples",
+        default="Total triples",
         type=str,
-        choices=["Total explicit triples", "Total classes", "Total predicates"],
+        choices=["Total triples", "Total classes", "Total predicates"],
         help="Reward for RL algorithm",
     )
     parser.add_argument(

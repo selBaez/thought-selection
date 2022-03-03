@@ -18,15 +18,15 @@ class RLCapsuleReplier(RLReplier):
         returns: None
         """
         super(RLCapsuleReplier, self).__init__(brain, savefile)
+        self.brain_stats = []
         self._reward_function = reward
-        self._brain_stats = []
         self._log.info(f"UCB RL initialized with reward: {self._reward_function}")
 
     def _score_brain(self, brain_response):
         # Grab the thoughts
         thoughts = brain_response['thoughts']
 
-        # Gather stats
+        # Gather basic stats
         stats = {
             'turn': brain_response['statement']['turn'],
             'cardinality conflicts': len(thoughts['_complement_conflict']),
@@ -40,36 +40,52 @@ class RLCapsuleReplier(RLReplier):
             'overlaps predicate-object': len(thoughts['_overlaps']['_complement']),
             'trust': thoughts['_trust'],
 
-            'Total explicit triples': len(self._brain.dataset),
-            'Total classes': len(self._brain.get_classes()),
-            'Total predicates': len(self._brain.get_predicates()),
-            'Total semantic statements': self._brain.count_statements(),
-            'Total perspectives': self._brain.count_statements(),
+            'Total triples': self._brain.count_triples(),
+            # 'Total classes': len(self._brain.get_classes()),
+            # 'Total predicates': len(self._brain.get_predicates()),
+            'Total statements': self._brain.count_statements(),
+            'Total perspectives': self._brain.count_perspectives(),
+            'Total conflicts': len(self._brain.get_all_negation_conflicts()),
             'Total sources': self._brain.count_friends(),
-            'Total conflicts': self._brain.get_all_negation_conflicts()
         }
 
-        self._brain_stats.append(stats)
+        # Compute composite stats
+        stats['Ratio statement to triples'] = stats['Total statements'] / stats['Total triples']
+        stats['Ratio perspective to triples'] = stats['Total perspectives'] / stats['Total triples']
+        stats['Ratio conflicts to triples'] = stats['Total conflicts'] / stats['Total triples']
+        stats['Ratio perspective to statement'] = stats['Total perspectives'] / stats['Total statements']
+        stats['Ratio conflicts to statement'] = stats['Total conflicts'] / stats['Total statements']
+
+        self.brain_stats.append(stats)
 
     def _evaluate_brain_state(self):
         brain_state = None
-        # if self._reward_function == 'cardinality conflicts':
-        #     len(thoughts['_complement_conflict'])
 
-        if self._reward_function == 'Total explicit triples':
-            brain_state = len(self._brain.dataset)
+        if self._reward_function == 'Total triples':
+            brain_state = self._brain.count_triples()
         elif self._reward_function == 'Total classes':
             brain_state = len(self._brain.get_classes())
         elif self._reward_function == 'Total predicates':
             brain_state = len(self._brain.get_predicates())
-        elif self._reward_function == 'Total semantic statements':
+        elif self._reward_function == 'Total statements':
             brain_state = self._brain.count_statements()
         elif self._reward_function == 'Total perspectives':
-            brain_state = self._brain.count_statements()
+            brain_state = self._brain.count_perspectives()
+        elif self._reward_function == 'Total conflicts':
+            brain_state = len(self._brain.get_all_negation_conflicts())
         elif self._reward_function == 'Total sources':
             brain_state = self._brain.count_friends()
-        elif self._reward_function == 'Total conflicts':
-            brain_state = self._brain.get_all_negation_conflicts()
+
+        elif self._reward_function == 'Ratio statement to triples':
+            brain_state = self._brain.count_statements() / self._brain.count_triples()
+        elif self._reward_function == 'Ratio perspectives to triples':
+            brain_state = self._brain.count_perspectives() / self._brain.count_triples()
+        elif self._reward_function == 'Ratio conflicts to triples':
+            brain_state = len(self._brain.get_all_negation_conflicts()) / self._brain.count_triples()
+        elif self._reward_function == 'Ratio perspectives to statements':
+            brain_state = self._brain.count_perspectives() / self._brain.count_statements()
+        elif self._reward_function == 'Ratio conflicts to statements':
+            brain_state = len(self._brain.get_all_negation_conflicts()) / self._brain.count_statements()
 
         return brain_state
 

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<h1>Leolani: {{ reply.say }}!</h1>
+
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.session_folder.label }}<br>
+                {{ form.session_folder(size=120) }}<br>
+                {% for error in form.session_folder.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.database_address.label }}<br>
+                {{ form.database_address(size=120) }}<br>
+                {% for error in form.database_address.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.rdf_folder.label }}<br>
+                {{ form.rdf_folder(size=120) }}<br>
+                {% for error in form.rdf_folder.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.thoughts_file.label }}<br>
+                {{ form.thoughts_file(size=120) }}<br>
+                {% for error in form.thoughts_file.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.capsules_file.label }}<br>
+                {{ form.capsules_file(size=120) }}<br>
+                {% for error in form.capsules_file.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+    <div class="column">
+        <h2>Thank you!</h2>
+        <p>All your session files will be located on the Session folder specified.</p>
+    </div>
+</div>
+{% endblock %}

@@ -37,44 +37,61 @@ python -m ipykernel install --name=thought-selection
 ```
 
 **Important** We are using the latest versions of [cltl.brain](https://github.com/leolani/cltl-knowledgerepresentation)
-and [cltl.reply-generation](https://github.com/leolani/cltl-languagegeneration) so please clone the repo, pull the
-latests verions and install the packages into the virtual env.
-
-**Important:** In order to run NSP, make sure to download the NSP model and place the resource files into a
-directory `\next_sentence_prediction\model`. The model files can be found in the
-following [Google Drive folder](https://drive.google.com/drive/folders/10GEpnjqXn4DfyKjFjJG7KbJEygvdAI2J?usp=sharing).
-
-The code has been tested on both Windows 10 and Ubuntu 20.04.
-
-## Usage
-Please remember to have your [GraphDB Free](http://graphdb.ontotext.com/) called `sandbox`. 
-
-### Command line
-
-Run any of the following to begin chatting on the command line.
-
-**Windows:**<br>
-
-RL:      `$ py -3 main.py --speaker=john --mode=RL --savefile=/../../resources/thoughts.json `<br>
-NSP:    `$ py -3 main.py --speaker=john --mode=NSP --savefile=/../../resources/model `<br>
-Lenka: `$ py -3 main.py --speaker=john --mode=Lenka `
-
-**Ubuntu:**<br>
-
-RL:      `$ python3 main.py --speaker=john --mode=RL --savefile=/../../resources/thoughts.json `<br>
-NSP:    `$ python3 main.py --speaker=john --mode=NSP --savefile=/../../resources/model `<br>
-Lenka: `$ python3 main.py --speaker=john --mode=Lenka `
-
-### Jupyter notebook
-
-Initialize a Jupyter Lab session like so:
+and [cltl.reply-generation](https://github.com/leolani/cltl-languagegeneration) so please clone the repositories, pull the
+latests verions and install the packages into the virtual env like this:
 
 ```bash
-cd src
-jupyter-lab
+cd cltl-knowledgerepresentation
+pip install -e .
+python -c "import nltk; nltk.download('wordnet')"
 ```
 
-Now run the `interactive_chatbot.ipynb` notebook to begin chatting.
+[comment]: <> (**Important:** In order to run NSP, make sure to download the NSP model and place the resource files into a)
+
+[comment]: <> (directory `\next_sentence_prediction\model`. The model files can be found in the)
+
+[comment]: <> (following [Google Drive folder]&#40;https://drive.google.com/drive/folders/10GEpnjqXn4DfyKjFjJG7KbJEygvdAI2J?usp=sharing&#41;.)
+
+[comment]: <> (The code has been tested on both Windows 10 and Ubuntu 20.04.)
+
+## Usage
+
+Please remember to have [GraphDB Free](http://graphdb.ontotext.com/) installed and running. There should be a repository
+called `sandbox`.
+
+[comment]: <> (### Command line)
+
+[comment]: <> (Run any of the following to begin chatting on the command line.)
+
+[comment]: <> (**Windows:**<br>)
+
+[comment]: <> (RL:      `$ py -3 main.py --speaker=john --mode=RL --savefile=/../../resources/thoughts.json `<br>)
+
+[comment]: <> (NSP:    `$ py -3 main.py --speaker=john --mode=NSP --savefile=/../../resources/model `<br>)
+
+[comment]: <> (Lenka: `$ py -3 main.py --speaker=john --mode=Lenka `)
+
+[comment]: <> (**Ubuntu:**<br>)
+
+[comment]: <> (RL:      `$ python3 main.py --speaker=john --mode=RL --savefile=/../../resources/thoughts.json `<br>)
+
+[comment]: <> (NSP:    `$ python3 main.py --speaker=john --mode=NSP --savefile=/../../resources/model `<br>)
+
+[comment]: <> (Lenka: `$ python3 main.py --speaker=john --mode=Lenka `)
+
+[comment]: <> (### Jupyter notebook)
+
+[comment]: <> (Initialize a Jupyter Lab session like so:)
+
+[comment]: <> (```bash)
+
+[comment]: <> (cd src)
+
+[comment]: <> (jupyter-lab)
+
+[comment]: <> (```)
+
+[comment]: <> (Now run the `interactive_chatbot.ipynb` notebook to begin chatting.)
 
 ### Web based
 
