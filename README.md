@@ -86,6 +86,7 @@ python web_app.py
 ```
 
 Now you can access [`http://127.0.0.1:5000/`](http://127.0.0.1:5000/) to begin chatting.
+The client may be blocked in newer versions of MAC OS for Safari. In that case try Google Chrome.
 
 ## Authors
 
