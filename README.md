@@ -71,7 +71,8 @@ pip install -e ."
 ## Usage
 
 Please remember to have [GraphDB Free](http://graphdb.ontotext.com/) installed and running. There should be a repository
-called `sandbox`.
+called `sandbox`. You may also upload the `db-config.ttl` file to the triple store in order to create a repository with
+the correct settings.
 
 [comment]: <> (### Command line)
 
@@ -125,3 +126,6 @@ newer versions of MAC OS for Safari. In that case try Google Chrome.
 * [Selene Báez Santamaría](https://selbaez.github.io/)
 * [Thomas Bellucci](https://github.com/thomas097)
 * [Piek Vossen](https://github.com/piekvossen)
+
+
+

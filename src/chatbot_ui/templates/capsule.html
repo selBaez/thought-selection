@@ -196,8 +196,9 @@
         {% for capsule in capsules %}
         <div>
             <p>Turn: {{ capsule.turn }}, {{ capsule.author }} says:
-                <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{ capsule.object.label }}</b>, </p>
-            <p> Reward: {{ capsule.brain_state }}, other metrics: {{ capsule.brain_stats }}</p>
+                <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{ capsule.object.label }}</b>, Reward:
+                {{ capsule.brain_state }} </p>
+            <p> other metrics: {{ capsule.brain_stats }}</p>
             <p> Reply: {{ capsule.reply }}</p>
         </div>
         {% endfor %}

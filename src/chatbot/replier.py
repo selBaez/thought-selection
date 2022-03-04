@@ -51,10 +51,10 @@ class RLCapsuleReplier(RLReplier):
 
         # Compute composite stats
         stats['Ratio statement to triples'] = stats['Total statements'] / stats['Total triples']
-        stats['Ratio perspective to triples'] = stats['Total perspectives'] / stats['Total triples']
+        stats['Ratio perspectives to triples'] = stats['Total perspectives'] / stats['Total triples']
         stats['Ratio conflicts to triples'] = stats['Total conflicts'] / stats['Total triples']
-        stats['Ratio perspective to statement'] = stats['Total perspectives'] / stats['Total statements']
-        stats['Ratio conflicts to statement'] = stats['Total conflicts'] / stats['Total statements']
+        stats['Ratio perspectives to statements'] = stats['Total perspectives'] / stats['Total statements']
+        stats['Ratio conflicts to statements'] = stats['Total conflicts'] / stats['Total statements']
 
         self.brain_stats.append(stats)
 
@@ -76,7 +76,7 @@ class RLCapsuleReplier(RLReplier):
         elif self._reward_function == 'Total sources':
             brain_state = self._brain.count_friends()
 
-        elif self._reward_function == 'Ratio statement to triples':
+        elif self._reward_function == 'Ratio statements to triples':
             brain_state = self._brain.count_statements() / self._brain.count_triples()
         elif self._reward_function == 'Ratio perspectives to triples':
             brain_state = self._brain.count_perspectives() / self._brain.count_triples()
