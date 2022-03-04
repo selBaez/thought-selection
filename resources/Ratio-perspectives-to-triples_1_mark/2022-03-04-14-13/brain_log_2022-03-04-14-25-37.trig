@@ -1,0 +1,327 @@
+@prefix eps: <http://cltl.nl/episodicawareness/> .
+@prefix gaf: <http://groundedannotationframework.org/gaf#> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix graspe: <http://groundedannotationframework.org/grasp/emotion#> .
+@prefix graspf: <http://groundedannotationframework.org/grasp/factuality#> .
+@prefix grasps: <http://groundedannotationframework.org/grasp/sentiment#> .
+@prefix leolaniContext: <http://cltl.nl/leolani/context/> .
+@prefix leolaniFriends: <http://cltl.nl/leolani/friends/> .
+@prefix leolaniInputs: <http://cltl.nl/leolani/inputs/> .
+@prefix leolaniTalk: <http://cltl.nl/leolani/talk/> .
+@prefix leolaniWorld: <http://cltl.nl/leolani/world/> .
+@prefix n2mu: <http://cltl.nl/leolani/n2mu/> .
+@prefix ns1: <urn:x-rdflib:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time1: <http://www.w3.org/TR/owl-time/#> .
+@prefix xml1: <https://www.w3.org/TR/xmlschema-2/#> .
+
+leolaniWorld:mark_like_robots {
+    leolaniWorld:mark n2mu:like leolaniWorld:robots .
+}
+
+leolaniWorld:leolani_know_mark {
+    leolaniWorld:leolani n2mu:know leolaniFriends:mark .
+}
+
+leolaniWorld:lord_of_the_rings_read-by_mark {
+    leolaniWorld:lord_of_the_rings n2mu:read-by leolaniWorld:mark .
+}
+
+leolaniWorld:mark_experience_touch {
+    leolaniWorld:mark n2mu:experience leolaniWorld:touch .
+}
+
+leolaniWorld:mark_like_books {
+    leolaniWorld:mark n2mu:like leolaniWorld:books .
+}
+
+leolaniTalk:Interactions {
+    leolaniContext:context229 a eps:Context ;
+        rdfs:label "context229" ;
+        n2mu:id "229"^^xml1:string ;
+        sem:hasBeginTimeStamp leolaniContext:2022-03-04 ;
+        sem:hasEvent leolaniTalk:chat1,
+            leolaniTalk:visual1 ;
+        sem:hasPlace leolaniContext:office .
+
+    leolaniContext:2022-03-04 a sem:Time,
+            time1:DateTimeDescription ;
+        rdfs:label "2022-03-04" ;
+        time1:day "4"^^xml1:gDay ;
+        time1:month "3"^^xml1:gMonthDay ;
+        time1:unitType time1:unitDay ;
+        time1:year "2022"^^xml1:gYear .
+
+    leolaniContext:office a n2mu:location,
+            sem:Place ;
+        rdfs:label "office" ;
+        n2mu:id "47"^^xml1:string ;
+        n2mu:in leolaniWorld:Amsterdam,
+            leolaniWorld:NL,
+            leolaniWorld:North_Holland .
+
+    leolaniTalk:chat1 a grasp:Chat,
+            sem:Event ;
+        rdfs:label "chat1" ;
+        n2mu:id "1"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:chat1_utterance0,
+            leolaniTalk:chat1_utterance1,
+            leolaniTalk:chat1_utterance2,
+            leolaniTalk:chat1_utterance3 .
+
+    leolaniTalk:chat1_utterance0 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance0" ;
+        n2mu:id "0"^^xml1:string ;
+        sem:hasActor leolaniFriends:mark .
+
+    leolaniTalk:chat1_utterance1 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance1" ;
+        n2mu:id "1"^^xml1:string ;
+        sem:hasActor leolaniFriends:mark .
+
+    leolaniTalk:chat1_utterance2 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasActor leolaniFriends:mark .
+
+    leolaniTalk:chat1_utterance3 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance3" ;
+        n2mu:id "3"^^xml1:string ;
+        sem:hasActor leolaniFriends:mark .
+
+    leolaniTalk:visual1 a grasp:Visual,
+            sem:Event ;
+        rdfs:label "visual1" ;
+        n2mu:id "1"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:visual1_detection0,
+            leolaniTalk:visual1_detection1,
+            leolaniTalk:visual1_detection2,
+            leolaniTalk:visual1_detection3 .
+
+    leolaniTalk:visual1_detection0 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual1_detection0" ;
+        n2mu:id "0"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual1_detection1 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual1_detection1" ;
+        n2mu:id "1"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual1_detection2 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual1_detection2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual1_detection3 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual1_detection3" ;
+        n2mu:id "3"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniWorld:Amsterdam a n2mu:city,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "Amsterdam" .
+
+    leolaniWorld:NL a n2mu:country,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "NL" .
+
+    leolaniWorld:North_Holland a n2mu:location,
+            n2mu:region,
+            sem:Place ;
+        rdfs:label "North Holland" .
+
+    leolaniFriends:mark a n2mu:person,
+            gaf:Instance,
+            grasp:Source,
+            sem:Actor ;
+        rdfs:label "mark" .
+
+    leolaniInputs:front-camera a n2mu:sensor,
+            gaf:Instance,
+            grasp:Source,
+            sem:Actor ;
+        rdfs:label "front-camera" .
+}
+
+leolaniWorld:Instances {
+    leolaniWorld:books a n2mu:object,
+            gaf:Instance ;
+        rdfs:label "books" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance1_char0-16 .
+
+    leolaniWorld:leolani a n2mu:robot ;
+        rdfs:label "leolani" .
+
+    leolaniWorld:lord_of_the_rings a n2mu:book,
+            gaf:Instance ;
+        rdfs:label "lord-of-the-rings" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance3_char0-27 .
+
+    leolaniWorld:mark a n2mu:person,
+            gaf:Instance ;
+        rdfs:label "mark" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance0_char0-17,
+            leolaniTalk:chat1_utterance1_char0-16,
+            leolaniTalk:chat1_utterance2_char0-27,
+            leolaniTalk:chat1_utterance3_char0-27 .
+
+    leolaniWorld:robots a n2mu:object,
+            gaf:Instance ;
+        rdfs:label "robots" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance0_char0-17 .
+
+    leolaniWorld:touch a n2mu:sensing,
+            gaf:Instance ;
+        rdfs:label "touch" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance2_char0-27 .
+}
+
+leolaniWorld:Claims {
+    leolaniFriends:mark owl:sameAs leolaniWorld:mark .
+
+    leolaniWorld:leolani_know_mark a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_mark" .
+
+    leolaniWorld:leolani_sense_front-camera a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_sense_front-camera" .
+
+    leolaniWorld:lord_of_the_rings_read-by_mark a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "lord_of_the_rings_read-by_mark" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance3_char0-27 .
+
+    leolaniWorld:mark_experience_touch a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mark_experience_touch" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char0-27 .
+
+    leolaniWorld:mark_like_books a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mark_like_books" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance1_char0-16 .
+
+    leolaniWorld:mark_like_robots a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mark_like_robots" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance0_char0-17 .
+}
+
+leolaniWorld:leolani_sense_front-camera {
+    leolaniWorld:leolani n2mu:sense leolaniInputs:front-camera .
+}
+
+leolaniTalk:Perspectives {
+    leolaniTalk:chat1_utterance0_char0-17 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance0_char0-17" ;
+        gaf:containsDenotation leolaniWorld:mark,
+            leolaniWorld:robots ;
+        gaf:denotes leolaniWorld:mark_like_robots ;
+        grasp:hasAttribution leolaniTalk:mark_like_robots_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:mark ;
+        rdf:value "mark likes robots"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance0 .
+
+    leolaniTalk:chat1_utterance1_char0-16 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance1_char0-16" ;
+        gaf:containsDenotation leolaniWorld:books,
+            leolaniWorld:mark ;
+        gaf:denotes leolaniWorld:mark_like_books ;
+        grasp:hasAttribution leolaniTalk:mark_like_books_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:mark ;
+        rdf:value "mark likes books"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance1 .
+
+    leolaniTalk:chat1_utterance2_char0-27 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance2_char0-27" ;
+        gaf:containsDenotation leolaniWorld:mark,
+            leolaniWorld:touch ;
+        gaf:denotes leolaniWorld:mark_experience_touch ;
+        grasp:hasAttribution leolaniTalk:mark_experience_touch_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:mark ;
+        rdf:value "yes, mark experiences touch"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance2 .
+
+    leolaniTalk:chat1_utterance3_char0-27 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance3_char0-27" ;
+        gaf:containsDenotation leolaniWorld:lord_of_the_rings,
+            leolaniWorld:mark ;
+        gaf:denotes leolaniWorld:lord_of_the_rings_read-by_mark ;
+        grasp:hasAttribution leolaniTalk:lord_of_the_rings_read-by_mark_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:mark ;
+        rdf:value "mark read lord of the rings"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance3 .
+
+    leolaniTalk:lord_of_the_rings_read-by_mark_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "lord_of_the_rings_read-by_mark_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance3_char0-27 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:mark_experience_touch_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "mark_experience_touch_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance2_char0-27 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:mark_like_books_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "mark_like_books_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance1_char0-16 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:mark_like_robots_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "mark_like_robots_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance0_char0-17 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    grasps:NEUTRAL a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "NEUTRAL" .
+
+    grasps:POSITIVE a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "POSITIVE" .
+
+    graspe:UNDERSPECIFIED a grasp:AttributionValue,
+            graspe:EmotionValue ;
+        rdfs:label "UNDERSPECIFIED" .
+
+    graspf:CERTAIN a grasp:AttributionValue,
+            graspf:CertaintyValue ;
+        rdfs:label "CERTAIN" .
+
+    graspf:POSITIVE a grasp:AttributionValue,
+            graspf:PolarityValue ;
+        rdfs:label "POSITIVE" .
+}
+
