@@ -67,7 +67,7 @@ class Chatbot:
         """
         # Set up Leolani backend modules
         self.address = "http://localhost:7200/repositories/sandbox"
-        self._brain = LongTermMemory(address=self.address, log_dir=scenario_folder, clear_all=False)
+        self._brain = LongTermMemory(address=self.address, log_dir=scenario_folder, clear_all=chat_id == 1)
 
         # Chat information
         self.chat_id = chat_id
@@ -84,6 +84,10 @@ class Chatbot:
         # RL information
         self.thoughts_file = self.scenario_folder / "thoughts.json"
         self._replier = RLCapsuleReplier(self._brain, self.thoughts_file, reward)
+
+        if chat_id == 1:
+            self.capsules_file.unlink()
+            self.thoughts_file.unlink()
 
     def close_session(self):
         """Ends interaction and writes all learnt thought utility files.

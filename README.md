@@ -57,7 +57,7 @@ python -c "import nltk; nltk.download('wordnet')"
 ```bash
 cd cltl-languagegeneration
 git pull
-pip install -e ."
+pip install -e .
 ```
 
 [comment]: <> (**Important:** In order to run NSP, make sure to download the NSP model and place the resource files into a)

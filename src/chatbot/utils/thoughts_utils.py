@@ -64,9 +64,9 @@ def phrase_cardinality_conflicts(conflicts: dict, utterance: dict) -> Tuple[Opti
     else:
         say = random.choice(CONFLICTING_KNOWLEDGE)
         conflict = random.choice(conflicts)
-        x = 'you' if conflict['_provenance']['_author'] == utterance['author'] \
-            else conflict['_provenance']['_author']
-        y = 'you' if utterance['triple']['_subject']['_label'] == conflict['_provenance']['_author'] \
+        x = 'you' if conflict['_provenance']['_author']['_label'] == utterance['author'] \
+            else conflict['_provenance']['_author']['_label']
+        y = 'you' if utterance['triple']['_subject']['_label'] == conflict['_provenance']['_author']['_label'] \
             else utterance['triple']['_subject']['_label']
 
         say += ' %s told me in %s that %s %s %s, but now you tell me that %s %s %s' \
@@ -101,10 +101,10 @@ def phrase_negation_conflicts(conflicts: dict, utterance: dict) -> Tuple[Optiona
             negative_conflict = random.choice(negative_conflict)
 
             say += ' %s told me in %s that %s %s %s, but in %s %s told me that %s did not %s %s' \
-                   % (affirmative_conflict['_provenance']['_author'], affirmative_conflict['_provenance']['_date'],
+                   % (affirmative_conflict['_provenance']['_author']['_label'], affirmative_conflict['_provenance']['_date'],
                       utterance['triple']['_subject']['_label'], utterance['triple']['_predicate']['_label'],
                       utterance['triple']['_complement']['_label'],
-                      negative_conflict['_provenance']['_date'], negative_conflict['_provenance']['_author'],
+                      negative_conflict['_provenance']['_date'], negative_conflict['_provenance']['_author']['_label'],
                       utterance['triple']['_subject']['_label'], utterance['triple']['_predicate']['_label'],
                       utterance['triple']['_complement']['_label'])
 

@@ -50,7 +50,7 @@ class RLCapsuleReplier(RLReplier):
         }
 
         # Compute composite stats
-        stats['Ratio statement to triples'] = stats['Total statements'] / stats['Total triples']
+        stats['Ratio statements to triples'] = stats['Total statements'] / stats['Total triples']
         stats['Ratio perspectives to triples'] = stats['Total perspectives'] / stats['Total triples']
         stats['Ratio conflicts to triples'] = stats['Total conflicts'] / stats['Total triples']
         stats['Ratio perspectives to statements'] = stats['Total perspectives'] / stats['Total statements']

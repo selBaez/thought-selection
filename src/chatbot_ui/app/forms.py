@@ -60,7 +60,7 @@ class ChatForm(FlaskForm):
                # 'Total classes', 'Total predicates',
                # 'Total statements', 'Total perspectives', 'Total conflicts',
                # 'Total sources',
-               'Ratio statement to triples', 'Ratio perspectives to triples', 'Ratio conflicts to triples',
+               'Ratio statements to triples', 'Ratio perspectives to triples', 'Ratio conflicts to triples',
                'Ratio perspectives to statements', 'Ratio conflicts to statements'
                ]
     reward = SelectField('Reward function', choices=rewards, validators=[DataRequired()])
