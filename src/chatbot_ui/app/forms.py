@@ -32,7 +32,7 @@ class TurnForm(FlaskForm):
     utterance_types = ["STATEMENT", "QUESTION"]
     utterance = StringField('Utterance', validators=[DataRequired()])
     utterance_type = SelectField('Utterance type', choices=utterance_types, validators=[DataRequired()])
-    position = StringField('Position', default="", validators=[DataRequired()])
+    # position = StringField('Position', default="", validators=[DataRequired()])
 
     # Context information
     context_id = IntegerField('Context ID', default=56, validators=[DataRequired()])

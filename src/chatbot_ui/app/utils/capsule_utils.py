@@ -30,7 +30,7 @@ def capsule_to_form(capsule, form):
     # utterance
     form.utterance.data = capsule["utterance"]
     form.utterance_type.data = capsule["utterance_type"]
-    form.position.data = capsule["position"]
+    # form.position.data = capsule["position"]
 
     # context
     form.context_id.data = capsule["context_id"]
@@ -54,19 +54,19 @@ def form_to_capsule(form, chatbot):
     capsule = {}
     capsule["chat"] = chatbot.chat_id
     capsule["turn"] = chatbot.turns
-    capsule["author"] = chatbot.speaker
+    capsule["author"] = chatbot.speaker.lower()
     capsule["utterance"] = form.utterance.data
     capsule["utterance_type"] = form.utterance_type.data
-    capsule["position"] = form.position.data
+    capsule["position"] = ""
 
-    capsule["subject"] = {"label": form.subject_label.data,
+    capsule["subject"] = {"label": form.subject_label.data.lower(),
                           "type": form.subject_types.data.split(','),
-                          "uri": f"http://cltl.nl/leolani/world/{form.subject_label.data}"}
+                          "uri": f"http://cltl.nl/leolani/world/{form.subject_label.data.lower()}"}
     capsule["predicate"] = {"label": form.predicate_label.data,
-                            "uri": f"http://cltl.nl/leolani/n2mu/{form.predicate_label.data}"}
-    capsule["object"] = {"label": form.object_label.data,
+                            "uri": f"http://cltl.nl/leolani/n2mu/{form.predicate_label.data.lower()}"}
+    capsule["object"] = {"label": form.object_label.data.lower(),
                          "type": form.object_types.data.split(','),
-                         "uri": f"http://cltl.nl/leolani/world/{form.object_label.data}"}
+                         "uri": f"http://cltl.nl/leolani/world/{form.object_label.data.lower()}"}
     capsule["perspective"] = {"certainty": form.perspective_certainty.data,
                               "polarity": form.perspective_polarity.data,
                               "sentiment": form.perspective_sentiment.data}

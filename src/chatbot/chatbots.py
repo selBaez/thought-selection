@@ -86,8 +86,10 @@ class Chatbot:
         self._replier = RLCapsuleReplier(self._brain, self.thoughts_file, reward)
 
         if chat_id == 1:
-            self.capsules_file.unlink()
-            self.thoughts_file.unlink()
+            if self.capsules_file.exists():
+                self.capsules_file.unlink()
+            if self.thoughts_file.exists():
+                self.thoughts_file.unlink()
 
     def close_session(self):
         """Ends interaction and writes all learnt thought utility files.

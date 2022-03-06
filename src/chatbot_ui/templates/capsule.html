@@ -106,13 +106,6 @@
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-            <p>
-                {{ form.position.label }}<br>
-                {{ form.position() }}<br>
-                {% for error in form.position.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
             <!--Chat info-->
             <p>
                 {{ form.chat_id.label }}<br>
