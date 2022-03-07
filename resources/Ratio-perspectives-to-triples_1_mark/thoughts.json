@@ -1,1 +1,194 @@
-{"metadata": {"c": 1.9999999907999992, "t": 47, "decay": 2e-10}, "data": {"subject_gap": {"value": 6.308343460242602e-05, "count": 12, "uncertainty": 1.1328647413068484}, "-compl": {"value": 2.7603324035109603e-05, "count": 16, "uncertainty": 0.981089645023417}, "person": {"value": 7.045641485068505e-05, "count": 9, "uncertainty": 1.3081195266978893}, "statement_novelty": {"value": 2.1717202688260404e-05, "count": 4, "uncertainty": 1.962179290046834}, "-subj": {"value": 4.719514032754873e-05, "count": 16, "uncertainty": 0.981089645023417}, "location": {"value": 6.982618914261351e-05, "count": 1, "uncertainty": 3.924358580093668}, "sensor": {"value": 6.626273910048425e-05, "count": 1, "uncertainty": 3.924358580093668}, "object_gap": {"value": 4.165804417182193e-05, "count": 8, "uncertainty": 1.387470281895922}, "book": {"value": 7.305812773771903e-05, "count": 1, "uncertainty": 3.924358580093668}, "sport": {"value": 6.27837559555183e-05, "count": 1, "uncertainty": 3.924358580093668}, "food": {"value": 6.636720965721413e-05, "count": 2, "uncertainty": 2.774940563791844}, "interest": {"value": 6.846363283513743e-05, "count": 1, "uncertainty": 3.924358580093668}, "taste": {"value": 7.181765228473562e-05, "count": 1, "uncertainty": 3.924358580093668}, "entity_novelty": {"value": 7.579168136049382e-06, "count": 10, "uncertainty": 1.2409911468320307}, "smell": {"value": 6.413749446436434e-05, "count": 1, "uncertainty": 3.924358580093668}, "object": {"value": 6.677227723561407e-05, "count": 2, "uncertainty": 2.774940563791844}, "agent": {"value": 5.657210401476374e-05, "count": 6, "uncertainty": 1.6021126814904327}, "_trust": {"value": 1.9907311232182907e-05, "count": 4, "uncertainty": 1.962179290046834}, "touch": {"value": 3.716319713649086e-05, "count": 2, "uncertainty": 2.774940563791844}, "song": {"value": 6.235068828157179e-05, "count": 1, "uncertainty": 3.924358580093668}, "institution": {"value": 7.059077698536487e-05, "count": 2, "uncertainty": 2.774940563791844}, "overlap": {"value": 1.528366871168537e-05, "count": 5, "uncertainty": 1.755026510634799}, "city": {"value": 6.878347534847922e-05, "count": 1, "uncertainty": 3.924358580093668}, "robot": {"value": 3.8405535025305224e-05, "count": 3, "uncertainty": 2.265729482613697}, "people": {"value": 6.602576051409912e-05, "count": 1, "uncertainty": 3.924358580093668}, "dish": {"value": 5.061064668875783e-05, "count": 1, "uncertainty": 3.924358580093668}, "-none": {"value": 1.5233387906691507e-05, "count": 3, "uncertainty": 2.265729482613697}, "objects": {"value": 2.5763860220034816e-05, "count": 1, "uncertainty": 3.924358580093668}, "agents": {"value": -5.142244130291963e-06, "count": 3, "uncertainty": 2.265729482613697}, "no_statement_novelty": {"value": 8.782837524431077e-06, "count": 3, "uncertainty": 2.265729482613697}, "Instance": {"value": 1.4939468178979038e-05, "count": 1, "uncertainty": 3.924358580093668}, "claim": {"value": -6.439525684783461e-06, "count": 2, "uncertainty": 2.774940563791844}, "activity": {"value": -3.7006452955109005e-06, "count": 3, "uncertainty": 2.265729482613697}, "movie": {"value": 1.068029891353509e-06, "count": 2, "uncertainty": 2.774940563791844}, "concept": {"value": 6.521614911919127e-07, "count": 1, "uncertainty": 3.924358580093668}, "story": {"value": -1.0263797308330516e-05, "count": 1, "uncertainty": 3.924358580093668}, "certain": {"value": -9.061633863719745e-06, "count": 1, "uncertainty": 3.924358580093668}}}
+{
+  "metadata": {
+    "c": 1.9999999907999992,
+    "t": 47,
+    "decay": 2e-10
+  },
+  "data": {
+    "subject_gap": {
+      "value": 6.308343460242602e-05,
+      "count": 12,
+      "uncertainty": 1.1328647413068484
+    },
+    "-compl": {
+      "value": 2.7603324035109603e-05,
+      "count": 16,
+      "uncertainty": 0.981089645023417
+    },
+    "person": {
+      "value": 7.045641485068505e-05,
+      "count": 9,
+      "uncertainty": 1.3081195266978893
+    },
+    "statement_novelty": {
+      "value": 2.1717202688260404e-05,
+      "count": 4,
+      "uncertainty": 1.962179290046834
+    },
+    "-subj": {
+      "value": 4.719514032754873e-05,
+      "count": 16,
+      "uncertainty": 0.981089645023417
+    },
+    "location": {
+      "value": 6.982618914261351e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "sensor": {
+      "value": 6.626273910048425e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "object_gap": {
+      "value": 4.165804417182193e-05,
+      "count": 8,
+      "uncertainty": 1.387470281895922
+    },
+    "book": {
+      "value": 7.305812773771903e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "sport": {
+      "value": 6.27837559555183e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "food": {
+      "value": 6.636720965721413e-05,
+      "count": 2,
+      "uncertainty": 2.774940563791844
+    },
+    "interest": {
+      "value": 6.846363283513743e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "taste": {
+      "value": 7.181765228473562e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "entity_novelty": {
+      "value": 7.579168136049382e-06,
+      "count": 10,
+      "uncertainty": 1.2409911468320307
+    },
+    "smell": {
+      "value": 6.413749446436434e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "object": {
+      "value": 6.677227723561407e-05,
+      "count": 2,
+      "uncertainty": 2.774940563791844
+    },
+    "agent": {
+      "value": 5.657210401476374e-05,
+      "count": 6,
+      "uncertainty": 1.6021126814904327
+    },
+    "_trust": {
+      "value": 1.9907311232182907e-05,
+      "count": 4,
+      "uncertainty": 1.962179290046834
+    },
+    "touch": {
+      "value": 3.716319713649086e-05,
+      "count": 2,
+      "uncertainty": 2.774940563791844
+    },
+    "song": {
+      "value": 6.235068828157179e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "institution": {
+      "value": 7.059077698536487e-05,
+      "count": 2,
+      "uncertainty": 2.774940563791844
+    },
+    "overlap": {
+      "value": 1.528366871168537e-05,
+      "count": 5,
+      "uncertainty": 1.755026510634799
+    },
+    "city": {
+      "value": 6.878347534847922e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "robot": {
+      "value": 3.8405535025305224e-05,
+      "count": 3,
+      "uncertainty": 2.265729482613697
+    },
+    "people": {
+      "value": 6.602576051409912e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "dish": {
+      "value": 5.061064668875783e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "-none": {
+      "value": 1.5233387906691507e-05,
+      "count": 3,
+      "uncertainty": 2.265729482613697
+    },
+    "objects": {
+      "value": 2.5763860220034816e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "agents": {
+      "value": -5.142244130291963e-06,
+      "count": 3,
+      "uncertainty": 2.265729482613697
+    },
+    "no_statement_novelty": {
+      "value": 8.782837524431077e-06,
+      "count": 3,
+      "uncertainty": 2.265729482613697
+    },
+    "Instance": {
+      "value": 1.4939468178979038e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "claim": {
+      "value": -6.439525684783461e-06,
+      "count": 2,
+      "uncertainty": 2.774940563791844
+    },
+    "activity": {
+      "value": -3.7006452955109005e-06,
+      "count": 3,
+      "uncertainty": 2.265729482613697
+    },
+    "movie": {
+      "value": 1.068029891353509e-06,
+      "count": 2,
+      "uncertainty": 2.774940563791844
+    },
+    "concept": {
+      "value": 6.521614911919127e-07,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "story": {
+      "value": -1.0263797308330516e-05,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    },
+    "certain": {
+      "value": -9.061633863719745e-06,
+      "count": 1,
+      "uncertainty": 3.924358580093668
+    }
+  }
+}

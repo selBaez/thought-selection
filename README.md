@@ -48,6 +48,7 @@ pip install -r requirements.txt --no-cache
    the latest versions and install the packages into the virtual env like this:
 
 ```bash
+conda activate thought-selection
 cd cltl-knowledgerepresentation
 git pull
 pip install -e .
@@ -55,6 +56,7 @@ python -c "import nltk; nltk.download('wordnet')"
 ```
 
 ```bash
+conda activate thought-selection
 cd cltl-languagegeneration
 git pull
 pip install -e .
@@ -113,6 +115,7 @@ the correct settings.
 Run the web app from the `src` folder, like so:
 
 ```bash
+conda activate thought-selection
 cd thought-selection
 cd src/
 python web_app.py
