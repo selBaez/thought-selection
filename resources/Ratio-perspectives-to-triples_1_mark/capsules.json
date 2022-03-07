@@ -3,6 +3,294 @@
         "chat": 1,
         "turn": 0,
         "author": "mark",
+        "utterance": "mark does not see leolani",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "sees",
+            "uri": "http://cltl.nl/leolani/n2mu/sees"
+        },
+        "object": {
+            "label": "leolani",
+            "type": [
+                "robot"
+            ],
+            "uri": "http://cltl.nl/leolani/world/leolani"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "NEGATIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/sees",
+                "_label": "see",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/leolani",
+                "_label": "leolani",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "robot",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 7.609191903819814e-05,
+        "brain_stats": {
+            "turn": 0,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "True",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 13142.0,
+            "Total statements": 3.0,
+            "Total perspectives": 1.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00022827575711459444,
+            "Ratio perspectives to triples": 7.609191903819814e-05,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.3333333333333333,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I am curious. What types can mark see"
+    },
+    {
+        "chat": 1,
+        "turn": 1,
+        "author": "mark",
+        "utterance": "",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "sees",
+            "uri": "http://cltl.nl/leolani/n2mu/sees"
+        },
+        "object": {
+            "label": "visible_objects",
+            "type": [
+                "objects"
+            ],
+            "uri": "http://cltl.nl/leolani/world/visible_objects"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "UNDERSPECIFIED",
+            "_sentiment": "UNDERSPECIFIED",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/sees",
+                "_label": "see",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/visible_objects",
+                "_label": "visible-objects",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "objects",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00012670256572695597,
+        "brain_stats": {
+            "turn": 1,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 1,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 15785.0,
+            "Total statements": 4.0,
+            "Total perspectives": 2.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00025340513145391194,
+            "Ratio perspectives to triples": 0.00012670256572695597,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.5,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "This is news to me. I had never heard about visible-objects before!"
+    },
+    {
+        "chat": 1,
+        "turn": 2,
+        "author": "mark",
+        "utterance": "mark does not see invisible objects",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "sees",
+            "uri": "http://cltl.nl/leolani/n2mu/sees"
+        },
+        "object": {
+            "label": "invisible objects",
+            "type": [
+                "objects"
+            ],
+            "uri": "http://cltl.nl/leolani/world/invisible objects"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "NEGATIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/sees",
+                "_label": "see",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/invisible_objects",
+                "_label": "invisible-objects",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "objects",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00016219723183391003,
+        "brain_stats": {
+            "turn": 2,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 2,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 18496.0,
+            "Total statements": 5.0,
+            "Total perspectives": 3.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.0002703287197231834,
+            "Ratio perspectives to triples": 0.00016219723183391003,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.6,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "This sounds familiar. I have heard about invisible-objects before"
+    },
+    {
+        "chat": 1,
+        "turn": 4,
+        "author": "mark",
         "utterance": "mark likes robots",
         "utterance_type": "STATEMENT",
         "position": "",
@@ -20,7 +308,7 @@
         "object": {
             "label": "robots",
             "type": [
-                "object"
+                "agents"
             ],
             "uri": "http://cltl.nl/leolani/world/robots"
         },
@@ -31,10 +319,10 @@
             "_time": null,
             "_emotion": "UNDERSPECIFIED"
         },
-        "context_id": 229,
-        "date": "2022-03-04",
+        "context_id": 192,
+        "date": "2022-03-07",
         "place": "office",
-        "place_id": 47,
+        "place_id": 90,
         "country": "NL",
         "region": "North Holland",
         "city": "Amsterdam",
@@ -64,14 +352,109 @@
                 "_offset": null,
                 "_confidence": 0.0,
                 "_types": [
-                    "object",
+                    "agents",
                     "Instance"
                 ]
             }
         },
-        "brain_state": 0.00015160703456640388,
+        "brain_state": 0.00016597510373443983,
         "brain_stats": {
-            "turn": 0,
+            "turn": 4,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 1,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 24100.0,
+            "Total statements": 6.0,
+            "Total perspectives": 4.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00024896265560165974,
+            "Ratio perspectives to triples": 0.00016597510373443983,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.6666666666666666,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I have heard this before. mark told me about it in 2022-03-07T00:00:00"
+    },
+    {
+        "chat": 1,
+        "turn": 5,
+        "author": "mark",
+        "utterance": "leolani remembers wrong",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "leolani",
+            "type": [
+                "robot"
+            ],
+            "uri": "http://cltl.nl/leolani/world/leolani"
+        },
+        "predicate": {
+            "label": "remember",
+            "uri": "http://cltl.nl/leolani/n2mu/remember"
+        },
+        "object": {
+            "label": "wrong",
+            "type": [
+                "adjective"
+            ],
+            "uri": "http://cltl.nl/leolani/world/wrong"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEGATIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/leolani",
+                "_label": "leolani",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "robot",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/remember",
+                "_label": "remember",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/wrong",
+                "_label": "wrong",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00018501387604070305,
+        "brain_stats": {
+            "turn": 5,
             "cardinality conflicts": 0,
             "negation conflicts": 0,
             "subject gaps": 2,
@@ -81,25 +464,408 @@
             "object novelty": "True",
             "overlaps subject-predicate": 0,
             "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13192.0,
-            "Total statements": 4.0,
-            "Total perspectives": 2.0,
+            "trust": 0.5,
+            "Total triples": 27025.0,
+            "Total statements": 7.0,
+            "Total perspectives": 5.0,
             "Total conflicts": 0,
             "Total sources": 1.0,
-            "Ratio statement to triples": 0.00030321406913280777,
-            "Ratio perspectives to triples": 0.00015160703456640388,
+            "Ratio statements to triples": 0.0002590194264569843,
+            "Ratio perspectives to triples": 0.00018501387604070305,
             "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.5,
+            "Ratio perspectives to statements": 0.7142857142857143,
             "Ratio conflicts to statements": 0.0
         },
-        "reply": "If you don't mind me asking. What types can mark like"
+        "reply": "This sounds familiar. I have heard about wrong before"
     },
     {
         "chat": 1,
-        "turn": 1,
+        "turn": 6,
         "author": "mark",
-        "utterance": "mark likes books",
+        "utterance": "mark does not trust leolani",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "trust",
+            "uri": "http://cltl.nl/leolani/n2mu/trust"
+        },
+        "object": {
+            "label": "leolani",
+            "type": [
+                "robot"
+            ],
+            "uri": "http://cltl.nl/leolani/world/leolani"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "NEGATIVE",
+            "_sentiment": "NEGATIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/trust",
+                "_label": "trust",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/leolani",
+                "_label": "leolani",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "robot",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00019995334421968208,
+        "brain_stats": {
+            "turn": 6,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 30007.0,
+            "Total statements": 8.0,
+            "Total perspectives": 6.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.0002666044589595761,
+            "Ratio perspectives to triples": 0.00019995334421968208,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.75,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "This is news to me. I did not know anything that mark trust"
+    },
+    {
+        "chat": 1,
+        "turn": 7,
+        "author": "mark",
+        "utterance": "mark does not trust liars",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "trust",
+            "uri": "http://cltl.nl/leolani/n2mu/trust"
+        },
+        "object": {
+            "label": "liars",
+            "type": [
+                "adjective"
+            ],
+            "uri": "http://cltl.nl/leolani/world/liars"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "NEGATIVE",
+            "_sentiment": "NEGATIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/trust",
+                "_label": "trust",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/liars",
+                "_label": "liars",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00021167861138830928,
+        "brain_stats": {
+            "turn": 7,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 1,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 33069.0,
+            "Total statements": 9.0,
+            "Total perspectives": 7.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00027215821464211196,
+            "Ratio perspectives to triples": 0.00021167861138830928,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.7777777777777778,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I am curious. What types can mark trust"
+    },
+    {
+        "chat": 1,
+        "turn": 8,
+        "author": "mark",
+        "utterance": "mark trusts selene",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "trust",
+            "uri": "http://cltl.nl/leolani/n2mu/trust"
+        },
+        "object": {
+            "label": "selene",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/selene"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/trust",
+                "_label": "trust",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/selene",
+                "_label": "selene",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00022095785228967574,
+        "brain_stats": {
+            "turn": 8,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 1,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 36206.0,
+            "Total statements": 10.0,
+            "Total perspectives": 8.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00027619731536209467,
+            "Ratio perspectives to triples": 0.00022095785228967574,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.8,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "This is news to me. I did not know anybody that mark trust"
+    },
+    {
+        "chat": 1,
+        "turn": 9,
+        "author": "mark",
+        "utterance": "mark trusts friends",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "trust",
+            "uri": "http://cltl.nl/leolani/n2mu/trust"
+        },
+        "object": {
+            "label": "friends",
+            "type": [
+                "agent"
+            ],
+            "uri": "http://cltl.nl/leolani/world/friends"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/trust",
+                "_label": "trust",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/friends",
+                "_label": "friends",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "agent",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00022834525803014157,
+        "brain_stats": {
+            "turn": 9,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 2,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 39414.0,
+            "Total statements": 11.0,
+            "Total perspectives": 9.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00027908864870350637,
+            "Ratio perspectives to triples": 0.00022834525803014157,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.8181818181818182,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I do not believe you."
+    },
+    {
+        "chat": 1,
+        "turn": 10,
+        "author": "mark",
+        "utterance": "mark does not like leolani",
         "utterance_type": "STATEMENT",
         "position": "",
         "subject": {
@@ -114,23 +880,23 @@
             "uri": "http://cltl.nl/leolani/n2mu/like"
         },
         "object": {
-            "label": "books",
+            "label": "leolani",
             "type": [
-                "object"
+                "robot"
             ],
-            "uri": "http://cltl.nl/leolani/world/books"
+            "uri": "http://cltl.nl/leolani/world/leolani"
         },
         "perspective": {
             "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
+            "_polarity": "NEGATIVE",
+            "_sentiment": "NEGATIVE",
             "_time": null,
             "_emotion": "UNDERSPECIFIED"
         },
-        "context_id": 229,
-        "date": "2022-03-04",
+        "context_id": 192,
+        "date": "2022-03-07",
         "place": "office",
-        "place_id": 47,
+        "place_id": 90,
         "country": "NL",
         "region": "North Holland",
         "city": "Amsterdam",
@@ -155,1446 +921,6 @@
                 "_cardinality": 1
             },
             "_complement": {
-                "_id": "http://cltl.nl/leolani/world/books",
-                "_label": "books",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "object",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.00022632968691059977,
-        "brain_stats": {
-            "turn": 1,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "False",
-            "object novelty": "True",
-            "overlaps subject-predicate": 1,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13255.0,
-            "Total statements": 5.0,
-            "Total perspectives": 3.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0003772161448509996,
-            "Ratio perspectives to triples": 0.00022632968691059977,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.6,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "Let me ask you something. Has mark experience touch?"
-    },
-    {
-        "chat": 1,
-        "turn": 2,
-        "author": "mark",
-        "utterance": "yes, mark experiences touch",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "mark",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/mark"
-        },
-        "predicate": {
-            "label": "experience",
-            "uri": "http://cltl.nl/leolani/n2mu/experience"
-        },
-        "object": {
-            "label": "touch",
-            "type": [
-                "sensing"
-            ],
-            "uri": "http://cltl.nl/leolani/world/touch"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "NEUTRAL",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/mark",
-                "_label": "mark",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/experience",
-                "_label": "experience",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/touch",
-                "_label": "touch",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "sensing",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.000300187617260788,
-        "brain_stats": {
-            "turn": 2,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "False",
-            "object novelty": "True",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13325.0,
-            "Total statements": 6.0,
-            "Total perspectives": 4.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.000450281425891182,
-            "Ratio perspectives to triples": 0.000300187617260788,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.6666666666666666,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "I would like to know. Has book ever read-by mark?"
-    },
-    {
-        "chat": 1,
-        "turn": 3,
-        "author": "mark",
-        "utterance": "mark read lord of the rings",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "lord of the rings",
-            "type": [
-                "book"
-            ],
-            "uri": "http://cltl.nl/leolani/world/lord of the rings"
-        },
-        "predicate": {
-            "label": "read-by",
-            "uri": "http://cltl.nl/leolani/n2mu/read-by"
-        },
-        "object": {
-            "label": "mark",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/mark"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/lord_of_the_rings",
-                "_label": "lord-of-the-rings",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "book",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/read-by",
-                "_label": "read-by",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/mark",
-                "_label": "mark",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.000373245744998507,
-        "brain_stats": {
-            "turn": 3,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "True",
-            "object novelty": "False",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13396.0,
-            "Total statements": 7.0,
-            "Total perspectives": 5.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0005225440429979098,
-            "Ratio perspectives to triples": 0.000373245744998507,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.7142857142857143,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "You have my trust."
-    },
-    {
-        "chat": 1,
-        "turn": 5,
-        "author": "mark",
-        "utterance": "mark's friends also trust mark",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "mark's friends",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/mark's friends"
-        },
-        "predicate": {
-            "label": "trust",
-            "uri": "http://cltl.nl/leolani/n2mu/trust"
-        },
-        "object": {
-            "label": "mark",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/mark"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/mark's_friends",
-                "_label": "mark-s-friends",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/trust",
-                "_label": "trust",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/mark",
-                "_label": "mark",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0004456658991309515,
-        "brain_stats": {
-            "turn": 5,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "True",
-            "object novelty": "False",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13463.0,
-            "Total statements": 8.0,
-            "Total perspectives": 6.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0005942211988412687,
-            "Ratio perspectives to triples": 0.0004456658991309515,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.75,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "I am curious. Has mark experience by a taste?"
-    },
-    {
-        "chat": 1,
-        "turn": 6,
-        "author": "mark",
-        "utterance": "yes, mark experiences taste",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "mark",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/mark"
-        },
-        "predicate": {
-            "label": "experience",
-            "uri": "http://cltl.nl/leolani/n2mu/experience"
-        },
-        "object": {
-            "label": "taste",
-            "type": [
-                "sensing"
-            ],
-            "uri": "http://cltl.nl/leolani/world/taste"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/mark",
-                "_label": "mark",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/experience",
-                "_label": "experience",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/taste",
-                "_label": "taste",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "sensing",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0005174835514156871,
-        "brain_stats": {
-            "turn": 6,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "False",
-            "object novelty": "True",
-            "overlaps subject-predicate": 1,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13527.0,
-            "Total statements": 9.0,
-            "Total perspectives": 7.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0006653359946773121,
-            "Ratio perspectives to triples": 0.0005174835514156871,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.7777777777777778,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "Let me ask you something. Has mark work-at institution?"
-    },
-    {
-        "chat": 1,
-        "turn": 7,
-        "author": "mark",
-        "utterance": "mark works at a university",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "mark",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/mark"
-        },
-        "predicate": {
-            "label": "work-at",
-            "uri": "http://cltl.nl/leolani/n2mu/work-at"
-        },
-        "object": {
-            "label": "university",
-            "type": [
-                "institution"
-            ],
-            "uri": "http://cltl.nl/leolani/world/university"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/mark",
-                "_label": "mark",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/work-at",
-                "_label": "work-at",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/university",
-                "_label": "university",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "institution",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0005884516366311144,
-        "brain_stats": {
-            "turn": 7,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "False",
-            "object novelty": "True",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13595.0,
-            "Total statements": 10.0,
-            "Total perspectives": 8.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.000735564545788893,
-            "Ratio perspectives to triples": 0.0005884516366311144,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.8,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "This sounds familiar. I have heard about university before"
-    },
-    {
-        "chat": 1,
-        "turn": 8,
-        "author": "mark",
-        "utterance": "mark works in amsterdam",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "mark",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/mark"
-        },
-        "predicate": {
-            "label": "work-in",
-            "uri": "http://cltl.nl/leolani/n2mu/work-in"
-        },
-        "object": {
-            "label": "amsterdam",
-            "type": [
-                "city"
-            ],
-            "uri": "http://cltl.nl/leolani/world/amsterdam"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/mark",
-                "_label": "mark",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/work-in",
-                "_label": "work-in",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/amsterdam",
-                "_label": "amsterdam",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "city",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0006586651053864168,
-        "brain_stats": {
-            "turn": 8,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "False",
-            "object novelty": "True",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13664.0,
-            "Total statements": 11.0,
-            "Total perspectives": 9.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0008050351288056206,
-            "Ratio perspectives to triples": 0.0006586651053864168,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.8181818181818182,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "I am curious. What kinds of things can work-in a amsterdam like mark"
-    },
-    {
-        "chat": 1,
-        "turn": 9,
-        "author": "mark",
-        "utterance": "scientists can work in amsterdam",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "scientists",
-            "type": [
-                "people"
-            ],
-            "uri": "http://cltl.nl/leolani/world/scientists"
-        },
-        "predicate": {
-            "label": "work-in",
-            "uri": "http://cltl.nl/leolani/n2mu/work-in"
-        },
-        "object": {
-            "label": "amsterdam",
-            "type": [
-                "city"
-            ],
-            "uri": "http://cltl.nl/leolani/world/amsterdam"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/scientists",
-                "_label": "scientists",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "people",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/work-in",
-                "_label": "work-in",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/amsterdam",
-                "_label": "amsterdam",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "city",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0007284912945290303,
-        "brain_stats": {
-            "turn": 9,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "True",
-            "object novelty": "False",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 1,
-            "trust": "0.8325091256144551",
-            "Total triples": 13727.0,
-            "Total statements": 12.0,
-            "Total perspectives": 10.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0008741895534348364,
-            "Ratio perspectives to triples": 0.0007284912945290303,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.8333333333333334,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "I would like to know. Has a agent ever travel-to amsterdam?"
-    },
-    {
-        "chat": 1,
-        "turn": 10,
-        "author": "mark",
-        "utterance": "the pope hsa travelled to amsterdam",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "pope",
-            "type": [
-                "agent"
-            ],
-            "uri": "http://cltl.nl/leolani/world/pope"
-        },
-        "predicate": {
-            "label": "travel-to",
-            "uri": "http://cltl.nl/leolani/n2mu/travel-to"
-        },
-        "object": {
-            "label": "amsterdam",
-            "type": [
-                "city"
-            ],
-            "uri": "http://cltl.nl/leolani/world/amsterdam"
-        },
-        "perspective": {
-            "_certainty": "UNDERSPECIFIED",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/pope",
-                "_label": "pope",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "agent",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/travel-to",
-                "_label": "travel-to",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/amsterdam",
-                "_label": "amsterdam",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "city",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0007972747698775096,
-        "brain_stats": {
-            "turn": 10,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "True",
-            "object novelty": "False",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13797.0,
-            "Total statements": 13.0,
-            "Total perspectives": 11.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0009422338189461477,
-            "Ratio perspectives to triples": 0.0007972747698775096,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.8461538461538461,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "Let me ask you something. What kinds of things can travel-to a amsterdam like pope"
-    },
-    {
-        "chat": 1,
-        "turn": 11,
-        "author": "mark",
-        "utterance": "tourists can travel to amsterdam",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "tourists",
-            "type": [
-                "agent"
-            ],
-            "uri": "http://cltl.nl/leolani/world/tourists"
-        },
-        "predicate": {
-            "label": "travel-to",
-            "uri": "http://cltl.nl/leolani/n2mu/travel-to"
-        },
-        "object": {
-            "label": "amsterdam",
-            "type": [
-                "city"
-            ],
-            "uri": "http://cltl.nl/leolani/world/amsterdam"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "NEUTRAL",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/tourists",
-                "_label": "tourists",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "agent",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/travel-to",
-                "_label": "travel-to",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/amsterdam",
-                "_label": "amsterdam",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "city",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.000865738402712647,
-        "brain_stats": {
-            "turn": 11,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "True",
-            "object novelty": "False",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 1,
-            "trust": "0.8325091256144551",
-            "Total triples": 13861.0,
-            "Total statements": 14.0,
-            "Total perspectives": 12.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.001010028136498088,
-            "Ratio perspectives to triples": 0.000865738402712647,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.8571428571428571,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "I would like to know. Has tourists own object?"
-    },
-    {
-        "chat": 1,
-        "turn": 12,
-        "author": "mark",
-        "utterance": "tourists own cameras",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "tourists",
-            "type": [
-                "agent"
-            ],
-            "uri": "http://cltl.nl/leolani/world/tourists"
-        },
-        "predicate": {
-            "label": "own",
-            "uri": "http://cltl.nl/leolani/n2mu/own"
-        },
-        "object": {
-            "label": "cameras",
-            "type": [
-                "object"
-            ],
-            "uri": "http://cltl.nl/leolani/world/cameras"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/tourists",
-                "_label": "tourists",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "agent",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/own",
-                "_label": "own",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/cameras",
-                "_label": "cameras",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "object",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0009335056728421657,
-        "brain_stats": {
-            "turn": 12,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "False",
-            "object novelty": "True",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13926.0,
-            "Total statements": 15.0,
-            "Total perspectives": 13.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.001077121930202499,
-            "Ratio perspectives to triples": 0.0009335056728421657,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.8666666666666667,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "I am curious. Has food ever cook-by tourists?"
-    },
-    {
-        "chat": 1,
-        "turn": 13,
-        "author": "mark",
-        "utterance": "goulash has been booked by tourists",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "goulash",
-            "type": [
-                "food"
-            ],
-            "uri": "http://cltl.nl/leolani/world/goulash"
-        },
-        "predicate": {
-            "label": "cook-by",
-            "uri": "http://cltl.nl/leolani/n2mu/cook-by"
-        },
-        "object": {
-            "label": "tourists",
-            "type": [
-                "agent"
-            ],
-            "uri": "http://cltl.nl/leolani/world/tourists"
-        },
-        "perspective": {
-            "_certainty": "UNDERSPECIFIED",
-            "_polarity": "POSITIVE",
-            "_sentiment": "NEUTRAL",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/goulash",
-                "_label": "goulash",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "food",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/cook-by",
-                "_label": "cook-by",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/tourists",
-                "_label": "tourists",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "agent",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0010002143316424949,
-        "brain_stats": {
-            "turn": 13,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "True",
-            "object novelty": "False",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 13997.0,
-            "Total statements": 16.0,
-            "Total perspectives": 14.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0011431020933057084,
-            "Ratio perspectives to triples": 0.0010002143316424949,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.875,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "I would like to know. Has tourists perceive by a sensor?"
-    },
-    {
-        "chat": 1,
-        "turn": 14,
-        "author": "mark",
-        "utterance": "no, tourists do not perceive by sensors",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "tourists",
-            "type": [
-                "people"
-            ],
-            "uri": "http://cltl.nl/leolani/world/tourists"
-        },
-        "predicate": {
-            "label": "perceive",
-            "uri": "http://cltl.nl/leolani/n2mu/perceive"
-        },
-        "object": {
-            "label": "sensor",
-            "type": [
-                "object"
-            ],
-            "uri": "http://cltl.nl/leolani/world/sensor"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "NEGATIVE",
-            "_sentiment": "NEUTRAL",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/tourists",
-                "_label": "tourists",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "people",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/perceive",
-                "_label": "perceive",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/sensor",
-                "_label": "sensor",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "object",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.001066477070742979,
-        "brain_stats": {
-            "turn": 14,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "False",
-            "object novelty": "True",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 14065.0,
-            "Total statements": 17.0,
-            "Total perspectives": 15.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0012086740135087096,
-            "Ratio perspectives to triples": 0.001066477070742979,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.8823529411764706,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "I am curious. What types can tourists perceive"
-    },
-    {
-        "chat": 1,
-        "turn": 15,
-        "author": "mark",
-        "utterance": "tourists can perceive historical monuments",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "tourists",
-            "type": [
-                "people"
-            ],
-            "uri": "http://cltl.nl/leolani/world/tourists"
-        },
-        "predicate": {
-            "label": "perceive",
-            "uri": "http://cltl.nl/leolani/n2mu/perceive"
-        },
-        "object": {
-            "label": "historical monuments",
-            "type": [
-                "object"
-            ],
-            "uri": "http://cltl.nl/leolani/world/historical monuments"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "NEUTRAL",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/tourists",
-                "_label": "tourists",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "people",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/perceive",
-                "_label": "perceive",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/historical_monuments",
-                "_label": "historical-monuments",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "object",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0011325028312570782,
-        "brain_stats": {
-            "turn": 15,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "False",
-            "object novelty": "True",
-            "overlaps subject-predicate": 1,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 14128.0,
-            "Total statements": 18.0,
-            "Total perspectives": 16.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.001274065685164213,
-            "Ratio perspectives to triples": 0.0011325028312570782,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.8888888888888888,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "Superduper! Did you know that tourists also perceive sensor"
-    },
-    {
-        "chat": 1,
-        "turn": 16,
-        "author": "mark",
-        "utterance": "mark know that tourists_perceive_sensor",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "mark",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/mark"
-        },
-        "predicate": {
-            "label": "know",
-            "uri": "http://cltl.nl/leolani/n2mu/know"
-        },
-        "object": {
-            "label": "tourists perceive sensor",
-            "type": [
-                "object"
-            ],
-            "uri": "http://cltl.nl/leolani/world/tourists perceive sensor"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "NEUTRAL",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/mark",
-                "_label": "mark",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/know",
-                "_label": "know",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/tourists_perceive_sensor",
-                "_label": "tourists-perceive-sensor",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "object",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0011982801155987876,
-        "brain_stats": {
-            "turn": 16,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "False",
-            "object novelty": "False",
-            "overlaps subject-predicate": 1,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 14187.0,
-            "Total statements": 19.0,
-            "Total perspectives": 17.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0013392542468457038,
-            "Ratio perspectives to triples": 0.0011982801155987876,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.8947368421052632,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "I just learned something, I did not know anybody who know tourists-perceive-sensor"
-    },
-    {
-        "chat": 1,
-        "turn": 17,
-        "author": "mark",
-        "utterance": "mark is happy for leolani",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "mark",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/mark"
-        },
-        "predicate": {
-            "label": "happy",
-            "uri": "http://cltl.nl/leolani/n2mu/happy"
-        },
-        "object": {
-            "label": "leolani",
-            "type": [
-                "robot"
-            ],
-            "uri": "http://cltl.nl/leolani/world/leolani"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "POSITIVE",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/mark",
-                "_label": "mark",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/happy",
-                "_label": "happy",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
                 "_id": "http://cltl.nl/leolani/world/leolani",
                 "_label": "leolani",
                 "_offset": null,
@@ -1605,9 +931,9 @@
                 ]
             }
         },
-        "brain_state": 0.0012635125649305067,
+        "brain_state": 0.00023431825104857417,
         "brain_stats": {
-            "turn": 17,
+            "turn": 10,
             "cardinality conflicts": 0,
             "negation conflicts": 0,
             "subject gaps": 2,
@@ -1615,27 +941,27 @@
             "statement novelty": 0,
             "subject novelty": "False",
             "object novelty": "False",
-            "overlaps subject-predicate": 0,
+            "overlaps subject-predicate": 1,
             "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 14246.0,
-            "Total statements": 20.0,
-            "Total perspectives": 18.0,
+            "trust": 0.5,
+            "Total triples": 42677.0,
+            "Total statements": 12.0,
+            "Total perspectives": 10.0,
             "Total conflicts": 0,
             "Total sources": 1.0,
-            "Ratio statement to triples": 0.0014039028499227854,
-            "Ratio perspectives to triples": 0.0012635125649305067,
+            "Ratio statements to triples": 0.000281181901258289,
+            "Ratio perspectives to triples": 0.00023431825104857417,
             "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.9,
+            "Ratio perspectives to statements": 0.8333333333333334,
             "Ratio conflicts to statements": 0.0
         },
-        "reply": "I would like to know. Has leolani acknowledge by a smell?"
+        "reply": "I wouldn't know!"
     },
     {
         "chat": 1,
-        "turn": 18,
+        "turn": 12,
         "author": "mark",
-        "utterance": "mark wants to talk",
+        "utterance": "mark thinks leolani is stupid",
         "utterance_type": "STATEMENT",
         "position": "",
         "subject": {
@@ -1646,27 +972,27 @@
             "uri": "http://cltl.nl/leolani/world/mark"
         },
         "predicate": {
-            "label": "wants",
-            "uri": "http://cltl.nl/leolani/n2mu/wants"
+            "label": "think",
+            "uri": "http://cltl.nl/leolani/n2mu/think"
         },
         "object": {
-            "label": "talk",
+            "label": "leolani_is_stupid",
             "type": [
-                "activity"
+                "claim"
             ],
-            "uri": "http://cltl.nl/leolani/world/talk"
+            "uri": "http://cltl.nl/leolani/world/leolani_is_stupid"
         },
         "perspective": {
             "_certainty": "CERTAIN",
             "_polarity": "POSITIVE",
-            "_sentiment": "NEUTRAL",
+            "_sentiment": "NEGATIVE",
             "_time": null,
             "_emotion": "UNDERSPECIFIED"
         },
-        "context_id": 229,
-        "date": "2022-03-04",
+        "context_id": 192,
+        "date": "2022-03-07",
         "place": "office",
-        "place_id": 47,
+        "place_id": 90,
         "country": "NL",
         "region": "North Holland",
         "city": "Amsterdam",
@@ -1684,15 +1010,399 @@
                 ]
             },
             "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/wants",
-                "_label": "want",
+                "_id": "http://cltl.nl/leolani/n2mu/think",
+                "_label": "think",
                 "_offset": null,
                 "_confidence": 0.0,
                 "_cardinality": 1
             },
             "_complement": {
-                "_id": "http://cltl.nl/leolani/world/talk",
-                "_label": "talk",
+                "_id": "http://cltl.nl/leolani/world/leolani_is_stupid",
+                "_label": "leolani-is-stupid",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "claim",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00022270813087139617,
+        "brain_stats": {
+            "turn": 12,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 1,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 49392.0,
+            "Total statements": 13.0,
+            "Total perspectives": 11.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00026320051830255913,
+            "Ratio perspectives to triples": 0.00022270813087139617,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.8461538461538461,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I know. mark told me about it in 2022-03-07T00:00:00"
+    },
+    {
+        "chat": 1,
+        "turn": 13,
+        "author": "mark",
+        "utterance": "mark thinks leolani has malfunction",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "think",
+            "uri": "http://cltl.nl/leolani/n2mu/think"
+        },
+        "object": {
+            "label": "leolani_has_malfunction",
+            "type": [
+                "claim"
+            ],
+            "uri": "http://cltl.nl/leolani/world/leolani_has_malfunction"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEGATIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/think",
+                "_label": "think",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/leolani_has_malfunction",
+                "_label": "leolani-has-malfunction",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "claim",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0002269160221621315,
+        "brain_stats": {
+            "turn": 13,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 1,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 52883.0,
+            "Total statements": 14.0,
+            "Total perspectives": 12.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.0002647353591891534,
+            "Ratio perspectives to triples": 0.0002269160221621315,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.8571428571428571,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I don't know"
+    },
+    {
+        "chat": 1,
+        "turn": 15,
+        "author": "mark",
+        "utterance": "mark thinks leolani has malfunction",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "think",
+            "uri": "http://cltl.nl/leolani/n2mu/think"
+        },
+        "object": {
+            "label": "leolani_has_malfunction",
+            "type": [
+                "claim"
+            ],
+            "uri": "http://cltl.nl/leolani/world/leolani_has_malfunction"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEGATIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/think",
+                "_label": "think",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/leolani_has_malfunction",
+                "_label": "leolani-has-malfunction",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "claim",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00021661973239131522,
+        "brain_stats": {
+            "turn": 15,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 1,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 1,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 60013.0,
+            "Total statements": 15.0,
+            "Total perspectives": 13.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00024994584506690215,
+            "Ratio perspectives to triples": 0.00021661973239131522,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.8666666666666667,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "That rings a bell. mark told me about it in 2022-03-07T00:00:00"
+    },
+    {
+        "chat": 1,
+        "turn": 16,
+        "author": "mark",
+        "utterance": "mark thinks leolani remembers wrong",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "think",
+            "uri": "http://cltl.nl/leolani/n2mu/think"
+        },
+        "object": {
+            "label": "leolani_remembers_wrong",
+            "type": [
+                "claim"
+            ],
+            "uri": "http://cltl.nl/leolani/world/leolani_remembers_wrong"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEGATIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/think",
+                "_label": "think",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/leolani_remembers_wrong",
+                "_label": "leolani-remembers-wrong",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "claim",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0002197215813676099,
+        "brain_stats": {
+            "turn": 16,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 2,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 63717.0,
+            "Total statements": 16.0,
+            "Total perspectives": 14.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.0002511103787058399,
+            "Ratio perspectives to triples": 0.0002197215813676099,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.875,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I just learned something, I did not know anybody who think leolani-remembers-wrong"
+    },
+    {
+        "chat": 1,
+        "turn": 17,
+        "author": "mark",
+        "utterance": "mark likes to watch movies",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "like",
+            "uri": "http://cltl.nl/leolani/n2mu/like"
+        },
+        "object": {
+            "label": "watching_movies",
+            "type": [
+                "activity"
+            ],
+            "uri": "http://cltl.nl/leolani/world/watching_movies"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/like",
+                "_label": "like",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/watching_movies",
+                "_label": "watching-movies",
                 "_offset": null,
                 "_confidence": 0.0,
                 "_types": [
@@ -1701,7 +1411,103 @@
                 ]
             }
         },
-        "brain_state": 0.001327650059394871,
+        "brain_state": 0.00022224526987983938,
+        "brain_stats": {
+            "turn": 17,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 3,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 67493.0,
+            "Total statements": 17.0,
+            "Total perspectives": 15.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00025187797253048465,
+            "Ratio perspectives to triples": 0.00022224526987983938,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.8823529411764706,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "That makes my day! Now I know 2 items that mark like, like sports and robots"
+    },
+    {
+        "chat": 1,
+        "turn": 18,
+        "author": "mark",
+        "utterance": "mark likes star wars",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "like",
+            "uri": "http://cltl.nl/leolani/n2mu/like"
+        },
+        "object": {
+            "label": "star_wars",
+            "type": [
+                "movie"
+            ],
+            "uri": "http://cltl.nl/leolani/world/star_wars"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/like",
+                "_label": "like",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/star_wars",
+                "_label": "star-wars",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "movie",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0002241430032360646,
         "brain_stats": {
             "turn": 18,
             "cardinality conflicts": 0,
@@ -1711,142 +1517,46 @@
             "statement novelty": 0,
             "subject novelty": "False",
             "object novelty": "True",
-            "overlaps subject-predicate": 0,
+            "overlaps subject-predicate": 4,
             "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 14311.0,
-            "Total statements": 21.0,
-            "Total perspectives": 19.0,
+            "trust": 0.5,
+            "Total triples": 71383.0,
+            "Total statements": 18.0,
+            "Total perspectives": 16.0,
             "Total conflicts": 0,
             "Total sources": 1.0,
-            "Ratio statement to triples": 0.00146740269722591,
-            "Ratio perspectives to triples": 0.001327650059394871,
+            "Ratio statements to triples": 0.0002521608786405727,
+            "Ratio perspectives to triples": 0.0002241430032360646,
             "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.9047619047619048,
+            "Ratio perspectives to statements": 0.8888888888888888,
             "Ratio conflicts to statements": 0.0
         },
-        "reply": "Let me ask you something. What kinds of things can want a talk like mark"
+        "reply": "If you don't mind me asking. Has a agent ever favorite star-wars?"
     },
     {
         "chat": 1,
         "turn": 19,
         "author": "mark",
-        "utterance": "tae can also talk_like_mark",
+        "utterance": "mark favourite is return of the jedi",
         "utterance_type": "STATEMENT",
         "position": "",
         "subject": {
-            "label": "tae",
+            "label": "mark",
             "type": [
                 "person"
             ],
-            "uri": "http://cltl.nl/leolani/world/tae"
+            "uri": "http://cltl.nl/leolani/world/mark"
         },
         "predicate": {
-            "label": "can",
-            "uri": "http://cltl.nl/leolani/n2mu/can"
+            "label": "favorite",
+            "uri": "http://cltl.nl/leolani/n2mu/favorite"
         },
         "object": {
-            "label": "talk_like_mark",
+            "label": "return_of_the_jedi",
             "type": [
-                "activity"
+                "movie"
             ],
-            "uri": "http://cltl.nl/leolani/world/talk_like_mark"
-        },
-        "perspective": {
-            "_certainty": "CERTAIN",
-            "_polarity": "POSITIVE",
-            "_sentiment": "NEUTRAL",
-            "_time": null,
-            "_emotion": "UNDERSPECIFIED"
-        },
-        "context_id": 229,
-        "date": "2022-03-04",
-        "place": "office",
-        "place_id": 47,
-        "country": "NL",
-        "region": "North Holland",
-        "city": "Amsterdam",
-        "objects": [],
-        "people": [],
-        "triple": {
-            "_subject": {
-                "_id": "http://cltl.nl/leolani/world/tae",
-                "_label": "tae",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "person",
-                    "Instance"
-                ]
-            },
-            "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/can",
-                "_label": "can",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_cardinality": 1
-            },
-            "_complement": {
-                "_id": "http://cltl.nl/leolani/world/talk_like_mark",
-                "_label": "talk-like-mark",
-                "_offset": null,
-                "_confidence": 0.0,
-                "_types": [
-                    "activity",
-                    "Instance"
-                ]
-            }
-        },
-        "brain_state": 0.0013904338153503894,
-        "brain_stats": {
-            "turn": 19,
-            "cardinality conflicts": 0,
-            "negation conflicts": 0,
-            "subject gaps": 2,
-            "object gaps": 2,
-            "statement novelty": 0,
-            "subject novelty": "True",
-            "object novelty": "True",
-            "overlaps subject-predicate": 0,
-            "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 14384.0,
-            "Total statements": 22.0,
-            "Total perspectives": 20.0,
-            "Total conflicts": 0,
-            "Total sources": 1.0,
-            "Ratio statement to triples": 0.0015294771968854283,
-            "Ratio perspectives to triples": 0.0013904338153503894,
-            "Ratio conflicts to triples": 0.0,
-            "Ratio perspectives to statements": 0.9090909090909091,
-            "Ratio conflicts to statements": 0.0
-        },
-        "reply": "Let me ask you something. Has tae play song?"
-    },
-    {
-        "chat": 1,
-        "turn": 20,
-        "author": "mark",
-        "utterance": "tae plays kpop",
-        "utterance_type": "STATEMENT",
-        "position": "",
-        "subject": {
-            "label": "tae",
-            "type": [
-                "person"
-            ],
-            "uri": "http://cltl.nl/leolani/world/tae"
-        },
-        "predicate": {
-            "label": "play",
-            "uri": "http://cltl.nl/leolani/n2mu/play"
-        },
-        "object": {
-            "label": "kpop",
-            "type": [
-                "song"
-            ],
-            "uri": "http://cltl.nl/leolani/world/kpop"
+            "uri": "http://cltl.nl/leolani/world/return_of_the_jedi"
         },
         "perspective": {
             "_certainty": "CERTAIN",
@@ -1855,10 +1565,10 @@
             "_time": null,
             "_emotion": "UNDERSPECIFIED"
         },
-        "context_id": 229,
-        "date": "2022-03-04",
+        "context_id": 192,
+        "date": "2022-03-07",
         "place": "office",
-        "place_id": 47,
+        "place_id": 90,
         "country": "NL",
         "region": "North Holland",
         "city": "Amsterdam",
@@ -1866,8 +1576,8 @@
         "people": [],
         "triple": {
             "_subject": {
-                "_id": "http://cltl.nl/leolani/world/tae",
-                "_label": "tae",
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
                 "_offset": null,
                 "_confidence": 0.0,
                 "_types": [
@@ -1876,24 +1586,120 @@
                 ]
             },
             "_predicate": {
-                "_id": "http://cltl.nl/leolani/n2mu/play",
-                "_label": "play",
+                "_id": "http://cltl.nl/leolani/n2mu/favorite",
+                "_label": "favorite",
                 "_offset": null,
                 "_confidence": 0.0,
                 "_cardinality": 1
             },
             "_complement": {
-                "_id": "http://cltl.nl/leolani/world/kpop",
-                "_label": "kpop",
+                "_id": "http://cltl.nl/leolani/world/return_of_the_jedi",
+                "_label": "return-of-the-jedi",
                 "_offset": null,
                 "_confidence": 0.0,
                 "_types": [
-                    "song",
+                    "movie",
                     "Instance"
                 ]
             }
         },
-        "brain_state": 0.0014527845036319612,
+        "brain_state": 0.00022558985111069827,
+        "brain_stats": {
+            "turn": 19,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 75358.0,
+            "Total statements": 19.0,
+            "Total perspectives": 17.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.0002521298335943098,
+            "Ratio perspectives to triples": 0.00022558985111069827,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.8947368421052632,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I do not believe you."
+    },
+    {
+        "chat": 1,
+        "turn": 20,
+        "author": "mark",
+        "utterance": "mark tells the truth",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "tell",
+            "uri": "http://cltl.nl/leolani/n2mu/tell"
+        },
+        "object": {
+            "label": "truth",
+            "type": [
+                "claim"
+            ],
+            "uri": "http://cltl.nl/leolani/world/truth"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/tell",
+                "_label": "tell",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/truth",
+                "_label": "truth",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "claim",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00022682594888855285,
         "brain_stats": {
             "turn": 20,
             "cardinality conflicts": 0,
@@ -1905,18 +1711,402 @@
             "object novelty": "True",
             "overlaps subject-predicate": 0,
             "overlaps predicate-object": 0,
-            "trust": "0.8325091256144551",
-            "Total triples": 14455.0,
+            "trust": 0.5,
+            "Total triples": 79356.0,
+            "Total statements": 20.0,
+            "Total perspectives": 18.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00025202883209839204,
+            "Ratio perspectives to triples": 0.00022682594888855285,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I am curious. What types can mark tell"
+    },
+    {
+        "chat": 1,
+        "turn": 21,
+        "author": "mark",
+        "utterance": "mark can tell stories",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "tell",
+            "uri": "http://cltl.nl/leolani/n2mu/tell"
+        },
+        "object": {
+            "label": "story",
+            "type": [
+                "concept"
+            ],
+            "uri": "http://cltl.nl/leolani/world/story"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/tell",
+                "_label": "tell",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/story",
+                "_label": "story",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "concept",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00022775220560030686,
+        "brain_stats": {
+            "turn": 21,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 1,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 83424.0,
+            "Total statements": 21.0,
+            "Total perspectives": 19.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00025172612197928656,
+            "Ratio perspectives to triples": 0.00022775220560030686,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9047619047619048,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "This sounds familiar. I have heard about story before"
+    },
+    {
+        "chat": 1,
+        "turn": 23,
+        "author": "mark",
+        "utterance": "mark likes fairy tales",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "like",
+            "uri": "http://cltl.nl/leolani/n2mu/like"
+        },
+        "object": {
+            "label": "fairy_tale",
+            "type": [
+                "story"
+            ],
+            "uri": "http://cltl.nl/leolani/world/fairy_tale"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/like",
+                "_label": "like",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/fairy_tale",
+                "_label": "fairy-tale",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "story",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00021814056978316826,
+        "brain_stats": {
+            "turn": 23,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 1,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 5,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 91684.0,
+            "Total statements": 22.0,
+            "Total perspectives": 20.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.0002399546267614851,
+            "Ratio perspectives to triples": 0.00021814056978316826,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9090909090909091,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "Nice! Now I know 2 items that mark like, like watching-movies and star-wars"
+    },
+    {
+        "chat": 1,
+        "turn": 24,
+        "author": "mark",
+        "utterance": "leolani knows more than two things that mark likes",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "leolani",
+            "type": [
+                "robot"
+            ],
+            "uri": "http://cltl.nl/leolani/world/leolani"
+        },
+        "predicate": {
+            "label": "know",
+            "uri": "http://cltl.nl/leolani/n2mu/know"
+        },
+        "object": {
+            "label": "more_than_two_things_that_mark_like",
+            "type": [
+                "claim"
+            ],
+            "uri": "http://cltl.nl/leolani/world/more_than_two_things_that_mark_like"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/leolani",
+                "_label": "leolani",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "robot",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/know",
+                "_label": "know",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/more_than_two_things_that_mark_like",
+                "_label": "more-than-two-things-that-mark-like",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "claim",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0002188297816912416,
+        "brain_stats": {
+            "turn": 24,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 95965.0,
             "Total statements": 23.0,
             "Total perspectives": 21.0,
             "Total conflicts": 0,
             "Total sources": 1.0,
-            "Ratio statement to triples": 0.001591144932549291,
-            "Ratio perspectives to triples": 0.0014527845036319612,
+            "Ratio statements to triples": 0.00023967071328088364,
+            "Ratio perspectives to triples": 0.0002188297816912416,
             "Ratio conflicts to triples": 0.0,
             "Ratio perspectives to statements": 0.9130434782608695,
             "Ratio conflicts to statements": 0.0
         },
-        "reply": "Let me ask you something. What types can tae play"
+        "reply": "If you don't mind me asking. Has leolani acknowledge touch?"
+    },
+    {
+        "chat": 1,
+        "turn": 26,
+        "author": "mark",
+        "utterance": "mark is not certain",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "mark",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/mark"
+        },
+        "predicate": {
+            "label": "is",
+            "uri": "http://cltl.nl/leolani/n2mu/is"
+        },
+        "object": {
+            "label": "certain",
+            "type": [
+                "adjective"
+            ],
+            "uri": "http://cltl.nl/leolani/world/certain"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "NEGATIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 192,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 90,
+        "country": "NL",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/mark",
+                "_label": "mark",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/is",
+                "_label": "is",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/certain",
+                "_label": "certain",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "certain",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.00021023661175031535,
+        "brain_stats": {
+            "turn": 26,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 1,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 104644.0,
+            "Total statements": 24.0,
+            "Total perspectives": 22.0,
+            "Total conflicts": 0,
+            "Total sources": 1.0,
+            "Ratio statements to triples": 0.00022934903100034403,
+            "Ratio perspectives to triples": 0.00021023661175031535,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9166666666666666,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "That rings a bell. mark told me about it in 2022-03-07T00:00:00"
     }
 ]
