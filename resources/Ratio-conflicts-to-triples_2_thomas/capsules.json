@@ -1,0 +1,2312 @@
+[
+    {
+        "chat": 2,
+        "turn": 0,
+        "author": "thomas",
+        "utterance": "I'm from Berlin",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "live-in",
+            "uri": "http://cltl.nl/leolani/n2mu/live-in"
+        },
+        "object": {
+            "label": "berlin",
+            "type": [
+                "location"
+            ],
+            "uri": "http://cltl.nl/leolani/world/berlin"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/live-in",
+                "_label": "live-in",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/berlin",
+                "_label": "berlin",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "location",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 0,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "True",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 14975.0,
+            "Total statements": 31.0,
+            "Total perspectives": 28.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.002070116861435726,
+            "Ratio perspectives to triples": 0.0018697829716193656,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9032258064516129,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "If you don't mind me asking. Has a institution ever locate-in berlin?"
+    },
+    {
+        "chat": 2,
+        "turn": 1,
+        "author": "thomas",
+        "utterance": "The Humbold University is in Berlin",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "humbold university",
+            "type": [
+                "institution"
+            ],
+            "uri": "http://cltl.nl/leolani/world/humbold university"
+        },
+        "predicate": {
+            "label": "locate-in",
+            "uri": "http://cltl.nl/leolani/n2mu/locate-in"
+        },
+        "object": {
+            "label": "berlin",
+            "type": [
+                "location"
+            ],
+            "uri": "http://cltl.nl/leolani/world/berlin"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/humbold_university",
+                "_label": "humbold-university",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "institution",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/locate-in",
+                "_label": "locate-in",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/berlin",
+                "_label": "berlin",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "location",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 1,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "True",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 17721.0,
+            "Total statements": 32.0,
+            "Total perspectives": 29.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0018057671688956605,
+            "Ratio perspectives to triples": 0.0016364764968116923,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.90625,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "Let me ask you something. What types of location like berlin do institution usually locate-in"
+    },
+    {
+        "chat": 2,
+        "turn": 2,
+        "author": "thomas",
+        "utterance": "Universities are usually in cities",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "university",
+            "type": [
+                "class"
+            ],
+            "uri": "http://cltl.nl/leolani/world/university"
+        },
+        "predicate": {
+            "label": "locate-in",
+            "uri": "http://cltl.nl/leolani/n2mu/locate-in"
+        },
+        "object": {
+            "label": "city",
+            "type": [
+                "class"
+            ],
+            "uri": "http://cltl.nl/leolani/world/city"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/university",
+                "_label": "university",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "class",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/locate-in",
+                "_label": "locate-in",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/city",
+                "_label": "city",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "class",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 2,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "True",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 20545.0,
+            "Total statements": 33.0,
+            "Total perspectives": 30.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.001606230226332441,
+            "Ratio perspectives to triples": 0.0014602092966658554,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9090909090909091,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "This sounds familiar. I have heard about city before"
+    },
+    {
+        "chat": 2,
+        "turn": 3,
+        "author": "thomas",
+        "utterance": "Glad to hear that",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "is",
+            "uri": "http://cltl.nl/leolani/n2mu/is"
+        },
+        "object": {
+            "label": "happiness",
+            "type": [
+                "emotionvalue"
+            ],
+            "uri": "http://cltl.nl/leolani/world/happiness"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/is",
+                "_label": "is",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/happiness",
+                "_label": "happiness",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "emotionvalue",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 3,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 23436.0,
+            "Total statements": 34.0,
+            "Total perspectives": 31.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0014507595152756442,
+            "Ratio perspectives to triples": 0.0013227513227513227,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9117647058823529,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "If you don't mind me asking. What kinds of things can is a happiness like thomas"
+    },
+    {
+        "chat": 2,
+        "turn": 4,
+        "author": "thomas",
+        "utterance": "Glad to hear that",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "is",
+            "uri": "http://cltl.nl/leolani/n2mu/is"
+        },
+        "object": {
+            "label": "happiness",
+            "type": [
+                "emotionvalue"
+            ],
+            "uri": "http://cltl.nl/leolani/world/happiness"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/is",
+                "_label": "is",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/happiness",
+                "_label": "happiness",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "emotionvalue",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 4,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 26362.0,
+            "Total statements": 34.0,
+            "Total perspectives": 31.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0012897352249449966,
+            "Ratio perspectives to triples": 0.001175935058038085,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9117647058823529,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I am curious. Has person ever be-friends-with thomas?"
+    },
+    {
+        "chat": 2,
+        "turn": 5,
+        "author": "thomas",
+        "utterance": "I'm friends with Selene",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "selene",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/selene"
+        },
+        "predicate": {
+            "label": "be-friends-with",
+            "uri": "http://cltl.nl/leolani/n2mu/be-friends-with"
+        },
+        "object": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/selene",
+                "_label": "selene",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be-friends-with",
+                "_label": "be-friends-with",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 5,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 29384.0,
+            "Total statements": 35.0,
+            "Total perspectives": 32.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0011911244214538525,
+            "Ratio perspectives to triples": 0.0010890280424720937,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9142857142857143,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I just learned something, I did not know anybody who be-friends-with thomas"
+    },
+    {
+        "chat": 2,
+        "turn": 6,
+        "author": "thomas",
+        "utterance": "I'm also friends with Piek",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be-friends-with",
+            "uri": "http://cltl.nl/leolani/n2mu/be-friends-with"
+        },
+        "object": {
+            "label": "piek",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/piek"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be-friends-with",
+                "_label": "be-friends-with",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/piek",
+                "_label": "piek",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 6,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 32474.0,
+            "Total statements": 36.0,
+            "Total perspectives": 33.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.001108579171029131,
+            "Ratio perspectives to triples": 0.00101619757344337,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9166666666666666,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "Let me ask you something. What types can thomas be-friends-with"
+    },
+    {
+        "chat": 2,
+        "turn": 7,
+        "author": "thomas",
+        "utterance": "Thomas can be friends with persons",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be-friends-with",
+            "uri": "http://cltl.nl/leolani/n2mu/be-friends-with"
+        },
+        "object": {
+            "label": "person",
+            "type": [
+                "class"
+            ],
+            "uri": "http://cltl.nl/leolani/world/person"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be-friends-with",
+                "_label": "be-friends-with",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/person",
+                "_label": "person",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "class",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 7,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 2,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 35647.0,
+            "Total statements": 37.0,
+            "Total perspectives": 34.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0010379555081774063,
+            "Ratio perspectives to triples": 0.0009537969534603192,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.918918918918919,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "If you don't mind me asking. Has thomas own object?"
+    },
+    {
+        "chat": 2,
+        "turn": 8,
+        "author": "thomas",
+        "utterance": "I have a Laptop",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "own",
+            "uri": "http://cltl.nl/leolani/n2mu/own"
+        },
+        "object": {
+            "label": "laptop",
+            "type": [
+                "object"
+            ],
+            "uri": "http://cltl.nl/leolani/world/laptop"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/own",
+                "_label": "own",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/laptop",
+                "_label": "laptop",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "object",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 8,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 38893.0,
+            "Total statements": 38.0,
+            "Total perspectives": 35.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0009770395701025891,
+            "Ratio perspectives to triples": 0.0008999048671997532,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9210526315789473,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "I do not trust you."
+    },
+    {
+        "chat": 2,
+        "turn": 9,
+        "author": "thomas",
+        "utterance": "That surprises me",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be",
+            "uri": "http://cltl.nl/leolani/n2mu/be"
+        },
+        "object": {
+            "label": "surprise",
+            "type": [
+                "emotionvalue"
+            ],
+            "uri": "http://cltl.nl/leolani/world/surprise"
+        },
+        "perspective": {
+            "_certainty": "PROBABLE",
+            "_polarity": "POSITIVE",
+            "_sentiment": "UNDERSPECIFIED",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be",
+                "_label": "be",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/surprise",
+                "_label": "surprise",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "emotionvalue",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 0.0,
+        "brain_stats": {
+            "turn": 9,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 42215.0,
+            "Total statements": 39.0,
+            "Total perspectives": 36.0,
+            "Total conflicts": 0,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0009238422361719767,
+            "Ratio perspectives to triples": 0.0008527774487741324,
+            "Ratio conflicts to triples": 0.0,
+            "Ratio perspectives to statements": 0.9230769230769231,
+            "Ratio conflicts to statements": 0.0
+        },
+        "reply": "Let me ask you something. What kinds of things can be a surprise like thomas"
+    },
+    {
+        "chat": 2,
+        "turn": 10,
+        "author": "thomas",
+        "utterance": "Thomas is not a surprise.",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be",
+            "uri": "http://cltl.nl/leolani/n2mu/be"
+        },
+        "object": {
+            "label": "surprise",
+            "type": [
+                "emotionvalue"
+            ],
+            "uri": "http://cltl.nl/leolani/world/surprise"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "NEGATIVE",
+            "_sentiment": "NEGATIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be",
+                "_label": "be",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/surprise",
+                "_label": "surprise",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "emotionvalue",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 2.1944743136781585e-05,
+        "brain_stats": {
+            "turn": 10,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 2,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 45569.0,
+            "Total statements": 39.0,
+            "Total perspectives": 37.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0008558449823344818,
+            "Ratio perspectives to triples": 0.0008119554960609186,
+            "Ratio conflicts to triples": 2.1944743136781585e-05,
+            "Ratio perspectives to statements": 0.9487179487179487,
+            "Ratio conflicts to statements": 0.02564102564102564
+        },
+        "reply": "If you don't mind me asking. Has thomas like-by agent?"
+    },
+    {
+        "chat": 2,
+        "turn": 11,
+        "author": "thomas",
+        "utterance": "I think Leolani likes Thomas",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "like-by",
+            "uri": "http://cltl.nl/leolani/n2mu/like-by"
+        },
+        "object": {
+            "label": "leolani",
+            "type": [
+                "agent"
+            ],
+            "uri": "http://cltl.nl/leolani/world/leolani"
+        },
+        "perspective": {
+            "_certainty": "PROBABLE",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/like-by",
+                "_label": "like-by",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/leolani",
+                "_label": "leolani",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "agent",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 2.040316657145189e-05,
+        "brain_stats": {
+            "turn": 11,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 49012.0,
+            "Total statements": 40.0,
+            "Total perspectives": 38.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0008161266628580755,
+            "Ratio perspectives to triples": 0.0007753203297151717,
+            "Ratio conflicts to triples": 2.040316657145189e-05,
+            "Ratio perspectives to statements": 0.95,
+            "Ratio conflicts to statements": 0.025
+        },
+        "reply": "I am curious. What types of agent like leolani do person usually like-by"
+    },
+    {
+        "chat": 2,
+        "turn": 12,
+        "author": "thomas",
+        "utterance": "",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "like-by",
+            "uri": "http://cltl.nl/leolani/n2mu/like-by"
+        },
+        "object": {
+            "label": "alice",
+            "type": [
+                "agent"
+            ],
+            "uri": "http://cltl.nl/leolani/world/alice"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/like-by",
+                "_label": "like-by",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/alice",
+                "_label": "alice",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "agent",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.9032393133112558e-05,
+        "brain_stats": {
+            "turn": 12,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 2,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 52542.0,
+            "Total statements": 41.0,
+            "Total perspectives": 39.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0007803281184576149,
+            "Ratio perspectives to triples": 0.0007422633321913898,
+            "Ratio conflicts to triples": 1.9032393133112558e-05,
+            "Ratio perspectives to statements": 0.9512195121951219,
+            "Ratio conflicts to statements": 0.024390243902439025
+        },
+        "reply": "Let me ask you something. What kinds of things can like-by a alice like thomas"
+    },
+    {
+        "chat": 2,
+        "turn": 13,
+        "author": "thomas",
+        "utterance": "Alice like's Johan too.",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "johan",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/johan"
+        },
+        "predicate": {
+            "label": "like-by",
+            "uri": "http://cltl.nl/leolani/n2mu/like-by"
+        },
+        "object": {
+            "label": "alice",
+            "type": [
+                "agent"
+            ],
+            "uri": "http://cltl.nl/leolani/world/alice"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/johan",
+                "_label": "johan",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/like-by",
+                "_label": "like-by",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/alice",
+                "_label": "alice",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "agent",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.781102502449016e-05,
+        "brain_stats": {
+            "turn": 13,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "True",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 2,
+            "trust": 0.5,
+            "Total triples": 56145.0,
+            "Total statements": 42.0,
+            "Total perspectives": 40.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0007480630510285867,
+            "Ratio perspectives to triples": 0.0007124410009796063,
+            "Ratio conflicts to triples": 1.781102502449016e-05,
+            "Ratio perspectives to statements": 0.9523809523809523,
+            "Ratio conflicts to statements": 0.023809523809523808
+        },
+        "reply": "I am curious. Has johan experience smell?"
+    },
+    {
+        "chat": 2,
+        "turn": 14,
+        "author": "thomas",
+        "utterance": "Johan already experienced the smell of rain",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "johan",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/johan"
+        },
+        "predicate": {
+            "label": "experience",
+            "uri": "http://cltl.nl/leolani/n2mu/experience"
+        },
+        "object": {
+            "label": "rain",
+            "type": [
+                "smell"
+            ],
+            "uri": "http://cltl.nl/leolani/world/rain"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/johan",
+                "_label": "johan",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/experience",
+                "_label": "experience",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/rain",
+                "_label": "rain",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "smell",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.671625823275718e-05,
+        "brain_stats": {
+            "turn": 14,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 59822.0,
+            "Total statements": 43.0,
+            "Total perspectives": 41.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0007187991040085587,
+            "Ratio perspectives to triples": 0.0006853665875430444,
+            "Ratio conflicts to triples": 1.671625823275718e-05,
+            "Ratio perspectives to statements": 0.9534883720930233,
+            "Ratio conflicts to statements": 0.023255813953488372
+        },
+        "reply": "I would like to know. Has johan experience taste?"
+    },
+    {
+        "chat": 2,
+        "turn": 15,
+        "author": "thomas",
+        "utterance": "Johan already experienced the taste of salt",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "johan",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/johan"
+        },
+        "predicate": {
+            "label": "experience",
+            "uri": "http://cltl.nl/leolani/n2mu/experience"
+        },
+        "object": {
+            "label": "salty",
+            "type": [
+                "taste"
+            ],
+            "uri": "http://cltl.nl/leolani/world/salty"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "POSITIVE",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/johan",
+                "_label": "johan",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/experience",
+                "_label": "experience",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/salty",
+                "_label": "salty",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "taste",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.5730938035835077e-05,
+        "brain_stats": {
+            "turn": 15,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 2,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 63569.0,
+            "Total statements": 44.0,
+            "Total perspectives": 42.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0006921612735767433,
+            "Ratio perspectives to triples": 0.0006606993975050732,
+            "Ratio conflicts to triples": 1.5730938035835077e-05,
+            "Ratio perspectives to statements": 0.9545454545454546,
+            "Ratio conflicts to statements": 0.022727272727272728
+        },
+        "reply": "I would like to know. What kinds of things can experience a salty like johan"
+    },
+    {
+        "chat": 2,
+        "turn": 16,
+        "author": "thomas",
+        "utterance": "I also tasted salt",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "experience",
+            "uri": "http://cltl.nl/leolani/n2mu/experience"
+        },
+        "object": {
+            "label": "salty",
+            "type": [
+                "taste"
+            ],
+            "uri": "http://cltl.nl/leolani/world/salty"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/experience",
+                "_label": "experience",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/salty",
+                "_label": "salty",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "taste",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.4844503822459734e-05,
+        "brain_stats": {
+            "turn": 16,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 2,
+            "trust": 0.5,
+            "Total triples": 67365.0,
+            "Total statements": 45.0,
+            "Total perspectives": 43.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0006680026720106881,
+            "Ratio perspectives to triples": 0.0006383136643657686,
+            "Ratio conflicts to triples": 1.4844503822459734e-05,
+            "Ratio perspectives to statements": 0.9555555555555556,
+            "Ratio conflicts to statements": 0.022222222222222223
+        },
+        "reply": "Great! Did you know that johan also experience salty"
+    },
+    {
+        "chat": 2,
+        "turn": 17,
+        "author": "thomas",
+        "utterance": "",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be",
+            "uri": "http://cltl.nl/leolani/n2mu/be"
+        },
+        "object": {
+            "label": "surprise",
+            "type": [
+                "em"
+            ],
+            "uri": "http://cltl.nl/leolani/world/surprise"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be",
+                "_label": "be",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/surprise",
+                "_label": "surprise",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "em",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.4043760357273264e-05,
+        "brain_stats": {
+            "turn": 17,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 2,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 71206.0,
+            "Total statements": 45.0,
+            "Total perspectives": 44.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0006319692160772968,
+            "Ratio perspectives to triples": 0.0006179254557200236,
+            "Ratio conflicts to triples": 1.4043760357273264e-05,
+            "Ratio perspectives to statements": 0.9777777777777777,
+            "Ratio conflicts to statements": 0.022222222222222223
+        },
+        "reply": "Let me ask you something. What types can thomas be"
+    },
+    {
+        "chat": 2,
+        "turn": 18,
+        "author": "thomas",
+        "utterance": "I told you",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be",
+            "uri": "http://cltl.nl/leolani/n2mu/be"
+        },
+        "object": {
+            "label": "",
+            "type": [
+                "em"
+            ],
+            "uri": "http://cltl.nl/leolani/world/"
+        },
+        "perspective": {
+            "_certainty": "UNDERSPECIFIED",
+            "_polarity": "UNDERSPECIFIED",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be",
+                "_label": "be",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/",
+                "_label": "None",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "em",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.3303533418475947e-05,
+        "brain_stats": {
+            "turn": 18,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 2,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 75168.0,
+            "Total statements": 46.0,
+            "Total perspectives": 45.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0006119625372498935,
+            "Ratio perspectives to triples": 0.0005986590038314176,
+            "Ratio conflicts to triples": 1.3303533418475947e-05,
+            "Ratio perspectives to statements": 0.9782608695652174,
+            "Ratio conflicts to statements": 0.021739130434782608
+        },
+        "reply": "I may be ignorant, bu tI don't know.I am sorry, I have no idea"
+    },
+    {
+        "chat": 2,
+        "turn": 19,
+        "author": "thomas",
+        "utterance": "",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be",
+            "uri": "http://cltl.nl/leolani/n2mu/be"
+        },
+        "object": {
+            "label": "surprise",
+            "type": [
+                "emotionvalue"
+            ],
+            "uri": "http://cltl.nl/leolani/world/surprise"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be",
+                "_label": "be",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/surprise",
+                "_label": "surprise",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "emotionvalue",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.2639348820748755e-05,
+        "brain_stats": {
+            "turn": 19,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 2,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 2,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 79118.0,
+            "Total statements": 46.0,
+            "Total perspectives": 45.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0005814100457544427,
+            "Ratio perspectives to triples": 0.0005687706969336939,
+            "Ratio conflicts to triples": 1.2639348820748755e-05,
+            "Ratio perspectives to statements": 0.9782608695652174,
+            "Ratio conflicts to statements": 0.021739130434782608
+        },
+        "reply": "This sounds familiar. thomas told me about it in 2022-03-04T00:00:00"
+    },
+    {
+        "chat": 2,
+        "turn": 20,
+        "author": "thomas",
+        "utterance": "",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "Source",
+                "Actor"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be",
+            "uri": "http://cltl.nl/leolani/n2mu/be"
+        },
+        "object": {
+            "label": "surprise",
+            "type": [
+                "emotionvalue"
+            ],
+            "uri": "http://cltl.nl/leolani/world/surprise"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "source",
+                    "actor",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be",
+                "_label": "be",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/surprise",
+                "_label": "surprise",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "emotionvalue",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.2028483448806774e-05,
+        "brain_stats": {
+            "turn": 20,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 2,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 2,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 83136.0,
+            "Total statements": 46.0,
+            "Total perspectives": 45.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0005533102386451116,
+            "Ratio perspectives to triples": 0.0005412817551963048,
+            "Ratio conflicts to triples": 1.2028483448806774e-05,
+            "Ratio perspectives to statements": 0.9782608695652174,
+            "Ratio conflicts to statements": 0.021739130434782608
+        },
+        "reply": "I am curious. What types can thomas be"
+    },
+    {
+        "chat": 2,
+        "turn": 22,
+        "author": "thomas",
+        "utterance": "Thomas can also be happy",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "Source",
+                "Actor"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be",
+            "uri": "http://cltl.nl/leolani/n2mu/be"
+        },
+        "object": {
+            "label": "happy",
+            "type": [
+                "emotionvalue"
+            ],
+            "uri": "http://cltl.nl/leolani/world/happy"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "source",
+                    "actor",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be",
+                "_label": "be",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/happy",
+                "_label": "happy",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "emotionvalue",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.0934339292548247e-05,
+        "brain_stats": {
+            "turn": 22,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 2,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 4,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 91455.0,
+            "Total statements": 47.0,
+            "Total perspectives": 46.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0005139139467497676,
+            "Ratio perspectives to triples": 0.0005029796074572194,
+            "Ratio conflicts to triples": 1.0934339292548247e-05,
+            "Ratio perspectives to statements": 0.9787234042553191,
+            "Ratio conflicts to statements": 0.02127659574468085
+        },
+        "reply": "Let me ask you something. What types can thomas be"
+    },
+    {
+        "chat": 2,
+        "turn": 23,
+        "author": "thomas",
+        "utterance": "Thomas can also be sad",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "Source",
+                "Actor"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "be",
+            "uri": "http://cltl.nl/leolani/n2mu/be"
+        },
+        "object": {
+            "label": "sad",
+            "type": [
+                "emotionvalue"
+            ],
+            "uri": "http://cltl.nl/leolani/world/sad"
+        },
+        "perspective": {
+            "_certainty": "CERTAIN",
+            "_polarity": "POSITIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "source",
+                    "actor",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/be",
+                "_label": "be",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/sad",
+                "_label": "sad",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "emotionvalue",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 1.0442337412806482e-05,
+        "brain_stats": {
+            "turn": 23,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "True",
+            "overlaps subject-predicate": 6,
+            "overlaps predicate-object": 0,
+            "trust": 0.5,
+            "Total triples": 95764.0,
+            "Total statements": 48.0,
+            "Total perspectives": 47.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0005012321958147111,
+            "Ratio perspectives to triples": 0.0004907898584019047,
+            "Ratio conflicts to triples": 1.0442337412806482e-05,
+            "Ratio perspectives to statements": 0.9791666666666666,
+            "Ratio conflicts to statements": 0.020833333333333332
+        },
+        "reply": "I do not believe you."
+    },
+    {
+        "chat": 2,
+        "turn": 24,
+        "author": "thomas",
+        "utterance": "",
+        "utterance_type": "STATEMENT",
+        "position": "",
+        "subject": {
+            "label": "thomas",
+            "type": [
+                "person"
+            ],
+            "uri": "http://cltl.nl/leolani/world/thomas"
+        },
+        "predicate": {
+            "label": "trust",
+            "uri": "http://cltl.nl/leolani/n2mu/trust"
+        },
+        "object": {
+            "label": "leolani",
+            "type": [
+                "agent"
+            ],
+            "uri": "http://cltl.nl/leolani/world/leolani"
+        },
+        "perspective": {
+            "_certainty": "PROBABLE",
+            "_polarity": "NEGATIVE",
+            "_sentiment": "NEUTRAL",
+            "_time": null,
+            "_emotion": "UNDERSPECIFIED"
+        },
+        "context_id": 70,
+        "date": "2022-03-07",
+        "place": "office",
+        "place_id": 253,
+        "country": "DE",
+        "region": "Berlin",
+        "city": "Berlin",
+        "objects": [],
+        "people": [],
+        "triple": {
+            "_subject": {
+                "_id": "http://cltl.nl/leolani/world/thomas",
+                "_label": "thomas",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "person",
+                    "Instance"
+                ]
+            },
+            "_predicate": {
+                "_id": "http://cltl.nl/leolani/n2mu/trust",
+                "_label": "trust",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_cardinality": 1
+            },
+            "_complement": {
+                "_id": "http://cltl.nl/leolani/world/leolani",
+                "_label": "leolani",
+                "_offset": null,
+                "_confidence": 0.0,
+                "_types": [
+                    "agent",
+                    "Instance"
+                ]
+            }
+        },
+        "brain_state": 9.98851320980872e-06,
+        "brain_stats": {
+            "turn": 24,
+            "cardinality conflicts": 0,
+            "negation conflicts": 0,
+            "subject gaps": 2,
+            "object gaps": 2,
+            "statement novelty": 0,
+            "subject novelty": "False",
+            "object novelty": "False",
+            "overlaps subject-predicate": 0,
+            "overlaps predicate-object": 6,
+            "trust": 0.5,
+            "Total triples": 100115.0,
+            "Total statements": 49.0,
+            "Total perspectives": 48.0,
+            "Total conflicts": 1,
+            "Total sources": 2.0,
+            "Ratio statements to triples": 0.0004894371472806273,
+            "Ratio perspectives to triples": 0.0004794486340708186,
+            "Ratio conflicts to triples": 9.98851320980872e-06,
+            "Ratio perspectives to statements": 0.9795918367346939,
+            "Ratio conflicts to statements": 0.02040816326530612
+        },
+        "reply": "This is news to me. I did not know anybody who trust leolani"
+    }
+]
