@@ -1,0 +1,179 @@
+@prefix eps: <http://cltl.nl/episodicawareness/> .
+@prefix gaf: <http://groundedannotationframework.org/gaf#> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix graspe: <http://groundedannotationframework.org/grasp/emotion#> .
+@prefix graspf: <http://groundedannotationframework.org/grasp/factuality#> .
+@prefix grasps: <http://groundedannotationframework.org/grasp/sentiment#> .
+@prefix leolaniContext: <http://cltl.nl/leolani/context/> .
+@prefix leolaniFriends: <http://cltl.nl/leolani/friends/> .
+@prefix leolaniInputs: <http://cltl.nl/leolani/inputs/> .
+@prefix leolaniTalk: <http://cltl.nl/leolani/talk/> .
+@prefix leolaniWorld: <http://cltl.nl/leolani/world/> .
+@prefix n2mu: <http://cltl.nl/leolani/n2mu/> .
+@prefix ns1: <urn:x-rdflib:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time1: <http://www.w3.org/TR/owl-time/#> .
+@prefix xml1: <https://www.w3.org/TR/xmlschema-2/#> .
+
+leolaniWorld:Claims {
+    leolaniFriends:lea owl:sameAs leolaniWorld:lea .
+
+    leolaniWorld:lea_be_tired a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "lea_be_tired" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance0_char0-21 .
+
+    leolaniWorld:leolani_know_lea a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_lea" .
+
+    leolaniWorld:leolani_sense_front-camera a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_sense_front-camera" .
+}
+
+leolaniWorld:Instances {
+    leolaniWorld:lea a n2mu:person,
+            gaf:Instance ;
+        rdfs:label "lea" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance0_char0-21 .
+
+    leolaniWorld:leolani a n2mu:robot ;
+        rdfs:label "leolani" .
+
+    leolaniWorld:tired a n2mu:emotion,
+            gaf:Instance ;
+        rdfs:label "tired" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance0_char0-21 .
+}
+
+leolaniWorld:lea_be_tired {
+    leolaniWorld:lea n2mu:be leolaniWorld:tired .
+}
+
+leolaniTalk:Interactions {
+    leolaniContext:context208 a eps:Context ;
+        rdfs:label "context208" ;
+        n2mu:id "208"^^xml1:string ;
+        sem:hasBeginTimeStamp leolaniContext:2022-03-07 ;
+        sem:hasEvent leolaniTalk:chat2,
+            leolaniTalk:visual2 ;
+        sem:hasPlace leolaniContext:office .
+
+    leolaniContext:2022-03-07 a sem:Time,
+            time1:DateTimeDescription ;
+        rdfs:label "2022-03-07" ;
+        time1:day "7"^^xml1:gDay ;
+        time1:month "3"^^xml1:gMonthDay ;
+        time1:unitType time1:unitDay ;
+        time1:year "2022"^^xml1:gYear .
+
+    leolaniContext:office a n2mu:location,
+            sem:Place ;
+        rdfs:label "office" ;
+        n2mu:id "127"^^xml1:string ;
+        n2mu:in leolaniWorld:Amsterdam,
+            leolaniWorld:NL,
+            leolaniWorld:North_Holland .
+
+    leolaniFriends:lea a n2mu:person,
+            gaf:Instance,
+            grasp:Source,
+            sem:Actor ;
+        rdfs:label "lea" .
+
+    leolaniInputs:front-camera a n2mu:sensor,
+            gaf:Instance,
+            grasp:Source,
+            sem:Actor ;
+        rdfs:label "front-camera" .
+
+    leolaniTalk:chat2 a grasp:Chat,
+            sem:Event ;
+        rdfs:label "chat2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:chat2_utterance0 .
+
+    leolaniTalk:chat2_utterance0 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance0" ;
+        n2mu:id "0"^^xml1:string ;
+        sem:hasActor leolaniFriends:lea .
+
+    leolaniTalk:visual2 a grasp:Visual,
+            sem:Event ;
+        rdfs:label "visual2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:visual2_detection0 .
+
+    leolaniTalk:visual2_detection0 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection0" ;
+        n2mu:id "0"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniWorld:Amsterdam a n2mu:city,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "Amsterdam" .
+
+    leolaniWorld:NL a n2mu:country,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "NL" .
+
+    leolaniWorld:North_Holland a n2mu:location,
+            n2mu:region,
+            sem:Place ;
+        rdfs:label "North Holland" .
+}
+
+leolaniTalk:Perspectives {
+    leolaniTalk:chat2_utterance0_char0-21 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance0_char0-21" ;
+        gaf:containsDenotation leolaniWorld:lea,
+            leolaniWorld:tired ;
+        gaf:denotes leolaniWorld:lea_be_tired ;
+        grasp:hasAttribution leolaniTalk:lea_be_tired_CERTAIN-POSITIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:lea ;
+        rdf:value "I'm very tired today."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance0 .
+
+    leolaniTalk:lea_be_tired_CERTAIN-POSITIVE-NEGATIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "lea_be_tired_CERTAIN-POSITIVE-NEGATIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance0_char0-21 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEGATIVE .
+
+    graspe:UNDERSPECIFIED a grasp:AttributionValue,
+            graspe:EmotionValue ;
+        rdfs:label "UNDERSPECIFIED" .
+
+    graspf:CERTAIN a grasp:AttributionValue,
+            graspf:CertaintyValue ;
+        rdfs:label "CERTAIN" .
+
+    graspf:POSITIVE a grasp:AttributionValue,
+            graspf:PolarityValue ;
+        rdfs:label "POSITIVE" .
+
+    grasps:NEGATIVE a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "NEGATIVE" .
+}
+
+leolaniWorld:leolani_sense_front-camera {
+    leolaniWorld:leolani n2mu:sense leolaniInputs:front-camera .
+}
+
+leolaniWorld:leolani_know_lea {
+    leolaniWorld:leolani n2mu:know leolaniFriends:lea .
+}
+
