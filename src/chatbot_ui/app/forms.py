@@ -1,69 +1,66 @@
 from datetime import datetime
 
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, IntegerField, FloatField, SelectField, DateTimeField
+from wtforms import StringField, SubmitField, IntegerField, SelectField, DateField, URLField
 from wtforms.validators import DataRequired
+
+from chatbot.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION
 
 
 class TurnForm(FlaskForm):
     # Triple information
     subject_label = StringField('Subject label', validators=[DataRequired()])
-    subject_types = StringField('Subject types', validators=[DataRequired()])
-    # subject_from_label = BooleanField('Create URI from label')
+    subject_types = StringField('Subject types, divided by ","', validators=[DataRequired()])
+    subject_uri = URLField('Subject URI', default='http://cltl.nl/leolani/world/', validators=[DataRequired()])
 
     predicate_label = StringField('Predicate label', validators=[DataRequired()])
-    # predicate_from_label = BooleanField('Create URI from label')
+    predicate_uri = URLField('Predicate URI', default='http://cltl.nl/leolani/n2mu/', validators=[DataRequired()])
 
     object_label = StringField('Object label', validators=[DataRequired()])
-    object_types = StringField('Object types', validators=[DataRequired()])
-    # object_from_label = BooleanField('Create URI from label')
+    object_types = StringField('Object types, divided by ","', validators=[DataRequired()])
+    object_uri = URLField('Object URI', default='http://cltl.nl/leolani/world/', validators=[DataRequired()])
 
     # Perspective information
-    perspective_certainty = FloatField('Certainty', validators=[DataRequired()])
-    perspective_polarity = FloatField('Polarity', validators=[DataRequired()])
-    perspective_sentiment = FloatField('Sentiment', validators=[DataRequired()])
+    perspective_certainty = SelectField('Certainty', choices=['CERTAIN', 'PROBABLE', 'POSSIBLE', 'UNDERSPECIFIED'],
+                                        default='UNDERSPECIFIED', validators=[DataRequired()])
+    perspective_polarity = SelectField('Polarity', choices=['POSITIVE', 'NEGATIVE'],
+                                       default='POSITIVE', validators=[DataRequired()])
+    perspective_sentiment = SelectField('Sentiment', choices=['POSITIVE', 'NEUTRAL', 'NEGATIVE', 'UNDERSPECIFIED'],
+                                        default='UNDERSPECIFIED', validators=[DataRequired()])
 
     # Chat information
-    chat_id = IntegerField('Chat ID', validators=[DataRequired()])
     turn_id = IntegerField('Turn ID', validators=[DataRequired()])
-    author = StringField('Author', validators=[DataRequired()])
 
     # Utterance info
-    utterance_types = ["STATEMENT", "QUESTION"]
     utterance = StringField('Utterance', validators=[DataRequired()])
-    utterance_type = SelectField('Utterance type', choices=utterance_types, validators=[DataRequired()])
+    utterance_type = SelectField('Utterance type', choices=["STATEMENT", "QUESTION"], validators=[DataRequired()])
     # position = StringField('Position', default="", validators=[DataRequired()])
-
-    # Context information
-    context_id = IntegerField('Context ID', default=56, validators=[DataRequired()])
-    context_date = DateTimeField("Date", format="%Y-%m-%d", default=datetime.today, validators=[DataRequired()])
-
-    # Place info
-    place_id = IntegerField('Place ID', default=98, validators=[DataRequired()])
-    place_label = StringField('Place label', default='office', validators=[DataRequired()])
-    country = StringField('Country', default='NL', validators=[DataRequired()])
-    region = StringField('Region', default='North Holland', validators=[DataRequired()])
-    city = StringField('City', default='Amsterdam', validators=[DataRequired()])
-
-    # Multimodal information
-    # objects = StringField('Objects in the room', default='', validators=[DataRequired()])
-    # people = StringField('People in the room', default='', validators=[DataRequired()])
 
     submit = SubmitField('Submit capsule')
 
 
 class ChatForm(FlaskForm):
+    # Experimental condition
     chat_id = IntegerField('Chat ID', validators=[DataRequired()])
     speaker = StringField('Speaker', validators=[DataRequired()])
 
-    rewards = ['Total triples',
-               # 'Total classes', 'Total predicates',
-               # 'Total statements', 'Total perspectives', 'Total conflicts',
-               # 'Total sources',
+    rewards = ['Average degree', 'Sparseness',
+               'Total triples',
                'Ratio statements to triples', 'Ratio perspectives to triples', 'Ratio conflicts to triples',
-               'Ratio perspectives to statements', 'Ratio conflicts to statements'
+               'Ratio perspectives to statements', 'Ratio conflicts to statements',
                ]
     reward = SelectField('Reward function', choices=rewards, validators=[DataRequired()])
+
+    # Context information
+    context_id = IntegerField('Context ID', default=CONTEXT_ID, validators=[DataRequired()])
+    context_date = DateField("Date", format="%Y-%m-%d", default=datetime.today, validators=[DataRequired()])
+
+    # Place info
+    place_id = IntegerField('Place ID', default=PLACE_ID, validators=[DataRequired()])
+    place_label = StringField('Place label', default=PLACE_NAME, validators=[DataRequired()])
+    country = StringField('Country', default=LOCATION["country"], validators=[DataRequired()])
+    region = StringField('Region', default=LOCATION["region"], validators=[DataRequired()])
+    city = StringField('City', default=LOCATION["city"], validators=[DataRequired()])
 
     submit = SubmitField('Start chat')
 

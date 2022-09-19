@@ -5,16 +5,4 @@
 """
 
 
-def capsule_for_query(capsule):
-    """Casefolds the triple stored in a capsule so that entities match
-    with the brain regardless of case.
 
-    params
-    dict capsule: capsule containing a triple
-
-    returns: capsule with casefolded triple
-    """
-    for item in ["subject", "predicate", "object"]:
-        if capsule[item]["label"]:
-            capsule[item]["label"] = capsule[item]["label"].lower()
-    return capsule

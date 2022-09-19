@@ -1,4 +1,4 @@
-from cltl.combot.backend.utils.casefolding import (casefold_capsule)
+from cltl.commons.casefolding import (casefold_capsule)
 from cltl.reply_generation.rl_replier import RLReplier
 from cltl.reply_generation.utils.replier_utils import thoughts_from_brain
 

@@ -43,8 +43,9 @@ pip install -r requirements.txt --no-cache
 ```
 
 1) Install the latest versions of the required cltl packages. We are
-   using [cltl.brain](https://github.com/leolani/cltl-knowledgerepresentation)
-   and [cltl.reply-generation](https://github.com/leolani/cltl-languagegeneration). Please clone the repositories, pull
+   using [cltl.brain](https://github.com/leolani/cltl-knowledgerepresentation),
+   [cltl.reply-generation](https://github.com/leolani/cltl-languagegeneration)
+   and [cltl.dialogue-evaluation](https://github.com/leolani/cltl-dialogueevaluation). Please clone the repositories, pull
    the latest versions and install the packages into the virtual env like this:
 
 ```bash
@@ -58,6 +59,13 @@ python -c "import nltk; nltk.download('wordnet')"
 ```bash
 conda activate thought-selection
 cd cltl-languagegeneration
+git pull
+pip install -e .
+```
+
+```bash
+conda activate thought-selection
+cd cltl-dialogueevaluation
 git pull
 pip install -e .
 ```

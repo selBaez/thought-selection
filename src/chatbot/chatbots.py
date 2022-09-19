@@ -14,12 +14,12 @@ from random import choice
 # Pip-installed ctl repositories
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.brain.utils.helper_functions import brain_response_to_json
-from cltl.combot.backend.api.discrete import UtteranceType
-from cltl.reply_generation.data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
+from cltl.commons.casefolding import casefold_capsule
+from cltl.commons.discrete import UtteranceType
+from cltl.commons.language_data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
 
 from chatbot.replier import RLCapsuleReplier
-from chatbot.utils.chatbot_utils import capsule_for_query
-from chatbot.utils.thoughts_utils import copy_capsule_context, BASE_CAPSULE
+from chatbot.utils.global_variables import BASE_CAPSULE
 
 # Set up Java PATH (required for Windows)
 os.environ["JAVAHOME"] = "C:/Program Files/Java/jre1.8.0_311/bin/java.exe"
@@ -106,6 +106,9 @@ class Chatbot:
         # Plot
         self.replier.thought_selector.plot(filename=self.scenario_folder)
 
+    def situate_chat(self, capsule_for_context):
+        self._brain.capsule_context(capsule_for_context)
+
     def respond(self, capsule, return_br=True):
         """Parses the user input (as a capsule), queries and/or updates the brain
         and returns a reply by consulting the replier.
@@ -126,31 +129,18 @@ class Chatbot:
         # QUESTION
         elif capsule["utterance_type"] in ["QUESTION", UtteranceType.QUESTION]:
             # Query Brain -> try to answer
-            brain_response = self._brain.query_brain(capsule_for_query(capsule))
+            brain_response = self._brain.query_brain(casefold_capsule(capsule))
             brain_response = brain_response_to_json(brain_response)
-
-            if isinstance(self._replier, RLCapsuleReplier):
-                self._replier.reward_thought()
-
+            self._replier.reward_thought()
             say, capsule_user = self._replier.reply_to_question(brain_response), BASE_CAPSULE
 
         # STATEMENT
         elif capsule["utterance_type"] in ["STATEMENT", UtteranceType.STATEMENT]:
             # Update Brain -> communicate a thought
-            brain_response = self._brain.update(capsule, reason_types=True, create_label=True)
+            brain_response = self._brain.capsule_statement(capsule, reason_types=True, create_label=True)
             brain_response = brain_response_to_json(brain_response)
-
-            if isinstance(self._replier, RLCapsuleReplier):
-                self._replier.reward_thought()
-
+            self._replier.reward_thought()
             say, capsule_user = self._replier.reply_to_statement(brain_response)
-
-        if capsule_user:
-            capsule_user['chat'] = self.chat_id
-            capsule_user['turn'] = self.turns + 1
-            capsule_user['author'] = self.speaker
-            capsule_user['utterance_type'] = "STATEMENT"
-            capsule_user = copy_capsule_context(capsule_user, brain_response['statement'])
 
         if return_br:
             return say, capsule_user, brain_response

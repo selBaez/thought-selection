@@ -3,8 +3,8 @@ from pathlib import Path
 
 from flask import render_template, redirect, request, url_for
 
+from chatbot.utils.capsule_utils import form_to_context_capsule, digest_form, begin_form, statement_capsule_to_form
 from chatbot_ui.app.forms import TurnForm, ChatForm, SaveForm
-from chatbot_ui.app.utils.capsule_utils import digest_form, begin_form, capsule_to_form
 
 ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
 RESOURCES_PATH = ABSOLUTE_PATH + "/../../../resources/"
@@ -27,10 +27,17 @@ def create_endpoints(app, chatbot):
 
             # Create chatbot
             chatbot.begin_session(form_in.chat_id.data, form_in.speaker.data, form_in.reward.data, session_folder)
+
+            # Situate chat
+            capsule_for_context = form_to_context_capsule(form_in)
+            chatbot.situate_chat(capsule_for_context)
+
+            # Generate greeting for starting chat
             reply = {'say': chatbot.greet}
 
             # Go to capsule page
             form_out = TurnForm()
+
             return redirect(url_for('capsule', title='Submit Capsule', form=form_out, reply=reply, capsules=[]))
 
         # handle the GET request
@@ -41,7 +48,7 @@ def create_endpoints(app, chatbot):
 
     @app.route('/capsule', methods=['GET', 'POST'])
     def capsule():
-        # handle the POST request
+        # handle the POST request (user input)
         if request.method == 'POST':
             form_in = TurnForm()
 
@@ -51,7 +58,7 @@ def create_endpoints(app, chatbot):
             return redirect(url_for('capsule', title='Submit Capsule',
                                     form=form_out, reply=reply, capsules=chatbot.capsules_submitted))
 
-        # handle the GET request
+        # handle the GET request (prefilled)
         elif request.method == 'GET':
             form_in = TurnForm()
 
@@ -62,7 +69,7 @@ def create_endpoints(app, chatbot):
 
             else:
                 # Use last suggested template
-                form_out = capsule_to_form(chatbot.capsules_suggested[-1], form_in)
+                form_out = statement_capsule_to_form(chatbot.capsules_suggested[-1], form_in)
                 reply = chatbot.say_history[-1]
 
             if form_out.validate_on_submit():

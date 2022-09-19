@@ -1,56 +1,12 @@
 import copy
 import random
-from datetime import date
-from random import getrandbits
 from typing import Optional, Tuple
 
-import requests
-from cltl.combot.backend.utils.triple_helpers import filtered_types_names
-from cltl.reply_generation.data.sentences import NEW_KNOWLEDGE, EXISTING_KNOWLEDGE, CONFLICTING_KNOWLEDGE, \
+from cltl.commons.language_data.sentences import NEW_KNOWLEDGE, EXISTING_KNOWLEDGE, CONFLICTING_KNOWLEDGE, \
     CURIOSITY, HAPPY, TRUST, NO_TRUST, NO_ANSWER
+from cltl.commons.triple_helpers import filtered_types_names
 
-# get from prev capsule? or get from some intialization?
-context_id = getrandbits(8)
-place_id = getrandbits(8)
-location = requests.get("https://ipinfo.io").json()
-place_name = "office"
-
-BASE_CAPSULE = {
-    "chat": None,  # from chatbot / prev capsule
-    "turn": None,  # from chatbot
-    "author": None,  # from chatbot
-    "utterance": "",
-    "utterance_type": None,
-    "position": "",
-    "subject": {"label": None, "type": [], 'uri': None},
-    "predicate": {"label": None, 'uri': None},
-    "object": {"label": None, "type": [], 'uri': None},
-    "perspective": {"certainty": None, "polarity": None, "sentiment": None},
-    "context_id": context_id,
-    "date": date.today(),
-    "place": place_name,
-    "place_id": place_id,
-    "country": location['country'],
-    "region": location['region'],
-    "city": location['city'],
-    "objects": [],
-    "people": []
-}
-
-
-def copy_capsule_context(capsule_user: dict, utterance: dict) -> dict:
-    capsule_user['chat'] = utterance['chat']
-    capsule_user['context_id'] = utterance['context_id']
-    capsule_user['date'] = utterance['date']
-    capsule_user['place'] = utterance['place']
-    capsule_user['place_id'] = utterance['place_id']
-    capsule_user['country'] = utterance['country']
-    capsule_user['region'] = utterance['region']
-    capsule_user['city'] = utterance['city']
-    capsule_user['objects'] = utterance['objects']
-    capsule_user['people'] = utterance['people']
-
-    return capsule_user
+from chatbot.utils.global_variables import BASE_CAPSULE
 
 
 def phrase_cardinality_conflicts(conflicts: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
@@ -101,7 +57,8 @@ def phrase_negation_conflicts(conflicts: dict, utterance: dict) -> Tuple[Optiona
             negative_conflict = random.choice(negative_conflict)
 
             say += ' %s told me in %s that %s %s %s, but in %s %s told me that %s did not %s %s' \
-                   % (affirmative_conflict['_provenance']['_author']['_label'], affirmative_conflict['_provenance']['_date'],
+                   % (affirmative_conflict['_provenance']['_author']['_label'],
+                      affirmative_conflict['_provenance']['_date'],
                       utterance['triple']['_subject']['_label'], utterance['triple']['_predicate']['_label'],
                       utterance['triple']['_complement']['_label'],
                       negative_conflict['_provenance']['_date'], negative_conflict['_provenance']['_author']['_label'],

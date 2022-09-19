@@ -1,21 +1,20 @@
 from datetime import datetime
-from random import getrandbits
 
-import requests
 from cltl.brain.utils.helper_functions import brain_response_to_json
 
-context_id = getrandbits(8)
-place_id = getrandbits(8)
-location = requests.get("https://ipinfo.io").json()
+from chatbot.utils.global_variables import CONTEXT_ID
 
 
-def capsule_to_form(capsule, form):
+def statement_capsule_to_form(capsule, form):
     # Triple
     form.subject_label.data = capsule["subject"]["label"]
     form.subject_types.data = ','.join(capsule["subject"]["type"])
+    form.subject_uri.data = f'http://cltl.nl/leolani/world/{capsule["subject"]["label"]}'
     form.predicate_label.data = capsule["predicate"]["label"]
+    form.predicate_uri.data = f'http://cltl.nl/leolani/n2mu/{capsule["predicate"]["label"]}'
     form.object_label.data = capsule["object"]["label"]
     form.object_types.data = ','.join(capsule["object"]["type"])
+    form.object_uri.data = f'http://cltl.nl/leolani/world/{capsule["object"]["label"]}'
 
     # perspective
     form.perspective_certainty.data = capsule["perspective"]["certainty"]
@@ -23,38 +22,41 @@ def capsule_to_form(capsule, form):
     form.perspective_sentiment.data = capsule["perspective"]["sentiment"]
 
     # chat
-    form.chat_id.data = capsule["chat"]
     form.turn_id.data = capsule["turn"]
-    form.author.data = capsule["author"]
 
     # utterance
     form.utterance.data = capsule["utterance"]
     form.utterance_type.data = capsule["utterance_type"]
     # form.position.data = capsule["position"]
 
-    # context
-    form.context_id.data = capsule["context_id"]
-    # form.context_date.data = capsule["date"]# datetime.strptime(capsule["date"], "%Y-%m-%d")
-
-    # place
-    form.place_label.data = capsule["place"]
-    form.place_id.data = capsule["place_id"]
-    form.country.data = capsule["country"]
-    form.region.data = capsule["region"]
-    form.city.data = capsule["city"]
-
-    # multimodal
-    # form.objects.data = ','.join(capsule["objects"])
-    # form.people.data = '.'.join(capsule["people"])
-
     return form
 
 
-def form_to_capsule(form, chatbot):
+def form_to_context_capsule(form):
     capsule = {}
+
+    # context
+    capsule["context_id"] = form.context_id.data
+    capsule["date"] = datetime.strftime(form.context_date.data, "%Y-%m-%d")
+
+    # place
+    capsule["place"] = form.place_label.data
+    capsule["place_id"] = form.place_id.data
+    capsule["country"] = form.country.data
+    capsule["region"] = form.region.data
+    capsule["city"] = form.city.data
+
+    return capsule
+
+
+def form_to_statement_capsule(form, chatbot):
+    capsule = {}
+
     capsule["chat"] = chatbot.chat_id
-    capsule["turn"] = chatbot.turns
-    capsule["author"] = chatbot.speaker.lower()
+    capsule["turn"] = form.turn_id
+    capsule["author"] = {"label": chatbot.speaker.lower(),
+                         "type": ["person"],
+                         "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"}
     capsule["utterance"] = form.utterance.data
     capsule["utterance_type"] = form.utterance_type.data
     capsule["position"] = ""
@@ -71,30 +73,36 @@ def form_to_capsule(form, chatbot):
                               "polarity": form.perspective_polarity.data,
                               "sentiment": form.perspective_sentiment.data}
 
-    capsule["context_id"] = form.context_id.data
-    capsule["date"] = datetime.strftime(form.context_date.data, "%Y-%m-%d")
-    capsule["place"] = form.place_label.data
-    capsule["place_id"] = form.place_id.data
-    capsule["country"] = form.country.data
-    capsule["region"] = form.region.data
-    capsule["city"] = form.city.data
-    # capsule["objects"] = form.objects.data.split(',')
-    # capsule["people"] = form.people.data.split(',')
-    capsule["objects"] = []
-    capsule["people"] = []
+    # context
+    capsule["context_id"] = CONTEXT_ID
+    capsule["timestamp"] = datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S.%f")
 
     return capsule
 
 
+def template_to_statement_capsule(template_capsule, chatbot):
+    template_capsule['chat'] = chatbot.chat_id
+    template_capsule['turn'] = chatbot.turns + 1
+    template_capsule["author"] = {"label": chatbot.speaker.lower(),
+                                  "type": ["person"],
+                                  "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"}
+    template_capsule['utterance_type'] = "STATEMENT"
+    template_capsule['context_id'] = CONTEXT_ID
+    template_capsule["timestamp"] = datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S.%f")
+
+    return template_capsule
+
+
 def digest_form(form, chatbot):
     # turn form into capsule so it can be picked up by the brain
-    capsule = form_to_capsule(form, chatbot)
+    capsule = form_to_statement_capsule(form, chatbot)
 
-    # process with brain
+    # process with brain, get template for response
     say, capsule_user, brain_response = chatbot.respond(capsule)
+    capsule_user = template_to_statement_capsule(capsule_user, chatbot)
 
     # use capsule user to fill in next form
-    form = capsule_to_form(capsule_user, form)
+    form = statement_capsule_to_form(capsule_user, form)
     reply = {'say': say}
 
     # arrange all response info to be saved
@@ -112,14 +120,18 @@ def begin_form(form, chatbot):
     capsule = {
         "chat": chatbot.chat_id,
         "turn": chatbot.turns,
-        "author": chatbot.speaker,
+        "author": {
+            "label": chatbot.speaker.lower(),
+            "type": ["person"],
+            "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"
+        },
         "utterance": "",
         "utterance_type": "STATEMENT",
         "position": "",
         "subject": {
-            "label": chatbot.speaker,
+            "label": chatbot.speaker.lower(),
             "type": ["person"],
-            "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker}"
+            "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"
         },
         "predicate": {
             "label": "know",
@@ -134,20 +146,11 @@ def begin_form(form, chatbot):
             "certainty": 1,
             "polarity": 1,
             "sentiment": 1
-        },
-        "context_id": context_id,
-        "date": datetime.now().date().isoformat(),
-        "place": "office",
-        "place_id": place_id,
-        "country": location['country'],
-        "region": location['region'],
-        "city": location['city'],
-        "objects": [],
-        "people": []
+        }
     }
 
     # use capsule user to fill in next form
-    form = capsule_to_form(capsule, form)
+    form = statement_capsule_to_form(capsule, form)
     reply = {'say': chatbot.greet}
 
     # arrange all response info to be saved

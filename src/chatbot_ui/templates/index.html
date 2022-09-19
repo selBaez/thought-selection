@@ -2,82 +2,143 @@
 
 {% block content %}
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-        /* Create two equal columns that floats next to each other */
-        .column {
-            float: left;
-            width: 50%;
-            padding: 10px;
-        }
+            /* Create two equal columns that floats next to each other */
+            .column {
+                float: left;
+                width: 50%;
+                padding: 10px;
+            }
 
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-    </style>
-</head>
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
 
-<h1>Hi, my name is Leolani, would you like to chat?</h1>
+    <h1>Hi, my name is Leolani, would you like to chat?</h1>
 
-<div class="row">
-    <div class="column" style="background-color:#aaa;">
-        <form action="" method="post" novalidate>
-            {{ form.hidden_tag() }}
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
 
-            <div class="column" style="background-color:#aaa;">
-                <p>
-                    {{ form.chat_id.label }}<br>
-                    {{ form.chat_id() }}<br>
-                    {% for error in form.chat_id.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
-                    {% endfor %}
-                </p>
-                <p>
-                    {{ form.speaker.label }}<br>
-                    {{ form.speaker(size=32) }}<br>
-                    {% for error in form.speaker.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
-                    {% endfor %}
-                </p>
-                <p>
-                    {{ form.reward.label }}<br>
-                    {{ form.reward() }}<br>
-                    {% for error in form.reward.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
-                    {% endfor %}
-                </p>
-            </div>
-            <div class="column">
-                <p>{{ form.submit() }}</p>
-            </div>
-        </form>
+                <div class="column" style="background-color:#aaa;">
+                    <!--Experimental condition -->
+                    <p>
+                        {{ form.chat_id.label }}<br>
+                        {{ form.chat_id() }}<br>
+                        {% for error in form.chat_id.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.speaker.label }}<br>
+                        {{ form.speaker(size=32) }}<br>
+                        {% for error in form.speaker.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.reward.label }}<br>
+                        {{ form.reward() }}<br>
+                        {% for error in form.reward.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <hr>
+                    <!--Context info-->
+                    <p>
+                        {{ form.context_id.label }}<br>
+                        {{ form.context_id() }}<br>
+                        {% for error in form.context_id.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.context_date.label }}<br>
+                        {{ form.context_date() }}<br>
+                        {% for error in form.context_date.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <hr>
+                    <!--Place info-->
+                    <p>
+                        {{ form.place_id.label }}<br>
+                        {{ form.place_id() }}<br>
+                        {% for error in form.place_id.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.place_label.label }}<br>
+                        {{ form.place_label(size=32) }}<br>
+                        {% for error in form.place_label.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.country.label }}<br>
+                        {{ form.country(size=32) }}<br>
+                        {% for error in form.country.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.region.label }}<br>
+                        {{ form.region(size=32) }}<br>
+                        {% for error in form.region.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.city.label }}<br>
+                        {{ form.city(size=32) }}<br>
+                        {% for error in form.city.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+
+                </div>
+                <div class="column">
+                    <p>{{ form.submit() }}</p>
+                </div>
+            </form>
+        </div>
+        <div class="column">
+            <h2>Instructions</h2>
+            <p>This interface aims to facilitate the interaction with a chatbot that ingests structured data in the form
+                of
+                SPO triples</p>
+            <p>On every turn you will be asked to fill in a form to represent the structured knowledge in your
+                utterance.
+                The form will be prefilled with suggestions for certain fields. You can always change the fields
+                manually,
+                if you'd prefer. </p>
+            <p>Please focus on filling the triple (subject, predicate, object fields) and perspective (certainty,
+                polarity,
+                sentiment) parts of the form. As a secondary goal, you could input the utterance in natural language,
+                but
+                this is not strictly necessary.</p>
+            <p>Certainty values should range from 0 (uncertain) to 1 (certain).</p>
+            <p>Polarity values may be 1 (affirmative) or -1 (negation).</p>
+            <p>Sentiment values may be 1 (positive), -1 (negative), or 0 (neutral).</p>
+            <p>Submit as many capsules as you wish in a chat. When want to stop the chat, finish session via the top
+                menu
+                bar.</p>
+
+            <h2>Notes</h2>
+            <p>Please pay attention to be use lowercase wherever possible. Only submit statements, no questions</p>
+        </div>
     </div>
-    <div class="column">
-        <h2>Instructions</h2>
-        <p>This interface aims to facilitate the interaction with a chatbot that ingests structured data in the form of
-            SPO triples</p>
-        <p>On every turn you will be asked to fill in a form to represent the structured knowledge in your utterance.
-            The form will be prefilled with suggestions for certain fields. You can always change the fields manually,
-            if you'd prefer. </p>
-        <p>Please focus on filling the triple (subject, predicate, object fields) and perspective (certainty, polarity,
-            sentiment) parts of the form. As a secondary goal, you could input the utterance in natural language, but
-            this is not strictly necessary.</p>
-        <p>Certainty values should range from 0 (uncertain) to 1 (certain).</p>
-        <p>Polarity values may be 1 (affirmative) or -1 (negation).</p>
-        <p>Sentiment values may be 1 (positive), -1 (negative), or 0 (neutral).</p>
-        <p>Submit as many capsules as you wish in a chat. When want to stop the chat, finish session via the top menu
-            bar.</p>
-
-        <h2>Notes</h2>
-        <p>Please pay attention to be use lowercase wherever possible. Only submit statements, no questions</p>
-    </div>
-</div>
 {% endblock %}
