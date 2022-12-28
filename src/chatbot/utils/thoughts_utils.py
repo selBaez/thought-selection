@@ -6,7 +6,7 @@ from cltl.commons.language_data.sentences import NEW_KNOWLEDGE, EXISTING_KNOWLED
     CURIOSITY, HAPPY, TRUST, NO_TRUST, NO_ANSWER
 from cltl.commons.triple_helpers import filtered_types_names
 
-from chatbot.utils.global_variables import BASE_CAPSULE
+from src.chatbot.utils.global_variables import BASE_CAPSULE
 
 
 def phrase_cardinality_conflicts(conflicts: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:

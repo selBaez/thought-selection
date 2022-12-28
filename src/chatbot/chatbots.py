@@ -18,8 +18,8 @@ from cltl.commons.casefolding import casefold_capsule
 from cltl.commons.discrete import UtteranceType
 from cltl.commons.language_data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
 
-from chatbot.replier import RLCapsuleReplier
-from chatbot.utils.global_variables import BASE_CAPSULE
+from src.chatbot.replier import RLCapsuleReplier
+from src.chatbot.utils.global_variables import BASE_CAPSULE
 
 # Set up Java PATH (required for Windows)
 os.environ["JAVAHOME"] = "C:/Program Files/Java/jre1.8.0_311/bin/java.exe"

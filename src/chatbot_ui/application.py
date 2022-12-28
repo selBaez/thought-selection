@@ -1,9 +1,8 @@
 from flask import Flask
 
-from chatbot_ui.app.routes import create_endpoints
-from chatbot_ui.config import Config
-
-from chatbot.chatbots import Chatbot
+from src.chatbot.chatbots import Chatbot
+from src.chatbot_ui.app.routes import create_endpoints
+from src.chatbot_ui.config import Config
 
 # Create application # TODO make into function
 application = Flask(__name__)

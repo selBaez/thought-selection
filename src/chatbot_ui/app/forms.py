@@ -4,7 +4,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField, SelectField, DateField, URLField
 from wtforms.validators import DataRequired
 
-from chatbot.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION
+from src.chatbot.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION
 
 
 class TurnForm(FlaskForm):

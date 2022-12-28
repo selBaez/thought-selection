@@ -2,7 +2,7 @@ from datetime import datetime
 
 from cltl.brain.utils.helper_functions import brain_response_to_json
 
-from chatbot.utils.global_variables import CONTEXT_ID
+from src.chatbot.utils.global_variables import CONTEXT_ID
 
 
 def statement_capsule_to_form(capsule, form):

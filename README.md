@@ -1,6 +1,6 @@
 # thought-selection
 
-Repository for experiments on thought selection in the @Leolani framework
+Repository for experiments on thought selection
 
 ## Overview
 
@@ -9,20 +9,20 @@ thoughts in a conversation.
 
 The code base consists of the following files:
 
-| Files                   | Description   |
-| ----------------------- |:--------------|
-| main.py                 | Runs an interaction with the chatbot via command line.|
-| web_app.py              | Runs an interaction with the chatbot via a web app|
-| requirements.txt        | Requirements file containing the minimum number of packages needed to run the implementation. |
+| Files            | Description                                            |
+|------------------|:-------------------------------------------------------|
+| main.py          | Runs an interaction with the chatbot via command line. |
+| web_app.py       | Runs an interaction with the chatbot via a web app     |
+| requirements.txt | Requirements file.                                     |
 
 [comment]: <> (| interactive_chatbot.py  | Runs an interaction with the chatbot via a Jupyter notebook|)
 
 <p> The implementations of the chatbot functionality and the UI for ease of interaction are divided in different folders:</p>
 
-| Folders                   | Description     |
-| ------------------------- | :-------------- |
-| \\chatbot                 | Implements a capsule chatbot based on the Leolani brain. It contains a Replier and a Thought Selector|
-| \\chatbot_ui              | Implements a backend API and web front end to interact with the capsule chatbot in a more user-friendly way . |
+| Folders      | Description                                                                      |
+|--------------|:---------------------------------------------------------------------------------|
+| \\chatbot    | Implements a triple-based chatbot. It contains a Replier and a Thought Selector. |
+| \\chatbot_ui | Implements a backend API and web front end to interact with the chatbot.         |
 
 ## Getting started
 
@@ -31,22 +31,21 @@ In order to run the code, follow these steps:
 1) Create a virtual environment for the project (conda, venv, etc)
 
 ```bash
-conda create --name thought-selection python=3.7
+conda create --name thought-selection python=3.8
 conda activate thought-selection
 ```
 
 1) Install the required dependencies in `requirements.txt` using a regular `pip install -r requirements.txt`
 
 ```bash
-pip install --upgrade pip
 pip install -r requirements.txt --no-cache
 ```
 
 1) Install the latest versions of the required cltl packages. We are
    using [cltl.brain](https://github.com/leolani/cltl-knowledgerepresentation),
    [cltl.reply-generation](https://github.com/leolani/cltl-languagegeneration)
-   and [cltl.dialogue-evaluation](https://github.com/leolani/cltl-dialogueevaluation). Please clone the repositories, pull
-   the latest versions and install the packages into the virtual env like this:
+   and [cltl.dialogue-evaluation](https://github.com/leolani/cltl-dialogueevaluation). Please clone the repositories,
+   pull the latest versions and install the packages into the virtual env like this:
 
 ```bash
 conda activate thought-selection
