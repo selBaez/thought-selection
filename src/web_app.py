@@ -10,15 +10,8 @@
 #
 # logger = logging.getLogger(__name__)
 
-# # Create application
-# application = Flask(__name__)
-# application.config.from_object(Config)
-#
-# # Create endpoints
-# application = create_endpoints(application)
-
-from chatbot_ui.application import application
 
 if __name__ == '__main__':
+    from chatbot_ui.application import application
     # Run
     application.run(debug=True)

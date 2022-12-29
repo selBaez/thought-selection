@@ -142,7 +142,7 @@
         <div class="column">
             {% for capsule in capsules %}
                 <div>
-                    <p>Turn: {{ capsule.turn }}, {{ capsule.author }} says:
+                    <p>Turn: {{ capsule.turn }}, {{ capsule.author.label }} says:
                         <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{ capsule.object.label }}</b>,
                         Reward:
                         {{ capsule.brain_state }} </p>

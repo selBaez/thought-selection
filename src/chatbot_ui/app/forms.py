@@ -44,10 +44,10 @@ class ChatForm(FlaskForm):
     chat_id = IntegerField('Chat ID', validators=[DataRequired()])
     speaker = StringField('Speaker', validators=[DataRequired()])
 
-    rewards = ['Average degree', 'Sparseness',
-               'Total triples',
-               'Ratio statements to triples', 'Ratio perspectives to triples', 'Ratio conflicts to triples',
-               'Ratio perspectives to statements', 'Ratio conflicts to statements',
+    rewards = ['Average degree', 'Sparseness', 'Shortest path',
+               'Total triples', 'Average population',
+               'Ratio claims to triples',
+               'Ratio perspectives to claims', 'Ratio conflicts to claims'
                ]
     reward = SelectField('Reward function', choices=rewards, validators=[DataRequired()])
 

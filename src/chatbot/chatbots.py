@@ -140,7 +140,7 @@ class Chatbot:
             brain_response = self._brain.capsule_statement(capsule, reason_types=True, create_label=True)
             brain_response = brain_response_to_json(brain_response)
             self._replier.reward_thought()
-            say, capsule_user = self._replier.reply_to_statement(brain_response)
+            say, capsule_user = self._replier.reply_to_statement(brain_response, persist=True)
 
         if return_br:
             return say, capsule_user, brain_response

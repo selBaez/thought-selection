@@ -53,7 +53,7 @@ def form_to_statement_capsule(form, chatbot):
     capsule = {}
 
     capsule["chat"] = chatbot.chat_id
-    capsule["turn"] = form.turn_id
+    capsule["turn"] = form.turn_id.data
     capsule["author"] = {"label": chatbot.speaker.lower(),
                          "type": ["person"],
                          "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"}
