@@ -119,7 +119,7 @@ class Chatbot:
 
         returns: reply to input
         """
-        self.turns += 1
+        self.turns += 2
 
         # ERROR
         say, capsule_user, brain_response = None, None, None

@@ -1,0 +1,283 @@
+@prefix eps: <http://cltl.nl/episodicawareness/> .
+@prefix gaf: <http://groundedannotationframework.org/gaf#> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix graspe: <http://groundedannotationframework.org/grasp/emotion#> .
+@prefix graspf: <http://groundedannotationframework.org/grasp/factuality#> .
+@prefix grasps: <http://groundedannotationframework.org/grasp/sentiment#> .
+@prefix leolaniContext: <http://cltl.nl/leolani/context/> .
+@prefix leolaniFriends: <http://cltl.nl/leolani/friends/> .
+@prefix leolaniInputs: <http://cltl.nl/leolani/inputs/> .
+@prefix leolaniTalk: <http://cltl.nl/leolani/talk/> .
+@prefix leolaniWorld: <http://cltl.nl/leolani/world/> .
+@prefix n2mu: <http://cltl.nl/leolani/n2mu/> .
+@prefix ns1: <urn:x-rdflib:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time1: <http://www.w3.org/TR/owl-time/#> .
+@prefix xml1: <https://www.w3.org/TR/xmlschema-2/#> .
+
+leolaniWorld:putin_born-in_russia {
+    leolaniWorld:putin n2mu:born-in leolaniWorld:russia .
+}
+
+leolaniWorld:leolani_know_tae {
+    leolaniWorld:leolani n2mu:know leolaniFriends:tae .
+}
+
+leolaniWorld:Instances {
+    leolaniWorld:communists a n2mu:person,
+            gaf:Instance ;
+        rdfs:label "communists" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance2_char0-36 .
+
+    leolaniWorld:leolani a n2mu:robot ;
+        rdfs:label "leolani" .
+
+    leolaniWorld:putin a n2mu:person,
+            gaf:Instance ;
+        rdfs:label "putin" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance1_char0-25 .
+
+    leolaniWorld:russia a n2mu:country,
+            gaf:Instance ;
+        rdfs:label "russia" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance0_char0-23,
+            leolaniTalk:chat2_utterance1_char0-25,
+            leolaniTalk:chat2_utterance2_char0-36 .
+
+    leolaniWorld:tae a n2mu:person,
+            gaf:Instance ;
+        rdfs:label "tae" .
+
+    leolaniWorld:ukraine a n2mu:country,
+            gaf:Instance ;
+        rdfs:label "ukraine" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance0_char0-23 .
+}
+
+leolaniWorld:leolani_sense_front-camera {
+    leolaniWorld:leolani n2mu:sense leolaniInputs:front-camera .
+}
+
+leolaniTalk:Perspectives {
+    leolaniTalk:chat2_utterance0_char0-23 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance0_char0-23" ;
+        gaf:containsDenotation leolaniWorld:russia,
+            leolaniWorld:ukraine ;
+        gaf:denotes leolaniWorld:russia_invade_ukraine ;
+        grasp:hasAttribution leolaniTalk:russia_invade_ukraine_CERTAIN-POSITIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:tae ;
+        rdf:value "Russia invaded Ukraine."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance0 .
+
+    leolaniTalk:chat2_utterance1_char0-25 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance1_char0-25" ;
+        gaf:containsDenotation leolaniWorld:putin,
+            leolaniWorld:russia ;
+        gaf:denotes leolaniWorld:putin_born-in_russia ;
+        grasp:hasAttribution leolaniTalk:putin_born-in_russia_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:tae ;
+        rdf:value "Putin was born in Russia."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance1 .
+
+    leolaniTalk:chat2_utterance2_char0-36 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance2_char0-36" ;
+        gaf:containsDenotation leolaniWorld:communists,
+            leolaniWorld:russia ;
+        gaf:denotes leolaniWorld:communists_born-in_russia ;
+        grasp:hasAttribution leolaniTalk:communists_born-in_russia_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:tae ;
+        rdf:value "Some communists were born in Russia."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance2 .
+
+    leolaniTalk:communists_born-in_russia_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "communists_born-in_russia_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance2_char0-36 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:putin_born-in_russia_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "putin_born-in_russia_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance1_char0-25 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:russia_invade_ukraine_CERTAIN-POSITIVE-NEGATIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "russia_invade_ukraine_CERTAIN-POSITIVE-NEGATIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance0_char0-23 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEGATIVE .
+
+    grasps:NEGATIVE a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "NEGATIVE" .
+
+    grasps:NEUTRAL a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "NEUTRAL" .
+
+    graspe:UNDERSPECIFIED a grasp:AttributionValue,
+            graspe:EmotionValue ;
+        rdfs:label "UNDERSPECIFIED" .
+
+    graspf:CERTAIN a grasp:AttributionValue,
+            graspf:CertaintyValue ;
+        rdfs:label "CERTAIN" .
+
+    graspf:POSITIVE a grasp:AttributionValue,
+            graspf:PolarityValue ;
+        rdfs:label "POSITIVE" .
+}
+
+leolaniWorld:communists_born-in_russia {
+    leolaniWorld:communists n2mu:born-in leolaniWorld:russia .
+}
+
+leolaniWorld:russia_invade_ukraine {
+    leolaniWorld:russia n2mu:invade leolaniWorld:ukraine .
+}
+
+leolaniWorld:Claims {
+    leolaniFriends:tae owl:sameAs leolaniWorld:tae .
+
+    leolaniWorld:communists_born-in_russia a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "communists_born-in_russia" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance2_char0-36 .
+
+    leolaniWorld:leolani_know_tae a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_tae" .
+
+    leolaniWorld:leolani_sense_front-camera a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_sense_front-camera" .
+
+    leolaniWorld:putin_born-in_russia a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "putin_born-in_russia" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance1_char0-25 .
+
+    leolaniWorld:russia_invade_ukraine a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "russia_invade_ukraine" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance0_char0-23 .
+}
+
+leolaniTalk:Interactions {
+    leolaniContext:context183 a eps:Context ;
+        rdfs:label "context183" ;
+        n2mu:id "183"^^xml1:string ;
+        sem:hasBeginTimeStamp leolaniContext:2022-03-07 ;
+        sem:hasEvent leolaniTalk:chat2,
+            leolaniTalk:visual2 ;
+        sem:hasPlace leolaniContext:office .
+
+    leolaniContext:2022-03-07 a sem:Time,
+            time1:DateTimeDescription ;
+        rdfs:label "2022-03-07" ;
+        time1:day "7"^^xml1:gDay ;
+        time1:month "3"^^xml1:gMonthDay ;
+        time1:unitType time1:unitDay ;
+        time1:year "2022"^^xml1:gYear .
+
+    leolaniContext:office a n2mu:location,
+            sem:Place ;
+        rdfs:label "office" ;
+        n2mu:id "170"^^xml1:string ;
+        n2mu:in leolaniWorld:Amsterdam,
+            leolaniWorld:NL,
+            leolaniWorld:North_Holland .
+
+    leolaniTalk:chat2 a grasp:Chat,
+            sem:Event ;
+        rdfs:label "chat2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:chat2_utterance0,
+            leolaniTalk:chat2_utterance1,
+            leolaniTalk:chat2_utterance2 .
+
+    leolaniTalk:chat2_utterance0 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance0" ;
+        n2mu:id "0"^^xml1:string ;
+        sem:hasActor leolaniFriends:tae .
+
+    leolaniTalk:chat2_utterance1 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance1" ;
+        n2mu:id "1"^^xml1:string ;
+        sem:hasActor leolaniFriends:tae .
+
+    leolaniTalk:chat2_utterance2 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasActor leolaniFriends:tae .
+
+    leolaniTalk:visual2 a grasp:Visual,
+            sem:Event ;
+        rdfs:label "visual2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:visual2_detection0,
+            leolaniTalk:visual2_detection1,
+            leolaniTalk:visual2_detection2 .
+
+    leolaniTalk:visual2_detection0 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection0" ;
+        n2mu:id "0"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection1 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection1" ;
+        n2mu:id "1"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection2 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniWorld:Amsterdam a n2mu:city,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "Amsterdam" .
+
+    leolaniWorld:NL a n2mu:country,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "NL" .
+
+    leolaniWorld:North_Holland a n2mu:location,
+            n2mu:region,
+            sem:Place ;
+        rdfs:label "North Holland" .
+
+    leolaniFriends:tae a n2mu:person,
+            gaf:Instance,
+            grasp:Source,
+            sem:Actor ;
+        rdfs:label "tae" .
+
+    leolaniInputs:front-camera a n2mu:sensor,
+            gaf:Instance,
+            grasp:Source,
+            sem:Actor ;
+        rdfs:label "front-camera" .
+}
+

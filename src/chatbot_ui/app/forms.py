@@ -4,7 +4,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField, SelectField, DateField, URLField
 from wtforms.validators import DataRequired
 
-from src.chatbot.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION
+from src.chatbot.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, PREDICATE_OPTIONS
 
 
 class TurnForm(FlaskForm):
@@ -13,7 +13,9 @@ class TurnForm(FlaskForm):
     subject_types = StringField('Subject types, divided by ","', validators=[DataRequired()])
     subject_uri = URLField('Subject URI', default='http://cltl.nl/leolani/world/', validators=[DataRequired()])
 
-    predicate_label = StringField('Predicate label', validators=[DataRequired()])
+    # predicate_label = StringField('Predicate label', validators=[DataRequired()])
+    predicate_label = SelectField('Predicate label autocomplete', choices=[("", "")] + [(name, name) for uuid, name in
+                                                                                        enumerate(PREDICATE_OPTIONS)])
     predicate_uri = URLField('Predicate URI', default='http://cltl.nl/leolani/n2mu/', validators=[DataRequired()])
 
     object_label = StringField('Object label', validators=[DataRequired()])

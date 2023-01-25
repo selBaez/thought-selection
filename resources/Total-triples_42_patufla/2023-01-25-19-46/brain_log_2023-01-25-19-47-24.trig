@@ -1,0 +1,148 @@
+@prefix eps: <http://cltl.nl/episodicawareness/> .
+@prefix gaf: <http://groundedannotationframework.org/gaf#> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix graspe: <http://groundedannotationframework.org/grasp/emotion#> .
+@prefix graspf: <http://groundedannotationframework.org/grasp/factuality#> .
+@prefix grasps: <http://groundedannotationframework.org/grasp/sentiment#> .
+@prefix leolaniContext: <http://cltl.nl/leolani/context/> .
+@prefix leolaniTalk: <http://cltl.nl/leolani/talk/> .
+@prefix leolaniWorld: <http://cltl.nl/leolani/world/> .
+@prefix n2mu: <http://cltl.nl/leolani/n2mu/> .
+@prefix ns1: <urn:x-rdflib:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time1: <http://www.w3.org/TR/owl-time/#> .
+@prefix xml1: <https://www.w3.org/TR/xmlschema-2/#> .
+
+leolaniWorld:Instances {
+    leolaniWorld:leolani a n2mu:robot,
+            gaf:Instance ;
+        rdfs:label "leolani" ;
+        gaf:denotedIn leolaniTalk:chat42_utterance0_char .
+
+    leolaniWorld:patufla a n2mu:person,
+            gaf:Instance ;
+        rdfs:label "patufla" ;
+        gaf:denotedIn leolaniTalk:chat42_utterance0_char .
+}
+
+leolaniTalk:Perspectives {
+    leolaniTalk:chat42_utterance0_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat42_utterance0_char" ;
+        gaf:containsDenotation leolaniWorld:leolani,
+            leolaniWorld:patufla ;
+        gaf:denotes leolaniWorld:patufla_37_leolani ;
+        grasp:hasAttribution leolaniTalk:patufla_37_leolani_3110 ;
+        grasp:wasAttributedTo leolaniWorld:patufla ;
+        sem:hasBeginTimeStamp "2023-01-25 19:47:23.969994"^^xml1:string ;
+        rdf:value ""^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat42_utterance0 .
+
+    leolaniTalk:patufla_37_leolani_3110 a grasp:Attribution ;
+        rdfs:label "patufla_37_leolani_3110" ;
+        grasp:isAttributionFor leolaniTalk:chat42_utterance0_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    graspe:UNDERSPECIFIED a grasp:AttributionValue,
+            graspe:EmotionValue ;
+        rdfs:label "UNDERSPECIFIED" .
+
+    graspf:CERTAIN a grasp:AttributionValue,
+            graspf:CertaintyValue ;
+        rdfs:label "CERTAIN" .
+
+    graspf:POSITIVE a grasp:AttributionValue,
+            graspf:PolarityValue ;
+        rdfs:label "POSITIVE" .
+
+    grasps:POSITIVE a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "POSITIVE" .
+}
+
+leolaniWorld:patufla_37_leolani {
+    leolaniWorld:patufla n2mu:37 leolaniWorld:leolani .
+}
+
+leolaniTalk:Interactions {
+    leolaniContext:context211 a eps:Context ;
+        rdfs:label "context211" ;
+        n2mu:id "211"^^xml1:string ;
+        sem:hasBeginTimeStamp leolaniContext:2023-01-25 ;
+        sem:hasEvent leolaniTalk:chat42 ;
+        sem:hasPlace leolaniContext:office .
+
+    leolaniContext:2023-01-25 a sem:Time,
+            time1:DateTimeDescription ;
+        rdfs:label "2023-01-25" ;
+        time1:day "25"^^xml1:gDay ;
+        time1:month "1"^^xml1:gMonthDay ;
+        time1:unitType time1:unitDay ;
+        time1:year "2023"^^xml1:gYear .
+
+    leolaniContext:office a n2mu:location,
+            sem:Place ;
+        rdfs:label "office" ;
+        n2mu:id "88"^^xml1:string ;
+        n2mu:in leolaniWorld:Amsterdam,
+            leolaniWorld:NL,
+            leolaniWorld:North_Holland .
+
+    leolaniTalk:chat42 a grasp:Chat,
+            sem:Event ;
+        rdfs:label "chat42" ;
+        n2mu:id "42"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:chat42_utterance0 .
+
+    leolaniTalk:chat42_utterance0 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat42_utterance0" ;
+        n2mu:id "0"^^xml1:string ;
+        sem:hasActor leolaniWorld:patufla .
+
+    leolaniWorld:Amsterdam a n2mu:city,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "Amsterdam" .
+
+    leolaniWorld:NL a n2mu:country,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "NL" .
+
+    leolaniWorld:North_Holland a n2mu:location,
+            n2mu:region,
+            sem:Place ;
+        rdfs:label "North Holland" .
+
+    leolaniWorld:patufla a n2mu:person,
+            gaf:Instance,
+            grasp:Source,
+            sem:Actor ;
+        rdfs:label "patufla" .
+}
+
+leolaniWorld:leolani_know_patufla {
+    leolaniWorld:leolani n2mu:know leolaniWorld:patufla .
+}
+
+leolaniWorld:Claims {
+    leolaniWorld:leolani_know_patufla a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_patufla" .
+
+    leolaniWorld:patufla_37_leolani a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "patufla_37_leolani" ;
+        gaf:denotedBy leolaniTalk:chat42_utterance0_char .
+
+    leolaniWorld:patufla owl:sameAs leolaniWorld:patufla .
+}
+

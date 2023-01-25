@@ -1,0 +1,1543 @@
+@prefix eps: <http://cltl.nl/episodicawareness/> .
+@prefix gaf: <http://groundedannotationframework.org/gaf#> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix graspe: <http://groundedannotationframework.org/grasp/emotion#> .
+@prefix graspf: <http://groundedannotationframework.org/grasp/factuality#> .
+@prefix grasps: <http://groundedannotationframework.org/grasp/sentiment#> .
+@prefix leolaniContext: <http://cltl.nl/leolani/context/> .
+@prefix leolaniFriends: <http://cltl.nl/leolani/friends/> .
+@prefix leolaniInputs: <http://cltl.nl/leolani/inputs/> .
+@prefix leolaniTalk: <http://cltl.nl/leolani/talk/> .
+@prefix leolaniWorld: <http://cltl.nl/leolani/world/> .
+@prefix n2mu: <http://cltl.nl/leolani/n2mu/> .
+@prefix ns1: <urn:x-rdflib:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time1: <http://www.w3.org/TR/owl-time/#> .
+@prefix xml1: <https://www.w3.org/TR/xmlschema-2/#> .
+
+leolaniWorld:vu-university_locate-in_amsterdam {
+    leolaniWorld:vu-university n2mu:locate-in leolaniWorld:amsterdam .
+}
+
+leolaniWorld:vu-university_teach_student {
+    leolaniWorld:vu-university n2mu:teach leolaniWorld:student .
+}
+
+leolaniWorld:piek_talk-to_leolani {
+    leolaniWorld:piek n2mu:talk-to leolaniWorld:leolani .
+}
+
+leolaniWorld:piek_like_wine {
+    leolaniWorld:piek n2mu:like leolaniWorld:wine .
+}
+
+leolaniWorld:leolani_know_thomas {
+    leolaniWorld:leolani n2mu:know leolaniWorld:thomas .
+}
+
+leolaniWorld:selene_live-in_amsterdam {
+    leolaniWorld:selene n2mu:live-in leolaniWorld:amsterdam .
+}
+
+leolaniWorld:Instances {
+    leolaniWorld:amstelveen a n2mu:city,
+            gaf:Instance ;
+        rdfs:label "amstelveen" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance14_char0-28 .
+
+    leolaniWorld:amsterdam a n2mu:city,
+            n2mu:location,
+            gaf:Instance ;
+        rdfs:label "amsterdam" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance12_char0-27,
+            leolaniTalk:chat2_utterance13_char0-22,
+            leolaniTalk:chat2_utterance17_char0-21,
+            leolaniTalk:chat2_utterance18_char0-30,
+            leolaniTalk:chat2_utterance19_char0-34 .
+
+    leolaniWorld:banana a n2mu:fruit,
+            gaf:Instance ;
+        rdfs:label "banana" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance10_char0-36,
+            leolaniTalk:chat2_utterance27_char0-22,
+            leolaniTalk:chat2_utterance9_char0-37 .
+
+    leolaniWorld:beer a n2mu:drink,
+            gaf:Instance ;
+        rdfs:label "beer" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance28_char0-42,
+            leolaniTalk:chat2_utterance29_char0-33 .
+
+    leolaniWorld:coding a n2mu:activity,
+            gaf:Instance ;
+        rdfs:label "coding" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance6_char0-35,
+            leolaniTalk:chat2_utterance7_char0-35 .
+
+    leolaniWorld:leolani a n2mu:agent,
+            n2mu:person,
+            n2mu:robot,
+            gaf:Instance ;
+        rdfs:label "leolani" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance11_char0-53,
+            leolaniTalk:chat2_utterance1_char0-22,
+            leolaniTalk:chat2_utterance24_char0-23,
+            leolaniTalk:chat2_utterance26_char0-27,
+            leolaniTalk:chat2_utterance2_char0-0,
+            leolaniTalk:chat2_utterance3_char0-20,
+            leolaniTalk:chat2_utterance4_char0-26,
+            leolaniTalk:chat2_utterance8_char0-0,
+            leolaniTalk:chat2_utterance9_char0-37 .
+
+    leolaniWorld:mexican a n2mu:cuisine,
+            n2mu:food,
+            gaf:Instance ;
+        rdfs:label "mexican" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance19_char0-34,
+            leolaniTalk:chat2_utterance20_char0-27,
+            leolaniTalk:chat2_utterance22_char0-32,
+            leolaniTalk:chat2_utterance23_char0-41 .
+
+    leolaniWorld:mexico a n2mu:country,
+            gaf:Instance ;
+        rdfs:label "mexico" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance20_char0-27,
+            leolaniTalk:chat2_utterance21_char0-21 .
+
+    leolaniWorld:piek a n2mu:person,
+            gaf:Instance ;
+        rdfs:label "piek" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance0_char0-13,
+            leolaniTalk:chat2_utterance11_char0-53,
+            leolaniTalk:chat2_utterance12_char0-27,
+            leolaniTalk:chat2_utterance16_char0-27,
+            leolaniTalk:chat2_utterance17_char0-21,
+            leolaniTalk:chat2_utterance24_char0-23,
+            leolaniTalk:chat2_utterance25_char0-21,
+            leolaniTalk:chat2_utterance29_char0-33,
+            leolaniTalk:chat2_utterance30_char0-20,
+            leolaniTalk:chat2_utterance4_char0-26,
+            leolaniTalk:chat2_utterance5_char0-17,
+            leolaniTalk:chat2_utterance6_char0-35,
+            leolaniTalk:chat2_utterance7_char0-35 .
+
+    leolaniWorld:selene a n2mu:person,
+            gaf:Instance ;
+        rdfs:label "selene" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance10_char0-36,
+            leolaniTalk:chat2_utterance18_char0-30,
+            leolaniTalk:chat2_utterance21_char0-21,
+            leolaniTalk:chat2_utterance22_char0-32,
+            leolaniTalk:chat2_utterance23_char0-41 .
+
+    leolaniWorld:student a n2mu:person,
+            gaf:Instance ;
+        rdfs:label "student" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance15_char0-37 .
+
+    leolaniWorld:th a n2mu:gene,
+            gaf:Instance ;
+        rdfs:label "th" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance2_char0-0 .
+
+    leolaniWorld:thomas a n2mu:per,
+            n2mu:person,
+            gaf:Instance ;
+        rdfs:label "thomas" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance0_char0-13,
+            leolaniTalk:chat2_utterance1_char0-22,
+            leolaniTalk:chat2_utterance25_char0-21,
+            leolaniTalk:chat2_utterance26_char0-27,
+            leolaniTalk:chat2_utterance27_char0-22,
+            leolaniTalk:chat2_utterance28_char0-42,
+            leolaniTalk:chat2_utterance3_char0-20,
+            leolaniTalk:chat2_utterance5_char0-17,
+            leolaniTalk:chat2_utterance8_char0-0 .
+
+    leolaniWorld:vu-university a n2mu:institute,
+            n2mu:institution,
+            gaf:Instance ;
+        rdfs:label "vu-university" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance13_char0-22,
+            leolaniTalk:chat2_utterance14_char0-28,
+            leolaniTalk:chat2_utterance15_char0-37,
+            leolaniTalk:chat2_utterance16_char0-27 .
+
+    leolaniWorld:wine a n2mu:drink,
+            gaf:Instance ;
+        rdfs:label "wine" ;
+        gaf:denotedIn leolaniTalk:chat2_utterance30_char0-20 .
+}
+
+leolaniWorld:selene_experience_banana {
+    leolaniWorld:selene n2mu:experience leolaniWorld:banana .
+}
+
+leolaniTalk:Interactions {
+    leolaniContext:context93 a eps:Context ;
+        rdfs:label "context93" ;
+        n2mu:id "93"^^xml1:string ;
+        sem:hasBeginTimeStamp leolaniContext:2022-03-07 ;
+        sem:hasEvent leolaniTalk:chat2,
+            leolaniTalk:visual2 ;
+        sem:hasPlace leolaniContext:office .
+
+    leolaniContext:2022-03-07 a sem:Time,
+            time1:DateTimeDescription ;
+        rdfs:label "2022-03-07" ;
+        time1:day "7"^^xml1:gDay ;
+        time1:month "3"^^xml1:gMonthDay ;
+        time1:unitType time1:unitDay ;
+        time1:year "2022"^^xml1:gYear .
+
+    leolaniContext:office a n2mu:location,
+            sem:Place ;
+        rdfs:label "office" ;
+        n2mu:id "220"^^xml1:string ;
+        n2mu:in leolaniWorld:Amsterdam,
+            leolaniWorld:NL,
+            leolaniWorld:North_Holland .
+
+    leolaniTalk:chat2 a grasp:Chat,
+            sem:Event ;
+        rdfs:label "chat2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:chat2_utterance0,
+            leolaniTalk:chat2_utterance1,
+            leolaniTalk:chat2_utterance10,
+            leolaniTalk:chat2_utterance11,
+            leolaniTalk:chat2_utterance12,
+            leolaniTalk:chat2_utterance13,
+            leolaniTalk:chat2_utterance14,
+            leolaniTalk:chat2_utterance15,
+            leolaniTalk:chat2_utterance16,
+            leolaniTalk:chat2_utterance17,
+            leolaniTalk:chat2_utterance18,
+            leolaniTalk:chat2_utterance19,
+            leolaniTalk:chat2_utterance2,
+            leolaniTalk:chat2_utterance20,
+            leolaniTalk:chat2_utterance21,
+            leolaniTalk:chat2_utterance22,
+            leolaniTalk:chat2_utterance23,
+            leolaniTalk:chat2_utterance24,
+            leolaniTalk:chat2_utterance25,
+            leolaniTalk:chat2_utterance26,
+            leolaniTalk:chat2_utterance27,
+            leolaniTalk:chat2_utterance28,
+            leolaniTalk:chat2_utterance29,
+            leolaniTalk:chat2_utterance3,
+            leolaniTalk:chat2_utterance30,
+            leolaniTalk:chat2_utterance4,
+            leolaniTalk:chat2_utterance5,
+            leolaniTalk:chat2_utterance6,
+            leolaniTalk:chat2_utterance7,
+            leolaniTalk:chat2_utterance8,
+            leolaniTalk:chat2_utterance9 .
+
+    leolaniTalk:chat2_utterance0 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance0" ;
+        n2mu:id "0"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance1 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance1" ;
+        n2mu:id "1"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance10 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance10" ;
+        n2mu:id "10"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance11 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance11" ;
+        n2mu:id "11"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance12 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance12" ;
+        n2mu:id "12"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance13 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance13" ;
+        n2mu:id "13"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance14 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance14" ;
+        n2mu:id "14"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance15 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance15" ;
+        n2mu:id "15"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance16 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance16" ;
+        n2mu:id "16"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance17 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance17" ;
+        n2mu:id "17"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance18 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance18" ;
+        n2mu:id "18"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance19 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance19" ;
+        n2mu:id "19"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance2 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance20 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance20" ;
+        n2mu:id "20"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance21 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance21" ;
+        n2mu:id "21"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance22 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance22" ;
+        n2mu:id "22"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance23 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance23" ;
+        n2mu:id "23"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance24 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance24" ;
+        n2mu:id "24"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance25 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance25" ;
+        n2mu:id "25"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance26 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance26" ;
+        n2mu:id "26"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance27 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance27" ;
+        n2mu:id "27"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance28 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance28" ;
+        n2mu:id "28"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance29 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance29" ;
+        n2mu:id "29"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance3 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance3" ;
+        n2mu:id "3"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance30 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance30" ;
+        n2mu:id "30"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance4 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance4" ;
+        n2mu:id "4"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance5 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance5" ;
+        n2mu:id "5"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance6 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance6" ;
+        n2mu:id "6"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance7 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance7" ;
+        n2mu:id "7"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance8 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance8" ;
+        n2mu:id "8"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:chat2_utterance9 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat2_utterance9" ;
+        n2mu:id "9"^^xml1:string ;
+        sem:hasActor leolaniFriends:piek .
+
+    leolaniTalk:visual2 a grasp:Visual,
+            sem:Event ;
+        rdfs:label "visual2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:visual2_detection0,
+            leolaniTalk:visual2_detection1,
+            leolaniTalk:visual2_detection10,
+            leolaniTalk:visual2_detection11,
+            leolaniTalk:visual2_detection12,
+            leolaniTalk:visual2_detection13,
+            leolaniTalk:visual2_detection14,
+            leolaniTalk:visual2_detection15,
+            leolaniTalk:visual2_detection16,
+            leolaniTalk:visual2_detection17,
+            leolaniTalk:visual2_detection18,
+            leolaniTalk:visual2_detection19,
+            leolaniTalk:visual2_detection2,
+            leolaniTalk:visual2_detection20,
+            leolaniTalk:visual2_detection21,
+            leolaniTalk:visual2_detection22,
+            leolaniTalk:visual2_detection23,
+            leolaniTalk:visual2_detection24,
+            leolaniTalk:visual2_detection25,
+            leolaniTalk:visual2_detection26,
+            leolaniTalk:visual2_detection27,
+            leolaniTalk:visual2_detection28,
+            leolaniTalk:visual2_detection29,
+            leolaniTalk:visual2_detection3,
+            leolaniTalk:visual2_detection30,
+            leolaniTalk:visual2_detection4,
+            leolaniTalk:visual2_detection5,
+            leolaniTalk:visual2_detection6,
+            leolaniTalk:visual2_detection7,
+            leolaniTalk:visual2_detection8,
+            leolaniTalk:visual2_detection9 .
+
+    leolaniTalk:visual2_detection0 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection0" ;
+        n2mu:id "0"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection1 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection1" ;
+        n2mu:id "1"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection10 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection10" ;
+        n2mu:id "10"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection11 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection11" ;
+        n2mu:id "11"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection12 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection12" ;
+        n2mu:id "12"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection13 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection13" ;
+        n2mu:id "13"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection14 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection14" ;
+        n2mu:id "14"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection15 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection15" ;
+        n2mu:id "15"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection16 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection16" ;
+        n2mu:id "16"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection17 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection17" ;
+        n2mu:id "17"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection18 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection18" ;
+        n2mu:id "18"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection19 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection19" ;
+        n2mu:id "19"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection2 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection2" ;
+        n2mu:id "2"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection20 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection20" ;
+        n2mu:id "20"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection21 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection21" ;
+        n2mu:id "21"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection22 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection22" ;
+        n2mu:id "22"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection23 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection23" ;
+        n2mu:id "23"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection24 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection24" ;
+        n2mu:id "24"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection25 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection25" ;
+        n2mu:id "25"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection26 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection26" ;
+        n2mu:id "26"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection27 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection27" ;
+        n2mu:id "27"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection28 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection28" ;
+        n2mu:id "28"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection29 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection29" ;
+        n2mu:id "29"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection3 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection3" ;
+        n2mu:id "3"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection30 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection30" ;
+        n2mu:id "30"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection4 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection4" ;
+        n2mu:id "4"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection5 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection5" ;
+        n2mu:id "5"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection6 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection6" ;
+        n2mu:id "6"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection7 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection7" ;
+        n2mu:id "7"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection8 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection8" ;
+        n2mu:id "8"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniTalk:visual2_detection9 a grasp:Detection,
+            sem:Event ;
+        rdfs:label "visual2_detection9" ;
+        n2mu:id "9"^^xml1:string ;
+        sem:hasActor leolaniInputs:front-camera .
+
+    leolaniWorld:Amsterdam a n2mu:city,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "Amsterdam" .
+
+    leolaniWorld:NL a n2mu:country,
+            n2mu:location,
+            sem:Place ;
+        rdfs:label "NL" .
+
+    leolaniWorld:North_Holland a n2mu:location,
+            n2mu:region,
+            sem:Place ;
+        rdfs:label "North Holland" .
+
+    leolaniFriends:piek a n2mu:person,
+            gaf:Instance,
+            grasp:Source,
+            sem:Actor ;
+        rdfs:label "piek" .
+
+    leolaniInputs:front-camera a n2mu:sensor,
+            gaf:Instance,
+            grasp:Source,
+            sem:Actor ;
+        rdfs:label "front-camera" .
+}
+
+leolaniWorld:thomas_trust_piek {
+    leolaniWorld:thomas n2mu:trust leolaniWorld:piek .
+}
+
+leolaniWorld:thomas_trust_leolani {
+    leolaniWorld:thomas n2mu:trust leolaniWorld:leolani .
+}
+
+leolaniTalk:Perspectives {
+    leolaniTalk:chat2_utterance0_char0-13 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance0_char0-13" ;
+        gaf:containsDenotation leolaniWorld:piek,
+            leolaniWorld:thomas ;
+        gaf:denotes leolaniWorld:piek_know_thomas ;
+        grasp:hasAttribution leolaniTalk:piek_know_thomas_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I know Thomas"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance0 .
+
+    leolaniTalk:chat2_utterance10_char0-36 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance10_char0-36" ;
+        gaf:containsDenotation leolaniWorld:banana,
+            leolaniWorld:selene ;
+        gaf:denotes leolaniWorld:selene_experience_banana ;
+        grasp:hasAttribution leolaniTalk:selene_experience_banana_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I am sure Selene ate bananas before."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance10 .
+
+    leolaniTalk:chat2_utterance11_char0-53 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance11_char0-53" ;
+        gaf:containsDenotation leolaniWorld:leolani,
+            leolaniWorld:piek ;
+        gaf:denotes leolaniWorld:piek_trust_leolani ;
+        grasp:hasAttribution leolaniTalk:piek_trust_leolani_CERTAIN-NEGATIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "You should believe me and I do not trust you anymore."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance11 .
+
+    leolaniTalk:chat2_utterance12_char0-27 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance12_char0-27" ;
+        gaf:containsDenotation leolaniWorld:amsterdam,
+            leolaniWorld:piek ;
+        gaf:denotes leolaniWorld:piek_travel-to_amsterdam ;
+        grasp:hasAttribution leolaniTalk:piek_travel-to_amsterdam_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I biked to Amsterdam today."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance12 .
+
+    leolaniTalk:chat2_utterance13_char0-22 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance13_char0-22" ;
+        gaf:containsDenotation leolaniWorld:amsterdam,
+            leolaniWorld:vu-university ;
+        gaf:denotes leolaniWorld:vu-university_locate-in_amsterdam ;
+        grasp:hasAttribution leolaniTalk:vu-university_locate-in_amsterdam_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "The VU is in Amsterdam"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance13 .
+
+    leolaniTalk:chat2_utterance14_char0-28 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance14_char0-28" ;
+        gaf:containsDenotation leolaniWorld:amstelveen,
+            leolaniWorld:vu-university ;
+        gaf:denotes leolaniWorld:vu-university_in_amstelveen ;
+        grasp:hasAttribution leolaniTalk:vu-university_in_amstelveen_CERTAIN-POSITIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "No, the VU is in Amstelveen."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance14 .
+
+    leolaniTalk:chat2_utterance15_char0-37 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance15_char0-37" ;
+        gaf:containsDenotation leolaniWorld:student,
+            leolaniWorld:vu-university ;
+        gaf:denotes leolaniWorld:vu-university_teach_student ;
+        grasp:hasAttribution leolaniTalk:vu-university_teach_student_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "The VU teaches students about robots."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance15 .
+
+    leolaniTalk:chat2_utterance16_char0-27 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance16_char0-27" ;
+        gaf:containsDenotation leolaniWorld:piek,
+            leolaniWorld:vu-university ;
+        gaf:denotes leolaniWorld:piek_work-at_vu-university ;
+        grasp:hasAttribution leolaniTalk:piek_work-at_vu-university_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I work at the VU University"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance16 .
+
+    leolaniTalk:chat2_utterance17_char0-21 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance17_char0-21" ;
+        gaf:containsDenotation leolaniWorld:amsterdam,
+            leolaniWorld:piek ;
+        gaf:denotes leolaniWorld:piek_locate-in_amsterdam ;
+        grasp:hasAttribution leolaniTalk:piek_locate-in_amsterdam_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I am now in Amsterdam"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance17 .
+
+    leolaniTalk:chat2_utterance18_char0-30 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance18_char0-30" ;
+        gaf:containsDenotation leolaniWorld:amsterdam,
+            leolaniWorld:selene ;
+        gaf:denotes leolaniWorld:selene_live-in_amsterdam ;
+        grasp:hasAttribution leolaniTalk:selene_live-in_amsterdam_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "Selene also lives in Amsterdam"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance18 .
+
+    leolaniTalk:chat2_utterance19_char0-34 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance19_char0-34" ;
+        gaf:containsDenotation leolaniWorld:amsterdam,
+            leolaniWorld:mexican ;
+        gaf:denotes leolaniWorld:mexican_be-from_amsterdam ;
+        grasp:hasAttribution leolaniTalk:mexican_be-from_amsterdam_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "Mexican food is not from Amsterdam"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance19 .
+
+    leolaniTalk:chat2_utterance1_char0-22 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance1_char0-22" ;
+        gaf:containsDenotation leolaniWorld:leolani,
+            leolaniWorld:thomas ;
+        gaf:denotes leolaniWorld:thomas_know_leolani ;
+        grasp:hasAttribution leolaniTalk:thomas_know_leolani_PROBABLE-POSITIVE-NEUTRAL-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "Thomas also knows you."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance1 .
+
+    leolaniTalk:chat2_utterance20_char0-27 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance20_char0-27" ;
+        gaf:containsDenotation leolaniWorld:mexican,
+            leolaniWorld:mexico ;
+        gaf:denotes leolaniWorld:mexican_in_mexico ;
+        grasp:hasAttribution leolaniTalk:mexican_in_mexico_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "Mexican food is from Mexico"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance20 .
+
+    leolaniTalk:chat2_utterance21_char0-21 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance21_char0-21" ;
+        gaf:containsDenotation leolaniWorld:mexico,
+            leolaniWorld:selene ;
+        gaf:denotes leolaniWorld:selene_be-from_mexico ;
+        grasp:hasAttribution leolaniTalk:selene_be-from_mexico_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "Selene is from Mexico"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance21 .
+
+    leolaniTalk:chat2_utterance22_char0-32 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance22_char0-32" ;
+        gaf:containsDenotation leolaniWorld:mexican,
+            leolaniWorld:selene ;
+        gaf:denotes leolaniWorld:mexican_cook-by_selene ;
+        grasp:hasAttribution leolaniTalk:mexican_cook-by_selene_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "Selene never cooks Mexican food."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance22 .
+
+    leolaniTalk:chat2_utterance23_char0-41 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance23_char0-41" ;
+        gaf:containsDenotation leolaniWorld:mexican,
+            leolaniWorld:selene ;
+        gaf:denotes leolaniWorld:mexican_cook-by_selene ;
+        grasp:hasAttribution leolaniTalk:mexican_cook-by_selene_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "This Mexican food is not cooked by Selene"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance23 .
+
+    leolaniTalk:chat2_utterance24_char0-23 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance24_char0-23" ;
+        gaf:containsDenotation leolaniWorld:leolani,
+            leolaniWorld:piek ;
+        gaf:denotes leolaniWorld:piek_talk-to_leolani ;
+        grasp:hasAttribution leolaniTalk:piek_talk-to_leolani_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I talk too much to you."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance24 .
+
+    leolaniTalk:chat2_utterance25_char0-21 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance25_char0-21" ;
+        gaf:containsDenotation leolaniWorld:piek,
+            leolaniWorld:thomas ;
+        gaf:denotes leolaniWorld:thomas_trust_piek ;
+        grasp:hasAttribution leolaniTalk:thomas_trust_piek_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "Thomas does trust me."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance25 .
+
+    leolaniTalk:chat2_utterance26_char0-27 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance26_char0-27" ;
+        gaf:containsDenotation leolaniWorld:leolani,
+            leolaniWorld:thomas ;
+        gaf:denotes leolaniWorld:thomas_trust_leolani ;
+        grasp:hasAttribution leolaniTalk:thomas_trust_leolani_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "Thomas does not trust you. "^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance26 .
+
+    leolaniTalk:chat2_utterance27_char0-22 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance27_char0-22" ;
+        gaf:containsDenotation leolaniWorld:banana,
+            leolaniWorld:thomas ;
+        gaf:denotes leolaniWorld:thomas_like_banana ;
+        grasp:hasAttribution leolaniTalk:thomas_like_banana_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "Thomas adores bananas."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance27 .
+
+    leolaniTalk:chat2_utterance28_char0-42 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance28_char0-42" ;
+        gaf:containsDenotation leolaniWorld:beer,
+            leolaniWorld:thomas ;
+        gaf:denotes leolaniWorld:thomas_like_beer ;
+        grasp:hasAttribution leolaniTalk:thomas_like_beer_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I am sure Thomas likes a good German beer."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance28 .
+
+    leolaniTalk:chat2_utterance29_char0-33 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance29_char0-33" ;
+        gaf:containsDenotation leolaniWorld:beer,
+            leolaniWorld:piek ;
+        gaf:denotes leolaniWorld:piek_like_beer ;
+        grasp:hasAttribution leolaniTalk:piek_like_beer_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I also like beer but Belgium beer"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance29 .
+
+    leolaniTalk:chat2_utterance2_char0-0 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance2_char0-0" ;
+        gaf:containsDenotation leolaniWorld:leolani,
+            leolaniWorld:th ;
+        gaf:denotes leolaniWorld:leolani_know_th ;
+        grasp:hasAttribution leolaniTalk:leolani_know_th_UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value ""^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance2 .
+
+    leolaniTalk:chat2_utterance30_char0-20 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance30_char0-20" ;
+        gaf:containsDenotation leolaniWorld:piek,
+            leolaniWorld:wine ;
+        gaf:denotes leolaniWorld:piek_like_wine ;
+        grasp:hasAttribution leolaniTalk:piek_like_wine_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I also like red wine"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance30 .
+
+    leolaniTalk:chat2_utterance3_char0-20 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance3_char0-20" ;
+        gaf:containsDenotation leolaniWorld:leolani,
+            leolaniWorld:thomas ;
+        gaf:denotes leolaniWorld:leolani_know_thomas ;
+        grasp:hasAttribution leolaniTalk:leolani_know_thomas_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "You know Thomas too."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance3 .
+
+    leolaniTalk:chat2_utterance4_char0-26 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance4_char0-26" ;
+        gaf:containsDenotation leolaniWorld:leolani,
+            leolaniWorld:piek ;
+        gaf:denotes leolaniWorld:piek_trust_leolani ;
+        grasp:hasAttribution leolaniTalk:piek_trust_leolani_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I do not trust you either."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance4 .
+
+    leolaniTalk:chat2_utterance5_char0-17 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance5_char0-17" ;
+        gaf:containsDenotation leolaniWorld:piek,
+            leolaniWorld:thomas ;
+        gaf:denotes leolaniWorld:piek_trust_thomas ;
+        grasp:hasAttribution leolaniTalk:piek_trust_thomas_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I do trust Thomas"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance5 .
+
+    leolaniTalk:chat2_utterance6_char0-35 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance6_char0-35" ;
+        gaf:containsDenotation leolaniWorld:coding,
+            leolaniWorld:piek ;
+        gaf:denotes leolaniWorld:piek_like_coding ;
+        grasp:hasAttribution leolaniTalk:piek_like_coding_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I love coding on the robot project."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance6 .
+
+    leolaniTalk:chat2_utterance7_char0-35 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance7_char0-35" ;
+        gaf:containsDenotation leolaniWorld:coding,
+            leolaniWorld:piek ;
+        gaf:denotes leolaniWorld:piek_like_coding ;
+        grasp:hasAttribution leolaniTalk:piek_like_coding_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I love coding on the robot project."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance7 .
+
+    leolaniTalk:chat2_utterance8_char0-0 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance8_char0-0" ;
+        gaf:containsDenotation leolaniWorld:leolani,
+            leolaniWorld:thomas ;
+        gaf:denotes leolaniWorld:leolani_trust_thomas ;
+        grasp:hasAttribution leolaniTalk:leolani_trust_thomas_UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value ""^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance8 .
+
+    leolaniTalk:chat2_utterance9_char0-37 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat2_utterance9_char0-37" ;
+        gaf:containsDenotation leolaniWorld:banana,
+            leolaniWorld:leolani ;
+        gaf:denotes leolaniWorld:leolani_experience_banana ;
+        grasp:hasAttribution leolaniTalk:leolani_experience_banana_POSSIBLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED ;
+        grasp:wasAttributedTo leolaniFriends:piek ;
+        rdf:value "I do not think you ever ate a banana."^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat2_utterance9 .
+
+    leolaniTalk:leolani_experience_banana_POSSIBLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "leolani_experience_banana_POSSIBLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance9_char0-37 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:NEGATIVE,
+            graspf:POSSIBLE,
+            grasps:NEGATIVE .
+
+    leolaniTalk:leolani_know_th_UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "leolani_know_th_UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance2_char0-0 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:UNDERSPECIFIED,
+            grasps:UNDERSPECIFIED .
+
+    leolaniTalk:leolani_know_thomas_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "leolani_know_thomas_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance3_char0-20 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:POSITIVE,
+            graspf:PROBABLE,
+            grasps:POSITIVE .
+
+    leolaniTalk:leolani_trust_thomas_UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "leolani_trust_thomas_UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance8_char0-0 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:UNDERSPECIFIED,
+            grasps:UNDERSPECIFIED .
+
+    leolaniTalk:mexican_be-from_amsterdam_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "mexican_be-from_amsterdam_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance19_char0-34 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:NEGATIVE,
+            graspf:PROBABLE,
+            grasps:NEGATIVE .
+
+    leolaniTalk:mexican_in_mexico_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "mexican_in_mexico_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance20_char0-27 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:piek_know_thomas_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_know_thomas_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance0_char0-13 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:piek_like_beer_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_like_beer_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance29_char0-33 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:piek_like_wine_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_like_wine_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance30_char0-20 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:piek_locate-in_amsterdam_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_locate-in_amsterdam_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance17_char0-21 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:piek_talk-to_leolani_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_talk-to_leolani_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance24_char0-23 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:piek_travel-to_amsterdam_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_travel-to_amsterdam_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance12_char0-27 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:piek_trust_leolani_CERTAIN-NEGATIVE-NEGATIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_trust_leolani_CERTAIN-NEGATIVE-NEGATIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance11_char0-53 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:NEGATIVE,
+            grasps:NEGATIVE .
+
+    leolaniTalk:piek_trust_leolani_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_trust_leolani_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance4_char0-26 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:NEGATIVE,
+            graspf:PROBABLE,
+            grasps:NEGATIVE .
+
+    leolaniTalk:piek_trust_thomas_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_trust_thomas_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance5_char0-17 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:POSITIVE,
+            graspf:PROBABLE,
+            grasps:POSITIVE .
+
+    leolaniTalk:piek_work-at_vu-university_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_work-at_vu-university_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance16_char0-27 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:selene_be-from_mexico_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "selene_be-from_mexico_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance21_char0-21 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:selene_experience_banana_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "selene_experience_banana_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance10_char0-36 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:POSITIVE,
+            graspf:PROBABLE,
+            grasps:POSITIVE .
+
+    leolaniTalk:selene_live-in_amsterdam_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "selene_live-in_amsterdam_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance18_char0-30 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:thomas_know_leolani_PROBABLE-POSITIVE-NEUTRAL-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "thomas_know_leolani_PROBABLE-POSITIVE-NEUTRAL-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance1_char0-22 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:POSITIVE,
+            graspf:PROBABLE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:thomas_like_banana_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "thomas_like_banana_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance27_char0-22 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:thomas_like_beer_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "thomas_like_beer_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance28_char0-42 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:thomas_trust_leolani_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "thomas_trust_leolani_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance26_char0-27 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:NEGATIVE,
+            graspf:PROBABLE,
+            grasps:NEGATIVE .
+
+    leolaniTalk:thomas_trust_piek_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "thomas_trust_piek_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance25_char0-21 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:vu-university_in_amstelveen_CERTAIN-POSITIVE-NEGATIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "vu-university_in_amstelveen_CERTAIN-POSITIVE-NEGATIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance14_char0-28 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEGATIVE .
+
+    leolaniTalk:vu-university_locate-in_amsterdam_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "vu-university_locate-in_amsterdam_CERTAIN-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance13_char0-22 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:POSITIVE .
+
+    leolaniTalk:vu-university_teach_student_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "vu-university_teach_student_CERTAIN-POSITIVE-NEUTRAL-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance15_char0-37 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    graspf:POSSIBLE a grasp:AttributionValue,
+            graspf:CertaintyValue ;
+        rdfs:label "POSSIBLE" .
+
+    leolaniTalk:mexican_cook-by_selene_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "mexican_cook-by_selene_PROBABLE-NEGATIVE-NEGATIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance22_char0-32,
+            leolaniTalk:chat2_utterance23_char0-41 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:NEGATIVE,
+            graspf:PROBABLE,
+            grasps:NEGATIVE .
+
+    leolaniTalk:piek_like_coding_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED a grasp:Attribution ;
+        rdfs:label "piek_like_coding_PROBABLE-POSITIVE-POSITIVE-UNDERSPECIFIED" ;
+        grasp:isAttributionFor leolaniTalk:chat2_utterance6_char0-35,
+            leolaniTalk:chat2_utterance7_char0-35 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:POSITIVE,
+            graspf:PROBABLE,
+            grasps:POSITIVE .
+
+    graspf:UNDERSPECIFIED a grasp:AttributionValue,
+            graspf:CertaintyValue,
+            graspf:PolarityValue ;
+        rdfs:label "UNDERSPECIFIED" .
+
+    grasps:UNDERSPECIFIED a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "UNDERSPECIFIED" .
+
+    grasps:NEUTRAL a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "NEUTRAL" .
+
+    graspf:NEGATIVE a grasp:AttributionValue,
+            graspf:PolarityValue ;
+        rdfs:label "NEGATIVE" .
+
+    grasps:NEGATIVE a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "NEGATIVE" .
+
+    graspf:PROBABLE a grasp:AttributionValue,
+            graspf:CertaintyValue ;
+        rdfs:label "PROBABLE" .
+
+    grasps:POSITIVE a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "POSITIVE" .
+
+    graspf:CERTAIN a grasp:AttributionValue,
+            graspf:CertaintyValue ;
+        rdfs:label "CERTAIN" .
+
+    graspf:POSITIVE a grasp:AttributionValue,
+            graspf:PolarityValue ;
+        rdfs:label "POSITIVE" .
+
+    graspe:UNDERSPECIFIED a grasp:AttributionValue,
+            graspe:EmotionValue ;
+        rdfs:label "UNDERSPECIFIED" .
+}
+
+leolaniWorld:piek_know_thomas {
+    leolaniWorld:piek n2mu:know leolaniWorld:thomas .
+}
+
+leolaniWorld:leolani_know_piek {
+    leolaniWorld:leolani n2mu:know leolaniFriends:piek .
+}
+
+leolaniWorld:mexican_cook-by_selene {
+    leolaniWorld:mexican n2mu:cook-by leolaniWorld:selene .
+}
+
+leolaniWorld:selene_be-from_mexico {
+    leolaniWorld:selene n2mu:be-from leolaniWorld:mexico .
+}
+
+leolaniWorld:piek_like_beer {
+    leolaniWorld:piek n2mu:like leolaniWorld:beer .
+}
+
+leolaniWorld:leolani_know_th {
+    leolaniWorld:leolani n2mu:know leolaniWorld:th .
+}
+
+leolaniWorld:thomas_know_leolani {
+    leolaniWorld:thomas n2mu:know leolaniWorld:leolani .
+}
+
+leolaniWorld:leolani_experience_banana {
+    leolaniWorld:leolani n2mu:experience leolaniWorld:banana .
+}
+
+leolaniWorld:piek_like_coding {
+    leolaniWorld:piek n2mu:like leolaniWorld:coding .
+}
+
+leolaniWorld:mexican_be-from_amsterdam {
+    leolaniWorld:mexican n2mu:be-from leolaniWorld:amsterdam .
+}
+
+leolaniWorld:vu-university_in_amstelveen {
+    leolaniWorld:vu-university n2mu:in leolaniWorld:amstelveen .
+}
+
+leolaniWorld:piek_work-at_vu-university {
+    leolaniWorld:piek n2mu:work-at leolaniWorld:vu-university .
+}
+
+leolaniWorld:mexican_in_mexico {
+    leolaniWorld:mexican n2mu:in leolaniWorld:mexico .
+}
+
+leolaniWorld:piek_trust_thomas {
+    leolaniWorld:piek n2mu:trust leolaniWorld:thomas .
+}
+
+leolaniWorld:leolani_sense_front-camera {
+    leolaniWorld:leolani n2mu:sense leolaniInputs:front-camera .
+}
+
+leolaniWorld:leolani_trust_thomas {
+    leolaniWorld:leolani n2mu:trust leolaniWorld:thomas .
+}
+
+leolaniWorld:piek_trust_leolani {
+    leolaniWorld:piek n2mu:trust leolaniWorld:leolani .
+}
+
+leolaniWorld:thomas_like_banana {
+    leolaniWorld:thomas n2mu:like leolaniWorld:banana .
+}
+
+leolaniWorld:Claims {
+    leolaniFriends:piek owl:sameAs leolaniWorld:piek .
+
+    leolaniWorld:leolani_experience_banana a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_experience_banana" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance9_char0-37 .
+
+    leolaniWorld:leolani_know_piek a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_piek" .
+
+    leolaniWorld:leolani_know_th a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_th" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance2_char0-0 .
+
+    leolaniWorld:leolani_know_thomas a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_thomas" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance3_char0-20 .
+
+    leolaniWorld:leolani_sense_front-camera a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_sense_front-camera" .
+
+    leolaniWorld:leolani_trust_thomas a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_trust_thomas" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance8_char0-0 .
+
+    leolaniWorld:mexican_be-from_amsterdam a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mexican_be-from_amsterdam" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance19_char0-34 .
+
+    leolaniWorld:mexican_cook-by_selene a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mexican_cook-by_selene" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance22_char0-32,
+            leolaniTalk:chat2_utterance23_char0-41 .
+
+    leolaniWorld:mexican_in_mexico a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mexican_in_mexico" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance20_char0-27 .
+
+    leolaniWorld:piek_know_thomas a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_know_thomas" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance0_char0-13 .
+
+    leolaniWorld:piek_like_beer a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_like_beer" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance29_char0-33 .
+
+    leolaniWorld:piek_like_coding a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_like_coding" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance6_char0-35,
+            leolaniTalk:chat2_utterance7_char0-35 .
+
+    leolaniWorld:piek_like_wine a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_like_wine" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance30_char0-20 .
+
+    leolaniWorld:piek_locate-in_amsterdam a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_locate-in_amsterdam" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance17_char0-21 .
+
+    leolaniWorld:piek_talk-to_leolani a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_talk-to_leolani" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance24_char0-23 .
+
+    leolaniWorld:piek_travel-to_amsterdam a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_travel-to_amsterdam" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance12_char0-27 .
+
+    leolaniWorld:piek_trust_leolani a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_trust_leolani" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance11_char0-53,
+            leolaniTalk:chat2_utterance4_char0-26 .
+
+    leolaniWorld:piek_trust_thomas a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_trust_thomas" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance5_char0-17 .
+
+    leolaniWorld:piek_work-at_vu-university a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "piek_work-at_vu-university" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance16_char0-27 .
+
+    leolaniWorld:selene_be-from_mexico a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "selene_be-from_mexico" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance21_char0-21 .
+
+    leolaniWorld:selene_experience_banana a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "selene_experience_banana" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance10_char0-36 .
+
+    leolaniWorld:selene_live-in_amsterdam a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "selene_live-in_amsterdam" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance18_char0-30 .
+
+    leolaniWorld:thomas_know_leolani a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "thomas_know_leolani" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance1_char0-22 .
+
+    leolaniWorld:thomas_like_banana a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "thomas_like_banana" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance27_char0-22 .
+
+    leolaniWorld:thomas_like_beer a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "thomas_like_beer" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance28_char0-42 .
+
+    leolaniWorld:thomas_trust_leolani a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "thomas_trust_leolani" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance26_char0-27 .
+
+    leolaniWorld:thomas_trust_piek a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "thomas_trust_piek" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance25_char0-21 .
+
+    leolaniWorld:vu-university_in_amstelveen a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vu-university_in_amstelveen" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance14_char0-28 .
+
+    leolaniWorld:vu-university_locate-in_amsterdam a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vu-university_locate-in_amsterdam" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance13_char0-22 .
+
+    leolaniWorld:vu-university_teach_student a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vu-university_teach_student" ;
+        gaf:denotedBy leolaniTalk:chat2_utterance15_char0-37 .
+}
+
+leolaniWorld:piek_locate-in_amsterdam {
+    leolaniWorld:piek n2mu:locate-in leolaniWorld:amsterdam .
+}
+
+leolaniWorld:thomas_like_beer {
+    leolaniWorld:thomas n2mu:like leolaniWorld:beer .
+}
+
+leolaniWorld:piek_travel-to_amsterdam {
+    leolaniWorld:piek n2mu:travel-to leolaniWorld:amsterdam .
+}
+

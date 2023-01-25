@@ -1,7 +1,12 @@
+import os
 from datetime import date
+from pathlib import Path
 from random import getrandbits
 
 import requests
+
+ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
+RESOURCES_PATH = ABSOLUTE_PATH + "/../../../resources/"
 
 CONTEXT_ID = getrandbits(8)
 PLACE_ID = getrandbits(8)
@@ -22,3 +27,9 @@ BASE_CAPSULE = {
     "context_id": CONTEXT_ID,
     "date": date.today()
 }
+
+from cltl.brain.basic_brain import BasicBrain
+
+BASIC_BRAIN = BasicBrain("http://localhost:7200/repositories/sandbox", log_dir=Path(RESOURCES_PATH))
+PREDICATE_OPTIONS = BASIC_BRAIN.get_predicates()
+

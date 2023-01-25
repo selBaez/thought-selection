@@ -1,13 +1,10 @@
-import os
 from pathlib import Path
 
 from flask import render_template, redirect, request, url_for
 
 from src.chatbot.utils.capsule_utils import form_to_context_capsule, digest_form, begin_form, statement_capsule_to_form
+from src.chatbot.utils.global_variables import RESOURCES_PATH
 from src.chatbot_ui.app.forms import TurnForm, ChatForm, SaveForm
-
-ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
-RESOURCES_PATH = ABSOLUTE_PATH + "/../../../resources/"
 
 
 def create_endpoints(app, chatbot):
