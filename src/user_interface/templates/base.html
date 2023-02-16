@@ -1,0 +1,59 @@
+<html>
+<head>
+    {% if title %}
+        <title>{{ title }} - Leolani chatbot - thought selection</title>
+    {% else %}
+        <title>Chatbot</title>
+    {% endif %}
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+</head>
+<body>
+<div>
+    Chat with Leolani:
+    <a href="/index"> Start chat </a>
+    <a href="/capsule"> Submit Capsule </a>
+    <a href="/save"> Finish session </a>
+</div>
+<hr>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+{% block content %}{% endblock %}
+
+<!-- Java Script
+================================================== -->
+<script src="static/js/jquery.createuri.js"></script>
+
+{#<script>#}
+{#    $(document).ready(function () {#}
+{#        $('#predicate_label').select2({  // init Select2 on form's name field#}
+{#            placeholder: "{{ form.predicate_label.label.text }}",#}
+{#            allowClear: true,#}
+{#            tags: true,#}
+{#            "width": "style"#}
+{#        });#}
+{#    });#}
+{#</script>#}
+
+{#<script#}
+{#  src="https://code.jquery.com/jquery-3.4.1.min.js"#}
+{#  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="#}
+{#  crossorigin="anonymous"></script>#}
+{#<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />#}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>#}
+
+
+</body>
+</html>

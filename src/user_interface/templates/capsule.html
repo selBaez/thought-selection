@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            /* Create two equal columns that floats next to each other */
+            .column {
+                float: left;
+                width: 50%;
+                padding: 10px;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+
+
+    <h1>Leolani: {{ reply.say }}</h1>
+
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <!--Triple info-->
+                <p>
+                    {{ form.subject_label.label }}<br>
+                    {{ form.subject_label(size=32) }}<br>
+                    {% for error in form.subject_label.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.subject_types.label }}<br>
+                    {{ form.subject_types(size=32) }}<br>
+                    {% for error in form.subject_types.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.subject_uri.label }}<br>
+                    {{ form.subject_uri(size=32) }}<br>
+                    {% for error in form.subject_uri.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+
+                <p>
+                    {{ form.predicate_label.label }}<br>
+                    <select id="predicate_label">
+                        <option></option>
+                        {% for choice in form.predicate_label.choices %}
+                            <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+                        {% endfor %}
+                    </select><br>
+                    {% for error in form.predicate_label.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.predicate_uri.label }}<br>
+                    {{ form.predicate_uri(size=32) }}<br>
+                    {% for error in form.predicate_uri.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+
+                <p>
+                    {{ form.object_label.label }}<br>
+                    {{ form.object_label(size=32) }}<br>
+                    {% for error in form.object_label.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.object_types.label }}<br>
+                    {{ form.object_types(size=32) }}<br>
+                    {% for error in form.object_types.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.object_uri.label }}<br>
+                    {{ form.object_uri(size=32) }}<br>
+                    {% for error in form.object_uri.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+
+                <!--Perspective info-->
+                <p>
+                    {{ form.perspective_certainty.label }}<br>
+                    {{ form.perspective_certainty() }}<br>
+                    {% for error in form.perspective_certainty.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.perspective_polarity.label }}<br>
+                    {{ form.perspective_polarity() }}<br>
+                    {% for error in form.perspective_polarity.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.perspective_sentiment.label }}<br>
+                    {{ form.perspective_sentiment() }}<br>
+                    {% for error in form.perspective_sentiment.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <!--Utterance info-->
+                <p>
+                    {{ form.utterance.label }}<br>
+                    {{ form.utterance(size=32) }}<br>
+                    {% for error in form.utterance.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ form.utterance_type.label }}<br>
+                    {{ form.utterance_type() }}<br>
+                    {% for error in form.utterance_type.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <!--Chat info-->
+                <p>
+                    {{ form.turn_id.label }}<br>
+                    {{ form.turn_id() }}<br>
+                    {% for error in form.turn_id.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <p>{{ form.submit() }}</p>
+            </form>
+        </div>
+        <div class="column">
+            {% for capsule in capsules %}
+                <div>
+                    <p>Turn: {{ capsule.turn }}, {{ capsule.author.label }} says:
+                        <b>{{ capsule.subject.label }} - {{ capsule.predicate.label }} - {{ capsule.object.label }}</b>,
+                        Reward:
+                        {{ capsule.last_reward }} </p>
+                    <p> other metrics: {{ capsule.brain_stats }}</p>
+                    <p> Reply: {{ capsule.reply }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{#<script>#}
+{#    $(document).ready(function () {#}
+{#        $('#predicate_label').select2({  // init Select2 on form's name field#}
+{#            placeholder: "{{ form.predicate_label.label.text }}",#}
+{#            allowClear: true,#}
+{#            tags: true,#}
+{#            "width": "style"#}
+{#        });#}
+{#    });#}
+{#</script>#}
+
