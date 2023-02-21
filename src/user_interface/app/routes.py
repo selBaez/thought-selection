@@ -1,9 +1,8 @@
-from pathlib import Path
-
 from flask import render_template, redirect, request, url_for
 
-from src.dialogue_system.utils.capsule_utils import form_to_context_capsule, digest_form, begin_form, statement_capsule_to_form
-from src.dialogue_system.utils.global_variables import RESOURCES_PATH
+from src.dialogue_system.utils.capsule_utils import form_to_context_capsule, digest_form, begin_form, \
+    statement_capsule_to_form
+from src.dialogue_system.utils.helpers import create_session_folder
 from src.user_interface.app.forms import TurnForm, ChatForm, SaveForm
 
 
@@ -16,11 +15,7 @@ def create_endpoints(app, chatbot):
             form_in = ChatForm()
 
             # Create folder to store session
-            session_folder = Path(RESOURCES_PATH +
-                                  f"{form_in.reward.data.replace(' ', '-')}_"
-                                  f"{form_in.chat_id.data}_"
-                                  f"{form_in.speaker.data.replace(' ', '-')}/")
-            session_folder.mkdir(parents=True, exist_ok=True)
+            session_folder = create_session_folder(form_in.reward.data, form_in.chat_id.data, form_in.speaker.data)
 
             # Create dialogue_system
             chatbot.begin_session(form_in.chat_id.data, form_in.speaker.data, form_in.reward.data, session_folder)

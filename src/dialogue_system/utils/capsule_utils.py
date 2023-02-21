@@ -106,8 +106,8 @@ def digest_form(form, chatbot):
     reply = {'say': say}
 
     # arrange all response info to be saved
-    capsule["last_reward"] = chatbot.replier.rewards[-1]
-    capsule["brain_state"] = chatbot.replier.brain_states[-1]
+    capsule["last_reward"] = chatbot.replier.reward_history[-1]
+    capsule["brain_state"] = chatbot.replier.state_history[-1]
     capsule["statistics_history"] = chatbot.replier.statistics_history[-1]
     capsule["reply"] = say
     chatbot.capsules_submitted.append(brain_response_to_json(capsule))

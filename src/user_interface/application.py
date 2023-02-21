@@ -1,6 +1,6 @@
 from flask import Flask
 
-from src.dialogue_system.chatbots import Chatbot
+from src.dialogue_system.chatbot import Chatbot
 from src.user_interface.app.routes import create_endpoints
 from src.user_interface.config import Config
 

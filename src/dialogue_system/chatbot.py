@@ -1,4 +1,4 @@
-""" Filename:     chatbots.py
+""" Filename:     chatbot.py
     Author(s):    Thomas Bellucci, Selene Baez Santamaria
     Description:  Implementation of the Chatbot based on a Leolani backend.
                   The implementation uses the knowledge extraction modules
@@ -65,16 +65,17 @@ class Chatbot:
 
         returns: None
         """
+
         # Set up Leolani backend modules
-        self.address = "http://localhost:7200/repositories/sandbox"
-        self._brain = LongTermMemory(address=self.address, log_dir=scenario_folder, clear_all=chat_id == 1)
+        self._address = "http://localhost:7200/repositories/sandbox"
+        self._brain = LongTermMemory(address=self._address, log_dir=scenario_folder, clear_all=chat_id == 1)
 
         # Chat information
         self.chat_id = chat_id
         self.speaker = speaker
         self.turns = 0
 
-        # data to be recreate conversation
+        # data to be recreated conversation
         self.scenario_folder = scenario_folder
         self.capsules_file = self.scenario_folder / "capsules.json"
         self.capsules_submitted = []
@@ -96,7 +97,7 @@ class Chatbot:
 
         returns: None
         """
-        # Writes a utilities JSON to disk
+        # Writes utilities JSON to disk
         self.replier.thought_selector.save(self.thoughts_file)
 
         # Write capsules file
@@ -122,7 +123,7 @@ class Chatbot:
         self.turns += 2
 
         # ERROR
-        say, capsule_user, brain_response = None, None, None
+        say, response_template, brain_response = None, None, None
         if capsule is None:
             say = choice(SORRY) + " I could not parse that. Can you rephrase?"
 
@@ -132,7 +133,7 @@ class Chatbot:
             brain_response = self._brain.query_brain(casefold_capsule(capsule))
             brain_response = brain_response_to_json(brain_response)
             self._replier.reward_thought()
-            say, capsule_user = self._replier.reply_to_question(brain_response), BASE_CAPSULE
+            say, response_template = self._replier.reply_to_question(brain_response), BASE_CAPSULE
 
         # STATEMENT
         elif capsule["utterance_type"] in ["STATEMENT", UtteranceType.STATEMENT]:
@@ -140,8 +141,8 @@ class Chatbot:
             brain_response = self._brain.capsule_statement(capsule, reason_types=True, create_label=True)
             brain_response = brain_response_to_json(brain_response)
             self._replier.reward_thought()
-            say, capsule_user = self._replier.reply_to_statement(brain_response, persist=True)
+            say, response_template = self._replier.reply_to_statement(brain_response, persist=True)
 
         if return_br:
-            return say, capsule_user, brain_response
-        return say, capsule_user
+            return say, response_template, brain_response
+        return say, response_template

@@ -1,8 +1,8 @@
 from cltl.commons.casefolding import (casefold_capsule)
+
 from cltl.reply_generation.rl_replier import RLReplier
 from cltl.reply_generation.utils.thought_utils import thoughts_from_brain
-
-from src.dialogue_system.utils.thoughts_utils import structure_correct_thought
+from src.dialogue_system.triple_phraser import TriplePhraser
 
 
 class RLCapsuleReplier(RLReplier):
@@ -19,6 +19,9 @@ class RLCapsuleReplier(RLReplier):
         """
         super(RLCapsuleReplier, self).__init__(brain, savefile, reward)
 
+        self._phraser = TriplePhraser()
+        self._log.debug(f"Triple phraser ready")
+
         self._statistics_history = []
 
     @property
@@ -33,7 +36,7 @@ class RLCapsuleReplier(RLReplier):
 
         returns:
         str reply: a string representing a verbalized thought
-        dicr capsule_user: template for user to respond back
+        dicr response_template: template for user to respond back
         """
         # Quick check if there is anything to do here
         if not brain_response['statement']['triple']:
@@ -63,10 +66,11 @@ class RLCapsuleReplier(RLReplier):
         thought_info = thought_info["thought"]
 
         # Generate reply as capsule
-        reply, capsule_user = structure_correct_thought(brain_response['statement'], thought_type, thought_info)
+        reply, response_template = self._phraser.phrase_correct_thought(brain_response['statement'], thought_type,
+                                                                   thought_info)
 
         # Calculate brain state
         profile = self._state_evaluator.calculate_brain_statistics(brain_response)
         self.statistics_history.append(profile)
 
-        return reply, capsule_user
+        return reply, response_template
