@@ -1,13 +1,11 @@
 import argparse
-import json
 from cltl.brain.utils.base_cases import chat_1
 from cltl.brain.utils.helper_functions import brain_response_to_json
 from datetime import datetime
 
 from src.dialogue_system.chatbot import Chatbot
-from src.dialogue_system.utils.capsule_utils import template_to_statement_capsule
 from src.dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION
-from src.dialogue_system.utils.helpers import create_session_folder
+from src.user_model.user import User, init_capsule
 
 
 def create_context_capsule(args):
@@ -33,49 +31,31 @@ def print_bot(bot_utterance):
 
 def main(args):
     """Runs the main interaction loop of the chatbot."""
-    # Sets up chatbot
-    chatbot = Chatbot()
-
-    # Create folder to store session
-    session_folder = create_session_folder(args.reward, args.chat_id, args.speaker)
+    # Sets up user model
+    user_model = User()
 
     # Create dialogue_system
-    chatbot.begin_session(args.chat_id, args.speaker, args.reward, session_folder)
+    chatbot = Chatbot()
+    chatbot.begin_session(args.chat_id, args.speaker, args.reward)
 
     # Situate chat
     capsule_for_context = create_context_capsule(args)
     chatbot.situate_chat(capsule_for_context)
 
-    # Generate greeting for starting chat
-    print_bot(chatbot.greet)
-
     # Interaction loop
-    context, capsules = chat_1
-    for capsule in capsules:
-        if capsule == "quit":
-            break
+    context, capsules = chat_1 # TODO replace with query to user model
+    capsule = init_capsule()
+    for index, _ in enumerate(capsules):  # TODO fix number of turns
+        # process with brain, get template for response
+        say, response_template, brain_response = chatbot.respond(capsule)
 
-        try:
-            # process with brain, get template for response
-            say, response_template, brain_response = chatbot.respond(capsule)
-            response_template = template_to_statement_capsule(response_template, chatbot)
+        print(f"\n{capsule['author']['label']}: {capsule['utterance']}")
+        print(f"\nBot: {say}")
+        # print(f"\nResponse template: {json.dumps(brain_response_to_json(response_template), indent=2)}")
 
-            # arrange all response info to be saved
-            capsule["last_reward"] = chatbot.replier.reward_history[-1]
-            capsule["brain_state"] = chatbot.replier.state_history[-1]
-            capsule["statistics_history"] = chatbot.replier.statistics_history[-1]
-            capsule["reply"] = say
-            chatbot.capsules_submitted.append(brain_response_to_json(capsule))
-            chatbot.say_history.append(say)
-            chatbot.capsules_suggested.append(response_template)
-
-            # say, response_template, brain_response = chatbot.respond(capsule)
-            print(f"\n{capsule['author']['label']}: {capsule['utterance']}")
-            print(f"\nBot: {say}")
-            print(f"\nResponse template: {json.dumps(response_template, indent=2)}")
-
-        except:
-            break
+        # use response template to query HP dataset
+        response_template = brain_response_to_json(response_template)
+        capsule = user_model.query_database(response_template)
 
     # Farewell + update savefile
     print("\nBot:", chatbot.farewell)
