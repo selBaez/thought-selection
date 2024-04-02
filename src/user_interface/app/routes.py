@@ -1,8 +1,7 @@
 from flask import render_template, redirect, request, url_for
 
-from src.dialogue_system.utils.capsule_utils import form_to_context_capsule, digest_form, begin_form, \
-    statement_capsule_to_form
-from src.dialogue_system.utils.helpers import create_session_folder
+from src.user_interface.app.utils.form_utils import statement_capsule_to_form, form_to_context_capsule, digest_form, \
+    begin_form
 from src.user_interface.app.forms import TurnForm, ChatForm, SaveForm
 
 
@@ -14,11 +13,8 @@ def create_endpoints(app, chatbot):
         if request.method == 'POST':
             form_in = ChatForm()
 
-            # Create folder to store session
-            session_folder = create_session_folder(form_in.reward.data, form_in.chat_id.data, form_in.speaker.data)
-
             # Create dialogue_system
-            chatbot.begin_session(form_in.chat_id.data, form_in.speaker.data, form_in.reward.data, session_folder)
+            chatbot.begin_session(form_in.chat_id.data, form_in.speaker.data, form_in.reward.data)
 
             # Situate chat
             capsule_for_context = form_to_context_capsule(form_in)
@@ -48,7 +44,7 @@ def create_endpoints(app, chatbot):
             form_out, reply, capsule_in, capsule_user = digest_form(form_in, chatbot)
 
             return redirect(url_for('capsule', title='Submit Capsule',
-                                    form=form_out, reply=reply, capsules=chatbot.capsules_submitted))
+                                    form=form_out, reply=reply, capsules=chatbot.chat_history["capsules_submitted"]))
 
         # handle the GET request (prefilled)
         elif request.method == 'GET':
@@ -61,14 +57,14 @@ def create_endpoints(app, chatbot):
 
             else:
                 # Use last suggested template
-                form_out = statement_capsule_to_form(chatbot.capsules_suggested[-1], form_in)
-                reply = chatbot.say_history[-1]
+                form_out = statement_capsule_to_form(chatbot.chat_history["capsules_suggested"][-1], form_in)
+                reply = chatbot.chat_history["say_history"][-1]
 
             if form_out.validate_on_submit():
                 return redirect('/index')
 
             return render_template('capsule.html', title='Submit Capsule',
-                                   form=form_out, reply=reply, capsules=chatbot.capsules_submitted)
+                                   form=form_out, reply=reply, capsules=chatbot.chat_history['capsules_submitted'])
 
     @app.route('/save', methods=['GET', 'POST'])
     def save():

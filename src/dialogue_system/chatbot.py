@@ -14,23 +14,43 @@ from random import choice
 # Pip-installed ctl repositories
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.brain.utils.helper_functions import brain_response_to_json
+
 from cltl.commons.casefolding import casefold_capsule
+
 from cltl.commons.discrete import UtteranceType
 from cltl.commons.language_data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
-
-from src.dialogue_system.replier import RLCapsuleReplier
-from src.dialogue_system.utils.global_variables import BASE_CAPSULE
+from cltl.thoughts.thought_selection.rl_selector import UCB
+from src.dialogue_system.triple_phraser import TriplePhraser
+from src.dialogue_system.utils.capsule_utils import template_to_statement_capsule
+from src.dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS
+from src.dialogue_system.utils.helpers import create_session_folder
 
 # Set up Java PATH (required for Windows)
 os.environ["JAVAHOME"] = "C:/Program Files/Java/jre1.8.0_311/bin/java.exe"
 
 
-class Chatbot:
+class Chatbot(object):
     def __init__(self):
         """Sets up a Chatbot with a Leolani backend.
 
         returns: None
         """
+        self.scenario_folder = None
+        self._brain = None
+        self.chat_id = None
+        self.speaker = None
+        self.turns = None
+        self.capsules_file = None
+        self.chat_history = None
+        self.thoughts_file = None
+        self._selector = None
+        self._statistics_history = None
+        self._replier = None
+
+    @property
+    def selector(self):
+        """Provides access to the selector."""
+        return self._selector
 
     @property
     def replier(self):
@@ -54,37 +74,35 @@ class Chatbot:
         string = choice(GOODBYE)
         return string
 
-    def begin_session(self, chat_id, speaker, reward, scenario_folder):
+    def begin_session(self, chat_id, speaker, reward):
         """Sets up a session .
 
         params
         str chat_id:  id of chat
         str speaker:  name of speaker
         str reward:     method used to use as reward for RL
-        str scenario_folder: path to write session data.
 
         returns: None
         """
-
         # Set up Leolani backend modules
-        self._address = "http://localhost:7200/repositories/sandbox"
-        self._brain = LongTermMemory(address=self._address, log_dir=scenario_folder, clear_all=chat_id == 1)
+        self.scenario_folder = create_session_folder(reward, chat_id, speaker)
+        self._brain = LongTermMemory(address=BRAIN_ADDRESS, log_dir=self.scenario_folder,
+                                     ontology_details=ONTOLOGY_DETAILS, clear_all=chat_id == 1)
 
         # Chat information
         self.chat_id = chat_id
         self.speaker = speaker
         self.turns = 0
 
-        # data to be recreated conversation
-        self.scenario_folder = scenario_folder
+        # data to recreated conversation
         self.capsules_file = self.scenario_folder / "capsules.json"
-        self.capsules_submitted = []
-        self.capsules_suggested = []
-        self.say_history = []
+        self.chat_history = {"capsules_submitted": [], "capsules_suggested": [], "say_history": []}
 
         # RL information
         self.thoughts_file = self.scenario_folder / "thoughts.json"
-        self._replier = RLCapsuleReplier(self._brain, self.thoughts_file, reward)
+        self._selector = UCB(self._brain, savefile=self.thoughts_file, reward=reward)
+        self._statistics_history = []
+        self._replier = TriplePhraser()
 
         if chat_id == 1:
             if self.capsules_file.exists():
@@ -98,14 +116,14 @@ class Chatbot:
         returns: None
         """
         # Writes utilities JSON to disk
-        self.replier.thought_selector.save(self.thoughts_file)
+        self._selector.save(self.thoughts_file)
 
         # Write capsules file
         with open(self.capsules_file, "w") as file:
-            json.dump(self.capsules_submitted, file, indent=4)
+            json.dump(self.chat_history["capsules_submitted"], file, indent=4)
 
         # Plot
-        self.replier.thought_selector.plot(filename=self.scenario_folder)
+        self._selector.plot(filename=self.scenario_folder / f"results.png")
 
     def situate_chat(self, capsule_for_context):
         self._brain.capsule_context(capsule_for_context)
@@ -132,7 +150,8 @@ class Chatbot:
             # Query Brain -> try to answer
             brain_response = self._brain.query_brain(casefold_capsule(capsule))
             brain_response = brain_response_to_json(brain_response)
-            self._replier.reward_thought()
+            self._selector.reward_thought()
+            brain_response["thoughts"] = self._selector.select(brain_response)
             say, response_template = self._replier.reply_to_question(brain_response), BASE_CAPSULE
 
         # STATEMENT
@@ -140,8 +159,25 @@ class Chatbot:
             # Update Brain -> communicate a thought
             brain_response = self._brain.capsule_statement(capsule, reason_types=True, create_label=True)
             brain_response = brain_response_to_json(brain_response)
-            self._replier.reward_thought()
+            # Calculate brain state
+            self._selector.reward_thought()
+            profile = self.selector.state_evaluator.calculate_brain_statistics(brain_response)
+            self._statistics_history.append(profile)
+
+            brain_response["thoughts"] = self._selector.select(brain_response)
             say, response_template = self._replier.reply_to_statement(brain_response, persist=True)
+            response_template = template_to_statement_capsule(response_template, self)
+
+        # Add information to capsule
+        capsule["last_reward"] = self.selector.reward_history[-1]
+        capsule["brain_state"] = self.selector.state_history[-1]
+        capsule["statistics_history"] = self._statistics_history[-1]
+        capsule["reply"] = say
+
+        # Keep track of everything
+        self.chat_history["capsules_submitted"].append(brain_response_to_json(capsule))
+        self.chat_history["say_history"].append(say)
+        self.chat_history["capsules_suggested"].append(response_template)
 
         if return_br:
             return say, response_template, brain_response

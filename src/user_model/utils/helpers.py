@@ -7,20 +7,24 @@ from rdflib import ConjunctiveGraph, URIRef, Literal, RDF, RDFS
 from cltl.brain.utils.helper_functions import hash_claim_id
 from src.dialogue_system.utils.global_variables import HARRYPOTTER_NS, HARRYPOTTER_PREFIX
 
-NUM_USERS_PER_TYPE = 5
+TEST = True
+
+NUM_USERS_PER_TYPE = 10 if TEST else 100
 DATA_PATHS = ["/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/test_set_en/",
               "/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/train_set_en/"]
 USER_PATH = "/Users/sbaez/Documents/PhD/research/thought-selection/resources/users"
+RAW_USER_PATH = USER_PATH + "/raw"
+PROCESSED_USER_PATH = USER_PATH + "/processed"
 
 CONTEXT_ID = getrandbits(8)
 START_DATE = date(1997, 6, 26)
-CONTEXT_CASULE = {"context_id": getrandbits(8),
-                  "date": START_DATE,
-                  "place": "Harry Potter World",
-                  "place_id": 1,
-                  "country": "UK",
-                  "region": "Scotland",
-                  "city": "Edinburgh"}
+HP_CONTEXT_CAPSULE = {"context_id": CONTEXT_ID,
+                      "date": START_DATE,
+                      "place": "Harry Potter World",
+                      "place_id": 1,
+                      "country": "UK",
+                      "region": "Scotland",
+                      "city": "Edinburgh"}
 
 PERSPECTIVE_GRAPH = URIRef("http://cltl.nl/leolani/talk/Perspectives")
 CLAIM_GRAPH = URIRef("http://cltl.nl/leolani/world/Claims")
@@ -36,7 +40,7 @@ TYPE_POLARITYVALUE = URIRef("http://groundedannotationframework.org/grasp/factua
 EMOTION_UNDERSPECIFIED = URIRef("http://groundedannotationframework.org/grasp/emotion#UNDERSPECIFIED")
 CERTAINTY_POSSIBLE = URIRef("http://groundedannotationframework.org/grasp/factuality#POSSIBLE")
 CERTAINTY_CERTAIN = URIRef("http://groundedannotationframework.org/grasp/factuality#CERTAIN")
-POLARITY_POSITIVE = URIRef("http://groundedannotationframework.org/grasp/factuality#POSTIVE")
+POLARITY_POSITIVE = URIRef("http://groundedannotationframework.org/grasp/factuality#POSITIVE")
 POLARITY_NEGATIVE = URIRef("http://groundedannotationframework.org/grasp/factuality#NEGATIVE")
 SENTIMENT_NEUTRAL = URIRef("http://groundedannotationframework.org/grasp/sentiment#NEUTRAL")
 
@@ -46,6 +50,12 @@ GAF_DENOTEDBY = URIRef("http://groundedannotationframework.org/gaf#denotedBy")
 GAF_DENOTES = URIRef("http://groundedannotationframework.org/gaf#denotes")
 GAF_DENOTEDIN = URIRef("http://groundedannotationframework.org/gaf#denotedIn")
 GAF_CONTAINSDEN = URIRef("http://groundedannotationframework.org/gaf#containsDenotation")
+
+SIMPLE_ATTRRELS = [URIRef('http://groundedannotationframework.org/grasp/factuality#PolarityValue'),
+                   URIRef('http://groundedannotationframework.org/grasp/factuality#CertaintyValue'),
+                   URIRef('http://groundedannotationframework.org/grasp/sentiment#SentimentValue')]
+SIMPLE_ATTVALS = [CERTAINTY_CERTAIN, CERTAINTY_POSSIBLE, POLARITY_POSITIVE, POLARITY_NEGATIVE,
+                  SENTIMENT_NEUTRAL, EMOTION_UNDERSPECIFIED]
 
 
 def break_list(text):
@@ -134,6 +144,9 @@ def merge_all_graphs():
     trig_files = get_all_files(extension="trig")
     for trig_file in trig_files:
         graph_data.parse(trig_file)
+        print(f"READ DATASET in {trig_file.stem}: {len(graph_data)}")
+        if TEST:
+            break
 
     return graph_data
 
@@ -143,7 +156,7 @@ def save_graph(filepath, graph_data):
     Write graph to trig file
     """
     graph_data.serialize(destination=filepath, format="trig")
-    print(f"\n\nFINAL SIZE OF DATASET: {len(graph_data)}")
+    print(f"\tFINAL SIZE OF DATASET in {filepath.stem}: {len(graph_data)}")
 
 
 def get_all_characters(graph_data):
@@ -154,13 +167,32 @@ def get_all_characters(graph_data):
     all_characters = graph_data.query(q_characters)
     all_characters = [c for c in all_characters]
 
+    print(f"CHARACTERS IN DATASET: {len(all_characters)}")
+
     return all_characters
 
 
 def sample_character(all_characters):
+    """
+    Get a random node of type character
+    """
     selected_character = sample(all_characters, 1)
 
     return selected_character[0]["character"]
+
+
+def get_all_predicates(graph_data):
+    """
+    Query graph for predicates (relations in triples)
+    """
+    q_predicates = """SELECT distinct ?predicate  WHERE {{ ?s ?predicate ?o . 
+                        FILTER(STRSTARTS(STR(?predicate), STR(hp:))) . }}"""
+    all_predicates = graph_data.query(q_predicates)
+    all_predicates = [c for c in all_predicates]
+
+    print(f"PREDICATES IN DATASET: {len(all_predicates)}")
+
+    return all_predicates
 
 
 def get_all_attributes(graph_data):
@@ -171,13 +203,31 @@ def get_all_attributes(graph_data):
     all_attributes = graph_data.query(q_attributes)
     all_attributes = [c for c in all_attributes]
 
+    print(f"ATTRIBUTES IN DATASET: {len(all_attributes)}")
+
     return all_attributes
 
 
 def sample_attribute(all_attributes):
+    """
+    Get a random node of type attribute
+    """
     selected_attribute = sample(all_attributes, 1)
 
     return selected_attribute[0]["attribute"]
+
+
+def get_all_attribution_values(graph_data):
+    """
+    Query graph for attribution values (perspectives)
+    """
+    q_att_vals = """SELECT distinct ?attributionVal  WHERE {{ ?attributionVal rdf:type grasp:AttributionValue . }}"""
+    all_att_vals = graph_data.query(q_att_vals)
+    all_att_vals = [c for c in all_att_vals]
+
+    print(f"ATTRIBUTION VALUES IN DATASET: {len(all_att_vals)}")
+
+    return all_att_vals
 
 
 def get_all_claims(graph_data):
@@ -188,6 +238,8 @@ def get_all_claims(graph_data):
                   ?claim rdf:type gaf:Assertion . ?claim gaf:denotedBy ?mention .}}"""
     all_claims = graph_data.query(q_claims)
     all_claims = [c for c in all_claims]
+
+    print(f"CLAIMS IN DATASET: {len(all_claims)}")
 
     return all_claims
 
@@ -258,6 +310,9 @@ def link_mention_to_att(graph_data, men, att):
 
 
 def link_mention_to_claim(graph_data, men, claim, elems):
+    """
+    Establish gaf relations between mentions and claims
+    """
     graph_data.add((claim, GAF_DENOTEDBY, men["mention"], CLAIM_GRAPH))
     graph_data.add((men["mention"], GAF_DENOTES, claim, PERSPECTIVE_GRAPH))
     graph_data.add((men["mention"], GAF_CONTAINSDEN, elems["s"], PERSPECTIVE_GRAPH))
@@ -327,7 +382,9 @@ def negate_polarity(graph_data, att):
 
 
 def create_new_claim(graph_data, claim, all_characters, all_attributes):
-    # TODO: swap object too potentially
+    """
+    Make new claim with subject or object switched (valid node type checked)
+    """
     elems = get_claim_elements(graph_data, claim)
 
     # Select what to swap

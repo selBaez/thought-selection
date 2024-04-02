@@ -30,8 +30,8 @@ def add_triple(book, chapter, position, counter, name, character, relation, val,
                                       datetime.now().time()),
         "context_id": CONTEXT_ID
     }
-    response = brain.capsule_statement(capsule, reason_types=True, create_label=True)
-    print(f"{capsule['triple']}")
+    response = brain.capsule_statement(capsule, reason_types=False, create_label=True, return_thoughts=False)
+    print(f"\t{capsule['triple']}")
 
 
 def process_session(book, session, brain):
@@ -81,10 +81,10 @@ def process_file(file):
                            clear_all=True)
 
     # Create context
-    _ = brain.capsule_context(CONTEXT_CASULE)
+    _ = brain.capsule_context(HP_CONTEXT_CAPSULE)
 
     # Read JSON file
-    print(f"FILE: {file}")
+    print(f"\nFILE: {file}")
     with open(file) as json_file:
         data = json.load(json_file)
 
@@ -186,67 +186,81 @@ def corrupt_claim(claim, graph_data, all_characters, all_attributes):
 
     return graph_data
 
-
-def main():
-    # iterate through JSONs
-    files = get_all_files(extension="json")
-    # for file in files:
-    #     process_file(file)
-
-    # Make types of users
-
-    # Merge all files
-    graph_data = merge_all_graphs()
+def create_users(graph_data):
     all_claims = get_all_claims(graph_data)
     all_characters = get_all_characters(graph_data)
     all_attributes = get_all_attributes(graph_data)
 
     # VANILLA: all data
-    save_graph(filepath=Path(USER_PATH) / "vanilla.trig", graph_data=graph_data)
+    print(f"\nCREATING USER TYPE: vanilla")
+    save_graph(filepath=Path(RAW_USER_PATH) / "vanilla.trig", graph_data=graph_data)
 
     # AMATEUR: remove 50% of claims (including all their attributions and links to the mentions)
+    print(f"\nCREATING USER TYPE: amateur")
     for u in range(NUM_USERS_PER_TYPE):
         u_graph = deepcopy(graph_data)
 
         # Sample claims and remove them
         claims_to_delete = sample_claims(all_claims)
+        print(f"DELETING {len(claims_to_delete)} CLAIMS")
         for claim in claims_to_delete:
             u_graph = remove_claim(claim["claim"], u_graph)
-        save_graph(filepath=Path(USER_PATH) / f"amateur{u}.trig", graph_data=u_graph)
+        save_graph(filepath=Path(RAW_USER_PATH) / f"amateur{u}.trig", graph_data=u_graph)
 
     # DOUBTFUL: lower certainty of 50% of claims
+    print(f"\nCREATING USER TYPE: doubtful")
     for u in range(NUM_USERS_PER_TYPE):
         # Add probable certainty
         u_graph = deepcopy(graph_data)
         u_graph = create_low_certainty(u_graph)
 
         # Sample claims and edit them
-        claims_to_delete = sample_claims(all_claims)
-        for claim in claims_to_delete:
+        claims_to_doubt = sample_claims(all_claims)
+        print(f"DOUBTING {len(claims_to_doubt)} CLAIMS")
+        for claim in claims_to_doubt:
             u_graph = doubt_claim(claim["claim"], u_graph)
-        save_graph(filepath=Path(USER_PATH) / f"doubtful{u}.trig", graph_data=u_graph)
+        save_graph(filepath=Path(RAW_USER_PATH) / f"doubtful{u}.trig", graph_data=u_graph)
 
     # INCOHERENT: negate 50% of claims
+    print(f"\nCREATING USER TYPE: incoherent")
     for u in range(NUM_USERS_PER_TYPE):
         # Add negative polarity
         u_graph = deepcopy(graph_data)
         u_graph = create_neg_polairty(u_graph)
 
         # Sample claims and edit them
-        claims_to_delete = sample_claims(all_claims)
-        for claim in claims_to_delete:
+        claims_to_negate = sample_claims(all_claims)
+        print(f"NEGATING {len(claims_to_negate)} CLAIMS")
+        for claim in claims_to_negate:
             u_graph = negate_claim(claim["claim"], u_graph)
-        save_graph(filepath=Path(USER_PATH) / f"incoherent{u}.trig", graph_data=u_graph)
+        save_graph(filepath=Path(RAW_USER_PATH) / f"incoherent{u}.trig", graph_data=u_graph)
 
     # CONFUSED: switch an element in the triple for another (valid: existing and equivalent) element
+    print(f"\nCREATING USER TYPE: confused")
     for u in range(NUM_USERS_PER_TYPE):
         u_graph = deepcopy(graph_data)
 
         # Sample claims and edit them
-        claims_to_delete = sample_claims(all_claims)
-        for claim in claims_to_delete:
+        claims_to_corrupt = sample_claims(all_claims)
+        print(f"CORRUPTING {len(claims_to_corrupt)} CLAIMS")
+        for claim in claims_to_corrupt:
             u_graph = corrupt_claim(claim["claim"], u_graph, all_characters, all_attributes)
-        save_graph(filepath=Path(USER_PATH) / f"confused{u}.trig", graph_data=u_graph)
+        save_graph(filepath=Path(RAW_USER_PATH) / f"confused{u}.trig", graph_data=u_graph)
+
+
+def main():
+    # print("---------------------------- Ingest triples per book  ----------------------------")
+    # # iterate through JSONs
+    # files = get_all_files(extension="json")
+    # for file in files:
+    #     process_file(file)
+
+
+    print("---------------------------- Make users  ----------------------------")
+    # Make types of users
+    graph_data = merge_all_graphs()
+    create_users(graph_data)
+
 
 
 if __name__ == "__main__":
