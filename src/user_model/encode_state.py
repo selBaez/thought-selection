@@ -3,15 +3,21 @@ from collections import defaultdict
 from itertools import product
 from pathlib import Path
 
+import numpy as np
 import torch
+import torch.nn as nn
+import torch.nn.functional as F
 from iribaker import to_iri
 from rdflib import URIRef
 from sklearn.preprocessing import MultiLabelBinarizer
 from torch_geometric.data import HeteroData, InMemoryDataset
+from torch_geometric.nn import RGATConv
 
 from cltl.brain.utils.helper_functions import hash_claim_id
-from src.user_model.utils.helpers import build_graph, get_all_characters, get_all_attributes, get_all_predicates, \
-    RAW_USER_PATH, PROCESSED_USER_PATH, SIMPLE_ATTRRELS, SIMPLE_ATTVALS
+from src.user_model.utils.constants import TEST, PROCESS_FOR_GRAPH_CLASSIFIER, RAW_USER_PATH, PROCESSED_USER_PATH, \
+    RAW_VANILLA_USER_PATH, \
+    TYPE_CERTAINTYVALUE, TYPE_POLARITYVALUE, TYPE_SENTIMENTVALUE, SIMPLE_ATTRELS, SIMPLE_ATTVALS, ATTVALS_TO_ATTRELS
+from src.user_model.utils.helpers import build_graph, get_all_characters, get_all_attributes, get_all_predicates
 
 
 def ingest_claims_and_perspectives(og_graph):
@@ -41,34 +47,54 @@ def ingest_claims_and_perspectives(og_graph):
     graph = build_graph()
     for el in response:
         subject = URIRef(to_iri(el["claim"]))
-
-        certainty_predicate = URIRef("http://groundedannotationframework.org/grasp/factuality#CertaintyValue")
         certainty = URIRef(to_iri(el["certainty"]))
-        graph.add((subject, certainty_predicate, certainty))
+        graph.add((subject, TYPE_CERTAINTYVALUE, certainty))
 
-        polarity_predicate = URIRef("http://groundedannotationframework.org/grasp/factuality#PolarityValue")
         polarity = URIRef(to_iri(el["polarity"]))
-        graph.add((subject, polarity_predicate, polarity))
+        graph.add((subject, TYPE_POLARITYVALUE, polarity))
 
-        sentiment_predicate = URIRef("http://groundedannotationframework.org/grasp/sentiment#SentimentValue")
         sentiment = URIRef(to_iri(el["sentiment"]))
-        graph.add((subject, sentiment_predicate, sentiment))
+        graph.add((subject, TYPE_SENTIMENTVALUE, sentiment))
     print(f"NEW SIMPLE DATASET CONTAINS {len(graph)} TRIPLES")
 
     return graph
 
 
+def one_hot_feature(entity, entities_dict):
+    """
+    Initialize a vector with zeros, search for the index of an entity and assign one in that index
+    """
+    # Initialize zero vector
+    one_hot_vector = np.zeros(len(entities_dict))
+
+    if entity:
+        # Determine what type of node this is, and treat grasp perspectives in a special way
+        if entity.startswith("http://groundedannotationframework.org/grasp/"):
+            prefix = ""
+            entity = str(ATTVALS_TO_ATTRELS[URIRef(entity)])
+        else:
+            prefix = "http://harrypotter.org/"
+
+        # Assign value
+        index = entities_dict[prefix + entity]
+        one_hot_vector[index] = 1
+
+    return one_hot_vector
+
+
 class HarryPotterRDF(InMemoryDataset):
     def __init__(self, root, transform=None, pre_transform=None, pre_filter=None):
-        # build vocabulary
+        # build vocabulary from vanilla graph
         og_graph = build_graph()
-        og_graph.parse(self.raw_paths[0])
-        print(f"READ DATASET in {self.raw_paths[0]}: {len(og_graph)}")
+        og_graph.parse(RAW_VANILLA_USER_PATH)
+        print(f"READ DATASET in {RAW_VANILLA_USER_PATH}: {len(og_graph)}")
+
+        # build resources that we only need once (IDs and features)
         self.build_vocabulary(og_graph)
+        self.compute_node_features()
 
         # check if data has been processed
         super().__init__(root, transform, pre_transform, pre_filter)
-        self.load(self.processed_paths[0])
 
     @property
     def raw_dir(self) -> str:
@@ -80,64 +106,54 @@ class HarryPotterRDF(InMemoryDataset):
 
     @property
     def raw_file_names(self) -> list:
-        return ["vanilla.trig"]
+        files = list(Path(self.raw_dir).glob('*.trig'))
+        files = sorted(files, reverse=True)
+        return files
 
     @property
     def processed_file_names(self):
-        return ["vanilla.pt"]
+        files = []
+        for file in self.raw_file_names:
+            files.append(f"{self.processed_dir}/{file.stem}.pt")
 
-    def download(self):
-        """
-        Method to get data from a graphDB reporsitory as opposed to a file
-        """
-        # Download to `self.raw_dir`.
+        return files
 
+    def get_claim_node_id(self, claim):
+        return self.claims_dict.get(str(claim), -1)
+
+    def get_perspective_node_id(self, perspective):
+        # offset objects by subjects, to have all nodes have a unique id
+        return self.perspectives_dict[str(perspective)] + len(self.claims_dict)
+
+    def download_from_triplestore(self, chatbot):
+        """
+        Method to get data from a graphDB repository as opposed to a file.
+        Returns the filename where the data gets stored
+        """
         # get everything
-        response = self.chatbot.brain._connection.export_repository()
+        response = chatbot.brain._connection.export_repository()
         graph_data = build_graph()
         graph_data.parse(response)
-        graph_data.serialize(destination=self.raw_dir + self.chatbot.scenario_folder.split('/')[-1])
 
-    def process(self):
-        # Get all files to process
-        files = list(Path(self.raw_dir).glob('*.trig'))
-
-        for file in files:
-            # Read raw data
-            og_graph = build_graph()
-            og_graph.parse(file)
-            print(f"READ DATASET in {file}: {len(og_graph)}")
-
-            # Ingest claims and perspectives
-            graph = ingest_claims_and_perspectives(og_graph)
-
-            # Create edge representation
-            edge_data = self.create_edge_representation(graph)
-
-            # Create node representation
-            node_types = self.create_node_representation(graph)
-
-            # Save data
-            data = HeteroData(
-                edge_index=torch.tensor(edge_data['edge_index'], dtype=torch.long).t().contiguous(),
-                edge_type=torch.tensor(edge_data['edge_type'], dtype=torch.long),
-                node_type=torch.tensor(node_types, dtype=torch.float)
-            )
-            processed_filename = self.processed_dir + f"/{file.stem}.pt"
-            torch.save(self.collate([data]), processed_filename)
-
-        print("here")
+        # save
+        raw_file = self.raw_dir + chatbot.scenario_folder.split('/')[-1]
+        graph_data.serialize(destination=raw_file)
+        return raw_file
 
     def build_vocabulary(self, full_graph):
         """
-        Create dictionaries to get node and edges IDs
+        Create dictionaries to get node/entities and relation/predicate IDs.
+        Nodes and relations: related to the main graph, with claims and their perspectives.
+                         These are used for message passing.
+        Entities and predicates: related to the knowledge inside the claims, connecting characters and their attributes.
+                                 These are used as features of the main nodes.
         """
         # Get everything from the instance graph in the oracle user
         all_characters = [str(node["character"]) for node in get_all_characters(full_graph)]
         all_attributes = [str(node["attribute"]) for node in get_all_attributes(full_graph)]
         all_predicates = [str(rel["predicate"]) for rel in get_all_predicates(full_graph)]
-        self.subjects_dict = {node: i for i, node in enumerate(all_characters)}
-        self.objects_dict = {node: i for i, node in enumerate(all_attributes)}
+        self.characters_dict = {node: i for i, node in enumerate(all_characters)}
+        self.attributes_dict = {node: i for i, node in enumerate(all_attributes)}
         self.predicates_dict = {rel: i for i, rel in enumerate(all_predicates)}
 
         # Create all possible claims from the combinations of the known nodes
@@ -145,40 +161,182 @@ class HarryPotterRDF(InMemoryDataset):
         all_claims = ["http://cltl.nl/leolani/world/" + hash_claim_id([s.split('/')[-1],
                                                                        p.split('/')[-1],
                                                                        o.split('/')[-1]]) for (s, p, o) in all_claims]
-        self.claims_dict = {node: i for i, node in enumerate(all_claims)}
-        self.attvals_dict = {str(node): i for i, node in enumerate(SIMPLE_ATTVALS)}
-        self.attrels_dict = {str(rel): i for i, rel in enumerate(SIMPLE_ATTRRELS)}
+        self.claims_dict = {str(node): i for i, node in enumerate(all_claims)}
+        self.perspectives_dict = {str(node): i for i, node in enumerate(SIMPLE_ATTVALS)}
+        self.rels_dict = {str(rel): i for i, rel in enumerate(SIMPLE_ATTRELS)}
+
+        # Set dimensions
+        self.NUM_NODES = len(self.claims_dict) + len(self.perspectives_dict)
+        self.NUM_RELATIONS = len(self.rels_dict)
+
+        self.NUM_ENTITIES = len(self.characters_dict) + len(self.attributes_dict)
+        self.NUM_PREDICATES = len(self.predicates_dict)
+        self.NUM_FEATURES = self.NUM_ENTITIES + self.NUM_PREDICATES + self.NUM_RELATIONS
+
+    def compute_node_features(self):
+        """
+        Create feature vector in one hot vectors, concatenated
+         Claims: encoding original subject, predicate, object (character, predicate, attribute)
+         Perspectives: encode their type (factuality, sentiment or emotion)
+        """
+        # Initialize matrix
+        node_features = np.zeros([self.NUM_NODES, self.NUM_FEATURES])
+
+        # Representation for claims
+        for claim in self.claims_dict.keys():
+            # Get original SPO values in claim
+            sub, pred, obj = claim.split("/")[-1].split("_")
+
+            # one hot encode each SPO part
+            subject_one_hot = one_hot_feature(sub, self.characters_dict)
+            predicates_one_hot = one_hot_feature(pred, self.predicates_dict)
+            object_one_hot = one_hot_feature(obj, self.attributes_dict)
+            type_one_hot = one_hot_feature(None, self.rels_dict)
+
+            # Concatenate for final claim representation, assign to node index
+            claim_rep = np.concatenate((subject_one_hot, predicates_one_hot, object_one_hot, type_one_hot), axis=0)
+            index = self.get_claim_node_id(claim)
+            node_features[index] = claim_rep
+
+        # Representation for perspectives
+        for perspective in self.perspectives_dict.keys():
+            # one hot their type
+            subject_one_hot = one_hot_feature(None, self.characters_dict)
+            predicates_one_hot = one_hot_feature(None, self.predicates_dict)
+            object_one_hot = one_hot_feature(None, self.attributes_dict)
+            type_one_hot = one_hot_feature(perspective, self.rels_dict)
+
+            # Concatenate for final type representation, assign to node index
+            perspective_rep = np.concatenate((subject_one_hot, predicates_one_hot, object_one_hot, type_one_hot),
+                                             axis=0)
+            index = self.get_perspective_node_id(perspective)
+            node_features[index] = perspective_rep
+
+        self.node_features = node_features
+
+    def process(self):
+        data_list = []
+        if PROCESS_FOR_GRAPH_CLASSIFIER:
+            for raw_file, processed_file in zip(self.raw_file_names, self.processed_file_names):
+                data = self.process_one_graph(raw_file)
+                torch.save(self.collate([data]), processed_file)
+                data_list.append(data)
+
+                if TEST:
+                    break
+
+            print("DONE")
+        return data_list
+
+    def process_one_graph(self, file):
+        # Read raw data
+        og_graph = build_graph()
+        og_graph.parse(file)
+        print(f"READ DATASET in {file}: {len(og_graph)}")
+
+        # Ingest claims and perspectives
+        graph = ingest_claims_and_perspectives(og_graph)
+
+        # Create edge representation
+        edge_data = self.create_edge_representation(graph)
+
+        # # Create node type representation
+        # node_types = self.create_node_type_representation(graph)
+
+        # Create node feature representation
+        node_features = self.create_node_feature_representation(graph)
+
+        # Save data
+        data = HeteroData(
+            edge_index=torch.tensor(edge_data['edge_index'], dtype=torch.long).t().contiguous(),
+            edge_type=torch.tensor(edge_data['edge_type'], dtype=torch.long),
+            # node_type=torch.tensor(node_types, dtype=torch.float)
+            node_features=torch.tensor(node_features, dtype=torch.long)
+        )
+
+        return data
 
     def create_edge_representation(self, graph):
         """
         Create edge index and edge types matrices
         """
         edge_data = defaultdict(list)
+        # Loop through triples in graphs, all claims with their perspectives
         for s, p, o in graph.triples((None, None, None)):
-            src, dst, rel = self.claims_dict.get(str(s), -1), self.attvals_dict[str(o)], self.attrels_dict[str(p)]
+            # get indices of each part, from their own dictionaries #]
+            src, dst, rel = self.get_claim_node_id(s), \
+                            self.get_perspective_node_id(o), \
+                            self.rels_dict[str(p)]
+
+            # register claim, if it exists (some claims might not exist if subjects and objects are scrambled)
             if src != -1:
                 edge_data['edge_index'].append([src, dst])
                 edge_data['edge_type'].append(rel)
 
         return edge_data
 
-    def create_node_representation(self, graph):
+    def create_node_type_representation(self, graph):
         """
         Create node types matrix
         """
-        types = [["character"] for s in set(graph.subjects())]
-        types.extend([["attribute"] for o in set(graph.objects())])
+        # These are claims, not characters! same for attributions values
+        types = [["claim"] for s in set(graph.subjects())]
+        types.extend([[o.split("/")[-1].split("#")[0]] for o in set(graph.objects())])
         mlb = MultiLabelBinarizer()
         node_types = mlb.fit_transform(types)
 
         # TODO check that these indices correspond to the node ids in the dictionary
         return node_types
 
+    def create_node_feature_representation(self, graph):
+        """
+        Create feature vector in one hot vectors, concatenated
+         Claims: encoding original subject, predicate, object (character, predicate, attribute)
+         Perspectives: encode their type (factuality, sentiment or emotion)
+        """
+        # Initialize matrix
+        node_features = np.zeros([self.NUM_NODES, self.NUM_FEATURES])
+
+        # Select existing nodes
+        to_keep = [self.get_claim_node_id(claim) for claim in set(graph.subjects())]
+        to_keep.extend([self.get_perspective_node_id(perspective) for perspective in set(graph.objects())])
+
+        # assign pre-coputed features
+        for index in to_keep:
+            node_features[index] = self.node_features[index]
+
+        return node_features
+
+
+class HarryPotterStateEncoderAttention(nn.Module):
+    def __init__(self, in_channels, hidden_channels, out_channels, num_relations):
+        super().__init__()
+        # in_channels is the number_features
+        self.conv1 = RGATConv(in_channels, hidden_channels, num_relations)
+        self.conv2 = RGATConv(hidden_channels, hidden_channels, num_relations)
+        self.lin = torch.nn.Linear(hidden_channels, out_channels)
+
+    def forward(self, x, edge_index, edge_type):
+        x = self.conv1(x, edge_index, edge_type)
+        x = F.relu(x)
+        x = self.conv2(x, edge_index, edge_type)
+        x = F.relu(x)
+        x = self.lin(x)
+        return F.log_softmax(x, dim=-1)
+
 
 def main(args):
-    dataset = HarryPotterRDF('.')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    HIDDEN_SIZE = 64  # original features per node is 87
+    STATE_EMBEDDING_SIZE = 16
 
-    dataset.process()
+    dataset = HarryPotterRDF('.')
+    data = dataset.process_one_graph(dataset.raw_file_names[0])
+
+    # RGAT - Conv
+    model_attention = HarryPotterStateEncoderAttention(dataset.NUM_FEATURES, HIDDEN_SIZE, STATE_EMBEDDING_SIZE,
+                                                       dataset.NUM_RELATIONS)
+    encoded_attention = model_attention(data.node_features.float(), data.edge_index, data.edge_type)
 
     print("here")
 

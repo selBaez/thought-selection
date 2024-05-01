@@ -1,4 +1,3 @@
-from datetime import date
 from pathlib import Path
 from random import getrandbits, sample
 
@@ -6,56 +5,10 @@ from rdflib import ConjunctiveGraph, URIRef, Literal, RDF, RDFS
 
 from cltl.brain.utils.helper_functions import hash_claim_id
 from src.dialogue_system.utils.global_variables import HARRYPOTTER_NS, HARRYPOTTER_PREFIX
-
-TEST = True
-
-NUM_USERS_PER_TYPE = 10 if TEST else 100
-DATA_PATHS = ["/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/test_set_en/",
-              "/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/train_set_en/"]
-USER_PATH = "/Users/sbaez/Documents/PhD/research/thought-selection/resources/users"
-RAW_USER_PATH = USER_PATH + "/raw"
-PROCESSED_USER_PATH = USER_PATH + "/processed"
-
-CONTEXT_ID = getrandbits(8)
-START_DATE = date(1997, 6, 26)
-HP_CONTEXT_CAPSULE = {"context_id": CONTEXT_ID,
-                      "date": START_DATE,
-                      "place": "Harry Potter World",
-                      "place_id": 1,
-                      "country": "UK",
-                      "region": "Scotland",
-                      "city": "Edinburgh"}
-
-PERSPECTIVE_GRAPH = URIRef("http://cltl.nl/leolani/talk/Perspectives")
-CLAIM_GRAPH = URIRef("http://cltl.nl/leolani/world/Claims")
-INSTANCE_GRAPH = URIRef("http://cltl.nl/leolani/world/Instances")
-
-TYPE_EVENT = URIRef("http://semanticweb.cs.vu.nl/2009/11/sem/Event")
-TYPE_ASSERTION = URIRef("http://groundedannotationframework.org/gaf#Assertion")
-TYPE_ATTRIBUTION = URIRef("http://groundedannotationframework.org/grasp#Attribution")
-TYPE_ATTRIBUTIONVALUE = URIRef("http://groundedannotationframework.org/grasp#AttributionValue")
-TYPE_CERTAINTYVALUE = URIRef("http://groundedannotationframework.org/grasp/factuality#CertaintyValue")
-TYPE_POLARITYVALUE = URIRef("http://groundedannotationframework.org/grasp/factuality#PolarityValue")
-
-EMOTION_UNDERSPECIFIED = URIRef("http://groundedannotationframework.org/grasp/emotion#UNDERSPECIFIED")
-CERTAINTY_POSSIBLE = URIRef("http://groundedannotationframework.org/grasp/factuality#POSSIBLE")
-CERTAINTY_CERTAIN = URIRef("http://groundedannotationframework.org/grasp/factuality#CERTAIN")
-POLARITY_POSITIVE = URIRef("http://groundedannotationframework.org/grasp/factuality#POSITIVE")
-POLARITY_NEGATIVE = URIRef("http://groundedannotationframework.org/grasp/factuality#NEGATIVE")
-SENTIMENT_NEUTRAL = URIRef("http://groundedannotationframework.org/grasp/sentiment#NEUTRAL")
-
-GRASP_HASATT = URIRef("http://groundedannotationframework.org/grasp#hasAttribution")
-GRASP_ATTFOR = URIRef("http://groundedannotationframework.org/grasp#isAttributionFor")
-GAF_DENOTEDBY = URIRef("http://groundedannotationframework.org/gaf#denotedBy")
-GAF_DENOTES = URIRef("http://groundedannotationframework.org/gaf#denotes")
-GAF_DENOTEDIN = URIRef("http://groundedannotationframework.org/gaf#denotedIn")
-GAF_CONTAINSDEN = URIRef("http://groundedannotationframework.org/gaf#containsDenotation")
-
-SIMPLE_ATTRRELS = [URIRef('http://groundedannotationframework.org/grasp/factuality#PolarityValue'),
-                   URIRef('http://groundedannotationframework.org/grasp/factuality#CertaintyValue'),
-                   URIRef('http://groundedannotationframework.org/grasp/sentiment#SentimentValue')]
-SIMPLE_ATTVALS = [CERTAINTY_CERTAIN, CERTAINTY_POSSIBLE, POLARITY_POSITIVE, POLARITY_NEGATIVE,
-                  SENTIMENT_NEUTRAL, EMOTION_UNDERSPECIFIED]
+from src.user_model.utils.constants import TEST, OG_DATA_PATHS, PERSPECTIVE_GRAPH, CLAIM_GRAPH, INSTANCE_GRAPH, TYPE_EVENT, \
+    TYPE_ASSERTION, TYPE_ATTRIBUTION, TYPE_ATTRIBUTIONVALUE, TYPE_CERTAINTYVALUE, TYPE_POLARITYVALUE, CERTAINTY_CERTAIN, \
+    CERTAINTY_POSSIBLE, POLARITY_POSITIVE, POLARITY_NEGATIVE, SENTIMENT_NEUTRAL, EMOTION_UNDERSPECIFIED, GRASP_HASATT, \
+    GRASP_ATTFOR, GAF_DENOTEDBY, GAF_DENOTES, GAF_DENOTEDIN, GAF_CONTAINSDEN
 
 
 def break_list(text):
@@ -118,7 +71,7 @@ def get_all_files(extension="json"):
     Get all JSON files that belong to the dataset
     """
     files = []
-    for folder in DATA_PATHS:
+    for folder in OG_DATA_PATHS:
         files.extend(list(Path(folder).glob(f'*.{extension}')))
 
     files.sort()

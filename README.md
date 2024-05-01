@@ -125,7 +125,7 @@ Run the web app from the `src` folder, like so:
 conda activate thought-selection
 cd thought-selection
 cd src/
-python web_app.py
+python web_interaction.py
 ```
 
 Now you can access [`http://127.0.0.1:5000/`](http://127.0.0.1:5000/) to begin chatting. The client may be blocked in

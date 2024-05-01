@@ -18,7 +18,7 @@ class TriplePhraser(SimplenlgPhraser):
     def __init__(self):
         # type: () -> None
         """
-        Generate response as natural and structured data
+        Generate response as structured data (thought to capsule)
 
         Parameters
         ----------

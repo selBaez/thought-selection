@@ -7,6 +7,8 @@ from iribaker import to_iri
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.commons.discrete import UtteranceType, Certainty, Polarity, Sentiment
 from src.dialogue_system.utils.global_variables import ONTOLOGY_DETAILS
+from src.user_model.utils.constants import NUM_USERS_PER_TYPE, RAW_USER_PATH, CONTEXT_ID, START_DATE, \
+    HP_CONTEXT_CAPSULE
 from src.user_model.utils.helpers import *
 
 
