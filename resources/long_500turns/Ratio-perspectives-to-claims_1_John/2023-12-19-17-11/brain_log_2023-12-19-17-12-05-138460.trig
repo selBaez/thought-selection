@@ -1,0 +1,1186 @@
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eps: <http://cltl.nl/episodicawareness/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gaf: <http://groundedannotationframework.org/gaf#> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix graspe: <http://groundedannotationframework.org/grasp/emotion#> .
+@prefix graspf: <http://groundedannotationframework.org/grasp/factuality#> .
+@prefix grasps: <http://groundedannotationframework.org/grasp/sentiment#> .
+@prefix hp: <http://harrypotter.org/> .
+@prefix leolaniContext: <http://cltl.nl/leolani/context/> .
+@prefix leolaniTalk: <http://cltl.nl/leolani/talk/> .
+@prefix leolaniWorld: <http://cltl.nl/leolani/world/> .
+@prefix ns1: <urn:x-rdflib:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time1: <http://www.w3.org/TR/owl-time/#> .
+@prefix xml1: <https://www.w3.org/TR/xmlschema-2/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+leolaniWorld:rita_looks_two_inch_long_nail_nails {
+    hp:rita hp:looks hp:two_inch_long_nail_nails .
+}
+
+leolaniWorld:vernon_looks_purple_red_wide_face {
+    hp:vernon hp:looks hp:purple_red_wide_face .
+}
+
+leolaniWorld:james_age_adult {
+    hp:james hp:age hp:adult .
+}
+
+leolaniWorld:Instances {
+    leolaniWorld:john a gaf:Instance,
+            hp:person ;
+        rdfs:label "john" .
+
+    leolaniWorld:leolani a hp:robot ;
+        rdfs:label "leolani" .
+
+    hp:12_years_old a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "12-years-old" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance21_char .
+
+    hp:adult a gaf:Instance,
+            hp:age-range,
+            hp:attribute ;
+        rdfs:label "adult" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance0_char0-25,
+            leolaniTalk:chat1_utterance5_char .
+
+    hp:colorful_skin_color a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "colorful-skin-color" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance15_char .
+
+    hp:doge a gaf:Instance,
+            hp:character ;
+        rdfs:label "doge" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance15_char .
+
+    hp:drive a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "drive" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance23_char .
+
+    hp:ernie a gaf:Instance,
+            hp:character ;
+        rdfs:label "ernie" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance21_char,
+            leolaniTalk:chat1_utterance23_char .
+
+    hp:female a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "female" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance17_char,
+            leolaniTalk:chat1_utterance19_char .
+
+    hp:fred_george_ginny a gaf:Instance,
+            hp:character ;
+        rdfs:label "fred-george-ginny" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance7_char .
+
+    hp:fudge a gaf:Instance,
+            hp:character ;
+        rdfs:label "fudge" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance27_char .
+
+    hp:harry_and_hermione a gaf:Instance,
+            hp:character ;
+        rdfs:label "harry-and-hermione" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance19_char .
+
+    hp:harry_mother a gaf:Instance,
+            hp:character ;
+        rdfs:label "harry-mother" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance29_char .
+
+    hp:hermione_harry a gaf:Instance,
+            hp:character ;
+        rdfs:label "hermione-harry" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance17_char .
+
+    hp:james a gaf:Instance,
+            hp:person ;
+        rdfs:label "james" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance0_char0-25 .
+
+    hp:kui_diki a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "kui-diki" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance31_char .
+
+    hp:male a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "male" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance27_char,
+            leolaniTalk:chat1_utterance29_char .
+
+    hp:nasal_nasal a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "nasal-nasal" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance25_char .
+
+    hp:purple_red_wide_face a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "purple-red-wide-face" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance3_char .
+
+    hp:rita a gaf:Instance,
+            hp:character ;
+        rdfs:label "rita" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance11_char,
+            leolaniTalk:chat1_utterance13_char .
+
+    hp:seamus a gaf:Instance,
+            hp:character ;
+        rdfs:label "seamus" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance31_char .
+
+    hp:short_body a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "short-body" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance7_char .
+
+    hp:slughorn a gaf:Instance,
+            hp:character ;
+        rdfs:label "slughorn" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance25_char .
+
+    hp:soft_light_brown_hair a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "soft-light-brown-hair" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance9_char .
+
+    hp:tonks a gaf:Instance,
+            hp:character ;
+        rdfs:label "tonks" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance9_char .
+
+    hp:two_inch_long_nail_nails a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "two-inch-long-nail-nails" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance11_char,
+            leolaniTalk:chat1_utterance13_char .
+
+    hp:vernon a gaf:Instance,
+            hp:character ;
+        rdfs:label "vernon" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance3_char,
+            leolaniTalk:chat1_utterance5_char .
+}
+
+leolaniWorld:hermione_harry_gender_female {
+    hp:hermione_harry hp:gender hp:female .
+}
+
+leolaniWorld:tonks_looks_soft_light_brown_hair {
+    hp:tonks hp:looks hp:soft_light_brown_hair .
+}
+
+leolaniTalk:Interactions {
+    leolaniContext:context243 sem:hasEvent leolaniTalk:chat1 .
+
+    leolaniContext:context321 a eps:Context ;
+        rdfs:label "context321" ;
+        hp:id "321"^^xml1:string ;
+        sem:hasBeginTimeStamp leolaniContext:2023-12-19 ;
+        sem:hasEvent leolaniTalk:chat1 ;
+        sem:hasPlace leolaniContext:bookstore .
+
+    leolaniContext:2023-12-19 a sem:Time,
+            time1:DateTimeDescription ;
+        rdfs:label "2023-12-19" ;
+        time1:day "19"^^xml1:gDay ;
+        time1:month "12"^^xml1:gMonthDay ;
+        time1:unitType time1:unitDay ;
+        time1:year "2023"^^xml1:gYear .
+
+    leolaniContext:bookstore a hp:location,
+            sem:Place ;
+        rdfs:label "bookstore" ;
+        hp:id "24"^^xml1:string ;
+        hp:in leolaniWorld:Amsterdam,
+            leolaniWorld:NL,
+            leolaniWorld:North_Holland .
+
+    leolaniTalk:chat1_utterance0 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance0" ;
+        hp:id "0"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance11 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance11" ;
+        hp:id "11"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance13 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance13" ;
+        hp:id "13"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance15 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance15" ;
+        hp:id "15"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance17 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance17" ;
+        hp:id "17"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance19 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance19" ;
+        hp:id "19"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance21 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance21" ;
+        hp:id "21"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance23 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance23" ;
+        hp:id "23"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance25 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance25" ;
+        hp:id "25"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance27 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance27" ;
+        hp:id "27"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance29 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance29" ;
+        hp:id "29"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance3 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance3" ;
+        hp:id "3"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance31 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance31" ;
+        hp:id "31"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance5 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance5" ;
+        hp:id "5"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance7 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance7" ;
+        hp:id "7"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance9 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance9" ;
+        hp:id "9"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniWorld:Amsterdam a hp:city,
+            hp:location,
+            sem:Place ;
+        rdfs:label "Amsterdam" .
+
+    leolaniWorld:NL a hp:country,
+            hp:location,
+            sem:Place ;
+        rdfs:label "NL" .
+
+    leolaniWorld:North_Holland a hp:location,
+            hp:region,
+            sem:Place ;
+        rdfs:label "North Holland" .
+
+    leolaniTalk:chat1 a grasp:Chat,
+            sem:Event ;
+        rdfs:label "chat1" ;
+        hp:id "1"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:chat1_utterance0,
+            leolaniTalk:chat1_utterance11,
+            leolaniTalk:chat1_utterance13,
+            leolaniTalk:chat1_utterance15,
+            leolaniTalk:chat1_utterance17,
+            leolaniTalk:chat1_utterance19,
+            leolaniTalk:chat1_utterance21,
+            leolaniTalk:chat1_utterance23,
+            leolaniTalk:chat1_utterance25,
+            leolaniTalk:chat1_utterance27,
+            leolaniTalk:chat1_utterance29,
+            leolaniTalk:chat1_utterance3,
+            leolaniTalk:chat1_utterance31,
+            leolaniTalk:chat1_utterance5,
+            leolaniTalk:chat1_utterance7,
+            leolaniTalk:chat1_utterance9 .
+
+    leolaniWorld:john a gaf:Instance,
+            grasp:Source,
+            hp:person,
+            sem:Actor ;
+        rdfs:label "john" .
+}
+
+leolaniWorld:Ontology {
+    eps:hasContext a owl:ObjectProperty ;
+        rdfs:domain gaf:Instance,
+            sem:Event ;
+        rdfs:range eps:Context ;
+        rdfs:subPropertyOf eps:contextProperty .
+
+    eps:hasDetection a owl:ObjectProperty ;
+        rdfs:domain eps:Context ;
+        rdfs:range grasp:Detection ;
+        rdfs:subPropertyOf eps:contextProperty .
+
+    gaf:Assertion a owl:Class ;
+        rdfs:subClassOf gaf:Instance .
+
+    grasp:Chat a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    grasp:Experience a owl:Class ;
+        rdfs:subClassOf gaf:Mention,
+            sem:Event .
+
+    grasp:Statement a owl:Class ;
+        rdfs:subClassOf gaf:Mention,
+            sem:Event .
+
+    grasp:Visual a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    grasp:hasAttribution a owl:ObjectProperty ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range grasp:Attribution ;
+        owl:inverseOf grasp:isAttributionFor .
+
+    grasp:wasAttributedTo a owl:ObjectProperty ;
+        rdfs:label "was attributed to" ;
+        rdfs:comment "States that a gaf:Mention was attributed to a gaf:Instance. This is a sub property of the prov:wasAttributedTo relation that can be used to relate any prov:Entity to any prov:Agent."^^xsd:string ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range grasp:Source ;
+        rdfs:subPropertyOf prov:wasAttributedTo .
+
+    hp:affiliation rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:age rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:belongings rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:export rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:gender rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:hobbies rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:lineage rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:looks rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:name rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:nickname rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:spells rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:talents rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:title rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    <http://schema.org/Place> a owl:Class .
+
+    sem:hasActor a owl:ObjectProperty ;
+        rdfs:label "has Actor" ;
+        rdfs:comment "Has actor is used to state which Actors or Objects participate in an Event." ;
+        rdfs:range sem:Actor ;
+        rdfs:subPropertyOf sem:eventProperty .
+
+    sem:hasBeginTimeStamp a owl:DatatypeProperty ;
+        rdfs:label "has begin timestamp" ;
+        rdfs:comment "Has begin timestamp is used to indicate the beginning of a time interval. Omitting the hasBeginTimeStamp while stating a hasEndTimeStamp is interpreted as an open ended interval." ;
+        rdfs:subPropertyOf sem:hasTimeStamp .
+
+    sem:hasPlace a owl:ObjectProperty ;
+        rdfs:label "has Place" ;
+        rdfs:comment "Has place is used to state in which Place(s) an Event happened. Coordinates can be attached to the Place with the W3C Geospatial Vocabulary (http://www.w3.org/2005/Incubator/geo/XGR-geo-20071023/)." ;
+        rdfs:range sem:Place ;
+        rdfs:subPropertyOf sem:eventProperty .
+
+    sem:hasSubEvent a owl:ObjectProperty ;
+        rdfs:label "has subevent" ;
+        rdfs:comment "Has subevent connects an Event to other Events that belong to it. This is a very generic property that does not mean the subevents fully define the superconcept or that there is any causal relationship." ;
+        rdfs:domain sem:Event ;
+        rdfs:range sem:Event ;
+        rdfs:subPropertyOf sem:eventProperty ;
+        owl:inverseOf sem:subEventOf .
+
+    sem:hasTime a owl:ObjectProperty ;
+        rdfs:label "has Time" ;
+        rdfs:comment "Has time is used to indicate at which time an Event took place or when a property under the Temporary Constraint is valid. Has time points to a symbolic representation of time, which allows semantic relations between time resources. (see http://www.w3.org/TR/owl-time/)" ;
+        rdfs:range sem:Time ;
+        rdfs:subPropertyOf sem:eventProperty .
+
+    skos:broadMatch a owl:AnnotationProperty .
+
+    skos:closeMatch a owl:AnnotationProperty .
+
+    skos:narrowMatch a owl:AnnotationProperty .
+
+    prov:category a owl:AnnotationProperty .
+
+    prov:component a owl:AnnotationProperty .
+
+    prov:definition a owl:AnnotationProperty .
+
+    prov:hadDerivation a owl:ObjectProperty ;
+        owl:inverseOf prov:wasDerivedFrom .
+
+    prov:inverse a owl:AnnotationProperty .
+
+    prov:qualifiedForm a owl:AnnotationProperty .
+
+    gaf:containsDenotation a owl:ObjectProperty ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range gaf:Instance ;
+        owl:inverseOf gaf:denotedIn .
+
+    gaf:denotedBy a owl:ObjectProperty ;
+        rdfs:domain gaf:Instance ;
+        rdfs:range gaf:Mention ;
+        rdfs:subPropertyOf gaf:denotedIn ;
+        owl:inverseOf gaf:denotes .
+
+    grasp:Source a owl:Class ;
+        rdfs:label "Source" ;
+        rdfs:comment "" ;
+        rdfs:subClassOf owl:Thing .
+
+    grasp:Utterance a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    graspe:anger a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:disgust a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:fear a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:happiness a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:sadness a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:surprise a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspf:certain a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    graspf:future a grasp:TemporalValue,
+            owl:NamedIndividual .
+
+    graspf:negative a grasp:PolarityValue,
+            owl:NamedIndividual .
+
+    graspf:non-future a grasp:TemporalValue,
+            owl:NamedIndividual .
+
+    graspf:positive a grasp:PolarityValue,
+            owl:NamedIndividual .
+
+    graspf:possible a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    graspf:probable a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    graspf:underspecified a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    grasps:negative a grasp:SentimentValue,
+            owl:NamedIndividual .
+
+    grasps:positive a grasp:SentimentValue,
+            owl:NamedIndividual .
+
+    sem:Actor a owl:Class ;
+        rdfs:label "Actor" ;
+        rdfs:comment """Actors are entities that take part in an Event, either actively or passively. Actors do not necessarily have to be sentient. They can also be objects. Actors are a thing, animate or inanimate, physical or non-physical.
+""" ;
+        skos:broadMatch <http://sw.opencyc.org/2009/04/07/concept/en/SomethingExisting>,
+            <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant> ;
+        skos:closeMatch dcterms:Agent,
+            dcterms:AgentClass,
+            <http://sw.opencyc.org/2009/04/07/concept/en/Agent-Generic>,
+            <http://www.ontologyportal.org/translations/SUMO.owl.txt#Agent>,
+            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor>,
+            foaf:Agent .
+
+    sem:Place a owl:Class ;
+        rdfs:label "Place" ;
+        rdfs:comment "Places are locations where an Event happens. They do not need to be physical places and hence do not necessarily need coordinates. Neither do they need to have any significance apart from them being the location of an Event." ;
+        skos:closeMatch dcterms:Location,
+            <http://sw.opencyc.org/2009/04/07/concept/en/EnduringThing-Localized>,
+            <http://www.ontologyportal.org/translations/SUMO.owl.txt#GeographicArea>,
+            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place> ;
+        skos:narrowMatch <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#PhysicalRegion>,
+            <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+    sem:Time a owl:Class ;
+        rdfs:label "Time" ;
+        rdfs:comment "Time contains symbolic representations of when an Event took place. Time instances do not necessarily need to have a timestamp associated with them. The Time class exists to represent semantics of time, e.g. that one thing happens before another, even though the exact timestamps are unknown." ;
+        skos:broadMatch <http://www.w3.org/2006/timeTemporalEntity> .
+
+    sem:subEventOf a owl:ObjectProperty ;
+        rdfs:label "subevent of" ;
+        rdfs:comment "Inverse property of hasSubEvent" .
+
+    rdf:value a owl:ObjectProperty .
+
+    prov:wasAttributedTo a owl:ObjectProperty .
+
+    prov:wasDerivedFrom a owl:ObjectProperty ;
+        rdfs:label "wasDerivedFrom" ;
+        rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range grasp:Detection,
+            grasp:Utterance ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        prov:category "starting-point" ;
+        prov:component "derivations" ;
+        prov:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
+        prov:inverse "hadDerivation" ;
+        prov:qualifiedForm prov:Derivation .
+
+    foaf:Agent a owl:Class .
+
+    eps:Context a owl:Class .
+
+    eps:contextProperty a owl:ObjectProperty ;
+        rdfs:label "context property" ;
+        rdfs:comment "Context properties connect Context to other SEM Core entities." ;
+        owl:equivalentProperty sem:eventProperty .
+
+    gaf:denotedIn a owl:ObjectProperty ;
+        rdfs:domain gaf:Instance ;
+        rdfs:range gaf:Mention .
+
+    gaf:denotes a owl:ObjectProperty ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range gaf:Instance ;
+        rdfs:subPropertyOf gaf:containsDenotation .
+
+    grasp:Attribution a owl:Class ;
+        rdfs:label "Attribution" ;
+        rdfs:comment "A grasp:Attribution reflects the attribution of some interpretation, some perspective to a gaf:Mention. An attribution expresses such things as certainty, emotion, polarity, sentiment, temporality."^^xsd:string ;
+        owl:disjointWith grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:intersectionOf ( [ a owl:Restriction ;
+                            owl:onProperty grasp:isAttributionFor ;
+                            owl:someValuesFrom gaf:Mention ] [ a owl:Restriction ;
+                            owl:onProperty rdf:value ;
+                            owl:someValuesFrom grasp:AttributionValue ] ) ] .
+
+    grasp:Detection a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    grasp:isAttributionFor a owl:ObjectProperty ;
+        rdfs:domain grasp:Attribution ;
+        rdfs:range gaf:Mention .
+
+    grasp:PolarityValue a owl:Class ;
+        rdfs:label "Polarity Value" ;
+        rdfs:comment "The polarity of a gaf:Mention (e.g. if something is or isn't the case)"^^xsd:string ;
+        rdfs:subClassOf grasp:FactualityValue ;
+        owl:disjointWith grasp:TemporalValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspf:negative graspf:positive ) ] .
+
+    grasp:CertaintyValue a owl:Class ;
+        rdfs:label "Certainty Value" ;
+        rdfs:comment "The level of certainty of a gaf:Mention"^^xsd:string ;
+        rdfs:subClassOf grasp:FactualityValue ;
+        owl:disjointWith grasp:PolarityValue,
+            grasp:TemporalValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspf:certain graspf:possible graspf:probable graspf:underspecified ) ] .
+
+    grasp:FactualityValue a owl:Class ;
+        rdfs:label "Factuality value"^^xsd:string ;
+        rdfs:subClassOf grasp:AttributionValue ;
+        owl:disjointWith grasp:SentimentValue .
+
+    grasp:SentimentValue a owl:Class ;
+        rdfs:label "Sentiment Value" ;
+        rdfs:comment "The sentiment expressed by a gaf:Mention"^^xsd:string ;
+        rdfs:subClassOf grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( grasps:negative grasps:positive ) ] .
+
+    grasp:TemporalValue a owl:Class ;
+        rdfs:label "Temporal Value" ;
+        rdfs:comment "The temporal property of a gaf:Mention"^^xsd:string ;
+        rdfs:subClassOf grasp:FactualityValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspf:future graspf:non-future ) ] .
+
+    sem:eventProperty a owl:ObjectProperty ;
+        rdfs:label "event property" ;
+        rdfs:comment "Event properties connect Events to other SEM Core entities." .
+
+    grasp:EmotionValue a owl:Class ;
+        rdfs:label "Emotion Value" ;
+        rdfs:comment "The emotion expressed in a gaf:Mention"^^xsd:string ;
+        rdfs:subClassOf grasp:AttributionValue ;
+        owl:disjointWith grasp:FactualityValue,
+            grasp:SentimentValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspe:anger graspe:disgust graspe:fear graspe:happiness graspe:sadness graspe:surprise ) ] .
+
+    gaf:Instance a owl:Class ;
+        rdfs:label "Instance" ;
+        rdfs:comment "Instances are statements about real world entities, including actions, processes and abstract notions. They are the primary subject of individuals of type gaf:Mention that can denote them."^^xsd:string ;
+        rdfs:subClassOf owl:Thing ;
+        owl:disjointWith grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Restriction ;
+                owl:onProperty gaf:denotedBy ;
+                owl:someValuesFrom gaf:Mention ] .
+
+    grasp:AttributionValue a owl:Class ;
+        rdfs:label "Attribution value"^^xsd:string ;
+        rdfs:comment "The value of a grasp:Attribution"^^xsd:string ;
+        rdfs:subClassOf owl:Thing .
+
+    sem:Event a owl:Class ;
+        rdfs:label "Event" ;
+        rdfs:comment "Events are things that happen. This comprises everything from historical events to web site sessions and mythical journeys. Event is the central class of SEM." ;
+        skos:broadMatch <http://linkedevents.org/ontology/Event>,
+            <http://purl.org/NET/c4dm/event.owl#Event> ;
+        skos:closeMatch dcmitype:Event,
+            <http://sw.opencyc.org/2009/04/07/concept/en/Situation>,
+            <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant>,
+            <http://www.ontologyportal.org/translations/SUMO.owl.txt#Process>,
+            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E5.Event> .
+
+    gaf:Mention a owl:Class ;
+        rdfs:label "Mention" ;
+        rdfs:comment """Mentions are references to members of the gaf:Instance class as they occur in (web) media such as texts, video, audio, images, etc. Mentions denote gaf:Instances.
+
+A Mention uniquely identifies the (part of a) web source that denotes the mention. We refer to the standard use of fragment identifiers for different media types. """^^xsd:string ;
+        rdfs:subClassOf owl:Thing ;
+        owl:disjointWith grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Restriction ;
+                owl:onProperty gaf:denotes ;
+                owl:someValuesFrom gaf:Instance ] .
+
+    hp:attribute a owl:Class .
+
+    hp:character a owl:Class ;
+        rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+}
+
+leolaniWorld:fred_george_ginny_looks_short_body {
+    hp:fred_george_ginny hp:looks hp:short_body .
+}
+
+leolaniTalk:Perspectives {
+    leolaniTalk:chat1_utterance0_char0-25 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance0_char0-25" ;
+        gaf:containsDenotation hp:adult,
+            hp:james ;
+        gaf:denotes leolaniWorld:james_age_adult ;
+        grasp:hasAttribution leolaniTalk:james_age_adult_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:11:55.737176"^^xml1:string ;
+        rdf:value "James was an adult"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance0 .
+
+    leolaniTalk:chat1_utterance11_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance11_char" ;
+        gaf:containsDenotation hp:rita,
+            hp:two_inch_long_nail_nails ;
+        gaf:denotes leolaniWorld:rita_looks_two_inch_long_nail_nails ;
+        grasp:hasAttribution leolaniTalk:rita_looks_two_inch_long_nail_nails_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:11:58.537212"^^xml1:string ;
+        rdf:value "rita looks two_inch_long_nail_nails"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance11 .
+
+    leolaniTalk:chat1_utterance13_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance13_char" ;
+        gaf:containsDenotation hp:rita,
+            hp:two_inch_long_nail_nails ;
+        gaf:denotes leolaniWorld:rita_looks_two_inch_long_nail_nails ;
+        grasp:hasAttribution leolaniTalk:rita_looks_two_inch_long_nail_nails_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:11:58.937615"^^xml1:string ;
+        rdf:value "rita looks two_inch_long_nail_nails"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance13 .
+
+    leolaniTalk:chat1_utterance15_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance15_char" ;
+        gaf:containsDenotation hp:colorful_skin_color,
+            hp:doge ;
+        gaf:denotes leolaniWorld:doge_looks_colorful_skin_color ;
+        grasp:hasAttribution leolaniTalk:doge_looks_colorful_skin_color_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:12:00.616916"^^xml1:string ;
+        rdf:value "doge looks colorful_skin_color"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance15 .
+
+    leolaniTalk:chat1_utterance17_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance17_char" ;
+        gaf:containsDenotation hp:female,
+            hp:hermione_harry ;
+        gaf:denotes leolaniWorld:hermione_harry_gender_female ;
+        grasp:hasAttribution leolaniTalk:hermione_harry_gender_female_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:12:01.027946"^^xml1:string ;
+        rdf:value "hermione_harry gender female"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance17 .
+
+    leolaniTalk:chat1_utterance19_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance19_char" ;
+        gaf:containsDenotation hp:female,
+            hp:harry_and_hermione ;
+        gaf:denotes leolaniWorld:harry_and_hermione_gender_female ;
+        grasp:hasAttribution leolaniTalk:harry_and_hermione_gender_female_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:12:01.512668"^^xml1:string ;
+        rdf:value "harry_and_hermione gender female"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance19 .
+
+    leolaniTalk:chat1_utterance21_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance21_char" ;
+        gaf:containsDenotation hp:12_years_old,
+            hp:ernie ;
+        gaf:denotes leolaniWorld:ernie_age_12_years_old ;
+        grasp:hasAttribution leolaniTalk:ernie_age_12_years_old_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:12:03.056572"^^xml1:string ;
+        rdf:value "ernie age 12_years_old"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance21 .
+
+    leolaniTalk:chat1_utterance23_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance23_char" ;
+        gaf:containsDenotation hp:drive,
+            hp:ernie ;
+        gaf:denotes leolaniWorld:ernie_export_drive ;
+        grasp:hasAttribution leolaniTalk:ernie_export_drive_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:12:03.456999"^^xml1:string ;
+        rdf:value "ernie export drive"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance23 .
+
+    leolaniTalk:chat1_utterance25_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance25_char" ;
+        gaf:containsDenotation hp:nasal_nasal,
+            hp:slughorn ;
+        gaf:denotes leolaniWorld:slughorn_nickname_nasal_nasal ;
+        grasp:hasAttribution leolaniTalk:slughorn_nickname_nasal_nasal_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:12:03.781627"^^xml1:string ;
+        rdf:value "slughorn nickname nasal_nasal"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance25 .
+
+    leolaniTalk:chat1_utterance27_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance27_char" ;
+        gaf:containsDenotation hp:fudge,
+            hp:male ;
+        gaf:denotes leolaniWorld:fudge_gender_male ;
+        grasp:hasAttribution leolaniTalk:fudge_gender_male_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:12:04.226373"^^xml1:string ;
+        rdf:value "fudge gender male"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance27 .
+
+    leolaniTalk:chat1_utterance29_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance29_char" ;
+        gaf:containsDenotation hp:harry_mother,
+            hp:male ;
+        gaf:denotes leolaniWorld:harry_mother_gender_male ;
+        grasp:hasAttribution leolaniTalk:harry_mother_gender_male_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:12:04.673571"^^xml1:string ;
+        rdf:value "harry_mother gender male"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance29 .
+
+    leolaniTalk:chat1_utterance31_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance31_char" ;
+        gaf:containsDenotation hp:kui_diki,
+            hp:seamus ;
+        gaf:denotes leolaniWorld:seamus_hobbies_kui_diki ;
+        grasp:hasAttribution leolaniTalk:seamus_hobbies_kui_diki_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:12:05.004580"^^xml1:string ;
+        rdf:value "seamus hobbies kui_diki"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance31 .
+
+    leolaniTalk:chat1_utterance3_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance3_char" ;
+        gaf:containsDenotation hp:purple_red_wide_face,
+            hp:vernon ;
+        gaf:denotes leolaniWorld:vernon_looks_purple_red_wide_face ;
+        grasp:hasAttribution leolaniTalk:vernon_looks_purple_red_wide_face_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:11:57.149419"^^xml1:string ;
+        rdf:value "vernon looks purple_red_wide_face"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance3 .
+
+    leolaniTalk:chat1_utterance5_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance5_char" ;
+        gaf:containsDenotation hp:adult,
+            hp:vernon ;
+        gaf:denotes leolaniWorld:vernon_age_adult ;
+        grasp:hasAttribution leolaniTalk:vernon_age_adult_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:11:57.552855"^^xml1:string ;
+        rdf:value "vernon age adult"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance5 .
+
+    leolaniTalk:chat1_utterance7_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance7_char" ;
+        gaf:containsDenotation hp:fred_george_ginny,
+            hp:short_body ;
+        gaf:denotes leolaniWorld:fred_george_ginny_looks_short_body ;
+        grasp:hasAttribution leolaniTalk:fred_george_ginny_looks_short_body_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:11:57.805657"^^xml1:string ;
+        rdf:value "fred_george_ginny looks short_body"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance7 .
+
+    leolaniTalk:chat1_utterance9_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance9_char" ;
+        gaf:containsDenotation hp:soft_light_brown_hair,
+            hp:tonks ;
+        gaf:denotes leolaniWorld:tonks_looks_soft_light_brown_hair ;
+        grasp:hasAttribution leolaniTalk:tonks_looks_soft_light_brown_hair_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 17:11:58.170698"^^xml1:string ;
+        rdf:value "tonks looks soft_light_brown_hair"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance9 .
+
+    leolaniTalk:doge_looks_colorful_skin_color_3120 a grasp:Attribution ;
+        rdfs:label "doge_looks_colorful_skin_color_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance15_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ernie_age_12_years_old_3120 a grasp:Attribution ;
+        rdfs:label "ernie_age_12_years_old_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance21_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ernie_export_drive_3120 a grasp:Attribution ;
+        rdfs:label "ernie_export_drive_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance23_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:fred_george_ginny_looks_short_body_3120 a grasp:Attribution ;
+        rdfs:label "fred_george_ginny_looks_short_body_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance7_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:fudge_gender_male_3120 a grasp:Attribution ;
+        rdfs:label "fudge_gender_male_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance27_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:harry_and_hermione_gender_female_3120 a grasp:Attribution ;
+        rdfs:label "harry_and_hermione_gender_female_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance19_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:harry_mother_gender_male_3120 a grasp:Attribution ;
+        rdfs:label "harry_mother_gender_male_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance29_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_harry_gender_female_3120 a grasp:Attribution ;
+        rdfs:label "hermione_harry_gender_female_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance17_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:james_age_adult_3120 a grasp:Attribution ;
+        rdfs:label "james_age_adult_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance0_char0-25 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:seamus_hobbies_kui_diki_3120 a grasp:Attribution ;
+        rdfs:label "seamus_hobbies_kui_diki_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance31_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:slughorn_nickname_nasal_nasal_3120 a grasp:Attribution ;
+        rdfs:label "slughorn_nickname_nasal_nasal_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance25_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:tonks_looks_soft_light_brown_hair_3120 a grasp:Attribution ;
+        rdfs:label "tonks_looks_soft_light_brown_hair_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance9_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:vernon_age_adult_3120 a grasp:Attribution ;
+        rdfs:label "vernon_age_adult_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance5_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:vernon_looks_purple_red_wide_face_3120 a grasp:Attribution ;
+        rdfs:label "vernon_looks_purple_red_wide_face_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance3_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:rita_looks_two_inch_long_nail_nails_3120 a grasp:Attribution ;
+        rdfs:label "rita_looks_two_inch_long_nail_nails_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance11_char,
+            leolaniTalk:chat1_utterance13_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    graspe:UNDERSPECIFIED a grasp:AttributionValue,
+            graspe:EmotionValue ;
+        rdfs:label "UNDERSPECIFIED" .
+
+    graspf:CERTAIN a grasp:AttributionValue,
+            graspf:CertaintyValue ;
+        rdfs:label "CERTAIN" .
+
+    graspf:POSITIVE a grasp:AttributionValue,
+            graspf:PolarityValue ;
+        rdfs:label "POSITIVE" .
+
+    grasps:NEUTRAL a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "NEUTRAL" .
+}
+
+leolaniWorld:leolani_know_john {
+    leolaniWorld:leolani hp:know leolaniWorld:john .
+}
+
+leolaniWorld:harry_and_hermione_gender_female {
+    hp:harry_and_hermione hp:gender hp:female .
+}
+
+leolaniWorld:Claims {
+    leolaniWorld:doge_looks_colorful_skin_color a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "doge_looks_colorful_skin_color" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance15_char .
+
+    leolaniWorld:ernie_age_12_years_old a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ernie_age_12_years_old" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance21_char .
+
+    leolaniWorld:ernie_export_drive a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ernie_export_drive" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance23_char .
+
+    leolaniWorld:fred_george_ginny_looks_short_body a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "fred_george_ginny_looks_short_body" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance7_char .
+
+    leolaniWorld:fudge_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "fudge_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance27_char .
+
+    leolaniWorld:harry_and_hermione_gender_female a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_and_hermione_gender_female" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance19_char .
+
+    leolaniWorld:harry_mother_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_mother_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance29_char .
+
+    leolaniWorld:hermione_harry_gender_female a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_harry_gender_female" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance17_char .
+
+    leolaniWorld:james_age_adult a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "james_age_adult" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance0_char0-25 .
+
+    leolaniWorld:leolani_know_john a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_john" .
+
+    leolaniWorld:rita_looks_two_inch_long_nail_nails a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "rita_looks_two_inch_long_nail_nails" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance11_char,
+            leolaniTalk:chat1_utterance13_char .
+
+    leolaniWorld:seamus_hobbies_kui_diki a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "seamus_hobbies_kui_diki" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance31_char .
+
+    leolaniWorld:slughorn_nickname_nasal_nasal a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "slughorn_nickname_nasal_nasal" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance25_char .
+
+    leolaniWorld:tonks_looks_soft_light_brown_hair a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "tonks_looks_soft_light_brown_hair" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char .
+
+    leolaniWorld:vernon_age_adult a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_age_adult" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance5_char .
+
+    leolaniWorld:vernon_looks_purple_red_wide_face a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_looks_purple_red_wide_face" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance3_char .
+
+    leolaniWorld:john owl:sameAs leolaniWorld:john .
+}
+
+leolaniWorld:harry_mother_gender_male {
+    hp:harry_mother hp:gender hp:male .
+}
+
+leolaniWorld:ernie_export_drive {
+    hp:ernie hp:export hp:drive .
+}
+
+leolaniWorld:ernie_age_12_years_old {
+    hp:ernie hp:age hp:12_years_old .
+}
+
+leolaniWorld:doge_looks_colorful_skin_color {
+    hp:doge hp:looks hp:colorful_skin_color .
+}
+
+leolaniWorld:seamus_hobbies_kui_diki {
+    hp:seamus hp:hobbies hp:kui_diki .
+}
+
+leolaniWorld:vernon_age_adult {
+    hp:vernon hp:age hp:adult .
+}
+
+leolaniWorld:slughorn_nickname_nasal_nasal {
+    hp:slughorn hp:nickname hp:nasal_nasal .
+}
+
+leolaniWorld:fudge_gender_male {
+    hp:fudge hp:gender hp:male .
+}
+

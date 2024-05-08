@@ -1,0 +1,3854 @@
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eps: <http://cltl.nl/episodicawareness/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gaf: <http://groundedannotationframework.org/gaf#> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix graspe: <http://groundedannotationframework.org/grasp/emotion#> .
+@prefix graspf: <http://groundedannotationframework.org/grasp/factuality#> .
+@prefix grasps: <http://groundedannotationframework.org/grasp/sentiment#> .
+@prefix hp: <http://harrypotter.org/> .
+@prefix leolaniContext: <http://cltl.nl/leolani/context/> .
+@prefix leolaniTalk: <http://cltl.nl/leolani/talk/> .
+@prefix leolaniWorld: <http://cltl.nl/leolani/world/> .
+@prefix ns1: <urn:x-rdflib:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time1: <http://www.w3.org/TR/owl-time/#> .
+@prefix xml1: <https://www.w3.org/TR/xmlschema-2/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+leolaniWorld:harry_belongings_gongxian {
+    hp:harry hp:belongings hp:gongxian .
+}
+
+leolaniWorld:ron_spells_silent_and_silent {
+    hp:ron hp:spells hp:silent_and_silent .
+}
+
+leolaniWorld:fred_george_ginny_looks_short_body {
+    hp:fred_george_ginny hp:looks hp:short_body .
+}
+
+leolaniWorld:luna_nickname_crazy_girl {
+    hp:luna hp:nickname hp:crazy_girl .
+}
+
+leolaniWorld:fred_hobbies_experience_muggle_life {
+    hp:fred hp:hobbies hp:experience_muggle_life .
+}
+
+leolaniWorld:pomfrey_gender_female {
+    hp:pomfrey hp:gender hp:female .
+}
+
+leolaniWorld:lupin_name_tonks {
+    hp:lupin hp:name hp:tonks .
+}
+
+leolaniWorld:moody_looks_the_fake_legs_made_of_wood {
+    hp:moody hp:looks hp:the_fake_legs_made_of_wood .
+}
+
+leolaniWorld:ginny_character_kindly {
+    hp:ginny hp:character hp:kindly .
+}
+
+leolaniWorld:umbridge_looks_round {
+    hp:umbridge hp:looks hp:round .
+}
+
+leolaniWorld:firenze_gender_male {
+    hp:firenze hp:gender hp:male .
+}
+
+leolaniWorld:dumbledore_belongings_black_gem_ring {
+    hp:dumbledore hp:belongings hp:black_gem_ring .
+}
+
+leolaniWorld:james_name_james_potter {
+    hp:james hp:name hp:james_potter .
+}
+
+leolaniWorld:james_age_adult {
+    hp:james hp:age hp:adult .
+}
+
+leolaniWorld:rita_affiliation_prophetician {
+    hp:rita hp:affiliation hp:prophetician .
+}
+
+leolaniWorld:mrs_weasley_hobbies_experience_muggle_life {
+    hp:mrs_weasley hp:hobbies hp:experience_muggle_life .
+}
+
+leolaniWorld:george_affiliation_hogwarts {
+    hp:george hp:affiliation hp:hogwarts .
+}
+
+leolaniWorld:leolani_know_john {
+    leolaniWorld:leolani hp:know leolaniWorld:john .
+}
+
+leolaniWorld:harry_belongings_gold_pendant_boxes {
+    hp:harry hp:belongings hp:gold_pendant_boxes .
+}
+
+leolaniWorld:hermione_spells_urgent_appearance {
+    hp:hermione hp:spells hp:urgent_appearance .
+}
+
+leolaniWorld:neville_gender_male {
+    hp:neville hp:gender hp:male .
+}
+
+leolaniWorld:dumbledore_dumbledore_lineage_mixed_wizard {
+    hp:dumbledore_dumbledore hp:lineage hp:mixed_wizard .
+}
+
+leolaniWorld:neville_belongings_fake_galon {
+    hp:neville hp:belongings hp:fake_galon .
+}
+
+leolaniWorld:ron_looks_freckles_on_the_face {
+    hp:ron hp:looks hp:freckles_on_the_face .
+}
+
+leolaniWorld:mclaggen_title_kui_diqi_goalkeeper {
+    hp:mclaggen hp:title hp:kui_diqi_goalkeeper .
+}
+
+leolaniWorld:cedric_affiliation_hogwarts {
+    hp:cedric hp:affiliation hp:hogwarts .
+}
+
+leolaniWorld:kreacher_age_very_old {
+    hp:kreacher hp:age hp:very_old .
+}
+
+leolaniWorld:morfin_lineage_pure_blood_wizard {
+    hp:morfin hp:lineage hp:pure_blood_wizard .
+}
+
+leolaniWorld:hermione_name_fleur {
+    hp:hermione hp:name hp:fleur .
+}
+
+leolaniWorld:hermione_harry_age_13_years_old {
+    hp:hermione_harry hp:age hp:13_years_old .
+}
+
+leolaniWorld:malfoy_looks_the_golden_yellow_hair_of_the_oil_and_smoothness {
+    hp:malfoy hp:looks hp:the_golden_yellow_hair_of_the_oil_and_smoothness .
+}
+
+leolaniWorld:hermione_spells_fly_the_boxes {
+    hp:hermione hp:spells hp:fly_the_boxes .
+}
+
+leolaniTalk:Perspectives {
+    leolaniTalk:aberforth_looks_gray_hair_and_beard_3120 a grasp:Attribution ;
+        rdfs:label "aberforth_looks_gray_hair_and_beard_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance99_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:cedric_affiliation_hogwarts_3120 a grasp:Attribution ;
+        rdfs:label "cedric_affiliation_hogwarts_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance7_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:chat1_utterance0_char0-25 a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance0_char0-25" ;
+        gaf:containsDenotation hp:adult,
+            hp:james ;
+        gaf:denotes leolaniWorld:james_age_adult ;
+        grasp:hasAttribution leolaniTalk:james_age_adult_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:23.566516"^^xml1:string ;
+        rdf:value "James was an adult"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance0 .
+
+    leolaniTalk:chat1_utterance101_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance101_char" ;
+        gaf:containsDenotation hp:malfoy,
+            hp:the_golden_yellow_hair_of_the_oil_and_smoothness ;
+        gaf:denotes leolaniWorld:malfoy_looks_the_golden_yellow_hair_of_the_oil_and_smoothness ;
+        grasp:hasAttribution leolaniTalk:malfoy_looks_the_golden_yellow_hair_of_the_oil_and_smoothness_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:56.299125"^^xml1:string ;
+        rdf:value "malfoy looks the_golden_yellow_hair_of_the_oil_and_smoothness"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance101 .
+
+    leolaniTalk:chat1_utterance103_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance103_char" ;
+        gaf:containsDenotation hp:george,
+            hp:hogwarts ;
+        gaf:denotes leolaniWorld:george_affiliation_hogwarts ;
+        grasp:hasAttribution leolaniTalk:george_affiliation_hogwarts_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:57.333211"^^xml1:string ;
+        rdf:value "george affiliation hogwarts"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance103 .
+
+    leolaniTalk:chat1_utterance105_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance105_char" ;
+        gaf:containsDenotation hp:female,
+            hp:pomfrey ;
+        gaf:denotes leolaniWorld:pomfrey_gender_female ;
+        grasp:hasAttribution leolaniTalk:pomfrey_gender_female_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:58.323267"^^xml1:string ;
+        rdf:value "pomfrey gender female"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance105 .
+
+    leolaniTalk:chat1_utterance107_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance107_char" ;
+        gaf:containsDenotation hp:lupin,
+            hp:tonks ;
+        gaf:denotes leolaniWorld:lupin_name_tonks ;
+        grasp:hasAttribution leolaniTalk:lupin_name_tonks_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:59.375112"^^xml1:string ;
+        rdf:value "lupin name tonks"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance107 .
+
+    leolaniTalk:chat1_utterance109_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance109_char" ;
+        gaf:containsDenotation hp:member_of_the_phoenix,
+            hp:mundungus ;
+        gaf:denotes leolaniWorld:mundungus_title_member_of_the_phoenix ;
+        grasp:hasAttribution leolaniTalk:mundungus_title_member_of_the_phoenix_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:00.447168"^^xml1:string ;
+        rdf:value "mundungus title member_of_the_phoenix"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance109 .
+
+    leolaniTalk:chat1_utterance111_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance111_char" ;
+        gaf:containsDenotation hp:member_of_the_phoenix,
+            hp:mundungus ;
+        gaf:denotes leolaniWorld:mundungus_title_member_of_the_phoenix ;
+        grasp:hasAttribution leolaniTalk:mundungus_title_member_of_the_phoenix_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:01.541662"^^xml1:string ;
+        rdf:value "mundungus title member_of_the_phoenix"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance111 .
+
+    leolaniTalk:chat1_utterance113_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance113_char" ;
+        gaf:containsDenotation hp:cat,
+            hp:hermione_fred ;
+        gaf:denotes leolaniWorld:hermione_fred_belongings_cat ;
+        grasp:hasAttribution leolaniTalk:hermione_fred_belongings_cat_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:02.477573"^^xml1:string ;
+        rdf:value "hermione_fred belongings cat"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance113 .
+
+    leolaniTalk:chat1_utterance115_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance115_char" ;
+        gaf:containsDenotation hp:dean_tomas,
+            hp:pale ;
+        gaf:denotes leolaniWorld:dean_tomas_looks_pale ;
+        grasp:hasAttribution leolaniTalk:dean_tomas_looks_pale_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:03.608963"^^xml1:string ;
+        rdf:value "dean_tomas looks pale"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance115 .
+
+    leolaniTalk:chat1_utterance117_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance117_char" ;
+        gaf:containsDenotation hp:dean_tomas,
+            hp:pale ;
+        gaf:denotes leolaniWorld:dean_tomas_looks_pale ;
+        grasp:hasAttribution leolaniTalk:dean_tomas_looks_pale_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:04.784151"^^xml1:string ;
+        rdf:value "dean_tomas looks pale"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance117 .
+
+    leolaniTalk:chat1_utterance119_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance119_char" ;
+        gaf:containsDenotation hp:kreacher,
+            hp:very_old ;
+        gaf:denotes leolaniWorld:kreacher_age_very_old ;
+        grasp:hasAttribution leolaniTalk:kreacher_age_very_old_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:05.783283"^^xml1:string ;
+        rdf:value "kreacher age very_old"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance119 .
+
+    leolaniTalk:chat1_utterance11_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance11_char" ;
+        gaf:containsDenotation hp:kui_diqi_goalkeeper,
+            hp:mclaggen ;
+        gaf:denotes leolaniWorld:mclaggen_title_kui_diqi_goalkeeper ;
+        grasp:hasAttribution leolaniTalk:mclaggen_title_kui_diqi_goalkeeper_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:26.487117"^^xml1:string ;
+        rdf:value "mclaggen title kui_diqi_goalkeeper"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance11 .
+
+    leolaniTalk:chat1_utterance121_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance121_char" ;
+        gaf:containsDenotation hp:seamus,
+            hp:swollen_face ;
+        gaf:denotes leolaniWorld:seamus_looks_swollen_face ;
+        grasp:hasAttribution leolaniTalk:seamus_looks_swollen_face_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:07.011730"^^xml1:string ;
+        rdf:value "seamus looks swollen_face"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance121 .
+
+    leolaniTalk:chat1_utterance123_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance123_char" ;
+        gaf:containsDenotation hp:seamus,
+            hp:swollen_face ;
+        gaf:denotes leolaniWorld:seamus_looks_swollen_face ;
+        grasp:hasAttribution leolaniTalk:seamus_looks_swollen_face_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:08.223578"^^xml1:string ;
+        rdf:value "seamus looks swollen_face"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance123 .
+
+    leolaniTalk:chat1_utterance125_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance125_char" ;
+        gaf:containsDenotation hp:call_god_guards,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:hermione_spells_call_god_guards ;
+        grasp:hasAttribution leolaniTalk:hermione_spells_call_god_guards_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:09.261097"^^xml1:string ;
+        rdf:value "hermione spells call_god_guards"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance125 .
+
+    leolaniTalk:chat1_utterance127_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance127_char" ;
+        gaf:containsDenotation hp:dumbledore_dumbledore,
+            hp:mixed_wizard ;
+        gaf:denotes leolaniWorld:dumbledore_dumbledore_lineage_mixed_wizard ;
+        grasp:hasAttribution leolaniTalk:dumbledore_dumbledore_lineage_mixed_wizard_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:10.539349"^^xml1:string ;
+        rdf:value "dumbledore_dumbledore lineage mixed_wizard"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance127 .
+
+    leolaniTalk:chat1_utterance129_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance129_char" ;
+        gaf:containsDenotation hp:dumbledore_dumbledore,
+            hp:mixed_wizard ;
+        gaf:denotes leolaniWorld:dumbledore_dumbledore_lineage_mixed_wizard ;
+        grasp:hasAttribution leolaniTalk:dumbledore_dumbledore_lineage_mixed_wizard_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:11.799960"^^xml1:string ;
+        rdf:value "dumbledore_dumbledore lineage mixed_wizard"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance129 .
+
+    leolaniTalk:chat1_utterance131_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance131_char" ;
+        gaf:containsDenotation hp:black_gem_ring,
+            hp:dumbledore ;
+        gaf:denotes leolaniWorld:dumbledore_belongings_black_gem_ring ;
+        grasp:hasAttribution leolaniTalk:dumbledore_belongings_black_gem_ring_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:12.934678"^^xml1:string ;
+        rdf:value "dumbledore belongings black_gem_ring"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance131 .
+
+    leolaniTalk:chat1_utterance133_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance133_char" ;
+        gaf:containsDenotation hp:harry,
+            hp:water_and_fire_do_not_invade ;
+        gaf:denotes leolaniWorld:harry_spells_water_and_fire_do_not_invade ;
+        grasp:hasAttribution leolaniTalk:harry_spells_water_and_fire_do_not_invade_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:14.273419"^^xml1:string ;
+        rdf:value "harry spells water_and_fire_do_not_invade"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance133 .
+
+    leolaniTalk:chat1_utterance135_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance135_char" ;
+        gaf:containsDenotation hp:prophetician,
+            hp:rita ;
+        gaf:denotes leolaniWorld:rita_affiliation_prophetician ;
+        grasp:hasAttribution leolaniTalk:rita_affiliation_prophetician_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:15.658600"^^xml1:string ;
+        rdf:value "rita affiliation prophetician"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance135 .
+
+    leolaniTalk:chat1_utterance137_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance137_char" ;
+        gaf:containsDenotation hp:fake_galon,
+            hp:neville ;
+        gaf:denotes leolaniWorld:neville_belongings_fake_galon ;
+        grasp:hasAttribution leolaniTalk:neville_belongings_fake_galon_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:17.057187"^^xml1:string ;
+        rdf:value "neville belongings fake_galon"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance137 .
+
+    leolaniTalk:chat1_utterance139_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance139_char" ;
+        gaf:containsDenotation hp:fake_galon,
+            hp:neville ;
+        gaf:denotes leolaniWorld:neville_belongings_fake_galon ;
+        grasp:hasAttribution leolaniTalk:neville_belongings_fake_galon_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:18.458257"^^xml1:string ;
+        rdf:value "neville belongings fake_galon"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance139 .
+
+    leolaniTalk:chat1_utterance13_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance13_char" ;
+        gaf:containsDenotation hp:gold_pendant_boxes,
+            hp:harry ;
+        gaf:denotes leolaniWorld:harry_belongings_gold_pendant_boxes ;
+        grasp:hasAttribution leolaniTalk:harry_belongings_gold_pendant_boxes_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:26.865903"^^xml1:string ;
+        rdf:value "harry belongings gold_pendant_boxes"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance13 .
+
+    leolaniTalk:chat1_utterance141_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance141_char" ;
+        gaf:containsDenotation hp:firenze,
+            hp:male ;
+        gaf:denotes leolaniWorld:firenze_gender_male ;
+        grasp:hasAttribution leolaniTalk:firenze_gender_male_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:19.689811"^^xml1:string ;
+        rdf:value "firenze gender male"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance141 .
+
+    leolaniTalk:chat1_utterance143_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance143_char" ;
+        gaf:containsDenotation hp:gold_pendant_box,
+            hp:umbridge ;
+        gaf:denotes leolaniWorld:umbridge_belongings_gold_pendant_box ;
+        grasp:hasAttribution leolaniTalk:umbridge_belongings_gold_pendant_box_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:22.012429"^^xml1:string ;
+        rdf:value "umbridge belongings gold_pendant_box"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance143 .
+
+    leolaniTalk:chat1_utterance145_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance145_char" ;
+        gaf:containsDenotation hp:president_hogwarts,
+            hp:umbridge ;
+        gaf:denotes leolaniWorld:umbridge_title_president_hogwarts ;
+        grasp:hasAttribution leolaniTalk:umbridge_title_president_hogwarts_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:23.522915"^^xml1:string ;
+        rdf:value "umbridge title president_hogwarts"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance145 .
+
+    leolaniTalk:chat1_utterance147_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance147_char" ;
+        gaf:containsDenotation hp:two_short_fingers_short_hands_with_thick_hands,
+            hp:umbridge ;
+        gaf:denotes leolaniWorld:umbridge_looks_two_short_fingers_short_hands_with_thick_hands ;
+        grasp:hasAttribution leolaniTalk:umbridge_looks_two_short_fingers_short_hands_with_thick_hands_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:24.948150"^^xml1:string ;
+        rdf:value "umbridge looks two_short_fingers_short_hands_with_thick_hands"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance147 .
+
+    leolaniTalk:chat1_utterance149_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance149_char" ;
+        gaf:containsDenotation hp:round,
+            hp:umbridge ;
+        gaf:denotes leolaniWorld:umbridge_looks_round ;
+        grasp:hasAttribution leolaniTalk:umbridge_looks_round_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:26.380734"^^xml1:string ;
+        rdf:value "umbridge looks round"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance149 .
+
+    leolaniTalk:chat1_utterance151_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance151_char" ;
+        gaf:containsDenotation hp:harry,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:harry_name_hermione ;
+        grasp:hasAttribution leolaniTalk:harry_name_hermione_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:27.852166"^^xml1:string ;
+        rdf:value "harry name hermione"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance151 .
+
+    leolaniTalk:chat1_utterance153_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance153_char" ;
+        gaf:containsDenotation hp:fleur,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:hermione_name_fleur ;
+        grasp:hasAttribution leolaniTalk:hermione_name_fleur_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:29.431815"^^xml1:string ;
+        rdf:value "hermione name fleur"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance153 .
+
+    leolaniTalk:chat1_utterance155_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance155_char" ;
+        gaf:containsDenotation hp:13_years_old,
+            hp:hermione_harry ;
+        gaf:denotes leolaniWorld:hermione_harry_age_13_years_old ;
+        grasp:hasAttribution leolaniTalk:hermione_harry_age_13_years_old_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:31.125658"^^xml1:string ;
+        rdf:value "hermione_harry age 13_years_old"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance155 .
+
+    leolaniTalk:chat1_utterance157_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance157_char" ;
+        gaf:containsDenotation hp:crazy_girl,
+            hp:ron ;
+        gaf:denotes leolaniWorld:ron_nickname_crazy_girl ;
+        grasp:hasAttribution leolaniTalk:ron_nickname_crazy_girl_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:32.788236"^^xml1:string ;
+        rdf:value "ron nickname crazy_girl"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance157 .
+
+    leolaniTalk:chat1_utterance159_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance159_char" ;
+        gaf:containsDenotation hp:james,
+            hp:james_potter ;
+        gaf:denotes leolaniWorld:james_name_james_potter ;
+        grasp:hasAttribution leolaniTalk:james_name_james_potter_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:34.427807"^^xml1:string ;
+        rdf:value "james name james_potter"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance159 .
+
+    leolaniTalk:chat1_utterance15_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance15_char" ;
+        gaf:containsDenotation hp:lupin,
+            hp:veteran ;
+        gaf:denotes leolaniWorld:lupin_nickname_veteran ;
+        grasp:hasAttribution leolaniTalk:lupin_nickname_veteran_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:27.324402"^^xml1:string ;
+        rdf:value "lupin nickname veteran"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance15 .
+
+    leolaniTalk:chat1_utterance161_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance161_char" ;
+        gaf:containsDenotation hp:james,
+            hp:james_potter ;
+        gaf:denotes leolaniWorld:james_name_james_potter ;
+        grasp:hasAttribution leolaniTalk:james_name_james_potter_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:36.165417"^^xml1:string ;
+        rdf:value "james name james_potter"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance161 .
+
+    leolaniTalk:chat1_utterance163_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance163_char" ;
+        gaf:containsDenotation hp:mr_weasley,
+            hp:red_hair ;
+        gaf:denotes leolaniWorld:mr_weasley_looks_red_hair ;
+        grasp:hasAttribution leolaniTalk:mr_weasley_looks_red_hair_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:37.656155"^^xml1:string ;
+        rdf:value "mr_weasley looks red_hair"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance163 .
+
+    leolaniTalk:chat1_utterance165_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance165_char" ;
+        gaf:containsDenotation hp:mrs_rosmerta,
+            hp:rosmerta ;
+        gaf:denotes leolaniWorld:mrs_rosmerta_name_rosmerta ;
+        grasp:hasAttribution leolaniTalk:mrs_rosmerta_name_rosmerta_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:24:39.428996"^^xml1:string ;
+        rdf:value "mrs_rosmerta name rosmerta"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance165 .
+
+    leolaniTalk:chat1_utterance17_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance17_char" ;
+        gaf:containsDenotation hp:experience_muggle_life,
+            hp:mrs_weasley ;
+        gaf:denotes leolaniWorld:mrs_weasley_hobbies_experience_muggle_life ;
+        grasp:hasAttribution leolaniTalk:mrs_weasley_hobbies_experience_muggle_life_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:27.781070"^^xml1:string ;
+        rdf:value "mrs_weasley hobbies experience_muggle_life"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance17 .
+
+    leolaniTalk:chat1_utterance19_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance19_char" ;
+        gaf:containsDenotation hp:experience_muggle_life,
+            hp:fred ;
+        gaf:denotes leolaniWorld:fred_hobbies_experience_muggle_life ;
+        grasp:hasAttribution leolaniTalk:fred_hobbies_experience_muggle_life_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:28.260029"^^xml1:string ;
+        rdf:value "fred hobbies experience_muggle_life"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance19 .
+
+    leolaniTalk:chat1_utterance21_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance21_char" ;
+        gaf:containsDenotation hp:harry_and_hermione,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:harry_and_hermione_name_hermione ;
+        grasp:hasAttribution leolaniTalk:harry_and_hermione_name_hermione_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:29.566503"^^xml1:string ;
+        rdf:value "harry_and_hermione name hermione"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance21 .
+
+    leolaniTalk:chat1_utterance23_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance23_char" ;
+        gaf:containsDenotation hp:hermione ;
+        gaf:denotes leolaniWorld:hermione_name_hermione ;
+        grasp:hasAttribution leolaniTalk:hermione_name_hermione_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:30.097434"^^xml1:string ;
+        rdf:value "hermione name hermione"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance23 .
+
+    leolaniTalk:chat1_utterance25_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance25_char" ;
+        gaf:containsDenotation hp:gu_lingge_employee,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:hermione_title_gu_lingge_employee ;
+        grasp:hasAttribution leolaniTalk:hermione_title_gu_lingge_employee_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:30.501165"^^xml1:string ;
+        rdf:value "hermione title gu_lingge_employee"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance25 .
+
+    leolaniTalk:chat1_utterance27_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance27_char" ;
+        gaf:containsDenotation hp:gu_lingge_employee,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:hermione_title_gu_lingge_employee ;
+        grasp:hasAttribution leolaniTalk:hermione_title_gu_lingge_employee_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:30.894926"^^xml1:string ;
+        rdf:value "hermione title gu_lingge_employee"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance27 .
+
+    leolaniTalk:chat1_utterance29_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance29_char" ;
+        gaf:containsDenotation hp:big_eyes,
+            hp:fleur ;
+        gaf:denotes leolaniWorld:fleur_looks_big_eyes ;
+        grasp:hasAttribution leolaniTalk:fleur_looks_big_eyes_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:31.291877"^^xml1:string ;
+        rdf:value "fleur looks big_eyes"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance29 .
+
+    leolaniTalk:chat1_utterance31_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance31_char" ;
+        gaf:containsDenotation hp:dudley,
+            hp:large ;
+        gaf:denotes leolaniWorld:dudley_looks_large ;
+        grasp:hasAttribution leolaniTalk:dudley_looks_large_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:31.758106"^^xml1:string ;
+        rdf:value "dudley looks large"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance31 .
+
+    leolaniTalk:chat1_utterance33_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance33_char" ;
+        gaf:containsDenotation hp:and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth,
+            hp:morfin ;
+        gaf:denotes leolaniWorld:morfin_looks_and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth ;
+        grasp:hasAttribution leolaniTalk:morfin_looks_and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:32.247592"^^xml1:string ;
+        rdf:value "morfin looks and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance33 .
+
+    leolaniTalk:chat1_utterance35_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance35_char" ;
+        gaf:containsDenotation hp:morfin,
+            hp:pure_blood_wizard ;
+        gaf:denotes leolaniWorld:morfin_lineage_pure_blood_wizard ;
+        grasp:hasAttribution leolaniTalk:morfin_lineage_pure_blood_wizard_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:32.751910"^^xml1:string ;
+        rdf:value "morfin lineage pure_blood_wizard"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance35 .
+
+    leolaniTalk:chat1_utterance37_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance37_char" ;
+        gaf:containsDenotation hp:morfin,
+            hp:pure_blood_wizard ;
+        gaf:denotes leolaniWorld:morfin_lineage_pure_blood_wizard ;
+        grasp:hasAttribution leolaniTalk:morfin_lineage_pure_blood_wizard_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:33.189153"^^xml1:string ;
+        rdf:value "morfin lineage pure_blood_wizard"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance37 .
+
+    leolaniTalk:chat1_utterance39_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance39_char" ;
+        gaf:containsDenotation hp:moody,
+            hp:the_fake_legs_made_of_wood ;
+        gaf:denotes leolaniWorld:moody_looks_the_fake_legs_made_of_wood ;
+        grasp:hasAttribution leolaniTalk:moody_looks_the_fake_legs_made_of_wood_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:34.146497"^^xml1:string ;
+        rdf:value "moody looks the_fake_legs_made_of_wood"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance39 .
+
+    leolaniTalk:chat1_utterance3_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance3_char" ;
+        gaf:containsDenotation hp:guling_pavilion,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:hermione_affiliation_guling_pavilion ;
+        grasp:hasAttribution leolaniTalk:hermione_affiliation_guling_pavilion_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:24.942592"^^xml1:string ;
+        rdf:value "hermione affiliation guling_pavilion"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance3 .
+
+    leolaniTalk:chat1_utterance41_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance41_char" ;
+        gaf:containsDenotation hp:ministry_of_magic,
+            hp:weasley ;
+        gaf:denotes leolaniWorld:weasley_affiliation_ministry_of_magic ;
+        grasp:hasAttribution leolaniTalk:weasley_affiliation_ministry_of_magic_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:34.670261"^^xml1:string ;
+        rdf:value "weasley affiliation ministry_of_magic"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance41 .
+
+    leolaniTalk:chat1_utterance43_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance43_char" ;
+        gaf:containsDenotation hp:good_body_shape,
+            hp:mrs_rosmerta ;
+        gaf:denotes leolaniWorld:mrs_rosmerta_looks_good_body_shape ;
+        grasp:hasAttribution leolaniTalk:mrs_rosmerta_looks_good_body_shape_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:35.268425"^^xml1:string ;
+        rdf:value "mrs_rosmerta looks good_body_shape"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance43 .
+
+    leolaniTalk:chat1_utterance45_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance45_char" ;
+        gaf:containsDenotation hp:fly_the_boxes,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:hermione_spells_fly_the_boxes ;
+        grasp:hasAttribution leolaniTalk:hermione_spells_fly_the_boxes_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:35.812940"^^xml1:string ;
+        rdf:value "hermione spells fly_the_boxes"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance45 .
+
+    leolaniTalk:chat1_utterance47_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance47_char" ;
+        gaf:containsDenotation hp:hermione,
+            hp:urgent_appearance ;
+        gaf:denotes leolaniWorld:hermione_spells_urgent_appearance ;
+        grasp:hasAttribution leolaniTalk:hermione_spells_urgent_appearance_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:36.444942"^^xml1:string ;
+        rdf:value "hermione spells urgent_appearance"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance47 .
+
+    leolaniTalk:chat1_utterance49_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance49_char" ;
+        gaf:containsDenotation hp:male,
+            hp:neville ;
+        gaf:denotes leolaniWorld:neville_gender_male ;
+        grasp:hasAttribution leolaniTalk:neville_gender_male_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:36.933814"^^xml1:string ;
+        rdf:value "neville gender male"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance49 .
+
+    leolaniTalk:chat1_utterance51_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance51_char" ;
+        gaf:containsDenotation hp:gongxian,
+            hp:harry ;
+        gaf:denotes leolaniWorld:harry_belongings_gongxian ;
+        grasp:hasAttribution leolaniTalk:harry_belongings_gongxian_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:37.523565"^^xml1:string ;
+        rdf:value "harry belongings gongxian"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance51 .
+
+    leolaniTalk:chat1_utterance53_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance53_char" ;
+        gaf:containsDenotation hp:crazy_girl,
+            hp:luna ;
+        gaf:denotes leolaniWorld:luna_nickname_crazy_girl ;
+        grasp:hasAttribution leolaniTalk:luna_nickname_crazy_girl_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:38.143575"^^xml1:string ;
+        rdf:value "luna nickname crazy_girl"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance53 .
+
+    leolaniTalk:chat1_utterance55_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance55_char" ;
+        gaf:containsDenotation hp:crazy_girl,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:hermione_nickname_crazy_girl ;
+        grasp:hasAttribution leolaniTalk:hermione_nickname_crazy_girl_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:38.783434"^^xml1:string ;
+        rdf:value "hermione nickname crazy_girl"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance55 .
+
+    leolaniTalk:chat1_utterance57_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance57_char" ;
+        gaf:containsDenotation hp:fred_george_ginny,
+            hp:short_body ;
+        gaf:denotes leolaniWorld:fred_george_ginny_looks_short_body ;
+        grasp:hasAttribution leolaniTalk:fred_george_ginny_looks_short_body_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:39.340009"^^xml1:string ;
+        rdf:value "fred_george_ginny looks short_body"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance57 .
+
+    leolaniTalk:chat1_utterance59_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance59_char" ;
+        gaf:containsDenotation hp:fred_george_ginny,
+            hp:short_body ;
+        gaf:denotes leolaniWorld:fred_george_ginny_looks_short_body ;
+        grasp:hasAttribution leolaniTalk:fred_george_ginny_looks_short_body_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:39.980260"^^xml1:string ;
+        rdf:value "fred_george_ginny looks short_body"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance59 .
+
+    leolaniTalk:chat1_utterance5_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance5_char" ;
+        gaf:containsDenotation hp:guling_pavilion,
+            hp:hermione ;
+        gaf:denotes leolaniWorld:hermione_affiliation_guling_pavilion ;
+        grasp:hasAttribution leolaniTalk:hermione_affiliation_guling_pavilion_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:25.367488"^^xml1:string ;
+        rdf:value "hermione affiliation guling_pavilion"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance5 .
+
+    leolaniTalk:chat1_utterance61_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance61_char" ;
+        gaf:containsDenotation hp:lupin,
+            hp:weasley ;
+        gaf:denotes leolaniWorld:lupin_name_weasley ;
+        grasp:hasAttribution leolaniTalk:lupin_name_weasley_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:40.516185"^^xml1:string ;
+        rdf:value "lupin name weasley"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance61 .
+
+    leolaniTalk:chat1_utterance63_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance63_char" ;
+        gaf:containsDenotation hp:long_waist,
+            hp:neville ;
+        gaf:denotes leolaniWorld:neville_looks_long_waist ;
+        grasp:hasAttribution leolaniTalk:neville_looks_long_waist_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:41.176061"^^xml1:string ;
+        rdf:value "neville looks long_waist"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance63 .
+
+    leolaniTalk:chat1_utterance65_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance65_char" ;
+        gaf:containsDenotation hp:ron,
+            hp:silent_and_silent ;
+        gaf:denotes leolaniWorld:ron_spells_silent_and_silent ;
+        grasp:hasAttribution leolaniTalk:ron_spells_silent_and_silent_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:41.873965"^^xml1:string ;
+        rdf:value "ron spells silent_and_silent"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance65 .
+
+    leolaniTalk:chat1_utterance67_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance67_char" ;
+        gaf:containsDenotation hp:fell_to_the_ground,
+            hp:ron ;
+        gaf:denotes leolaniWorld:ron_spells_fell_to_the_ground ;
+        grasp:hasAttribution leolaniTalk:ron_spells_fell_to_the_ground_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:42.568150"^^xml1:string ;
+        rdf:value "ron spells fell_to_the_ground"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance67 .
+
+    leolaniTalk:chat1_utterance69_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance69_char" ;
+        gaf:containsDenotation hp:harry,
+            hp:the_face_is_extremely_large ;
+        gaf:denotes leolaniWorld:harry_looks_the_face_is_extremely_large ;
+        grasp:hasAttribution leolaniTalk:harry_looks_the_face_is_extremely_large_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:43.193608"^^xml1:string ;
+        rdf:value "harry looks the_face_is_extremely_large"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance69 .
+
+    leolaniTalk:chat1_utterance71_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance71_char" ;
+        gaf:containsDenotation hp:lights_off_the_lamps,
+            hp:ron ;
+        gaf:denotes leolaniWorld:ron_belongings_lights_off_the_lamps ;
+        grasp:hasAttribution leolaniTalk:ron_belongings_lights_off_the_lamps_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:43.921650"^^xml1:string ;
+        rdf:value "ron belongings lights_off_the_lamps"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance71 .
+
+    leolaniTalk:chat1_utterance73_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance73_char" ;
+        gaf:containsDenotation hp:lovegood,
+            hp:much_like_a_triangular_eye ;
+        gaf:denotes leolaniWorld:lovegood_looks_much_like_a_triangular_eye ;
+        grasp:hasAttribution leolaniTalk:lovegood_looks_much_like_a_triangular_eye_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:44.700507"^^xml1:string ;
+        rdf:value "lovegood looks much_like_a_triangular_eye"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance73 .
+
+    leolaniTalk:chat1_utterance75_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance75_char" ;
+        gaf:containsDenotation hp:lovegood,
+            hp:much_like_a_triangular_eye ;
+        gaf:denotes leolaniWorld:lovegood_looks_much_like_a_triangular_eye ;
+        grasp:hasAttribution leolaniTalk:lovegood_looks_much_like_a_triangular_eye_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:45.466509"^^xml1:string ;
+        rdf:value "lovegood looks much_like_a_triangular_eye"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance75 .
+
+    leolaniTalk:chat1_utterance77_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance77_char" ;
+        gaf:containsDenotation hp:and_guarding_the_guards,
+            hp:ron_hermione ;
+        gaf:denotes leolaniWorld:ron_hermione_spells_and_guarding_the_guards ;
+        grasp:hasAttribution leolaniTalk:ron_hermione_spells_and_guarding_the_guards_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:46.107960"^^xml1:string ;
+        rdf:value "ron_hermione spells and_guarding_the_guards"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance77 .
+
+    leolaniTalk:chat1_utterance79_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance79_char" ;
+        gaf:containsDenotation hp:ginny,
+            hp:kindly ;
+        gaf:denotes leolaniWorld:ginny_character_kindly ;
+        grasp:hasAttribution leolaniTalk:ginny_character_kindly_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:46.895186"^^xml1:string ;
+        rdf:value "ginny character kindly"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance79 .
+
+    leolaniTalk:chat1_utterance7_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance7_char" ;
+        gaf:containsDenotation hp:cedric,
+            hp:hogwarts ;
+        gaf:denotes leolaniWorld:cedric_affiliation_hogwarts ;
+        grasp:hasAttribution leolaniTalk:cedric_affiliation_hogwarts_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:25.623777"^^xml1:string ;
+        rdf:value "cedric affiliation hogwarts"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance7 .
+
+    leolaniTalk:chat1_utterance81_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance81_char" ;
+        gaf:containsDenotation hp:adult,
+            hp:greyback ;
+        gaf:denotes leolaniWorld:greyback_age_adult ;
+        grasp:hasAttribution leolaniTalk:greyback_age_adult_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:47.694922"^^xml1:string ;
+        rdf:value "greyback age adult"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance81 .
+
+    leolaniTalk:chat1_utterance83_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance83_char" ;
+        gaf:containsDenotation hp:magic_wand_manufacturing,
+            hp:ollivander ;
+        gaf:denotes leolaniWorld:ollivander_export_magic_wand_manufacturing ;
+        grasp:hasAttribution leolaniTalk:ollivander_export_magic_wand_manufacturing_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:48.537386"^^xml1:string ;
+        rdf:value "ollivander export magic_wand_manufacturing"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance83 .
+
+    leolaniTalk:chat1_utterance85_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance85_char" ;
+        gaf:containsDenotation hp:ollivander,
+            hp:thin_old_man ;
+        gaf:denotes leolaniWorld:ollivander_looks_thin_old_man ;
+        grasp:hasAttribution leolaniTalk:ollivander_looks_thin_old_man_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:49.378685"^^xml1:string ;
+        rdf:value "ollivander looks thin_old_man"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance85 .
+
+    leolaniTalk:chat1_utterance87_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance87_char" ;
+        gaf:containsDenotation hp:freckles_on_the_face,
+            hp:ron ;
+        gaf:denotes leolaniWorld:ron_looks_freckles_on_the_face ;
+        grasp:hasAttribution leolaniTalk:ron_looks_freckles_on_the_face_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:50.139631"^^xml1:string ;
+        rdf:value "ron looks freckles_on_the_face"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance87 .
+
+    leolaniTalk:chat1_utterance89_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance89_char" ;
+        gaf:containsDenotation hp:freckles_on_the_face,
+            hp:ron ;
+        gaf:denotes leolaniWorld:ron_looks_freckles_on_the_face ;
+        grasp:hasAttribution leolaniTalk:ron_looks_freckles_on_the_face_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:51.059574"^^xml1:string ;
+        rdf:value "ron looks freckles_on_the_face"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance89 .
+
+    leolaniTalk:chat1_utterance91_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance91_char" ;
+        gaf:containsDenotation hp:filch,
+            hp:flesh_loose_face_and_those_fierce_light_colored_eyes ;
+        gaf:denotes leolaniWorld:filch_looks_flesh_loose_face_and_those_fierce_light_colored_eyes ;
+        grasp:hasAttribution leolaniTalk:filch_looks_flesh_loose_face_and_those_fierce_light_colored_eyes_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:51.829186"^^xml1:string ;
+        rdf:value "filch looks flesh_loose_face_and_those_fierce_light_colored_eyes"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance91 .
+
+    leolaniTalk:chat1_utterance93_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance93_char" ;
+        gaf:containsDenotation hp:except_for_your_weapon,
+            hp:snape ;
+        gaf:denotes leolaniWorld:snape_spells_except_for_your_weapon ;
+        grasp:hasAttribution leolaniTalk:snape_spells_except_for_your_weapon_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:52.716845"^^xml1:string ;
+        rdf:value "snape spells except_for_your_weapon"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance93 .
+
+    leolaniTalk:chat1_utterance95_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance95_char" ;
+        gaf:containsDenotation hp:snape,
+            hp:thin_lips ;
+        gaf:denotes leolaniWorld:snape_looks_thin_lips ;
+        grasp:hasAttribution leolaniTalk:snape_looks_thin_lips_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:53.648158"^^xml1:string ;
+        rdf:value "snape looks thin_lips"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance95 .
+
+    leolaniTalk:chat1_utterance97_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance97_char" ;
+        gaf:containsDenotation hp:snape,
+            hp:thin_lips ;
+        gaf:denotes leolaniWorld:snape_looks_thin_lips ;
+        grasp:hasAttribution leolaniTalk:snape_looks_thin_lips_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:54.500681"^^xml1:string ;
+        rdf:value "snape looks thin_lips"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance97 .
+
+    leolaniTalk:chat1_utterance99_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance99_char" ;
+        gaf:containsDenotation hp:aberforth,
+            hp:gray_hair_and_beard ;
+        gaf:denotes leolaniWorld:aberforth_looks_gray_hair_and_beard ;
+        grasp:hasAttribution leolaniTalk:aberforth_looks_gray_hair_and_beard_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:55.324657"^^xml1:string ;
+        rdf:value "aberforth looks gray_hair_and_beard"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance99 .
+
+    leolaniTalk:chat1_utterance9_char a gaf:Mention,
+            grasp:Statement ;
+        rdfs:label "chat1_utterance9_char" ;
+        gaf:containsDenotation hp:hogwarts,
+            hp:mclaggen ;
+        gaf:denotes leolaniWorld:mclaggen_affiliation_hogwarts ;
+        grasp:hasAttribution leolaniTalk:mclaggen_affiliation_hogwarts_3120 ;
+        grasp:wasAttributedTo leolaniWorld:john ;
+        sem:hasBeginTimeStamp "2023-12-19 00:23:26.177975"^^xml1:string ;
+        rdf:value "mclaggen affiliation hogwarts"^^xml1:string ;
+        prov:wasDerivedFrom leolaniTalk:chat1_utterance9 .
+
+    leolaniTalk:dudley_looks_large_3120 a grasp:Attribution ;
+        rdfs:label "dudley_looks_large_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance31_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:dumbledore_belongings_black_gem_ring_3120 a grasp:Attribution ;
+        rdfs:label "dumbledore_belongings_black_gem_ring_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance131_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:filch_looks_flesh_loose_face_and_those_fierce_light_colored_eyes_3120 a grasp:Attribution ;
+        rdfs:label "filch_looks_flesh_loose_face_and_those_fierce_light_colored_eyes_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance91_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:firenze_gender_male_3120 a grasp:Attribution ;
+        rdfs:label "firenze_gender_male_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance141_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:fleur_looks_big_eyes_3120 a grasp:Attribution ;
+        rdfs:label "fleur_looks_big_eyes_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance29_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:fred_hobbies_experience_muggle_life_3120 a grasp:Attribution ;
+        rdfs:label "fred_hobbies_experience_muggle_life_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance19_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:george_affiliation_hogwarts_3120 a grasp:Attribution ;
+        rdfs:label "george_affiliation_hogwarts_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance103_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ginny_character_kindly_3120 a grasp:Attribution ;
+        rdfs:label "ginny_character_kindly_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance79_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:greyback_age_adult_3120 a grasp:Attribution ;
+        rdfs:label "greyback_age_adult_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance81_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:harry_and_hermione_name_hermione_3120 a grasp:Attribution ;
+        rdfs:label "harry_and_hermione_name_hermione_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance21_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:harry_belongings_gold_pendant_boxes_3120 a grasp:Attribution ;
+        rdfs:label "harry_belongings_gold_pendant_boxes_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance13_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:harry_belongings_gongxian_3120 a grasp:Attribution ;
+        rdfs:label "harry_belongings_gongxian_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance51_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:harry_looks_the_face_is_extremely_large_3120 a grasp:Attribution ;
+        rdfs:label "harry_looks_the_face_is_extremely_large_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance69_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:harry_name_hermione_3120 a grasp:Attribution ;
+        rdfs:label "harry_name_hermione_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance151_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:harry_spells_water_and_fire_do_not_invade_3120 a grasp:Attribution ;
+        rdfs:label "harry_spells_water_and_fire_do_not_invade_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance133_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_fred_belongings_cat_3120 a grasp:Attribution ;
+        rdfs:label "hermione_fred_belongings_cat_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance113_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_harry_age_13_years_old_3120 a grasp:Attribution ;
+        rdfs:label "hermione_harry_age_13_years_old_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance155_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_name_fleur_3120 a grasp:Attribution ;
+        rdfs:label "hermione_name_fleur_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance153_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_name_hermione_3120 a grasp:Attribution ;
+        rdfs:label "hermione_name_hermione_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance23_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_nickname_crazy_girl_3120 a grasp:Attribution ;
+        rdfs:label "hermione_nickname_crazy_girl_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance55_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_spells_call_god_guards_3120 a grasp:Attribution ;
+        rdfs:label "hermione_spells_call_god_guards_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance125_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_spells_fly_the_boxes_3120 a grasp:Attribution ;
+        rdfs:label "hermione_spells_fly_the_boxes_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance45_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_spells_urgent_appearance_3120 a grasp:Attribution ;
+        rdfs:label "hermione_spells_urgent_appearance_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance47_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:james_age_adult_3120 a grasp:Attribution ;
+        rdfs:label "james_age_adult_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance0_char0-25 ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:kreacher_age_very_old_3120 a grasp:Attribution ;
+        rdfs:label "kreacher_age_very_old_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance119_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:luna_nickname_crazy_girl_3120 a grasp:Attribution ;
+        rdfs:label "luna_nickname_crazy_girl_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance53_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:lupin_name_tonks_3120 a grasp:Attribution ;
+        rdfs:label "lupin_name_tonks_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance107_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:lupin_name_weasley_3120 a grasp:Attribution ;
+        rdfs:label "lupin_name_weasley_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance61_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:lupin_nickname_veteran_3120 a grasp:Attribution ;
+        rdfs:label "lupin_nickname_veteran_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance15_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:malfoy_looks_the_golden_yellow_hair_of_the_oil_and_smoothness_3120 a grasp:Attribution ;
+        rdfs:label "malfoy_looks_the_golden_yellow_hair_of_the_oil_and_smoothness_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance101_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:mclaggen_affiliation_hogwarts_3120 a grasp:Attribution ;
+        rdfs:label "mclaggen_affiliation_hogwarts_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance9_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:mclaggen_title_kui_diqi_goalkeeper_3120 a grasp:Attribution ;
+        rdfs:label "mclaggen_title_kui_diqi_goalkeeper_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance11_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:moody_looks_the_fake_legs_made_of_wood_3120 a grasp:Attribution ;
+        rdfs:label "moody_looks_the_fake_legs_made_of_wood_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance39_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:morfin_looks_and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth_3120 a grasp:Attribution ;
+        rdfs:label "morfin_looks_and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance33_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:mr_weasley_looks_red_hair_3120 a grasp:Attribution ;
+        rdfs:label "mr_weasley_looks_red_hair_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance163_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:mrs_rosmerta_looks_good_body_shape_3120 a grasp:Attribution ;
+        rdfs:label "mrs_rosmerta_looks_good_body_shape_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance43_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:mrs_rosmerta_name_rosmerta_3120 a grasp:Attribution ;
+        rdfs:label "mrs_rosmerta_name_rosmerta_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance165_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:mrs_weasley_hobbies_experience_muggle_life_3120 a grasp:Attribution ;
+        rdfs:label "mrs_weasley_hobbies_experience_muggle_life_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance17_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:neville_gender_male_3120 a grasp:Attribution ;
+        rdfs:label "neville_gender_male_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance49_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:neville_looks_long_waist_3120 a grasp:Attribution ;
+        rdfs:label "neville_looks_long_waist_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance63_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ollivander_export_magic_wand_manufacturing_3120 a grasp:Attribution ;
+        rdfs:label "ollivander_export_magic_wand_manufacturing_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance83_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ollivander_looks_thin_old_man_3120 a grasp:Attribution ;
+        rdfs:label "ollivander_looks_thin_old_man_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance85_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:pomfrey_gender_female_3120 a grasp:Attribution ;
+        rdfs:label "pomfrey_gender_female_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance105_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:rita_affiliation_prophetician_3120 a grasp:Attribution ;
+        rdfs:label "rita_affiliation_prophetician_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance135_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ron_belongings_lights_off_the_lamps_3120 a grasp:Attribution ;
+        rdfs:label "ron_belongings_lights_off_the_lamps_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance71_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ron_hermione_spells_and_guarding_the_guards_3120 a grasp:Attribution ;
+        rdfs:label "ron_hermione_spells_and_guarding_the_guards_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance77_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ron_nickname_crazy_girl_3120 a grasp:Attribution ;
+        rdfs:label "ron_nickname_crazy_girl_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance157_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ron_spells_fell_to_the_ground_3120 a grasp:Attribution ;
+        rdfs:label "ron_spells_fell_to_the_ground_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance67_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ron_spells_silent_and_silent_3120 a grasp:Attribution ;
+        rdfs:label "ron_spells_silent_and_silent_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance65_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:snape_spells_except_for_your_weapon_3120 a grasp:Attribution ;
+        rdfs:label "snape_spells_except_for_your_weapon_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance93_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:umbridge_belongings_gold_pendant_box_3120 a grasp:Attribution ;
+        rdfs:label "umbridge_belongings_gold_pendant_box_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance143_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:umbridge_looks_round_3120 a grasp:Attribution ;
+        rdfs:label "umbridge_looks_round_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance149_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:umbridge_looks_two_short_fingers_short_hands_with_thick_hands_3120 a grasp:Attribution ;
+        rdfs:label "umbridge_looks_two_short_fingers_short_hands_with_thick_hands_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance147_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:umbridge_title_president_hogwarts_3120 a grasp:Attribution ;
+        rdfs:label "umbridge_title_president_hogwarts_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance145_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:weasley_affiliation_ministry_of_magic_3120 a grasp:Attribution ;
+        rdfs:label "weasley_affiliation_ministry_of_magic_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance41_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:dean_tomas_looks_pale_3120 a grasp:Attribution ;
+        rdfs:label "dean_tomas_looks_pale_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance115_char,
+            leolaniTalk:chat1_utterance117_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:dumbledore_dumbledore_lineage_mixed_wizard_3120 a grasp:Attribution ;
+        rdfs:label "dumbledore_dumbledore_lineage_mixed_wizard_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance127_char,
+            leolaniTalk:chat1_utterance129_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:fred_george_ginny_looks_short_body_3120 a grasp:Attribution ;
+        rdfs:label "fred_george_ginny_looks_short_body_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance57_char,
+            leolaniTalk:chat1_utterance59_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_affiliation_guling_pavilion_3120 a grasp:Attribution ;
+        rdfs:label "hermione_affiliation_guling_pavilion_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance3_char,
+            leolaniTalk:chat1_utterance5_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:hermione_title_gu_lingge_employee_3120 a grasp:Attribution ;
+        rdfs:label "hermione_title_gu_lingge_employee_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance25_char,
+            leolaniTalk:chat1_utterance27_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:james_name_james_potter_3120 a grasp:Attribution ;
+        rdfs:label "james_name_james_potter_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance159_char,
+            leolaniTalk:chat1_utterance161_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:lovegood_looks_much_like_a_triangular_eye_3120 a grasp:Attribution ;
+        rdfs:label "lovegood_looks_much_like_a_triangular_eye_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance73_char,
+            leolaniTalk:chat1_utterance75_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:morfin_lineage_pure_blood_wizard_3120 a grasp:Attribution ;
+        rdfs:label "morfin_lineage_pure_blood_wizard_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance35_char,
+            leolaniTalk:chat1_utterance37_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:mundungus_title_member_of_the_phoenix_3120 a grasp:Attribution ;
+        rdfs:label "mundungus_title_member_of_the_phoenix_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance109_char,
+            leolaniTalk:chat1_utterance111_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:neville_belongings_fake_galon_3120 a grasp:Attribution ;
+        rdfs:label "neville_belongings_fake_galon_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance137_char,
+            leolaniTalk:chat1_utterance139_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:ron_looks_freckles_on_the_face_3120 a grasp:Attribution ;
+        rdfs:label "ron_looks_freckles_on_the_face_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance87_char,
+            leolaniTalk:chat1_utterance89_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:seamus_looks_swollen_face_3120 a grasp:Attribution ;
+        rdfs:label "seamus_looks_swollen_face_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance121_char,
+            leolaniTalk:chat1_utterance123_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    leolaniTalk:snape_looks_thin_lips_3120 a grasp:Attribution ;
+        rdfs:label "snape_looks_thin_lips_3120" ;
+        grasp:isAttributionFor leolaniTalk:chat1_utterance95_char,
+            leolaniTalk:chat1_utterance97_char ;
+        rdf:value graspe:UNDERSPECIFIED,
+            graspf:CERTAIN,
+            graspf:POSITIVE,
+            grasps:NEUTRAL .
+
+    graspe:UNDERSPECIFIED a grasp:AttributionValue,
+            graspe:EmotionValue ;
+        rdfs:label "UNDERSPECIFIED" .
+
+    graspf:CERTAIN a grasp:AttributionValue,
+            graspf:CertaintyValue ;
+        rdfs:label "CERTAIN" .
+
+    graspf:POSITIVE a grasp:AttributionValue,
+            graspf:PolarityValue ;
+        rdfs:label "POSITIVE" .
+
+    grasps:NEUTRAL a grasp:AttributionValue,
+            grasps:SentimentValue ;
+        rdfs:label "NEUTRAL" .
+}
+
+leolaniWorld:hermione_nickname_crazy_girl {
+    hp:hermione hp:nickname hp:crazy_girl .
+}
+
+leolaniWorld:harry_looks_the_face_is_extremely_large {
+    hp:harry hp:looks hp:the_face_is_extremely_large .
+}
+
+leolaniWorld:hermione_fred_belongings_cat {
+    hp:hermione_fred hp:belongings hp:cat .
+}
+
+leolaniWorld:fleur_looks_big_eyes {
+    hp:fleur hp:looks hp:big_eyes .
+}
+
+leolaniWorld:dudley_looks_large {
+    hp:dudley hp:looks hp:large .
+}
+
+leolaniWorld:greyback_age_adult {
+    hp:greyback hp:age hp:adult .
+}
+
+leolaniTalk:Interactions {
+    leolaniContext:context136 sem:hasEvent leolaniTalk:chat1 .
+
+    leolaniContext:context211 a eps:Context ;
+        rdfs:label "context211" ;
+        hp:id "211"^^xml1:string ;
+        sem:hasBeginTimeStamp leolaniContext:2023-12-19 ;
+        sem:hasEvent leolaniTalk:chat1 ;
+        sem:hasPlace leolaniContext:bookstore .
+
+    leolaniContext:2023-12-19 a sem:Time,
+            time1:DateTimeDescription ;
+        rdfs:label "2023-12-19" ;
+        time1:day "19"^^xml1:gDay ;
+        time1:month "12"^^xml1:gMonthDay ;
+        time1:unitType time1:unitDay ;
+        time1:year "2023"^^xml1:gYear .
+
+    leolaniContext:bookstore a hp:location,
+            sem:Place ;
+        rdfs:label "bookstore" ;
+        hp:id "24"^^xml1:string ;
+        hp:in leolaniWorld:Amsterdam,
+            leolaniWorld:NL,
+            leolaniWorld:North_Holland .
+
+    leolaniTalk:chat1_utterance0 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance0" ;
+        hp:id "0"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance101 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance101" ;
+        hp:id "101"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance103 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance103" ;
+        hp:id "103"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance105 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance105" ;
+        hp:id "105"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance107 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance107" ;
+        hp:id "107"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance109 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance109" ;
+        hp:id "109"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance11 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance11" ;
+        hp:id "11"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance111 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance111" ;
+        hp:id "111"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance113 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance113" ;
+        hp:id "113"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance115 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance115" ;
+        hp:id "115"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance117 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance117" ;
+        hp:id "117"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance119 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance119" ;
+        hp:id "119"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance121 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance121" ;
+        hp:id "121"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance123 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance123" ;
+        hp:id "123"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance125 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance125" ;
+        hp:id "125"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance127 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance127" ;
+        hp:id "127"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance129 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance129" ;
+        hp:id "129"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance13 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance13" ;
+        hp:id "13"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance131 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance131" ;
+        hp:id "131"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance133 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance133" ;
+        hp:id "133"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance135 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance135" ;
+        hp:id "135"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance137 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance137" ;
+        hp:id "137"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance139 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance139" ;
+        hp:id "139"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance141 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance141" ;
+        hp:id "141"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance143 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance143" ;
+        hp:id "143"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance145 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance145" ;
+        hp:id "145"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance147 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance147" ;
+        hp:id "147"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance149 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance149" ;
+        hp:id "149"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance15 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance15" ;
+        hp:id "15"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance151 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance151" ;
+        hp:id "151"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance153 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance153" ;
+        hp:id "153"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance155 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance155" ;
+        hp:id "155"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance157 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance157" ;
+        hp:id "157"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance159 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance159" ;
+        hp:id "159"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance161 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance161" ;
+        hp:id "161"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance163 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance163" ;
+        hp:id "163"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance165 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance165" ;
+        hp:id "165"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance17 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance17" ;
+        hp:id "17"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance19 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance19" ;
+        hp:id "19"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance21 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance21" ;
+        hp:id "21"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance23 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance23" ;
+        hp:id "23"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance25 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance25" ;
+        hp:id "25"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance27 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance27" ;
+        hp:id "27"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance29 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance29" ;
+        hp:id "29"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance3 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance3" ;
+        hp:id "3"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance31 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance31" ;
+        hp:id "31"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance33 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance33" ;
+        hp:id "33"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance35 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance35" ;
+        hp:id "35"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance37 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance37" ;
+        hp:id "37"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance39 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance39" ;
+        hp:id "39"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance41 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance41" ;
+        hp:id "41"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance43 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance43" ;
+        hp:id "43"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance45 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance45" ;
+        hp:id "45"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance47 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance47" ;
+        hp:id "47"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance49 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance49" ;
+        hp:id "49"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance5 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance5" ;
+        hp:id "5"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance51 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance51" ;
+        hp:id "51"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance53 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance53" ;
+        hp:id "53"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance55 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance55" ;
+        hp:id "55"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance57 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance57" ;
+        hp:id "57"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance59 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance59" ;
+        hp:id "59"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance61 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance61" ;
+        hp:id "61"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance63 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance63" ;
+        hp:id "63"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance65 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance65" ;
+        hp:id "65"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance67 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance67" ;
+        hp:id "67"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance69 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance69" ;
+        hp:id "69"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance7 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance7" ;
+        hp:id "7"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance71 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance71" ;
+        hp:id "71"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance73 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance73" ;
+        hp:id "73"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance75 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance75" ;
+        hp:id "75"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance77 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance77" ;
+        hp:id "77"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance79 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance79" ;
+        hp:id "79"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance81 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance81" ;
+        hp:id "81"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance83 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance83" ;
+        hp:id "83"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance85 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance85" ;
+        hp:id "85"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance87 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance87" ;
+        hp:id "87"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance89 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance89" ;
+        hp:id "89"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance9 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance9" ;
+        hp:id "9"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance91 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance91" ;
+        hp:id "91"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance93 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance93" ;
+        hp:id "93"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance95 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance95" ;
+        hp:id "95"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance97 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance97" ;
+        hp:id "97"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniTalk:chat1_utterance99 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance99" ;
+        hp:id "99"^^xml1:string ;
+        sem:hasActor leolaniWorld:john .
+
+    leolaniWorld:Amsterdam a hp:city,
+            hp:location,
+            sem:Place ;
+        rdfs:label "Amsterdam" .
+
+    leolaniWorld:NL a hp:country,
+            hp:location,
+            sem:Place ;
+        rdfs:label "NL" .
+
+    leolaniWorld:North_Holland a hp:location,
+            hp:region,
+            sem:Place ;
+        rdfs:label "North Holland" .
+
+    leolaniTalk:chat1 a grasp:Chat,
+            sem:Event ;
+        rdfs:label "chat1" ;
+        hp:id "1"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:chat1_utterance0,
+            leolaniTalk:chat1_utterance101,
+            leolaniTalk:chat1_utterance103,
+            leolaniTalk:chat1_utterance105,
+            leolaniTalk:chat1_utterance107,
+            leolaniTalk:chat1_utterance109,
+            leolaniTalk:chat1_utterance11,
+            leolaniTalk:chat1_utterance111,
+            leolaniTalk:chat1_utterance113,
+            leolaniTalk:chat1_utterance115,
+            leolaniTalk:chat1_utterance117,
+            leolaniTalk:chat1_utterance119,
+            leolaniTalk:chat1_utterance121,
+            leolaniTalk:chat1_utterance123,
+            leolaniTalk:chat1_utterance125,
+            leolaniTalk:chat1_utterance127,
+            leolaniTalk:chat1_utterance129,
+            leolaniTalk:chat1_utterance13,
+            leolaniTalk:chat1_utterance131,
+            leolaniTalk:chat1_utterance133,
+            leolaniTalk:chat1_utterance135,
+            leolaniTalk:chat1_utterance137,
+            leolaniTalk:chat1_utterance139,
+            leolaniTalk:chat1_utterance141,
+            leolaniTalk:chat1_utterance143,
+            leolaniTalk:chat1_utterance145,
+            leolaniTalk:chat1_utterance147,
+            leolaniTalk:chat1_utterance149,
+            leolaniTalk:chat1_utterance15,
+            leolaniTalk:chat1_utterance151,
+            leolaniTalk:chat1_utterance153,
+            leolaniTalk:chat1_utterance155,
+            leolaniTalk:chat1_utterance157,
+            leolaniTalk:chat1_utterance159,
+            leolaniTalk:chat1_utterance161,
+            leolaniTalk:chat1_utterance163,
+            leolaniTalk:chat1_utterance165,
+            leolaniTalk:chat1_utterance17,
+            leolaniTalk:chat1_utterance19,
+            leolaniTalk:chat1_utterance21,
+            leolaniTalk:chat1_utterance23,
+            leolaniTalk:chat1_utterance25,
+            leolaniTalk:chat1_utterance27,
+            leolaniTalk:chat1_utterance29,
+            leolaniTalk:chat1_utterance3,
+            leolaniTalk:chat1_utterance31,
+            leolaniTalk:chat1_utterance33,
+            leolaniTalk:chat1_utterance35,
+            leolaniTalk:chat1_utterance37,
+            leolaniTalk:chat1_utterance39,
+            leolaniTalk:chat1_utterance41,
+            leolaniTalk:chat1_utterance43,
+            leolaniTalk:chat1_utterance45,
+            leolaniTalk:chat1_utterance47,
+            leolaniTalk:chat1_utterance49,
+            leolaniTalk:chat1_utterance5,
+            leolaniTalk:chat1_utterance51,
+            leolaniTalk:chat1_utterance53,
+            leolaniTalk:chat1_utterance55,
+            leolaniTalk:chat1_utterance57,
+            leolaniTalk:chat1_utterance59,
+            leolaniTalk:chat1_utterance61,
+            leolaniTalk:chat1_utterance63,
+            leolaniTalk:chat1_utterance65,
+            leolaniTalk:chat1_utterance67,
+            leolaniTalk:chat1_utterance69,
+            leolaniTalk:chat1_utterance7,
+            leolaniTalk:chat1_utterance71,
+            leolaniTalk:chat1_utterance73,
+            leolaniTalk:chat1_utterance75,
+            leolaniTalk:chat1_utterance77,
+            leolaniTalk:chat1_utterance79,
+            leolaniTalk:chat1_utterance81,
+            leolaniTalk:chat1_utterance83,
+            leolaniTalk:chat1_utterance85,
+            leolaniTalk:chat1_utterance87,
+            leolaniTalk:chat1_utterance89,
+            leolaniTalk:chat1_utterance9,
+            leolaniTalk:chat1_utterance91,
+            leolaniTalk:chat1_utterance93,
+            leolaniTalk:chat1_utterance95,
+            leolaniTalk:chat1_utterance97,
+            leolaniTalk:chat1_utterance99 .
+
+    leolaniWorld:john a gaf:Instance,
+            grasp:Source,
+            hp:person,
+            sem:Actor ;
+        rdfs:label "john" .
+}
+
+leolaniWorld:mrs_rosmerta_looks_good_body_shape {
+    hp:mrs_rosmerta hp:looks hp:good_body_shape .
+}
+
+leolaniWorld:snape_looks_thin_lips {
+    hp:snape hp:looks hp:thin_lips .
+}
+
+leolaniWorld:ron_belongings_lights_off_the_lamps {
+    hp:ron hp:belongings hp:lights_off_the_lamps .
+}
+
+leolaniWorld:mrs_rosmerta_name_rosmerta {
+    hp:mrs_rosmerta hp:name hp:rosmerta .
+}
+
+leolaniWorld:hermione_spells_call_god_guards {
+    hp:hermione hp:spells hp:call_god_guards .
+}
+
+leolaniWorld:Instances {
+    leolaniWorld:john a gaf:Instance,
+            hp:person ;
+        rdfs:label "john" .
+
+    leolaniWorld:leolani a hp:robot ;
+        rdfs:label "leolani" .
+
+    hp:13_years_old a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "13-years-old" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance155_char .
+
+    hp:aberforth a gaf:Instance,
+            hp:character ;
+        rdfs:label "aberforth" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance99_char .
+
+    hp:adult a gaf:Instance,
+            hp:age-range,
+            hp:attribute ;
+        rdfs:label "adult" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance0_char0-25,
+            leolaniTalk:chat1_utterance81_char .
+
+    hp:and_guarding_the_guards a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "and-guarding-the-guards" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance77_char .
+
+    hp:and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "and-the-original-color-cannot-be-discerned-a-few-teeth-are-dropped-in-the-mouth" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance33_char .
+
+    hp:big_eyes a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "big-eyes" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance29_char .
+
+    hp:black_gem_ring a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "black-gem-ring" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance131_char .
+
+    hp:call_god_guards a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "call-god-guards" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance125_char .
+
+    hp:cat a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "cat" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance113_char .
+
+    hp:cedric a gaf:Instance,
+            hp:character ;
+        rdfs:label "cedric" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance7_char .
+
+    hp:crazy_girl a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "crazy-girl" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance157_char,
+            leolaniTalk:chat1_utterance53_char,
+            leolaniTalk:chat1_utterance55_char .
+
+    hp:dean_tomas a gaf:Instance,
+            hp:character ;
+        rdfs:label "dean-tomas" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance115_char,
+            leolaniTalk:chat1_utterance117_char .
+
+    hp:dudley a gaf:Instance,
+            hp:character ;
+        rdfs:label "dudley" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance31_char .
+
+    hp:dumbledore a gaf:Instance,
+            hp:character ;
+        rdfs:label "dumbledore" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance131_char .
+
+    hp:dumbledore_dumbledore a gaf:Instance,
+            hp:character ;
+        rdfs:label "dumbledore-dumbledore" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance127_char,
+            leolaniTalk:chat1_utterance129_char .
+
+    hp:except_for_your_weapon a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "except-for-your-weapon" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance93_char .
+
+    hp:experience_muggle_life a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "experience-muggle-life" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance17_char,
+            leolaniTalk:chat1_utterance19_char .
+
+    hp:fake_galon a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "fake-galon" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance137_char,
+            leolaniTalk:chat1_utterance139_char .
+
+    hp:fell_to_the_ground a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "fell-to-the-ground" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance67_char .
+
+    hp:female a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "female" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance105_char .
+
+    hp:filch a gaf:Instance,
+            hp:character ;
+        rdfs:label "filch" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance91_char .
+
+    hp:firenze a gaf:Instance,
+            hp:character ;
+        rdfs:label "firenze" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance141_char .
+
+    hp:flesh_loose_face_and_those_fierce_light_colored_eyes a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "flesh-loose-face-and-those-fierce-light-colored-eyes" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance91_char .
+
+    hp:fleur a gaf:Instance,
+            hp:attribute,
+            hp:character ;
+        rdfs:label "fleur" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance153_char,
+            leolaniTalk:chat1_utterance29_char .
+
+    hp:fly_the_boxes a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "fly-the-boxes" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance45_char .
+
+    hp:freckles_on_the_face a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "freckles-on-the-face" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance87_char,
+            leolaniTalk:chat1_utterance89_char .
+
+    hp:fred a gaf:Instance,
+            hp:character ;
+        rdfs:label "fred" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance19_char .
+
+    hp:fred_george_ginny a gaf:Instance,
+            hp:character ;
+        rdfs:label "fred-george-ginny" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance57_char,
+            leolaniTalk:chat1_utterance59_char .
+
+    hp:george a gaf:Instance,
+            hp:character ;
+        rdfs:label "george" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance103_char .
+
+    hp:ginny a gaf:Instance,
+            hp:character ;
+        rdfs:label "ginny" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance79_char .
+
+    hp:gold_pendant_box a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "gold-pendant-box" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance143_char .
+
+    hp:gold_pendant_boxes a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "gold-pendant-boxes" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance13_char .
+
+    hp:gongxian a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "gongxian" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance51_char .
+
+    hp:good_body_shape a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "good-body-shape" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance43_char .
+
+    hp:gray_hair_and_beard a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "gray-hair-and-beard" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance99_char .
+
+    hp:greyback a gaf:Instance,
+            hp:character ;
+        rdfs:label "greyback" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance81_char .
+
+    hp:gu_lingge_employee a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "gu-lingge-employee" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance25_char,
+            leolaniTalk:chat1_utterance27_char .
+
+    hp:guling_pavilion a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "guling-pavilion" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance3_char,
+            leolaniTalk:chat1_utterance5_char .
+
+    hp:harry a gaf:Instance,
+            hp:character ;
+        rdfs:label "harry" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance133_char,
+            leolaniTalk:chat1_utterance13_char,
+            leolaniTalk:chat1_utterance151_char,
+            leolaniTalk:chat1_utterance51_char,
+            leolaniTalk:chat1_utterance69_char .
+
+    hp:harry_and_hermione a gaf:Instance,
+            hp:character ;
+        rdfs:label "harry-and-hermione" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance21_char .
+
+    hp:hermione a gaf:Instance,
+            hp:attribute,
+            hp:character ;
+        rdfs:label "hermione" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance125_char,
+            leolaniTalk:chat1_utterance151_char,
+            leolaniTalk:chat1_utterance153_char,
+            leolaniTalk:chat1_utterance21_char,
+            leolaniTalk:chat1_utterance23_char,
+            leolaniTalk:chat1_utterance25_char,
+            leolaniTalk:chat1_utterance27_char,
+            leolaniTalk:chat1_utterance3_char,
+            leolaniTalk:chat1_utterance45_char,
+            leolaniTalk:chat1_utterance47_char,
+            leolaniTalk:chat1_utterance55_char,
+            leolaniTalk:chat1_utterance5_char .
+
+    hp:hermione_fred a gaf:Instance,
+            hp:character ;
+        rdfs:label "hermione-fred" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance113_char .
+
+    hp:hermione_harry a gaf:Instance,
+            hp:character ;
+        rdfs:label "hermione-harry" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance155_char .
+
+    hp:hogwarts a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "hogwarts" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance103_char,
+            leolaniTalk:chat1_utterance7_char,
+            leolaniTalk:chat1_utterance9_char .
+
+    hp:james a gaf:Instance,
+            hp:character,
+            hp:person ;
+        rdfs:label "james" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance0_char0-25,
+            leolaniTalk:chat1_utterance159_char,
+            leolaniTalk:chat1_utterance161_char .
+
+    hp:james_potter a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "james-potter" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance159_char,
+            leolaniTalk:chat1_utterance161_char .
+
+    hp:kindly a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "kindly" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance79_char .
+
+    hp:kreacher a gaf:Instance,
+            hp:character ;
+        rdfs:label "kreacher" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance119_char .
+
+    hp:kui_diqi_goalkeeper a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "kui-diqi-goalkeeper" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance11_char .
+
+    hp:large a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "large" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance31_char .
+
+    hp:lights_off_the_lamps a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "lights-off-the-lamps" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance71_char .
+
+    hp:long_waist a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "long-waist" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance63_char .
+
+    hp:lovegood a gaf:Instance,
+            hp:character ;
+        rdfs:label "lovegood" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance73_char,
+            leolaniTalk:chat1_utterance75_char .
+
+    hp:luna a gaf:Instance,
+            hp:character ;
+        rdfs:label "luna" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance53_char .
+
+    hp:lupin a gaf:Instance,
+            hp:character ;
+        rdfs:label "lupin" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance107_char,
+            leolaniTalk:chat1_utterance15_char,
+            leolaniTalk:chat1_utterance61_char .
+
+    hp:magic_wand_manufacturing a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "magic-wand-manufacturing" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance83_char .
+
+    hp:male a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "male" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance141_char,
+            leolaniTalk:chat1_utterance49_char .
+
+    hp:malfoy a gaf:Instance,
+            hp:character ;
+        rdfs:label "malfoy" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance101_char .
+
+    hp:mclaggen a gaf:Instance,
+            hp:character ;
+        rdfs:label "mclaggen" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance11_char,
+            leolaniTalk:chat1_utterance9_char .
+
+    hp:member_of_the_phoenix a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "member-of-the-phoenix" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance109_char,
+            leolaniTalk:chat1_utterance111_char .
+
+    hp:ministry_of_magic a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "ministry-of-magic" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance41_char .
+
+    hp:mixed_wizard a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "mixed-wizard" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance127_char,
+            leolaniTalk:chat1_utterance129_char .
+
+    hp:moody a gaf:Instance,
+            hp:character ;
+        rdfs:label "moody" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance39_char .
+
+    hp:morfin a gaf:Instance,
+            hp:character ;
+        rdfs:label "morfin" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance33_char,
+            leolaniTalk:chat1_utterance35_char,
+            leolaniTalk:chat1_utterance37_char .
+
+    hp:mr_weasley a gaf:Instance,
+            hp:character ;
+        rdfs:label "mr-weasley" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance163_char .
+
+    hp:mrs_rosmerta a gaf:Instance,
+            hp:character ;
+        rdfs:label "mrs-rosmerta" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance165_char,
+            leolaniTalk:chat1_utterance43_char .
+
+    hp:mrs_weasley a gaf:Instance,
+            hp:character ;
+        rdfs:label "mrs-weasley" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance17_char .
+
+    hp:much_like_a_triangular_eye a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "much-like-a-triangular-eye" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance73_char,
+            leolaniTalk:chat1_utterance75_char .
+
+    hp:mundungus a gaf:Instance,
+            hp:character ;
+        rdfs:label "mundungus" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance109_char,
+            leolaniTalk:chat1_utterance111_char .
+
+    hp:neville a gaf:Instance,
+            hp:character ;
+        rdfs:label "neville" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance137_char,
+            leolaniTalk:chat1_utterance139_char,
+            leolaniTalk:chat1_utterance49_char,
+            leolaniTalk:chat1_utterance63_char .
+
+    hp:ollivander a gaf:Instance,
+            hp:character ;
+        rdfs:label "ollivander" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance83_char,
+            leolaniTalk:chat1_utterance85_char .
+
+    hp:pale a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "pale" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance115_char,
+            leolaniTalk:chat1_utterance117_char .
+
+    hp:pomfrey a gaf:Instance,
+            hp:character ;
+        rdfs:label "pomfrey" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance105_char .
+
+    hp:president_hogwarts a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "president-hogwarts" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance145_char .
+
+    hp:prophetician a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "prophetician" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance135_char .
+
+    hp:pure_blood_wizard a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "pure-blood-wizard" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance35_char,
+            leolaniTalk:chat1_utterance37_char .
+
+    hp:red_hair a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "red-hair" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance163_char .
+
+    hp:rita a gaf:Instance,
+            hp:character ;
+        rdfs:label "rita" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance135_char .
+
+    hp:ron a gaf:Instance,
+            hp:character ;
+        rdfs:label "ron" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance157_char,
+            leolaniTalk:chat1_utterance65_char,
+            leolaniTalk:chat1_utterance67_char,
+            leolaniTalk:chat1_utterance71_char,
+            leolaniTalk:chat1_utterance87_char,
+            leolaniTalk:chat1_utterance89_char .
+
+    hp:ron_hermione a gaf:Instance,
+            hp:character ;
+        rdfs:label "ron-hermione" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance77_char .
+
+    hp:rosmerta a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "rosmerta" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance165_char .
+
+    hp:round a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "round" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance149_char .
+
+    hp:seamus a gaf:Instance,
+            hp:character ;
+        rdfs:label "seamus" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance121_char,
+            leolaniTalk:chat1_utterance123_char .
+
+    hp:short_body a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "short-body" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance57_char,
+            leolaniTalk:chat1_utterance59_char .
+
+    hp:silent_and_silent a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "silent-and-silent" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance65_char .
+
+    hp:snape a gaf:Instance,
+            hp:character ;
+        rdfs:label "snape" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance93_char,
+            leolaniTalk:chat1_utterance95_char,
+            leolaniTalk:chat1_utterance97_char .
+
+    hp:swollen_face a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "swollen-face" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance121_char,
+            leolaniTalk:chat1_utterance123_char .
+
+    hp:the_face_is_extremely_large a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "the-face-is-extremely-large" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance69_char .
+
+    hp:the_fake_legs_made_of_wood a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "the-fake-legs-made-of-wood" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance39_char .
+
+    hp:the_golden_yellow_hair_of_the_oil_and_smoothness a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "the-golden-yellow-hair-of-the-oil-and-smoothness" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance101_char .
+
+    hp:thin_lips a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "thin-lips" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance95_char,
+            leolaniTalk:chat1_utterance97_char .
+
+    hp:thin_old_man a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "thin-old-man" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance85_char .
+
+    hp:tonks a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "tonks" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance107_char .
+
+    hp:two_short_fingers_short_hands_with_thick_hands a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "two-short-fingers-short-hands-with-thick-hands" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance147_char .
+
+    hp:umbridge a gaf:Instance,
+            hp:character ;
+        rdfs:label "umbridge" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance143_char,
+            leolaniTalk:chat1_utterance145_char,
+            leolaniTalk:chat1_utterance147_char,
+            leolaniTalk:chat1_utterance149_char .
+
+    hp:urgent_appearance a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "urgent-appearance" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance47_char .
+
+    hp:very_old a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "very-old" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance119_char .
+
+    hp:veteran a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "veteran" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance15_char .
+
+    hp:water_and_fire_do_not_invade a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "water-and-fire-do-not-invade" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance133_char .
+
+    hp:weasley a gaf:Instance,
+            hp:attribute,
+            hp:character ;
+        rdfs:label "weasley" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance41_char,
+            leolaniTalk:chat1_utterance61_char .
+}
+
+leolaniWorld:neville_looks_long_waist {
+    hp:neville hp:looks hp:long_waist .
+}
+
+leolaniWorld:lupin_nickname_veteran {
+    hp:lupin hp:nickname hp:veteran .
+}
+
+leolaniWorld:hermione_affiliation_guling_pavilion {
+    hp:hermione hp:affiliation hp:guling_pavilion .
+}
+
+leolaniWorld:dean_tomas_looks_pale {
+    hp:dean_tomas hp:looks hp:pale .
+}
+
+leolaniWorld:harry_and_hermione_name_hermione {
+    hp:harry_and_hermione hp:name hp:hermione .
+}
+
+leolaniWorld:umbridge_title_president_hogwarts {
+    hp:umbridge hp:title hp:president_hogwarts .
+}
+
+leolaniWorld:Ontology {
+    eps:hasContext a owl:ObjectProperty ;
+        rdfs:domain gaf:Instance,
+            sem:Event ;
+        rdfs:range eps:Context ;
+        rdfs:subPropertyOf eps:contextProperty .
+
+    eps:hasDetection a owl:ObjectProperty ;
+        rdfs:domain eps:Context ;
+        rdfs:range grasp:Detection ;
+        rdfs:subPropertyOf eps:contextProperty .
+
+    gaf:Assertion a owl:Class ;
+        rdfs:subClassOf gaf:Instance .
+
+    grasp:Chat a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    grasp:Experience a owl:Class ;
+        rdfs:subClassOf gaf:Mention,
+            sem:Event .
+
+    grasp:Statement a owl:Class ;
+        rdfs:subClassOf gaf:Mention,
+            sem:Event .
+
+    grasp:Visual a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    grasp:hasAttribution a owl:ObjectProperty ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range grasp:Attribution ;
+        owl:inverseOf grasp:isAttributionFor .
+
+    grasp:wasAttributedTo a owl:ObjectProperty ;
+        rdfs:label "was attributed to" ;
+        rdfs:comment "States that a gaf:Mention was attributed to a gaf:Instance. This is a sub property of the prov:wasAttributedTo relation that can be used to relate any prov:Entity to any prov:Agent."^^xsd:string ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range grasp:Source ;
+        rdfs:subPropertyOf prov:wasAttributedTo .
+
+    hp:affiliation rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:age rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:belongings rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:export rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:gender rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:hobbies rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:lineage rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:looks rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:name rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:nickname rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:spells rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:talents rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:title rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    <http://schema.org/Place> a owl:Class .
+
+    sem:hasActor a owl:ObjectProperty ;
+        rdfs:label "has Actor" ;
+        rdfs:comment "Has actor is used to state which Actors or Objects participate in an Event." ;
+        rdfs:range sem:Actor ;
+        rdfs:subPropertyOf sem:eventProperty .
+
+    sem:hasBeginTimeStamp a owl:DatatypeProperty ;
+        rdfs:label "has begin timestamp" ;
+        rdfs:comment "Has begin timestamp is used to indicate the beginning of a time interval. Omitting the hasBeginTimeStamp while stating a hasEndTimeStamp is interpreted as an open ended interval." ;
+        rdfs:subPropertyOf sem:hasTimeStamp .
+
+    sem:hasPlace a owl:ObjectProperty ;
+        rdfs:label "has Place" ;
+        rdfs:comment "Has place is used to state in which Place(s) an Event happened. Coordinates can be attached to the Place with the W3C Geospatial Vocabulary (http://www.w3.org/2005/Incubator/geo/XGR-geo-20071023/)." ;
+        rdfs:range sem:Place ;
+        rdfs:subPropertyOf sem:eventProperty .
+
+    sem:hasSubEvent a owl:ObjectProperty ;
+        rdfs:label "has subevent" ;
+        rdfs:comment "Has subevent connects an Event to other Events that belong to it. This is a very generic property that does not mean the subevents fully define the superconcept or that there is any causal relationship." ;
+        rdfs:domain sem:Event ;
+        rdfs:range sem:Event ;
+        rdfs:subPropertyOf sem:eventProperty ;
+        owl:inverseOf sem:subEventOf .
+
+    sem:hasTime a owl:ObjectProperty ;
+        rdfs:label "has Time" ;
+        rdfs:comment "Has time is used to indicate at which time an Event took place or when a property under the Temporary Constraint is valid. Has time points to a symbolic representation of time, which allows semantic relations between time resources. (see http://www.w3.org/TR/owl-time/)" ;
+        rdfs:range sem:Time ;
+        rdfs:subPropertyOf sem:eventProperty .
+
+    skos:broadMatch a owl:AnnotationProperty .
+
+    skos:closeMatch a owl:AnnotationProperty .
+
+    skos:narrowMatch a owl:AnnotationProperty .
+
+    prov:category a owl:AnnotationProperty .
+
+    prov:component a owl:AnnotationProperty .
+
+    prov:definition a owl:AnnotationProperty .
+
+    prov:hadDerivation a owl:ObjectProperty ;
+        owl:inverseOf prov:wasDerivedFrom .
+
+    prov:inverse a owl:AnnotationProperty .
+
+    prov:qualifiedForm a owl:AnnotationProperty .
+
+    gaf:containsDenotation a owl:ObjectProperty ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range gaf:Instance ;
+        owl:inverseOf gaf:denotedIn .
+
+    gaf:denotedBy a owl:ObjectProperty ;
+        rdfs:domain gaf:Instance ;
+        rdfs:range gaf:Mention ;
+        rdfs:subPropertyOf gaf:denotedIn ;
+        owl:inverseOf gaf:denotes .
+
+    grasp:Source a owl:Class ;
+        rdfs:label "Source" ;
+        rdfs:comment "" ;
+        rdfs:subClassOf owl:Thing .
+
+    grasp:Utterance a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    graspe:anger a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:disgust a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:fear a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:happiness a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:sadness a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:surprise a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspf:certain a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    graspf:future a grasp:TemporalValue,
+            owl:NamedIndividual .
+
+    graspf:negative a grasp:PolarityValue,
+            owl:NamedIndividual .
+
+    graspf:non-future a grasp:TemporalValue,
+            owl:NamedIndividual .
+
+    graspf:positive a grasp:PolarityValue,
+            owl:NamedIndividual .
+
+    graspf:possible a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    graspf:probable a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    graspf:underspecified a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    grasps:negative a grasp:SentimentValue,
+            owl:NamedIndividual .
+
+    grasps:positive a grasp:SentimentValue,
+            owl:NamedIndividual .
+
+    sem:Actor a owl:Class ;
+        rdfs:label "Actor" ;
+        rdfs:comment """Actors are entities that take part in an Event, either actively or passively. Actors do not necessarily have to be sentient. They can also be objects. Actors are a thing, animate or inanimate, physical or non-physical.
+""" ;
+        skos:broadMatch <http://sw.opencyc.org/2009/04/07/concept/en/SomethingExisting>,
+            <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant> ;
+        skos:closeMatch dcterms:Agent,
+            dcterms:AgentClass,
+            <http://sw.opencyc.org/2009/04/07/concept/en/Agent-Generic>,
+            <http://www.ontologyportal.org/translations/SUMO.owl.txt#Agent>,
+            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor>,
+            foaf:Agent .
+
+    sem:Place a owl:Class ;
+        rdfs:label "Place" ;
+        rdfs:comment "Places are locations where an Event happens. They do not need to be physical places and hence do not necessarily need coordinates. Neither do they need to have any significance apart from them being the location of an Event." ;
+        skos:closeMatch dcterms:Location,
+            <http://sw.opencyc.org/2009/04/07/concept/en/EnduringThing-Localized>,
+            <http://www.ontologyportal.org/translations/SUMO.owl.txt#GeographicArea>,
+            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place> ;
+        skos:narrowMatch <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#PhysicalRegion>,
+            <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+    sem:Time a owl:Class ;
+        rdfs:label "Time" ;
+        rdfs:comment "Time contains symbolic representations of when an Event took place. Time instances do not necessarily need to have a timestamp associated with them. The Time class exists to represent semantics of time, e.g. that one thing happens before another, even though the exact timestamps are unknown." ;
+        skos:broadMatch <http://www.w3.org/2006/timeTemporalEntity> .
+
+    sem:subEventOf a owl:ObjectProperty ;
+        rdfs:label "subevent of" ;
+        rdfs:comment "Inverse property of hasSubEvent" .
+
+    rdf:value a owl:ObjectProperty .
+
+    prov:wasAttributedTo a owl:ObjectProperty .
+
+    prov:wasDerivedFrom a owl:ObjectProperty ;
+        rdfs:label "wasDerivedFrom" ;
+        rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range grasp:Detection,
+            grasp:Utterance ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        prov:category "starting-point" ;
+        prov:component "derivations" ;
+        prov:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
+        prov:inverse "hadDerivation" ;
+        prov:qualifiedForm prov:Derivation .
+
+    foaf:Agent a owl:Class .
+
+    eps:Context a owl:Class .
+
+    eps:contextProperty a owl:ObjectProperty ;
+        rdfs:label "context property" ;
+        rdfs:comment "Context properties connect Context to other SEM Core entities." ;
+        owl:equivalentProperty sem:eventProperty .
+
+    gaf:denotedIn a owl:ObjectProperty ;
+        rdfs:domain gaf:Instance ;
+        rdfs:range gaf:Mention .
+
+    gaf:denotes a owl:ObjectProperty ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range gaf:Instance ;
+        rdfs:subPropertyOf gaf:containsDenotation .
+
+    grasp:Attribution a owl:Class ;
+        rdfs:label "Attribution" ;
+        rdfs:comment "A grasp:Attribution reflects the attribution of some interpretation, some perspective to a gaf:Mention. An attribution expresses such things as certainty, emotion, polarity, sentiment, temporality."^^xsd:string ;
+        owl:disjointWith grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:intersectionOf ( [ a owl:Restriction ;
+                            owl:onProperty grasp:isAttributionFor ;
+                            owl:someValuesFrom gaf:Mention ] [ a owl:Restriction ;
+                            owl:onProperty rdf:value ;
+                            owl:someValuesFrom grasp:AttributionValue ] ) ] .
+
+    grasp:Detection a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    grasp:isAttributionFor a owl:ObjectProperty ;
+        rdfs:domain grasp:Attribution ;
+        rdfs:range gaf:Mention .
+
+    grasp:PolarityValue a owl:Class ;
+        rdfs:label "Polarity Value" ;
+        rdfs:comment "The polarity of a gaf:Mention (e.g. if something is or isn't the case)"^^xsd:string ;
+        rdfs:subClassOf grasp:FactualityValue ;
+        owl:disjointWith grasp:TemporalValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspf:negative graspf:positive ) ] .
+
+    grasp:CertaintyValue a owl:Class ;
+        rdfs:label "Certainty Value" ;
+        rdfs:comment "The level of certainty of a gaf:Mention"^^xsd:string ;
+        rdfs:subClassOf grasp:FactualityValue ;
+        owl:disjointWith grasp:PolarityValue,
+            grasp:TemporalValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspf:certain graspf:possible graspf:probable graspf:underspecified ) ] .
+
+    grasp:FactualityValue a owl:Class ;
+        rdfs:label "Factuality value"^^xsd:string ;
+        rdfs:subClassOf grasp:AttributionValue ;
+        owl:disjointWith grasp:SentimentValue .
+
+    grasp:SentimentValue a owl:Class ;
+        rdfs:label "Sentiment Value" ;
+        rdfs:comment "The sentiment expressed by a gaf:Mention"^^xsd:string ;
+        rdfs:subClassOf grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( grasps:negative grasps:positive ) ] .
+
+    grasp:TemporalValue a owl:Class ;
+        rdfs:label "Temporal Value" ;
+        rdfs:comment "The temporal property of a gaf:Mention"^^xsd:string ;
+        rdfs:subClassOf grasp:FactualityValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspf:future graspf:non-future ) ] .
+
+    sem:eventProperty a owl:ObjectProperty ;
+        rdfs:label "event property" ;
+        rdfs:comment "Event properties connect Events to other SEM Core entities." .
+
+    grasp:EmotionValue a owl:Class ;
+        rdfs:label "Emotion Value" ;
+        rdfs:comment "The emotion expressed in a gaf:Mention"^^xsd:string ;
+        rdfs:subClassOf grasp:AttributionValue ;
+        owl:disjointWith grasp:FactualityValue,
+            grasp:SentimentValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspe:anger graspe:disgust graspe:fear graspe:happiness graspe:sadness graspe:surprise ) ] .
+
+    gaf:Instance a owl:Class ;
+        rdfs:label "Instance" ;
+        rdfs:comment "Instances are statements about real world entities, including actions, processes and abstract notions. They are the primary subject of individuals of type gaf:Mention that can denote them."^^xsd:string ;
+        rdfs:subClassOf owl:Thing ;
+        owl:disjointWith grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Restriction ;
+                owl:onProperty gaf:denotedBy ;
+                owl:someValuesFrom gaf:Mention ] .
+
+    grasp:AttributionValue a owl:Class ;
+        rdfs:label "Attribution value"^^xsd:string ;
+        rdfs:comment "The value of a grasp:Attribution"^^xsd:string ;
+        rdfs:subClassOf owl:Thing .
+
+    sem:Event a owl:Class ;
+        rdfs:label "Event" ;
+        rdfs:comment "Events are things that happen. This comprises everything from historical events to web site sessions and mythical journeys. Event is the central class of SEM." ;
+        skos:broadMatch <http://linkedevents.org/ontology/Event>,
+            <http://purl.org/NET/c4dm/event.owl#Event> ;
+        skos:closeMatch dcmitype:Event,
+            <http://sw.opencyc.org/2009/04/07/concept/en/Situation>,
+            <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant>,
+            <http://www.ontologyportal.org/translations/SUMO.owl.txt#Process>,
+            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E5.Event> .
+
+    gaf:Mention a owl:Class ;
+        rdfs:label "Mention" ;
+        rdfs:comment """Mentions are references to members of the gaf:Instance class as they occur in (web) media such as texts, video, audio, images, etc. Mentions denote gaf:Instances.
+
+A Mention uniquely identifies the (part of a) web source that denotes the mention. We refer to the standard use of fragment identifiers for different media types. """^^xsd:string ;
+        rdfs:subClassOf owl:Thing ;
+        owl:disjointWith grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Restriction ;
+                owl:onProperty gaf:denotes ;
+                owl:someValuesFrom gaf:Instance ] .
+
+    hp:attribute a owl:Class .
+
+    hp:character a owl:Class ;
+        rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+}
+
+leolaniWorld:seamus_looks_swollen_face {
+    hp:seamus hp:looks hp:swollen_face .
+}
+
+leolaniWorld:Claims {
+    leolaniWorld:aberforth_looks_gray_hair_and_beard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "aberforth_looks_gray_hair_and_beard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance99_char .
+
+    leolaniWorld:cedric_affiliation_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "cedric_affiliation_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance7_char .
+
+    leolaniWorld:dean_tomas_looks_pale a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "dean_tomas_looks_pale" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance115_char,
+            leolaniTalk:chat1_utterance117_char .
+
+    leolaniWorld:dudley_looks_large a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "dudley_looks_large" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance31_char .
+
+    leolaniWorld:dumbledore_belongings_black_gem_ring a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "dumbledore_belongings_black_gem_ring" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance131_char .
+
+    leolaniWorld:dumbledore_dumbledore_lineage_mixed_wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "dumbledore_dumbledore_lineage_mixed_wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance127_char,
+            leolaniTalk:chat1_utterance129_char .
+
+    leolaniWorld:filch_looks_flesh_loose_face_and_those_fierce_light_colored_eyes a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "filch_looks_flesh_loose_face_and_those_fierce_light_colored_eyes" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance91_char .
+
+    leolaniWorld:firenze_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "firenze_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance141_char .
+
+    leolaniWorld:fleur_looks_big_eyes a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "fleur_looks_big_eyes" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance29_char .
+
+    leolaniWorld:fred_george_ginny_looks_short_body a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "fred_george_ginny_looks_short_body" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance57_char,
+            leolaniTalk:chat1_utterance59_char .
+
+    leolaniWorld:fred_hobbies_experience_muggle_life a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "fred_hobbies_experience_muggle_life" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance19_char .
+
+    leolaniWorld:george_affiliation_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "george_affiliation_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance103_char .
+
+    leolaniWorld:ginny_character_kindly a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ginny_character_kindly" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance79_char .
+
+    leolaniWorld:greyback_age_adult a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "greyback_age_adult" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance81_char .
+
+    leolaniWorld:harry_and_hermione_name_hermione a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_and_hermione_name_hermione" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance21_char .
+
+    leolaniWorld:harry_belongings_gold_pendant_boxes a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_belongings_gold_pendant_boxes" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance13_char .
+
+    leolaniWorld:harry_belongings_gongxian a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_belongings_gongxian" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance51_char .
+
+    leolaniWorld:harry_looks_the_face_is_extremely_large a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_looks_the_face_is_extremely_large" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance69_char .
+
+    leolaniWorld:harry_name_hermione a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_name_hermione" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance151_char .
+
+    leolaniWorld:harry_spells_water_and_fire_do_not_invade a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_spells_water_and_fire_do_not_invade" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance133_char .
+
+    leolaniWorld:hermione_affiliation_guling_pavilion a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_affiliation_guling_pavilion" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance3_char,
+            leolaniTalk:chat1_utterance5_char .
+
+    leolaniWorld:hermione_fred_belongings_cat a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_fred_belongings_cat" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance113_char .
+
+    leolaniWorld:hermione_harry_age_13_years_old a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_harry_age_13_years_old" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance155_char .
+
+    leolaniWorld:hermione_name_fleur a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_name_fleur" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance153_char .
+
+    leolaniWorld:hermione_name_hermione a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_name_hermione" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance23_char .
+
+    leolaniWorld:hermione_nickname_crazy_girl a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_nickname_crazy_girl" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance55_char .
+
+    leolaniWorld:hermione_spells_call_god_guards a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_spells_call_god_guards" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance125_char .
+
+    leolaniWorld:hermione_spells_fly_the_boxes a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_spells_fly_the_boxes" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance45_char .
+
+    leolaniWorld:hermione_spells_urgent_appearance a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_spells_urgent_appearance" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance47_char .
+
+    leolaniWorld:hermione_title_gu_lingge_employee a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_title_gu_lingge_employee" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance25_char,
+            leolaniTalk:chat1_utterance27_char .
+
+    leolaniWorld:james_age_adult a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "james_age_adult" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance0_char0-25 .
+
+    leolaniWorld:james_name_james_potter a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "james_name_james_potter" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance159_char,
+            leolaniTalk:chat1_utterance161_char .
+
+    leolaniWorld:kreacher_age_very_old a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "kreacher_age_very_old" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance119_char .
+
+    leolaniWorld:leolani_know_john a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_john" .
+
+    leolaniWorld:lovegood_looks_much_like_a_triangular_eye a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "lovegood_looks_much_like_a_triangular_eye" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance73_char,
+            leolaniTalk:chat1_utterance75_char .
+
+    leolaniWorld:luna_nickname_crazy_girl a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "luna_nickname_crazy_girl" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance53_char .
+
+    leolaniWorld:lupin_name_tonks a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "lupin_name_tonks" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance107_char .
+
+    leolaniWorld:lupin_name_weasley a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "lupin_name_weasley" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance61_char .
+
+    leolaniWorld:lupin_nickname_veteran a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "lupin_nickname_veteran" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance15_char .
+
+    leolaniWorld:malfoy_looks_the_golden_yellow_hair_of_the_oil_and_smoothness a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "malfoy_looks_the_golden_yellow_hair_of_the_oil_and_smoothness" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance101_char .
+
+    leolaniWorld:mclaggen_affiliation_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mclaggen_affiliation_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char .
+
+    leolaniWorld:mclaggen_title_kui_diqi_goalkeeper a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mclaggen_title_kui_diqi_goalkeeper" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance11_char .
+
+    leolaniWorld:moody_looks_the_fake_legs_made_of_wood a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "moody_looks_the_fake_legs_made_of_wood" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance39_char .
+
+    leolaniWorld:morfin_lineage_pure_blood_wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "morfin_lineage_pure_blood_wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance35_char,
+            leolaniTalk:chat1_utterance37_char .
+
+    leolaniWorld:morfin_looks_and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "morfin_looks_and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance33_char .
+
+    leolaniWorld:mr_weasley_looks_red_hair a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mr_weasley_looks_red_hair" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance163_char .
+
+    leolaniWorld:mrs_rosmerta_looks_good_body_shape a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mrs_rosmerta_looks_good_body_shape" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance43_char .
+
+    leolaniWorld:mrs_rosmerta_name_rosmerta a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mrs_rosmerta_name_rosmerta" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance165_char .
+
+    leolaniWorld:mrs_weasley_hobbies_experience_muggle_life a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mrs_weasley_hobbies_experience_muggle_life" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance17_char .
+
+    leolaniWorld:mundungus_title_member_of_the_phoenix a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mundungus_title_member_of_the_phoenix" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance109_char,
+            leolaniTalk:chat1_utterance111_char .
+
+    leolaniWorld:neville_belongings_fake_galon a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "neville_belongings_fake_galon" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance137_char,
+            leolaniTalk:chat1_utterance139_char .
+
+    leolaniWorld:neville_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "neville_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance49_char .
+
+    leolaniWorld:neville_looks_long_waist a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "neville_looks_long_waist" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance63_char .
+
+    leolaniWorld:ollivander_export_magic_wand_manufacturing a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ollivander_export_magic_wand_manufacturing" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance83_char .
+
+    leolaniWorld:ollivander_looks_thin_old_man a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ollivander_looks_thin_old_man" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance85_char .
+
+    leolaniWorld:pomfrey_gender_female a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "pomfrey_gender_female" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance105_char .
+
+    leolaniWorld:rita_affiliation_prophetician a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "rita_affiliation_prophetician" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance135_char .
+
+    leolaniWorld:ron_belongings_lights_off_the_lamps a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_belongings_lights_off_the_lamps" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance71_char .
+
+    leolaniWorld:ron_hermione_spells_and_guarding_the_guards a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_hermione_spells_and_guarding_the_guards" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance77_char .
+
+    leolaniWorld:ron_looks_freckles_on_the_face a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_looks_freckles_on_the_face" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance87_char,
+            leolaniTalk:chat1_utterance89_char .
+
+    leolaniWorld:ron_nickname_crazy_girl a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_nickname_crazy_girl" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance157_char .
+
+    leolaniWorld:ron_spells_fell_to_the_ground a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_spells_fell_to_the_ground" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance67_char .
+
+    leolaniWorld:ron_spells_silent_and_silent a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_spells_silent_and_silent" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance65_char .
+
+    leolaniWorld:seamus_looks_swollen_face a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "seamus_looks_swollen_face" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance121_char,
+            leolaniTalk:chat1_utterance123_char .
+
+    leolaniWorld:snape_looks_thin_lips a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "snape_looks_thin_lips" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance95_char,
+            leolaniTalk:chat1_utterance97_char .
+
+    leolaniWorld:snape_spells_except_for_your_weapon a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "snape_spells_except_for_your_weapon" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance93_char .
+
+    leolaniWorld:umbridge_belongings_gold_pendant_box a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "umbridge_belongings_gold_pendant_box" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance143_char .
+
+    leolaniWorld:umbridge_looks_round a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "umbridge_looks_round" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance149_char .
+
+    leolaniWorld:umbridge_looks_two_short_fingers_short_hands_with_thick_hands a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "umbridge_looks_two_short_fingers_short_hands_with_thick_hands" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance147_char .
+
+    leolaniWorld:umbridge_title_president_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "umbridge_title_president_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance145_char .
+
+    leolaniWorld:weasley_affiliation_ministry_of_magic a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "weasley_affiliation_ministry_of_magic" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance41_char .
+
+    leolaniWorld:john owl:sameAs leolaniWorld:john .
+}
+
+leolaniWorld:aberforth_looks_gray_hair_and_beard {
+    hp:aberforth hp:looks hp:gray_hair_and_beard .
+}
+
+leolaniWorld:mclaggen_affiliation_hogwarts {
+    hp:mclaggen hp:affiliation hp:hogwarts .
+}
+
+leolaniWorld:morfin_looks_and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth {
+    hp:morfin hp:looks hp:and_the_original_color_cannot_be_discerned_a_few_teeth_are_dropped_in_the_mouth .
+}
+
+leolaniWorld:umbridge_belongings_gold_pendant_box {
+    hp:umbridge hp:belongings hp:gold_pendant_box .
+}
+
+leolaniWorld:ollivander_export_magic_wand_manufacturing {
+    hp:ollivander hp:export hp:magic_wand_manufacturing .
+}
+
+leolaniWorld:hermione_name_hermione {
+    hp:hermione hp:name hp:hermione .
+}
+
+leolaniWorld:ron_spells_fell_to_the_ground {
+    hp:ron hp:spells hp:fell_to_the_ground .
+}
+
+leolaniWorld:ron_hermione_spells_and_guarding_the_guards {
+    hp:ron_hermione hp:spells hp:and_guarding_the_guards .
+}
+
+leolaniWorld:mundungus_title_member_of_the_phoenix {
+    hp:mundungus hp:title hp:member_of_the_phoenix .
+}
+
+leolaniWorld:filch_looks_flesh_loose_face_and_those_fierce_light_colored_eyes {
+    hp:filch hp:looks hp:flesh_loose_face_and_those_fierce_light_colored_eyes .
+}
+
+leolaniWorld:umbridge_looks_two_short_fingers_short_hands_with_thick_hands {
+    hp:umbridge hp:looks hp:two_short_fingers_short_hands_with_thick_hands .
+}
+
+leolaniWorld:harry_spells_water_and_fire_do_not_invade {
+    hp:harry hp:spells hp:water_and_fire_do_not_invade .
+}
+
+leolaniWorld:weasley_affiliation_ministry_of_magic {
+    hp:weasley hp:affiliation hp:ministry_of_magic .
+}
+
+leolaniWorld:ron_nickname_crazy_girl {
+    hp:ron hp:nickname hp:crazy_girl .
+}
+
+leolaniWorld:lupin_name_weasley {
+    hp:lupin hp:name hp:weasley .
+}
+
+leolaniWorld:ollivander_looks_thin_old_man {
+    hp:ollivander hp:looks hp:thin_old_man .
+}
+
+leolaniWorld:mr_weasley_looks_red_hair {
+    hp:mr_weasley hp:looks hp:red_hair .
+}
+
+leolaniWorld:hermione_title_gu_lingge_employee {
+    hp:hermione hp:title hp:gu_lingge_employee .
+}
+
+leolaniWorld:harry_name_hermione {
+    hp:harry hp:name hp:hermione .
+}
+
+leolaniWorld:snape_spells_except_for_your_weapon {
+    hp:snape hp:spells hp:except_for_your_weapon .
+}
+
+leolaniWorld:lovegood_looks_much_like_a_triangular_eye {
+    hp:lovegood hp:looks hp:much_like_a_triangular_eye .
+}
+
