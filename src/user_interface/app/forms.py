@@ -2,10 +2,12 @@ from datetime import datetime
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField, SelectField, DateField, URLField
-from wtforms.validators import DataRequired, InputRequired
+from wtforms.validators import DataRequired  # , InputRequired
 
-from src.dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, PREDICATE_OPTIONS, \
-    ONTOLOGY_DETAILS
+from src.dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, ONTOLOGY_DETAILS
+
+
+# from src.user_interface.app.utils.form_utils import get_predicate_options
 
 
 class TurnForm(FlaskForm):
@@ -15,7 +17,7 @@ class TurnForm(FlaskForm):
     subject_uri = URLField('Subject URI', default='http://cltl.nl/leolani/world/', validators=[DataRequired()])
 
     predicate_label = StringField('Predicate label', validators=[DataRequired()])
-    # predicate_options = [("", "")] + [(uuid, name) for uuid, name in enumerate(PREDICATE_OPTIONS)]
+    # predicate_options = [("", "")] + [(uuid, name) for uuid, name in enumerate(get_predicate_options())]
     # predicate_label = SelectField('Predicate label autocomplete', choices=predicate_options, validators=[DataRequired()])
     predicate_uri = URLField('Predicate URI', default=ONTOLOGY_DETAILS['namespace'], validators=[DataRequired()])
 

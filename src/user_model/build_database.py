@@ -6,10 +6,13 @@ from iribaker import to_iri
 
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.commons.discrete import UtteranceType, Certainty, Polarity, Sentiment
-from src.dialogue_system.utils.global_variables import ONTOLOGY_DETAILS
-from src.user_model.utils.constants import NUM_USERS_PER_TYPE, RAW_USER_PATH, CONTEXT_ID, START_DATE, \
-    HP_CONTEXT_CAPSULE
+from src.dialogue_system.utils.global_variables import ONTOLOGY_DETAILS, RAW_USER_PATH, HARRYPOTTER_NS
+from src.dialogue_system.utils.helpers import get_all_characters, get_all_attributes
+from src.user_model.utils.constants import CONTEXT_ID, START_DATE, HP_CONTEXT_CAPSULE
 from src.user_model.utils.helpers import *
+
+TEST = True
+NUM_USERS_PER_TYPE = 10 if TEST else 100
 
 
 def add_triple(book, chapter, position, counter, name, character, relation, val, brain):
@@ -32,7 +35,7 @@ def add_triple(book, chapter, position, counter, name, character, relation, val,
                                       datetime.now().time()),
         "context_id": CONTEXT_ID
     }
-    response = brain.capsule_statement(capsule, reason_types=False, create_label=True, return_thoughts=False)
+    _ = brain.capsule_statement(capsule, reason_types=False, create_label=True, return_thoughts=False)
     print(f"\t{capsule['triple']}")
 
 
@@ -188,6 +191,7 @@ def corrupt_claim(claim, graph_data, all_characters, all_attributes):
 
     return graph_data
 
+
 def create_users(graph_data):
     all_claims = get_all_claims(graph_data)
     all_characters = get_all_characters(graph_data)
@@ -251,18 +255,16 @@ def create_users(graph_data):
 
 
 def main():
-    # print("---------------------------- Ingest triples per book  ----------------------------")
-    # # iterate through JSONs
-    # files = get_all_files(extension="json")
-    # for file in files:
-    #     process_file(file)
-
+    print("---------------------------- Ingest triples per book  ----------------------------")
+    # iterate through JSONs
+    files = get_all_files(extension="json")
+    for file in files:
+        process_file(file)
 
     print("---------------------------- Make users  ----------------------------")
     # Make types of users
-    graph_data = merge_all_graphs()
+    graph_data = merge_all_graphs(TEST)
     create_users(graph_data)
-
 
 
 if __name__ == "__main__":

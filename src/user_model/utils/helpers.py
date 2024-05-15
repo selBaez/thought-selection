@@ -1,14 +1,15 @@
 from pathlib import Path
 from random import getrandbits, sample
 
-from rdflib import ConjunctiveGraph, URIRef, Literal, RDF, RDFS
+from rdflib import URIRef, Literal, RDF, RDFS
 
 from cltl.brain.utils.helper_functions import hash_claim_id
-from src.dialogue_system.utils.global_variables import HARRYPOTTER_NS, HARRYPOTTER_PREFIX
-from src.user_model.utils.constants import TEST, OG_DATA_PATHS, PERSPECTIVE_GRAPH, CLAIM_GRAPH, INSTANCE_GRAPH, TYPE_EVENT, \
-    TYPE_ASSERTION, TYPE_ATTRIBUTION, TYPE_ATTRIBUTIONVALUE, TYPE_CERTAINTYVALUE, TYPE_POLARITYVALUE, CERTAINTY_CERTAIN, \
-    CERTAINTY_POSSIBLE, POLARITY_POSITIVE, POLARITY_NEGATIVE, SENTIMENT_NEUTRAL, EMOTION_UNDERSPECIFIED, GRASP_HASATT, \
-    GRASP_ATTFOR, GAF_DENOTEDBY, GAF_DENOTES, GAF_DENOTEDIN, GAF_CONTAINSDEN
+from src.dialogue_system.utils.global_variables import OG_DATA_PATHS, \
+    PERSPECTIVE_GRAPH, CLAIM_GRAPH, INSTANCE_GRAPH, TYPE_EVENT, TYPE_ASSERTION, TYPE_ATTRIBUTION, TYPE_ATTRIBUTIONVALUE, \
+    TYPE_CERTAINTYVALUE, TYPE_POLARITYVALUE, CERTAINTY_CERTAIN, CERTAINTY_POSSIBLE, POLARITY_POSITIVE, \
+    POLARITY_NEGATIVE, SENTIMENT_NEUTRAL, EMOTION_UNDERSPECIFIED, GRASP_HASATT, GRASP_ATTFOR, GAF_DENOTEDBY, \
+    GAF_DENOTES, GAF_DENOTEDIN, GAF_CONTAINSDEN
+from src.dialogue_system.utils.helpers import build_graph
 
 
 def break_list(text):
@@ -79,17 +80,7 @@ def get_all_files(extension="json"):
     return files
 
 
-def build_graph():
-    """
-    Build graph to put dataset in
-    """
-    graph_data = ConjunctiveGraph()
-    graph_data.bind(HARRYPOTTER_PREFIX, HARRYPOTTER_NS)
-
-    return graph_data
-
-
-def merge_all_graphs():
+def merge_all_graphs(test=False):
     """
     Put together triples from different trig files
     """
@@ -98,7 +89,7 @@ def merge_all_graphs():
     for trig_file in trig_files:
         graph_data.parse(trig_file)
         print(f"READ DATASET in {trig_file.stem}: {len(graph_data)}")
-        if TEST:
+        if test:
             break
 
     return graph_data
@@ -112,19 +103,6 @@ def save_graph(filepath, graph_data):
     print(f"\tFINAL SIZE OF DATASET in {filepath.stem}: {len(graph_data)}")
 
 
-def get_all_characters(graph_data):
-    """
-    Query graph for characters (subjects in triples)
-    """
-    q_characters = """SELECT distinct ?character  WHERE {{ ?character rdf:type hp:character . }}"""
-    all_characters = graph_data.query(q_characters)
-    all_characters = [c for c in all_characters]
-
-    print(f"CHARACTERS IN DATASET: {len(all_characters)}")
-
-    return all_characters
-
-
 def sample_character(all_characters):
     """
     Get a random node of type character
@@ -132,33 +110,6 @@ def sample_character(all_characters):
     selected_character = sample(all_characters, 1)
 
     return selected_character[0]["character"]
-
-
-def get_all_predicates(graph_data):
-    """
-    Query graph for predicates (relations in triples)
-    """
-    q_predicates = """SELECT distinct ?predicate  WHERE {{ ?s ?predicate ?o . 
-                        FILTER(STRSTARTS(STR(?predicate), STR(hp:))) . }}"""
-    all_predicates = graph_data.query(q_predicates)
-    all_predicates = [c for c in all_predicates]
-
-    print(f"PREDICATES IN DATASET: {len(all_predicates)}")
-
-    return all_predicates
-
-
-def get_all_attributes(graph_data):
-    """
-    Query graph for attributes (objects in triples)
-    """
-    q_attributes = """SELECT distinct ?attribute  WHERE {{ ?attribute rdf:type hp:attribute . }}"""
-    all_attributes = graph_data.query(q_attributes)
-    all_attributes = [c for c in all_attributes]
-
-    print(f"ATTRIBUTES IN DATASET: {len(all_attributes)}")
-
-    return all_attributes
 
 
 def sample_attribute(all_attributes):

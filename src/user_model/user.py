@@ -1,9 +1,9 @@
 from datetime import datetime
 from random import choice
 
-from cltl.brain.infrastructure.rdf_builder import RdfBuilder
-from rdflib import Graph, URIRef
+from rdflib import ConjunctiveGraph, URIRef
 
+from cltl.brain.infrastructure.rdf_builder import RdfBuilder
 from src.dialogue_system.utils.global_variables import HARRYPOTTER_NS, HARRYPOTTER_PREFIX
 
 
@@ -26,7 +26,7 @@ def init_capsule(args, chatbot):
         'predicate': {'label': 'age', 'uri': 'http://harrypotter.org/age'},
         'object': {'label': 'adult', 'type': ['age_range'],
                    'uri': 'http://harrypotter.org/adult'},
-        'perspective': {'certainty': 1, 'polarity': 1, 'sentiment': 0},
+        'perspective': {'certainty': 1, 'polarity': -1, 'sentiment': 0}, # TODO change for testing
         'timestamp': datetime.now(), 'context_id': args.context_id}
 
     return init_cap
@@ -45,19 +45,20 @@ def uri_to_capsule_triple(uri, response_template, role='subject'):
 
 
 class User(object):
-    def __init__(self, kb_filepath='/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/all.ttl'):
+    def __init__(self, kb_filepath='/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/all.ttl',
+                 ontology_filepath= '/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/ontology.ttl'):
         """Sets up a user with a triple database.
 
         returns: None
         """
 
-        self._graph = Graph()
-        self._rdf_builer = RdfBuilder(ontology_details={"filepath": kb_filepath.rsplit('/', 1)[0] + 'ontology.ttl',
+        self._graph = ConjunctiveGraph()
+        self._rdf_builer = RdfBuilder(ontology_details={"filepath": ontology_filepath,
                                                         "namespace": HARRYPOTTER_NS, "prefix": HARRYPOTTER_PREFIX})
 
         # parse data and namespaces
-        # TODO parse correct type and instance of user
         self._graph.parse(kb_filepath)
+        print(f"Parsed file, size of graph is {len(self._graph)}")
 
     def replace_namespace(self, txt):
         txt = txt.replace(HARRYPOTTER_NS, f'{HARRYPOTTER_PREFIX}:')
@@ -107,7 +108,8 @@ class User(object):
 
         return response_template
 
-    def response_triple(self, response_template, response):
+    @staticmethod
+    def response_triple(response_template, response):
         selection = choice(list(response))
 
         # Subject

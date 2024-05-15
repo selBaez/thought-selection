@@ -14,12 +14,11 @@ from random import choice
 # Pip-installed ctl repositories
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.brain.utils.helper_functions import brain_response_to_json
-
 from cltl.commons.casefolding import casefold_capsule
-
 from cltl.commons.discrete import UtteranceType
 from cltl.commons.language_data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
-from cltl.thoughts.thought_selection.rl_selector import UCB
+from src.dialogue_system.d2q_selector import D2Q
+# from cltl.thoughts.thought_selection.rl_selector import UCB
 from src.dialogue_system.triple_phraser import TriplePhraser
 from src.dialogue_system.utils.capsule_utils import template_to_statement_capsule
 from src.dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS
@@ -87,7 +86,7 @@ class Chatbot(object):
         # Set up Leolani backend modules
         self.scenario_folder = create_session_folder(reward, chat_id, speaker)
         self._brain = LongTermMemory(address=BRAIN_ADDRESS, log_dir=self.scenario_folder,
-                                     ontology_details=ONTOLOGY_DETAILS, clear_all=chat_id == 1)
+                                     ontology_details=ONTOLOGY_DETAILS, clear_all=chat_id == 1) # TODO False)
 
         # Chat information
         self.chat_id = chat_id
@@ -99,8 +98,9 @@ class Chatbot(object):
         self.chat_history = {"capsules_submitted": [], "capsules_suggested": [], "say_history": []}
 
         # RL information
-        self.thoughts_file = self.scenario_folder / "thoughts.json"
-        self._selector = UCB(self._brain, savefile=self.thoughts_file, reward=reward)
+        self.thoughts_file = self.scenario_folder / "thoughts.pt"
+        # self._selector = UCB(self._brain, savefile=self.thoughts_file, reward=reward)
+        self._selector = D2Q(self._brain, reward=reward, states_folder=self.scenario_folder / "cummulative_states/")
         self._statistics_history = []
         self._replier = TriplePhraser()
 
@@ -170,7 +170,7 @@ class Chatbot(object):
 
         # Add information to capsule
         capsule["last_reward"] = self.selector.reward_history[-1]
-        capsule["brain_state"] = self.selector.state_history[-1]
+        capsule["brain_state"] = self.selector.state_history["metrics"][-1]
         capsule["statistics_history"] = self._statistics_history[-1]
         capsule["reply"] = say
 

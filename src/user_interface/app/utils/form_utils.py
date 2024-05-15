@@ -1,6 +1,16 @@
 from datetime import datetime
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
-from src.dialogue_system.utils.global_variables import CONTEXT_ID, ONTOLOGY_DETAILS
+from cltl.brain.basic_brain import BasicBrain
+from src.dialogue_system.utils.global_variables import CONTEXT_ID, ONTOLOGY_DETAILS, BRAIN_ADDRESS
+
+
+def get_predicate_options():
+    with TemporaryDirectory(prefix="brain-log") as log_path:
+        basic_brain = BasicBrain(address=BRAIN_ADDRESS, log_dir=Path(log_path), ontology_details=ONTOLOGY_DETAILS,
+                                 clear_all=False)
+    return basic_brain.get_predicates()
 
 
 def statement_capsule_to_form(capsule, form):
@@ -31,51 +41,37 @@ def statement_capsule_to_form(capsule, form):
 
 
 def form_to_context_capsule(form):
-    capsule = {}
-
-    # context
-    capsule["context_id"] = form.context_id.data
-    capsule["date"] = datetime.strftime(form.context_date.data, "%Y-%m-%d")
-
-    # place
-    capsule["place"] = form.place_label.data
-    capsule["place_id"] = form.place_id.data
-    capsule["country"] = form.country.data
-    capsule["region"] = form.region.data
-    capsule["city"] = form.city.data
-
-    return capsule
+    return {"context_id": form.context_id.data,
+            "date": datetime.strftime(form.context_date.data, "%Y-%m-%d"),
+            "place": form.place_label.data,
+            "place_id": form.place_id.data,
+            "country": form.country.data,
+            "region": form.region.data,
+            "city": form.city.data}
 
 
 def form_to_statement_capsule(form, chatbot):
-    capsule = {}
-
-    capsule["chat"] = chatbot.chat_id
-    capsule["turn"] = form.turn_id.data
-    capsule["author"] = {"label": chatbot.speaker.lower(),
-                         "type": ["person"],
-                         "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"}
-    capsule["utterance"] = form.utterance.data
-    capsule["utterance_type"] = form.utterance_type.data
-    capsule["position"] = ""
-
-    capsule["subject"] = {"label": form.subject_label.data.lower(),
-                          "type": form.subject_types.data.split(','),
-                          "uri": f"http://cltl.nl/leolani/world/{form.subject_label.data.lower()}"}
-    capsule["predicate"] = {"label": form.predicate_label.data,
-                            "uri": f"{ONTOLOGY_DETAILS['namespace']}{form.predicate_label.data.lower()}"}
-    capsule["object"] = {"label": form.object_label.data.lower(),
-                         "type": form.object_types.data.split(','),
-                         "uri": f"http://cltl.nl/leolani/world/{form.object_label.data.lower()}"}
-    capsule["perspective"] = {"certainty": form.perspective_certainty.data,
-                              "polarity": form.perspective_polarity.data,
-                              "sentiment": form.perspective_sentiment.data}
-
-    # context
-    capsule["context_id"] = CONTEXT_ID
-    capsule["timestamp"] = datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S.%f")
-
-    return capsule
+    return {"chat": chatbot.chat_id,
+            "turn": form.turn_id.data,
+            "author": {"label": chatbot.speaker.lower(),
+                       "type": ["person"],
+                       "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"},
+            "utterance": form.utterance.data,
+            "utterance_type": form.utterance_type.data,
+            "position": "",
+            "subject": {"label": form.subject_label.data.lower(),
+                        "type": form.subject_types.data.split(','),
+                        "uri": f"http://cltl.nl/leolani/world/{form.subject_label.data.lower()}"},
+            "predicate": {"label": form.predicate_label.data,
+                          "uri": f"{ONTOLOGY_DETAILS['namespace']}{form.predicate_label.data.lower()}"},
+            "object": {"label": form.object_label.data.lower(),
+                       "type": form.object_types.data.split(','),
+                       "uri": f"http://cltl.nl/leolani/world/{form.object_label.data.lower()}"},
+            "perspective": {"certainty": form.perspective_certainty.data,
+                            "polarity": form.perspective_polarity.data,
+                            "sentiment": form.perspective_sentiment.data},
+            "context_id": CONTEXT_ID,
+            "timestamp": datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S.%f")}
 
 
 def digest_form(form, chatbot):
