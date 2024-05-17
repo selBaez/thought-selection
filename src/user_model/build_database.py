@@ -75,7 +75,7 @@ def process_session(book, session, brain):
                                    brain)
                         counter += 1
 
-                    # TODO add relations to harry?
+                    # Future work: add relations to harry
 
 
 def process_file(file):

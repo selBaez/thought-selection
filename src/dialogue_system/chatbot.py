@@ -86,7 +86,8 @@ class Chatbot(object):
         # Set up Leolani backend modules
         self.scenario_folder = create_session_folder(reward, chat_id, speaker)
         self._brain = LongTermMemory(address=BRAIN_ADDRESS, log_dir=self.scenario_folder,
-                                     ontology_details=ONTOLOGY_DETAILS, clear_all=chat_id == 1) # TODO False)
+                                     ontology_details=ONTOLOGY_DETAILS, clear_all=False)  # chat_id == 1) # TODO False)
+        self.brain._ONE_TO_ONE_PREDICATES = ['gender', 'lineage']
 
         # Chat information
         self.chat_id = chat_id

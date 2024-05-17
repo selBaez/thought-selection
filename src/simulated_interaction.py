@@ -22,7 +22,7 @@ def print_bot(bot_utterance):
 
 
 def print_user_model(capsule):
-    print(f"\n{capsule['author']['label']}: {capsule['utterance']}")
+    print(f"\nTURN:{capsule['turn']}\n{capsule['author']['label']}: {capsule['utterance']}")
 
 
 def print_template(response_template):

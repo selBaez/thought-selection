@@ -46,14 +46,14 @@ def clean_string(text):
     # words = word_tokenize(text)
     # poss = pos_tag(words)
     # if poss[0] and (poss[0][1] in ["CC", "DT"]):
-    # #     # TODO: remove first word. Think? do we need to remove all conjuctions or just the "and"
+    # #     # remove first word. Think? do we need to remove all conjuctions or just the "and"
     #     pass
 
     if text.startswith("And "):
         text = text[4:]
         text = text.lower()
 
-    # TODO if string is longer than 4 tokens remove it
+    # Future work: if string is longer than 4 tokens remove it
 
     text = text.replace(" ", "-")
     return text.lower()

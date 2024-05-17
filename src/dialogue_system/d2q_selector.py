@@ -9,10 +9,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from cltl.commons.casefolding import (casefold_capsule)
+from cltl.commons.casefolding import casefold_capsule
 from cltl.thoughts.api import ThoughtSelector
 from cltl.thoughts.thought_selection.rl_selector import BrainEvaluator
-from cltl.thoughts.thought_selection.utils.thought_utils import thoughts_from_brain
+from cltl.thoughts.thought_selection.utils.thought_utils import decompose_thoughts
 from src.dialogue_system.utils.encode_state import HarryPotterRDF, EncoderAttention
 from src.dialogue_system.utils.helpers import download_from_triplestore
 
@@ -20,11 +20,11 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 ################## STATE REPRESENTATION PARAMETERS ##################
 STATE_HIDDEN_SIZE = 64  # original features per node is 87
-STATE_EMBEDDING_SIZE = 16  # also n_observations
+STATE_EMBEDDING_SIZE = 16  # 4 in tutorial, also n_observations
 
 ################## MEMORY PARAMETERS ##################
-REPLAY_POOL_SIZE = 10000  # 5000 for DQN
-BATCH_SIZE = 5  # 16 for D2Q, 128 tutorial
+REPLAY_POOL_SIZE = 100  # 5000 for DQN, 10000 for tutorial
+BATCH_SIZE = 2  # 16 for D2Q, 128 tutorial
 
 ################## RL PARAMETERS ##################
 DQN_HIDDEN_SIZE = 128  # 80 for DQN
@@ -42,7 +42,7 @@ N_ACTIONS_THOUGHTS = len(ACTION_THOUGHTS)
 ACTION_TYPES = {0: 'character', 1: 'attribute'}
 N_ACTION_TYPES = len(ACTION_TYPES)
 
-Transition = namedtuple('Transition', ('state', 'action', 'reward', 'next_state'))
+Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
 
 
 class D2Q(ThoughtSelector):
@@ -95,6 +95,7 @@ class D2Q(ThoughtSelector):
         self._state_history = {"trig_files": [], "metrics": [], "embeddings": []}
         self._update_states()
         self._reward_history = [0]
+        self._action_history = [None]
 
         # Load learned policy
         # self.load(savefile)
@@ -109,8 +110,16 @@ class D2Q(ThoughtSelector):
         return self._reward_history
 
     @property
+    def action_history(self):
+        return self._action_history
+
+    @property
     def state_evaluator(self):
         return self._state_evaluator
+
+    @property
+    def state_encoder(self):
+        return self._state_encoder
 
     # Utils
 
@@ -118,7 +127,7 @@ class D2Q(ThoughtSelector):
         """Reads trained model from file.
 
         params
-        str filename: filename of file with utilities.
+        Path filename: filename of file with utilities.
 
         returns: None
         """
@@ -130,15 +139,47 @@ class D2Q(ThoughtSelector):
 
         self.policy_net.load_state_dict(model_dict)
 
+        self._log.info(f"Loaded model from {filename.name}")
+
     def save(self, filename):
         """Writes the trained model to a file.
 
         params
-        str filename: filename of the output file.
+        Path filename: filename of the output file.
 
         returns: None
         """
         torch.save(self.policy_net.state_dict(), filename)
+        self._log.info(f"Saved model to {filename.name}")
+
+    def _preprocess(self, brain_response, thought_options=None):
+        # Manage types of capsules
+        capsule_type = 'statement' if 'statement' in brain_response.keys() else 'mention'
+        capsule_focus = 'triple' if 'statement' in brain_response.keys() else 'entity'
+
+        # Quick check if there is anything to do here
+        if not brain_response[capsule_type][capsule_focus]:
+            return None
+
+        # What types of thoughts will we phrase?
+        self._log.debug(f'Thoughts options: {thought_options}')
+
+        # Extract thoughts from brain response
+        thoughts = decompose_thoughts(brain_response[capsule_type], brain_response['thoughts'], filter=thought_options)
+
+        return thoughts
+
+    def _postprocess(self, all_thoughts, selected_thought):
+        # Keep track of selections
+        self._last_thought = f"{selected_thought['thought_type']}:" \
+                             f"{'-'.join(sorted(selected_thought['entity_types'].keys()))}"
+        thought_type, thought_info = selected_thought["thought_type"], selected_thought["thought_info"]
+        self._log.info(f"Chosen thought type: {thought_type}")
+
+        # Preprocess thought_info and utterance (triples)
+        thought_info = casefold_capsule(thought_info, format="natural")
+
+        return thought_type, thought_info
 
     def _update_states(self):
         """
@@ -154,7 +195,7 @@ class D2Q(ThoughtSelector):
         self._state_history["metrics"].append(self._state_evaluator.evaluate_brain_state())
         self._state_history["embeddings"].append(encoded_state)
 
-        self._log.info(f"Brain state added from file {state_file.name}, with metric value: {brain_state_metric}")
+        self._log.debug(f"Brain state added from file {state_file.name}, with metric value: {brain_state_metric}")
 
     # Learning
     def _select_by_network(self):
@@ -171,11 +212,13 @@ class D2Q(ThoughtSelector):
                 # second column on max result is index of max element, so we pick action with the larger expected reward
                 action_tensor = self.policy_net(self._state_history["embeddings"][-1]).max(1).indices.view(1, 1)
                 action_name = ACTION_THOUGHTS[int(action_tensor[0])]
+                self._log.debug(f"Select action with policy network")
         else:
             # Random action for exploration
             [sampled_action] = random.sample(ACTION_THOUGHTS.keys(), 1)
             action_tensor = torch.tensor([[sampled_action]], device=DEVICE, dtype=torch.long)
             action_name = ACTION_THOUGHTS[sampled_action]
+            self._log.debug(f"Select random action")
 
         # Random subaction for exploration
         [sampled_subaction] = random.sample(ACTION_TYPES.keys(), 1)
@@ -208,48 +251,22 @@ class D2Q(ThoughtSelector):
         for action in processed_actions:
             # Compute score for each element of the action
             score = []
-            for elem in action.split():
+            for typ, count in action["entity_types"].items():
                 # if entity type in selected entity type, add it
-                pass
+                score.append(count)
 
             # Convert element-scores into action score
             action_scores.append((action, np.mean(score)))
 
         # Greedy selection
-        selected_action, _ = max(action_scores, key=lambda x: x[1])
+        selected_action, action_score = max(action_scores, key=lambda x: x[1])
+        self._action_history.append(action_tensor)
+        self._log.debug(f"Selected action {selected_action} with score {action_score}")
 
         # Safe processing
         thought_type, thought_info = self._postprocess(processed_actions, selected_action)
 
         return {thought_type: thought_info}
-
-    def _preprocess(self, brain_response, thought_options=None):
-        # Manage types of capsules
-        capsule_type = 'statement' if 'statement' in brain_response.keys() else 'mention'
-        capsule_focus = 'triple' if 'statement' in brain_response.keys() else 'entity'
-
-        # Quick check if there is anything to do here
-        if not brain_response[capsule_type][capsule_focus]:
-            return None
-
-        # What types of thoughts will we phrase?
-        if not thought_options:
-            thought_options = ['_complement_conflict', '_negation_conflicts',
-                               '_statement_novelty', '_entity_novelty',
-                               '_subject_gaps', '_complement_gaps',
-                               '_overlaps', '_trust'] if 'statement' in brain_response.keys() \
-                else ['_entity_novelty', '_complement_gaps']
-        self._log.debug(f'Thoughts options: {thought_options}')
-
-        # # Casefold TODO creates None types for empty lists
-        # thoughts = casefold_capsule(brain_response['thoughts'], format='natural')
-        # utterance = casefold_capsule(brain_response[capsule_type], format='natural')
-
-        # Extract thoughts from brain response
-        # thoughts = decompose_thoughts(utterance, thoughts, filter=thought_options)
-        thoughts = thoughts_from_brain(brain_response[capsule_type], brain_response['thoughts'], filter=thought_options)
-
-        return thoughts
 
     def update_utility(self):
         """Updates the policy network by
@@ -272,6 +289,7 @@ class D2Q(ThoughtSelector):
             batch = Transition(*zip(*transitions))
             state_batch = torch.cat(batch.state)
             action_batch = torch.cat(batch.action)
+            next_state_batch = torch.cat(batch.next_state)
             reward_batch = torch.cat(batch.reward)
 
             # Compute Q(s_t, a) - the model computes Q(s_t), then we select the columns of actions taken.
@@ -280,20 +298,23 @@ class D2Q(ThoughtSelector):
 
             # Compute V(s_{t+1}) for all next states.
             # Expected values of actions are computed based on the "older" target_net; selecting their best reward
-            next_state_values = torch.zeros(BATCH_SIZE, device=DEVICE)
             with torch.no_grad():
-                next_state_values = self.target_net(state_batch).max(1).values
+                next_state_values = self.target_net(next_state_batch).max(1).values
 
             # Compute the expected Q values
             expected_state_action_values = (next_state_values * self.gamma) + reward_batch
+            expected_state_action_values = expected_state_action_values.unsqueeze(1)  # Ensure correct shape
 
             # Compute Huber loss
             criterion = nn.SmoothL1Loss()
-            loss = criterion(state_action_values, expected_state_action_values.unsqueeze(1))
+            loss = criterion(state_action_values, expected_state_action_values)
+            self._log.debug(f"Computing loss between policy and target net predicted action values")
 
             # Optimize the model
             self.optimizer.zero_grad()
             loss.backward()
+            self._log.info(f"Optimizing the policy net")
+
             # In-place gradient clipping
             torch.nn.utils.clip_grad_value_(self.policy_net.parameters(), 100)
             self.optimizer.step()
@@ -306,6 +327,7 @@ class D2Q(ThoughtSelector):
         for key in policy_net_state_dict:
             target_net_state_dict[key] = policy_net_state_dict[key] * TAU + target_net_state_dict[key] * (1 - TAU)
         self.target_net.load_state_dict(target_net_state_dict)
+        self._log.info(f"Updating target net")
 
     def reward_thought(self):
         """Rewards the last thought phrased by the replier by calculating the difference between brain states
@@ -319,17 +341,18 @@ class D2Q(ThoughtSelector):
         # Reward last thought with R = S_brain(t) - S_brain(t-1)
         reward = 0
         if self._last_thought and len(self._state_history["metrics"]) > 1:
-            self._log.info(f"Calculate reward")
+            self._log.debug(f"Calculate reward")
             reward = self.state_evaluator.compare_brain_states(self._state_history["metrics"][-1],
                                                                self._state_history["metrics"][-2])
 
             # Store the transition in memory
-            self._log.info("Pushing state transition to Memory Replay")
-            self.memory.push(self._state_history["embeddings"][-2], self._last_thought,
-                             self._state_history["embeddings"][-1], reward)
+            self._log.debug("Pushing state transition to Memory Replay")
+            self.memory.push(self._state_history["embeddings"][-2], self._action_history[-1],
+                             self._state_history["embeddings"][-1],
+                             torch.tensor([reward], device=DEVICE))
 
             # Perform one step of the optimization (on the policy network) and update target network
-            self._log.info("Updating networks")
+            self._log.debug("Updating networks")
             self.update_utility()
             self._target_net_update()
 
@@ -422,13 +445,14 @@ class StateEncoder(object):
                                                 self.dataset.NUM_RELATIONS)
 
     def encode(self, trig_file):
-        # RGAT - Conv
-        data = self.dataset.process_one_graph(trig_file)
+        with torch.no_grad():  # TODO change this if we do train the encoder
+            # RGAT - Conv
+            data = self.dataset.process_one_graph(trig_file)
 
-        # Check if the graph is empty,so we return a zero tensor or the right dimensions
-        if len(data.edge_type) > 0:
-            encoded_state = self.model_attention(data.node_features.float(), data.edge_index, data.edge_type)
-        else:
-            encoded_state = torch.tensor(np.zeros([1, self.embedding_size]), dtype=torch.float)
+            # Check if the graph is empty,so we return a zero tensor or the right dimensions
+            if len(data.edge_type) > 0:
+                encoded_state = self.model_attention(data.node_features.float(), data.edge_index, data.edge_type)
+            else:
+                encoded_state = torch.tensor(np.zeros([1, self.embedding_size]), dtype=torch.float)
 
         return encoded_state

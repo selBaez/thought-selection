@@ -310,13 +310,13 @@ class TriplePhraser(SimplenlgPhraser):
         if not brain_response['statement']['triple']:
             return copy.deepcopy(BASE_CAPSULE), None
 
-        # Casefold
-        utterance = casefold_capsule(brain_response['statement'], format='natural')
-        thoughts = casefold_capsule(brain_response['thoughts'], format='natural')
+        # # Casefold
+        # utterance = casefold_capsule(brain_response['statement'], format='natural')
+        # thoughts = casefold_capsule(brain_response['thoughts'], format='natural')
 
         # Generate reply
-        (thought_type, thought_info) = list(thoughts.items())[0]
-        reply = self.phrase_correct_thought(utterance, thought_type, thought_info, fallback=persist)
+        (thought_type, thought_info) = list(brain_response['thoughts'].items())[0]
+        reply = self.phrase_correct_thought(brain_response['statement'], thought_type, thought_info, fallback=persist)
 
         if persist and reply[0] is None and reply[1] is None:
             reply = self.phrase_fallback()

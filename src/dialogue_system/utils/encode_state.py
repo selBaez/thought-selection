@@ -1,4 +1,4 @@
-from itertools import product
+from collections import defaultdict
 from collections import defaultdict
 from itertools import product
 from pathlib import Path
@@ -14,6 +14,7 @@ from torch_geometric.data import HeteroData, InMemoryDataset
 from torch_geometric.nn import RGATConv, global_mean_pool
 
 from cltl.brain.utils.helper_functions import hash_claim_id
+from src.dialogue_system import logger
 from src.dialogue_system.utils.global_variables import RAW_USER_PATH, RAW_VANILLA_USER_PATH, PROCESSED_USER_PATH, \
     TYPE_CERTAINTYVALUE, TYPE_POLARITYVALUE, TYPE_SENTIMENTVALUE, SIMPLE_ATTRELS, SIMPLE_ATTVALS, ATTVALS_TO_ATTRELS
 from src.dialogue_system.utils.helpers import build_graph, get_all_characters, get_all_predicates, get_all_attributes
@@ -23,46 +24,6 @@ PROCESS_FOR_GRAPH_CLASSIFIER = False
 
 HIDDEN_SIZE = 64  # original features per node is 87
 STATE_EMBEDDING_SIZE = 16
-
-
-def ingest_claims_and_perspectives(og_graph):
-    # Generate query for assertions only
-    query = """
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX gaf: <http://groundedannotationframework.org/gaf#>
-    PREFIX grasp: <http://groundedannotationframework.org/grasp#>
-    PREFIX graspf: <http://groundedannotationframework.org/grasp/factuality#> 
-    PREFIX grasps: <http://groundedannotationframework.org/grasp/sentiment#> 
-
-    select distinct ?claim ?certainty ?polarity ?sentiment  where {{
-        ?certainty rdf:type graspf:CertaintyValue . 
-        ?polarity rdf:type graspf:PolarityValue . 
-        ?sentiment rdf:type grasps:SentimentValue . 
-
-        ?mention gaf:denotes ?claim . 
-        ?mention grasp:hasAttribution ?attribution .
-        ?attribution rdf:value ?certainty .
-        ?attribution rdf:value ?polarity .
-        ?attribution rdf:value ?sentiment .
-    }}"""
-    response = og_graph.query(query)
-    print(f"QUERY DATASET, OBTAINED {len(response)} CLAIMS")
-
-    # Turn into rdf
-    graph = build_graph()
-    for el in response:
-        subject = URIRef(to_iri(el["claim"]))
-        certainty = URIRef(to_iri(el["certainty"]))
-        graph.add((subject, TYPE_CERTAINTYVALUE, certainty))
-
-        polarity = URIRef(to_iri(el["polarity"]))
-        graph.add((subject, TYPE_POLARITYVALUE, polarity))
-
-        sentiment = URIRef(to_iri(el["sentiment"]))
-        graph.add((subject, TYPE_SENTIMENTVALUE, sentiment))
-    print(f"NEW SIMPLE DATASET CONTAINS {len(graph)} TRIPLES")
-
-    return graph
 
 
 def one_hot_feature(entity, entities_dict):
@@ -90,10 +51,14 @@ def one_hot_feature(entity, entities_dict):
 # noinspection PyAttributeOutsideInit
 class HarryPotterRDF(InMemoryDataset):
     def __init__(self, root, transform=None, pre_transform=None, pre_filter=None):
+
+        self._log = logger.getChild(self.__class__.__name__)
+        self._log.info("Booted")
+
         # build vocabulary from vanilla graph
         og_graph = build_graph()
         og_graph.parse(RAW_VANILLA_USER_PATH)
-        print(f"READ DATASET in {RAW_VANILLA_USER_PATH}: {len(og_graph)}")
+        self._log.debug(f"Read dataset in {RAW_VANILLA_USER_PATH}: {len(og_graph)}")
 
         # build resources that we only need once (IDs, features and node types)
         self.build_vocabulary(og_graph)
@@ -131,6 +96,45 @@ class HarryPotterRDF(InMemoryDataset):
     def get_perspective_node_id(self, perspective):
         # offset objects by subjects, to have all nodes have a unique id
         return self.perspectives_dict[str(perspective)] + len(self.claims_dict)
+
+    def ingest_claims_and_perspectives(self, og_graph):
+        # Generate query for assertions only
+        query = """
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX gaf: <http://groundedannotationframework.org/gaf#>
+        PREFIX grasp: <http://groundedannotationframework.org/grasp#>
+        PREFIX graspf: <http://groundedannotationframework.org/grasp/factuality#> 
+        PREFIX grasps: <http://groundedannotationframework.org/grasp/sentiment#> 
+
+        select distinct ?claim ?certainty ?polarity ?sentiment  where {{
+            ?certainty rdf:type graspf:CertaintyValue . 
+            ?polarity rdf:type graspf:PolarityValue . 
+            ?sentiment rdf:type grasps:SentimentValue . 
+
+            ?mention gaf:denotes ?claim . 
+            ?mention grasp:hasAttribution ?attribution .
+            ?attribution rdf:value ?certainty .
+            ?attribution rdf:value ?polarity .
+            ?attribution rdf:value ?sentiment .
+        }}"""
+        response = og_graph.query(query)
+        self._log.debug(f"Query dataset, obtained {len(response)} claims")
+
+        # Turn into rdf
+        graph = build_graph()
+        for el in response:
+            subject = URIRef(to_iri(el["claim"]))
+            certainty = URIRef(to_iri(el["certainty"]))
+            graph.add((subject, TYPE_CERTAINTYVALUE, certainty))
+
+            polarity = URIRef(to_iri(el["polarity"]))
+            graph.add((subject, TYPE_POLARITYVALUE, polarity))
+
+            sentiment = URIRef(to_iri(el["sentiment"]))
+            graph.add((subject, TYPE_SENTIMENTVALUE, sentiment))
+        self._log.debug(f"New simple datasets contains {len(graph)} triples")
+
+        return graph
 
     def build_vocabulary(self, full_graph):
         """
@@ -228,18 +232,16 @@ class HarryPotterRDF(InMemoryDataset):
 
                 if TEST:
                     break
-
-            print("DONE")
         return data_list
 
     def process_one_graph(self, file):
         # Read raw data
         og_graph = build_graph()
         og_graph.parse(file)
-        print(f"READ DATASET in {file.name}: {len(og_graph)}")
+        self._log.debug(f"Read dataset in {file.name}: {len(og_graph)}")
 
         # Ingest claims and perspectives
-        graph = ingest_claims_and_perspectives(og_graph)
+        graph = self.ingest_claims_and_perspectives(og_graph)
 
         # Create edge representation
         edge_data = self.create_edge_representation(graph)
@@ -333,7 +335,7 @@ class EncoderAttention(nn.Module):
         x = F.relu(x)
         x = self.lin(x)
         x = global_mean_pool(x, None)
-        x= F.log_softmax(x, dim=-1)
+        x = F.log_softmax(x, dim=-1)
         return x
 
 
