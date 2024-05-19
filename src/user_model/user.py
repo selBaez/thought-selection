@@ -21,14 +21,14 @@ def init_capsule(args, chatbot):
             "type": ["person"],
             "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"
         },
-        "utterance": "James was an adult",
+        "utterance": "James was a female",
         "utterance_type": "STATEMENT",
         "position": '0-25',
         'subject': {'label': 'james', 'type': ['person'],
                     'uri': 'http://harrypotter.org/james'},
-        'predicate': {'label': 'age', 'uri': 'http://harrypotter.org/age'},
-        'object': {'label': 'adult', 'type': ['age_range'],
-                   'uri': 'http://harrypotter.org/adult'},
+        'predicate': {'label': 'gender', 'uri': 'http://harrypotter.org/gender'},
+        'object': {'label': 'female', 'type': ['attribute'],
+                   'uri': 'http://harrypotter.org/female'},
         'perspective': {'certainty': 1, 'polarity': 1, 'sentiment': 0},  # TODO change for testing
         'timestamp': datetime.now(), 'context_id': args.context_id}
 
@@ -78,42 +78,63 @@ class User(object):
         return prefixes + txt
 
     def query_database(self, response_template):
-        filter_clause = ''
+        # Full triple in response template, just looking for perspective
+        if (response_template['subject']['uri'] is not None) and \
+                (response_template['predicate']['uri'] is not None) and \
+                (response_template['object']['uri'] is not None):
+            response_template = self.response_perspective(response_template)
 
-        # Subject
-        if response_template['subject']['uri'] is not None:
-            subject_uri = URIRef(response_template['subject']['uri'])
+            return response_template
+
+        # Missing triple element, query
         else:
-            subject_uri = '?s'
-            filter_clause += '?s a gaf:Instance .\n'
+            filter_clause = ''
 
-        # predicate 
-        if response_template['predicate']['uri'] is not None:
-            predicate_uri = URIRef(response_template['predicate']['uri'])
-        else:
-            predicate_uri = '?p'
-            filter_clause += 'FILTER (STRSTARTS(STR(?p), STR(hp:)))\n'
+            # Subject
+            if response_template['subject']['uri'] is not None:
+                subject_uri = URIRef(response_template['subject']['uri'])
+            else:
+                subject_uri = '?s'
+                filter_clause += '?s a gaf:Instance .\n'
 
-        # object 
-        if response_template['object']['uri'] is not None:
-            object_uri = URIRef(response_template['object']['uri'])
-        else:
-            object_uri = '?o'
-            filter_clause += '?o a gaf:Instance .\n'
+            # predicate
+            if response_template['predicate']['uri'] is not None:
+                predicate_uri = URIRef(response_template['predicate']['uri'])
+            else:
+                predicate_uri = '?p'
+                filter_clause += 'FILTER (STRSTARTS(STR(?p), STR(hp:)))\n'
 
-        query = f"""
-        SELECT ?s ?p ?o WHERE {{ {subject_uri} {predicate_uri} {object_uri} .
-        {filter_clause} }}"""
+            # object
+            if response_template['object']['uri'] is not None:
+                object_uri = URIRef(response_template['object']['uri'])
+            else:
+                object_uri = '?o'
+                filter_clause += '?o a gaf:Instance .\n'
 
-        self._log.debug(f"Query from given template")
-        query = self.replace_namespace(query)
-        response = self._graph.query(query)
+            query = f"""
+            SELECT ?s ?p ?o WHERE {{ {subject_uri} {predicate_uri} {object_uri} .
+            {filter_clause} }}"""
 
-        if len(response) > 0:
-            response_template = self.response_triple(response_template, response)
+            self._log.debug(f"Query from given template")
+            query = self.replace_namespace(query)
+            response = self._graph.query(query)
 
-        else:
-            response_template = self.random_triple(response_template)
+            if len(list(response)) > 0:
+                response_template = self.response_triple(response_template, response)
+
+            else:
+                response_template = self.random_triple(response_template)
+
+        return response_template
+
+    def response_perspective(self, response_template):
+        # perspective
+        response_template = self.query_perspective_on_claim(response_template)
+
+        # utterance
+        response_template['utterance'] = f"{response_template['subject']['label']} " \
+                                         f"{response_template['predicate']['label']} " \
+                                         f"{response_template['object']['label']}"
 
         return response_template
 
@@ -150,7 +171,7 @@ class User(object):
         query = self.replace_namespace(query)
         response = self._graph.query(query)
 
-        if len(response) > 0:
+        if len(list(response)) > 0:
             response = choice(response.bindings)
 
         # Fill triple
@@ -188,12 +209,16 @@ class User(object):
         query = self.replace_namespace(query)
         response = self._graph.query(query)
 
-        if len(response) > 0:
+        # Fact is known and has a perspective
+        if len(list(response)) > 0:
             response = choice(response.bindings)
 
-        # Fill perspective
-        response_template['perspective'] = {'certainty': Certainty.from_str(response["certainty"].split('#')[-1]),
-                                            'polarity': Polarity.from_str(response["polarity"].split('#')[-1]),
-                                            'sentiment': Sentiment.from_str(response["sentiment"].split('#')[-1])}
+            # Fill perspective
+            response_template['perspective'] = {'certainty': Certainty.from_str(response["certainty"].split('#')[-1]),
+                                                'polarity': Polarity.from_str(response["polarity"].split('#')[-1]),
+                                                'sentiment': Sentiment.from_str(response["sentiment"].split('#')[-1])}
+        # Fact is not known or has no perspective attached, need another random triple
+        else:
+            response_template = self.random_triple(response_template)
 
         return response_template

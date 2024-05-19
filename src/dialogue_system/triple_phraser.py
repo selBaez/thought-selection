@@ -1,17 +1,18 @@
 import copy
-import random
 from typing import Optional, Tuple
 
-from cltl.commons.casefolding import casefold_capsule, casefold_text
+from cltl.commons.casefolding import casefold_text
 from cltl.reply_generation.simplenlg_phraser import SimplenlgPhraser
-from cltl.reply_generation.utils.phraser_utils import clean_overlaps
-from src.dialogue_system.utils.global_variables import BASE_CAPSULE, ONTOLOGY_DETAILS
+from cltl.thoughts.thought_selection.utils.thought_utils import separate_select_negation_conflicts
+from src.dialogue_system.utils.global_variables import BASE_CAPSULE
+
 
 def label_in_say(label, say):
     if say:
         return label.lower() in say.lower()
     else:
         return False
+
 
 class TriplePhraser(SimplenlgPhraser):
 
@@ -65,40 +66,41 @@ class TriplePhraser(SimplenlgPhraser):
         return reply, response_template
 
     @staticmethod
-    def _phrase_cardinality_conflicts(conflicts: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
+    def _phrase_cardinality_conflicts(selected_thought: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
         capsule_user, say = copy.deepcopy(BASE_CAPSULE), \
-                            super(TriplePhraser, TriplePhraser)._phrase_cardinality_conflicts(conflicts, utterance)
+                            super(TriplePhraser, TriplePhraser)._phrase_cardinality_conflicts(selected_thought,
+                                                                                              utterance)
 
         # There is no conflict, so nothing
-        if not conflicts:
+        if not selected_thought or not selected_thought["thought_info"]:
             return say, capsule_user
 
         # There is a conflict, so we phrase it
         else:
-            conflict = random.choice(conflicts)
+            conflict = selected_thought["thought_info"]
 
             # Capsule with other conflicting triple, user should set the polarity and certainty
             capsule_user['subject'] = utterance['subject']
             capsule_user['predicate'] = utterance['predicate']
             capsule_user["object"] = {"label": conflict['_complement']['_label'],
-                                      "type": conflict['_complement']['_type'],
+                                      "type": conflict['_complement']['_types'],
                                       'uri': conflict['_complement']['_id']}
 
         return say, capsule_user
 
     @staticmethod
-    def _phrase_negation_conflicts(conflicts: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
+    def _phrase_negation_conflicts(selected_thought: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
         capsule_user, say = copy.deepcopy(BASE_CAPSULE), \
-                            super(TriplePhraser, TriplePhraser)._phrase_negation_conflicts(conflicts, utterance)
+                            super(TriplePhraser, TriplePhraser)._phrase_negation_conflicts(selected_thought, utterance)
 
         # There is no conflict, so no response
-        if not conflicts or len(conflicts) < 2:
+        if not selected_thought or not selected_thought["thought_info"]:
             return say, capsule_user
 
         # There is conflict entries
         else:
-            affirmative_conflict = [item for item in conflicts if item['_polarity_value'] == 'POSITIVE']
-            negative_conflict = [item for item in conflicts if item['_polarity_value'] == 'NEGATIVE']
+            conflicts = selected_thought["thought_info"]
+            affirmative_conflict, negative_conflict = separate_select_negation_conflicts(conflicts)
 
             # There is a conflict, so we phrase it
             if affirmative_conflict and negative_conflict:
@@ -110,82 +112,75 @@ class TriplePhraser(SimplenlgPhraser):
         return say, capsule_user
 
     @staticmethod
-    def _phrase_statement_novelty(novelties: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
+    def _phrase_statement_novelty(selected_thought: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
         capsule_user, say = copy.deepcopy(BASE_CAPSULE), \
-                            super(TriplePhraser, TriplePhraser)._phrase_statement_novelty(novelties, utterance)
-
-        novelties = novelties["provenance"]
+                            super(TriplePhraser, TriplePhraser)._phrase_statement_novelty(selected_thought, utterance)
 
         # I do not know this before, so be happy to learn
-        if not novelties:
-            if label_in_say(utterance['subject']['label'], say):
+        if not selected_thought or not selected_thought["thought_info"]:
+            entity_role = selected_thought["extra_info"]
+
+            if entity_role == '_subject':
                 # Capsule with original subject & predicate, user should change object so we keep learning similar facts
                 capsule_user['subject'] = utterance['subject']
                 capsule_user['predicate'] = utterance['predicate']
 
-            else:
+            elif entity_role == '_complement':
                 # Capsule with some original parts, user should change subject so we keep learning similar facts
                 capsule_user['predicate'] = utterance['predicate']
                 capsule_user['object'] = utterance['object']
 
         # I already knew this
         else:
-            novelties = [n for n in novelties if label_in_say(n['_provenance']['_author']['_label'], say)]
-            novelty = random.choice(novelties)
-            # Capsule with author as triple subject, user should say something about that author
-            capsule_user["subject"] = {"label": novelty['_provenance']['_author']['_label'],
-                                       "type": novelty['_provenance']['_author']['_types'],
-                                       "uri": novelty['_provenance']['_author']['_id']}
+            # Capsule with original triple, user should add perspective
+            capsule_user['subject'] = utterance['subject']
+            capsule_user['predicate'] = utterance['predicate']
+            capsule_user['object'] = utterance['object']
 
         return say, capsule_user
 
     @staticmethod
-    def _phrase_type_novelty(novelties: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
+    def _phrase_type_novelty(selected_thought: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
         capsule_user, say = copy.deepcopy(BASE_CAPSULE), \
-                            super(TriplePhraser, TriplePhraser)._phrase_type_novelty(novelties, utterance)
+                            super(TriplePhraser, TriplePhraser)._phrase_type_novelty(selected_thought, utterance)
 
-        # There is no novelty information, so no response
-        if not novelties:
-            return say, capsule_user
+        entity_role = selected_thought["extra_info"]
 
-        novelty = novelties['_subject'] if label_in_say(utterance['subject']['label'], say) else novelties['_complement']
-
-        # never heard it
-        if not novelty:
+        # There is no novelty information, so happy to learn
+        if not selected_thought or not selected_thought["thought_info"]:
             # Capsule with original triple subject or object, user should add predicate and other entity to keep learning
-            capsule_user['subject'] = utterance['subject'] if label_in_say(utterance['subject']['label'], say) \
-                else capsule_user['subject']
-            capsule_user['object'] = utterance['object'] if not label_in_say(utterance['subject']['label'], say) \
-                else capsule_user['object']
+            if entity_role == '_subject':
+                capsule_user['subject'] = utterance['subject']
+            else:
+                capsule_user['object'] = utterance['object']
 
         # I know this
         else:
             # Capsule with original triple predicate, user should add other entities to keep learning
             capsule_user['predicate'] = utterance['predicate']
-            capsule_user['subject'] = utterance['subject'] if label_in_say(utterance['subject']['label'], say) \
-                else capsule_user['subject']
-            capsule_user['object'] = utterance['object'] if not label_in_say(utterance['subject']['label'], say) \
-                else capsule_user['object']
+
+            if entity_role == '_subject':
+                capsule_user['subject'] = utterance['subject']
+            else:
+                capsule_user['object'] = utterance['object']
 
         return say, capsule_user
 
     @staticmethod
-    def _phrase_subject_gaps(all_gaps: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
+    def _phrase_subject_gaps(selected_thought: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
         capsule_user, say = copy.deepcopy(BASE_CAPSULE), \
-                            super(TriplePhraser, TriplePhraser)._phrase_subject_gaps(all_gaps, utterance)
+                            super(TriplePhraser, TriplePhraser)._phrase_subject_gaps(selected_thought, utterance)
 
         # There is no gaps, so no response
-        if not all_gaps:
+        if not selected_thought or not selected_thought["thought_info"]:
             return say, capsule_user
 
-        gaps = all_gaps['_subject'] if label_in_say(utterance['subject']['label'], say) else all_gaps['_complement']
+        # There is a gap
+        else:
+            entity_role = selected_thought["extra_info"]
+            gap = selected_thought["thought_info"]
 
-        if not gaps:
-            return say, capsule_user
-
-        gap = random.choice(gaps)
-
-        if label_in_say(utterance['subject']['label'], say):
+        if entity_role == '_subject':
             # Capsule with original triple subject + gap info, user should add object label
             capsule_user['subject'] = utterance['subject']
             capsule_user['predicate'] = {"label": gap["_predicate"]["_label"], "uri": gap["_predicate"]["_id"]}
@@ -201,51 +196,45 @@ class TriplePhraser(SimplenlgPhraser):
         return say, capsule_user
 
     @staticmethod
-    def _phrase_complement_gaps(all_gaps: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
+    def _phrase_complement_gaps(selected_thought: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
         capsule_user, say = copy.deepcopy(BASE_CAPSULE), \
-                            super(TriplePhraser, TriplePhraser)._phrase_complement_gaps(all_gaps, utterance)
+                            super(TriplePhraser, TriplePhraser)._phrase_complement_gaps(selected_thought, utterance)
 
         # There is no gaps, so no response
-        if not all_gaps:
+        if not selected_thought or not selected_thought["thought_info"]:
             return say, capsule_user
 
-        # random choice between object or subject
-        gaps = all_gaps['_subject'] if label_in_say(utterance['subject']['label'], say) else all_gaps['_complement']
+        # There is a gap
+        else:
+            entity_role = selected_thought["extra_info"]
+            gap = selected_thought["thought_info"]
 
-        if not gaps:
-            return say, capsule_user
-
-        if label_in_say(utterance['subject']['label'], say):
+        if entity_role == '_subject':
             # Capsule with original object as subject + gap info, user should add object label
             capsule_user['subject'] = utterance['object']
-            capsule_user['predicate'] = {"label": gaps[0]['_predicate']['_label'], 'uri': gaps[0]['_predicate']['_id']}
-            capsule_user['object'] = {"label": None, "type": gaps[0]['_target_entity_type']['_types'], 'uri': None}
+            capsule_user['predicate'] = {"label": gap['_predicate']['_label'], 'uri': gap['_predicate']['_id']}
+            capsule_user['object'] = {"label": None, "type": gap['_target_entity_type']['_types'], 'uri': None}
 
         else:
             # Capsule with original triple object + gap info, user should add subject label
-            capsule_user['subject'] = {"label": None, "type": gaps[0]['_target_entity_type']['_types'], 'uri': None}
-            capsule_user['predicate'] = {"label": gaps[0]['_predicate']['_label'], 'uri': gaps[0]['_predicate']['_id']}
+            capsule_user['subject'] = {"label": None, "type": gap['_target_entity_type']['_types'], 'uri': None}
+            capsule_user['predicate'] = {"label": gap['_predicate']['_label'], 'uri': gap['_predicate']['_id']}
             capsule_user['object'] = utterance['object']
 
         return say, capsule_user
 
     @staticmethod
-    def _phrase_overlaps(all_overlaps: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
+    def _phrase_overlaps(selected_thought: dict, utterance: dict) -> Tuple[Optional[dict], Optional[dict]]:
         capsule_user, say = copy.deepcopy(BASE_CAPSULE), \
-                            super(TriplePhraser, TriplePhraser)._phrase_overlaps(all_overlaps, utterance)
+                            super(TriplePhraser, TriplePhraser)._phrase_overlaps(selected_thought, utterance)
 
-        if not all_overlaps:
+        if not selected_thought or not selected_thought["thought_info"]:
             return say, capsule_user
 
-        overlaps = all_overlaps['_subject'] if label_in_say(utterance['subject']['label'], say) else all_overlaps['_complement']
+        entity_role = selected_thought["extra_info"]
+        overlap = selected_thought["thought_info"]
 
-        if not overlaps:
-            return say, capsule_user
-
-        overlaps = clean_overlaps(overlaps)
-
-        if len(overlaps) < 2 and label_in_say(utterance['subject']['label'], say):
-            overlap = random.choice(overlaps)
+        if entity_role == '_subject':
             # Capsule with original triple subject + overlap info, user should add perspective
             capsule_user['subject'] = utterance['subject']
             capsule_user['predicate'] = utterance['predicate']
@@ -253,23 +242,12 @@ class TriplePhraser(SimplenlgPhraser):
                                       "type": overlap['_entity']['_types'],
                                       'uri': overlap['_entity']['_id']}
 
-        elif len(overlaps) < 2 and not label_in_say(utterance['subject']['label'], say):
-            overlap = random.choice(overlaps)
+
+        elif entity_role == '_complement':
             # Capsule with original triple object + overlap info, user should add perspective
             capsule_user['subject'] = {"label": overlap['_entity']['_label'],
                                        "type": overlap['_entity']['_types'],
                                        'uri': overlap['_entity']['_id']}
-            capsule_user['predicate'] = utterance['predicate']
-            capsule_user['object'] = utterance['object']
-
-        # More than two cases, can we generalize?
-        elif label_in_say(utterance['subject']['label'], say):
-            # Capsule with original triple, user should add object
-            capsule_user['subject'] = utterance['subject']
-            capsule_user['predicate'] = utterance['predicate']
-
-        elif not label_in_say(utterance['subject']['label'], say):
-            # Capsule with original triple, user should add subject
             capsule_user['predicate'] = utterance['predicate']
             capsule_user['object'] = utterance['object']
 
@@ -280,9 +258,10 @@ class TriplePhraser(SimplenlgPhraser):
         capsule_user, say = copy.deepcopy(BASE_CAPSULE), \
                             super(TriplePhraser, TriplePhraser)._phrase_trust(trust, utterance)
 
-        # Capsule with speaker trusts entity
-        capsule_user['subject'] = utterance['author']
-        capsule_user['predicate'] = {'label': 'trust', 'uri': ONTOLOGY_DETAILS['namespace'] + 'trust'}
+        # Capsule with original triple, user should set the polarity and certainty
+        capsule_user['subject'] = utterance['subject']
+        capsule_user['predicate'] = utterance['predicate']
+        capsule_user['object'] = utterance['object']
 
         return say, capsule_user
 
@@ -309,10 +288,6 @@ class TriplePhraser(SimplenlgPhraser):
         # Quick check if there is anything to do here
         if not brain_response['statement']['triple']:
             return copy.deepcopy(BASE_CAPSULE), None
-
-        # # Casefold
-        # utterance = casefold_capsule(brain_response['statement'], format='natural')
-        # thoughts = casefold_capsule(brain_response['thoughts'], format='natural')
 
         # Generate reply
         (thought_type, thought_info) = list(brain_response['thoughts'].items())[0]

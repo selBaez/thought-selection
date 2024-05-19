@@ -9,7 +9,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from cltl.commons.casefolding import casefold_capsule
 from cltl.thoughts.api import ThoughtSelector
 from cltl.thoughts.thought_selection.rl_selector import BrainEvaluator
 from cltl.thoughts.thought_selection.utils.thought_utils import decompose_thoughts
@@ -173,11 +172,8 @@ class D2Q(ThoughtSelector):
         # Keep track of selections
         self._last_thought = f"{selected_thought['thought_type']}:" \
                              f"{'-'.join(sorted(selected_thought['entity_types'].keys()))}"
-        thought_type, thought_info = selected_thought["thought_type"], selected_thought["thought_info"]
+        thought_type, thought_info = selected_thought["thought_type"], selected_thought
         self._log.info(f"Chosen thought type: {thought_type}")
-
-        # Preprocess thought_info and utterance (triples)
-        thought_info = casefold_capsule(thought_info, format="natural")
 
         return thought_type, thought_info
 
