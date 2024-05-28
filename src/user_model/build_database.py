@@ -1,12 +1,15 @@
+import gc
 import json
 from copy import deepcopy
 from datetime import datetime
 
+import pandas as pd
 from iribaker import to_iri
 
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.commons.discrete import UtteranceType, Certainty, Polarity, Sentiment
-from src.dialogue_system.utils.global_variables import ONTOLOGY_DETAILS, RAW_USER_PATH, HARRYPOTTER_NS
+from src.dialogue_system.utils.global_variables import ONTOLOGY_DETAILS, RAW_USER_PATH, HARRYPOTTER_NS, \
+    CHARACTER_TYPE_PATH, ATTRIBUTE_TYPE_PATH
 from src.dialogue_system.utils.helpers import get_all_characters, get_all_attributes
 from src.user_model.utils.constants import CONTEXT_ID, START_DATE, HP_CONTEXT_CAPSULE
 from src.user_model.utils.helpers import *
@@ -254,17 +257,72 @@ def create_users(graph_data):
         save_graph(filepath=Path(RAW_USER_PATH) / f"confused{u}.trig", graph_data=u_graph)
 
 
-def main():
-    print("---------------------------- Ingest triples per book  ----------------------------")
-    # iterate through JSONs
-    files = get_all_files(extension="json")
-    for file in files:
-        process_file(file)
+def add_types():
+    # Read trig files to change and guide files for types
+    files = sorted(list(Path(RAW_USER_PATH).glob(f'*.trig')))
+    character_types_file = pd.read_csv(CHARACTER_TYPE_PATH, sep=";")
+    attribute_types_file = pd.read_csv(ATTRIBUTE_TYPE_PATH, sep=";")
 
-    print("---------------------------- Make users  ----------------------------")
-    # Make types of users
-    graph_data = merge_all_graphs(TEST)
-    create_users(graph_data)
+    # General variables
+    ontology = URIRef("http://cltl.nl/leolani/world/Ontology")
+    character_class = URIRef(HARRYPOTTER_NS + "character")
+    attribute_class = URIRef(HARRYPOTTER_NS + "attribute")
+
+    for trig_file in files:
+        # parse data into graph
+        graph_data = build_graph()
+        graph_data.parse(trig_file)
+        print(f"\nFILE: {trig_file.name}, LENGTH: {len(graph_data)}")
+
+        # Add character types
+        for idx, row in character_types_file.iterrows():
+            # Ontology: add types as subtypes of character
+            character_type = URIRef(to_iri(HARRYPOTTER_NS + row["fixed_types"]))
+            graph_data.add((character_type, RDFS.subClassOf, character_class, ontology))
+
+            # Vocabulary: add type to specific character
+            character = URIRef(row["s"])
+            graph_data.add((character, RDF.type, character_type, INSTANCE_GRAPH))  # TODO: Check if character is there?
+        print(f"CHARACTER TYPES ADDED, LENGTH: {len(graph_data)}")
+
+        # Add attribute types
+        for idx, row in attribute_types_file.iterrows():
+            # Ontology: add types as subtypes of attribute
+            attribute_type = URIRef(to_iri(HARRYPOTTER_NS + row["fixed_types"]))
+            graph_data.add((attribute_type, RDFS.subClassOf, attribute_class, ontology))
+
+            # Vocabulary: add type to specific attribute according to predicate
+            attribute_type = URIRef(to_iri(HARRYPOTTER_NS + row["fixed_types"]))
+            q_objects = f"""SELECT distinct ?o  WHERE 
+                            {{ ?o rdf:type hp:attribute . ?char hp:{row['p'].split('/')[-1]} ?o }}"""
+            all_objects = graph_data.query(q_objects)
+            for o in all_objects:
+                attribute = URIRef(o[0])
+                graph_data.add((attribute, RDF.type, attribute_type, INSTANCE_GRAPH))
+        print(f"ATTRIBUTE TYPES ADDED, LENGTH: {len(graph_data)}")
+
+        save_graph(filepath=trig_file, graph_data=graph_data)
+        del graph_data
+        gc.collect()
+
+
+def main():
+    # print("---------------------------- Ingest triples per book  ----------------------------")
+    # # iterate through JSONs
+    # files = get_all_files(extension="json")
+    # for file in files:
+    #     process_file(file)
+    #
+    # print("---------------------------- Make users  ----------------------------")
+    # # Make types of users
+    # graph_data = merge_all_graphs(TEST)
+    # create_users(graph_data)
+
+    # print("---------------------------- Add entity types  ----------------------------")
+    # # Add entity types
+    # add_types()
+
+    print("DONE")
 
 
 if __name__ == "__main__":

@@ -22,48 +22,16 @@
 @prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xml1: <https://www.w3.org/TR/xmlschema-2/#> .
 
-leolaniWorld:mcgonagall_gender_female {
-    hp:mcgonagall hp:gender hp:female .
-}
-
-leolaniWorld:neville_looks_round-face {
-    hp:neville hp:looks hp:round-face .
-}
-
-leolaniWorld:harry_looks_wearing-glasses {
-    hp:harry hp:looks hp:wearing-glasses .
-}
-
 leolaniWorld:wood_gender_male {
     hp:wood hp:gender hp:male .
 }
 
-leolaniWorld:dudley_looks_blue-eyes {
-    hp:dudley hp:looks hp:blue-eyes .
+leolaniWorld:vernon_lineage_maculogy {
+    hp:vernon hp:lineage hp:maculogy .
 }
 
-leolaniWorld:neville_lineage_pure-blood-wizard {
-    hp:neville hp:lineage hp:pure-blood-wizard .
-}
-
-leolaniWorld:hagrid_lineage_mixed-wizard {
-    hp:hagrid hp:lineage hp:mixed-wizard .
-}
-
-leolaniWorld:hagrid_looks_full-of-beards {
-    hp:hagrid hp:looks hp:full-of-beards .
-}
-
-leolaniWorld:harry_lineage_pure-blood-wizard {
-    hp:harry hp:lineage hp:pure-blood-wizard .
-}
-
-leolaniWorld:filch_title_administrator {
-    hp:filch hp:title hp:administrator .
-}
-
-leolaniWorld:petunia_looks_long-neck {
-    hp:petunia hp:looks hp:long-neck .
+leolaniWorld:snape_age_adult {
+    hp:snape hp:age hp:adult .
 }
 
 leolaniWorld:Ontology {
@@ -107,23 +75,47 @@ leolaniWorld:Ontology {
         rdfs:range grasp:Source ;
         rdfs:subPropertyOf prov:wasAttributedTo .
 
+    hp:ability rdfs:subClassOf hp:attribute .
+
+    hp:activity rdfs:subClassOf hp:attribute .
+
     hp:affiliation rdfs:domain hp:character ;
         rdfs:range hp:attribute .
 
     hp:age rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:attribute ;
+        rdfs:subClassOf hp:attribute .
+
+    hp:ancestry rdfs:subClassOf hp:attribute .
 
     hp:belongings rdfs:domain hp:character ;
         rdfs:range hp:attribute .
+
+    hp:centaur rdfs:subClassOf hp:character .
+
+    hp:designation rdfs:subClassOf hp:attribute .
+
+    hp:domestic-elf rdfs:subClassOf hp:character .
+
+    hp:enchantment rdfs:subClassOf hp:attribute .
 
     hp:export rdfs:domain hp:character ;
         rdfs:range hp:attribute .
 
     hp:gender rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:attribute ;
+        rdfs:subClassOf hp:attribute .
+
+    hp:ghost rdfs:subClassOf hp:character .
+
+    hp:giant rdfs:subClassOf hp:character .
+
+    hp:goblin rdfs:subClassOf hp:character .
 
     hp:hobbies rdfs:domain hp:character ;
         rdfs:range hp:attribute .
+
+    hp:institution rdfs:subClassOf hp:attribute .
 
     hp:lineage rdfs:domain hp:character ;
         rdfs:range hp:attribute .
@@ -131,17 +123,35 @@ leolaniWorld:Ontology {
     hp:looks rdfs:domain hp:character ;
         rdfs:range hp:attribute .
 
+    hp:muggle rdfs:subClassOf hp:character .
+
+    hp:object rdfs:subClassOf hp:attribute .
+
     hp:personality rdfs:domain hp:character ;
         rdfs:range hp:attribute .
 
+    hp:personality-trait rdfs:subClassOf hp:attribute .
+
+    hp:physical-appearance rdfs:subClassOf hp:attribute .
+
+    hp:product rdfs:subClassOf hp:attribute .
+
     hp:spells rdfs:domain hp:character ;
         rdfs:range hp:attribute .
+
+    hp:spider rdfs:subClassOf hp:character .
+
+    hp:squib rdfs:subClassOf hp:character .
 
     hp:talents rdfs:domain hp:character ;
         rdfs:range hp:attribute .
 
     hp:title rdfs:domain hp:character ;
         rdfs:range hp:attribute .
+
+    hp:werewolf rdfs:subClassOf hp:character .
+
+    hp:wizard rdfs:subClassOf hp:character .
 
     <http://schema.org/Place> a owl:Class .
 
@@ -432,869 +442,41 @@ A Mention uniquely identifies the (part of a) web source that denotes the mentio
                 owl:onProperty gaf:denotes ;
                 owl:someValuesFrom gaf:Instance ] .
 
-    hp:attribute a owl:Class .
-
     hp:character a owl:Class .
-}
 
-leolaniWorld:snape_age_adult {
-    hp:snape hp:age hp:adult .
-}
-
-leolaniWorld:wood_affiliation_hogwarts {
-    hp:wood hp:affiliation hp:hogwarts .
+    hp:attribute a owl:Class .
 }
 
 leolaniWorld:harry_looks_knife-injury-with-lightning-shape-at-the-forehead {
     hp:harry hp:looks hp:knife-injury-with-lightning-shape-at-the-forehead .
 }
 
-leolaniWorld:ron_affiliation_hogwarts {
-    hp:ron hp:affiliation hp:hogwarts .
-}
-
-leolaniWorld:vernon_lineage_maculogy {
-    hp:vernon hp:lineage hp:maculogy .
-}
-
-leolaniWorld:snape_affiliation_hogwarts {
-    hp:snape hp:affiliation hp:hogwarts .
-}
-
 leolaniWorld:leolani_know_jk-rowling {
     leolaniWorld:leolani hp:know leolaniFriends:jk-rowling .
-}
-
-leolaniWorld:neville_affiliation_hogvy {
-    hp:neville hp:affiliation hp:hogvy .
-}
-
-leolaniWorld:harry_belongings_stealth-jacket {
-    hp:harry hp:belongings hp:stealth-jacket .
-}
-
-leolaniWorld:harry_age_age-11 {
-    hp:harry hp:age hp:age-11 .
-}
-
-leolaniWorld:hagrid_hobbies_like-pets {
-    hp:hagrid hp:hobbies hp:like-pets .
-}
-
-leolaniWorld:hermione_age_age-11 {
-    hp:hermione hp:age hp:age-11 .
-}
-
-leolaniWorld:harry_title_the-boy-who-lived {
-    hp:harry hp:title hp:the-boy-who-lived .
-}
-
-leolaniWorld:Claims {
-    leolaniFriends:jk-rowling owl:sameAs leolaniWorld:jk-rowling .
-
-    leolaniWorld:dudley_age_age-11 a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "dudley_age_age-11" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-30,
-            leolaniTalk:chat1_utterance3_char27-54 .
-
-    leolaniWorld:dudley_gender_male a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "dudley_gender_male" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-29,
-            leolaniTalk:chat1_utterance3_char27-53 .
-
-    leolaniWorld:dudley_lineage_maculogy a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "dudley_lineage_maculogy" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-35,
-            leolaniTalk:chat1_utterance3_char27-59 .
-
-    leolaniWorld:dudley_looks_blue-eyes a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "dudley_looks_blue-eyes" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-31,
-            leolaniTalk:chat1_utterance2_char21-32,
-            leolaniTalk:chat1_utterance3_char27-55,
-            leolaniTalk:chat1_utterance3_char27-56 .
-
-    leolaniWorld:dudley_looks_tall-and-burly a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "dudley_looks_tall-and-burly" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-36,
-            leolaniTalk:chat1_utterance3_char27-46 .
-
-    leolaniWorld:filch_affiliation_adult a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "filch_affiliation_adult" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-88 .
-
-    leolaniWorld:filch_affiliation_hogwarts a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "filch_affiliation_hogwarts" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-175,
-            leolaniTalk:chat1_utterance5_char40-52,
-            leolaniTalk:chat1_utterance5_char41-53,
-            leolaniTalk:chat1_utterance5_char51-63,
-            leolaniTalk:chat1_utterance5_char52-64,
-            leolaniTalk:chat1_utterance5_char53-65 .
-
-    leolaniWorld:filch_gender_no-rules a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "filch_gender_no-rules" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-86 .
-
-    leolaniWorld:filch_looks_a-serious-look a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "filch_looks_a-serious-look" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-156,
-            leolaniTalk:chat1_utterance9_char74-76 .
-
-    leolaniWorld:filch_title_administrator a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "filch_title_administrator" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-89 .
-
-    leolaniWorld:flitwick_affiliation_mean a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "flitwick_affiliation_mean" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-88 .
-
-    leolaniWorld:flitwick_age_hogvy a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "flitwick_age_hogvy" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-87 .
-
-    leolaniWorld:flitwick_gender_male a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "flitwick_gender_male" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-168,
-            leolaniTalk:chat1_utterance5_char40-48,
-            leolaniTalk:chat1_utterance5_char41-49,
-            leolaniTalk:chat1_utterance5_char51-59,
-            leolaniTalk:chat1_utterance5_char52-60,
-            leolaniTalk:chat1_utterance5_char53-61,
-            leolaniTalk:chat1_utterance8_char70-78 .
-
-    leolaniWorld:flitwick_gender_slender a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "flitwick_gender_slender" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-86 .
-
-    leolaniWorld:flitwick_title_mantra-professor a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "flitwick_title_mantra-professor" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-89 .
-
-    leolaniWorld:hagrid_age_adult a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hagrid_age_adult" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-155,
-            leolaniTalk:chat1_utterance16_char157-169,
-            leolaniTalk:chat1_utterance5_char40-49,
-            leolaniTalk:chat1_utterance5_char41-50,
-            leolaniTalk:chat1_utterance5_char51-60,
-            leolaniTalk:chat1_utterance5_char52-61,
-            leolaniTalk:chat1_utterance5_char53-62,
-            leolaniTalk:chat1_utterance9_char74-75 .
-
-    leolaniWorld:hagrid_hobbies_like-pets a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hagrid_hobbies_like-pets" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-172 .
-
-    leolaniWorld:hagrid_lineage_mixed-wizard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hagrid_lineage_mixed-wizard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-176 .
-
-    leolaniWorld:hagrid_looks_full-of-beards a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hagrid_looks_full-of-beards" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-171,
-            leolaniTalk:chat1_utterance5_char40-51,
-            leolaniTalk:chat1_utterance5_char41-52,
-            leolaniTalk:chat1_utterance5_char51-62,
-            leolaniTalk:chat1_utterance5_char52-63,
-            leolaniTalk:chat1_utterance5_char53-64 .
-
-    leolaniWorld:hagrid_looks_very-fat a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hagrid_looks_very-fat" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-35,
-            leolaniTalk:chat1_utterance3_char27-45 .
-
-    leolaniWorld:hagrid_title_key-guardian-and-hunting-ground-guard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hagrid_title_key-guardian-and-hunting-ground-guard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-177,
-            leolaniTalk:chat1_utterance5_char40-54,
-            leolaniTalk:chat1_utterance5_char41-55,
-            leolaniTalk:chat1_utterance5_char51-65,
-            leolaniTalk:chat1_utterance5_char52-66,
-            leolaniTalk:chat1_utterance5_char53-67 .
-
-    leolaniWorld:harry_affiliation_hogwarts a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_affiliation_hogwarts" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-97,
-            leolaniTalk:chat1_utterance12_char111-119,
-            leolaniTalk:chat1_utterance12_char119-127,
-            leolaniTalk:chat1_utterance12_char120-128,
-            leolaniTalk:chat1_utterance13_char127-135,
-            leolaniTalk:chat1_utterance13_char127-142,
-            leolaniTalk:chat1_utterance15_char143-151,
-            leolaniTalk:chat1_utterance15_char154-162,
-            leolaniTalk:chat1_utterance16_char156-164,
-            leolaniTalk:chat1_utterance16_char157-165,
-            leolaniTalk:chat1_utterance8_char70-75,
-            leolaniTalk:chat1_utterance9_char79-85 .
-
-    leolaniWorld:harry_age_age-11 a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_age_age-11" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-91,
-            leolaniTalk:chat1_utterance12_char111-112,
-            leolaniTalk:chat1_utterance12_char119-120,
-            leolaniTalk:chat1_utterance12_char120-121,
-            leolaniTalk:chat1_utterance13_char127-128,
-            leolaniTalk:chat1_utterance13_char127-139,
-            leolaniTalk:chat1_utterance15_char143-144,
-            leolaniTalk:chat1_utterance15_char154-155,
-            leolaniTalk:chat1_utterance16_char156-157,
-            leolaniTalk:chat1_utterance16_char157-158,
-            leolaniTalk:chat1_utterance2_char17-18,
-            leolaniTalk:chat1_utterance2_char21-22,
-            leolaniTalk:chat1_utterance3_char26-27,
-            leolaniTalk:chat1_utterance3_char27-28,
-            leolaniTalk:chat1_utterance5_char40-41,
-            leolaniTalk:chat1_utterance5_char41-42,
-            leolaniTalk:chat1_utterance5_char51-52,
-            leolaniTalk:chat1_utterance5_char52-53,
-            leolaniTalk:chat1_utterance5_char53-54,
-            leolaniTalk:chat1_utterance8_char70-71,
-            leolaniTalk:chat1_utterance9_char79-80 .
-
-    leolaniWorld:harry_belongings_flying-broom a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_belongings_flying-broom" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-96,
-            leolaniTalk:chat1_utterance12_char111-117,
-            leolaniTalk:chat1_utterance12_char119-125,
-            leolaniTalk:chat1_utterance12_char120-126,
-            leolaniTalk:chat1_utterance13_char127-133,
-            leolaniTalk:chat1_utterance15_char143-149,
-            leolaniTalk:chat1_utterance15_char154-160,
-            leolaniTalk:chat1_utterance16_char156-162,
-            leolaniTalk:chat1_utterance16_char157-163 .
-
-    leolaniWorld:harry_belongings_owl a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_belongings_owl" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-95,
-            leolaniTalk:chat1_utterance12_char111-116,
-            leolaniTalk:chat1_utterance12_char119-124,
-            leolaniTalk:chat1_utterance12_char120-125,
-            leolaniTalk:chat1_utterance13_char127-132,
-            leolaniTalk:chat1_utterance15_char143-148,
-            leolaniTalk:chat1_utterance15_char154-159,
-            leolaniTalk:chat1_utterance16_char156-161,
-            leolaniTalk:chat1_utterance16_char157-162,
-            leolaniTalk:chat1_utterance8_char70-74,
-            leolaniTalk:chat1_utterance9_char79-84 .
-
-    leolaniWorld:harry_belongings_stealth-jacket a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_belongings_stealth-jacket" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-118,
-            leolaniTalk:chat1_utterance12_char119-126,
-            leolaniTalk:chat1_utterance12_char120-127,
-            leolaniTalk:chat1_utterance13_char127-134,
-            leolaniTalk:chat1_utterance15_char143-150,
-            leolaniTalk:chat1_utterance15_char154-161,
-            leolaniTalk:chat1_utterance16_char156-163,
-            leolaniTalk:chat1_utterance16_char157-164 .
-
-    leolaniWorld:harry_belongings_wand a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_belongings_wand" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-115,
-            leolaniTalk:chat1_utterance12_char119-123,
-            leolaniTalk:chat1_utterance12_char120-124,
-            leolaniTalk:chat1_utterance13_char127-131,
-            leolaniTalk:chat1_utterance15_char143-147,
-            leolaniTalk:chat1_utterance15_char154-158,
-            leolaniTalk:chat1_utterance16_char156-160,
-            leolaniTalk:chat1_utterance16_char157-161,
-            leolaniTalk:chat1_utterance8_char70-73,
-            leolaniTalk:chat1_utterance9_char79-83 .
-
-    leolaniWorld:harry_gender_quididic-chaser a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_gender_quididic-chaser" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-90,
-            leolaniTalk:chat1_utterance12_char111-111,
-            leolaniTalk:chat1_utterance12_char119-119,
-            leolaniTalk:chat1_utterance12_char120-120,
-            leolaniTalk:chat1_utterance13_char127-127,
-            leolaniTalk:chat1_utterance13_char127-138,
-            leolaniTalk:chat1_utterance15_char143-143,
-            leolaniTalk:chat1_utterance15_char154-154,
-            leolaniTalk:chat1_utterance16_char156-156,
-            leolaniTalk:chat1_utterance16_char157-157,
-            leolaniTalk:chat1_utterance2_char17-17,
-            leolaniTalk:chat1_utterance2_char21-21,
-            leolaniTalk:chat1_utterance3_char26-26,
-            leolaniTalk:chat1_utterance3_char27-27,
-            leolaniTalk:chat1_utterance5_char40-40,
-            leolaniTalk:chat1_utterance5_char41-41,
-            leolaniTalk:chat1_utterance5_char51-51,
-            leolaniTalk:chat1_utterance5_char52-52,
-            leolaniTalk:chat1_utterance5_char53-53,
-            leolaniTalk:chat1_utterance8_char70-70,
-            leolaniTalk:chat1_utterance9_char79-79 .
-
-    leolaniWorld:harry_lineage_mixed-wizard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_lineage_mixed-wizard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-98,
-            leolaniTalk:chat1_utterance12_char111-120,
-            leolaniTalk:chat1_utterance12_char119-128,
-            leolaniTalk:chat1_utterance12_char120-129,
-            leolaniTalk:chat1_utterance13_char127-136,
-            leolaniTalk:chat1_utterance15_char143-152,
-            leolaniTalk:chat1_utterance15_char154-163,
-            leolaniTalk:chat1_utterance16_char156-165,
-            leolaniTalk:chat1_utterance16_char157-166,
-            leolaniTalk:chat1_utterance8_char70-76,
-            leolaniTalk:chat1_utterance9_char79-86 .
-
-    leolaniWorld:harry_lineage_pure-blood-wizard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_lineage_pure-blood-wizard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-143 .
-
-    leolaniWorld:harry_looks_eagle-hook-nose a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_looks_eagle-hook-nose" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-21,
-            leolaniTalk:chat1_utterance2_char21-25,
-            leolaniTalk:chat1_utterance3_char26-30,
-            leolaniTalk:chat1_utterance3_char27-31,
-            leolaniTalk:chat1_utterance5_char40-44,
-            leolaniTalk:chat1_utterance5_char41-45,
-            leolaniTalk:chat1_utterance5_char51-55,
-            leolaniTalk:chat1_utterance5_char52-56,
-            leolaniTalk:chat1_utterance5_char53-57 .
-
-    leolaniWorld:harry_looks_knife-injury-with-lightning-shape-at-the-forehead a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_looks_knife-injury-with-lightning-shape-at-the-forehead" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-23,
-            leolaniTalk:chat1_utterance2_char21-27,
-            leolaniTalk:chat1_utterance3_char26-32,
-            leolaniTalk:chat1_utterance3_char27-33,
-            leolaniTalk:chat1_utterance5_char40-46,
-            leolaniTalk:chat1_utterance5_char41-47,
-            leolaniTalk:chat1_utterance5_char51-57,
-            leolaniTalk:chat1_utterance5_char52-58,
-            leolaniTalk:chat1_utterance5_char53-59 .
-
-    leolaniWorld:harry_looks_red-hair a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_looks_red-hair" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-140 .
-
-    leolaniWorld:harry_looks_sword-injury-with-lightning-shape-at-the-forehead a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_looks_sword-injury-with-lightning-shape-at-the-forehead" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-92,
-            leolaniTalk:chat1_utterance12_char111-113,
-            leolaniTalk:chat1_utterance12_char119-121,
-            leolaniTalk:chat1_utterance12_char120-122,
-            leolaniTalk:chat1_utterance13_char127-129,
-            leolaniTalk:chat1_utterance15_char143-145,
-            leolaniTalk:chat1_utterance15_char154-156,
-            leolaniTalk:chat1_utterance16_char156-158,
-            leolaniTalk:chat1_utterance16_char157-159,
-            leolaniTalk:chat1_utterance8_char70-72,
-            leolaniTalk:chat1_utterance9_char79-81 .
-
-    leolaniWorld:harry_looks_very-thin a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_looks_very-thin" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-19,
-            leolaniTalk:chat1_utterance2_char21-23,
-            leolaniTalk:chat1_utterance3_char26-28,
-            leolaniTalk:chat1_utterance3_char27-29,
-            leolaniTalk:chat1_utterance5_char40-42,
-            leolaniTalk:chat1_utterance5_char41-43,
-            leolaniTalk:chat1_utterance5_char51-53,
-            leolaniTalk:chat1_utterance5_char52-54,
-            leolaniTalk:chat1_utterance5_char53-55 .
-
-    leolaniWorld:harry_looks_wearing-glasses a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_looks_wearing-glasses" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-22,
-            leolaniTalk:chat1_utterance2_char21-26,
-            leolaniTalk:chat1_utterance3_char26-31,
-            leolaniTalk:chat1_utterance3_char27-32,
-            leolaniTalk:chat1_utterance5_char40-45,
-            leolaniTalk:chat1_utterance5_char41-46,
-            leolaniTalk:chat1_utterance5_char51-56,
-            leolaniTalk:chat1_utterance5_char52-57,
-            leolaniTalk:chat1_utterance5_char53-58 .
-
-    leolaniWorld:harry_talents_pure-blood-wizard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_talents_pure-blood-wizard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-93,
-            leolaniTalk:chat1_utterance12_char111-114,
-            leolaniTalk:chat1_utterance12_char119-122,
-            leolaniTalk:chat1_utterance12_char120-123,
-            leolaniTalk:chat1_utterance13_char127-130,
-            leolaniTalk:chat1_utterance15_char143-146,
-            leolaniTalk:chat1_utterance15_char154-157,
-            leolaniTalk:chat1_utterance16_char156-159,
-            leolaniTalk:chat1_utterance16_char157-160,
-            leolaniTalk:chat1_utterance9_char79-82 .
-
-    leolaniWorld:harry_title_the-boy-who-lived a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "harry_title_the-boy-who-lived" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-99,
-            leolaniTalk:chat1_utterance12_char111-121,
-            leolaniTalk:chat1_utterance12_char119-129,
-            leolaniTalk:chat1_utterance12_char120-130,
-            leolaniTalk:chat1_utterance13_char127-137,
-            leolaniTalk:chat1_utterance15_char143-153,
-            leolaniTalk:chat1_utterance15_char154-164,
-            leolaniTalk:chat1_utterance16_char156-166,
-            leolaniTalk:chat1_utterance16_char157-167,
-            leolaniTalk:chat1_utterance2_char17-24,
-            leolaniTalk:chat1_utterance2_char21-28,
-            leolaniTalk:chat1_utterance3_char26-33,
-            leolaniTalk:chat1_utterance3_char27-34,
-            leolaniTalk:chat1_utterance5_char40-47,
-            leolaniTalk:chat1_utterance5_char41-48,
-            leolaniTalk:chat1_utterance5_char51-58,
-            leolaniTalk:chat1_utterance5_char52-59,
-            leolaniTalk:chat1_utterance5_char53-60,
-            leolaniTalk:chat1_utterance8_char70-77,
-            leolaniTalk:chat1_utterance9_char79-87 .
-
-    leolaniWorld:hermione_age_adult a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hermione_age_adult" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-87 .
-
-    leolaniWorld:hermione_age_age-11 a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hermione_age_age-11" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-157,
-            leolaniTalk:chat1_utterance15_char154-172,
-            leolaniTalk:chat1_utterance16_char156-174,
-            leolaniTalk:chat1_utterance9_char79-95 .
-
-    leolaniWorld:hermione_belongings_hunters-teeth a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hermione_belongings_hunters-teeth" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-173 .
-
-    leolaniWorld:hermione_belongings_magic-wand a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hermione_belongings_magic-wand" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-94 .
-
-    leolaniWorld:hermione_gender_male a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hermione_gender_male" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-80 .
-
-    leolaniWorld:hermione_gender_slender a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hermione_gender_slender" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-156,
-            leolaniTalk:chat1_utterance15_char154-171,
-            leolaniTalk:chat1_utterance16_char156-173,
-            leolaniTalk:chat1_utterance9_char79-94 .
-
-    leolaniWorld:hermione_lineage_mixed-wizard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "hermione_lineage_mixed-wizard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-159,
-            leolaniTalk:chat1_utterance15_char154-174,
-            leolaniTalk:chat1_utterance16_char156-176,
-            leolaniTalk:chat1_utterance9_char79-97 .
-
-    leolaniWorld:leolani_know_jk-rowling a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "leolani_know_jk-rowling" .
-
-    leolaniWorld:mcgonagall_affiliation_hogwarts a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "mcgonagall_affiliation_hogwarts" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-158,
-            leolaniTalk:chat1_utterance9_char74-78 .
-
-    leolaniWorld:mcgonagall_belongings_car a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "mcgonagall_belongings_car" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-39,
-            leolaniTalk:chat1_utterance3_char27-49 .
-
-    leolaniWorld:mcgonagall_belongings_three-headed-dog-luwei a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "mcgonagall_belongings_three-headed-dog-luwei" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-174 .
-
-    leolaniWorld:mcgonagall_gender_female a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "mcgonagall_gender_female" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-154,
-            leolaniTalk:chat1_utterance9_char74-74 .
-
-    leolaniWorld:mcgonagall_gender_male a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "mcgonagall_gender_male" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-122,
-            leolaniTalk:chat1_utterance12_char119-130,
-            leolaniTalk:chat1_utterance12_char120-131,
-            leolaniTalk:chat1_utterance13_char127-144,
-            leolaniTalk:chat1_utterance13_char127-150,
-            leolaniTalk:chat1_utterance15_char154-165,
-            leolaniTalk:chat1_utterance16_char156-167,
-            leolaniTalk:chat1_utterance16_char157-178,
-            leolaniTalk:chat1_utterance16_char161-161,
-            leolaniTalk:chat1_utterance9_char79-88 .
-
-    leolaniWorld:mcgonagall_looks_square-lenses a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "mcgonagall_looks_square-lenses" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-157,
-            leolaniTalk:chat1_utterance9_char74-77 .
-
-    leolaniWorld:neville_affiliation_hogvy a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "neville_affiliation_hogvy" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-84 .
-
-    leolaniWorld:neville_age_age-11 a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "neville_age_age-11" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-81 .
-
-    leolaniWorld:neville_belongings_toad a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "neville_belongings_toad" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-83 .
-
-    leolaniWorld:neville_lineage_pure-blood-wizard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "neville_lineage_pure-blood-wizard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-85 .
-
-    leolaniWorld:neville_looks_round-face a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "neville_looks_round-face" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-82 .
-
-    leolaniWorld:petunia_gender_female a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "petunia_gender_female" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-25,
-            leolaniTalk:chat1_utterance3_char26-34,
-            leolaniTalk:chat1_utterance3_char27-35 .
-
-    leolaniWorld:petunia_lineage_maculogy a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "petunia_lineage_maculogy" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-32,
-            leolaniTalk:chat1_utterance3_char26-41,
-            leolaniTalk:chat1_utterance3_char27-42 .
-
-    leolaniWorld:petunia_looks_long-neck a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "petunia_looks_long-neck" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-27,
-            leolaniTalk:chat1_utterance2_char17-29,
-            leolaniTalk:chat1_utterance3_char26-36,
-            leolaniTalk:chat1_utterance3_char26-38,
-            leolaniTalk:chat1_utterance3_char27-37,
-            leolaniTalk:chat1_utterance3_char27-39 .
-
-    leolaniWorld:petunia_looks_surprisingly-tall a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "petunia_looks_surprisingly-tall" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-170,
-            leolaniTalk:chat1_utterance5_char40-50,
-            leolaniTalk:chat1_utterance5_char41-51,
-            leolaniTalk:chat1_utterance5_char51-61,
-            leolaniTalk:chat1_utterance5_char52-62,
-            leolaniTalk:chat1_utterance5_char53-63 .
-
-    leolaniWorld:petunia_personality_selfish a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "petunia_personality_selfish" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-33,
-            leolaniTalk:chat1_utterance3_char27-57 .
-
-    leolaniWorld:ron_affiliation_hogwarts a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "ron_affiliation_hogwarts" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-126,
-            leolaniTalk:chat1_utterance12_char119-134,
-            leolaniTalk:chat1_utterance12_char120-135,
-            leolaniTalk:chat1_utterance13_char127-148,
-            leolaniTalk:chat1_utterance13_char127-154,
-            leolaniTalk:chat1_utterance15_char154-169,
-            leolaniTalk:chat1_utterance16_char156-171,
-            leolaniTalk:chat1_utterance16_char157-182,
-            leolaniTalk:chat1_utterance16_char161-165,
-            leolaniTalk:chat1_utterance9_char79-92 .
-
-    leolaniWorld:ron_age_adult a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "ron_age_adult" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-26,
-            leolaniTalk:chat1_utterance3_char26-35,
-            leolaniTalk:chat1_utterance3_char27-36 .
-
-    leolaniWorld:ron_age_age-11 a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "ron_age_age-11" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-123,
-            leolaniTalk:chat1_utterance12_char119-131,
-            leolaniTalk:chat1_utterance12_char120-132,
-            leolaniTalk:chat1_utterance13_char127-145,
-            leolaniTalk:chat1_utterance13_char127-151,
-            leolaniTalk:chat1_utterance15_char154-166,
-            leolaniTalk:chat1_utterance16_char156-168,
-            leolaniTalk:chat1_utterance16_char157-179,
-            leolaniTalk:chat1_utterance16_char161-162,
-            leolaniTalk:chat1_utterance9_char79-89 .
-
-    leolaniWorld:ron_belongings_car a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "ron_belongings_car" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-125,
-            leolaniTalk:chat1_utterance12_char119-133,
-            leolaniTalk:chat1_utterance12_char120-134,
-            leolaniTalk:chat1_utterance13_char127-147,
-            leolaniTalk:chat1_utterance13_char127-153,
-            leolaniTalk:chat1_utterance15_char154-168,
-            leolaniTalk:chat1_utterance16_char156-170,
-            leolaniTalk:chat1_utterance16_char157-181,
-            leolaniTalk:chat1_utterance16_char161-164,
-            leolaniTalk:chat1_utterance9_char79-91 .
-
-    leolaniWorld:ron_lineage_wearing-glasses a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "ron_lineage_wearing-glasses" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-127,
-            leolaniTalk:chat1_utterance12_char119-135,
-            leolaniTalk:chat1_utterance12_char120-136,
-            leolaniTalk:chat1_utterance13_char127-149,
-            leolaniTalk:chat1_utterance13_char127-155,
-            leolaniTalk:chat1_utterance15_char154-170,
-            leolaniTalk:chat1_utterance16_char156-172,
-            leolaniTalk:chat1_utterance16_char157-183,
-            leolaniTalk:chat1_utterance16_char161-166,
-            leolaniTalk:chat1_utterance9_char79-93 .
-
-    leolaniWorld:ron_looks_blond-hair a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "ron_looks_blond-hair" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-28,
-            leolaniTalk:chat1_utterance3_char26-37,
-            leolaniTalk:chat1_utterance3_char27-38 .
-
-    leolaniWorld:ron_looks_message a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "ron_looks_message" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-124,
-            leolaniTalk:chat1_utterance12_char119-132,
-            leolaniTalk:chat1_utterance12_char120-133,
-            leolaniTalk:chat1_utterance13_char127-146,
-            leolaniTalk:chat1_utterance13_char127-152,
-            leolaniTalk:chat1_utterance15_char154-167,
-            leolaniTalk:chat1_utterance16_char156-169,
-            leolaniTalk:chat1_utterance16_char157-180,
-            leolaniTalk:chat1_utterance16_char161-163,
-            leolaniTalk:chat1_utterance9_char79-90 .
-
-    leolaniWorld:snape_affiliation_hogwarts a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "snape_affiliation_hogwarts" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-81 .
-
-    leolaniWorld:snape_age_adult a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "snape_age_adult" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-79 .
-
-    leolaniWorld:snape_lineage_pure-blood-wizard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "snape_lineage_pure-blood-wizard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-159,
-            leolaniTalk:chat1_utterance9_char74-79 .
-
-    leolaniWorld:snape_lineage_red-hair a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "snape_lineage_red-hair" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-82 .
-
-    leolaniWorld:snape_looks_mixed-wizard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "snape_looks_mixed-wizard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-80 .
-
-    leolaniWorld:snape_title_administrator a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "snape_title_administrator" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-83 .
-
-    leolaniWorld:vernon_affiliation_grandine-company a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_affiliation_grandine-company" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-40,
-            leolaniTalk:chat1_utterance3_char27-50 .
-
-    leolaniWorld:vernon_age_flying-broom a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_age_flying-broom" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-34,
-            leolaniTalk:chat1_utterance3_char27-44 .
-
-    leolaniWorld:vernon_gender_male a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_gender_male" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-33,
-            leolaniTalk:chat1_utterance3_char27-43 .
-
-    leolaniWorld:vernon_lineage_maculogy a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_lineage_maculogy" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-41,
-            leolaniTalk:chat1_utterance3_char27-51 .
-
-    leolaniWorld:vernon_lineage_wizard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_lineage_wizard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance5_char40-53,
-            leolaniTalk:chat1_utterance5_char41-54,
-            leolaniTalk:chat1_utterance5_char51-64,
-            leolaniTalk:chat1_utterance5_char52-65,
-            leolaniTalk:chat1_utterance5_char53-66 .
-
-    leolaniWorld:vernon_looks_black-hair a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_looks_black-hair" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-20,
-            leolaniTalk:chat1_utterance2_char21-24,
-            leolaniTalk:chat1_utterance3_char26-29,
-            leolaniTalk:chat1_utterance3_char27-30,
-            leolaniTalk:chat1_utterance5_char40-43,
-            leolaniTalk:chat1_utterance5_char41-44,
-            leolaniTalk:chat1_utterance5_char51-54,
-            leolaniTalk:chat1_utterance5_char52-55,
-            leolaniTalk:chat1_utterance5_char53-56 .
-
-    leolaniWorld:vernon_personality_gossip a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_personality_gossip" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-31,
-            leolaniTalk:chat1_utterance3_char26-40,
-            leolaniTalk:chat1_utterance3_char27-41 .
-
-    leolaniWorld:vernon_personality_wearing-glasses a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_personality_wearing-glasses" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-38,
-            leolaniTalk:chat1_utterance3_char27-48 .
-
-    leolaniWorld:vernon_title_company-supervisor a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_title_company-supervisor" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-42,
-            leolaniTalk:chat1_utterance3_char27-52 .
-
-    leolaniWorld:vernon_title_vice-president-of-hogvy a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "vernon_title_vice-president-of-hogvy" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-160,
-            leolaniTalk:chat1_utterance9_char74-80 .
-
-    leolaniWorld:wood_affiliation_hogvy a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "wood_affiliation_hogvy" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-158,
-            leolaniTalk:chat1_utterance15_char154-173,
-            leolaniTalk:chat1_utterance16_char156-175,
-            leolaniTalk:chat1_utterance9_char79-96 .
-
-    leolaniWorld:wood_affiliation_hogwarts a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "wood_affiliation_hogwarts" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-101,
-            leolaniTalk:chat1_utterance9_char74-82 .
-
-    leolaniWorld:wood_gender_male a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "wood_gender_male" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-100,
-            leolaniTalk:chat1_utterance9_char74-81 .
-
-    leolaniWorld:wood_looks_accumulating-beard a gaf:Assertion,
-            sem:Event ;
-        rdfs:label "wood_looks_accumulating-beard" ;
-        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-37,
-            leolaniTalk:chat1_utterance3_char27-47 .
-}
-
-leolaniWorld:ron_age_age-11 {
-    hp:ron hp:age hp:age-11 .
-}
-
-leolaniWorld:harry_looks_sword-injury-with-lightning-shape-at-the-forehead {
-    hp:harry hp:looks hp:sword-injury-with-lightning-shape-at-the-forehead .
 }
 
 leolaniWorld:vernon_title_company-supervisor {
     hp:vernon hp:title hp:company-supervisor .
 }
 
-leolaniWorld:harry_belongings_wand {
-    hp:harry hp:belongings hp:wand .
+leolaniWorld:hagrid_age_adult {
+    hp:hagrid hp:age hp:adult .
 }
 
-leolaniWorld:harry_affiliation_hogwarts {
-    hp:harry hp:affiliation hp:hogwarts .
+leolaniWorld:filch_title_administrator {
+    hp:filch hp:title hp:administrator .
 }
 
-leolaniWorld:harry_looks_red-hair {
-    hp:harry hp:looks hp:red-hair .
+leolaniWorld:neville_age_age-11 {
+    hp:neville hp:age hp:age-11 .
 }
 
-leolaniWorld:dudley_age_age-11 {
-    hp:dudley hp:age hp:age-11 .
+leolaniWorld:neville_affiliation_hogvy {
+    hp:neville hp:affiliation hp:hogvy .
 }
 
-leolaniWorld:hagrid_title_key-guardian-and-hunting-ground-guard {
-    hp:hagrid hp:title hp:key-guardian-and-hunting-ground-guard .
-}
-
-leolaniWorld:vernon_gender_male {
-    hp:vernon hp:gender hp:male .
-}
-
-leolaniWorld:harry_looks_very-thin {
-    hp:harry hp:looks hp:very-thin .
-}
-
-leolaniWorld:petunia_gender_female {
-    hp:petunia hp:gender hp:female .
+leolaniWorld:flitwick_title_mantra-professor {
+    hp:flitwick hp:title hp:mantra-professor .
 }
 
 leolaniTalk:Perspectives {
@@ -7297,8 +6479,104 @@ leolaniTalk:Perspectives {
         rdfs:label "NEUTRAL" .
 }
 
-leolaniWorld:mcgonagall_looks_square-lenses {
-    hp:mcgonagall hp:looks hp:square-lenses .
+leolaniWorld:neville_lineage_pure-blood-wizard {
+    hp:neville hp:lineage hp:pure-blood-wizard .
+}
+
+leolaniWorld:harry_age_age-11 {
+    hp:harry hp:age hp:age-11 .
+}
+
+leolaniWorld:neville_looks_round-face {
+    hp:neville hp:looks hp:round-face .
+}
+
+leolaniWorld:hagrid_lineage_mixed-wizard {
+    hp:hagrid hp:lineage hp:mixed-wizard .
+}
+
+leolaniWorld:ron_affiliation_hogwarts {
+    hp:ron hp:affiliation hp:hogwarts .
+}
+
+leolaniWorld:hagrid_looks_full-of-beards {
+    hp:hagrid hp:looks hp:full-of-beards .
+}
+
+leolaniWorld:harry_lineage_mixed-wizard {
+    hp:harry hp:lineage hp:mixed-wizard .
+}
+
+leolaniWorld:ron_age_age-11 {
+    hp:ron hp:age hp:age-11 .
+}
+
+leolaniWorld:harry_belongings_wand {
+    hp:harry hp:belongings hp:wand .
+}
+
+leolaniWorld:hermione_age_age-11 {
+    hp:hermione hp:age hp:age-11 .
+}
+
+leolaniWorld:petunia_gender_female {
+    hp:petunia hp:gender hp:female .
+}
+
+leolaniWorld:harry_belongings_owl {
+    hp:harry hp:belongings hp:owl .
+}
+
+leolaniWorld:harry_looks_wearing-glasses {
+    hp:harry hp:looks hp:wearing-glasses .
+}
+
+leolaniWorld:neville_belongings_toad {
+    hp:neville hp:belongings hp:toad .
+}
+
+leolaniWorld:dudley_gender_male {
+    hp:dudley hp:gender hp:male .
+}
+
+leolaniWorld:harry_lineage_pure-blood-wizard {
+    hp:harry hp:lineage hp:pure-blood-wizard .
+}
+
+leolaniWorld:vernon_gender_male {
+    hp:vernon hp:gender hp:male .
+}
+
+leolaniWorld:dudley_looks_blue-eyes {
+    hp:dudley hp:looks hp:blue-eyes .
+}
+
+leolaniWorld:harry_affiliation_hogwarts {
+    hp:harry hp:affiliation hp:hogwarts .
+}
+
+leolaniWorld:hagrid_title_key-guardian-and-hunting-ground-guard {
+    hp:hagrid hp:title hp:key-guardian-and-hunting-ground-guard .
+}
+
+leolaniWorld:vernon_affiliation_grandine-company {
+    hp:vernon hp:affiliation hp:grandine-company .
+}
+
+leolaniWorld:harry_belongings_stealth-jacket {
+    hp:harry hp:belongings hp:stealth-jacket .
+}
+
+leolaniWorld:petunia_lineage_maculogy {
+    hp:petunia hp:lineage hp:maculogy .
+}
+
+leolaniWorld:wood_affiliation_hogwarts {
+    hp:wood hp:affiliation hp:hogwarts .
+}
+
+leolaniWorld:dudley_lineage_maculogy {
+    hp:dudley hp:lineage hp:maculogy .
 }
 
 leolaniTalk:Interactions {
@@ -7423,40 +6701,772 @@ leolaniTalk:Interactions {
         rdfs:label "jk-rowling" .
 }
 
-leolaniWorld:hagrid_age_adult {
-    hp:hagrid hp:age hp:adult .
+leolaniWorld:hagrid_hobbies_like-pets {
+    hp:hagrid hp:hobbies hp:like-pets .
 }
 
-leolaniWorld:petunia_lineage_maculogy {
-    hp:petunia hp:lineage hp:maculogy .
-}
+leolaniWorld:Claims {
+    leolaniFriends:jk-rowling owl:sameAs leolaniWorld:jk-rowling .
 
-leolaniWorld:dudley_lineage_maculogy {
-    hp:dudley hp:lineage hp:maculogy .
-}
+    leolaniWorld:dudley_age_age-11 a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "dudley_age_age-11" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-30,
+            leolaniTalk:chat1_utterance3_char27-54 .
 
-leolaniWorld:harry_lineage_mixed-wizard {
-    hp:harry hp:lineage hp:mixed-wizard .
-}
+    leolaniWorld:dudley_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "dudley_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-29,
+            leolaniTalk:chat1_utterance3_char27-53 .
 
-leolaniWorld:neville_age_age-11 {
-    hp:neville hp:age hp:age-11 .
-}
+    leolaniWorld:dudley_lineage_maculogy a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "dudley_lineage_maculogy" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-35,
+            leolaniTalk:chat1_utterance3_char27-59 .
 
-leolaniWorld:harry_belongings_flying-broom {
-    hp:harry hp:belongings hp:flying-broom .
-}
+    leolaniWorld:dudley_looks_blue-eyes a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "dudley_looks_blue-eyes" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-31,
+            leolaniTalk:chat1_utterance2_char21-32,
+            leolaniTalk:chat1_utterance3_char27-55,
+            leolaniTalk:chat1_utterance3_char27-56 .
 
-leolaniWorld:vernon_affiliation_grandine-company {
-    hp:vernon hp:affiliation hp:grandine-company .
-}
+    leolaniWorld:dudley_looks_tall-and-burly a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "dudley_looks_tall-and-burly" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-36,
+            leolaniTalk:chat1_utterance3_char27-46 .
 
-leolaniWorld:dudley_gender_male {
-    hp:dudley hp:gender hp:male .
-}
+    leolaniWorld:filch_affiliation_adult a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "filch_affiliation_adult" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-88 .
 
-leolaniWorld:flitwick_title_mantra-professor {
-    hp:flitwick hp:title hp:mantra-professor .
+    leolaniWorld:filch_affiliation_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "filch_affiliation_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-175,
+            leolaniTalk:chat1_utterance5_char40-52,
+            leolaniTalk:chat1_utterance5_char41-53,
+            leolaniTalk:chat1_utterance5_char51-63,
+            leolaniTalk:chat1_utterance5_char52-64,
+            leolaniTalk:chat1_utterance5_char53-65 .
+
+    leolaniWorld:filch_gender_no-rules a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "filch_gender_no-rules" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-86 .
+
+    leolaniWorld:filch_looks_a-serious-look a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "filch_looks_a-serious-look" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-156,
+            leolaniTalk:chat1_utterance9_char74-76 .
+
+    leolaniWorld:filch_title_administrator a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "filch_title_administrator" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-89 .
+
+    leolaniWorld:flitwick_affiliation_mean a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "flitwick_affiliation_mean" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-88 .
+
+    leolaniWorld:flitwick_age_hogvy a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "flitwick_age_hogvy" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-87 .
+
+    leolaniWorld:flitwick_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "flitwick_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-168,
+            leolaniTalk:chat1_utterance5_char40-48,
+            leolaniTalk:chat1_utterance5_char41-49,
+            leolaniTalk:chat1_utterance5_char51-59,
+            leolaniTalk:chat1_utterance5_char52-60,
+            leolaniTalk:chat1_utterance5_char53-61,
+            leolaniTalk:chat1_utterance8_char70-78 .
+
+    leolaniWorld:flitwick_gender_slender a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "flitwick_gender_slender" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-86 .
+
+    leolaniWorld:flitwick_title_mantra-professor a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "flitwick_title_mantra-professor" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-89 .
+
+    leolaniWorld:hagrid_age_adult a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hagrid_age_adult" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-155,
+            leolaniTalk:chat1_utterance16_char157-169,
+            leolaniTalk:chat1_utterance5_char40-49,
+            leolaniTalk:chat1_utterance5_char41-50,
+            leolaniTalk:chat1_utterance5_char51-60,
+            leolaniTalk:chat1_utterance5_char52-61,
+            leolaniTalk:chat1_utterance5_char53-62,
+            leolaniTalk:chat1_utterance9_char74-75 .
+
+    leolaniWorld:hagrid_hobbies_like-pets a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hagrid_hobbies_like-pets" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-172 .
+
+    leolaniWorld:hagrid_lineage_mixed-wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hagrid_lineage_mixed-wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-176 .
+
+    leolaniWorld:hagrid_looks_full-of-beards a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hagrid_looks_full-of-beards" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-171,
+            leolaniTalk:chat1_utterance5_char40-51,
+            leolaniTalk:chat1_utterance5_char41-52,
+            leolaniTalk:chat1_utterance5_char51-62,
+            leolaniTalk:chat1_utterance5_char52-63,
+            leolaniTalk:chat1_utterance5_char53-64 .
+
+    leolaniWorld:hagrid_looks_very-fat a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hagrid_looks_very-fat" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-35,
+            leolaniTalk:chat1_utterance3_char27-45 .
+
+    leolaniWorld:hagrid_title_key-guardian-and-hunting-ground-guard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hagrid_title_key-guardian-and-hunting-ground-guard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-177,
+            leolaniTalk:chat1_utterance5_char40-54,
+            leolaniTalk:chat1_utterance5_char41-55,
+            leolaniTalk:chat1_utterance5_char51-65,
+            leolaniTalk:chat1_utterance5_char52-66,
+            leolaniTalk:chat1_utterance5_char53-67 .
+
+    leolaniWorld:harry_affiliation_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_affiliation_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-97,
+            leolaniTalk:chat1_utterance12_char111-119,
+            leolaniTalk:chat1_utterance12_char119-127,
+            leolaniTalk:chat1_utterance12_char120-128,
+            leolaniTalk:chat1_utterance13_char127-135,
+            leolaniTalk:chat1_utterance13_char127-142,
+            leolaniTalk:chat1_utterance15_char143-151,
+            leolaniTalk:chat1_utterance15_char154-162,
+            leolaniTalk:chat1_utterance16_char156-164,
+            leolaniTalk:chat1_utterance16_char157-165,
+            leolaniTalk:chat1_utterance8_char70-75,
+            leolaniTalk:chat1_utterance9_char79-85 .
+
+    leolaniWorld:harry_age_age-11 a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_age_age-11" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-91,
+            leolaniTalk:chat1_utterance12_char111-112,
+            leolaniTalk:chat1_utterance12_char119-120,
+            leolaniTalk:chat1_utterance12_char120-121,
+            leolaniTalk:chat1_utterance13_char127-128,
+            leolaniTalk:chat1_utterance13_char127-139,
+            leolaniTalk:chat1_utterance15_char143-144,
+            leolaniTalk:chat1_utterance15_char154-155,
+            leolaniTalk:chat1_utterance16_char156-157,
+            leolaniTalk:chat1_utterance16_char157-158,
+            leolaniTalk:chat1_utterance2_char17-18,
+            leolaniTalk:chat1_utterance2_char21-22,
+            leolaniTalk:chat1_utterance3_char26-27,
+            leolaniTalk:chat1_utterance3_char27-28,
+            leolaniTalk:chat1_utterance5_char40-41,
+            leolaniTalk:chat1_utterance5_char41-42,
+            leolaniTalk:chat1_utterance5_char51-52,
+            leolaniTalk:chat1_utterance5_char52-53,
+            leolaniTalk:chat1_utterance5_char53-54,
+            leolaniTalk:chat1_utterance8_char70-71,
+            leolaniTalk:chat1_utterance9_char79-80 .
+
+    leolaniWorld:harry_belongings_flying-broom a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_belongings_flying-broom" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-96,
+            leolaniTalk:chat1_utterance12_char111-117,
+            leolaniTalk:chat1_utterance12_char119-125,
+            leolaniTalk:chat1_utterance12_char120-126,
+            leolaniTalk:chat1_utterance13_char127-133,
+            leolaniTalk:chat1_utterance15_char143-149,
+            leolaniTalk:chat1_utterance15_char154-160,
+            leolaniTalk:chat1_utterance16_char156-162,
+            leolaniTalk:chat1_utterance16_char157-163 .
+
+    leolaniWorld:harry_belongings_owl a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_belongings_owl" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-95,
+            leolaniTalk:chat1_utterance12_char111-116,
+            leolaniTalk:chat1_utterance12_char119-124,
+            leolaniTalk:chat1_utterance12_char120-125,
+            leolaniTalk:chat1_utterance13_char127-132,
+            leolaniTalk:chat1_utterance15_char143-148,
+            leolaniTalk:chat1_utterance15_char154-159,
+            leolaniTalk:chat1_utterance16_char156-161,
+            leolaniTalk:chat1_utterance16_char157-162,
+            leolaniTalk:chat1_utterance8_char70-74,
+            leolaniTalk:chat1_utterance9_char79-84 .
+
+    leolaniWorld:harry_belongings_stealth-jacket a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_belongings_stealth-jacket" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-118,
+            leolaniTalk:chat1_utterance12_char119-126,
+            leolaniTalk:chat1_utterance12_char120-127,
+            leolaniTalk:chat1_utterance13_char127-134,
+            leolaniTalk:chat1_utterance15_char143-150,
+            leolaniTalk:chat1_utterance15_char154-161,
+            leolaniTalk:chat1_utterance16_char156-163,
+            leolaniTalk:chat1_utterance16_char157-164 .
+
+    leolaniWorld:harry_belongings_wand a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_belongings_wand" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-115,
+            leolaniTalk:chat1_utterance12_char119-123,
+            leolaniTalk:chat1_utterance12_char120-124,
+            leolaniTalk:chat1_utterance13_char127-131,
+            leolaniTalk:chat1_utterance15_char143-147,
+            leolaniTalk:chat1_utterance15_char154-158,
+            leolaniTalk:chat1_utterance16_char156-160,
+            leolaniTalk:chat1_utterance16_char157-161,
+            leolaniTalk:chat1_utterance8_char70-73,
+            leolaniTalk:chat1_utterance9_char79-83 .
+
+    leolaniWorld:harry_gender_quididic-chaser a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_gender_quididic-chaser" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-90,
+            leolaniTalk:chat1_utterance12_char111-111,
+            leolaniTalk:chat1_utterance12_char119-119,
+            leolaniTalk:chat1_utterance12_char120-120,
+            leolaniTalk:chat1_utterance13_char127-127,
+            leolaniTalk:chat1_utterance13_char127-138,
+            leolaniTalk:chat1_utterance15_char143-143,
+            leolaniTalk:chat1_utterance15_char154-154,
+            leolaniTalk:chat1_utterance16_char156-156,
+            leolaniTalk:chat1_utterance16_char157-157,
+            leolaniTalk:chat1_utterance2_char17-17,
+            leolaniTalk:chat1_utterance2_char21-21,
+            leolaniTalk:chat1_utterance3_char26-26,
+            leolaniTalk:chat1_utterance3_char27-27,
+            leolaniTalk:chat1_utterance5_char40-40,
+            leolaniTalk:chat1_utterance5_char41-41,
+            leolaniTalk:chat1_utterance5_char51-51,
+            leolaniTalk:chat1_utterance5_char52-52,
+            leolaniTalk:chat1_utterance5_char53-53,
+            leolaniTalk:chat1_utterance8_char70-70,
+            leolaniTalk:chat1_utterance9_char79-79 .
+
+    leolaniWorld:harry_lineage_mixed-wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_lineage_mixed-wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-98,
+            leolaniTalk:chat1_utterance12_char111-120,
+            leolaniTalk:chat1_utterance12_char119-128,
+            leolaniTalk:chat1_utterance12_char120-129,
+            leolaniTalk:chat1_utterance13_char127-136,
+            leolaniTalk:chat1_utterance15_char143-152,
+            leolaniTalk:chat1_utterance15_char154-163,
+            leolaniTalk:chat1_utterance16_char156-165,
+            leolaniTalk:chat1_utterance16_char157-166,
+            leolaniTalk:chat1_utterance8_char70-76,
+            leolaniTalk:chat1_utterance9_char79-86 .
+
+    leolaniWorld:harry_lineage_pure-blood-wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_lineage_pure-blood-wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-143 .
+
+    leolaniWorld:harry_looks_eagle-hook-nose a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_looks_eagle-hook-nose" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-21,
+            leolaniTalk:chat1_utterance2_char21-25,
+            leolaniTalk:chat1_utterance3_char26-30,
+            leolaniTalk:chat1_utterance3_char27-31,
+            leolaniTalk:chat1_utterance5_char40-44,
+            leolaniTalk:chat1_utterance5_char41-45,
+            leolaniTalk:chat1_utterance5_char51-55,
+            leolaniTalk:chat1_utterance5_char52-56,
+            leolaniTalk:chat1_utterance5_char53-57 .
+
+    leolaniWorld:harry_looks_knife-injury-with-lightning-shape-at-the-forehead a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_looks_knife-injury-with-lightning-shape-at-the-forehead" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-23,
+            leolaniTalk:chat1_utterance2_char21-27,
+            leolaniTalk:chat1_utterance3_char26-32,
+            leolaniTalk:chat1_utterance3_char27-33,
+            leolaniTalk:chat1_utterance5_char40-46,
+            leolaniTalk:chat1_utterance5_char41-47,
+            leolaniTalk:chat1_utterance5_char51-57,
+            leolaniTalk:chat1_utterance5_char52-58,
+            leolaniTalk:chat1_utterance5_char53-59 .
+
+    leolaniWorld:harry_looks_red-hair a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_looks_red-hair" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-140 .
+
+    leolaniWorld:harry_looks_sword-injury-with-lightning-shape-at-the-forehead a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_looks_sword-injury-with-lightning-shape-at-the-forehead" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-92,
+            leolaniTalk:chat1_utterance12_char111-113,
+            leolaniTalk:chat1_utterance12_char119-121,
+            leolaniTalk:chat1_utterance12_char120-122,
+            leolaniTalk:chat1_utterance13_char127-129,
+            leolaniTalk:chat1_utterance15_char143-145,
+            leolaniTalk:chat1_utterance15_char154-156,
+            leolaniTalk:chat1_utterance16_char156-158,
+            leolaniTalk:chat1_utterance16_char157-159,
+            leolaniTalk:chat1_utterance8_char70-72,
+            leolaniTalk:chat1_utterance9_char79-81 .
+
+    leolaniWorld:harry_looks_very-thin a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_looks_very-thin" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-19,
+            leolaniTalk:chat1_utterance2_char21-23,
+            leolaniTalk:chat1_utterance3_char26-28,
+            leolaniTalk:chat1_utterance3_char27-29,
+            leolaniTalk:chat1_utterance5_char40-42,
+            leolaniTalk:chat1_utterance5_char41-43,
+            leolaniTalk:chat1_utterance5_char51-53,
+            leolaniTalk:chat1_utterance5_char52-54,
+            leolaniTalk:chat1_utterance5_char53-55 .
+
+    leolaniWorld:harry_looks_wearing-glasses a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_looks_wearing-glasses" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-22,
+            leolaniTalk:chat1_utterance2_char21-26,
+            leolaniTalk:chat1_utterance3_char26-31,
+            leolaniTalk:chat1_utterance3_char27-32,
+            leolaniTalk:chat1_utterance5_char40-45,
+            leolaniTalk:chat1_utterance5_char41-46,
+            leolaniTalk:chat1_utterance5_char51-56,
+            leolaniTalk:chat1_utterance5_char52-57,
+            leolaniTalk:chat1_utterance5_char53-58 .
+
+    leolaniWorld:harry_talents_pure-blood-wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_talents_pure-blood-wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-93,
+            leolaniTalk:chat1_utterance12_char111-114,
+            leolaniTalk:chat1_utterance12_char119-122,
+            leolaniTalk:chat1_utterance12_char120-123,
+            leolaniTalk:chat1_utterance13_char127-130,
+            leolaniTalk:chat1_utterance15_char143-146,
+            leolaniTalk:chat1_utterance15_char154-157,
+            leolaniTalk:chat1_utterance16_char156-159,
+            leolaniTalk:chat1_utterance16_char157-160,
+            leolaniTalk:chat1_utterance9_char79-82 .
+
+    leolaniWorld:harry_title_the-boy-who-lived a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "harry_title_the-boy-who-lived" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-99,
+            leolaniTalk:chat1_utterance12_char111-121,
+            leolaniTalk:chat1_utterance12_char119-129,
+            leolaniTalk:chat1_utterance12_char120-130,
+            leolaniTalk:chat1_utterance13_char127-137,
+            leolaniTalk:chat1_utterance15_char143-153,
+            leolaniTalk:chat1_utterance15_char154-164,
+            leolaniTalk:chat1_utterance16_char156-166,
+            leolaniTalk:chat1_utterance16_char157-167,
+            leolaniTalk:chat1_utterance2_char17-24,
+            leolaniTalk:chat1_utterance2_char21-28,
+            leolaniTalk:chat1_utterance3_char26-33,
+            leolaniTalk:chat1_utterance3_char27-34,
+            leolaniTalk:chat1_utterance5_char40-47,
+            leolaniTalk:chat1_utterance5_char41-48,
+            leolaniTalk:chat1_utterance5_char51-58,
+            leolaniTalk:chat1_utterance5_char52-59,
+            leolaniTalk:chat1_utterance5_char53-60,
+            leolaniTalk:chat1_utterance8_char70-77,
+            leolaniTalk:chat1_utterance9_char79-87 .
+
+    leolaniWorld:hermione_age_adult a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_age_adult" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-87 .
+
+    leolaniWorld:hermione_age_age-11 a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_age_age-11" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-157,
+            leolaniTalk:chat1_utterance15_char154-172,
+            leolaniTalk:chat1_utterance16_char156-174,
+            leolaniTalk:chat1_utterance9_char79-95 .
+
+    leolaniWorld:hermione_belongings_hunters-teeth a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_belongings_hunters-teeth" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-173 .
+
+    leolaniWorld:hermione_belongings_magic-wand a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_belongings_magic-wand" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-94 .
+
+    leolaniWorld:hermione_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-80 .
+
+    leolaniWorld:hermione_gender_slender a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_gender_slender" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-156,
+            leolaniTalk:chat1_utterance15_char154-171,
+            leolaniTalk:chat1_utterance16_char156-173,
+            leolaniTalk:chat1_utterance9_char79-94 .
+
+    leolaniWorld:hermione_lineage_mixed-wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "hermione_lineage_mixed-wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-159,
+            leolaniTalk:chat1_utterance15_char154-174,
+            leolaniTalk:chat1_utterance16_char156-176,
+            leolaniTalk:chat1_utterance9_char79-97 .
+
+    leolaniWorld:leolani_know_jk-rowling a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "leolani_know_jk-rowling" .
+
+    leolaniWorld:mcgonagall_affiliation_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mcgonagall_affiliation_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-158,
+            leolaniTalk:chat1_utterance9_char74-78 .
+
+    leolaniWorld:mcgonagall_belongings_car a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mcgonagall_belongings_car" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-39,
+            leolaniTalk:chat1_utterance3_char27-49 .
+
+    leolaniWorld:mcgonagall_belongings_three-headed-dog-luwei a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mcgonagall_belongings_three-headed-dog-luwei" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-174 .
+
+    leolaniWorld:mcgonagall_gender_female a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mcgonagall_gender_female" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-154,
+            leolaniTalk:chat1_utterance9_char74-74 .
+
+    leolaniWorld:mcgonagall_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mcgonagall_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-122,
+            leolaniTalk:chat1_utterance12_char119-130,
+            leolaniTalk:chat1_utterance12_char120-131,
+            leolaniTalk:chat1_utterance13_char127-144,
+            leolaniTalk:chat1_utterance13_char127-150,
+            leolaniTalk:chat1_utterance15_char154-165,
+            leolaniTalk:chat1_utterance16_char156-167,
+            leolaniTalk:chat1_utterance16_char157-178,
+            leolaniTalk:chat1_utterance16_char161-161,
+            leolaniTalk:chat1_utterance9_char79-88 .
+
+    leolaniWorld:mcgonagall_looks_square-lenses a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "mcgonagall_looks_square-lenses" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-157,
+            leolaniTalk:chat1_utterance9_char74-77 .
+
+    leolaniWorld:neville_affiliation_hogvy a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "neville_affiliation_hogvy" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-84 .
+
+    leolaniWorld:neville_age_age-11 a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "neville_age_age-11" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-81 .
+
+    leolaniWorld:neville_belongings_toad a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "neville_belongings_toad" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-83 .
+
+    leolaniWorld:neville_lineage_pure-blood-wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "neville_lineage_pure-blood-wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-85 .
+
+    leolaniWorld:neville_looks_round-face a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "neville_looks_round-face" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance9_char80-82 .
+
+    leolaniWorld:petunia_gender_female a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "petunia_gender_female" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-25,
+            leolaniTalk:chat1_utterance3_char26-34,
+            leolaniTalk:chat1_utterance3_char27-35 .
+
+    leolaniWorld:petunia_lineage_maculogy a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "petunia_lineage_maculogy" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-32,
+            leolaniTalk:chat1_utterance3_char26-41,
+            leolaniTalk:chat1_utterance3_char27-42 .
+
+    leolaniWorld:petunia_looks_long-neck a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "petunia_looks_long-neck" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-27,
+            leolaniTalk:chat1_utterance2_char17-29,
+            leolaniTalk:chat1_utterance3_char26-36,
+            leolaniTalk:chat1_utterance3_char26-38,
+            leolaniTalk:chat1_utterance3_char27-37,
+            leolaniTalk:chat1_utterance3_char27-39 .
+
+    leolaniWorld:petunia_looks_surprisingly-tall a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "petunia_looks_surprisingly-tall" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance16_char157-170,
+            leolaniTalk:chat1_utterance5_char40-50,
+            leolaniTalk:chat1_utterance5_char41-51,
+            leolaniTalk:chat1_utterance5_char51-61,
+            leolaniTalk:chat1_utterance5_char52-62,
+            leolaniTalk:chat1_utterance5_char53-63 .
+
+    leolaniWorld:petunia_personality_selfish a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "petunia_personality_selfish" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char21-33,
+            leolaniTalk:chat1_utterance3_char27-57 .
+
+    leolaniWorld:ron_affiliation_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_affiliation_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-126,
+            leolaniTalk:chat1_utterance12_char119-134,
+            leolaniTalk:chat1_utterance12_char120-135,
+            leolaniTalk:chat1_utterance13_char127-148,
+            leolaniTalk:chat1_utterance13_char127-154,
+            leolaniTalk:chat1_utterance15_char154-169,
+            leolaniTalk:chat1_utterance16_char156-171,
+            leolaniTalk:chat1_utterance16_char157-182,
+            leolaniTalk:chat1_utterance16_char161-165,
+            leolaniTalk:chat1_utterance9_char79-92 .
+
+    leolaniWorld:ron_age_adult a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_age_adult" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-26,
+            leolaniTalk:chat1_utterance3_char26-35,
+            leolaniTalk:chat1_utterance3_char27-36 .
+
+    leolaniWorld:ron_age_age-11 a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_age_age-11" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-123,
+            leolaniTalk:chat1_utterance12_char119-131,
+            leolaniTalk:chat1_utterance12_char120-132,
+            leolaniTalk:chat1_utterance13_char127-145,
+            leolaniTalk:chat1_utterance13_char127-151,
+            leolaniTalk:chat1_utterance15_char154-166,
+            leolaniTalk:chat1_utterance16_char156-168,
+            leolaniTalk:chat1_utterance16_char157-179,
+            leolaniTalk:chat1_utterance16_char161-162,
+            leolaniTalk:chat1_utterance9_char79-89 .
+
+    leolaniWorld:ron_belongings_car a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_belongings_car" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-125,
+            leolaniTalk:chat1_utterance12_char119-133,
+            leolaniTalk:chat1_utterance12_char120-134,
+            leolaniTalk:chat1_utterance13_char127-147,
+            leolaniTalk:chat1_utterance13_char127-153,
+            leolaniTalk:chat1_utterance15_char154-168,
+            leolaniTalk:chat1_utterance16_char156-170,
+            leolaniTalk:chat1_utterance16_char157-181,
+            leolaniTalk:chat1_utterance16_char161-164,
+            leolaniTalk:chat1_utterance9_char79-91 .
+
+    leolaniWorld:ron_lineage_wearing-glasses a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_lineage_wearing-glasses" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-127,
+            leolaniTalk:chat1_utterance12_char119-135,
+            leolaniTalk:chat1_utterance12_char120-136,
+            leolaniTalk:chat1_utterance13_char127-149,
+            leolaniTalk:chat1_utterance13_char127-155,
+            leolaniTalk:chat1_utterance15_char154-170,
+            leolaniTalk:chat1_utterance16_char156-172,
+            leolaniTalk:chat1_utterance16_char157-183,
+            leolaniTalk:chat1_utterance16_char161-166,
+            leolaniTalk:chat1_utterance9_char79-93 .
+
+    leolaniWorld:ron_looks_blond-hair a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_looks_blond-hair" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-28,
+            leolaniTalk:chat1_utterance3_char26-37,
+            leolaniTalk:chat1_utterance3_char27-38 .
+
+    leolaniWorld:ron_looks_message a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "ron_looks_message" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance12_char111-124,
+            leolaniTalk:chat1_utterance12_char119-132,
+            leolaniTalk:chat1_utterance12_char120-133,
+            leolaniTalk:chat1_utterance13_char127-146,
+            leolaniTalk:chat1_utterance13_char127-152,
+            leolaniTalk:chat1_utterance15_char154-167,
+            leolaniTalk:chat1_utterance16_char156-169,
+            leolaniTalk:chat1_utterance16_char157-180,
+            leolaniTalk:chat1_utterance16_char161-163,
+            leolaniTalk:chat1_utterance9_char79-90 .
+
+    leolaniWorld:snape_affiliation_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "snape_affiliation_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-81 .
+
+    leolaniWorld:snape_age_adult a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "snape_age_adult" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-79 .
+
+    leolaniWorld:snape_lineage_pure-blood-wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "snape_lineage_pure-blood-wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-159,
+            leolaniTalk:chat1_utterance9_char74-79 .
+
+    leolaniWorld:snape_lineage_red-hair a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "snape_lineage_red-hair" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-82 .
+
+    leolaniWorld:snape_looks_mixed-wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "snape_looks_mixed-wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-80 .
+
+    leolaniWorld:snape_title_administrator a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "snape_title_administrator" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance8_char70-83 .
+
+    leolaniWorld:vernon_affiliation_grandine-company a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_affiliation_grandine-company" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-40,
+            leolaniTalk:chat1_utterance3_char27-50 .
+
+    leolaniWorld:vernon_age_flying-broom a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_age_flying-broom" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-34,
+            leolaniTalk:chat1_utterance3_char27-44 .
+
+    leolaniWorld:vernon_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-33,
+            leolaniTalk:chat1_utterance3_char27-43 .
+
+    leolaniWorld:vernon_lineage_maculogy a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_lineage_maculogy" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-41,
+            leolaniTalk:chat1_utterance3_char27-51 .
+
+    leolaniWorld:vernon_lineage_wizard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_lineage_wizard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance5_char40-53,
+            leolaniTalk:chat1_utterance5_char41-54,
+            leolaniTalk:chat1_utterance5_char51-64,
+            leolaniTalk:chat1_utterance5_char52-65,
+            leolaniTalk:chat1_utterance5_char53-66 .
+
+    leolaniWorld:vernon_looks_black-hair a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_looks_black-hair" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-20,
+            leolaniTalk:chat1_utterance2_char21-24,
+            leolaniTalk:chat1_utterance3_char26-29,
+            leolaniTalk:chat1_utterance3_char27-30,
+            leolaniTalk:chat1_utterance5_char40-43,
+            leolaniTalk:chat1_utterance5_char41-44,
+            leolaniTalk:chat1_utterance5_char51-54,
+            leolaniTalk:chat1_utterance5_char52-55,
+            leolaniTalk:chat1_utterance5_char53-56 .
+
+    leolaniWorld:vernon_personality_gossip a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_personality_gossip" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-31,
+            leolaniTalk:chat1_utterance3_char26-40,
+            leolaniTalk:chat1_utterance3_char27-41 .
+
+    leolaniWorld:vernon_personality_wearing-glasses a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_personality_wearing-glasses" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-38,
+            leolaniTalk:chat1_utterance3_char27-48 .
+
+    leolaniWorld:vernon_title_company-supervisor a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_title_company-supervisor" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-42,
+            leolaniTalk:chat1_utterance3_char27-52 .
+
+    leolaniWorld:vernon_title_vice-president-of-hogvy a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "vernon_title_vice-president-of-hogvy" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance15_char143-160,
+            leolaniTalk:chat1_utterance9_char74-80 .
+
+    leolaniWorld:wood_affiliation_hogvy a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "wood_affiliation_hogvy" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance13_char127-158,
+            leolaniTalk:chat1_utterance15_char154-173,
+            leolaniTalk:chat1_utterance16_char156-175,
+            leolaniTalk:chat1_utterance9_char79-96 .
+
+    leolaniWorld:wood_affiliation_hogwarts a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "wood_affiliation_hogwarts" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-101,
+            leolaniTalk:chat1_utterance9_char74-82 .
+
+    leolaniWorld:wood_gender_male a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "wood_gender_male" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance10_char86-100,
+            leolaniTalk:chat1_utterance9_char74-81 .
+
+    leolaniWorld:wood_looks_accumulating-beard a gaf:Assertion,
+            sem:Event ;
+        rdfs:label "wood_looks_accumulating-beard" ;
+        gaf:denotedBy leolaniTalk:chat1_utterance2_char17-37,
+            leolaniTalk:chat1_utterance3_char27-47 .
 }
 
 leolaniWorld:Instances {
@@ -7473,6 +7483,8 @@ leolaniWorld:Instances {
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-156,
             leolaniTalk:chat1_utterance9_char74-76 .
 
+    hp:aberforth a hp:wizard .
+
     hp:accumulating-beard a gaf:Instance,
             hp:attribute ;
         rdfs:label "accumulating-beard" ;
@@ -7480,12 +7492,14 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-47 .
 
     hp:administrator a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "administrator" ;
         gaf:denotedIn leolaniTalk:chat1_utterance8_char70-83,
             leolaniTalk:chat1_utterance9_char80-89 .
 
     hp:adult a gaf:Instance,
+            hp:age,
             hp:attribute ;
         rdfs:label "adult" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-155,
@@ -7504,6 +7518,7 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char80-88 .
 
     hp:age-11 a gaf:Instance,
+            hp:age,
             hp:attribute ;
         rdfs:label "age-11" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-91,
@@ -7545,6 +7560,22 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-95,
             leolaniTalk:chat1_utterance9_char80-81 .
 
+    hp:amos a hp:wizard .
+
+    hp:angelina a hp:wizard .
+
+    hp:aragog a hp:spider .
+
+    hp:armando-dippet a hp:wizard .
+
+    hp:bagman a hp:wizard .
+
+    hp:bellatrix a hp:wizard .
+
+    hp:bill a hp:wizard .
+
+    hp:binns a hp:ghost .
+
     hp:black-hair a gaf:Instance,
             hp:attribute ;
         rdfs:label "black-hair" ;
@@ -7566,12 +7597,15 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-38 .
 
     hp:blue-eyes a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "blue-eyes" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char21-31,
             leolaniTalk:chat1_utterance2_char21-32,
             leolaniTalk:chat1_utterance3_char27-55,
             leolaniTalk:chat1_utterance3_char27-56 .
+
+    hp:cadogan a hp:wizard .
 
     hp:car a gaf:Instance,
             hp:attribute ;
@@ -7589,14 +7623,42 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-49,
             leolaniTalk:chat1_utterance9_char79-91 .
 
+    hp:cattermole a hp:wizard .
+
+    hp:cedric a hp:wizard .
+
+    hp:cedrics-soul a hp:wizard .
+
+    hp:charlie a hp:wizard .
+
+    hp:colin a hp:wizard .
+
+    hp:colin-creevey a hp:wizard .
+
     hp:company-supervisor a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "company-supervisor" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-42,
             leolaniTalk:chat1_utterance3_char27-52 .
 
+    hp:crabbe a hp:wizard .
+
+    hp:crouch a hp:wizard .
+
+    hp:dean a hp:wizard .
+
+    hp:dean-tomas a hp:wizard .
+
+    hp:dennis a hp:wizard .
+
+    hp:dobby a hp:domestic-elf .
+
+    hp:doge a hp:wizard .
+
     hp:dudley a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:muggle ;
         rdfs:label "dudley" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-36,
             leolaniTalk:chat1_utterance2_char21-29,
@@ -7612,6 +7674,10 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-56,
             leolaniTalk:chat1_utterance3_char27-58,
             leolaniTalk:chat1_utterance3_char27-59 .
+
+    hp:dumbledore a hp:wizard .
+
+    hp:dumbledore-dumbledore a hp:wizard .
 
     hp:eagle-hook-nose a gaf:Instance,
             hp:attribute ;
@@ -7630,8 +7696,13 @@ leolaniWorld:Instances {
             hp:attribute ;
         rdfs:label "emerald-green-eyes" .
 
+    hp:ern a hp:wizard .
+
+    hp:ernie a hp:wizard .
+
     hp:female a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:gender ;
         rdfs:label "female" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-154,
             leolaniTalk:chat1_utterance2_char17-25,
@@ -7640,7 +7711,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char74-74 .
 
     hp:filch a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:squib ;
         rdfs:label "filch" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-156,
             leolaniTalk:chat1_utterance16_char157-175,
@@ -7654,8 +7726,15 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char80-88,
             leolaniTalk:chat1_utterance9_char80-89 .
 
+    hp:firenze a hp:centaur .
+
+    hp:fleur a hp:wizard .
+
+    hp:flint a hp:wizard .
+
     hp:flitwick a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "flitwick" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-86,
             leolaniTalk:chat1_utterance10_char86-87,
@@ -7670,7 +7749,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance8_char70-78 .
 
     hp:flying-broom a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "flying-broom" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-96,
             leolaniTalk:chat1_utterance12_char111-117,
@@ -7684,8 +7764,17 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance2_char17-34,
             leolaniTalk:chat1_utterance3_char27-44 .
 
+    hp:fred a hp:wizard .
+
+    hp:fred-george a hp:wizard .
+
+    hp:fred-george-ginny a hp:wizard .
+
+    hp:fudge a hp:wizard .
+
     hp:full-of-beards a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "full-of-beards" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-171,
             leolaniTalk:chat1_utterance5_char40-51,
@@ -7694,6 +7783,10 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char52-63,
             leolaniTalk:chat1_utterance5_char53-64 .
 
+    hp:george a hp:wizard .
+
+    hp:ginny a hp:wizard .
+
     hp:gossip a gaf:Instance,
             hp:attribute ;
         rdfs:label "gossip" ;
@@ -7701,19 +7794,31 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char26-40,
             leolaniTalk:chat1_utterance3_char27-41 .
 
+    hp:goyle a hp:wizard .
+
     hp:grandine-company a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:institution ;
         rdfs:label "grandine-company" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-40,
             leolaniTalk:chat1_utterance3_char27-50 .
+
+    hp:gray a hp:ghost .
 
     hp:gray-mouse a gaf:Instance,
             hp:attribute ;
         rdfs:label "gray-mouse" ;
         gaf:denotedIn leolaniTalk:chat1_utterance13_char127-141 .
 
+    hp:greyback a hp:werewolf .
+
+    hp:griphook a hp:goblin .
+
+    hp:griphookgornuk a hp:goblin .
+
     hp:hagrid a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:giant ;
         rdfs:label "hagrid" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-155,
             leolaniTalk:chat1_utterance16_char157-169,
@@ -7741,7 +7846,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char74-75 .
 
     hp:harry a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "harry",
             "ron" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-90,
@@ -7928,8 +8034,15 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-86,
             leolaniTalk:chat1_utterance9_char79-87 .
 
+    hp:harry-father a hp:wizard .
+
+    hp:harry-george a hp:wizard .
+
+    hp:harry-mother a hp:wizard .
+
     hp:hermione a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "hermione" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-94,
             leolaniTalk:chat1_utterance13_char127-156,
@@ -7948,8 +8061,15 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char80-80,
             leolaniTalk:chat1_utterance9_char80-87 .
 
+    hp:hermione-fred a hp:wizard .
+
+    hp:hermione-harry a hp:wizard .
+
+    hp:hestia a hp:wizard .
+
     hp:hogvy a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:institution ;
         rdfs:label "hogvy" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-87,
             leolaniTalk:chat1_utterance13_char127-158,
@@ -7959,7 +8079,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char80-84 .
 
     hp:hogwarts a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:institution ;
         rdfs:label "hogwarts" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-101,
             leolaniTalk:chat1_utterance10_char86-97,
@@ -8000,8 +8121,17 @@ leolaniWorld:Instances {
         rdfs:label "hunters-teeth" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-173 .
 
+    hp:james a hp:wizard .
+
+    hp:jordan a hp:wizard .
+
+    hp:justin a hp:wizard .
+
+    hp:karkaroff a hp:wizard .
+
     hp:key-guardian-and-hunting-ground-guard a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "key-guardian-and-hunting-ground-guard" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-177,
             leolaniTalk:chat1_utterance5_char40-54,
@@ -8010,8 +8140,11 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char52-66,
             leolaniTalk:chat1_utterance5_char53-67 .
 
+    hp:kingsley a hp:wizard .
+
     hp:knife-injury-with-lightning-shape-at-the-forehead a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "knife-injury-with-lightning-shape-at-the-forehead" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-23,
             leolaniTalk:chat1_utterance2_char21-27,
@@ -8023,13 +8156,25 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char52-58,
             leolaniTalk:chat1_utterance5_char53-59 .
 
+    hp:kreacher a hp:domestic-elf .
+
+    hp:krum a hp:wizard .
+
+    hp:lavender a hp:wizard .
+
     hp:like-pets a gaf:Instance,
+            hp:activity,
             hp:attribute ;
         rdfs:label "like-pets" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-172 .
 
+    hp:lily a hp:wizard .
+
+    hp:lockhart a hp:wizard .
+
     hp:long-neck a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "long-neck" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-27,
             leolaniTalk:chat1_utterance2_char17-29,
@@ -8038,7 +8183,14 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-37,
             leolaniTalk:chat1_utterance3_char27-39 .
 
+    hp:lovegood a hp:wizard .
+
+    hp:luna a hp:wizard .
+
+    hp:lupin a hp:werewolf .
+
     hp:maculogy a gaf:Instance,
+            hp:ancestry,
             hp:attribute ;
         rdfs:label "maculogy" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-32,
@@ -8049,13 +8201,16 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-51,
             leolaniTalk:chat1_utterance3_char27-59 .
 
+    hp:mad-eye-moodys-voice a hp:wizard .
+
     hp:magic-wand a gaf:Instance,
             hp:attribute ;
         rdfs:label "magic-wand" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-94 .
 
     hp:male a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:gender ;
         rdfs:label "male" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-100,
             leolaniTalk:chat1_utterance12_char111-122,
@@ -8082,13 +8237,21 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-88,
             leolaniTalk:chat1_utterance9_char80-80 .
 
+    hp:malfoy a hp:wizard .
+
     hp:mantra-professor a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "mantra-professor" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-89 .
 
+    hp:marge a hp:muggle .
+
+    hp:maxime a hp:giant .
+
     hp:mcgonagall a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "mcgonagall" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-122,
             leolaniTalk:chat1_utterance12_char119-130,
@@ -8109,6 +8272,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char74-77,
             leolaniTalk:chat1_utterance9_char74-78,
             leolaniTalk:chat1_utterance9_char79-88 .
+
+    hp:mclaggen a hp:wizard .
 
     hp:mean a gaf:Instance,
             hp:attribute ;
@@ -8133,6 +8298,7 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-90 .
 
     hp:mixed-wizard a gaf:Instance,
+            hp:ancestry,
             hp:attribute ;
         rdfs:label "mixed-wizard" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-98,
@@ -8153,14 +8319,39 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-86,
             leolaniTalk:chat1_utterance9_char79-97 .
 
+    hp:moody a hp:wizard .
+
+    hp:moodys-voice a hp:wizard .
+
+    hp:morfin a hp:wizard .
+
+    hp:mr-malfoy a hp:wizard .
+
+    hp:mr-weasley a hp:wizard .
+
+    hp:mrs-rosmerta a hp:wizard .
+
+    hp:mrs-tonks a hp:wizard .
+
+    hp:mrs-weasley a hp:wizard .
+
+    hp:mundungus a hp:wizard .
+
+    hp:muriel a hp:wizard .
+
+    hp:narcissa a hp:wizard .
+
     hp:neville a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "neville" ;
         gaf:denotedIn leolaniTalk:chat1_utterance9_char80-81,
             leolaniTalk:chat1_utterance9_char80-82,
             leolaniTalk:chat1_utterance9_char80-83,
             leolaniTalk:chat1_utterance9_char80-84,
             leolaniTalk:chat1_utterance9_char80-85 .
+
+    hp:nick a hp:ghost .
 
     hp:no-rules a gaf:Instance,
             hp:attribute ;
@@ -8173,8 +8364,13 @@ leolaniWorld:Instances {
             hp:attribute ;
         rdfs:label "obesity" .
 
+    hp:ogden a hp:wizard .
+
+    hp:ollivander a hp:wizard .
+
     hp:owl a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "owl" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-95,
             leolaniTalk:chat1_utterance12_char111-116,
@@ -8188,8 +8384,13 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance8_char70-74,
             leolaniTalk:chat1_utterance9_char79-84 .
 
+    hp:parvati a hp:wizard .
+
+    hp:peter a hp:wizard .
+
     hp:petunia a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:muggle ;
         rdfs:label "petunia" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-170,
             leolaniTalk:chat1_utterance2_char17-25,
@@ -8215,11 +8416,16 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char52-62,
             leolaniTalk:chat1_utterance5_char53-63 .
 
+    hp:phineas a hp:wizard .
+
+    hp:pomfrey a hp:wizard .
+
     hp:potion-teacher a gaf:Instance,
             hp:attribute ;
         rdfs:label "potion-teacher" .
 
     hp:pure-blood-wizard a gaf:Instance,
+            hp:ancestry,
             hp:attribute ;
         rdfs:label "pure-blood-wizard" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-93,
@@ -8262,14 +8468,22 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance8_char70-70,
             leolaniTalk:chat1_utterance9_char79-79 .
 
+    hp:quirrel a hp:wizard .
+
     hp:red-hair a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "red-hair" ;
         gaf:denotedIn leolaniTalk:chat1_utterance13_char127-140,
             leolaniTalk:chat1_utterance8_char70-82 .
 
+    hp:rita a hp:wizard .
+
+    hp:roberts a hp:muggle .
+
     hp:ron a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "ron" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-123,
             leolaniTalk:chat1_utterance12_char111-124,
@@ -8328,16 +8542,35 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-92,
             leolaniTalk:chat1_utterance9_char79-93 .
 
+    hp:ron-hermion a hp:wizard .
+
+    hp:ron-hermione a hp:wizard .
+
+    hp:ron-neville a hp:wizard .
+
+    hp:ronan a hp:wizard .
+
     hp:round-face a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "round-face" ;
         gaf:denotedIn leolaniTalk:chat1_utterance9_char80-82 .
+
+    hp:scrimgeour a hp:wizard .
+
+    hp:seamus a hp:wizard .
 
     hp:selfish a gaf:Instance,
             hp:attribute ;
         rdfs:label "selfish" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char21-33,
             leolaniTalk:chat1_utterance3_char27-57 .
+
+    hp:shunpike a hp:muggle .
+
+    hp:sirius a hp:wizard .
+
+    hp:skeeter a hp:wizard .
 
     hp:slender a gaf:Instance,
             hp:attribute ;
@@ -8348,8 +8581,11 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance16_char156-173,
             leolaniTalk:chat1_utterance9_char79-94 .
 
+    hp:slughorn a hp:wizard .
+
     hp:snape a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "snape" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-159,
             leolaniTalk:chat1_utterance8_char70-79,
@@ -8359,14 +8595,18 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance8_char70-83,
             leolaniTalk:chat1_utterance9_char74-79 .
 
+    hp:sprout a hp:wizard .
+
     hp:square-lenses a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "square-lenses" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-157,
             leolaniTalk:chat1_utterance9_char74-77 .
 
     hp:stealth-jacket a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "stealth-jacket" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-118,
             leolaniTalk:chat1_utterance12_char119-126,
@@ -8388,7 +8628,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char53-63 .
 
     hp:sword-injury-with-lightning-shape-at-the-forehead a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "sword-injury-with-lightning-shape-at-the-forehead" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-92,
             leolaniTalk:chat1_utterance12_char111-113,
@@ -8409,7 +8650,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-46 .
 
     hp:the-boy-who-lived a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "the-boy-who-lived" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-99,
             leolaniTalk:chat1_utterance12_char111-121,
@@ -8438,12 +8680,24 @@ leolaniWorld:Instances {
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-174 .
 
     hp:toad a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "toad" ;
         gaf:denotedIn leolaniTalk:chat1_utterance9_char80-83 .
 
+    hp:tom a hp:wizard .
+
+    hp:tonks a hp:wizard .
+
+    hp:trelawney a hp:wizard .
+
+    hp:twycross a hp:wizard .
+
+    hp:umbridge a hp:wizard .
+
     hp:vernon a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:muggle ;
         rdfs:label "vernon-dursley" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-160,
             leolaniTalk:chat1_utterance2_char17-20,
@@ -8477,6 +8731,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char53-66,
             leolaniTalk:chat1_utterance9_char74-80 .
 
+    hp:vernon-petunia a hp:muggle .
+
     hp:very-fat a gaf:Instance,
             hp:attribute ;
         rdfs:label "very-fat" ;
@@ -8484,7 +8740,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-45 .
 
     hp:very-thin a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "very-thin" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-19,
             leolaniTalk:chat1_utterance2_char21-23,
@@ -8502,8 +8759,11 @@ leolaniWorld:Instances {
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-160,
             leolaniTalk:chat1_utterance9_char74-80 .
 
+    hp:voldemort a hp:wizard .
+
     hp:wand a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "wand" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-115,
             leolaniTalk:chat1_utterance12_char119-123,
@@ -8517,7 +8777,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-83 .
 
     hp:wearing-glasses a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "wearing-glasses" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-127,
             leolaniTalk:chat1_utterance12_char119-135,
@@ -8541,17 +8802,13 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char53-58,
             leolaniTalk:chat1_utterance9_char79-93 .
 
-    hp:wizard a gaf:Instance,
-            hp:attribute ;
-        rdfs:label "wizard" ;
-        gaf:denotedIn leolaniTalk:chat1_utterance5_char40-53,
-            leolaniTalk:chat1_utterance5_char41-54,
-            leolaniTalk:chat1_utterance5_char51-64,
-            leolaniTalk:chat1_utterance5_char52-65,
-            leolaniTalk:chat1_utterance5_char53-66 .
+    hp:weasley a hp:wizard .
+
+    hp:winky a hp:domestic-elf .
 
     hp:wood a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "wood" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-100,
             leolaniTalk:chat1_utterance10_char86-101,
@@ -8563,21 +8820,64 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char74-81,
             leolaniTalk:chat1_utterance9_char74-82,
             leolaniTalk:chat1_utterance9_char79-96 .
+
+    hp:zacharias a hp:wizard .
+
+    hp:wizard a gaf:Instance,
+            hp:attribute ;
+        rdfs:label "wizard" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance5_char40-53,
+            leolaniTalk:chat1_utterance5_char41-54,
+            leolaniTalk:chat1_utterance5_char51-64,
+            leolaniTalk:chat1_utterance5_char52-65,
+            leolaniTalk:chat1_utterance5_char53-66 .
 }
 
-leolaniWorld:neville_belongings_toad {
-    hp:neville hp:belongings hp:toad .
+leolaniWorld:harry_title_the-boy-who-lived {
+    hp:harry hp:title hp:the-boy-who-lived .
 }
 
-leolaniWorld:hermione_lineage_mixed-wizard {
-    hp:hermione hp:lineage hp:mixed-wizard .
+leolaniWorld:mcgonagall_looks_square-lenses {
+    hp:mcgonagall hp:looks hp:square-lenses .
 }
 
 leolaniWorld:mcgonagall_affiliation_hogwarts {
     hp:mcgonagall hp:affiliation hp:hogwarts .
 }
 
-leolaniWorld:harry_belongings_owl {
-    hp:harry hp:belongings hp:owl .
+leolaniWorld:petunia_looks_long-neck {
+    hp:petunia hp:looks hp:long-neck .
+}
+
+leolaniWorld:harry_looks_red-hair {
+    hp:harry hp:looks hp:red-hair .
+}
+
+leolaniWorld:mcgonagall_gender_female {
+    hp:mcgonagall hp:gender hp:female .
+}
+
+leolaniWorld:harry_looks_very-thin {
+    hp:harry hp:looks hp:very-thin .
+}
+
+leolaniWorld:dudley_age_age-11 {
+    hp:dudley hp:age hp:age-11 .
+}
+
+leolaniWorld:harry_looks_sword-injury-with-lightning-shape-at-the-forehead {
+    hp:harry hp:looks hp:sword-injury-with-lightning-shape-at-the-forehead .
+}
+
+leolaniWorld:snape_affiliation_hogwarts {
+    hp:snape hp:affiliation hp:hogwarts .
+}
+
+leolaniWorld:harry_belongings_flying-broom {
+    hp:harry hp:belongings hp:flying-broom .
+}
+
+leolaniWorld:hermione_lineage_mixed-wizard {
+    hp:hermione hp:lineage hp:mixed-wizard .
 }
 

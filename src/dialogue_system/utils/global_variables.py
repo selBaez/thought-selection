@@ -10,6 +10,9 @@ HARRYPOTTER_NS = Namespace("http://harrypotter.org/")
 HARRYPOTTER_PREFIX = "hp"
 
 ############################## PATHS FOR HP DATA PROCESSING ##############################
+CHARACTER_TYPE_PATH= "/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/character_types.csv"
+ATTRIBUTE_TYPE_PATH= "/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/attribute_types.csv"
+
 OG_DATA_PATHS = ["/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/test_set_en/",
                  "/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/train_set_en/"]
 USER_PATH = "/Users/sbaez/Documents/PhD/research/thought-selection/resources/users"
@@ -31,7 +34,8 @@ BRAIN_ADDRESS = "http://localhost:7200/repositories/sandbox"
 CONTEXT_ID = getrandbits(8)
 PLACE_ID = getrandbits(8)
 PLACE_NAME = "office"
-LOCATION = requests.get("https://ipinfo.io").json()
+# LOCATION = requests.get("https://ipinfo.io").json()
+LOCATION = {"country": "MX", "region": "Mexico City", "city": "Mexico City"}
 BASE_CAPSULE = {
     "chat": None,  # from dialogue_system / prev capsule
     "turn": None,  # from dialogue_system

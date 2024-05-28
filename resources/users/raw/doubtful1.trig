@@ -22,567 +22,92 @@
 @prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xml1: <https://www.w3.org/TR/xmlschema-2/#> .
 
-leolaniWorld:mcgonagall_looks_a-serious-look {
-    hp:mcgonagall hp:looks hp:a-serious-look .
-}
-
-leolaniWorld:snape_gender_male {
-    hp:snape hp:gender hp:male .
-}
-
-leolaniWorld:vernon_personality_mean {
-    hp:vernon hp:personality hp:mean .
-}
-
-leolaniWorld:neville_gender_male {
-    hp:neville hp:gender hp:male .
-}
-
-leolaniWorld:mcgonagall_lineage_pure-blood-wizard {
-    hp:mcgonagall hp:lineage hp:pure-blood-wizard .
-}
-
-leolaniWorld:mcgonagall_gender_female {
-    hp:mcgonagall hp:gender hp:female .
-}
-
-leolaniWorld:neville_looks_round-face {
-    hp:neville hp:looks hp:round-face .
-}
-
-leolaniWorld:harry_looks_wearing-glasses {
-    hp:harry hp:looks hp:wearing-glasses .
-}
-
-leolaniWorld:petunia_looks_slender {
-    hp:petunia hp:looks hp:slender .
-}
-
-leolaniWorld:wood_gender_male {
-    hp:wood hp:gender hp:male .
-}
-
-leolaniWorld:dudley_looks_blue-eyes {
-    hp:dudley hp:looks hp:blue-eyes .
-}
-
-leolaniWorld:neville_lineage_pure-blood-wizard {
-    hp:neville hp:lineage hp:pure-blood-wizard .
-}
-
-leolaniWorld:hagrid_lineage_wizard {
-    hp:hagrid hp:lineage hp:wizard .
-}
-
-leolaniWorld:hagrid_lineage_mixed-wizard {
-    hp:hagrid hp:lineage hp:mixed-wizard .
-}
-
-leolaniWorld:hagrid_looks_full-of-beards {
-    hp:hagrid hp:looks hp:full-of-beards .
-}
-
-leolaniWorld:harry_lineage_pure-blood-wizard {
-    hp:harry hp:lineage hp:pure-blood-wizard .
-}
-
-leolaniWorld:filch_title_administrator {
-    hp:filch hp:title hp:administrator .
-}
-
-leolaniWorld:petunia_looks_long-neck {
-    hp:petunia hp:looks hp:long-neck .
-}
-
-leolaniWorld:snape_lineage_mixed-wizard {
-    hp:snape hp:lineage hp:mixed-wizard .
-}
-
-leolaniWorld:Ontology {
-    eps:hasContext a owl:ObjectProperty ;
-        rdfs:domain gaf:Instance,
-            sem:Event ;
-        rdfs:range eps:Context ;
-        rdfs:subPropertyOf eps:contextProperty .
-
-    eps:hasDetection a owl:ObjectProperty ;
-        rdfs:domain eps:Context ;
-        rdfs:range grasp:Detection ;
-        rdfs:subPropertyOf eps:contextProperty .
-
-    gaf:Assertion a owl:Class ;
-        rdfs:subClassOf gaf:Instance .
-
-    grasp:Chat a owl:Class ;
-        rdfs:subClassOf sem:Event .
-
-    grasp:Experience a owl:Class ;
-        rdfs:subClassOf gaf:Mention,
-            sem:Event .
-
-    grasp:Statement a owl:Class ;
-        rdfs:subClassOf gaf:Mention,
-            sem:Event .
-
-    grasp:Visual a owl:Class ;
-        rdfs:subClassOf sem:Event .
-
-    grasp:hasAttribution a owl:ObjectProperty ;
-        rdfs:domain gaf:Mention ;
-        rdfs:range grasp:Attribution ;
-        owl:inverseOf grasp:isAttributionFor .
-
-    grasp:wasAttributedTo a owl:ObjectProperty ;
-        rdfs:label "was attributed to" ;
-        rdfs:comment "States that a gaf:Mention was attributed to a gaf:Instance. This is a sub property of the prov:wasAttributedTo relation that can be used to relate any prov:Entity to any prov:Agent." ;
-        rdfs:domain gaf:Mention ;
-        rdfs:range grasp:Source ;
-        rdfs:subPropertyOf prov:wasAttributedTo .
-
-    hp:affiliation rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:age rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:belongings rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:export rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:gender rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:hobbies rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:lineage rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:looks rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:personality rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:spells rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:talents rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    hp:title rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
-
-    <http://schema.org/Place> a owl:Class .
-
-    sem:hasActor a owl:ObjectProperty ;
-        rdfs:label "has Actor" ;
-        rdfs:comment "Has actor is used to state which Actors or Objects participate in an Event." ;
-        rdfs:range sem:Actor ;
-        rdfs:subPropertyOf sem:eventProperty .
-
-    sem:hasBeginTimeStamp a owl:DatatypeProperty ;
-        rdfs:label "has begin timestamp" ;
-        rdfs:comment "Has begin timestamp is used to indicate the beginning of a time interval. Omitting the hasBeginTimeStamp while stating a hasEndTimeStamp is interpreted as an open ended interval." ;
-        rdfs:subPropertyOf sem:hasTimeStamp .
-
-    sem:hasPlace a owl:ObjectProperty ;
-        rdfs:label "has Place" ;
-        rdfs:comment "Has place is used to state in which Place(s) an Event happened. Coordinates can be attached to the Place with the W3C Geospatial Vocabulary (http://www.w3.org/2005/Incubator/geo/XGR-geo-20071023/)." ;
-        rdfs:range sem:Place ;
-        rdfs:subPropertyOf sem:eventProperty .
-
-    sem:hasSubEvent a owl:ObjectProperty ;
-        rdfs:label "has subevent" ;
-        rdfs:comment "Has subevent connects an Event to other Events that belong to it. This is a very generic property that does not mean the subevents fully define the superconcept or that there is any causal relationship." ;
-        rdfs:domain sem:Event ;
-        rdfs:range sem:Event ;
-        rdfs:subPropertyOf sem:eventProperty ;
-        owl:inverseOf sem:subEventOf .
-
-    sem:hasTime a owl:ObjectProperty ;
-        rdfs:label "has Time" ;
-        rdfs:comment "Has time is used to indicate at which time an Event took place or when a property under the Temporary Constraint is valid. Has time points to a symbolic representation of time, which allows semantic relations between time resources. (see http://www.w3.org/TR/owl-time/)" ;
-        rdfs:range sem:Time ;
-        rdfs:subPropertyOf sem:eventProperty .
-
-    skos:broadMatch a owl:AnnotationProperty .
-
-    skos:closeMatch a owl:AnnotationProperty .
-
-    skos:narrowMatch a owl:AnnotationProperty .
-
-    prov:category a owl:AnnotationProperty .
-
-    prov:component a owl:AnnotationProperty .
-
-    prov:definition a owl:AnnotationProperty .
-
-    prov:hadDerivation a owl:ObjectProperty ;
-        owl:inverseOf prov:wasDerivedFrom .
-
-    prov:inverse a owl:AnnotationProperty .
-
-    prov:qualifiedForm a owl:AnnotationProperty .
-
-    gaf:containsDenotation a owl:ObjectProperty ;
-        rdfs:domain gaf:Mention ;
-        rdfs:range gaf:Instance ;
-        owl:inverseOf gaf:denotedIn .
-
-    gaf:denotedBy a owl:ObjectProperty ;
-        rdfs:domain gaf:Instance ;
-        rdfs:range gaf:Mention ;
-        rdfs:subPropertyOf gaf:denotedIn ;
-        owl:inverseOf gaf:denotes .
-
-    grasp:Source a owl:Class ;
-        rdfs:label "Source" ;
-        rdfs:comment "" ;
-        rdfs:subClassOf owl:Thing .
-
-    grasp:Utterance a owl:Class ;
-        rdfs:subClassOf sem:Event .
-
-    graspe:anger a grasp:EmotionValue,
-            owl:NamedIndividual .
-
-    graspe:disgust a grasp:EmotionValue,
-            owl:NamedIndividual .
-
-    graspe:fear a grasp:EmotionValue,
-            owl:NamedIndividual .
-
-    graspe:happiness a grasp:EmotionValue,
-            owl:NamedIndividual .
-
-    graspe:sadness a grasp:EmotionValue,
-            owl:NamedIndividual .
-
-    graspe:surprise a grasp:EmotionValue,
-            owl:NamedIndividual .
-
-    graspf:certain a grasp:CertaintyValue,
-            owl:NamedIndividual .
-
-    graspf:future a grasp:TemporalValue,
-            owl:NamedIndividual .
-
-    graspf:negative a grasp:PolarityValue,
-            owl:NamedIndividual .
-
-    graspf:non-future a grasp:TemporalValue,
-            owl:NamedIndividual .
-
-    graspf:positive a grasp:PolarityValue,
-            owl:NamedIndividual .
-
-    graspf:possible a grasp:CertaintyValue,
-            owl:NamedIndividual .
-
-    graspf:probable a grasp:CertaintyValue,
-            owl:NamedIndividual .
-
-    graspf:underspecified a grasp:CertaintyValue,
-            owl:NamedIndividual .
-
-    grasps:negative a grasp:SentimentValue,
-            owl:NamedIndividual .
-
-    grasps:positive a grasp:SentimentValue,
-            owl:NamedIndividual .
-
-    sem:Actor a owl:Class ;
-        rdfs:label "Actor" ;
-        rdfs:comment """Actors are entities that take part in an Event, either actively or passively. Actors do not necessarily have to be sentient. They can also be objects. Actors are a thing, animate or inanimate, physical or non-physical.
-""" ;
-        skos:broadMatch <http://sw.opencyc.org/2009/04/07/concept/en/SomethingExisting>,
-            <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant> ;
-        skos:closeMatch dcterms:Agent,
-            dcterms:AgentClass,
-            <http://sw.opencyc.org/2009/04/07/concept/en/Agent-Generic>,
-            <http://www.ontologyportal.org/translations/SUMO.owl.txt#Agent>,
-            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor>,
-            foaf:Agent .
-
-    sem:Place a owl:Class ;
-        rdfs:label "Place" ;
-        rdfs:comment "Places are locations where an Event happens. They do not need to be physical places and hence do not necessarily need coordinates. Neither do they need to have any significance apart from them being the location of an Event." ;
-        skos:closeMatch dcterms:Location,
-            <http://sw.opencyc.org/2009/04/07/concept/en/EnduringThing-Localized>,
-            <http://www.ontologyportal.org/translations/SUMO.owl.txt#GeographicArea>,
-            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place> ;
-        skos:narrowMatch <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#PhysicalRegion>,
-            wgs:SpatialThing .
-
-    sem:Time a owl:Class ;
-        rdfs:label "Time" ;
-        rdfs:comment "Time contains symbolic representations of when an Event took place. Time instances do not necessarily need to have a timestamp associated with them. The Time class exists to represent semantics of time, e.g. that one thing happens before another, even though the exact timestamps are unknown." ;
-        skos:broadMatch <http://www.w3.org/2006/timeTemporalEntity> .
-
-    sem:subEventOf a owl:ObjectProperty ;
-        rdfs:label "subevent of" ;
-        rdfs:comment "Inverse property of hasSubEvent" .
-
-    rdf:value a owl:ObjectProperty .
-
-    prov:wasAttributedTo a owl:ObjectProperty .
-
-    prov:wasDerivedFrom a owl:ObjectProperty ;
-        rdfs:label "wasDerivedFrom" ;
-        rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
-        rdfs:domain gaf:Mention ;
-        rdfs:range grasp:Detection,
-            grasp:Utterance ;
-        rdfs:subPropertyOf owl:topObjectProperty ;
-        prov:category "starting-point" ;
-        prov:component "derivations" ;
-        prov:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
-        prov:inverse "hadDerivation" ;
-        prov:qualifiedForm prov:Derivation .
-
-    foaf:Agent a owl:Class .
-
-    eps:Context a owl:Class .
-
-    eps:contextProperty a owl:ObjectProperty ;
-        rdfs:label "context property" ;
-        rdfs:comment "Context properties connect Context to other SEM Core entities." ;
-        owl:equivalentProperty sem:eventProperty .
-
-    gaf:denotedIn a owl:ObjectProperty ;
-        rdfs:domain gaf:Instance ;
-        rdfs:range gaf:Mention .
-
-    gaf:denotes a owl:ObjectProperty ;
-        rdfs:domain gaf:Mention ;
-        rdfs:range gaf:Instance ;
-        rdfs:subPropertyOf gaf:containsDenotation .
-
-    grasp:Attribution a owl:Class ;
-        rdfs:label "Attribution" ;
-        rdfs:comment "A grasp:Attribution reflects the attribution of some interpretation, some perspective to a gaf:Mention. An attribution expresses such things as certainty, emotion, polarity, sentiment, temporality." ;
-        owl:disjointWith grasp:AttributionValue ;
-        owl:equivalentClass [ a owl:Class ;
-                owl:intersectionOf ( [ a owl:Restriction ;
-                            owl:onProperty grasp:isAttributionFor ;
-                            owl:someValuesFrom gaf:Mention ] [ a owl:Restriction ;
-                            owl:onProperty rdf:value ;
-                            owl:someValuesFrom grasp:AttributionValue ] ) ] .
-
-    grasp:Detection a owl:Class ;
-        rdfs:subClassOf sem:Event .
-
-    grasp:isAttributionFor a owl:ObjectProperty ;
-        rdfs:domain grasp:Attribution ;
-        rdfs:range gaf:Mention .
-
-    grasp:PolarityValue a owl:Class ;
-        rdfs:label "Polarity Value" ;
-        rdfs:comment "The polarity of a gaf:Mention (e.g. if something is or isn't the case)" ;
-        rdfs:subClassOf grasp:FactualityValue ;
-        owl:disjointWith grasp:TemporalValue ;
-        owl:equivalentClass [ a owl:Class ;
-                owl:oneOf ( graspf:negative graspf:positive ) ] .
-
-    grasp:CertaintyValue a owl:Class ;
-        rdfs:label "Certainty Value" ;
-        rdfs:comment "The level of certainty of a gaf:Mention" ;
-        rdfs:subClassOf grasp:FactualityValue ;
-        owl:disjointWith grasp:PolarityValue,
-            grasp:TemporalValue ;
-        owl:equivalentClass [ a owl:Class ;
-                owl:oneOf ( graspf:certain graspf:possible graspf:probable graspf:underspecified ) ] .
-
-    grasp:FactualityValue a owl:Class ;
-        rdfs:label "Factuality value" ;
-        rdfs:subClassOf grasp:AttributionValue ;
-        owl:disjointWith grasp:SentimentValue .
-
-    grasp:SentimentValue a owl:Class ;
-        rdfs:label "Sentiment Value" ;
-        rdfs:comment "The sentiment expressed by a gaf:Mention" ;
-        rdfs:subClassOf grasp:AttributionValue ;
-        owl:equivalentClass [ a owl:Class ;
-                owl:oneOf ( grasps:negative grasps:positive ) ] .
-
-    grasp:TemporalValue a owl:Class ;
-        rdfs:label "Temporal Value" ;
-        rdfs:comment "The temporal property of a gaf:Mention" ;
-        rdfs:subClassOf grasp:FactualityValue ;
-        owl:equivalentClass [ a owl:Class ;
-                owl:oneOf ( graspf:future graspf:non-future ) ] .
-
-    sem:eventProperty a owl:ObjectProperty ;
-        rdfs:label "event property" ;
-        rdfs:comment "Event properties connect Events to other SEM Core entities." .
-
-    grasp:EmotionValue a owl:Class ;
-        rdfs:label "Emotion Value" ;
-        rdfs:comment "The emotion expressed in a gaf:Mention" ;
-        rdfs:subClassOf grasp:AttributionValue ;
-        owl:disjointWith grasp:FactualityValue,
-            grasp:SentimentValue ;
-        owl:equivalentClass [ a owl:Class ;
-                owl:oneOf ( graspe:anger graspe:disgust graspe:fear graspe:happiness graspe:sadness graspe:surprise ) ] .
-
-    gaf:Instance a owl:Class ;
-        rdfs:label "Instance" ;
-        rdfs:comment "Instances are statements about real world entities, including actions, processes and abstract notions. They are the primary subject of individuals of type gaf:Mention that can denote them." ;
-        rdfs:subClassOf owl:Thing ;
-        owl:disjointWith grasp:AttributionValue ;
-        owl:equivalentClass [ a owl:Restriction ;
-                owl:onProperty gaf:denotedBy ;
-                owl:someValuesFrom gaf:Mention ] .
-
-    grasp:AttributionValue a owl:Class ;
-        rdfs:label "Attribution value" ;
-        rdfs:comment "The value of a grasp:Attribution" ;
-        rdfs:subClassOf owl:Thing .
-
-    sem:Event a owl:Class ;
-        rdfs:label "Event" ;
-        rdfs:comment "Events are things that happen. This comprises everything from historical events to web site sessions and mythical journeys. Event is the central class of SEM." ;
-        skos:broadMatch <http://linkedevents.org/ontology/Event>,
-            <http://purl.org/NET/c4dm/event.owl#Event> ;
-        skos:closeMatch dcmitype:Event,
-            <http://sw.opencyc.org/2009/04/07/concept/en/Situation>,
-            <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant>,
-            <http://www.ontologyportal.org/translations/SUMO.owl.txt#Process>,
-            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E5.Event> .
-
-    gaf:Mention a owl:Class ;
-        rdfs:label "Mention" ;
-        rdfs:comment """Mentions are references to members of the gaf:Instance class as they occur in (web) media such as texts, video, audio, images, etc. Mentions denote gaf:Instances.
-
-A Mention uniquely identifies the (part of a) web source that denotes the mention. We refer to the standard use of fragment identifiers for different media types. """ ;
-        rdfs:subClassOf owl:Thing ;
-        owl:disjointWith grasp:AttributionValue ;
-        owl:equivalentClass [ a owl:Restriction ;
-                owl:onProperty gaf:denotes ;
-                owl:someValuesFrom gaf:Instance ] .
-
-    hp:attribute a owl:Class .
-
-    hp:character a owl:Class .
-}
-
-leolaniWorld:snape_age_adult {
-    hp:snape hp:age hp:adult .
-}
-
-leolaniWorld:harry_gender_male {
-    hp:harry hp:gender hp:male .
-}
-
-leolaniWorld:harry_talents_quididic-chaser {
-    hp:harry hp:talents hp:quididic-chaser .
-}
-
-leolaniWorld:harry_belongings_gray-mouse {
-    hp:harry hp:belongings hp:gray-mouse .
-}
-
-leolaniWorld:wood_affiliation_hogwarts {
-    hp:wood hp:affiliation hp:hogwarts .
-}
-
-leolaniWorld:ron_lineage_pure-blood-wizard {
-    hp:ron hp:lineage hp:pure-blood-wizard .
-}
-
 leolaniWorld:harry_looks_knife-injury-with-lightning-shape-at-the-forehead {
     hp:harry hp:looks hp:knife-injury-with-lightning-shape-at-the-forehead .
 }
 
-leolaniWorld:ron_affiliation_hogwarts {
-    hp:ron hp:affiliation hp:hogwarts .
-}
-
-leolaniWorld:vernon_lineage_maculogy {
-    hp:vernon hp:lineage hp:maculogy .
-}
-
-leolaniWorld:petunia_personality_gossip {
-    hp:petunia hp:personality hp:gossip .
-}
-
-leolaniWorld:snape_affiliation_hogwarts {
-    hp:snape hp:affiliation hp:hogwarts .
+leolaniWorld:dudley_looks_obesity {
+    hp:dudley hp:looks hp:obesity .
 }
 
 leolaniWorld:leolani_know_jk-rowling {
     leolaniWorld:leolani hp:know leolaniFriends:jk-rowling .
 }
 
-leolaniWorld:dudley_personality_selfish {
-    hp:dudley hp:personality hp:selfish .
+leolaniWorld:vernon_title_company-supervisor {
+    hp:vernon hp:title hp:company-supervisor .
 }
 
-leolaniWorld:filch_age_adult {
-    hp:filch hp:age hp:adult .
+leolaniWorld:hagrid_looks_surprisingly-tall {
+    hp:hagrid hp:looks hp:surprisingly-tall .
 }
 
-leolaniWorld:neville_affiliation_hogvy {
-    hp:neville hp:affiliation hp:hogvy .
-}
-
-leolaniWorld:ron_gender_male {
-    hp:ron hp:gender hp:male .
+leolaniWorld:neville_age_age-11 {
+    hp:neville hp:age hp:age-11 .
 }
 
 leolaniWorld:vernon_looks_very-fat {
     hp:vernon hp:looks hp:very-fat .
 }
 
-leolaniWorld:harry_belongings_stealth-jacket {
-    hp:harry hp:belongings hp:stealth-jacket .
+leolaniWorld:flitwick_title_mantra-professor {
+    hp:flitwick hp:title hp:mantra-professor .
 }
 
-leolaniWorld:hagrid_affiliation_hogwarts {
-    hp:hagrid hp:affiliation hp:hogwarts .
+leolaniWorld:snape_looks_eagle-hook-nose {
+    hp:snape hp:looks hp:eagle-hook-nose .
 }
 
-leolaniWorld:harry_looks_black-hair {
-    hp:harry hp:looks hp:black-hair .
+leolaniWorld:dudley_personality_no-rules {
+    hp:dudley hp:personality hp:no-rules .
 }
 
-leolaniWorld:harry_age_age-11 {
-    hp:harry hp:age hp:age-11 .
+leolaniWorld:neville_lineage_pure-blood-wizard {
+    hp:neville hp:lineage hp:pure-blood-wizard .
 }
 
-leolaniWorld:hagrid_hobbies_like-pets {
-    hp:hagrid hp:hobbies hp:like-pets .
+leolaniWorld:ron_affiliation_hogwarts {
+    hp:ron hp:affiliation hp:hogwarts .
 }
 
-leolaniWorld:hagrid_gender_male {
-    hp:hagrid hp:gender hp:male .
-}
-
-leolaniWorld:petunia_personality_message {
-    hp:petunia hp:personality hp:message .
-}
-
-leolaniWorld:hagrid_belongings_hunters-teeth {
-    hp:hagrid hp:belongings hp:hunters-teeth .
+leolaniWorld:harry_belongings_wand {
+    hp:harry hp:belongings hp:wand .
 }
 
 leolaniWorld:hermione_age_age-11 {
     hp:hermione hp:age hp:age-11 .
 }
 
-leolaniWorld:flitwick_affiliation_hogvy {
-    hp:flitwick hp:affiliation hp:hogvy .
+leolaniWorld:harry_belongings_owl {
+    hp:harry hp:belongings hp:owl .
 }
 
-leolaniWorld:harry_title_the-boy-who-lived {
-    hp:harry hp:title hp:the-boy-who-lived .
+leolaniWorld:neville_belongings_toad {
+    hp:neville hp:belongings hp:toad .
+}
+
+leolaniWorld:dudley_gender_male {
+    hp:dudley hp:gender hp:male .
+}
+
+leolaniWorld:harry_belongings_stealth-jacket {
+    hp:harry hp:belongings hp:stealth-jacket .
 }
 
 leolaniWorld:vernon_looks_accumulating-beard {
     hp:vernon hp:looks hp:accumulating-beard .
+}
+
+leolaniWorld:wood_affiliation_hogwarts {
+    hp:wood hp:affiliation hp:hogwarts .
+}
+
+leolaniWorld:harry_looks_black-hair {
+    hp:harry hp:looks hp:black-hair .
+}
+
+leolaniWorld:petunia_age_adult {
+    hp:petunia hp:age hp:adult .
 }
 
 leolaniWorld:Claims {
@@ -1383,76 +908,56 @@ leolaniWorld:Claims {
             leolaniTalk:chat1_utterance9_char74-81 .
 }
 
-leolaniWorld:flitwick_gender_female {
-    hp:flitwick hp:gender hp:female .
-}
-
-leolaniWorld:hermione_gender_female {
-    hp:hermione hp:gender hp:female .
-}
-
-leolaniWorld:ron_age_age-11 {
-    hp:ron hp:age hp:age-11 .
-}
-
-leolaniWorld:ron_looks_red-hair {
-    hp:ron hp:looks hp:red-hair .
-}
-
-leolaniWorld:hermione_affiliation_hogvy {
-    hp:hermione hp:affiliation hp:hogvy .
-}
-
-leolaniWorld:harry_looks_sword-injury-with-lightning-shape-at-the-forehead {
-    hp:harry hp:looks hp:sword-injury-with-lightning-shape-at-the-forehead .
-}
-
-leolaniWorld:vernon_title_company-supervisor {
-    hp:vernon hp:title hp:company-supervisor .
-}
-
-leolaniWorld:mcgonagall_age_adult {
-    hp:mcgonagall hp:age hp:adult .
-}
-
-leolaniWorld:harry_belongings_wand {
-    hp:harry hp:belongings hp:wand .
-}
-
-leolaniWorld:harry_affiliation_hogwarts {
-    hp:harry hp:affiliation hp:hogwarts .
+leolaniWorld:harry_title_the-boy-who-lived {
+    hp:harry hp:title hp:the-boy-who-lived .
 }
 
 leolaniWorld:harry_looks_red-hair {
     hp:harry hp:looks hp:red-hair .
 }
 
-leolaniWorld:dudley_age_age-11 {
-    hp:dudley hp:age hp:age-11 .
+leolaniWorld:vernon_age_adult {
+    hp:vernon hp:age hp:adult .
 }
 
-leolaniWorld:hagrid_title_key-guardian-and-hunting-ground-guard {
-    hp:hagrid hp:title hp:key-guardian-and-hunting-ground-guard .
+leolaniWorld:snape_affiliation_hogwarts {
+    hp:snape hp:affiliation hp:hogwarts .
 }
 
-leolaniWorld:vernon_gender_male {
-    hp:vernon hp:gender hp:male .
+leolaniWorld:hermione_gender_female {
+    hp:hermione hp:gender hp:female .
 }
 
-leolaniWorld:harry_looks_very-thin {
-    hp:harry hp:looks hp:very-thin .
+leolaniWorld:hermione_lineage_mixed-wizard {
+    hp:hermione hp:lineage hp:mixed-wizard .
 }
 
-leolaniWorld:vernon_looks_tall-and-burly {
-    hp:vernon hp:looks hp:tall-and-burly .
+leolaniWorld:hagrid_belongings_three-headed-dog-luwei {
+    hp:hagrid hp:belongings hp:three-headed-dog-luwei .
 }
 
-leolaniWorld:petunia_gender_female {
-    hp:petunia hp:gender hp:female .
+leolaniWorld:wood_gender_male {
+    hp:wood hp:gender hp:male .
+}
+
+leolaniWorld:vernon_lineage_maculogy {
+    hp:vernon hp:lineage hp:maculogy .
+}
+
+leolaniWorld:hagrid_belongings_hunters-teeth {
+    hp:hagrid hp:belongings hp:hunters-teeth .
 }
 
 leolaniWorld:mcgonagall_title_vice-president-of-hogvy {
     hp:mcgonagall hp:title hp:vice-president-of-hogvy .
+}
+
+leolaniWorld:mcgonagall_lineage_pure-blood-wizard {
+    hp:mcgonagall hp:lineage hp:pure-blood-wizard .
+}
+
+leolaniWorld:filch_title_administrator {
+    hp:filch hp:title hp:administrator .
 }
 
 leolaniTalk:Perspectives {
@@ -7472,154 +6977,36 @@ leolaniTalk:Perspectives {
         rdfs:label "NEUTRAL" .
 }
 
-leolaniWorld:mcgonagall_looks_square-lenses {
-    hp:mcgonagall hp:looks hp:square-lenses .
+leolaniWorld:hagrid_lineage_mixed-wizard {
+    hp:hagrid hp:lineage hp:mixed-wizard .
 }
 
-leolaniTalk:Interactions {
-    leolaniContext:context198 a eps:Context ;
-        rdfs:label "context198" ;
-        hp:id "198"^^xml1:string ;
-        sem:hasBeginTimeStamp leolaniContext:1997-06-26 ;
-        sem:hasEvent leolaniTalk:chat1 ;
-        sem:hasPlace leolaniContext:harry-potter-world .
-
-    leolaniContext:1997-06-26 a sem:Time,
-            time1:DateTimeDescription ;
-        rdfs:label "1997-06-26" ;
-        time1:day "26"^^xml1:gDay ;
-        time1:month "6"^^xml1:gMonthDay ;
-        time1:unitType time1:unitDay ;
-        time1:year "1997"^^xml1:gYear .
-
-    leolaniContext:harry-potter-world a hp:location,
-            sem:Place ;
-        rdfs:label "harry-potter-world" ;
-        hp:id "1"^^xml1:string ;
-        hp:in leolaniWorld:Edinburgh,
-            leolaniWorld:Scotland,
-            leolaniWorld:UK .
-
-    leolaniTalk:chat1 a grasp:Chat,
-            sem:Event ;
-        rdfs:label "chat1" ;
-        hp:id "1"^^xml1:string ;
-        sem:hasSubEvent leolaniTalk:chat1_utterance10,
-            leolaniTalk:chat1_utterance12,
-            leolaniTalk:chat1_utterance13,
-            leolaniTalk:chat1_utterance15,
-            leolaniTalk:chat1_utterance16,
-            leolaniTalk:chat1_utterance2,
-            leolaniTalk:chat1_utterance3,
-            leolaniTalk:chat1_utterance5,
-            leolaniTalk:chat1_utterance8,
-            leolaniTalk:chat1_utterance9 .
-
-    leolaniTalk:chat1_utterance10 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance10" ;
-        hp:id "10"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniTalk:chat1_utterance12 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance12" ;
-        hp:id "12"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniTalk:chat1_utterance13 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance13" ;
-        hp:id "13"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniTalk:chat1_utterance15 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance15" ;
-        hp:id "15"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniTalk:chat1_utterance16 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance16" ;
-        hp:id "16"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniTalk:chat1_utterance2 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance2" ;
-        hp:id "2"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniTalk:chat1_utterance3 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance3" ;
-        hp:id "3"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniTalk:chat1_utterance5 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance5" ;
-        hp:id "5"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniTalk:chat1_utterance8 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance8" ;
-        hp:id "8"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniTalk:chat1_utterance9 a grasp:Utterance,
-            sem:Event ;
-        rdfs:label "chat1_utterance9" ;
-        hp:id "9"^^xml1:string ;
-        sem:hasActor leolaniFriends:jk-rowling .
-
-    leolaniWorld:Edinburgh a hp:city,
-            hp:location,
-            sem:Place ;
-        rdfs:label "Edinburgh" .
-
-    leolaniWorld:Scotland a hp:location,
-            hp:region,
-            sem:Place ;
-        rdfs:label "Scotland" .
-
-    leolaniWorld:UK a hp:country,
-            hp:location,
-            sem:Place ;
-        rdfs:label "UK" .
-
-    leolaniFriends:jk-rowling a gaf:Instance,
-            grasp:Source,
-            hp:author,
-            hp:person,
-            sem:Actor ;
-        rdfs:label "jk-rowling" .
+leolaniWorld:vernon_looks_tall-and-burly {
+    hp:vernon hp:looks hp:tall-and-burly .
 }
 
-leolaniWorld:petunia_looks_blond-hair {
-    hp:petunia hp:looks hp:blond-hair .
+leolaniWorld:petunia_gender_female {
+    hp:petunia hp:gender hp:female .
 }
 
-leolaniWorld:hagrid_age_adult {
-    hp:hagrid hp:age hp:adult .
+leolaniWorld:snape_lineage_mixed-wizard {
+    hp:snape hp:lineage hp:mixed-wizard .
 }
 
-leolaniWorld:petunia_age_adult {
-    hp:petunia hp:age hp:adult .
+leolaniWorld:filch_age_adult {
+    hp:filch hp:age hp:adult .
 }
 
-leolaniWorld:ron_belongings_gray-mouse {
-    hp:ron hp:belongings hp:gray-mouse .
+leolaniWorld:harry_looks_wearing-glasses {
+    hp:harry hp:looks hp:wearing-glasses .
 }
 
-leolaniWorld:snape_looks_eagle-hook-nose {
-    hp:snape hp:looks hp:eagle-hook-nose .
+leolaniWorld:vernon_gender_male {
+    hp:vernon hp:gender hp:male .
 }
 
-leolaniWorld:hagrid_looks_surprisingly-tall {
-    hp:hagrid hp:looks hp:surprisingly-tall .
+leolaniWorld:harry_affiliation_hogwarts {
+    hp:harry hp:affiliation hp:hogwarts .
 }
 
 leolaniWorld:petunia_lineage_maculogy {
@@ -7630,64 +7017,8 @@ leolaniWorld:dudley_lineage_maculogy {
     hp:dudley hp:lineage hp:maculogy .
 }
 
-leolaniWorld:harry_lineage_mixed-wizard {
-    hp:harry hp:lineage hp:mixed-wizard .
-}
-
-leolaniWorld:dudley_personality_no-rules {
-    hp:dudley hp:personality hp:no-rules .
-}
-
-leolaniWorld:neville_age_age-11 {
-    hp:neville hp:age hp:age-11 .
-}
-
-leolaniWorld:vernon_age_adult {
-    hp:vernon hp:age hp:adult .
-}
-
-leolaniWorld:harry_belongings_magic-wand {
-    hp:harry hp:belongings hp:magic-wand .
-}
-
-leolaniWorld:filch_gender_male {
-    hp:filch hp:gender hp:male .
-}
-
-leolaniWorld:dudley_looks_obesity {
-    hp:dudley hp:looks hp:obesity .
-}
-
-leolaniWorld:harry_belongings_flying-broom {
-    hp:harry hp:belongings hp:flying-broom .
-}
-
-leolaniWorld:vernon_affiliation_grandine-company {
-    hp:vernon hp:affiliation hp:grandine-company .
-}
-
-leolaniWorld:hagrid_belongings_three-headed-dog-luwei {
-    hp:hagrid hp:belongings hp:three-headed-dog-luwei .
-}
-
-leolaniWorld:harry_looks_emerald-green-eyes {
-    hp:harry hp:looks hp:emerald-green-eyes .
-}
-
-leolaniWorld:dudley_gender_male {
-    hp:dudley hp:gender hp:male .
-}
-
-leolaniWorld:flitwick_title_mantra-professor {
-    hp:flitwick hp:title hp:mantra-professor .
-}
-
-leolaniWorld:vernon_belongings_car {
-    hp:vernon hp:belongings hp:car .
-}
-
-leolaniWorld:filch_affiliation_hogvy {
-    hp:filch hp:affiliation hp:hogvy .
+leolaniWorld:harry_talents_quididic-chaser {
+    hp:harry hp:talents hp:quididic-chaser .
 }
 
 leolaniWorld:Instances {
@@ -7699,23 +7030,29 @@ leolaniWorld:Instances {
         rdfs:label "leolani" .
 
     hp:a-serious-look a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "a-serious-look" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-156,
             leolaniTalk:chat1_utterance9_char74-76 .
 
+    hp:aberforth a hp:wizard .
+
     hp:accumulating-beard a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "accumulating-beard" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-37,
             leolaniTalk:chat1_utterance3_char27-47 .
 
     hp:administrator a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "administrator" ;
         gaf:denotedIn leolaniTalk:chat1_utterance9_char80-89 .
 
     hp:adult a gaf:Instance,
+            hp:age,
             hp:attribute ;
         rdfs:label "adult" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-87,
@@ -7736,6 +7073,7 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char80-87 .
 
     hp:age-11 a gaf:Instance,
+            hp:age,
             hp:attribute ;
         rdfs:label "age-11" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-91,
@@ -7777,8 +7115,25 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-95,
             leolaniTalk:chat1_utterance9_char80-81 .
 
+    hp:amos a hp:wizard .
+
+    hp:angelina a hp:wizard .
+
+    hp:aragog a hp:spider .
+
+    hp:armando-dippet a hp:wizard .
+
+    hp:bagman a hp:wizard .
+
+    hp:bellatrix a hp:wizard .
+
+    hp:bill a hp:wizard .
+
+    hp:binns a hp:ghost .
+
     hp:black-hair a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "black-hair" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-20,
             leolaniTalk:chat1_utterance2_char21-24,
@@ -7791,32 +7146,65 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char53-56 .
 
     hp:blond-hair a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "blond-hair" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-28,
             leolaniTalk:chat1_utterance3_char26-37,
             leolaniTalk:chat1_utterance3_char27-38 .
 
     hp:blue-eyes a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "blue-eyes" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char21-32,
             leolaniTalk:chat1_utterance3_char27-56 .
 
+    hp:cadogan a hp:wizard .
+
     hp:car a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "car" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-39,
             leolaniTalk:chat1_utterance3_char27-49 .
 
+    hp:cattermole a hp:wizard .
+
+    hp:cedric a hp:wizard .
+
+    hp:cedrics-soul a hp:wizard .
+
+    hp:charlie a hp:wizard .
+
+    hp:colin a hp:wizard .
+
+    hp:colin-creevey a hp:wizard .
+
     hp:company-supervisor a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "company-supervisor" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-42,
             leolaniTalk:chat1_utterance3_char27-52 .
 
+    hp:crabbe a hp:wizard .
+
+    hp:crouch a hp:wizard .
+
+    hp:dean a hp:wizard .
+
+    hp:dean-tomas a hp:wizard .
+
+    hp:dennis a hp:wizard .
+
+    hp:dobby a hp:domestic-elf .
+
+    hp:doge a hp:wizard .
+
     hp:dudley a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:muggle ;
         rdfs:label "dudley" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char21-29,
             leolaniTalk:chat1_utterance2_char21-30,
@@ -7833,13 +7221,19 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-58,
             leolaniTalk:chat1_utterance3_char27-59 .
 
+    hp:dumbledore a hp:wizard .
+
+    hp:dumbledore-dumbledore a hp:wizard .
+
     hp:eagle-hook-nose a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "eagle-hook-nose" ;
         gaf:denotedIn leolaniTalk:chat1_utterance8_char70-80 .
 
     hp:emerald-green-eyes a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "emerald-green-eyes" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-21,
             leolaniTalk:chat1_utterance2_char21-25,
@@ -7851,8 +7245,13 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char52-56,
             leolaniTalk:chat1_utterance5_char53-57 .
 
+    hp:ern a hp:wizard .
+
+    hp:ernie a hp:wizard .
+
     hp:female a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:gender ;
         rdfs:label "female" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-86,
             leolaniTalk:chat1_utterance13_char127-156,
@@ -7866,15 +7265,23 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-94 .
 
     hp:filch a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:squib ;
         rdfs:label "filch" ;
         gaf:denotedIn leolaniTalk:chat1_utterance9_char80-86,
             leolaniTalk:chat1_utterance9_char80-87,
             leolaniTalk:chat1_utterance9_char80-88,
             leolaniTalk:chat1_utterance9_char80-89 .
 
+    hp:firenze a hp:centaur .
+
+    hp:fleur a hp:wizard .
+
+    hp:flint a hp:wizard .
+
     hp:flitwick a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "flitwick" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-86,
             leolaniTalk:chat1_utterance10_char86-87,
@@ -7882,7 +7289,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance10_char86-89 .
 
     hp:flying-broom a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "flying-broom" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-96,
             leolaniTalk:chat1_utterance12_char111-117,
@@ -7894,8 +7302,17 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance16_char156-162,
             leolaniTalk:chat1_utterance16_char157-163 .
 
+    hp:fred a hp:wizard .
+
+    hp:fred-george a hp:wizard .
+
+    hp:fred-george-ginny a hp:wizard .
+
+    hp:fudge a hp:wizard .
+
     hp:full-of-beards a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "full-of-beards" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-171,
             leolaniTalk:chat1_utterance5_char40-51,
@@ -7904,21 +7321,32 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char52-63,
             leolaniTalk:chat1_utterance5_char53-64 .
 
+    hp:george a hp:wizard .
+
+    hp:ginny a hp:wizard .
+
     hp:gossip a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:personality-trait ;
         rdfs:label "gossip" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-31,
             leolaniTalk:chat1_utterance3_char26-40,
             leolaniTalk:chat1_utterance3_char27-41 .
 
+    hp:goyle a hp:wizard .
+
     hp:grandine-company a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:institution ;
         rdfs:label "grandine-company" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-40,
             leolaniTalk:chat1_utterance3_char27-50 .
 
+    hp:gray a hp:ghost .
+
     hp:gray-mouse a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "gray-mouse" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-125,
             leolaniTalk:chat1_utterance12_char119-133,
@@ -7932,8 +7360,15 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance16_char161-164,
             leolaniTalk:chat1_utterance9_char79-91 .
 
+    hp:greyback a hp:werewolf .
+
+    hp:griphook a hp:goblin .
+
+    hp:griphookgornuk a hp:goblin .
+
     hp:hagrid a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:giant ;
         rdfs:label "hagrid" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-168,
             leolaniTalk:chat1_utterance16_char157-169,
@@ -7982,7 +7417,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char53-67 .
 
     hp:harry a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "harry",
             "ron" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-90,
@@ -8179,8 +7615,15 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-86,
             leolaniTalk:chat1_utterance9_char79-87 .
 
+    hp:harry-father a hp:wizard .
+
+    hp:harry-george a hp:wizard .
+
+    hp:harry-mother a hp:wizard .
+
     hp:hermione a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "hermione" ;
         gaf:denotedIn leolaniTalk:chat1_utterance13_char127-156,
             leolaniTalk:chat1_utterance13_char127-157,
@@ -8199,8 +7642,15 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-96,
             leolaniTalk:chat1_utterance9_char79-97 .
 
+    hp:hermione-fred a hp:wizard .
+
+    hp:hermione-harry a hp:wizard .
+
+    hp:hestia a hp:wizard .
+
     hp:hogvy a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:institution ;
         rdfs:label "hogvy" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-88,
             leolaniTalk:chat1_utterance13_char127-158,
@@ -8211,7 +7661,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char80-88 .
 
     hp:hogwarts a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:institution ;
         rdfs:label "hogwarts" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-101,
             leolaniTalk:chat1_utterance10_char86-97,
@@ -8248,12 +7699,22 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-92 .
 
     hp:hunters-teeth a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "hunters-teeth" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-173 .
 
+    hp:james a hp:wizard .
+
+    hp:jordan a hp:wizard .
+
+    hp:justin a hp:wizard .
+
+    hp:karkaroff a hp:wizard .
+
     hp:key-guardian-and-hunting-ground-guard a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "key-guardian-and-hunting-ground-guard" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-177,
             leolaniTalk:chat1_utterance5_char40-54,
@@ -8262,8 +7723,11 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char52-66,
             leolaniTalk:chat1_utterance5_char53-67 .
 
+    hp:kingsley a hp:wizard .
+
     hp:knife-injury-with-lightning-shape-at-the-forehead a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "knife-injury-with-lightning-shape-at-the-forehead" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-23,
             leolaniTalk:chat1_utterance2_char21-27,
@@ -8275,19 +7739,38 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char52-58,
             leolaniTalk:chat1_utterance5_char53-59 .
 
+    hp:kreacher a hp:domestic-elf .
+
+    hp:krum a hp:wizard .
+
+    hp:lavender a hp:wizard .
+
     hp:like-pets a gaf:Instance,
+            hp:activity,
             hp:attribute ;
         rdfs:label "like-pets" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-172 .
 
+    hp:lily a hp:wizard .
+
+    hp:lockhart a hp:wizard .
+
     hp:long-neck a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "long-neck" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-29,
             leolaniTalk:chat1_utterance3_char26-38,
             leolaniTalk:chat1_utterance3_char27-39 .
 
+    hp:lovegood a hp:wizard .
+
+    hp:luna a hp:wizard .
+
+    hp:lupin a hp:werewolf .
+
     hp:maculogy a gaf:Instance,
+            hp:ancestry,
             hp:attribute ;
         rdfs:label "maculogy" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-32,
@@ -8298,13 +7781,17 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-51,
             leolaniTalk:chat1_utterance3_char27-59 .
 
+    hp:mad-eye-moodys-voice a hp:wizard .
+
     hp:magic-wand a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "magic-wand" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-94 .
 
     hp:male a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:gender ;
         rdfs:label "male" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-100,
             leolaniTalk:chat1_utterance10_char86-90,
@@ -8353,13 +7840,21 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char80-80,
             leolaniTalk:chat1_utterance9_char80-86 .
 
+    hp:malfoy a hp:wizard .
+
     hp:mantra-professor a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "mantra-professor" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-89 .
 
+    hp:marge a hp:muggle .
+
+    hp:maxime a hp:giant .
+
     hp:mcgonagall a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "mcgonagall" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-154,
             leolaniTalk:chat1_utterance15_char143-155,
@@ -8376,20 +7871,25 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char74-79,
             leolaniTalk:chat1_utterance9_char74-80 .
 
+    hp:mclaggen a hp:wizard .
+
     hp:mean a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:personality-trait ;
         rdfs:label "mean" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-38,
             leolaniTalk:chat1_utterance3_char27-48 .
 
     hp:message a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:personality-trait ;
         rdfs:label "message" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-30,
             leolaniTalk:chat1_utterance3_char26-39,
             leolaniTalk:chat1_utterance3_char27-40 .
 
     hp:mixed-wizard a gaf:Instance,
+            hp:ancestry,
             hp:attribute ;
         rdfs:label "mixed-wizard" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-98,
@@ -8410,8 +7910,31 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-86,
             leolaniTalk:chat1_utterance9_char79-97 .
 
+    hp:moody a hp:wizard .
+
+    hp:moodys-voice a hp:wizard .
+
+    hp:morfin a hp:wizard .
+
+    hp:mr-malfoy a hp:wizard .
+
+    hp:mr-weasley a hp:wizard .
+
+    hp:mrs-rosmerta a hp:wizard .
+
+    hp:mrs-tonks a hp:wizard .
+
+    hp:mrs-weasley a hp:wizard .
+
+    hp:mundungus a hp:wizard .
+
+    hp:muriel a hp:wizard .
+
+    hp:narcissa a hp:wizard .
+
     hp:neville a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "neville" ;
         gaf:denotedIn leolaniTalk:chat1_utterance9_char80-80,
             leolaniTalk:chat1_utterance9_char80-81,
@@ -8420,20 +7943,29 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char80-84,
             leolaniTalk:chat1_utterance9_char80-85 .
 
+    hp:nick a hp:ghost .
+
     hp:no-rules a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:personality-trait ;
         rdfs:label "no-rules" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char21-34,
             leolaniTalk:chat1_utterance3_char27-58 .
 
     hp:obesity a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "obesity" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char21-31,
             leolaniTalk:chat1_utterance3_char27-55 .
 
+    hp:ogden a hp:wizard .
+
+    hp:ollivander a hp:wizard .
+
     hp:owl a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "owl" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-95,
             leolaniTalk:chat1_utterance12_char111-116,
@@ -8447,8 +7979,13 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance8_char70-74,
             leolaniTalk:chat1_utterance9_char79-84 .
 
+    hp:parvati a hp:wizard .
+
+    hp:peter a hp:wizard .
+
     hp:petunia a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:muggle ;
         rdfs:label "petunia" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-25,
             leolaniTalk:chat1_utterance2_char17-26,
@@ -8475,12 +8012,18 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-41,
             leolaniTalk:chat1_utterance3_char27-42 .
 
+    hp:phineas a hp:wizard .
+
+    hp:pomfrey a hp:wizard .
+
     hp:potion-teacher a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "potion-teacher" ;
         gaf:denotedIn leolaniTalk:chat1_utterance8_char70-83 .
 
     hp:pure-blood-wizard a gaf:Instance,
+            hp:ancestry,
             hp:attribute ;
         rdfs:label "pure-blood-wizard" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-127,
@@ -8499,6 +8042,7 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char80-85 .
 
     hp:quididic-chaser a gaf:Instance,
+            hp:ability,
             hp:attribute ;
         rdfs:label "quididic-chaser" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-93,
@@ -8512,8 +8056,11 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance16_char157-160,
             leolaniTalk:chat1_utterance9_char79-82 .
 
+    hp:quirrel a hp:wizard .
+
     hp:red-hair a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "red-hair" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-124,
             leolaniTalk:chat1_utterance12_char119-132,
@@ -8527,8 +8074,13 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance16_char161-163,
             leolaniTalk:chat1_utterance9_char79-90 .
 
+    hp:rita a hp:wizard .
+
+    hp:roberts a hp:muggle .
+
     hp:ron a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "ron" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-122,
             leolaniTalk:chat1_utterance12_char111-123,
@@ -8591,26 +8143,50 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-92,
             leolaniTalk:chat1_utterance9_char79-93 .
 
+    hp:ron-hermion a hp:wizard .
+
+    hp:ron-hermione a hp:wizard .
+
+    hp:ron-neville a hp:wizard .
+
+    hp:ronan a hp:wizard .
+
     hp:round-face a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "round-face" ;
         gaf:denotedIn leolaniTalk:chat1_utterance9_char80-82 .
 
+    hp:scrimgeour a hp:wizard .
+
+    hp:seamus a hp:wizard .
+
     hp:selfish a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:personality-trait ;
         rdfs:label "selfish" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char21-33,
             leolaniTalk:chat1_utterance3_char27-57 .
 
+    hp:shunpike a hp:muggle .
+
+    hp:sirius a hp:wizard .
+
+    hp:skeeter a hp:wizard .
+
     hp:slender a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "slender" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-27,
             leolaniTalk:chat1_utterance3_char26-36,
             leolaniTalk:chat1_utterance3_char27-37 .
 
+    hp:slughorn a hp:wizard .
+
     hp:snape a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:wizard ;
         rdfs:label "snape" ;
         gaf:denotedIn leolaniTalk:chat1_utterance8_char70-78,
             leolaniTalk:chat1_utterance8_char70-79,
@@ -8619,14 +8195,18 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance8_char70-82,
             leolaniTalk:chat1_utterance8_char70-83 .
 
+    hp:sprout a hp:wizard .
+
     hp:square-lenses a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "square-lenses" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-157,
             leolaniTalk:chat1_utterance9_char74-77 .
 
     hp:stealth-jacket a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "stealth-jacket" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-118,
             leolaniTalk:chat1_utterance12_char119-126,
@@ -8638,7 +8218,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance16_char157-164 .
 
     hp:surprisingly-tall a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "surprisingly-tall" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-170,
             leolaniTalk:chat1_utterance5_char40-50,
@@ -8648,7 +8229,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char53-63 .
 
     hp:sword-injury-with-lightning-shape-at-the-forehead a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "sword-injury-with-lightning-shape-at-the-forehead" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-92,
             leolaniTalk:chat1_utterance12_char111-113,
@@ -8663,13 +8245,15 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-81 .
 
     hp:tall-and-burly a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "tall-and-burly" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-36,
             leolaniTalk:chat1_utterance3_char27-46 .
 
     hp:the-boy-who-lived a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "the-boy-who-lived" ;
         gaf:denotedIn leolaniTalk:chat1_utterance10_char86-99,
             leolaniTalk:chat1_utterance12_char111-121,
@@ -8693,17 +8277,30 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-87 .
 
     hp:three-headed-dog-luwei a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "three-headed-dog-luwei" ;
         gaf:denotedIn leolaniTalk:chat1_utterance16_char157-174 .
 
     hp:toad a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "toad" ;
         gaf:denotedIn leolaniTalk:chat1_utterance9_char80-83 .
 
+    hp:tom a hp:wizard .
+
+    hp:tonks a hp:wizard .
+
+    hp:trelawney a hp:wizard .
+
+    hp:twycross a hp:wizard .
+
+    hp:umbridge a hp:wizard .
+
     hp:vernon a gaf:Instance,
-            hp:character ;
+            hp:character,
+            hp:muggle ;
         rdfs:label "vernon-dursley" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-33,
             leolaniTalk:chat1_utterance2_char17-34,
@@ -8726,14 +8323,18 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance3_char27-51,
             leolaniTalk:chat1_utterance3_char27-52 .
 
+    hp:vernon-petunia a hp:muggle .
+
     hp:very-fat a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "very-fat" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-35,
             leolaniTalk:chat1_utterance3_char27-45 .
 
     hp:very-thin a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "very-thin" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-19,
             leolaniTalk:chat1_utterance2_char21-23,
@@ -8746,13 +8347,17 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char53-55 .
 
     hp:vice-president-of-hogvy a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:designation ;
         rdfs:label "vice-president-of-hogvy" ;
         gaf:denotedIn leolaniTalk:chat1_utterance15_char143-160,
             leolaniTalk:chat1_utterance9_char74-80 .
 
+    hp:voldemort a hp:wizard .
+
     hp:wand a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:object ;
         rdfs:label "wand" ;
         gaf:denotedIn leolaniTalk:chat1_utterance12_char111-115,
             leolaniTalk:chat1_utterance12_char119-123,
@@ -8766,7 +8371,8 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance9_char79-83 .
 
     hp:wearing-glasses a gaf:Instance,
-            hp:attribute ;
+            hp:attribute,
+            hp:physical-appearance ;
         rdfs:label "wearing-glasses" ;
         gaf:denotedIn leolaniTalk:chat1_utterance2_char17-22,
             leolaniTalk:chat1_utterance2_char21-26,
@@ -8778,7 +8384,23 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char52-57,
             leolaniTalk:chat1_utterance5_char53-58 .
 
+    hp:weasley a hp:wizard .
+
+    hp:winky a hp:domestic-elf .
+
+    hp:wood a gaf:Instance,
+            hp:character,
+            hp:wizard ;
+        rdfs:label "wood" ;
+        gaf:denotedIn leolaniTalk:chat1_utterance10_char86-100,
+            leolaniTalk:chat1_utterance10_char86-101,
+            leolaniTalk:chat1_utterance9_char74-81,
+            leolaniTalk:chat1_utterance9_char74-82 .
+
+    hp:zacharias a hp:wizard .
+
     hp:wizard a gaf:Instance,
+            hp:ancestry,
             hp:attribute ;
         rdfs:label "wizard" ;
         gaf:denotedIn leolaniTalk:chat1_utterance5_char40-53,
@@ -8786,37 +8408,740 @@ leolaniWorld:Instances {
             leolaniTalk:chat1_utterance5_char51-64,
             leolaniTalk:chat1_utterance5_char52-65,
             leolaniTalk:chat1_utterance5_char53-66 .
-
-    hp:wood a gaf:Instance,
-            hp:character ;
-        rdfs:label "wood" ;
-        gaf:denotedIn leolaniTalk:chat1_utterance10_char86-100,
-            leolaniTalk:chat1_utterance10_char86-101,
-            leolaniTalk:chat1_utterance9_char74-81,
-            leolaniTalk:chat1_utterance9_char74-82 .
-}
-
-leolaniWorld:neville_belongings_toad {
-    hp:neville hp:belongings hp:toad .
 }
 
 leolaniWorld:snape_title_potion-teacher {
     hp:snape hp:title hp:potion-teacher .
 }
 
+leolaniWorld:flitwick_affiliation_hogvy {
+    hp:flitwick hp:affiliation hp:hogvy .
+}
+
+leolaniWorld:flitwick_gender_female {
+    hp:flitwick hp:gender hp:female .
+}
+
+leolaniWorld:mcgonagall_gender_female {
+    hp:mcgonagall hp:gender hp:female .
+}
+
+leolaniWorld:mcgonagall_looks_a-serious-look {
+    hp:mcgonagall hp:looks hp:a-serious-look .
+}
+
+leolaniWorld:harry_looks_sword-injury-with-lightning-shape-at-the-forehead {
+    hp:harry hp:looks hp:sword-injury-with-lightning-shape-at-the-forehead .
+}
+
+leolaniWorld:harry_belongings_flying-broom {
+    hp:harry hp:belongings hp:flying-broom .
+}
+
+leolaniWorld:neville_gender_male {
+    hp:neville hp:gender hp:male .
+}
+
+leolaniWorld:hagrid_lineage_wizard {
+    hp:hagrid hp:lineage hp:wizard .
+}
+
+leolaniWorld:snape_age_adult {
+    hp:snape hp:age hp:adult .
+}
+
+leolaniWorld:petunia_personality_message {
+    hp:petunia hp:personality hp:message .
+}
+
+leolaniWorld:ron_belongings_gray-mouse {
+    hp:ron hp:belongings hp:gray-mouse .
+}
+
+leolaniWorld:hagrid_age_adult {
+    hp:hagrid hp:age hp:adult .
+}
+
+leolaniWorld:harry_gender_male {
+    hp:harry hp:gender hp:male .
+}
+
+leolaniWorld:harry_looks_emerald-green-eyes {
+    hp:harry hp:looks hp:emerald-green-eyes .
+}
+
+leolaniWorld:hagrid_looks_full-of-beards {
+    hp:hagrid hp:looks hp:full-of-beards .
+}
+
+leolaniWorld:ron_gender_male {
+    hp:ron hp:gender hp:male .
+}
+
+leolaniWorld:harry_lineage_mixed-wizard {
+    hp:harry hp:lineage hp:mixed-wizard .
+}
+
+leolaniWorld:ron_age_age-11 {
+    hp:ron hp:age hp:age-11 .
+}
+
+leolaniWorld:ron_lineage_pure-blood-wizard {
+    hp:ron hp:lineage hp:pure-blood-wizard .
+}
+
+leolaniWorld:harry_belongings_magic-wand {
+    hp:harry hp:belongings hp:magic-wand .
+}
+
+leolaniWorld:dudley_looks_blue-eyes {
+    hp:dudley hp:looks hp:blue-eyes .
+}
+
+leolaniWorld:hagrid_title_key-guardian-and-hunting-ground-guard {
+    hp:hagrid hp:title hp:key-guardian-and-hunting-ground-guard .
+}
+
+leolaniWorld:vernon_affiliation_grandine-company {
+    hp:vernon hp:affiliation hp:grandine-company .
+}
+
+leolaniWorld:hagrid_hobbies_like-pets {
+    hp:hagrid hp:hobbies hp:like-pets .
+}
+
+leolaniWorld:petunia_looks_blond-hair {
+    hp:petunia hp:looks hp:blond-hair .
+}
+
+leolaniWorld:ron_looks_red-hair {
+    hp:ron hp:looks hp:red-hair .
+}
+
+leolaniWorld:filch_affiliation_hogvy {
+    hp:filch hp:affiliation hp:hogvy .
+}
+
+leolaniWorld:mcgonagall_age_adult {
+    hp:mcgonagall hp:age hp:adult .
+}
+
+leolaniWorld:Ontology {
+    eps:hasContext a owl:ObjectProperty ;
+        rdfs:domain gaf:Instance,
+            sem:Event ;
+        rdfs:range eps:Context ;
+        rdfs:subPropertyOf eps:contextProperty .
+
+    eps:hasDetection a owl:ObjectProperty ;
+        rdfs:domain eps:Context ;
+        rdfs:range grasp:Detection ;
+        rdfs:subPropertyOf eps:contextProperty .
+
+    gaf:Assertion a owl:Class ;
+        rdfs:subClassOf gaf:Instance .
+
+    grasp:Chat a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    grasp:Experience a owl:Class ;
+        rdfs:subClassOf gaf:Mention,
+            sem:Event .
+
+    grasp:Statement a owl:Class ;
+        rdfs:subClassOf gaf:Mention,
+            sem:Event .
+
+    grasp:Visual a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    grasp:hasAttribution a owl:ObjectProperty ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range grasp:Attribution ;
+        owl:inverseOf grasp:isAttributionFor .
+
+    grasp:wasAttributedTo a owl:ObjectProperty ;
+        rdfs:label "was attributed to" ;
+        rdfs:comment "States that a gaf:Mention was attributed to a gaf:Instance. This is a sub property of the prov:wasAttributedTo relation that can be used to relate any prov:Entity to any prov:Agent." ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range grasp:Source ;
+        rdfs:subPropertyOf prov:wasAttributedTo .
+
+    hp:ability rdfs:subClassOf hp:attribute .
+
+    hp:activity rdfs:subClassOf hp:attribute .
+
+    hp:affiliation rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:age rdfs:domain hp:character ;
+        rdfs:range hp:attribute ;
+        rdfs:subClassOf hp:attribute .
+
+    hp:ancestry rdfs:subClassOf hp:attribute .
+
+    hp:belongings rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:centaur rdfs:subClassOf hp:character .
+
+    hp:designation rdfs:subClassOf hp:attribute .
+
+    hp:domestic-elf rdfs:subClassOf hp:character .
+
+    hp:enchantment rdfs:subClassOf hp:attribute .
+
+    hp:export rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:gender rdfs:domain hp:character ;
+        rdfs:range hp:attribute ;
+        rdfs:subClassOf hp:attribute .
+
+    hp:ghost rdfs:subClassOf hp:character .
+
+    hp:giant rdfs:subClassOf hp:character .
+
+    hp:goblin rdfs:subClassOf hp:character .
+
+    hp:hobbies rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:institution rdfs:subClassOf hp:attribute .
+
+    hp:lineage rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:looks rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:muggle rdfs:subClassOf hp:character .
+
+    hp:object rdfs:subClassOf hp:attribute .
+
+    hp:personality rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:personality-trait rdfs:subClassOf hp:attribute .
+
+    hp:physical-appearance rdfs:subClassOf hp:attribute .
+
+    hp:product rdfs:subClassOf hp:attribute .
+
+    hp:spells rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:spider rdfs:subClassOf hp:character .
+
+    hp:squib rdfs:subClassOf hp:character .
+
+    hp:talents rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:title rdfs:domain hp:character ;
+        rdfs:range hp:attribute .
+
+    hp:werewolf rdfs:subClassOf hp:character .
+
+    hp:wizard rdfs:subClassOf hp:character .
+
+    <http://schema.org/Place> a owl:Class .
+
+    sem:hasActor a owl:ObjectProperty ;
+        rdfs:label "has Actor" ;
+        rdfs:comment "Has actor is used to state which Actors or Objects participate in an Event." ;
+        rdfs:range sem:Actor ;
+        rdfs:subPropertyOf sem:eventProperty .
+
+    sem:hasBeginTimeStamp a owl:DatatypeProperty ;
+        rdfs:label "has begin timestamp" ;
+        rdfs:comment "Has begin timestamp is used to indicate the beginning of a time interval. Omitting the hasBeginTimeStamp while stating a hasEndTimeStamp is interpreted as an open ended interval." ;
+        rdfs:subPropertyOf sem:hasTimeStamp .
+
+    sem:hasPlace a owl:ObjectProperty ;
+        rdfs:label "has Place" ;
+        rdfs:comment "Has place is used to state in which Place(s) an Event happened. Coordinates can be attached to the Place with the W3C Geospatial Vocabulary (http://www.w3.org/2005/Incubator/geo/XGR-geo-20071023/)." ;
+        rdfs:range sem:Place ;
+        rdfs:subPropertyOf sem:eventProperty .
+
+    sem:hasSubEvent a owl:ObjectProperty ;
+        rdfs:label "has subevent" ;
+        rdfs:comment "Has subevent connects an Event to other Events that belong to it. This is a very generic property that does not mean the subevents fully define the superconcept or that there is any causal relationship." ;
+        rdfs:domain sem:Event ;
+        rdfs:range sem:Event ;
+        rdfs:subPropertyOf sem:eventProperty ;
+        owl:inverseOf sem:subEventOf .
+
+    sem:hasTime a owl:ObjectProperty ;
+        rdfs:label "has Time" ;
+        rdfs:comment "Has time is used to indicate at which time an Event took place or when a property under the Temporary Constraint is valid. Has time points to a symbolic representation of time, which allows semantic relations between time resources. (see http://www.w3.org/TR/owl-time/)" ;
+        rdfs:range sem:Time ;
+        rdfs:subPropertyOf sem:eventProperty .
+
+    skos:broadMatch a owl:AnnotationProperty .
+
+    skos:closeMatch a owl:AnnotationProperty .
+
+    skos:narrowMatch a owl:AnnotationProperty .
+
+    prov:category a owl:AnnotationProperty .
+
+    prov:component a owl:AnnotationProperty .
+
+    prov:definition a owl:AnnotationProperty .
+
+    prov:hadDerivation a owl:ObjectProperty ;
+        owl:inverseOf prov:wasDerivedFrom .
+
+    prov:inverse a owl:AnnotationProperty .
+
+    prov:qualifiedForm a owl:AnnotationProperty .
+
+    gaf:containsDenotation a owl:ObjectProperty ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range gaf:Instance ;
+        owl:inverseOf gaf:denotedIn .
+
+    gaf:denotedBy a owl:ObjectProperty ;
+        rdfs:domain gaf:Instance ;
+        rdfs:range gaf:Mention ;
+        rdfs:subPropertyOf gaf:denotedIn ;
+        owl:inverseOf gaf:denotes .
+
+    grasp:Source a owl:Class ;
+        rdfs:label "Source" ;
+        rdfs:comment "" ;
+        rdfs:subClassOf owl:Thing .
+
+    grasp:Utterance a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    graspe:anger a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:disgust a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:fear a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:happiness a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:sadness a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspe:surprise a grasp:EmotionValue,
+            owl:NamedIndividual .
+
+    graspf:certain a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    graspf:future a grasp:TemporalValue,
+            owl:NamedIndividual .
+
+    graspf:negative a grasp:PolarityValue,
+            owl:NamedIndividual .
+
+    graspf:non-future a grasp:TemporalValue,
+            owl:NamedIndividual .
+
+    graspf:positive a grasp:PolarityValue,
+            owl:NamedIndividual .
+
+    graspf:possible a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    graspf:probable a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    graspf:underspecified a grasp:CertaintyValue,
+            owl:NamedIndividual .
+
+    grasps:negative a grasp:SentimentValue,
+            owl:NamedIndividual .
+
+    grasps:positive a grasp:SentimentValue,
+            owl:NamedIndividual .
+
+    sem:Actor a owl:Class ;
+        rdfs:label "Actor" ;
+        rdfs:comment """Actors are entities that take part in an Event, either actively or passively. Actors do not necessarily have to be sentient. They can also be objects. Actors are a thing, animate or inanimate, physical or non-physical.
+""" ;
+        skos:broadMatch <http://sw.opencyc.org/2009/04/07/concept/en/SomethingExisting>,
+            <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant> ;
+        skos:closeMatch dcterms:Agent,
+            dcterms:AgentClass,
+            <http://sw.opencyc.org/2009/04/07/concept/en/Agent-Generic>,
+            <http://www.ontologyportal.org/translations/SUMO.owl.txt#Agent>,
+            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor>,
+            foaf:Agent .
+
+    sem:Place a owl:Class ;
+        rdfs:label "Place" ;
+        rdfs:comment "Places are locations where an Event happens. They do not need to be physical places and hence do not necessarily need coordinates. Neither do they need to have any significance apart from them being the location of an Event." ;
+        skos:closeMatch dcterms:Location,
+            <http://sw.opencyc.org/2009/04/07/concept/en/EnduringThing-Localized>,
+            <http://www.ontologyportal.org/translations/SUMO.owl.txt#GeographicArea>,
+            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place> ;
+        skos:narrowMatch <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#PhysicalRegion>,
+            wgs:SpatialThing .
+
+    sem:Time a owl:Class ;
+        rdfs:label "Time" ;
+        rdfs:comment "Time contains symbolic representations of when an Event took place. Time instances do not necessarily need to have a timestamp associated with them. The Time class exists to represent semantics of time, e.g. that one thing happens before another, even though the exact timestamps are unknown." ;
+        skos:broadMatch <http://www.w3.org/2006/timeTemporalEntity> .
+
+    sem:subEventOf a owl:ObjectProperty ;
+        rdfs:label "subevent of" ;
+        rdfs:comment "Inverse property of hasSubEvent" .
+
+    rdf:value a owl:ObjectProperty .
+
+    prov:wasAttributedTo a owl:ObjectProperty .
+
+    prov:wasDerivedFrom a owl:ObjectProperty ;
+        rdfs:label "wasDerivedFrom" ;
+        rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range grasp:Detection,
+            grasp:Utterance ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        prov:category "starting-point" ;
+        prov:component "derivations" ;
+        prov:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
+        prov:inverse "hadDerivation" ;
+        prov:qualifiedForm prov:Derivation .
+
+    foaf:Agent a owl:Class .
+
+    eps:Context a owl:Class .
+
+    eps:contextProperty a owl:ObjectProperty ;
+        rdfs:label "context property" ;
+        rdfs:comment "Context properties connect Context to other SEM Core entities." ;
+        owl:equivalentProperty sem:eventProperty .
+
+    gaf:denotedIn a owl:ObjectProperty ;
+        rdfs:domain gaf:Instance ;
+        rdfs:range gaf:Mention .
+
+    gaf:denotes a owl:ObjectProperty ;
+        rdfs:domain gaf:Mention ;
+        rdfs:range gaf:Instance ;
+        rdfs:subPropertyOf gaf:containsDenotation .
+
+    grasp:Attribution a owl:Class ;
+        rdfs:label "Attribution" ;
+        rdfs:comment "A grasp:Attribution reflects the attribution of some interpretation, some perspective to a gaf:Mention. An attribution expresses such things as certainty, emotion, polarity, sentiment, temporality." ;
+        owl:disjointWith grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:intersectionOf ( [ a owl:Restriction ;
+                            owl:onProperty grasp:isAttributionFor ;
+                            owl:someValuesFrom gaf:Mention ] [ a owl:Restriction ;
+                            owl:onProperty rdf:value ;
+                            owl:someValuesFrom grasp:AttributionValue ] ) ] .
+
+    grasp:Detection a owl:Class ;
+        rdfs:subClassOf sem:Event .
+
+    grasp:isAttributionFor a owl:ObjectProperty ;
+        rdfs:domain grasp:Attribution ;
+        rdfs:range gaf:Mention .
+
+    grasp:PolarityValue a owl:Class ;
+        rdfs:label "Polarity Value" ;
+        rdfs:comment "The polarity of a gaf:Mention (e.g. if something is or isn't the case)" ;
+        rdfs:subClassOf grasp:FactualityValue ;
+        owl:disjointWith grasp:TemporalValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspf:negative graspf:positive ) ] .
+
+    grasp:CertaintyValue a owl:Class ;
+        rdfs:label "Certainty Value" ;
+        rdfs:comment "The level of certainty of a gaf:Mention" ;
+        rdfs:subClassOf grasp:FactualityValue ;
+        owl:disjointWith grasp:PolarityValue,
+            grasp:TemporalValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspf:certain graspf:possible graspf:probable graspf:underspecified ) ] .
+
+    grasp:FactualityValue a owl:Class ;
+        rdfs:label "Factuality value" ;
+        rdfs:subClassOf grasp:AttributionValue ;
+        owl:disjointWith grasp:SentimentValue .
+
+    grasp:SentimentValue a owl:Class ;
+        rdfs:label "Sentiment Value" ;
+        rdfs:comment "The sentiment expressed by a gaf:Mention" ;
+        rdfs:subClassOf grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( grasps:negative grasps:positive ) ] .
+
+    grasp:TemporalValue a owl:Class ;
+        rdfs:label "Temporal Value" ;
+        rdfs:comment "The temporal property of a gaf:Mention" ;
+        rdfs:subClassOf grasp:FactualityValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspf:future graspf:non-future ) ] .
+
+    sem:eventProperty a owl:ObjectProperty ;
+        rdfs:label "event property" ;
+        rdfs:comment "Event properties connect Events to other SEM Core entities." .
+
+    grasp:EmotionValue a owl:Class ;
+        rdfs:label "Emotion Value" ;
+        rdfs:comment "The emotion expressed in a gaf:Mention" ;
+        rdfs:subClassOf grasp:AttributionValue ;
+        owl:disjointWith grasp:FactualityValue,
+            grasp:SentimentValue ;
+        owl:equivalentClass [ a owl:Class ;
+                owl:oneOf ( graspe:anger graspe:disgust graspe:fear graspe:happiness graspe:sadness graspe:surprise ) ] .
+
+    gaf:Instance a owl:Class ;
+        rdfs:label "Instance" ;
+        rdfs:comment "Instances are statements about real world entities, including actions, processes and abstract notions. They are the primary subject of individuals of type gaf:Mention that can denote them." ;
+        rdfs:subClassOf owl:Thing ;
+        owl:disjointWith grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Restriction ;
+                owl:onProperty gaf:denotedBy ;
+                owl:someValuesFrom gaf:Mention ] .
+
+    grasp:AttributionValue a owl:Class ;
+        rdfs:label "Attribution value" ;
+        rdfs:comment "The value of a grasp:Attribution" ;
+        rdfs:subClassOf owl:Thing .
+
+    sem:Event a owl:Class ;
+        rdfs:label "Event" ;
+        rdfs:comment "Events are things that happen. This comprises everything from historical events to web site sessions and mythical journeys. Event is the central class of SEM." ;
+        skos:broadMatch <http://linkedevents.org/ontology/Event>,
+            <http://purl.org/NET/c4dm/event.owl#Event> ;
+        skos:closeMatch dcmitype:Event,
+            <http://sw.opencyc.org/2009/04/07/concept/en/Situation>,
+            <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant>,
+            <http://www.ontologyportal.org/translations/SUMO.owl.txt#Process>,
+            <http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E5.Event> .
+
+    gaf:Mention a owl:Class ;
+        rdfs:label "Mention" ;
+        rdfs:comment """Mentions are references to members of the gaf:Instance class as they occur in (web) media such as texts, video, audio, images, etc. Mentions denote gaf:Instances.
+
+A Mention uniquely identifies the (part of a) web source that denotes the mention. We refer to the standard use of fragment identifiers for different media types. """ ;
+        rdfs:subClassOf owl:Thing ;
+        owl:disjointWith grasp:AttributionValue ;
+        owl:equivalentClass [ a owl:Restriction ;
+                owl:onProperty gaf:denotes ;
+                owl:someValuesFrom gaf:Instance ] .
+
+    hp:character a owl:Class .
+
+    hp:attribute a owl:Class .
+}
+
+leolaniWorld:neville_affiliation_hogvy {
+    hp:neville hp:affiliation hp:hogvy .
+}
+
+leolaniWorld:hagrid_affiliation_hogwarts {
+    hp:hagrid hp:affiliation hp:hogwarts .
+}
+
+leolaniWorld:hermione_affiliation_hogvy {
+    hp:hermione hp:affiliation hp:hogvy .
+}
+
+leolaniWorld:filch_gender_male {
+    hp:filch hp:gender hp:male .
+}
+
+leolaniWorld:harry_age_age-11 {
+    hp:harry hp:age hp:age-11 .
+}
+
+leolaniWorld:harry_belongings_gray-mouse {
+    hp:harry hp:belongings hp:gray-mouse .
+}
+
+leolaniWorld:neville_looks_round-face {
+    hp:neville hp:looks hp:round-face .
+}
+
+leolaniWorld:harry_lineage_pure-blood-wizard {
+    hp:harry hp:lineage hp:pure-blood-wizard .
+}
+
+leolaniWorld:vernon_personality_mean {
+    hp:vernon hp:personality hp:mean .
+}
+
 leolaniWorld:flitwick_age_adult {
     hp:flitwick hp:age hp:adult .
 }
 
-leolaniWorld:hermione_lineage_mixed-wizard {
-    hp:hermione hp:lineage hp:mixed-wizard .
+leolaniWorld:petunia_personality_gossip {
+    hp:petunia hp:personality hp:gossip .
+}
+
+leolaniTalk:Interactions {
+    leolaniContext:context198 a eps:Context ;
+        rdfs:label "context198" ;
+        hp:id "198"^^xml1:string ;
+        sem:hasBeginTimeStamp leolaniContext:1997-06-26 ;
+        sem:hasEvent leolaniTalk:chat1 ;
+        sem:hasPlace leolaniContext:harry-potter-world .
+
+    leolaniContext:1997-06-26 a sem:Time,
+            time1:DateTimeDescription ;
+        rdfs:label "1997-06-26" ;
+        time1:day "26"^^xml1:gDay ;
+        time1:month "6"^^xml1:gMonthDay ;
+        time1:unitType time1:unitDay ;
+        time1:year "1997"^^xml1:gYear .
+
+    leolaniContext:harry-potter-world a hp:location,
+            sem:Place ;
+        rdfs:label "harry-potter-world" ;
+        hp:id "1"^^xml1:string ;
+        hp:in leolaniWorld:Edinburgh,
+            leolaniWorld:Scotland,
+            leolaniWorld:UK .
+
+    leolaniTalk:chat1 a grasp:Chat,
+            sem:Event ;
+        rdfs:label "chat1" ;
+        hp:id "1"^^xml1:string ;
+        sem:hasSubEvent leolaniTalk:chat1_utterance10,
+            leolaniTalk:chat1_utterance12,
+            leolaniTalk:chat1_utterance13,
+            leolaniTalk:chat1_utterance15,
+            leolaniTalk:chat1_utterance16,
+            leolaniTalk:chat1_utterance2,
+            leolaniTalk:chat1_utterance3,
+            leolaniTalk:chat1_utterance5,
+            leolaniTalk:chat1_utterance8,
+            leolaniTalk:chat1_utterance9 .
+
+    leolaniTalk:chat1_utterance10 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance10" ;
+        hp:id "10"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniTalk:chat1_utterance12 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance12" ;
+        hp:id "12"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniTalk:chat1_utterance13 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance13" ;
+        hp:id "13"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniTalk:chat1_utterance15 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance15" ;
+        hp:id "15"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniTalk:chat1_utterance16 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance16" ;
+        hp:id "16"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniTalk:chat1_utterance2 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance2" ;
+        hp:id "2"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniTalk:chat1_utterance3 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance3" ;
+        hp:id "3"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniTalk:chat1_utterance5 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance5" ;
+        hp:id "5"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniTalk:chat1_utterance8 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance8" ;
+        hp:id "8"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniTalk:chat1_utterance9 a grasp:Utterance,
+            sem:Event ;
+        rdfs:label "chat1_utterance9" ;
+        hp:id "9"^^xml1:string ;
+        sem:hasActor leolaniFriends:jk-rowling .
+
+    leolaniWorld:Edinburgh a hp:city,
+            hp:location,
+            sem:Place ;
+        rdfs:label "Edinburgh" .
+
+    leolaniWorld:Scotland a hp:location,
+            hp:region,
+            sem:Place ;
+        rdfs:label "Scotland" .
+
+    leolaniWorld:UK a hp:country,
+            hp:location,
+            sem:Place ;
+        rdfs:label "UK" .
+
+    leolaniFriends:jk-rowling a gaf:Instance,
+            grasp:Source,
+            hp:author,
+            hp:person,
+            sem:Actor ;
+        rdfs:label "jk-rowling" .
+}
+
+leolaniWorld:vernon_belongings_car {
+    hp:vernon hp:belongings hp:car .
+}
+
+leolaniWorld:mcgonagall_looks_square-lenses {
+    hp:mcgonagall hp:looks hp:square-lenses .
 }
 
 leolaniWorld:mcgonagall_affiliation_hogwarts {
     hp:mcgonagall hp:affiliation hp:hogwarts .
 }
 
-leolaniWorld:harry_belongings_owl {
-    hp:harry hp:belongings hp:owl .
+leolaniWorld:petunia_looks_long-neck {
+    hp:petunia hp:looks hp:long-neck .
+}
+
+leolaniWorld:harry_looks_very-thin {
+    hp:harry hp:looks hp:very-thin .
+}
+
+leolaniWorld:petunia_looks_slender {
+    hp:petunia hp:looks hp:slender .
+}
+
+leolaniWorld:dudley_age_age-11 {
+    hp:dudley hp:age hp:age-11 .
+}
+
+leolaniWorld:dudley_personality_selfish {
+    hp:dudley hp:personality hp:selfish .
+}
+
+leolaniWorld:snape_gender_male {
+    hp:snape hp:gender hp:male .
+}
+
+leolaniWorld:hagrid_gender_male {
+    hp:hagrid hp:gender hp:male .
 }
 
