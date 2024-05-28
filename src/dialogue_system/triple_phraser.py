@@ -147,7 +147,7 @@ class TriplePhraser(SimplenlgPhraser):
         entity_role = selected_thought["extra_info"]
 
         # There is no novelty information, so happy to learn
-        if not selected_thought or not selected_thought["thought_info"]:
+        if not selected_thought or not selected_thought["thought_info"] or selected_thought["thought_info"]["value"]:
             # Capsule with original triple subject or object, user should add predicate and other entity to keep learning
             if entity_role == '_subject':
                 capsule_user['subject'] = utterance['subject']

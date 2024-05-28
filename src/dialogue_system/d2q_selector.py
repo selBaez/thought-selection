@@ -19,14 +19,14 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 ################## STATE REPRESENTATION PARAMETERS ##################
 STATE_HIDDEN_SIZE = 64  # original features per node is 87
-STATE_EMBEDDING_SIZE = 16  # 4 in tutorial, also n_observations
+STATE_EMBEDDING_SIZE = 16  # also n_observations
 
 ################## MEMORY PARAMETERS ##################
-REPLAY_POOL_SIZE = 100  # 5000 for DQN, 10000 for tutorial
-BATCH_SIZE = 2  # 16 for D2Q, 128 tutorial
+REPLAY_POOL_SIZE = 10  # 5000 for DQN, 10000 for tutorial
+BATCH_SIZE = 3  # 16 for D2Q, 128 tutorial
 
 ################## RL PARAMETERS ##################
-DQN_HIDDEN_SIZE = 128  # 80 for DQN
+DQN_HIDDEN_SIZE = 64  # 80 for DQN
 LR = 1e-4  # 1e-4 for D2Q
 EPSILON_INFO = {"start": 0.9, "end": 0.05, "decay": 1000}
 GAMMA = 0.99
@@ -38,8 +38,16 @@ ACTION_THOUGHTS = {0: '_complement_conflict', 1: '_negation_conflicts',
 N_ACTIONS_THOUGHTS = len(ACTION_THOUGHTS)
 
 ################## DATASET SPECIFIC PARAMETERS ##################
-ACTION_TYPES = {0: 'character', 1: 'attribute'}
+ACTION_TYPES = {0: 'character', 1: "centaur", 2: "domestic-elf", 3: "ghost", 4: "giant", 5: "goblin", 6: "muggle",
+                7: "spider", 8: "squib", 9: "werewolf", 10: "wizard",
+
+                11: 'attribute', 12: "ability", 13: "activity", 14: "age", 15: "ancestry", 16: "designation",
+                17: "enchantment", 18: "gender", 19: "institution", 20: "object", 21: "personality-trait",
+                22: "physical-appearance", 23: "product",
+
+                24: "Instance", 25: "Source", 26: "Actor"}
 N_ACTION_TYPES = len(ACTION_TYPES)
+ACTION_TYPES_REVERSED = {value: key for key, value in ACTION_TYPES.items()}
 
 Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
 
@@ -69,8 +77,8 @@ class D2Q(ThoughtSelector):
         self.steps_done = 0
 
         # D2Q infrastructure
-        self.policy_net = DQN(STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS).to(DEVICE)
-        self.target_net = DQN(STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS).to(DEVICE)
+        self.policy_net = DQN(STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS, N_ACTION_TYPES).to(DEVICE)
+        self.target_net = DQN(STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS, N_ACTION_TYPES).to(DEVICE)
         self.target_net.load_state_dict(self.policy_net.state_dict())
         self.optimizer = optim.AdamW(self.policy_net.parameters(), lr=learning_rate, amsgrad=True)
 
@@ -204,24 +212,45 @@ class D2Q(ThoughtSelector):
         if sample > eps_threshold:
             # Use model to choose action
             with torch.no_grad():
-                # t.max(1) will return the largest column value of each row.
-                # second column on max result is index of max element, so we pick action with the larger expected reward
-                action_tensor = self.policy_net(self._state_history["embeddings"][-1]).max(1).indices.view(1, 1)
+                full_tensor = self.policy_net(self._state_history["embeddings"][-1])
+                # t.max(1) will pick action with the larger value
+                action_tensor = full_tensor[:, :N_ACTIONS_THOUGHTS].max(1).indices.view(1, 1)
                 action_name = ACTION_THOUGHTS[int(action_tensor[0])]
+
+                subaction_tensor = full_tensor[:, N_ACTIONS_THOUGHTS:]
                 self._log.debug(f"Select action with policy network")
+
         else:
-            # Random action for exploration
+            # Random action for exploration, equal distribution for any subaction
             [sampled_action] = random.sample(ACTION_THOUGHTS.keys(), 1)
             action_tensor = torch.tensor([[sampled_action]], device=DEVICE, dtype=torch.long)
             action_name = ACTION_THOUGHTS[sampled_action]
+
+            subaction_tensor = torch.full((1, N_ACTION_TYPES), 1 / N_ACTION_TYPES, device=DEVICE, dtype=torch.float)
             self._log.debug(f"Select random action")
 
-        # Random subaction for exploration
-        [sampled_subaction] = random.sample(ACTION_TYPES.keys(), 1)
-        subaction_tensor = torch.tensor([[sampled_subaction]], device=DEVICE, dtype=torch.long)
-        subaction_name = ACTION_TYPES[sampled_subaction]
+        return action_name, action_tensor, subaction_tensor
 
-        return action_name, action_tensor, subaction_name, subaction_tensor
+    def score_thoughts(self, processed_actions, subaction_tensor):
+        action_scores = []
+        for action in processed_actions:
+            # Compute score for each element of the action
+            score = []
+            for typ, count in action["entity_types"].items():
+                # Find index for the entity type
+                subaction_idx = ACTION_TYPES_REVERSED.get(typ, -1)
+
+                if subaction_idx >= 0:
+                    # add to score
+                    for i in range(count):
+                        score.append(subaction_tensor[0, subaction_idx].item())
+                else:
+                    self._log.info(f"Entity type not in subaction vocabulary: {typ}")
+
+            # Convert element-scores into action score
+            action_scores.append((action, np.mean(score)))
+
+        return action_scores
 
     def select(self, actions):
         """Selects an action from the set of available actions that maximizes
@@ -232,27 +261,17 @@ class D2Q(ThoughtSelector):
 
         returns: action
         """
-        # TODO add entity types logic
-
         # Select thought type and make sure that type is available
         processed_actions = {}
         while len(processed_actions) == 0:
             # Select action
-            action_name, action_tensor, subaction_name, subaction_tensor = self._select_by_network()
+            action_name, action_tensor, subaction_tensor = self._select_by_network()
 
-            # Safe processing, selecting the thought type already
+            # Safe processing, filter by selected action (thought type)
             processed_actions = self._preprocess(actions, thought_options=[action_name])
 
-        action_scores = []
-        for action in processed_actions:
-            # Compute score for each element of the action
-            score = []
-            for typ, count in action["entity_types"].items():
-                # if entity type in selected entity type, add it
-                score.append(count)
-
-            # Convert element-scores into action score
-            action_scores.append((action, np.mean(score)))
+        # Score actions according to subactions (entity types)
+        action_scores = self.score_thoughts(processed_actions, subaction_tensor)
 
         # Greedy selection
         selected_action, action_score = max(action_scores, key=lambda x: x[1])
@@ -288,20 +307,23 @@ class D2Q(ThoughtSelector):
             next_state_batch = torch.cat(batch.next_state)
             reward_batch = torch.cat(batch.reward)
 
-            # Compute Q(s_t, a) - the model computes Q(s_t), then we select the columns of actions taken.
-            # These are the actions which would've been taken for each batch state according to policy_net
+            # Compute action values based on the policy net: Q(s_t, a)
+            # The model computes Q(s_t), then we select the columns of actions taken.
+            # These are always valid action values, as it ignores subactions
             state_action_values = self.policy_net(state_batch).gather(1, action_batch)
 
-            # Compute V(s_{t+1}) for all next states.
-            # Expected values of actions are computed based on the "older" target_net; selecting their best reward
+            # Compute action values for all next states based on the "older" target_net: V(s_{t+1})
+            # The model computes the values of actions, then we select based on the best reward
+            # Here we do need to set apart the subactions as they all come in the same vector from the model
             with torch.no_grad():
-                next_state_values = self.target_net(next_state_batch).max(1).values
+                next_state_values = self.target_net(next_state_batch)
+                next_state_values = next_state_values[:, :N_ACTIONS_THOUGHTS].max(1).values
 
             # Compute the expected Q values
             expected_state_action_values = (next_state_values * self.gamma) + reward_batch
-            expected_state_action_values = expected_state_action_values.unsqueeze(1)  # Ensure correct shape
+            expected_state_action_values = expected_state_action_values.unsqueeze(1)
 
-            # Compute Huber loss
+            # Compute Huber loss, only on abstract actions
             criterion = nn.SmoothL1Loss()
             loss = criterion(state_action_values, expected_state_action_values)
             self._log.debug(f"Computing loss between policy and target net predicted action values")
@@ -358,59 +380,40 @@ class D2Q(ThoughtSelector):
         return reward
 
 
-# class DQN(nn.Module):
-#     def __init__(self, input_size, hidden_size, output_size):
-#         super(DQN, self).__init__()
-#
-#         self.adv = nn.Sequential(OrderedDict([('w1', nn.Linear(input_size, hidden_size)),
-#                                               ('relu', nn.Tanh()),
-#                                               ('w2', nn.Linear(hidden_size, output_size))]))
-#         self.vf = nn.Sequential(OrderedDict([('w1', nn.Linear(input_size, hidden_size)),
-#                                              ('relu', nn.Tanh()),
-#                                              ('w2', nn.Linear(hidden_size, 4 + 2))]))
-#
-#         # self.w1 = torch.Tensor([1.0])
-#         # self.w1.requires_grad
-#         # self.w1 = 0.3
-#
-#     def forward(self, x):
-#         v = self.vf(x)
-#         adv = self.adv(x)
-#
-#         batch_comm_x = v[:, 0:4]  #### comm action
-#         batch_inf_x = v[:, 4:5]  #### inform action
-#         batch_req_x = v[:, 5:]  #### request action
-#
-#         self.w1 = 1.8
-#
-#         # movie
-#         v_expand = torch.cat((batch_comm_x,
-#                               batch_inf_x.repeat(1, 13),
-#                               batch_req_x.repeat(1, 12)), 1)
-#
-#         adv = adv - adv.mean(-1).unsqueeze(1).expand(adv.size())
-#
-#         # return v_expand + adv
-#         return self.w1 * v_expand + (2.0 - self.w1) * adv
-#
-#     def predict(self, x):
-#         y = self.forward(x)
-#         return torch.argmax(y, 1)
-
 class DQN(nn.Module):
 
-    def __init__(self, n_observations, n_actions, hidden_size=DQN_HIDDEN_SIZE):
+    def __init__(self, n_observations, n_abs_actions, n_spe_actions, hidden_size=DQN_HIDDEN_SIZE):
         super(DQN, self).__init__()
+        # Shared learning
         self.layer1 = nn.Linear(n_observations, hidden_size)
         self.layer2 = nn.Linear(hidden_size, hidden_size)
-        self.layer3 = nn.Linear(hidden_size, n_actions)
 
-    # Called with either one element to determine next action, or a batch
-    # during optimization. Returns tensor([[left0exp,right0exp]...]).
+        # Abstract action learning (thought types)
+        self.layer3_abs = nn.Linear(hidden_size, n_abs_actions)
+        self.softmax_abs = nn.Softmax(dim=1)
+
+        # Specific action learning (entity types in thoughts)
+        self.layer3_spe = nn.Linear(hidden_size, n_spe_actions)
+        self.softmax_spe = nn.Softmax(dim=1)
+
+        # self.layer3 = nn.Linear(hidden_size, n_abs_actions)
+
     def forward(self, x):
+        # Called with either one element to determine next action, or a batch during optimization.
         x = F.relu(self.layer1(x))
         x = F.relu(self.layer2(x))
-        return self.layer3(x)
+
+        x_abs = self.layer3_abs(x)
+        x_abs = self.softmax_abs(x_abs)
+
+        x_spe = self.layer3_spe(x)
+        x_spe = self.softmax_abs(x_spe)
+
+        y = torch.cat((x_abs, x_spe), 1)
+
+        return y
+
+        # return self.layer3(x)
 
 
 class ReplayMemory(object):
