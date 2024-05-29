@@ -37,9 +37,9 @@ PLACE_NAME = "office"
 # LOCATION = requests.get("https://ipinfo.io").json()
 LOCATION = {"country": "MX", "region": "Mexico City", "city": "Mexico City"}
 BASE_CAPSULE = {
-    "chat": None,  # from dialogue_system / prev capsule
-    "turn": None,  # from dialogue_system
-    "author": None,  # from dialogue_system
+    "chat": None,  # from src.dialogue_system / prev capsule
+    "turn": None,  # from src.dialogue_system
+    "author": None,  # from src.dialogue_system
     "utterance": "",
     "utterance_type": None,
     "position": "",

@@ -12,6 +12,6 @@
 
 
 if __name__ == '__main__':
-    from user_interface.application import application
+    from src.user_interface.application import application
     # Run
     application.run(debug=True)

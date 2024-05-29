@@ -4,10 +4,10 @@ from copy import deepcopy
 from datetime import datetime
 
 import pandas as pd
-from iribaker import to_iri
-
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.commons.discrete import UtteranceType, Certainty, Polarity, Sentiment
+from iribaker import to_iri
+
 from src.dialogue_system.utils.global_variables import ONTOLOGY_DETAILS, RAW_USER_PATH, HARRYPOTTER_NS, \
     CHARACTER_TYPE_PATH, ATTRIBUTE_TYPE_PATH
 from src.dialogue_system.utils.helpers import get_all_characters, get_all_attributes

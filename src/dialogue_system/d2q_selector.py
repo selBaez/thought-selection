@@ -1,55 +1,27 @@
 import math
 import random
-from collections import namedtuple, deque
+from collections import deque
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+from rdflib import ConjunctiveGraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 
 from cltl.thoughts.api import ThoughtSelector
-from cltl.thoughts.thought_selection.rl_selector import BrainEvaluator
 from cltl.thoughts.thought_selection.utils.thought_utils import decompose_thoughts
+from src.dialogue_system.metrics.graph_measures import get_avg_degree, get_sparseness, get_shortest_path
+from src.dialogue_system.metrics.ontology_measures import get_avg_population
 from src.dialogue_system.utils.encode_state import HarryPotterRDF, EncoderAttention
 from src.dialogue_system.utils.helpers import download_from_triplestore
-
-DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-################## STATE REPRESENTATION PARAMETERS ##################
-STATE_HIDDEN_SIZE = 64  # original features per node is 87
-STATE_EMBEDDING_SIZE = 16  # also n_observations
-
-################## MEMORY PARAMETERS ##################
-REPLAY_POOL_SIZE = 10  # 5000 for DQN, 10000 for tutorial
-BATCH_SIZE = 3  # 16 for D2Q, 128 tutorial
-
-################## RL PARAMETERS ##################
-DQN_HIDDEN_SIZE = 64  # 80 for DQN
-LR = 1e-4  # 1e-4 for D2Q
-EPSILON_INFO = {"start": 0.9, "end": 0.05, "decay": 1000}
-GAMMA = 0.99
-TAU = 0.005
-ACTION_THOUGHTS = {0: '_complement_conflict', 1: '_negation_conflicts',
-                   2: '_statement_novelty', 3: '_entity_novelty',
-                   4: '_subject_gaps', 5: '_complement_gaps',
-                   6: '_overlaps', 7: '_trust'}
-N_ACTIONS_THOUGHTS = len(ACTION_THOUGHTS)
-
-################## DATASET SPECIFIC PARAMETERS ##################
-ACTION_TYPES = {0: 'character', 1: "centaur", 2: "domestic-elf", 3: "ghost", 4: "giant", 5: "goblin", 6: "muggle",
-                7: "spider", 8: "squib", 9: "werewolf", 10: "wizard",
-
-                11: 'attribute', 12: "ability", 13: "activity", 14: "age", 15: "ancestry", 16: "designation",
-                17: "enchantment", 18: "gender", 19: "institution", 20: "object", 21: "personality-trait",
-                22: "physical-appearance", 23: "product",
-
-                24: "Instance", 25: "Source", 26: "Actor"}
-N_ACTION_TYPES = len(ACTION_TYPES)
-ACTION_TYPES_REVERSED = {value: key for key, value in ACTION_TYPES.items()}
-
-Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
+from src.dialogue_system.utils.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, plot_metrics_over_time
+from src.dialogue_system.utils.rl_parameters import DEVICE, STATE_HIDDEN_SIZE, STATE_EMBEDDING_SIZE, REPLAY_POOL_SIZE, \
+    BATCH_SIZE, DQN_HIDDEN_SIZE, LR, EPSILON_INFO, GAMMA, TAU, ACTION_THOUGHTS, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, \
+    ACTION_TYPES_REVERSED, Transition
 
 
 class D2Q(ThoughtSelector):
@@ -103,6 +75,7 @@ class D2Q(ThoughtSelector):
         self._update_states()
         self._reward_history = [0]
         self._action_history = [None]
+        self._selection_history = [None]
 
         # Load learned policy
         # self.load(savefile)
@@ -119,6 +92,10 @@ class D2Q(ThoughtSelector):
     @property
     def action_history(self):
         return self._action_history
+
+    @property
+    def selection_history(self):
+        return self._selection_history
 
     @property
     def state_evaluator(self):
@@ -231,57 +208,15 @@ class D2Q(ThoughtSelector):
 
         return action_name, action_tensor, subaction_tensor
 
-    def score_thoughts(self, processed_actions, subaction_tensor):
-        action_scores = []
-        for action in processed_actions:
-            # Compute score for each element of the action
-            score = []
-            for typ, count in action["entity_types"].items():
-                # Find index for the entity type
-                subaction_idx = ACTION_TYPES_REVERSED.get(typ, -1)
-
-                if subaction_idx >= 0:
-                    # add to score
-                    for i in range(count):
-                        score.append(subaction_tensor[0, subaction_idx].item())
-                else:
-                    self._log.info(f"Entity type not in subaction vocabulary: {typ}")
-
-            # Convert element-scores into action score
-            action_scores.append((action, np.mean(score)))
-
-        return action_scores
-
-    def select(self, actions):
-        """Selects an action from the set of available actions that maximizes
-        the average observed reward, taking into account uncertainty.
-
-        params
-        list actions: List of actions from which to select
-
-        returns: action
-        """
-        # Select thought type and make sure that type is available
-        processed_actions = {}
-        while len(processed_actions) == 0:
-            # Select action
-            action_name, action_tensor, subaction_tensor = self._select_by_network()
-
-            # Safe processing, filter by selected action (thought type)
-            processed_actions = self._preprocess(actions, thought_options=[action_name])
-
-        # Score actions according to subactions (entity types)
-        action_scores = self.score_thoughts(processed_actions, subaction_tensor)
-
-        # Greedy selection
-        selected_action, action_score = max(action_scores, key=lambda x: x[1])
-        self._action_history.append(action_tensor)
-        self._log.debug(f"Selected action {selected_action} with score {action_score}")
-
-        # Safe processing
-        thought_type, thought_info = self._postprocess(processed_actions, selected_action)
-
-        return {thought_type: thought_info}
+    def _target_net_update(self):
+        # Soft update of the target network's weights
+        # θ′ ← τ θ + (1 −τ )θ′
+        target_net_state_dict = self.target_net.state_dict()
+        policy_net_state_dict = self.policy_net.state_dict()
+        for key in policy_net_state_dict:
+            target_net_state_dict[key] = policy_net_state_dict[key] * TAU + target_net_state_dict[key] * (1 - TAU)
+        self.target_net.load_state_dict(target_net_state_dict)
+        self._log.info(f"Updating target net")
 
     def update_utility(self):
         """Updates the policy network by
@@ -337,16 +272,6 @@ class D2Q(ThoughtSelector):
             torch.nn.utils.clip_grad_value_(self.policy_net.parameters(), 100)
             self.optimizer.step()
 
-    def _target_net_update(self):
-        # Soft update of the target network's weights
-        # θ′ ← τ θ + (1 −τ )θ′
-        target_net_state_dict = self.target_net.state_dict()
-        policy_net_state_dict = self.policy_net.state_dict()
-        for key in policy_net_state_dict:
-            target_net_state_dict[key] = policy_net_state_dict[key] * TAU + target_net_state_dict[key] * (1 - TAU)
-        self.target_net.load_state_dict(target_net_state_dict)
-        self._log.info(f"Updating target net")
-
     def reward_thought(self):
         """Rewards the last thought phrased by the replier by calculating the difference between brain states
         according to a specific graph metric (i.e. a reward).
@@ -375,9 +300,179 @@ class D2Q(ThoughtSelector):
             self._target_net_update()
 
         self.reward_history.append(reward)
+        self.selection_history.append(self._last_thought)
         self._log.info(f"{reward} reward due to {self._last_thought}")
 
         return reward
+
+    def score_thoughts(self, processed_actions, subaction_tensor):
+        action_scores = []
+        for action in processed_actions:
+            # Compute score for each element of the action
+            score = []
+            for typ, count in action["entity_types"].items():
+                # Find index for the entity type
+                subaction_idx = ACTION_TYPES_REVERSED.get(typ, -1)
+
+                if subaction_idx >= 0:
+                    # add to score
+                    for i in range(count):
+                        score.append(subaction_tensor[0, subaction_idx].item())
+                else:
+                    self._log.info(f"Entity type not in subaction vocabulary: {typ}")
+
+            # Convert element-scores into action score
+            action_scores.append((action, np.mean(score)))
+
+        return action_scores
+
+    def select(self, actions):
+        """Selects an action from the set of available actions that maximizes
+        the average observed reward, taking into account uncertainty.
+
+        params
+        list actions: List of actions from which to select
+
+        returns: action
+        """
+        # Select thought type and make sure that type is available
+        processed_actions = {}
+        while len(processed_actions) == 0:
+            # Select action
+            action_name, action_tensor, subaction_tensor = self._select_by_network()
+
+            # Safe processing, filter by selected action (thought type)
+            processed_actions = self._preprocess(actions, thought_options=[action_name])
+
+        # Score actions according to subactions (entity types)
+        action_scores = self.score_thoughts(processed_actions, subaction_tensor)
+
+        # Greedy selection
+        selected_action, action_score = max(action_scores, key=lambda x: x[1])
+        self._action_history.append(action_tensor)
+        self._log.debug(f"Selected action {selected_action} with score {action_score}")
+
+        # Safe processing
+        thought_type, thought_info = self._postprocess(processed_actions, selected_action)
+
+        return {thought_type: thought_info}
+
+    def plot(self, episode_data, plots_folder):
+        episode_data = pd.DataFrame.from_dict(episode_data)
+
+        # Histogram: count per thought type and per entity type
+        entity_types_counter, thought_types_counter = separate_thought_elements(episode_data["selections"])
+        plot_action_counts(entity_types_counter, thought_types_counter, plots_folder)
+
+        # Point plot: Cumulative reward
+        plot_cumulative_reward(episode_data['rewards'], plots_folder)
+
+        # State fluctuation
+        plot_metrics_over_time(episode_data, plots_folder)
+
+
+class BrainEvaluator(object):
+    def __init__(self, brain, main_graph_metric):
+        """ Create an object to evaluate the state of the brain according to different graph metrics.
+        The graph can be evaluated by a single given metric, or a full set of pre established metrics
+        """
+        self._brain = brain
+        self.metric = main_graph_metric
+
+    def brain_as_graph(self):
+        # Take brain from previous episodes
+        graph = ConjunctiveGraph()
+        graph.parse(data=self._brain._connection.export_repository(), format='trig')
+
+        return graph
+
+    def brain_as_netx(self):
+        # Take brain from previous episodes
+        netx = rdflib_to_networkx_multidigraph(self.brain_as_graph())
+
+        return netx
+
+    def evaluate_brain_state(self):
+        brain_state = None
+
+        ##### Group A #####
+        if self.metric == 'Average degree':
+            brain_state = get_avg_degree(self.brain_as_netx())
+        elif self.metric == 'Sparseness':
+            brain_state = get_sparseness(self.brain_as_netx())
+        elif self.metric == 'Shortest path':
+            brain_state = get_shortest_path(self.brain_as_netx())
+
+        ##### Group B #####
+        elif self.metric == 'Total triples':
+            brain_state = self._brain.count_triples()
+        elif self.metric == 'Average population':
+            brain_state = get_avg_population(self.brain_as_graph())
+
+        ##### Group C #####
+        elif self.metric == 'Ratio claims to triples':
+            brain_state = self._brain.count_statements() / self._brain.count_triples()
+        elif self.metric == 'Ratio perspectives to claims':
+            if self._brain.count_statements() != 0:
+                brain_state = self._brain.count_perspectives() / self._brain.count_statements()
+            else:
+                brain_state = self._brain.count_perspectives() / 0.0000001
+        elif self.metric == 'Ratio conflicts to claims':
+            if self._brain.count_statements() != 0:
+                brain_state = len(self._brain.get_all_negation_conflicts()) / self._brain.count_statements()
+            else:
+                brain_state = len(self._brain.get_all_negation_conflicts()) / 0.0000001
+
+        return brain_state
+
+    @staticmethod
+    def compare_brain_states(current_state, prev_state):
+        # TODO standardize according to metric
+        if current_state is None or prev_state is None or prev_state == 0:
+            reward = 0
+        else:
+            reward = current_state / prev_state
+
+        return reward
+
+    def calculate_brain_statistics(self, brain_response):
+        # Grab the thoughts
+        thoughts = brain_response['thoughts']
+
+        # Gather basic stats
+        stats = {
+            'turn': brain_response['statement']['turn'],
+
+            'cardinality conflicts': len(thoughts['_complement_conflict']) if thoughts['_complement_conflict'] else 0,
+            'negation conflicts': len(thoughts['_negation_conflicts']) if thoughts['_negation_conflicts'] else 0,
+            'subject gaps': len(thoughts['_subject_gaps']) if thoughts['_subject_gaps'] else 0,
+            'object gaps': len(thoughts['_complement_gaps']) if thoughts['_complement_gaps'] else 0,
+            'statement novelty': len(thoughts['_statement_novelty']) if thoughts['_statement_novelty'] else 0,
+            'subject novelty': int(thoughts['_entity_novelty']['_subject']['value']),
+            'object novelty': int(thoughts['_entity_novelty']['_complement']['value']),
+            'overlaps subject-predicate': len(thoughts['_overlaps']['_subject'])
+            if thoughts['_overlaps']['_subject'] else 0,
+            'overlaps predicate-object': len(thoughts['_overlaps']['_complement'])
+            if thoughts['_overlaps']['_complement'] else 0,
+            'trust': thoughts['_trust'],
+
+            'Total triples': self._brain.count_triples(),
+            # 'Total classes': len(self._brain.get_classes()),
+            # 'Total predicates': len(self._brain.get_predicates()),
+            'Total claims': self._brain.count_statements(),
+            'Total perspectives': self._brain.count_perspectives(),
+            'Total conflicts': len(self._brain.get_all_negation_conflicts()),
+            'Total sources': self._brain.count_friends(),
+        }
+
+        # Compute composite stats
+        stats['Ratio claims to triples'] = stats['Total claims'] / stats['Total triples']
+        stats['Ratio perspectives to triples'] = stats['Total perspectives'] / stats['Total triples']
+        stats['Ratio conflicts to triples'] = stats['Total conflicts'] / stats['Total triples']
+        stats['Ratio perspectives to claims'] = stats['Total perspectives'] / stats['Total claims']
+        stats['Ratio conflicts to claims'] = stats['Total conflicts'] / stats['Total claims']
+
+        return stats
 
 
 class DQN(nn.Module):

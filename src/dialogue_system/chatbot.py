@@ -40,6 +40,7 @@ class Chatbot(object):
         self.speaker = None
         self.turns = None
         self.capsules_file = None
+        self.plots_folder = None
         self.chat_history = None
         self.thoughts_file = None
         self._selector = None
@@ -86,7 +87,7 @@ class Chatbot(object):
         # Set up Leolani backend modules
         self.scenario_folder = create_session_folder(reward, chat_id, speaker)
         self._brain = LongTermMemory(address=BRAIN_ADDRESS, log_dir=self.scenario_folder,
-                                     ontology_details=ONTOLOGY_DETAILS, clear_all=chat_id == 1)  # TODO False)
+                                     ontology_details=ONTOLOGY_DETAILS, clear_all=chat_id == 1)
         self.brain.thought_generator._ONE_TO_ONE_PREDICATES = ['gender', 'lineage']
 
         # Chat information
@@ -94,9 +95,11 @@ class Chatbot(object):
         self.speaker = speaker
         self.turns = 0
 
-        # data to recreated conversation
+        # data to recreate conversation
         self.capsules_file = self.scenario_folder / "capsules.json"
         self.chat_history = {"capsules_submitted": [], "capsules_suggested": [], "say_history": []}
+        self.plots_folder = self.scenario_folder / "plots/"
+        self.plots_folder.mkdir(parents=True, exist_ok=True)
 
         # RL information
         self.thoughts_file = self.scenario_folder / "thoughts.pt"
@@ -119,12 +122,34 @@ class Chatbot(object):
         # Writes utilities JSON to disk
         self._selector.save(self.thoughts_file)
 
+        # Save chat history
+        history = self.report_chat_to_json()
+
+        # Plot
+        self._selector.plot(history, plots_folder=self.scenario_folder / f"plots/")
+
+    def report_chat_to_json(self):
         # Write capsules file
         with open(self.capsules_file, "w") as file:
             json.dump(self.chat_history["capsules_submitted"], file, indent=4)
 
-        # Plot
-        self._selector.plot(filename=self.scenario_folder / f"results.png")
+        # Write chat history file
+        with open(self.scenario_folder / "history.json", "w") as file:
+            # cast for json
+            action_history = []
+            for el in self.selector.action_history:
+                if el:
+                    action_history.append(int(el[0][0]))
+                else:
+                    action_history.append(el)
+
+            hist = {"actions": action_history,
+                    "rewards": self.selector.reward_history,
+                    "states": self.selector.state_history["metrics"],
+                    "selections": self.selector.selection_history}
+            json.dump(hist, file, indent=4)
+
+        return hist
 
     def situate_chat(self, capsule_for_context):
         self._brain.capsule_context(capsule_for_context)

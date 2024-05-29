@@ -4,7 +4,7 @@ from datetime import datetime
 from cltl.brain.utils.helper_functions import brain_response_to_json
 from src.dialogue_system.chatbot import Chatbot
 from src.dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, RAW_VANILLA_USER_PATH
-from src.user_model.user import User, init_capsule
+from src.user_model.user import User
 
 
 def create_context_capsule(args):
@@ -44,7 +44,7 @@ def main(args):
     chatbot.situate_chat(capsule_for_context)
 
     # Interaction loop
-    capsule = init_capsule(args, chatbot)
+    capsule = user_model.init_capsule(args, chatbot)
     for index in range(args.turn_limit):
         # process with brain, get template for response
         say, response_template, brain_response = chatbot.respond(capsule)
@@ -71,6 +71,8 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str,
+                        help="Filepath of the user model (e.g. 'vanilla.trig')")
     parser.add_argument("--speaker", default="john", type=str, help="Name of the speaker (e.g. 'john')")
     parser.add_argument("--chat_id", default=42, type=int, help="ID for a chat")
     parser.add_argument("--reward", default="Total triples", type=str, help="Graph metric to use as reward",
@@ -86,7 +88,6 @@ if __name__ == "__main__":
     parser.add_argument("--country", default=LOCATION["country"], type=str, help="Country of a physical location")
     parser.add_argument("--region", default=LOCATION["region"], type=str, help="Region of a physical location")
     parser.add_argument("--city", default=LOCATION["city"], type=str, help="City of a physical location")
-
     parser.add_argument("--turn_limit", default=15, type=int, help="Number of turns for this interaction")
 
     args = parser.parse_args()

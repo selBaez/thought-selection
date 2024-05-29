@@ -1,38 +1,12 @@
 from datetime import datetime
 from random import choice
 
-from rdflib import ConjunctiveGraph, URIRef
-
 from cltl.brain.infrastructure.rdf_builder import RdfBuilder
 from cltl.brain.utils.helper_functions import hash_claim_id
 from cltl.commons.discrete import Certainty, Polarity, Sentiment
 from src.dialogue_system.utils.global_variables import HARRYPOTTER_NS, HARRYPOTTER_PREFIX
+from rdflib import ConjunctiveGraph, URIRef
 from src.user_model import logger
-
-
-def init_capsule(args, chatbot):
-    # TODO pick a random triple
-
-    init_cap = {
-        "chat": chatbot.chat_id,
-        "turn": chatbot.turns,
-        "author": {
-            "label": chatbot.speaker.lower(),
-            "type": ["person"],
-            "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"
-        },
-        "utterance": "James was a female",
-        "utterance_type": "STATEMENT",
-        "position": '0-25',
-        'subject': {'label': 'james', 'type': ['person'],
-                    'uri': 'http://harrypotter.org/james'},
-        'predicate': {'label': 'gender', 'uri': 'http://harrypotter.org/gender'},
-        'object': {'label': 'female', 'type': ['attribute'],
-                   'uri': 'http://harrypotter.org/female'},
-        'perspective': {'certainty': 1, 'polarity': 1, 'sentiment': 0},  # TODO change for testing
-        'timestamp': datetime.now(), 'context_id': args.context_id}
-
-    return init_cap
 
 
 def uri_to_capsule_triple(uri, response_template, role='subject'):
@@ -65,6 +39,30 @@ class User(object):
         # parse data and namespaces
         self._graph.parse(kb_filepath)
         self._log.info(f"Parsed file, size of graph is {len(self._graph)}")
+
+    def init_capsule(self, args, chatbot):
+        init_cap = {
+            "chat": chatbot.chat_id,
+            "turn": chatbot.turns,
+            "author": {
+                "label": chatbot.speaker.lower(),
+                "type": ["person"],
+                "uri": f"http://cltl.nl/leolani/world/{chatbot.speaker.lower()}"
+            },
+            "utterance": "James was a female",
+            "utterance_type": "STATEMENT",
+            "position": '0-25',
+            'subject': {'label': 'james', 'type': ['person'],
+                        'uri': 'http://harrypotter.org/james'},
+            'predicate': {'label': 'gender', 'uri': 'http://harrypotter.org/gender'},
+            'object': {'label': 'female', 'type': ['attribute'],
+                       'uri': 'http://harrypotter.org/female'},
+            'perspective': {'certainty': 1, 'polarity': 1, 'sentiment': 0},
+            'timestamp': datetime.now(), 'context_id': args.context_id}
+
+        init_cap = self.random_triple(init_cap)
+
+        return init_cap
 
     def replace_namespace(self, txt):
         txt = txt.replace(HARRYPOTTER_NS, f'{HARRYPOTTER_PREFIX}:')
