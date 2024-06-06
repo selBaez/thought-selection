@@ -2,30 +2,28 @@ import os
 from datetime import date
 from random import getrandbits
 
-import requests
 from rdflib import Namespace, URIRef
 
 ############################## HP DATA PREFIXES ##############################
 HARRYPOTTER_NS = Namespace("http://harrypotter.org/")
 HARRYPOTTER_PREFIX = "hp"
 
-############################## PATHS FOR HP DATA PROCESSING ##############################
-CHARACTER_TYPE_PATH= "/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/character_types.csv"
-ATTRIBUTE_TYPE_PATH= "/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/attribute_types.csv"
-
-OG_DATA_PATHS = ["/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/test_set_en/",
-                 "/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/train_set_en/"]
-USER_PATH = "/Users/sbaez/Documents/PhD/research/thought-selection/resources/users"
-RAW_USER_PATH = USER_PATH + "/raw"
-RAW_VANILLA_USER_PATH = RAW_USER_PATH + "/vanilla.trig"
-PROCESSED_USER_PATH = USER_PATH + "/processed"
-
 ############################## PATHS FOR CHATBOT LEARNING ##############################
 ABSOLUTE_PATH = os.path.dirname(os.path.realpath(__file__))
 RESOURCES_PATH = ABSOLUTE_PATH + "/../../../resources/"
 
+############################## PATHS FOR HP DATA PROCESSING ##############################
+CHARACTER_TYPE_PATH = RESOURCES_PATH + "hp_data/character_types.csv"
+ATTRIBUTE_TYPE_PATH = RESOURCES_PATH + "hp_data/attribute_types.csv"
+
+OG_DATA_PATHS = [RESOURCES_PATH + "hp_data/test_set_en/", RESOURCES_PATH + "hp_data/train_set_en/"]
+USER_PATH = RESOURCES_PATH + "users"
+RAW_USER_PATH = USER_PATH + "/raw"
+RAW_VANILLA_USER_PATH = RAW_USER_PATH + "/vanilla.trig"
+PROCESSED_USER_PATH = USER_PATH + "/processed"
+
 ############################## BRAIN DETAILS FOR CHATBOT ##############################
-ONTOLOGY_DETAILS = {"filepath": "/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/ontology.ttl",
+ONTOLOGY_DETAILS = {"filepath": RESOURCES_PATH + "hp_data/ontology.ttl",
                     "namespace": "http://harrypotter.org/",
                     "prefix": "hp"}
 BRAIN_ADDRESS = "http://localhost:7200/repositories/sandbox"
