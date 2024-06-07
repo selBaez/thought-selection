@@ -37,7 +37,7 @@ def main(args):
 
     # Create dialogue_system
     chatbot = Chatbot()
-    chatbot.begin_session(args.chat_id, args.speaker, args.reward)
+    chatbot.begin_session(args.experiment_id, args.run_id, args.context_id, args.chat_id, args.speaker, args.reward)
 
     # Situate chat
     capsule_for_context = create_context_capsule(args)
@@ -71,10 +71,12 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--experiment_id", default="e1", type=str, help="ID for an experiment")
+    parser.add_argument("--run_id", default="run1", type=str, help="ID for a run")
+    parser.add_argument("--chat_id", default=42, type=int, help="ID for a chat")
     parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str,
                         help="Filepath of the user model (e.g. 'vanilla.trig')")
     parser.add_argument("--speaker", default="john", type=str, help="Name of the speaker (e.g. 'john')")
-    parser.add_argument("--chat_id", default=42, type=int, help="ID for a chat")
     parser.add_argument("--reward", default="Total triples", type=str, help="Graph metric to use as reward",
                         choices=['Average degree', 'Sparseness', 'Shortest path',
                                  'Total triples', 'Average population',

@@ -1,5 +1,4 @@
 import os
-from datetime import date
 from random import getrandbits
 
 from rdflib import Namespace, URIRef
@@ -45,8 +44,7 @@ BASE_CAPSULE = {
     "predicate": {"label": None, 'uri': None},
     "object": {"label": None, "type": [], 'uri': None},
     "perspective": {"certainty": None, "polarity": None, "sentiment": None},
-    "context_id": CONTEXT_ID,
-    "date": date.today()
+    "context_id": CONTEXT_ID
 }
 
 ############################## EKG GENERAL URIS ##############################

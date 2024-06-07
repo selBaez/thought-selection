@@ -1,8 +1,8 @@
-import math
 import random
 from collections import deque
 from pathlib import Path
 
+import math
 import numpy as np
 import pandas as pd
 import torch
@@ -18,7 +18,8 @@ from src.dialogue_system.metrics.graph_measures import get_avg_degree, get_spars
 from src.dialogue_system.metrics.ontology_measures import get_avg_population
 from src.dialogue_system.utils.encode_state import HarryPotterRDF, EncoderAttention
 from src.dialogue_system.utils.helpers import download_from_triplestore
-from src.dialogue_system.utils.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, plot_metrics_over_time
+from src.dialogue_system.utils.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, \
+    plot_metrics_over_time
 from src.dialogue_system.utils.rl_parameters import DEVICE, STATE_HIDDEN_SIZE, STATE_EMBEDDING_SIZE, REPLAY_POOL_SIZE, \
     BATCH_SIZE, DQN_HIDDEN_SIZE, LR, EPSILON_INFO, GAMMA, TAU, ACTION_THOUGHTS, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, \
     ACTION_TYPES_REVERSED, Transition
@@ -78,7 +79,8 @@ class D2Q(ThoughtSelector):
         self._selection_history = [None]
 
         # Load learned policy
-        # self.load(savefile)
+        if savefile:
+            self.load(savefile)
         self._log.debug(f"D2Q RL Selector ready")
 
     @property
@@ -123,7 +125,7 @@ class D2Q(ThoughtSelector):
 
         self.policy_net.load_state_dict(model_dict)
 
-        self._log.info(f"Loaded model from {filename.name}")
+        self._log.info(f"Loaded model from {filename.split('/')[-1]}")
 
     def save(self, filename):
         """Writes the trained model to a file.
@@ -350,7 +352,9 @@ class D2Q(ThoughtSelector):
         # Greedy selection
         selected_action, action_score = max(action_scores, key=lambda x: x[1])
         self._action_history.append(action_tensor)
-        self._log.debug(f"Selected action {selected_action} with score {action_score}")
+        self._log.debug(f"Selected action: {selected_action['thought_type']} - "
+                        f"{'/'.join(selected_action['entity_types'].keys())} "
+                        f"with score {action_score}")
 
         # Safe processing
         thought_type, thought_info = self._postprocess(processed_actions, selected_action)
@@ -456,9 +460,18 @@ class BrainEvaluator(object):
             if thoughts['_overlaps']['_complement'] else 0,
             'trust': thoughts['_trust'],
 
+            ##### Group A #####
+            'Average degree': get_avg_degree(self.brain_as_netx()),
+            'Sparseness': get_sparseness(self.brain_as_netx()),
+            'Shortest path': get_shortest_path(self.brain_as_netx()),
+
+            ##### Group B #####
             'Total triples': self._brain.count_triples(),
-            # 'Total classes': len(self._brain.get_classes()),
-            # 'Total predicates': len(self._brain.get_predicates()),
+            'Total classes': len(self._brain.get_classes()),
+            'Total predicates': len(self._brain.get_predicates()),
+            'Average population': get_avg_population(self.brain_as_graph()),
+
+            ##### Group C #####
             'Total claims': self._brain.count_statements(),
             'Total perspectives': self._brain.count_perspectives(),
             'Total conflicts': len(self._brain.get_all_negation_conflicts()),

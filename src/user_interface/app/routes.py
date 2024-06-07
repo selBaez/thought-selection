@@ -13,8 +13,9 @@ def create_endpoints(app, chatbot):
         if request.method == 'POST':
             form_in = ChatForm()
 
-            # Create dialogue_system
-            chatbot.begin_session(form_in.chat_id.data, form_in.speaker.data, form_in.reward.data)
+            # Create dialogue_system (hardcoded experiment 3 for human users, and run 1 as we do not repeat this))
+            chatbot.begin_session("e3", 1, form_in.context_id.data, form_in.chat_id.data, form_in.speaker.data,
+                                  form_in.reward.data)
 
             # Situate chat
             capsule_for_context = form_to_context_capsule(form_in)

@@ -18,7 +18,6 @@ from cltl.commons.casefolding import casefold_capsule
 from cltl.commons.discrete import UtteranceType
 from cltl.commons.language_data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
 from src.dialogue_system.d2q_selector import D2Q
-# from cltl.thoughts.thought_selection.rl_selector import UCB
 from src.dialogue_system.triple_phraser import TriplePhraser
 from src.dialogue_system.utils.capsule_utils import template_to_statement_capsule
 from src.dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS
@@ -39,12 +38,11 @@ class Chatbot(object):
         self.chat_id = None
         self.speaker = None
         self.turns = None
-        self.capsules_file = None
         self.plots_folder = None
         self.chat_history = None
         self.thoughts_file = None
         self._selector = None
-        self._statistics_history = None
+        self.statistics_history = None
         self._replier = None
 
     @property
@@ -74,7 +72,7 @@ class Chatbot(object):
         string = choice(GOODBYE)
         return string
 
-    def begin_session(self, chat_id, speaker, reward):
+    def begin_session(self, experiment_id, run_id, context_id, chat_id, speaker, reward):
         """Sets up a session .
 
         params
@@ -85,7 +83,7 @@ class Chatbot(object):
         returns: None
         """
         # Set up Leolani backend modules
-        self.scenario_folder = create_session_folder(reward, chat_id, speaker)
+        self.scenario_folder = create_session_folder(experiment_id, run_id, context_id, reward, chat_id, speaker)
         self._brain = LongTermMemory(address=BRAIN_ADDRESS, log_dir=self.scenario_folder,
                                      ontology_details=ONTOLOGY_DETAILS, clear_all=chat_id == 1)
         self.brain.thought_generator._ONE_TO_ONE_PREDICATES = ['gender', 'lineage']
@@ -96,21 +94,25 @@ class Chatbot(object):
         self.turns = 0
 
         # data to recreate conversation
-        self.capsules_file = self.scenario_folder / "capsules.json"
         self.chat_history = {"capsules_submitted": [], "capsules_suggested": [], "say_history": []}
         self.plots_folder = self.scenario_folder / "plots/"
         self.plots_folder.mkdir(parents=True, exist_ok=True)
 
         # RL information
+        prev_chat_model = None
+        if chat_id != 1:
+            # load saved model from previous chat
+            prev_chat_model = create_session_folder(experiment_id, run_id, context_id - 100, reward, chat_id - 1,
+                                                    speaker)
+            prev_chat_model = f"{prev_chat_model}/thoughts.pt"
+
+        self._selector = D2Q(self._brain, reward=reward, savefile=prev_chat_model,
+                             states_folder=self.scenario_folder / "cummulative_states/")
         self.thoughts_file = self.scenario_folder / "thoughts.pt"
-        # self._selector = UCB(self._brain, savefile=self.thoughts_file, reward=reward)
-        self._selector = D2Q(self._brain, reward=reward, states_folder=self.scenario_folder / "cummulative_states/")
-        self._statistics_history = []
+        self.statistics_history = []
         self._replier = TriplePhraser()
 
         if chat_id == 1:
-            if self.capsules_file.exists():
-                self.capsules_file.unlink()
             if self.thoughts_file.exists():
                 self.thoughts_file.unlink()
 
@@ -126,15 +128,19 @@ class Chatbot(object):
         history = self.report_chat_to_json()
 
         # Plot
-        self._selector.plot(history, plots_folder=self.scenario_folder / f"plots/")
+        # self._selector.plot(history, plots_folder=self.scenario_folder / f"plots/")
 
     def report_chat_to_json(self):
         # Write capsules file
-        with open(self.capsules_file, "w") as file:
-            json.dump(self.chat_history["capsules_submitted"], file, indent=4)
+        with open(self.scenario_folder / "chat_history.json", "w") as file:
+            json.dump(self.chat_history, file, indent=4)
+
+        # Write brain statistics file
+        with open(self.scenario_folder / "state_history.json", "w") as file:
+            json.dump(self.statistics_history, file, indent=4)
 
         # Write chat history file
-        with open(self.scenario_folder / "history.json", "w") as file:
+        with open(self.scenario_folder / "selection_history.json", "w") as file:
             # cast for json
             action_history = []
             for el in self.selector.action_history:
@@ -188,7 +194,7 @@ class Chatbot(object):
             # Calculate brain state
             self._selector.reward_thought()
             profile = self.selector.state_evaluator.calculate_brain_statistics(brain_response)
-            self._statistics_history.append(profile)
+            self.statistics_history.append(profile)
 
             brain_response["thoughts"] = self._selector.select(brain_response)
             say, response_template = self._replier.reply_to_statement(brain_response, persist=True)
@@ -197,7 +203,7 @@ class Chatbot(object):
         # Add information to capsule
         capsule["last_reward"] = self.selector.reward_history[-1]
         capsule["brain_state"] = self.selector.state_history["metrics"][-1]
-        capsule["statistics_history"] = self._statistics_history[-1]
+        capsule["statistics_history"] = self.statistics_history[-1]
         capsule["reply"] = say
 
         # Keep track of everything

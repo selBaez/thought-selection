@@ -6,12 +6,17 @@ from rdflib import ConjunctiveGraph
 from src.dialogue_system.utils.global_variables import RESOURCES_PATH, RAW_USER_PATH, HARRYPOTTER_PREFIX, HARRYPOTTER_NS
 
 
-def create_session_folder(reward, chat_id, speaker):
+def create_session_folder(experiment_id, run_id, context_id, reward, chat_id, speaker):
     # Create folder to store session
-    session_folder = Path(RESOURCES_PATH +
+    session_folder = Path(f"{RESOURCES_PATH}"
+                          f"experiments/"
+                          f"{experiment_id}/"
+                          f"{reward.replace(' ', '-')}/"
+                          f"{run_id}/"
                           f"{reward.replace(' ', '-')}_"
                           f"{chat_id}_"
-                          f"{speaker.replace(' ', '-')}/")
+                          f"{speaker.replace(' ', '-')}"
+                          f"({context_id})/")
     session_folder.mkdir(parents=True, exist_ok=True)
 
     return session_folder
