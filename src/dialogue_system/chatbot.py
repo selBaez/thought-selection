@@ -17,11 +17,11 @@ from cltl.brain.utils.helper_functions import brain_response_to_json
 from cltl.commons.casefolding import casefold_capsule
 from cltl.commons.discrete import UtteranceType
 from cltl.commons.language_data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
-from src.dialogue_system.d2q_selector import D2Q
-from src.dialogue_system.triple_phraser import TriplePhraser
-from src.dialogue_system.utils.capsule_utils import template_to_statement_capsule
-from src.dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS
-from src.dialogue_system.utils.helpers import create_session_folder
+from dialogue_system.d2q_selector import D2Q
+from dialogue_system.triple_phraser import TriplePhraser
+from dialogue_system.utils.capsule_utils import template_to_statement_capsule
+from dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS
+from dialogue_system.utils.helpers import create_session_folder
 
 # Set up Java PATH (required for Windows)
 os.environ["JAVAHOME"] = "C:/Program Files/Java/jre1.8.0_311/bin/java.exe"

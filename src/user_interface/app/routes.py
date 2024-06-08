@@ -1,8 +1,8 @@
 from flask import render_template, redirect, request, url_for
 
-from src.user_interface.app.utils.form_utils import statement_capsule_to_form, form_to_context_capsule, digest_form, \
+from user_interface.app.utils.form_utils import statement_capsule_to_form, form_to_context_capsule, digest_form, \
     begin_form
-from src.user_interface.app.forms import TurnForm, ChatForm, SaveForm
+from user_interface.app.forms import TurnForm, ChatForm, SaveForm
 
 
 def create_endpoints(app, chatbot):

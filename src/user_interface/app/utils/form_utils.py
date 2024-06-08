@@ -3,7 +3,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from cltl.brain.basic_brain import BasicBrain
-from src.dialogue_system.utils.global_variables import CONTEXT_ID, ONTOLOGY_DETAILS, BRAIN_ADDRESS
+from dialogue_system.utils.global_variables import CONTEXT_ID, ONTOLOGY_DETAILS, BRAIN_ADDRESS
 
 
 def get_predicate_options():

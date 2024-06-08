@@ -14,10 +14,10 @@ from torch_geometric.data import HeteroData, InMemoryDataset
 from torch_geometric.nn import RGATConv, global_mean_pool
 
 from cltl.brain.utils.helper_functions import hash_claim_id
-from src.dialogue_system import logger
-from src.dialogue_system.utils.global_variables import RAW_USER_PATH, RAW_VANILLA_USER_PATH, PROCESSED_USER_PATH, \
+from dialogue_system import logger
+from dialogue_system.utils.global_variables import RAW_USER_PATH, RAW_VANILLA_USER_PATH, PROCESSED_USER_PATH, \
     TYPE_CERTAINTYVALUE, TYPE_POLARITYVALUE, TYPE_SENTIMENTVALUE, SIMPLE_ATTRELS, SIMPLE_ATTVALS, ATTVALS_TO_ATTRELS
-from src.dialogue_system.utils.helpers import build_graph, get_all_characters, get_all_predicates, get_all_attributes
+from dialogue_system.utils.helpers import build_graph, get_all_characters, get_all_predicates, get_all_attributes
 
 TEST = True
 PROCESS_FOR_GRAPH_CLASSIFIER = False
@@ -57,7 +57,7 @@ class HarryPotterRDF(InMemoryDataset):
 
         # build vocabulary from vanilla graph
         og_graph = build_graph()
-        og_graph.parse(RAW_VANILLA_USER_PATH)
+        og_graph.parse(RAW_VANILLA_USER_PATH, format="trig")
         self._log.debug(f"Read dataset in {RAW_VANILLA_USER_PATH}: {len(og_graph)}")
 
         # build resources that we only need once (IDs, features and node types)
@@ -181,7 +181,12 @@ class HarryPotterRDF(InMemoryDataset):
         # Representation for claims
         for claim in self.claims_dict.keys():
             # Get original SPO values in claim
-            sub, pred, obj = claim.split("/")[-1].split("_")
+            try:
+                sub, pred, obj = claim.split("/")[-1].split("_")
+            except:
+                # Too many underscores
+                sub, pred, obj = claim.split("/")[-1].split("_", 2)
+                obj = obj.replace("_", "")
 
             # one hot encode each SPO part
             subject_one_hot = one_hot_feature(sub, self.characters_dict)
@@ -237,7 +242,7 @@ class HarryPotterRDF(InMemoryDataset):
     def process_one_graph(self, file):
         # Read raw data
         og_graph = build_graph()
-        og_graph.parse(file)
+        og_graph.parse(file, format="trig")
         self._log.debug(f"Read dataset in {file.name}: {len(og_graph)}")
 
         # Ingest claims and perspectives

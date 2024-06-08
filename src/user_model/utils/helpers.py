@@ -4,12 +4,12 @@ from random import getrandbits, sample
 from rdflib import URIRef, Literal, RDF, RDFS
 
 from cltl.brain.utils.helper_functions import hash_claim_id
-from src.dialogue_system.utils.global_variables import OG_DATA_PATHS, \
+from dialogue_system.utils.global_variables import OG_DATA_PATHS, \
     PERSPECTIVE_GRAPH, CLAIM_GRAPH, INSTANCE_GRAPH, TYPE_EVENT, TYPE_ASSERTION, TYPE_ATTRIBUTION, TYPE_ATTRIBUTIONVALUE, \
     TYPE_CERTAINTYVALUE, TYPE_POLARITYVALUE, CERTAINTY_CERTAIN, CERTAINTY_POSSIBLE, POLARITY_POSITIVE, \
     POLARITY_NEGATIVE, SENTIMENT_NEUTRAL, EMOTION_UNDERSPECIFIED, GRASP_HASATT, GRASP_ATTFOR, GAF_DENOTEDBY, \
     GAF_DENOTES, GAF_DENOTEDIN, GAF_CONTAINSDEN
-from src.dialogue_system.utils.helpers import build_graph
+from dialogue_system.utils.helpers import build_graph
 
 
 def break_list(text):

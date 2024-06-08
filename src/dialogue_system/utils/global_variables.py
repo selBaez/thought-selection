@@ -17,7 +17,7 @@ ATTRIBUTE_TYPE_PATH = RESOURCES_PATH + "hp_data/attribute_types.csv"
 
 OG_DATA_PATHS = [RESOURCES_PATH + "hp_data/test_set_en/", RESOURCES_PATH + "hp_data/train_set_en/"]
 USER_PATH = RESOURCES_PATH + "users"
-RAW_USER_PATH = USER_PATH + "/raw"
+RAW_USER_PATH = USER_PATH + "/raw" # TODO when running locally to raw_test
 RAW_VANILLA_USER_PATH = RAW_USER_PATH + "/vanilla.trig"
 PROCESSED_USER_PATH = USER_PATH + "/processed"
 
@@ -34,9 +34,9 @@ PLACE_NAME = "office"
 # LOCATION = requests.get("https://ipinfo.io").json()
 LOCATION = {"country": "MX", "region": "Mexico City", "city": "Mexico City"}
 BASE_CAPSULE = {
-    "chat": None,  # from src.dialogue_system / prev capsule
-    "turn": None,  # from src.dialogue_system
-    "author": None,  # from src.dialogue_system
+    "chat": None,  # from dialogue_system / prev capsule
+    "turn": None,  # from dialogue_system
+    "author": None,  # from dialogue_system
     "utterance": "",
     "utterance_type": None,
     "position": "",

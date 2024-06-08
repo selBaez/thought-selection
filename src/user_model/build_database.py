@@ -8,11 +8,11 @@ from cltl.brain.long_term_memory import LongTermMemory
 from cltl.commons.discrete import UtteranceType, Certainty, Polarity, Sentiment
 from iribaker import to_iri
 
-from src.dialogue_system.utils.global_variables import ONTOLOGY_DETAILS, RAW_USER_PATH, HARRYPOTTER_NS, \
-    CHARACTER_TYPE_PATH, ATTRIBUTE_TYPE_PATH
-from src.dialogue_system.utils.helpers import get_all_characters, get_all_attributes
-from src.user_model.utils.constants import CONTEXT_ID, START_DATE, HP_CONTEXT_CAPSULE
-from src.user_model.utils.helpers import *
+from dialogue_system.utils.global_variables import ONTOLOGY_DETAILS, RAW_USER_PATH, HARRYPOTTER_NS, \
+    CHARACTER_TYPE_PATH, ATTRIBUTE_TYPE_PATH, USER_PATH
+from dialogue_system.utils.helpers import get_all_characters, get_all_attributes
+from user_model.utils.constants import CONTEXT_ID, START_DATE, HP_CONTEXT_CAPSULE
+from user_model.utils.helpers import *
 
 TEST = True
 NUM_USERS_PER_TYPE = 10 if TEST else 100
@@ -84,7 +84,7 @@ def process_session(book, session, brain):
 def process_file(file):
     # Create brain connection
     brain = LongTermMemory(address="http://localhost:7200/repositories/harryPotter",
-                           log_dir=Path("/Users/sbaez/Documents/PhD/research/thought-selection/resources/users"),
+                           log_dir=Path(USER_PATH),
                            ontology_details=ONTOLOGY_DETAILS,
                            clear_all=True)
 
@@ -318,9 +318,9 @@ def main():
     # graph_data = merge_all_graphs(TEST)
     # create_users(graph_data)
 
-    # print("---------------------------- Add entity types  ----------------------------")
-    # # Add entity types
-    # add_types()
+    print("---------------------------- Add entity types  ----------------------------")
+    # Add entity types
+    add_types()
 
     print("DONE")
 

@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from src.dialogue_system.utils.global_variables import CONTEXT_ID
+from dialogue_system.utils.global_variables import CONTEXT_ID
 
 
 def template_to_statement_capsule(template_capsule, chatbot):

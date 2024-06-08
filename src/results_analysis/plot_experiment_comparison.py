@@ -8,14 +8,14 @@ import pandas as pd
 import seaborn as sns
 import torch
 
-from src.dialogue_system.d2q_selector import DQN, StateEncoder
-from src.dialogue_system.utils.encode_state import HarryPotterRDF
-from src.dialogue_system.utils.global_variables import RESOURCES_PATH
-from src.dialogue_system.utils.rl_parameters import DEVICE, STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, \
+from dialogue_system.d2q_selector import DQN, StateEncoder
+from dialogue_system.utils.encode_state import HarryPotterRDF
+from dialogue_system.utils.global_variables import RESOURCES_PATH
+from dialogue_system.utils.rl_parameters import DEVICE, STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, \
     ACTION_THOUGHTS, ACTION_TYPES
 
 EXPERIMENTS_PATH = Path(f"{RESOURCES_PATH}/experiments").resolve()
-PLOTS_PATH = Path(f"{RESOURCES_PATH}/plots/e1").resolve()
+PLOTS_PATH = Path(f"{RESOURCES_PATH}/plots").resolve()
 
 
 def load_trained_model(filename):
@@ -46,7 +46,7 @@ def get_qvalues(policy_net, state_encoder, state_file=None):
     return action_tensor[0].tolist(), subaction_tensor[0].tolist()
 
 
-def plot_qvalues(data, plots_folder):
+def plot_qvalues_distribution(data, plots_folder):
     # Create a figure and axis object for the subplots
     fig, axes = plt.subplots(1, 2, figsize=(15, 6), sharey=True)
 
@@ -60,11 +60,12 @@ def plot_qvalues(data, plots_folder):
 
     # Plotting
     sns.barplot(data=melted_data, x='variable', y='value', hue='condition', palette='muted', ci=None, ax=axes[0])
-    axes[0].set_title('Softmax Distributions by Intention')
+    axes[0].set_title('Distributions by Intention')
     axes[0].set_xlabel(f'Abstract Action')
-    axes[0].set_ylabel('Softmax Probability')
+    axes[0].set_ylabel('Selection Probability')
     axes[0].set_xticklabels(axes[0].get_xticklabels(), rotation=45)
-    axes[0].legend(title='Intention')
+    handles, labels = axes[0].get_legend_handles_labels()
+    axes[0].legend(handles, labels, title='Intention / Reward')
 
     # Specific actions
 
@@ -76,14 +77,60 @@ def plot_qvalues(data, plots_folder):
 
     # Plotting
     sns.barplot(data=melted_data, x='variable', y='value', hue='condition', palette='muted', ci=None, ax=axes[1])
-    axes[1].set_title('Softmax Distributions by Intention')
+    axes[1].set_title('Distributions by Intention')
     axes[1].set_xlabel(f'Specific Action')
-    axes[1].set_ylabel('Softmax Probability')
+    axes[1].set_ylabel('Selection Probability')
     axes[1].set_xticklabels(axes[1].get_xticklabels(), rotation=45)
-    axes[1].legend(title='Intention')
+    handles, labels = axes[0].get_legend_handles_labels()
+    axes[1].legend(handles, labels, title='Intention / Reward')
 
     plt.tight_layout()
     plt.savefig(plots_folder / f"distribution_qvalues.png", dpi=300)
+    plt.show()
+
+
+def plot_qvalues_stacked(data, plots_folder):
+    # Create a figure and axis object for the subplots
+    fig, axes = plt.subplots(1, 2, figsize=(15, 6))
+
+    # Abstract actions
+
+    # Explode to separate columns and compute the average softmax distribution per condition
+    column_names = [el[1:] for el in list(ACTION_THOUGHTS.values())]
+    new_data = pd.DataFrame(data["abs_qvalues"].to_list(), columns=column_names)
+    new_data = new_data - (1 / N_ACTIONS_THOUGHTS)
+    new_data[["condition", "run"]] = data[["condition", "run"]]
+    average_qvalues = new_data.groupby(['condition']).mean()
+
+    # Plotting
+    average_qvalues.plot(kind='bar', stacked=True, ax=axes[0])
+    axes[0].set_title('Distributions by Intention')
+    axes[0].set_xlabel(f'Intention / Reward')
+    axes[0].set_ylabel('Selection Probability')
+    axes[0].set_xticklabels(axes[0].get_xticklabels(), rotation=55)
+    handles, labels = axes[0].get_legend_handles_labels()
+    axes[0].legend(handles, labels, title='Abstract Action', bbox_to_anchor=(1.05, 1), loc='upper left', fontsize="small")
+
+    # Specific actions
+
+    # Explode to separate columns and compute the average softmax distribution per condition
+    new_data = pd.DataFrame(data["spe_qvalues"].to_list(), columns=list(ACTION_TYPES.values()))
+    new_data = new_data - (1 / N_ACTION_TYPES)
+    new_data[["condition", "run"]] = data[["condition", "run"]]
+    average_qvalues = new_data.groupby(['condition']).mean()
+
+    # Plotting
+    merged_colors = plt.cm.tab20.colors + plt.cm.tab20b.colors
+    average_qvalues.plot(kind='bar', stacked=True, ax=axes[1], color=merged_colors)
+    axes[1].set_title('Distributions by Intention')
+    axes[1].set_xlabel(f'Intention / Reward')
+    axes[1].set_ylabel('Selection Probability')
+    axes[1].set_xticklabels(axes[1].get_xticklabels(), rotation=55)
+    handles, labels = axes[1].get_legend_handles_labels()
+    axes[1].legend(handles, labels, title='Specific Action', bbox_to_anchor=(1.05, 1.25), loc='upper left', fontsize="small")
+
+    plt.tight_layout()
+    plt.savefig(plots_folder / f"stacked_qvalues.png", dpi=300)
     plt.show()
 
 
@@ -125,7 +172,7 @@ def plot_cum_reward(data, plots_folder, log=False):
     plt.title('Cumulative Rewards Over Time Steps by Intention')
     plt.xlabel('Timestep')
     plt.ylabel('Cumulative Reward')
-    plt.legend(title='Intention')
+    plt.legend(title='Intention / Reward')
     if log:
         plt.yscale('log')
         plt.savefig(plots_folder / "cumulative_reward(log).png", dpi=300)
@@ -147,7 +194,7 @@ def plot_action_count(data, plots_folder):
     plt.title('Action Counts by Intention')
     plt.xlabel('Action')
     plt.ylabel('Counts')
-    plt.legend(title='Intention')
+    plt.legend(title='Intention / Reward')
     plt.xticks(rotation=45, ha="right")
     plt.savefig(plots_folder / "action_type_count.png", dpi=300)
     plt.show()
@@ -169,14 +216,14 @@ def main(args):
         for run in runs:
             chats = sorted(f for f in run.iterdir() if f.is_dir())
 
-            # Get qvalues TODO input empty graph and get softmax
+            # Get qvalues TODO input perfect graph
             last_chat = chats[-1]
             policy_net = load_trained_model(last_chat / "thoughts.pt")
-
             abs_qvalues, spe_qvalues = get_qvalues(policy_net, state_encoder, state_file=None)
             qvalues_data.append({"condition": condition.name, "run": run.name,
                                  "abs_qvalues": abs_qvalues, "spe_qvalues": spe_qvalues})
 
+            # Get data for each chat
             for chat in chats:
                 selections_file = chat / "selection_history.json"
                 states_file = chat / "state_history.json"
@@ -213,7 +260,8 @@ def main(args):
 
     # Create dataframe for softmax
     qvalues_data = pd.DataFrame(qvalues_data)
-    plot_qvalues(qvalues_data, PLOTS_PATH)
+    plot_qvalues_stacked(qvalues_data, PLOTS_PATH)
+    plot_qvalues_distribution(qvalues_data, PLOTS_PATH)
 
     # Create dataframe and calculate timesteps
     history_data = pd.concat(experiments_data, ignore_index=True)
@@ -230,7 +278,11 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--experiment_id", default="e1", type=str, help="ID for an experiment")
+    parser.add_argument("--experiment_id", default="e1 (25turns_3chats_3runs)", type=str, help="ID for an experiment")
 
     args = parser.parse_args()
+
+    PLOTS_PATH = PLOTS_PATH / args.experiment_id
+    PLOTS_PATH.mkdir(parents=True, exist_ok=True)
+
     main(args)

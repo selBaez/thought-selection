@@ -2,10 +2,12 @@ import argparse
 from datetime import datetime
 
 from cltl.brain.utils.helper_functions import brain_response_to_json
-from src.dialogue_system.chatbot import Chatbot
-from src.dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, RAW_VANILLA_USER_PATH
-from src.user_model.user import User
+from dialogue_system.chatbot import Chatbot
+from dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, RAW_VANILLA_USER_PATH
+from user_model.user import User
 
+import sys
+print(f"\n\n{sys.path}\n\n")
 
 def create_context_capsule(args):
     return {"context_id": args.context_id,
@@ -33,7 +35,7 @@ def print_template(response_template):
 def main(args):
     """Runs the main interaction loop of the chatbot."""
     # Sets up user model
-    user_model = User(RAW_VANILLA_USER_PATH)
+    user_model = User(args.user_model)
 
     # Create dialogue_system
     chatbot = Chatbot()
@@ -58,10 +60,9 @@ def main(args):
         capsule = user_model.query_database(response_template)
 
         # every 100 turns log the policy
-        if index % 100 == 0:
+        if index % 100 == 0 and index != 0:
             tempfile = chatbot.scenario_folder / f"thoughts_{index}.pt"
             chatbot.selector.save(tempfile)
-            # chatbot.selector.plot(filename=chatbot.scenario_folder / f"results_{index}.png")
             print(f"\t\t\t\t\t\t\t\tSaving policy at {index + 1} turns")
 
     # Farewell + update savefile

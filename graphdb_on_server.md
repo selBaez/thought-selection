@@ -35,8 +35,14 @@ You can use the provided bash file `experiment1.sh`. To run it on the background
 
 ```
 ssh {USERNAME}@{SERVER_IP}
-cd {PATH_TO_REPOSITORY}/thought_selection/src
-nohup ./experiment1.sh > graphdb_output.log 2>&1 &
+cd {PATH_TO_REPOSITORY}/thought-selection/running_scripts
+conda activate thought-selection
+nohup source experiment1_server.sh > experiment1_server.log 2>&1 &
+```
+
+or 
+``` bash
+ssh {USERNAME}@{SERVER_IP} "cd {PATH_TO_REPOSITORY}/thought-selection/running_scripts && source activate thought-selection && nohup bash experiment1_server.sh > experiment1_server.log 2>&1 &"
 ```
 
 Remember to:

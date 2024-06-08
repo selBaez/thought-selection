@@ -7,12 +7,12 @@ STATE_HIDDEN_SIZE = 64  # original features per node is 87
 STATE_EMBEDDING_SIZE = 16  # also n_observations
 
 ################## MEMORY PARAMETERS ##################
-REPLAY_POOL_SIZE = 10  # 5000 for DQN, 10000 for tutorial
+REPLAY_POOL_SIZE = 500  # 5000 for DQN, 10000 for tutorial
 Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
 
 ################## RL PARAMETERS ##################
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-BATCH_SIZE = 3  # 16 for D2Q, 128 tutorial
+BATCH_SIZE = 4  # 16 for D2Q, 128 tutorial
 DQN_HIDDEN_SIZE = 64  # 80 for DQN
 LR = 1e-4  # 1e-4 for D2Q
 EPSILON_INFO = {"start": 0.9, "end": 0.05, "decay": 1000}

@@ -3,7 +3,7 @@ from pathlib import Path
 
 from rdflib import ConjunctiveGraph
 
-from src.dialogue_system.utils.global_variables import RESOURCES_PATH, RAW_USER_PATH, HARRYPOTTER_PREFIX, HARRYPOTTER_NS
+from dialogue_system.utils.global_variables import RESOURCES_PATH, RAW_USER_PATH, HARRYPOTTER_PREFIX, HARRYPOTTER_NS
 
 
 def create_session_folder(experiment_id, run_id, context_id, reward, chat_id, speaker):

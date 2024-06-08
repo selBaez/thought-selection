@@ -1,8 +1,8 @@
+import math
 import random
 from collections import deque
 from pathlib import Path
 
-import math
 import numpy as np
 import pandas as pd
 import torch
@@ -14,13 +14,13 @@ from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 
 from cltl.thoughts.api import ThoughtSelector
 from cltl.thoughts.thought_selection.utils.thought_utils import decompose_thoughts
-from src.dialogue_system.metrics.graph_measures import get_avg_degree, get_sparseness, get_shortest_path
-from src.dialogue_system.metrics.ontology_measures import get_avg_population
-from src.dialogue_system.utils.encode_state import HarryPotterRDF, EncoderAttention
-from src.dialogue_system.utils.helpers import download_from_triplestore
-from src.dialogue_system.utils.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, \
+from dialogue_system.metrics.graph_measures import get_avg_degree, get_sparseness, get_shortest_path, get_count_nodes, get_count_edges
+from dialogue_system.metrics.ontology_measures import get_avg_population
+from dialogue_system.utils.encode_state import HarryPotterRDF, EncoderAttention
+from dialogue_system.utils.helpers import download_from_triplestore
+from dialogue_system.utils.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, \
     plot_metrics_over_time
-from src.dialogue_system.utils.rl_parameters import DEVICE, STATE_HIDDEN_SIZE, STATE_EMBEDDING_SIZE, REPLAY_POOL_SIZE, \
+from dialogue_system.utils.rl_parameters import DEVICE, STATE_HIDDEN_SIZE, STATE_EMBEDDING_SIZE, REPLAY_POOL_SIZE, \
     BATCH_SIZE, DQN_HIDDEN_SIZE, LR, EPSILON_INFO, GAMMA, TAU, ACTION_THOUGHTS, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, \
     ACTION_TYPES_REVERSED, Transition
 
@@ -172,6 +172,7 @@ class D2Q(ThoughtSelector):
         state_file = download_from_triplestore(self._state, self._states_folder)
         brain_state_metric = self._state_evaluator.evaluate_brain_state()
         encoded_state = self._state_encoder.encode(state_file)
+        encoded_state.to(DEVICE)
 
         # add to history
         self._state_history["trig_files"].append(state_file)
@@ -191,7 +192,8 @@ class D2Q(ThoughtSelector):
         if sample > eps_threshold:
             # Use model to choose action
             with torch.no_grad():
-                full_tensor = self.policy_net(self._state_history["embeddings"][-1])
+                state_vector = self._state_history["embeddings"][-1].to(DEVICE)
+                full_tensor = self.policy_net(state_vector)
                 # t.max(1) will pick action with the larger value
                 action_tensor = full_tensor[:, :N_ACTIONS_THOUGHTS].max(1).indices.view(1, 1)
                 action_name = ACTION_THOUGHTS[int(action_tensor[0])]
@@ -239,10 +241,10 @@ class D2Q(ThoughtSelector):
         if transitions:
             # Transpose the batch This converts batch-array of Transitions to Transition of batch-arrays.
             batch = Transition(*zip(*transitions))
-            state_batch = torch.cat(batch.state)
-            action_batch = torch.cat(batch.action)
-            next_state_batch = torch.cat(batch.next_state)
-            reward_batch = torch.cat(batch.reward)
+            state_batch = torch.cat(batch.state).to(DEVICE)
+            action_batch = torch.cat(batch.action).to(DEVICE)
+            next_state_batch = torch.cat(batch.next_state).to(DEVICE)
+            reward_batch = torch.cat(batch.reward).to(DEVICE)
 
             # Compute action values based on the policy net: Q(s_t, a)
             # The model computes Q(s_t), then we select the columns of actions taken.
@@ -289,6 +291,8 @@ class D2Q(ThoughtSelector):
             self._log.debug(f"Calculate reward")
             reward = self.state_evaluator.compare_brain_states(self._state_history["metrics"][-1],
                                                                self._state_history["metrics"][-2])
+            if reward < 0:
+                self._log.debug(f"Negative reward! {reward}")
 
             # Store the transition in memory
             self._log.debug("Pushing state transition to Memory Replay")
@@ -437,6 +441,9 @@ class BrainEvaluator(object):
         else:
             reward = current_state / prev_state
 
+            # shift so we have negative rewards and we punish for shrinking
+            reward -= 1
+
         return reward
 
     def calculate_brain_statistics(self, brain_response):
@@ -461,6 +468,8 @@ class BrainEvaluator(object):
             'trust': thoughts['_trust'],
 
             ##### Group A #####
+            'Total nodes': get_count_nodes(self.brain_as_netx()),
+            'Total edges': get_count_edges(self.brain_as_netx()),
             'Average degree': get_avg_degree(self.brain_as_netx()),
             'Sparseness': get_sparseness(self.brain_as_netx()),
             'Shortest path': get_shortest_path(self.brain_as_netx()),

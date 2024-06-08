@@ -3,7 +3,7 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from src.dialogue_system.utils.rl_parameters import ACTION_THOUGHTS, ACTION_TYPES
+from dialogue_system.utils.rl_parameters import ACTION_THOUGHTS, ACTION_TYPES
 
 
 def separate_thought_elements(selected_thoughts):

@@ -4,7 +4,7 @@ from typing import Optional, Tuple
 from cltl.commons.casefolding import casefold_text
 from cltl.reply_generation.simplenlg_phraser import SimplenlgPhraser
 from cltl.thoughts.thought_selection.utils.thought_utils import separate_select_negation_conflicts
-from src.dialogue_system.utils.global_variables import BASE_CAPSULE
+from dialogue_system.utils.global_variables import BASE_CAPSULE
 
 
 def label_in_say(label, say):

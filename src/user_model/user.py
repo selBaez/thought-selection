@@ -1,12 +1,14 @@
 from datetime import datetime
 from random import choice
 
+from rdflib import ConjunctiveGraph, URIRef
+
 from cltl.brain.infrastructure.rdf_builder import RdfBuilder
 from cltl.brain.utils.helper_functions import hash_claim_id
 from cltl.commons.discrete import Certainty, Polarity, Sentiment
-from src.dialogue_system.utils.global_variables import HARRYPOTTER_NS, HARRYPOTTER_PREFIX
-from rdflib import ConjunctiveGraph, URIRef
-from src.user_model import logger
+from dialogue_system.utils.global_variables import HARRYPOTTER_NS, HARRYPOTTER_PREFIX, RESOURCES_PATH, \
+    RAW_VANILLA_USER_PATH
+from user_model import logger
 
 
 def uri_to_capsule_triple(uri, response_template, role='subject'):
@@ -22,8 +24,7 @@ def uri_to_capsule_triple(uri, response_template, role='subject'):
 
 
 class User(object):
-    def __init__(self, kb_filepath='/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/all.ttl',
-                 ontology_filepath='/Users/sbaez/Documents/PhD/data/harry potter dataset/Data/EN-data/ontology.ttl'):
+    def __init__(self, kb_filepath=RAW_VANILLA_USER_PATH, ontology_filepath=RESOURCES_PATH + "hp_data/ontology.ttl"):
         """Sets up a user with a triple database.
 
         returns: None
@@ -38,7 +39,7 @@ class User(object):
 
         # parse data and namespaces
         self._graph.parse(kb_filepath)
-        self._log.info(f"Parsed file, size of graph is {len(self._graph)}")
+        self._log.info(f"Parsed file {kb_filepath}, size of graph is {len(self._graph)}")
 
     def init_capsule(self, args, chatbot):
         init_cap = {
