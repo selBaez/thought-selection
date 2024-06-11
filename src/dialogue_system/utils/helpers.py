@@ -34,7 +34,7 @@ def download_from_triplestore(brain, directory=RAW_USER_PATH):
 
     # save
     raw_file = directory / f"{datetime.now().strftime('%Y-%m-%d-%H-%M-%S-%f')}.trig"
-    graph_data.serialize(destination=raw_file)
+    graph_data.serialize(destination=raw_file, format="trig")
     return raw_file
 
 

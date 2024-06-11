@@ -22,7 +22,7 @@ def load_trained_model(filename):
     policy_net = DQN(STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS, N_ACTION_TYPES).to(DEVICE)
 
     model_dict = policy_net.state_dict()
-    modelCheckpoint = torch.load(filename)
+    modelCheckpoint = torch.load(filename, map_location=torch.device('cpu'))
 
     new_dict = {k: v for k, v in modelCheckpoint.items() if k in model_dict.keys()}
     model_dict.update(new_dict)
@@ -278,7 +278,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--experiment_id", default="e1 (25turns_3chats_3runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--experiment_id", default="e1 (5turns_7chats_1runs)", type=str, help="ID for an experiment")
 
     args = parser.parse_args()
 

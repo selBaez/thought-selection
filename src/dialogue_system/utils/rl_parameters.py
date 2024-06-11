@@ -19,6 +19,10 @@ EPSILON_INFO = {"start": 0.9, "end": 0.05, "decay": 1000}
 GAMMA = 0.99
 TAU = 0.005
 
+################## TRAINING PARAMETERS ##################
+RESET_FREQUENCY = 6
+SHUFFLE_FREQUENCY = 2
+
 ################## DATASET SPECIFIC PARAMETERS ##################
 ACTION_THOUGHTS = {0: '_complement_conflict', 1: '_negation_conflicts',
                    2: '_statement_novelty', 3: '_entity_novelty',

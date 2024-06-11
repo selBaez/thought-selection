@@ -6,8 +6,6 @@ from dialogue_system.chatbot import Chatbot
 from dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, RAW_VANILLA_USER_PATH
 from user_model.user import User
 
-import sys
-print(f"\n\n{sys.path}\n\n")
 
 def create_context_capsule(args):
     return {"context_id": args.context_id,
@@ -39,7 +37,8 @@ def main(args):
 
     # Create dialogue_system
     chatbot = Chatbot()
-    chatbot.begin_session(args.experiment_id, args.run_id, args.context_id, args.chat_id, args.speaker, args.reward)
+    chatbot.begin_session(args.experiment_id, args.run_id,
+                          args.context_id, args.chat_id, args.speaker, args.reward, args.init_brain)
 
     # Situate chat
     capsule_for_context = create_context_capsule(args)
@@ -59,12 +58,6 @@ def main(args):
         response_template = brain_response_to_json(response_template)
         capsule = user_model.query_database(response_template)
 
-        # every 100 turns log the policy
-        if index % 100 == 0 and index != 0:
-            tempfile = chatbot.scenario_folder / f"thoughts_{index}.pt"
-            chatbot.selector.save(tempfile)
-            print(f"\t\t\t\t\t\t\t\tSaving policy at {index + 1} turns")
-
     # Farewell + update savefile
     print("\nBot:", chatbot.farewell)
     chatbot.close_session()
@@ -75,6 +68,7 @@ if __name__ == "__main__":
     parser.add_argument("--experiment_id", default="e1", type=str, help="ID for an experiment")
     parser.add_argument("--run_id", default="run1", type=str, help="ID for a run")
     parser.add_argument("--chat_id", default=42, type=int, help="ID for a chat")
+    parser.add_argument("--init_brain", default="None", type=str, help="trig file to read if swapping brains")
     parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str,
                         help="Filepath of the user model (e.g. 'vanilla.trig')")
     parser.add_argument("--speaker", default="john", type=str, help="Name of the speaker (e.g. 'john')")

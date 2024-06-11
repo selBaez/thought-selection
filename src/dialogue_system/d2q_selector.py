@@ -1,4 +1,5 @@
 import math
+import pickle
 import random
 from collections import deque
 from pathlib import Path
@@ -14,15 +15,16 @@ from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 
 from cltl.thoughts.api import ThoughtSelector
 from cltl.thoughts.thought_selection.utils.thought_utils import decompose_thoughts
-from dialogue_system.metrics.graph_measures import get_avg_degree, get_sparseness, get_shortest_path, get_count_nodes, get_count_edges
+from dialogue_system.metrics.graph_measures import get_avg_degree, get_sparseness, get_shortest_path, get_count_nodes, \
+    get_count_edges
 from dialogue_system.metrics.ontology_measures import get_avg_population
 from dialogue_system.utils.encode_state import HarryPotterRDF, EncoderAttention
 from dialogue_system.utils.helpers import download_from_triplestore
-from dialogue_system.utils.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, \
-    plot_metrics_over_time
 from dialogue_system.utils.rl_parameters import DEVICE, STATE_HIDDEN_SIZE, STATE_EMBEDDING_SIZE, REPLAY_POOL_SIZE, \
     BATCH_SIZE, DQN_HIDDEN_SIZE, LR, EPSILON_INFO, GAMMA, TAU, ACTION_THOUGHTS, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, \
     ACTION_TYPES_REVERSED, Transition
+from results_analysis.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, \
+    plot_metrics_over_time
 
 
 class D2Q(ThoughtSelector):
@@ -113,30 +115,44 @@ class D2Q(ThoughtSelector):
         """Reads trained model from file.
 
         params
-        Path filename: filename of file with utilities.
+        Path filename: filename of file with trained model
 
         returns: None
         """
+        if type(filename) == str:
+            filename = Path(filename)
+
+        # Load trained model
         model_dict = self.policy_net.state_dict()
         modelCheckpoint = torch.load(filename)
-
         new_dict = {k: v for k, v in modelCheckpoint.items() if k in model_dict.keys()}
         model_dict.update(new_dict)
-
         self.policy_net.load_state_dict(model_dict)
 
-        self._log.info(f"Loaded model from {filename.split('/')[-1]}")
+        # Load memory replay
+        memory_filename = filename.parent / "memory.pkl"
+        with open(memory_filename, 'rb') as file:
+            self.memory = pickle.load(file)
+
+        self._log.info(f"Loaded model from {filename} and memory from {memory_filename}")
 
     def save(self, filename):
         """Writes the trained model to a file.
 
         params
-        Path filename: filename of the output file.
+        Path filename: filename of the output file for the model
 
         returns: None
         """
+        # Save trained model
         torch.save(self.policy_net.state_dict(), filename)
         self._log.info(f"Saved model to {filename.name}")
+
+        # Save memory replay
+        memory_filename = filename.parent / "memory.pkl"
+        with open(memory_filename, 'wb') as file:
+            pickle.dump(self.memory, file)
+        self._log.info(f"Saved model to {filename.name} and memory to {memory_filename.name}")
 
     def _preprocess(self, brain_response, thought_options=None):
         # Manage types of capsules

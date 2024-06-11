@@ -11,6 +11,8 @@ import json
 import os
 from random import choice
 
+from rdflib import Dataset
+
 # Pip-installed ctl repositories
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.brain.utils.helper_functions import brain_response_to_json
@@ -22,6 +24,7 @@ from dialogue_system.triple_phraser import TriplePhraser
 from dialogue_system.utils.capsule_utils import template_to_statement_capsule
 from dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS
 from dialogue_system.utils.helpers import create_session_folder
+from dialogue_system.utils.rl_parameters import RESET_FREQUENCY
 
 # Set up Java PATH (required for Windows)
 os.environ["JAVAHOME"] = "C:/Program Files/Java/jre1.8.0_311/bin/java.exe"
@@ -72,7 +75,7 @@ class Chatbot(object):
         string = choice(GOODBYE)
         return string
 
-    def begin_session(self, experiment_id, run_id, context_id, chat_id, speaker, reward):
+    def begin_session(self, experiment_id, run_id, context_id, chat_id, speaker, reward, init_brain):
         """Sets up a session .
 
         params
@@ -84,8 +87,20 @@ class Chatbot(object):
         """
         # Set up Leolani backend modules
         self.scenario_folder = create_session_folder(experiment_id, run_id, context_id, reward, chat_id, speaker)
-        self._brain = LongTermMemory(address=BRAIN_ADDRESS, log_dir=self.scenario_folder,
-                                     ontology_details=ONTOLOGY_DETAILS, clear_all=chat_id == 1)
+
+        # Initialize brain
+        shuffling_brain = init_brain != "None"
+        if shuffling_brain:
+            self._brain = LongTermMemory(address=BRAIN_ADDRESS, log_dir=self.scenario_folder,
+                                         ontology_details=ONTOLOGY_DETAILS, clear_all=True)
+            f = open(init_brain, "r")
+            data = f.read()
+            code = self.brain._upload_to_brain(data)
+        else:
+            resetting_brain = (chat_id - 1) % RESET_FREQUENCY == 0
+            self._brain = LongTermMemory(address=BRAIN_ADDRESS, log_dir=self.scenario_folder,
+                                         ontology_details=ONTOLOGY_DETAILS, clear_all=resetting_brain)
+
         self.brain.thought_generator._ONE_TO_ONE_PREDICATES = ['gender', 'lineage']
 
         # Chat information
@@ -107,7 +122,7 @@ class Chatbot(object):
             prev_chat_model = f"{prev_chat_model}/thoughts.pt"
 
         self._selector = D2Q(self._brain, reward=reward, savefile=prev_chat_model,
-                             states_folder=self.scenario_folder / "cummulative_states/")
+                             states_folder=self.scenario_folder / "cumulative_states/")
         self.thoughts_file = self.scenario_folder / "thoughts.pt"
         self.statistics_history = []
         self._replier = TriplePhraser()

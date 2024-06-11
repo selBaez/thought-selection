@@ -11,14 +11,15 @@ echo $PYTHONPATH
 ##################################### Run graphdb #####################################
 # daemon (in background) and server-only (no UI)
 cd /data/sbs-graphs/graphdb-10.6.3/bin/
-bash graphdb -d -s -Xmx50g
+bash graphdb -d -s -Xmx55g
 cd /data/sbs-graphs/thought-selection/src/
 
 ##################################### set hyper parameters #####################################
-# TODO change to real numbers: 100 turns 500 chats 10 runs
-declare -i turns=10
-declare -i chats=5
-declare -i runs=3
+# 25  turns, 3  chats, 8 metrics, 3 runs = 2   hours
+# 100 turns, 50 chats, 1 metric , 1 run  = 6.5 hours. TOO LONG!
+declare -i turns=25
+declare -i chats=6
+declare -i runs=1
 
 #################################### Sparseness #####################################
 reward="Sparseness"
