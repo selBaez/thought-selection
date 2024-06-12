@@ -318,9 +318,9 @@ def main():
     # graph_data = merge_all_graphs(TEST)
     # create_users(graph_data)
 
-    print("---------------------------- Add entity types  ----------------------------")
-    # Add entity types
-    add_types()
+    # print("---------------------------- Add entity types  ----------------------------")
+    # # Add entity types
+    # add_types()
 
     print("DONE")
 

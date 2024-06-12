@@ -2,14 +2,6 @@ from collections import namedtuple
 
 import torch
 
-################## STATE REPRESENTATION PARAMETERS ##################
-STATE_HIDDEN_SIZE = 64  # original features per node is 87
-STATE_EMBEDDING_SIZE = 16  # also n_observations
-
-################## MEMORY PARAMETERS ##################
-REPLAY_POOL_SIZE = 500  # 5000 for DQN, 10000 for tutorial
-Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
-
 ################## RL PARAMETERS ##################
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 BATCH_SIZE = 4  # 16 for D2Q, 128 tutorial
@@ -19,9 +11,25 @@ EPSILON_INFO = {"start": 0.9, "end": 0.05, "decay": 1000}
 GAMMA = 0.99
 TAU = 0.005
 
+################## STATE REPRESENTATION PARAMETERS ##################
+STATE_HIDDEN_SIZE = 64  # original features per node is 87
+STATE_EMBEDDING_SIZE = 16  # also n_observations
+
+################## MEMORY PARAMETERS ##################
+REPLAY_POOL_SIZE = 500  # 5000 for DQN, 10000 for tutorial
+Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
+
 ################## TRAINING PARAMETERS ##################
 RESET_FREQUENCY = 6
 SHUFFLE_FREQUENCY = 2
+
+################## USER MODEL PARAMETERS ##################
+USER_MODEL_CATEGORIES = ['amateur', 'doubtful', 'incoherent', 'confused']
+
+################## REWARD PARAMETERS ##################
+METRICS = {'Sparseness': 11, 'Average degree': 12, 'Shortest path': 13, 'Total triples': 14,
+           'Average population': 21,
+           'Ratio claims to triples': 31, 'Ratio perspectives to claims': 32, 'Ratio conflicts to claims': 33}
 
 ################## DATASET SPECIFIC PARAMETERS ##################
 ACTION_THOUGHTS = {0: '_complement_conflict', 1: '_negation_conflicts',

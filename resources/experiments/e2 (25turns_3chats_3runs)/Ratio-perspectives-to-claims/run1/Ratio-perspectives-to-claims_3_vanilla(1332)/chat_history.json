@@ -1,0 +1,3713 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 3,
+            "turn": 0,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape affiliation hogwarts",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2024-06-11T17:55:19.750822",
+            "context_id": 1332,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 2,
+                "trust": 0.5,
+                "Total nodes": 1393,
+                "Total edges": 9432,
+                "Average degree": 13.541995692749461,
+                "Sparseness": 0.004020203571441455,
+                "Shortest path": 2.9260114199899334,
+                "Total triples": 9432.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.529411764705884,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005619168787107718,
+                "Ratio perspectives to triples": 0.005619168787107718,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "great! did you know that snape also affiliation hogwarts"
+        },
+        {
+            "chat": 3,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape affiliation hogwarts",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/snape"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:55:31.554143",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 2,
+                "trust": 0.5,
+                "Total nodes": 1395,
+                "Total edges": 9448,
+                "Average degree": 13.54551971326165,
+                "Sparseness": 0.004015364653588726,
+                "Shortest path": 2.925983863254192,
+                "Total triples": 9448.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.00560965283657917,
+                "Ratio perspectives to triples": 0.00560965283657917,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. has a character ever export hogwarts?"
+        },
+        {
+            "chat": 3,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "mcgonagall lineage pure-blood-wizard",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:55:42.914156",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 3,
+                "trust": 0.5,
+                "Total nodes": 1396,
+                "Total edges": 9461,
+                "Average degree": 13.554441260744985,
+                "Sparseness": 0.004014745363338561,
+                "Shortest path": 2.9265161084922617,
+                "Total triples": 9461.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005601944826128316,
+                "Ratio perspectives to triples": 0.005601944826128316,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, i trust you"
+        },
+        {
+            "chat": 3,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "mcgonagall lineage pure-blood-wizard",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:55:54.899662",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 3,
+                "trust": 0.5,
+                "Total nodes": 1397,
+                "Total edges": 9474,
+                "Average degree": 13.56335003579098,
+                "Sparseness": 0.0040141237307268,
+                "Shortest path": 2.9271012587349476,
+                "Total triples": 9474.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005594257969178805,
+                "Ratio perspectives to triples": 0.005594257969178805,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that rings a bell. vanilla told me about it on 2024 06 11."
+        },
+        {
+            "chat": 3,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "mcgonagall lineage pure-blood-wizard",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:56:06.285303",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 3,
+                "trust": 0.5,
+                "Total nodes": 1398,
+                "Total edges": 9487,
+                "Average degree": 13.572246065808297,
+                "Sparseness": 0.004013499767704118,
+                "Shortest path": 2.927706315290378,
+                "Total triples": 9487.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.00558659217877095,
+                "Ratio perspectives to triples": 0.00558659217877095,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. has mcgonagall affiliationed attribute.?"
+        },
+        {
+            "chat": 3,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville affiliation hogvy",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:56:20.402876",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogvy",
+                    "_label": "hogvy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 1399,
+                "Total edges": 9498,
+                "Average degree": 13.578270192994996,
+                "Sparseness": 0.004011851618714685,
+                "Shortest path": 2.9282698350855556,
+                "Total triples": 9498.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005580122130974942,
+                "Ratio perspectives to triples": 0.005580122130974942,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that rings a bell. vanilla told me about it on 2024 06 11."
+        },
+        {
+            "chat": 3,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville affiliation hogvy",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:56:34.959052",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogvy",
+                    "_label": "hogvy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 1400,
+                "Total edges": 9500,
+                "Average degree": 13.571428571428571,
+                "Sparseness": 0.0040066326530612244,
+                "Shortest path": 2.928980904727867,
+                "Total triples": 9500.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005578947368421052,
+                "Ratio perspectives to triples": 0.005578947368421052,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. has a character ever export hogvy?"
+        },
+        {
+            "chat": 3,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville affiliation hogvy",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:56:49.289627",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogvy",
+                    "_label": "hogvy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 1401,
+                "Total edges": 9511,
+                "Average degree": 13.577444682369736,
+                "Sparseness": 0.0040049908268846406,
+                "Shortest path": 2.9295350260018354,
+                "Total triples": 9511.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005572495005782778,
+                "Ratio perspectives to triples": 0.005572495005782778,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i have heard this before. vanilla told me about it on 2024 06 11."
+        },
+        {
+            "chat": 3,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville affiliation hogvy",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:57:03.625902",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogvy",
+                    "_label": "hogvy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 1402,
+                "Total edges": 9524,
+                "Average degree": 13.586305278174038,
+                "Sparseness": 0.004004367105480046,
+                "Shortest path": 2.930070328815468,
+                "Total triples": 9524.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005564888702225956,
+                "Ratio perspectives to triples": 0.005564888702225956,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this sounds familiar. vanilla told me about it on 2024 06 11."
+        },
+        {
+            "chat": 3,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville affiliation hogvy",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:57:17.920351",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogvy",
+                    "_label": "hogvy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 1403,
+                "Total edges": 9537,
+                "Average degree": 13.595153243050605,
+                "Sparseness": 0.004003741092425406,
+                "Shortest path": 2.930641797737272,
+                "Total triples": 9537.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005557303135157806,
+                "Ratio perspectives to triples": 0.005557303135157806,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. has a character ever hobbies hogvy?"
+        },
+        {
+            "chat": 3,
+            "turn": 21,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hermione age age-11",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:57:32.194591",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 21,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 3,
+                "trust": 0.5,
+                "Total nodes": 1404,
+                "Total edges": 9548,
+                "Average degree": 13.601139601139602,
+                "Sparseness": 0.004002098197254892,
+                "Shortest path": 2.9312289700743017,
+                "Total triples": 9548.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0055509007121910346,
+                "Ratio perspectives to triples": 0.0055509007121910346,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i know. vanilla told me about it on 2024 06 11."
+        },
+        {
+            "chat": 3,
+            "turn": 23,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hermione age age-11",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:57:46.256860",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 23,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 3,
+                "trust": 0.5,
+                "Total nodes": 1405,
+                "Total edges": 9561,
+                "Average degree": 13.609964412811388,
+                "Sparseness": 0.004001469079672243,
+                "Shortest path": 2.931789194066774,
+                "Total triples": 9561.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005543353205731618,
+                "Ratio perspectives to triples": 0.005543353205731618,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. has hermione lineaged attribute.?"
+        },
+        {
+            "chat": 3,
+            "turn": 25,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hermione lineage mixed-wizard",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:00.440243",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 25,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 1406,
+                "Total edges": 9574,
+                "Average degree": 13.61877667140825,
+                "Sparseness": 0.004000837702267664,
+                "Shortest path": 2.9323813043236155,
+                "Total triples": 9574.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005535826195947357,
+                "Ratio perspectives to triples": 0.005535826195947357,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i have heard this before. vanilla told me about it on 2024 06 11."
+        },
+        {
+            "chat": 3,
+            "turn": 27,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hermione lineage mixed-wizard",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:14.709803",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 27,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 1407,
+                "Total edges": 9587,
+                "Average degree": 13.627576403695807,
+                "Sparseness": 0.004000204076581253,
+                "Shortest path": 2.9329596682306818,
+                "Total triples": 9587.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005528319599457598,
+                "Ratio perspectives to triples": 0.005528319599457598,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that rings a bell. vanilla told me about it on 2024 06 11."
+        },
+        {
+            "chat": 3,
+            "turn": 29,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hermione lineage mixed-wizard",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:28.831312",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 29,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 1408,
+                "Total edges": 9600,
+                "Average degree": 13.636363636363637,
+                "Sparseness": 0.0039995682141012396,
+                "Shortest path": 2.9335455433869613,
+                "Total triples": 9600.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005520833333333333,
+                "Ratio perspectives to triples": 0.005520833333333333,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. has a character ever title mixed wizard?"
+        },
+        {
+            "chat": 3,
+            "turn": 31,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hagrid looks full-of-beards",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "full-of-beards",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/full-of-beards"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:43.021521",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/full-of-beards",
+                    "_label": "full-of-beards",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 31,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 1409,
+                "Total edges": 9611,
+                "Average degree": 13.642299503193755,
+                "Sparseness": 0.003997922712200439,
+                "Shortest path": 2.934131839150913,
+                "Total triples": 9611.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005514514618666112,
+                "Ratio perspectives to triples": 0.005514514618666112,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. has a character ever title full of beards?"
+        },
+        {
+            "chat": 3,
+            "turn": 33,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hermione age age-11",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:57.310322",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 33,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 3,
+                "trust": 0.5,
+                "Total nodes": 1410,
+                "Total edges": 9624,
+                "Average degree": 13.651063829787233,
+                "Sparseness": 0.003997283838841105,
+                "Shortest path": 2.9346813040786435,
+                "Total triples": 9624.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005507065669160432,
+                "Ratio perspectives to triples": 0.005507065669160432,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. has a character ever looks age 11?"
+        },
+        {
+            "chat": 3,
+            "turn": 35,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "dudley age age-11",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:59:11.846206",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 35,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 3,
+                "trust": 0.5,
+                "Total nodes": 1411,
+                "Total edges": 9637,
+                "Average degree": 13.659815733522324,
+                "Sparseness": 0.0039966427598081495,
+                "Shortest path": 2.935250388286563,
+                "Total triples": 9637.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.549019607843135,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0054996368164366505,
+                "Ratio perspectives to triples": 0.0054996368164366505,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "great! did you know that hermione also age age 11"
+        },
+        {
+            "chat": 3,
+            "turn": 37,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hermione age age-11",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:59:26.375611",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 37,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 4,
+                "trust": 0.5,
+                "Total nodes": 1413,
+                "Total edges": 9659,
+                "Average degree": 13.671620665251238,
+                "Sparseness": 0.003994853170614189,
+                "Shortest path": 2.935156950133223,
+                "Total triples": 9659.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.666666666666664,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005487110466922042,
+                "Ratio perspectives to triples": 0.005487110466922042,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "amazing! did you know that harry also age age 11"
+        },
+        {
+            "chat": 3,
+            "turn": 39,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hagrid hobbies like-pets",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "hobbies",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:59:41.063622",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/like-pets",
+                    "_label": "like-pets",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 39,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 1414,
+                "Total edges": 9661,
+                "Average degree": 13.664780763790665,
+                "Sparseness": 0.003989704890877045,
+                "Shortest path": 2.9358482709053435,
+                "Total triples": 9661.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.666666666666664,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005485974536797433,
+                "Ratio perspectives to triples": 0.005485974536797433,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, i think i trust you."
+        },
+        {
+            "chat": 3,
+            "turn": 41,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hagrid hobbies like-pets",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "hobbies",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:59:55.345947",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/like-pets",
+                    "_label": "like-pets",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 41,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 1415,
+                "Total edges": 9672,
+                "Average degree": 13.670671378091873,
+                "Sparseness": 0.003988063279601444,
+                "Shortest path": 2.936435743523873,
+                "Total triples": 9672.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.666666666666664,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0054797353184449955,
+                "Ratio perspectives to triples": 0.0054797353184449955,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that rings a bell. vanilla told me about it on 2024 06 11."
+        },
+        {
+            "chat": 3,
+            "turn": 43,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hagrid hobbies like-pets",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "hobbies",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 18:00:09.581243",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/like-pets",
+                    "_label": "like-pets",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 43,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 1416,
+                "Total edges": 9683,
+                "Average degree": 13.676553672316384,
+                "Sparseness": 0.003986422324364008,
+                "Shortest path": 2.93702062246711,
+                "Total triples": 9683.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.666666666666664,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005473510275740989,
+                "Ratio perspectives to triples": 0.005473510275740989,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this sounds familiar. vanilla told me about it on 2024 06 11."
+        },
+        {
+            "chat": 3,
+            "turn": 45,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hagrid hobbies like-pets",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "hobbies",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 18:00:23.925892",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/like-pets",
+                    "_label": "like-pets",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 45,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 1417,
+                "Total edges": 9694,
+                "Average degree": 13.68242766407904,
+                "Sparseness": 0.003984782027293341,
+                "Shortest path": 2.9375899588930223,
+                "Total triples": 9694.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.666666666666664,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005467299360429131,
+                "Ratio perspectives to triples": 0.005467299360429131,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. has a character ever lineage like pets?"
+        },
+        {
+            "chat": 3,
+            "turn": 47,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "petunia lineage maculogy",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 18:00:38.351493",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 47,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 1418,
+                "Total edges": 9707,
+                "Average degree": 13.69111424541608,
+                "Sparseness": 0.0039841370570998305,
+                "Shortest path": 2.9381617334542374,
+                "Total triples": 9707.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.666666666666664,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005459977335943134,
+                "Ratio perspectives to triples": 0.005459977335943134,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, i believe you"
+        },
+        {
+            "chat": 3,
+            "turn": 49,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "petunia lineage maculogy",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 18:00:53.050822",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.0,
+            "statistics_history": {
+                "turn": 49,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 1419,
+                "Total edges": 9720,
+                "Average degree": 13.699788583509514,
+                "Sparseness": 0.003983489946418311,
+                "Shortest path": 2.9387180427623893,
+                "Total triples": 9720.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 51.666666666666664,
+                "Total claims": 53.0,
+                "Total perspectives": 53.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.005452674897119342,
+                "Ratio perspectives to triples": 0.005452674897119342,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. has a character ever export maculogy?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 3,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/snape"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:55:31.554143"
+        },
+        {
+            "chat": 3,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "export",
+                "uri": "http://harrypotter.org/export"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:55:42.914156"
+        },
+        {
+            "chat": 3,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:55:54.899662"
+        },
+        {
+            "chat": 3,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:56:06.285303"
+        },
+        {
+            "chat": 3,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:56:20.402876"
+        },
+        {
+            "chat": 3,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:56:34.959052"
+        },
+        {
+            "chat": 3,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "export",
+                "uri": "http://harrypotter.org/export"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:56:49.289627"
+        },
+        {
+            "chat": 3,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:57:03.625902"
+        },
+        {
+            "chat": 3,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:57:17.920351"
+        },
+        {
+            "chat": 3,
+            "turn": 21,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "hobbies",
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:57:32.194591"
+        },
+        {
+            "chat": 3,
+            "turn": 23,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:57:46.256860"
+        },
+        {
+            "chat": 3,
+            "turn": 25,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:00.440243"
+        },
+        {
+            "chat": 3,
+            "turn": 27,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:14.709803"
+        },
+        {
+            "chat": 3,
+            "turn": 29,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:28.831312"
+        },
+        {
+            "chat": 3,
+            "turn": 31,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:43.021521"
+        },
+        {
+            "chat": 3,
+            "turn": 33,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "full-of-beards",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/full-of-beards"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:58:57.310322"
+        },
+        {
+            "chat": 3,
+            "turn": 35,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:59:11.846206"
+        },
+        {
+            "chat": 3,
+            "turn": 37,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:59:26.375611"
+        },
+        {
+            "chat": 3,
+            "turn": 39,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/harry"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:59:41.063622"
+        },
+        {
+            "chat": 3,
+            "turn": 41,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "hobbies",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 17:59:55.345947"
+        },
+        {
+            "chat": 3,
+            "turn": 43,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "hobbies",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 18:00:09.581243"
+        },
+        {
+            "chat": 3,
+            "turn": 45,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "hobbies",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 18:00:23.925892"
+        },
+        {
+            "chat": 3,
+            "turn": 47,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 18:00:38.351493"
+        },
+        {
+            "chat": 3,
+            "turn": 49,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 18:00:53.050822"
+        },
+        {
+            "chat": 3,
+            "turn": 51,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "export",
+                "uri": "http://harrypotter.org/export"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 5,
+            "timestamp": "2024-06-11 18:01:07.427577"
+        }
+    ],
+    "say_history": [
+        "great! did you know that snape also affiliation hogwarts",
+        "i am curious. has a character ever export hogwarts?",
+        "vanilla, i trust you",
+        "that rings a bell. vanilla told me about it on 2024 06 11.",
+        "let me ask you something. has mcgonagall affiliationed attribute.?",
+        "that rings a bell. vanilla told me about it on 2024 06 11.",
+        "if you don't mind me asking. has a character ever export hogvy?",
+        "i have heard this before. vanilla told me about it on 2024 06 11.",
+        "this sounds familiar. vanilla told me about it on 2024 06 11.",
+        "i am curious. has a character ever hobbies hogvy?",
+        "i know. vanilla told me about it on 2024 06 11.",
+        "let me ask you something. has hermione lineaged attribute.?",
+        "i have heard this before. vanilla told me about it on 2024 06 11.",
+        "that rings a bell. vanilla told me about it on 2024 06 11.",
+        "if you don't mind me asking. has a character ever title mixed wizard?",
+        "let me ask you something. has a character ever title full of beards?",
+        "let me ask you something. has a character ever looks age 11?",
+        "great! did you know that hermione also age age 11",
+        "amazing! did you know that harry also age age 11",
+        "vanilla, i think i trust you.",
+        "that rings a bell. vanilla told me about it on 2024 06 11.",
+        "this sounds familiar. vanilla told me about it on 2024 06 11.",
+        "let me ask you something. has a character ever lineage like pets?",
+        "vanilla, i believe you",
+        "i am curious. has a character ever export maculogy?"
+    ]
+}
