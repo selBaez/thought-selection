@@ -95,7 +95,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_turns", default=25, type=int, help="Number of turns for this experiment")
     parser.add_argument("--num_chats", default=3, type=int, help="Number of chats for this experiment")
     parser.add_argument("--num_runs", default=3, type=int, help="Number of runs for this experiment")
-    parser.add_argument("--switch_users", action='store_true', help="Whether to switch users between chats")
+    parser.add_argument("--switch_users", default=True, action='store_true', help="Whether to switch users between chats")
     parser.add_argument("--users_path", default=RAW_USER_PATH, type=str, help="Directory where user models are")
 
     args = parser.parse_args()
