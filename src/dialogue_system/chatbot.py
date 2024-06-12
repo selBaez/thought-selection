@@ -162,7 +162,7 @@ class Chatbot(object):
                 if el:
                     action_history.append(int(el[0][0]))
                 else:
-                    action_history.append(el)
+                    action_history.append(None)
 
             hist = {"actions": action_history,
                     "rewards": self.selector.reward_history,

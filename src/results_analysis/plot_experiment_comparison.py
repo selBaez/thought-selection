@@ -16,6 +16,7 @@ from dialogue_system.utils.rl_parameters import DEVICE, STATE_EMBEDDING_SIZE, N_
 
 EXPERIMENTS_PATH = Path(f"{RESOURCES_PATH}/experiments").resolve()
 PLOTS_PATH = Path(f"{RESOURCES_PATH}/plots").resolve()
+NUM_TURNS = 0
 
 
 def load_trained_model(filename):
@@ -109,7 +110,8 @@ def plot_qvalues_stacked(data, plots_folder):
     axes[0].set_ylabel('Selection Probability')
     axes[0].set_xticklabels(axes[0].get_xticklabels(), rotation=55)
     handles, labels = axes[0].get_legend_handles_labels()
-    axes[0].legend(handles, labels, title='Abstract Action', bbox_to_anchor=(1.05, 1), loc='upper left', fontsize="small")
+    axes[0].legend(handles, labels, title='Abstract Action', bbox_to_anchor=(1.05, 1), loc='upper left',
+                   fontsize="small")
 
     # Specific actions
 
@@ -127,7 +129,8 @@ def plot_qvalues_stacked(data, plots_folder):
     axes[1].set_ylabel('Selection Probability')
     axes[1].set_xticklabels(axes[1].get_xticklabels(), rotation=55)
     handles, labels = axes[1].get_legend_handles_labels()
-    axes[1].legend(handles, labels, title='Specific Action', bbox_to_anchor=(1.05, 1.25), loc='upper left', fontsize="small")
+    axes[1].legend(handles, labels, title='Specific Action', bbox_to_anchor=(1.05, 1.25), loc='upper left',
+                   fontsize="small")
 
     plt.tight_layout()
     plt.savefig(plots_folder / f"stacked_qvalues.png", dpi=300)
@@ -147,6 +150,11 @@ def get_final_knowledge_stats(data, plots_folder):
     final_k.drop(columns=["timestep"], inplace=True)
 
     final_k.to_csv(plots_folder / "final_k.csv")
+
+    final_k = final_k.round(3)
+    latex_table = final_k.to_latex( index=False)
+    with open(plots_folder / "final_k.tex", 'w') as f:
+        f.write(latex_table)
 
 
 def plot_cum_reward(data, plots_folder, log=False):
@@ -200,7 +208,51 @@ def plot_action_count(data, plots_folder):
     plt.show()
 
 
+def plot_cum_reward_compared(data, plots_folder, range=False):
+    data['cumulative_reward'] = data.groupby(['experiment', 'condition', 'run'])['rewards'].cumsum()
+
+    # Calculate mean and standard deviation for each condition and timestep
+    avg_over_runs = data.groupby(['experiment', 'condition', 'timestep']).agg(
+        mean_cumulative_reward=('cumulative_reward', 'mean'),
+        std_cumulative_reward=('cumulative_reward', 'std')).reset_index()
+
+    # Define the color palette
+    palette = sns.color_palette("husl", avg_over_runs['condition'].nunique())
+    color_mapping = dict(zip(avg_over_runs['condition'].unique(), palette))
+
+    # Plotting
+    plt.figure(figsize=(12, 8), tight_layout=True)
+    sns.lineplot(data=avg_over_runs, x='timestep', y='mean_cumulative_reward', hue='condition', style='experiment',
+                 linewidth=1.5, palette=color_mapping)
+
+    # Add shaded area for standard deviation
+    if range:
+        for experiment in avg_over_runs['experiment'].unique():
+            for condition in avg_over_runs['condition'].unique():
+                condition_data = avg_over_runs[(avg_over_runs['condition'] == condition) &
+                                               (avg_over_runs['experiment'] == experiment)]
+                color = color_mapping[condition]
+
+                plt.fill_between(condition_data['timestep'],
+                                 condition_data['mean_cumulative_reward'] - condition_data['std_cumulative_reward'],
+                                 condition_data['mean_cumulative_reward'] + condition_data['std_cumulative_reward'],
+                                 alpha=0.3, color=color)
+
+    plt.title('Cumulative Rewards Over Time Steps by Intention')
+    plt.xlabel('Timestep')
+    plt.ylabel('Cumulative Reward')
+    plt.legend(title='Intention / Reward')
+    if range:
+        plt.savefig(plots_folder / "comparative_cumulative_reward.png", dpi=300)
+    else:
+        plt.savefig(plots_folder / "comparative_cumulative_reward-no_range.png", dpi=300)
+    plt.show()
+
+
 def main(args):
+    experiment_plots_path = PLOTS_PATH / args.experiment_id
+    experiment_plots_path.mkdir(parents=True, exist_ok=True)
+
     state_encoder = StateEncoder(HarryPotterRDF('.'))
 
     experiment_dir = EXPERIMENTS_PATH / args.experiment_id
@@ -239,7 +291,30 @@ def main(args):
                     selections_data["chat"] = chat.name.split("_")[1]
                     selections_data["turn"] = range(len(selections_data))
 
+                    # Data for states
+                    with open(states_file) as f:
+                        states_list = json.load(f)
+
+                    states_data = pd.DataFrame(states_list)
+                    selections_data["Average degree"] = states_data["Average degree"]
+                    selections_data["Sparseness"] = states_data["Sparseness"]
+                    selections_data["Shortest path"] = states_data["Shortest path"]
+                    selections_data["Total triples"] = states_data["Total triples"]
+                    selections_data["Average population"] = states_data["Average population"]
+                    selections_data["Ratio claims to triples"] = states_data["Ratio claims to triples"]
+                    selections_data["Ratio perspectives to claims"] = states_data["Ratio perspectives to claims"]
+                    selections_data["Ratio conflicts to claims"] = states_data["Ratio conflicts to claims"]
+
                     experiments_data.append(selections_data)
+                    NUM_TURNS = len(selections_data)
+
+                except Exception as e:
+                    print(f"Condition {condition.name}, Run: {run.name}, Chat: {chat.name.split('_')[1]}, error: {e}")
+                    selections_data = pd.DataFrame(columns=['actions', 'rewards', 'states', 'selections'])
+                    selections_data["turn"] = range(NUM_TURNS)
+                    selections_data["condition"] = condition.name
+                    selections_data["run"] = run.name
+                    selections_data["chat"] = chat.name.split("_")[1]
 
                     # Data for states
                     with open(states_file) as f:
@@ -255,34 +330,51 @@ def main(args):
                     selections_data["Ratio perspectives to claims"] = states_data["Ratio perspectives to claims"]
                     selections_data["Ratio conflicts to claims"] = states_data["Ratio conflicts to claims"]
 
-                except:
-                    continue
+                    selections_data["tmp"] = selections_data[condition.name.replace('-', ' ')].shift(1)
+                    selections_data["rewards"] = selections_data[condition.name.replace('-', ' ')] / \
+                                                 selections_data["tmp"]
+                    selections_data["rewards"] = selections_data["rewards"] - 1
+                    selections_data.drop(columns=['tmp'], inplace=True)
+
+                    experiments_data.append(selections_data)
 
     # Create dataframe for softmax
     qvalues_data = pd.DataFrame(qvalues_data)
-    plot_qvalues_stacked(qvalues_data, PLOTS_PATH)
-    plot_qvalues_distribution(qvalues_data, PLOTS_PATH)
+    plot_qvalues_stacked(qvalues_data, experiment_plots_path)
+    plot_qvalues_distribution(qvalues_data, experiment_plots_path)
 
     # Create dataframe and calculate timesteps
     history_data = pd.concat(experiments_data, ignore_index=True)
     history_data["timestep"] = history_data.groupby(['condition', 'run']).cumcount() + 1
 
     # Plots and outputs
-    plot_action_count(history_data, PLOTS_PATH)
-    get_final_knowledge_stats(history_data, PLOTS_PATH)
-    plot_cum_reward(history_data, PLOTS_PATH, log=True)
-    plot_cum_reward(history_data, PLOTS_PATH, log=False)
+    plot_action_count(history_data, experiment_plots_path)
+    get_final_knowledge_stats(history_data, experiment_plots_path)
+    plot_cum_reward(history_data, experiment_plots_path, log=True)
+    plot_cum_reward(history_data, experiment_plots_path, log=False)
 
-    print("DONE")
+    return history_data
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--experiment_id", default="e1 (5turns_7chats_1runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--experiment_id", default="e2 (25turns_3chats_3runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--compare_experiments", default=True, action='store_true', help="ID for a second experiment")
+    parser.add_argument("--second_experiment_id", default="e1 (25turns_3chats_3runs)", type=str,
+                        help="ID for a second experiment")
 
     args = parser.parse_args()
 
-    PLOTS_PATH = PLOTS_PATH / args.experiment_id
-    PLOTS_PATH.mkdir(parents=True, exist_ok=True)
+    base_experiment = main(args)
+    if args.compare_experiments:
+        args.experiment_id = args.second_experiment_id
+        compare_experiment = main(args)
 
-    main(args)
+        base_experiment["experiment"] = "e1"
+        compare_experiment["experiment"] = "e2"
+
+        all_data = pd.concat([base_experiment, compare_experiment], ignore_index=True)
+        plot_cum_reward_compared(all_data, PLOTS_PATH, range=True)
+        plot_cum_reward_compared(all_data, PLOTS_PATH, range=False)
+
+    print("DONE")
