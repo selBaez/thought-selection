@@ -1,0 +1,1464 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 5,
+            "turn": 0,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hagrid title key-guardian-and-hunting-ground-guard",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "key-guardian-and-hunting-ground-guard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/key-guardian-and-hunting-ground-guard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2024-06-13T10:30:57.527425",
+            "context_id": 2512,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/key-guardian-and-hunting-ground-guard",
+                    "_label": "key-guardian-and-hunting-ground-guard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 10.869976359338061,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 423,
+                "Total edges": 2299,
+                "Average degree": 10.869976359338061,
+                "Sparseness": 0.010384007064254536,
+                "Shortest path": 2.347540138706822,
+                "Total triples": 2299.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.607843137254902,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008699434536755111,
+                "Ratio perspectives to triples": 0.00043497172683775554,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "interesting! i had never heard about hagrid before!"
+        },
+        {
+            "chat": 5,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hagrid age adult",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "NEGATIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:00.443911",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.006269934139930156,
+            "brain_state": 10.801822323462414,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 439,
+                "Total edges": 2371,
+                "Average degree": 10.801822323462414,
+                "Sparseness": 0.009967777253127579,
+                "Shortest path": 2.3746372515368055,
+                "Total triples": 2371.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.117647058823529,
+                "Total claims": 3.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012652889076339097,
+                "Ratio perspectives to triples": 0.0008435259384226065,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.6666666666666666,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, you have my trust."
+        },
+        {
+            "chat": 5,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hagrid age adult",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "NEGATIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:03.356940",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.005002260801501679,
+            "brain_state": 10.855855855855856,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 444,
+                "Total edges": 2410,
+                "Average degree": 10.855855855855856,
+                "Sparseness": 0.009896721045369695,
+                "Shortest path": 2.3831472556077524,
+                "Total triples": 2410.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.294117647058824,
+                "Total claims": 3.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012448132780082987,
+                "Ratio perspectives to triples": 0.0008298755186721991,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.6666666666666666,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. has hagrid looked attribute.?"
+        },
+        {
+            "chat": 5,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hagrid looks surprisingly-tall",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "surprisingly-tall",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/surprisingly-tall"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "NEGATIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:06.550915",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/surprisingly-tall",
+                    "_label": "surprisingly-tall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.002645795690821462,
+            "brain_state": 10.827133479212254,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 457,
+                "Total edges": 2474,
+                "Average degree": 10.827133479212254,
+                "Sparseness": 0.009605025640534549,
+                "Shortest path": 2.4061384314177126,
+                "Total triples": 2474.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.745098039215685,
+                "Total claims": 4.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0016168148746968471,
+                "Ratio perspectives to triples": 0.0012126111560226355,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.75,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. has a character ever affiliation surprisingly tall?"
+        },
+        {
+            "chat": 5,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "dudley gender male",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "gender",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "male",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/male"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:09.745956",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/male",
+                    "_label": "male",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.004384582711042362,
+            "brain_state": 10.779661016949152,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 472,
+                "Total edges": 2544,
+                "Average degree": 10.779661016949152,
+                "Sparseness": 0.009278045101982189,
+                "Shortest path": 2.430350138544028,
+                "Total triples": 2544.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.27450980392157,
+                "Total claims": 5.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0019654088050314465,
+                "Ratio perspectives to triples": 0.0015723270440251573,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. has dudley belongingsed attribute.?"
+        },
+        {
+            "chat": 5,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville gender male",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "gender",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "male",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/male"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:13.003814",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/male",
+                    "_label": "male",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0023212085845814023,
+            "brain_state": 10.754639175257733,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 485,
+                "Total edges": 2608,
+                "Average degree": 10.754639175257733,
+                "Sparseness": 0.009021149962801574,
+                "Shortest path": 2.450864786572378,
+                "Total triples": 2608.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.72549019607843,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0023006134969325155,
+                "Ratio perspectives to triples": 0.0019171779141104294,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. has neville belongingsed attribute.?"
+        },
+        {
+            "chat": 5,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville belongings toad",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "toad",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/toad"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:16.349383",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/toad",
+                    "_label": "toad",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0022051395767118676,
+            "brain_state": 10.730923694779117,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 498,
+                "Total edges": 2672,
+                "Average degree": 10.730923694779117,
+                "Sparseness": 0.008778084224447993,
+                "Shortest path": 2.4703562741913325,
+                "Total triples": 2672.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.176470588235293,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002619760479041916,
+                "Ratio perspectives to triples": 0.002245508982035928,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. has neville gendered attribute.?"
+        },
+        {
+            "chat": 5,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville gender male",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "male",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/male"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:19.546265",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/male",
+                    "_label": "male",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0025172868548617444,
+            "brain_state": 10.757936507936508,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 504,
+                "Total edges": 2711,
+                "Average degree": 10.757936507936508,
+                "Sparseness": 0.008688429075333837,
+                "Shortest path": 2.4800561709110416,
+                "Total triples": 2711.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.352941176470589,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0025820730357801547,
+                "Ratio perspectives to triples": 0.0022132054592401327,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, i believe you"
+        },
+        {
+            "chat": 5,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville gender male",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "male",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/male"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:23.035157",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/male",
+                    "_label": "male",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.002451884479354405,
+            "brain_state": 10.784313725490197,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 510,
+                "Total edges": 2750,
+                "Average degree": 10.784313725490197,
+                "Sparseness": 0.008600538254517493,
+                "Shortest path": 2.489541199583959,
+                "Total triples": 2750.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.529411764705882,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0025454545454545456,
+                "Ratio perspectives to triples": 0.002181818181818182,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that makes my day! did you know that dudley also gender male"
+        },
+        {
+            "chat": 5,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "dudley gender male",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/dudley"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "male",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/male"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:26.681714",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/male",
+                    "_label": "male",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.002961139440829985,
+            "brain_state": 10.81624758220503,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 2,
+                "trust": 0.5,
+                "Total nodes": 517,
+                "Total edges": 2796,
+                "Average degree": 10.81624758220503,
+                "Sparseness": 0.008507645282821216,
+                "Shortest path": 2.4978333558244494,
+                "Total triples": 2796.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.784313725490197,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002503576537911302,
+                "Ratio perspectives to triples": 0.002145922746781116,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, i think i trust you."
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 5,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": null,
+                "uri": null
+            },
+            "object": {
+                "label": null,
+                "type": [],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:00.443911"
+        },
+        {
+            "chat": 5,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:03.356940"
+        },
+        {
+            "chat": 5,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:06.550915"
+        },
+        {
+            "chat": 5,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "surprisingly-tall",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/surprisingly-tall"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:09.745956"
+        },
+        {
+            "chat": 5,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:13.003814"
+        },
+        {
+            "chat": 5,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:16.349383"
+        },
+        {
+            "chat": 5,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:19.546265"
+        },
+        {
+            "chat": 5,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "male",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/male"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:23.035157"
+        },
+        {
+            "chat": 5,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/dudley"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "male",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/male"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:26.681714"
+        },
+        {
+            "chat": 5,
+            "turn": 21,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/dudley"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "male",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/male"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 164,
+            "timestamp": "2024-06-13 10:31:30.485575"
+        }
+    ],
+    "say_history": [
+        "interesting! i had never heard about hagrid before!",
+        "vanilla, you have my trust.",
+        "if you don't mind me asking. has hagrid looked attribute.?",
+        "if you don't mind me asking. has a character ever affiliation surprisingly tall?",
+        "if you don't mind me asking. has dudley belongingsed attribute.?",
+        "i am curious. has neville belongingsed attribute.?",
+        "let me ask you something. has neville gendered attribute.?",
+        "vanilla, i believe you",
+        "that makes my day! did you know that dudley also gender male",
+        "vanilla, i think i trust you."
+    ]
+}

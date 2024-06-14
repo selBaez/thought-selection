@@ -11,8 +11,6 @@ import json
 import os
 from random import choice
 
-from rdflib import Dataset
-
 # Pip-installed ctl repositories
 from cltl.brain.long_term_memory import LongTermMemory
 from cltl.brain.utils.helper_functions import brain_response_to_json
@@ -75,7 +73,7 @@ class Chatbot(object):
         string = choice(GOODBYE)
         return string
 
-    def begin_session(self, experiment_id, run_id, context_id, chat_id, speaker, reward, init_brain):
+    def begin_session(self, experiment_id, run_id, context_id, chat_id, speaker, reward, init_brain, test_model=None):
         """Sets up a session .
 
         params
@@ -115,13 +113,15 @@ class Chatbot(object):
 
         # RL information
         prev_chat_model = None
-        if chat_id != 1:
+        if test_model:
+            prev_chat_model = test_model
+        elif chat_id != 1:
             # load saved model from previous chat
             prev_chat_model = create_session_folder(experiment_id, run_id, context_id - 100, reward, chat_id - 1,
                                                     speaker)
             prev_chat_model = f"{prev_chat_model}/thoughts.pt"
 
-        self._selector = D2Q(self._brain, reward=reward, savefile=prev_chat_model,
+        self._selector = D2Q(self._brain, reward=reward, trained_model=prev_chat_model,
                              states_folder=self.scenario_folder / "cumulative_states/")
         self.thoughts_file = self.scenario_folder / "thoughts.pt"
         self.statistics_history = []

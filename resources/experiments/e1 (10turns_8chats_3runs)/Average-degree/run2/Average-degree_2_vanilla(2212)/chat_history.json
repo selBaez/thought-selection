@@ -1,0 +1,1482 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 2,
+            "turn": 0,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "petunia age adult",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2024-06-13T01:16:58.808432",
+            "context_id": 2212,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 12.293609671848014,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 579,
+                "Total edges": 3559,
+                "Average degree": 12.293609671848014,
+                "Sparseness": 0.008605749296774559,
+                "Shortest path": 2.456663738338981,
+                "Total triples": 3559.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.117647058823529,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0016858668165214948,
+                "Ratio perspectives to triples": 0.0014048890137679123,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. has petunia looked attribute.?"
+        },
+        {
+            "chat": 2,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "petunia looks long-neck",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "long-neck",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/long-neck"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:04.319971",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/long-neck",
+                    "_label": "long-neck",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0002496525747438527,
+            "brain_state": 12.29054054054054,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 592,
+                "Total edges": 3638,
+                "Average degree": 12.29054054054054,
+                "Sparseness": 0.008431679145361578,
+                "Shortest path": 2.4696174600996934,
+                "Total triples": 3638.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.823529411764707,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0019241341396371632,
+                "Ratio perspectives to triples": 0.0016492578339747114,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "interesting! i had never heard about long neck before!"
+        },
+        {
+            "chat": 2,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "petunia looks long-neck",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "long-neck",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/long-neck"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:09.019168",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/long-neck",
+                    "_label": "long-neck",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0028003311407689413,
+            "brain_state": 12.324958123953099,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 597,
+                "Total edges": 3679,
+                "Average degree": 12.324958123953099,
+                "Sparseness": 0.008380820910807527,
+                "Shortest path": 2.4753240475307186,
+                "Total triples": 3679.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.03921568627451,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0019026909486273443,
+                "Ratio perspectives to triples": 0.0016308779559662953,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. has a character ever talents long neck?"
+        },
+        {
+            "chat": 2,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks very-thin",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "very-thin",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/very-thin"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:13.770647",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/very-thin",
+                    "_label": "very-thin",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0006041277316427562,
+            "brain_state": 12.317512274959084,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 611,
+                "Total edges": 3763,
+                "Average degree": 12.317512274959084,
+                "Sparseness": 0.008202056675086588,
+                "Shortest path": 2.4899895361004534,
+                "Total triples": 3763.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.84313725490196,
+                "Total claims": 8.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002125963327132607,
+                "Ratio perspectives to triples": 0.0018602179112410311,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.875,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. has a character ever affiliation very thin?"
+        },
+        {
+            "chat": 2,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks red-hair",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:18.573068",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/red-hair",
+                    "_label": "red-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0005459937918799174,
+            "brain_state": 12.324237560192616,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 623,
+                "Total edges": 3839,
+                "Average degree": 12.324237560192616,
+                "Sparseness": 0.008061752664706837,
+                "Shortest path": 2.502428349496524,
+                "Total triples": 3839.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.529411764705884,
+                "Total claims": 9.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0023443605105496223,
+                "Ratio perspectives to triples": 0.002083876009377442,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8888888888888888,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, you have my trust."
+        },
+        {
+            "chat": 2,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks red-hair",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:23.438206",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/red-hair",
+                    "_label": "red-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0026330503398741545,
+            "brain_state": 12.356687898089172,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 628,
+                "Total edges": 3880,
+                "Average degree": 12.356687898089172,
+                "Sparseness": 0.008015031035741815,
+                "Shortest path": 2.507624010808724,
+                "Total triples": 3880.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.745098039215687,
+                "Total claims": 9.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0023195876288659794,
+                "Ratio perspectives to triples": 0.002061855670103093,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8888888888888888,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. has a character ever spells red hair?"
+        },
+        {
+            "chat": 2,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "dudley lineage maculogy",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:28.407950",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00047036082474227747,
+            "brain_state": 12.3625,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 640,
+                "Total edges": 3956,
+                "Average degree": 12.3625,
+                "Sparseness": 0.007880859375,
+                "Shortest path": 2.519434663536776,
+                "Total triples": 3956.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.431372549019606,
+                "Total claims": 10.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0025278058645096056,
+                "Ratio perspectives to triples": 0.002275025278058645,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.9,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. has dudley spelled attribute.?"
+        },
+        {
+            "chat": 2,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "hermione affiliation hogvy",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:33.356406",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogvy",
+                    "_label": "hogvy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0006276998048874161,
+            "brain_state": 12.35474006116208,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 654,
+                "Total edges": 4040,
+                "Average degree": 12.35474006116208,
+                "Sparseness": 0.007722413938220689,
+                "Shortest path": 2.5322740023696793,
+                "Total triples": 4040.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.235294117647058,
+                "Total claims": 11.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0027227722772277226,
+                "Ratio perspectives to triples": 0.0024752475247524753,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.9090909090909091,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. has hermione titled attribute.?"
+        },
+        {
+            "chat": 2,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "mcgonagall age adult",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:38.386423",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0024842620832645768,
+            "brain_state": 12.385432473444613,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 659,
+                "Total edges": 4081,
+                "Average degree": 12.385432473444613,
+                "Sparseness": 0.007679359677259655,
+                "Shortest path": 2.537025335430398,
+                "Total triples": 4081.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.45098039215686,
+                "Total claims": 11.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0026954177897574125,
+                "Ratio perspectives to triples": 0.002450379808870375,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.9090909090909091,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this sounds familiar. vanilla told me about it on 2024 06 13."
+        },
+        {
+            "chat": 2,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "mcgonagall age adult",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:43.514081",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0024407849481731247,
+            "brain_state": 12.41566265060241,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 664,
+                "Total edges": 4122,
+                "Average degree": 12.41566265060241,
+                "Sparseness": 0.007636721585135724,
+                "Shortest path": 2.5417098257282524,
+                "Total triples": 4122.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.666666666666668,
+                "Total claims": 11.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002668607472100922,
+                "Ratio perspectives to triples": 0.0024260067928190197,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.9090909090909091,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "wow! did you know that petunia also age adult"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 2,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:04.319971"
+        },
+        {
+            "chat": 2,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": null,
+                "uri": null
+            },
+            "object": {
+                "label": "long-neck",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/long-neck"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:09.019168"
+        },
+        {
+            "chat": 2,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "talents",
+                "uri": "http://harrypotter.org/talents"
+            },
+            "object": {
+                "label": "long-neck",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/long-neck"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:13.770647"
+        },
+        {
+            "chat": 2,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "very-thin",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/very-thin"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:18.573068"
+        },
+        {
+            "chat": 2,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:23.438206"
+        },
+        {
+            "chat": 2,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "spells",
+                "uri": "http://harrypotter.org/spells"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:28.407950"
+        },
+        {
+            "chat": 2,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "spells",
+                "uri": "http://harrypotter.org/spells"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:33.356406"
+        },
+        {
+            "chat": 2,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:38.386423"
+        },
+        {
+            "chat": 2,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:43.514081"
+        },
+        {
+            "chat": 2,
+            "turn": 21,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/petunia"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 57,
+            "timestamp": "2024-06-13 01:17:48.524343"
+        }
+    ],
+    "say_history": [
+        "let me ask you something. has petunia looked attribute.?",
+        "interesting! i had never heard about long neck before!",
+        "i would like to know. has a character ever talents long neck?",
+        "let me ask you something. has a character ever affiliation very thin?",
+        "vanilla, you have my trust.",
+        "if you don't mind me asking. has a character ever spells red hair?",
+        "i am curious. has dudley spelled attribute.?",
+        "i would like to know. has hermione titled attribute.?",
+        "this sounds familiar. vanilla told me about it on 2024 06 13.",
+        "wow! did you know that petunia also age adult"
+    ]
+}

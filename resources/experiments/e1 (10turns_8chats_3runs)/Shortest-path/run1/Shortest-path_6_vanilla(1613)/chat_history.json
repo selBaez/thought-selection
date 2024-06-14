@@ -1,0 +1,1478 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 6,
+            "turn": 0,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape age adult",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2024-06-13T00:50:16.859286",
+            "context_id": 1613,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 2.4458352536332075,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 571,
+                "Total edges": 3524,
+                "Average degree": 12.343257443082312,
+                "Sparseness": 0.00874123193095347,
+                "Shortest path": 2.4458352536332075,
+                "Total triples": 3524.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 14.647058823529411,
+                "Total claims": 5.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0014188422247446084,
+                "Ratio perspectives to triples": 0.0011350737797956867,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. has snape titled attribute.?"
+        },
+        {
+            "chat": 6,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape title potion-teacher",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:23.764142",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/potion-teacher",
+                    "_label": "potion-teacher",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.005460994008659625,
+            "brain_state": 2.459191945299467,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 584,
+                "Total edges": 3603,
+                "Average degree": 12.33904109589041,
+                "Sparseness": 0.008561643835616438,
+                "Shortest path": 2.459191945299467,
+                "Total triples": 3603.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.352941176470589,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0016652789342214821,
+                "Ratio perspectives to triples": 0.0013877324451845685,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. has a character ever affiliation potion teacher?"
+        },
+        {
+            "chat": 6,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape title potion-teacher",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:30.856194",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/potion-teacher",
+                    "_label": "potion-teacher",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.002384810000472859,
+            "brain_state": 2.465056650843699,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 589,
+                "Total edges": 3644,
+                "Average degree": 12.37351443123939,
+                "Sparseness": 0.008509141850738353,
+                "Shortest path": 2.465056650843699,
+                "Total triples": 3644.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.568627450980392,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001646542261251372,
+                "Ratio perspectives to triples": 0.0013721185510428102,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, you have my trust."
+        },
+        {
+            "chat": 6,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape title potion-teacher",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:38.118347",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/potion-teacher",
+                    "_label": "potion-teacher",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0023419594909070973,
+            "brain_state": 2.470829713662766,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 594,
+                "Total edges": 3685,
+                "Average degree": 12.407407407407407,
+                "Sparseness": 0.008457186908365359,
+                "Shortest path": 2.470829713662766,
+                "Total triples": 3685.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.784313725490197,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0016282225237449117,
+                "Ratio perspectives to triples": 0.0013568521031207597,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i have heard this before. vanilla told me about it on 2024 06 13."
+        },
+        {
+            "chat": 6,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape title potion-teacher",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:45.459701",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/potion-teacher",
+                    "_label": "potion-teacher",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00230025509438736,
+            "brain_state": 2.4765132522989823,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 599,
+                "Total edges": 3726,
+                "Average degree": 12.440734557595993,
+                "Sparseness": 0.008405773673986415,
+                "Shortest path": 2.4765132522989823,
+                "Total triples": 3726.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.0,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001610305958132045,
+                "Ratio perspectives to triples": 0.0013419216317767043,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, i believe you"
+        },
+        {
+            "chat": 6,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape title potion-teacher",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:53.675276",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/potion-teacher",
+                    "_label": "potion-teacher",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.002259656248868147,
+            "brain_state": 2.4821093209449443,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 604,
+                "Total edges": 3767,
+                "Average degree": 12.473509933774835,
+                "Sparseness": 0.008354896715056357,
+                "Shortest path": 2.4821093209449443,
+                "Total triples": 3767.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.215686274509803,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0015927794000530925,
+                "Ratio perspectives to triples": 0.0013273161667109105,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. has snape looked attribute.?"
+        },
+        {
+            "chat": 6,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape looks eagle-hook-nose",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "eagle-hook-nose",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/eagle-hook-nose"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:51:01.033058",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/eagle-hook-nose",
+                    "_label": "eagle-hook-nose",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.005129842053212652,
+            "brain_state": 2.4948421497201987,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 616,
+                "Total edges": 3843,
+                "Average degree": 12.477272727272727,
+                "Sparseness": 0.008209120425029515,
+                "Shortest path": 2.4948421497201987,
+                "Total triples": 3843.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.901960784313726,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018214936247723133,
+                "Ratio perspectives to triples": 0.00156128024980484,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, i think i trust you."
+        },
+        {
+            "chat": 6,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape looks eagle-hook-nose",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "eagle-hook-nose",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/eagle-hook-nose"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:51:08.944809",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/eagle-hook-nose",
+                    "_label": "eagle-hook-nose",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.002129868753765196,
+            "brain_state": 2.5001558360604643,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 621,
+                "Total edges": 3884,
+                "Average degree": 12.508856682769727,
+                "Sparseness": 0.008160439372369639,
+                "Shortest path": 2.5001558360604643,
+                "Total triples": 3884.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.11764705882353,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018022657054582905,
+                "Ratio perspectives to triples": 0.001544799176107106,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. has snape lineaged attribute.?"
+        },
+        {
+            "chat": 6,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "snape lineage mixed-wizard",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:51:16.337145",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00483267898950035,
+            "brain_state": 2.5122382866398705,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 633,
+                "Total edges": 3960,
+                "Average degree": 12.511848341232227,
+                "Sparseness": 0.008021183511401611,
+                "Shortest path": 2.5122382866398705,
+                "Total triples": 3960.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.80392156862745,
+                "Total claims": 8.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.00202020202020202,
+                "Ratio perspectives to triples": 0.0017676767676767678,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.875,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. has a character ever personality mixed wizard?"
+        },
+        {
+            "chat": 6,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks red-hair",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:51:30.674513",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/red-hair",
+                    "_label": "red-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.005228338997294468,
+            "brain_state": 2.525373120044406,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 647,
+                "Total edges": 4044,
+                "Average degree": 12.500772797527048,
+                "Sparseness": 0.00785697393032639,
+                "Shortest path": 2.525373120044406,
+                "Total triples": 4044.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.607843137254903,
+                "Total claims": 9.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002225519287833828,
+                "Ratio perspectives to triples": 0.0019782393669634025,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8888888888888888,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, you have my trust."
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 6,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:23.764142"
+        },
+        {
+            "chat": 6,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:30.856194"
+        },
+        {
+            "chat": 6,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:38.118347"
+        },
+        {
+            "chat": 6,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:45.459701"
+        },
+        {
+            "chat": 6,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:50:53.675276"
+        },
+        {
+            "chat": 6,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:51:01.033058"
+        },
+        {
+            "chat": 6,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "eagle-hook-nose",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/eagle-hook-nose"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:51:08.944809"
+        },
+        {
+            "chat": 6,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:51:16.337145"
+        },
+        {
+            "chat": 6,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "personality",
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:51:30.674513"
+        },
+        {
+            "chat": 6,
+            "turn": 21,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 38,
+            "timestamp": "2024-06-13 00:51:40.371810"
+        }
+    ],
+    "say_history": [
+        "i would like to know. has snape titled attribute.?",
+        "i am curious. has a character ever affiliation potion teacher?",
+        "vanilla, you have my trust.",
+        "i have heard this before. vanilla told me about it on 2024 06 13.",
+        "vanilla, i believe you",
+        "if you don't mind me asking. has snape looked attribute.?",
+        "vanilla, i think i trust you.",
+        "i am curious. has snape lineaged attribute.?",
+        "i would like to know. has a character ever personality mixed wizard?",
+        "vanilla, you have my trust."
+    ]
+}

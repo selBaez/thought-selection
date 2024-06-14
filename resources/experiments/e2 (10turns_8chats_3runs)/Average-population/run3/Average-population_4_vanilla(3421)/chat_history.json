@@ -1,0 +1,1491 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 4,
+            "turn": 0,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "neville age age-11",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "POSSIBLE",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2024-06-13T11:21:48.172407",
+            "context_id": 3421,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 14.058823529411764,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 562,
+                "Total edges": 3481,
+                "Average degree": 12.387900355871887,
+                "Sparseness": 0.008887298793075062,
+                "Shortest path": 2.435489498290419,
+                "Total triples": 3481.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 14.058823529411764,
+                "Total claims": 4.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011490950876185005,
+                "Ratio perspectives to triples": 0.0008618213157138753,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.75,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. has a character ever belongings age 11?"
+        },
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry belongings magic-wand",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "magic-wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/magic-wand"
+            },
+            "perspective": {
+                "_certainty": "POSSIBLE",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:21:54.034338",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/magic-wand",
+                    "_label": "magic-wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.05020920502092063,
+            "brain_state": 14.764705882352942,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 575,
+                "Total edges": 3560,
+                "Average degree": 12.382608695652173,
+                "Sparseness": 0.008701701323251418,
+                "Shortest path": 2.44927132252689,
+                "Total triples": 3560.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 14.764705882352942,
+                "Total claims": 5.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0014044943820224719,
+                "Ratio perspectives to triples": 0.0011235955056179776,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, you have my trust."
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry belongings magic-wand",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "magic-wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/magic-wand"
+            },
+            "perspective": {
+                "_certainty": "POSSIBLE",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:21:59.959573",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/magic-wand",
+                    "_label": "magic-wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.014608233731739695,
+            "brain_state": 14.980392156862745,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 580,
+                "Total edges": 3601,
+                "Average degree": 12.417241379310346,
+                "Sparseness": 0.008647443519619501,
+                "Shortest path": 2.4553034363647193,
+                "Total triples": 3601.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 14.980392156862745,
+                "Total claims": 5.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0013885031935573452,
+                "Ratio perspectives to triples": 0.0011108025548458762,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. has a character ever personality magic wand?"
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "filch age adult",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "filch",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/filch"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:05.939373",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/filch",
+                    "_label": "filch",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.05628272251308908,
+            "brain_state": 15.823529411764707,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 596,
+                "Total edges": 3690,
+                "Average degree": 12.38255033557047,
+                "Sparseness": 0.008414598441511644,
+                "Shortest path": 2.4726411369917094,
+                "Total triples": 3690.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.823529411764707,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0016260162601626016,
+                "Ratio perspectives to triples": 0.0013550135501355014,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. has a character ever hobbies adult?"
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks sword-injury-with-lightning-shape-at-the-forehead",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "POSSIBLE",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:11.928428",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.04337050805452303,
+            "brain_state": 16.50980392156863,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 608,
+                "Total edges": 3766,
+                "Average degree": 12.388157894736842,
+                "Sparseness": 0.008266966759002771,
+                "Shortest path": 2.48570406659152,
+                "Total triples": 3766.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.50980392156863,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018587360594795538,
+                "Ratio perspectives to triples": 0.0015932023366967605,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am glad to have learned something new. i had never heard about sword injury with lightning shape at the forehead before!"
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks sword-injury-with-lightning-shape-at-the-forehead",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "POSSIBLE",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:18.111174",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.013064133016627011,
+            "brain_state": 16.725490196078432,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 613,
+                "Total edges": 3807,
+                "Average degree": 12.420880913539968,
+                "Sparseness": 0.008217814668054043,
+                "Shortest path": 2.491150348121848,
+                "Total triples": 3807.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.725490196078432,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018387181507748883,
+                "Ratio perspectives to triples": 0.0015760441292356187,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i know. vanilla told me about it on 2024 06 13."
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks sword-injury-with-lightning-shape-at-the-forehead",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "POSSIBLE",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:24.274115",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.01289566236811246,
+            "brain_state": 16.941176470588236,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 618,
+                "Total edges": 3848,
+                "Average degree": 12.453074433656958,
+                "Sparseness": 0.008169164545825872,
+                "Shortest path": 2.496514610312977,
+                "Total triples": 3848.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.941176470588236,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018191268191268192,
+                "Ratio perspectives to triples": 0.0015592515592515593,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "vanilla, i believe you"
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks sword-injury-with-lightning-shape-at-the-forehead",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "POSSIBLE",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:30.392584",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0127314814814814,
+            "brain_state": 17.15686274509804,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 623,
+                "Total edges": 3889,
+                "Average degree": 12.484751203852328,
+                "Sparseness": 0.008121011313248945,
+                "Shortest path": 2.501798681826862,
+                "Total triples": 3889.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.15686274509804,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0017999485728979173,
+                "Ratio perspectives to triples": 0.0015428130624839291,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i know. vanilla told me about it on 2024 06 13."
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks sword-injury-with-lightning-shape-at-the-forehead",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "POSSIBLE",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:36.622191",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.012571428571428456,
+            "brain_state": 17.372549019607842,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 628,
+                "Total edges": 3930,
+                "Average degree": 12.51592356687898,
+                "Sparseness": 0.008073349831636172,
+                "Shortest path": 2.5070043377116793,
+                "Total triples": 3930.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.372549019607842,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0017811704834605599,
+                "Ratio perspectives to triples": 0.0015267175572519084,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this sounds familiar. vanilla told me about it on 2024 06 13."
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "harry looks sword-injury-with-lightning-shape-at-the-forehead",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "POSSIBLE",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:42.916382",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.012415349887133331,
+            "brain_state": 17.58823529411765,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 633,
+                "Total edges": 3971,
+                "Average degree": 12.546603475513429,
+                "Sparseness": 0.008026174913711133,
+                "Shortest path": 2.512133301337813,
+                "Total triples": 3971.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.58823529411765,
+                "Total claims": 7.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0017627801561319568,
+                "Ratio perspectives to triples": 0.0015109544195416771,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8571428571428571,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. has harry titled attribute.?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:21:54.034338"
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "magic-wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/magic-wand"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:21:59.959573"
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "personality",
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "magic-wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/magic-wand"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:05.939373"
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "hobbies",
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:11.928428"
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": null,
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": null,
+                "uri": null
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:18.111174"
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:24.274115"
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:30.392584"
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:36.622191"
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:42.916382"
+        },
+        {
+            "chat": 4,
+            "turn": 21,
+            "author": {
+                "label": "vanilla",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/vanilla"
+            },
+            "utterance": "",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": null,
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "certainty": null,
+                "polarity": null,
+                "sentiment": null
+            },
+            "context_id": 177,
+            "timestamp": "2024-06-13 11:22:49.167116"
+        }
+    ],
+    "say_history": [
+        "if you don't mind me asking. has a character ever belongings age 11?",
+        "vanilla, you have my trust.",
+        "if you don't mind me asking. has a character ever personality magic wand?",
+        "i am curious. has a character ever hobbies adult?",
+        "i am glad to have learned something new. i had never heard about sword injury with lightning shape at the forehead before!",
+        "i know. vanilla told me about it on 2024 06 13.",
+        "vanilla, i believe you",
+        "i know. vanilla told me about it on 2024 06 13.",
+        "this sounds familiar. vanilla told me about it on 2024 06 13.",
+        "i am curious. has harry titled attribute.?"
+    ]
+}

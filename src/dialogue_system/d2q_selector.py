@@ -28,8 +28,8 @@ from results_analysis.plotting import separate_thought_elements, plot_action_cou
 
 
 class D2Q(ThoughtSelector):
-    def __init__(self, brain, reward="Total triples", savefile=None, states_folder=Path("."),
-                 dataset=HarryPotterRDF('.'), predict_only=True,
+    def __init__(self, brain, reward="Total triples", trained_model=None, states_folder=Path("."),
+                 dataset=HarryPotterRDF('.'),
                  learning_rate=LR, epsilon_info=EPSILON_INFO, gamma=GAMMA):
         """Initializes an instance of the Decomposed Deep Q-Network (D2Q) reinforcement learning algorithm.
         States are saved in different forms:
@@ -47,6 +47,7 @@ class D2Q(ThoughtSelector):
         super().__init__()
 
         # generic D2Q parameters
+        self.prediction_mode = (trained_model is not None)
         self.epsilon_info = epsilon_info
         self.gamma = gamma
         self.steps_done = 0
@@ -81,8 +82,8 @@ class D2Q(ThoughtSelector):
         self._selection_history = [None]
 
         # Load learned policy
-        if savefile:
-            self.load(savefile)
+        if trained_model:
+            self.load(trained_model)
         self._log.debug(f"D2Q RL Selector ready")
 
     @property
@@ -316,10 +317,11 @@ class D2Q(ThoughtSelector):
                              self._state_history["embeddings"][-1],
                              torch.tensor([reward], device=DEVICE))
 
-            # Perform one step of the optimization (on the policy network) and update target network
-            self._log.debug("Updating networks")
-            self.update_utility()
-            self._target_net_update()
+            if not self.prediction_mode:
+                # Perform one step of the optimization (on the policy network) and update target network
+                self._log.debug("Updating networks")
+                self.update_utility()
+                self._target_net_update()
 
         self.reward_history.append(reward)
         self.selection_history.append(self._last_thought)

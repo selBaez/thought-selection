@@ -38,7 +38,7 @@ def main(args):
     # Create dialogue_system
     chatbot = Chatbot()
     chatbot.begin_session(args.experiment_id, args.run_id,
-                          args.context_id, args.chat_id, args.speaker, args.reward, args.init_brain)
+                          args.context_id, args.chat_id, args.speaker, args.reward, args.init_brain, args.test_model)
 
     # Situate chat
     capsule_for_context = create_context_capsule(args)
@@ -86,6 +86,8 @@ if __name__ == "__main__":
     parser.add_argument("--region", default=LOCATION["region"], type=str, help="Region of a physical location")
     parser.add_argument("--city", default=LOCATION["city"], type=str, help="City of a physical location")
     parser.add_argument("--turn_limit", default=15, type=int, help="Number of turns for this interaction")
+
+    parser.add_argument("--test_model", default=None, type=str, help="Use trained network and freeze learning")
 
     args = parser.parse_args()
     main(args)
