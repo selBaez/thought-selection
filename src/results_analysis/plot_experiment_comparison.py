@@ -2,11 +2,14 @@ import argparse
 import json
 from pathlib import Path
 
+from math import floor
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import plotly.graph_objects as go
 import seaborn as sns
 import torch
+from sklearn.preprocessing import MinMaxScaler
 
 from dialogue_system.d2q_selector import DQN, StateEncoder
 from dialogue_system.utils.encode_state import HarryPotterRDF
@@ -130,8 +133,6 @@ def get_final_knowledge_stats(data, plots_folder):
 
     final_k.drop(columns=["timestep"], inplace=True)
 
-    final_k.to_csv(plots_folder / "final_k.csv")
-
     final_k["Average degree"] = final_k["Average degree"].round(3)
     final_k["Sparseness"] = final_k["Sparseness"] * 100
     final_k["Sparseness"] = final_k["Sparseness"].round(3)
@@ -139,9 +140,33 @@ def get_final_knowledge_stats(data, plots_folder):
     final_k["Total triples"] = final_k["Total triples"].astype(int)
     final_k["Average population"] = final_k["Average population"].round(2)
 
+    final_k.to_csv(plots_folder / "final_k.csv")
+
     latex_table = final_k.to_latex(index=False)
     with open(plots_folder / "final_k.tex", 'w') as f:
         f.write(latex_table)
+
+    return final_k
+
+
+def plot_spider_scores(data, plots_folder):
+    data = data.set_index("condition")
+
+    scaler = MinMaxScaler()
+    scaled_graph_scores = scaler.fit_transform(data)
+
+    fig = go.Figure()
+
+    for scores, id in zip(scaled_graph_scores, list(data.index)):
+        fig.add_trace(go.Scatterpolar(r=scores,
+                                      theta=list(data.columns),
+                                      fill='toself',
+                                      name=f'{id}'))
+
+    fig.update_layout(polar=dict(radialaxis=dict(visible=True), ), showlegend=True, title="Knowledge profiles")
+
+    fig.show()
+    fig.write_image(plots_folder / f'final_graph_starplot.png')
 
 
 def plot_cum_reward_per_chat(data, plots_folder, log=False):
@@ -199,6 +224,10 @@ def plot_avg_reward(data, plots_folder):
         .transform(lambda x: x.rolling(window=5, min_periods=1).mean())
     avg_over_runs['std_average_reward_rolling'] = avg_over_runs.groupby(['condition'])['std_average_reward'] \
         .transform(lambda x: x.rolling(window=5, min_periods=1).mean())
+
+    # only half the x axis
+    # avg_over_runs = avg_over_runs[avg_over_runs["timestep"] < floor(avg_over_runs["timestep"].max() / 2)]
+    avg_over_runs = avg_over_runs[avg_over_runs["timestep"] < 30]
 
     # Plotting
     plt.figure(figsize=(12, 8), tight_layout=True)
@@ -318,7 +347,6 @@ def plot_cum_reward_compared(data, plots_folder, range=False):
         plt.savefig(plots_folder / "comparative_cumulative_reward-no_range.png", dpi=300)
 
 
-
 def collect_data(conditions, testing_experiment=False):
     experiments_data = []
     qvalues_data = []
@@ -428,16 +456,17 @@ def main(args):
     # TODO here use only the results from the last chat
     history_data = history_data[history_data["condition"].isin(INCLUDED_CONDITIONS)]
     plot_action_count(history_data, experiment_plots_path)  # for test
-    get_final_knowledge_stats(history_data, experiment_plots_path)  # for test
+    final_k = get_final_knowledge_stats(history_data, experiment_plots_path)  # for test
+    plot_spider_scores(final_k, experiment_plots_path)
 
     return history_data
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    # parser.add_argument("--experiment_id", default="e1 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    parser.add_argument("--experiment_id", default="t1 (10turns_3runs)", type=str, help="ID for an experiment")
-    parser.add_argument("--compare_experiments", default=True, action='store_true', help="Plot comparison at the end")
+    parser.add_argument("--experiment_id", default="e1 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    # parser.add_argument("--experiment_id", default="t1 (10turns_3runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--compare_experiments", default=False, action='store_true', help="Plot comparison at the end")
     parser.add_argument("--second_experiment_id", default="t2 (10turns_3runs)", type=str, help="ID second experiment")
 
     args = parser.parse_args()
@@ -456,8 +485,7 @@ if __name__ == "__main__":
 
     print("DONE")
 
-
 # "e1 (10turns_8chats_3runs)" => avg reward for training process
 # "t1 (10turns_3runs_8checkpoints)" => cum rewards for testing checkpoints
-# "t1 (10turns_3runs)" => action distribution, knowledge table and action counts for testing final
+# "t1 (10turns_3runs)" => action distribution, knowledge table, knowledge spider and action counts for testing final
 # "t1 (10turns_3runs)" , True , "t2 (10turns_3runs)" => cum rewards for testing final (comparison)
