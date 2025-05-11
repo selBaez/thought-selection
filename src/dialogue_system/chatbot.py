@@ -9,6 +9,7 @@
 
 import json
 import os
+from datetime import datetime
 from random import choice
 
 # Pip-installed ctl repositories
@@ -17,10 +18,10 @@ from cltl.brain.utils.helper_functions import brain_response_to_json
 from cltl.commons.casefolding import casefold_capsule
 from cltl.commons.discrete import UtteranceType
 from cltl.commons.language_data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
+from cltl.reply_generation.triple_phraser import TriplePhraser
 from dialogue_system.d2q_selector import D2Q
-from dialogue_system.triple_phraser import TriplePhraser
-from dialogue_system.utils.capsule_utils import template_to_statement_capsule
 from dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS
+from dialogue_system.utils.global_variables import CONTEXT_ID
 from dialogue_system.utils.helpers import create_session_folder
 from dialogue_system.utils.rl_parameters import RESET_FREQUENCY
 
@@ -197,8 +198,12 @@ class Chatbot(object):
             # Query Brain -> try to answer
             brain_response = self._brain.query_brain(casefold_capsule(capsule))
             brain_response = brain_response_to_json(brain_response)
+
+            # Calculate brain state and select response
             self._selector.reward_thought()
             brain_response["thoughts"] = self._selector.select(brain_response)
+
+            # Reply
             say, response_template = self._replier.reply_to_question(brain_response), BASE_CAPSULE
 
         # STATEMENT
@@ -206,14 +211,16 @@ class Chatbot(object):
             # Update Brain -> communicate a thought
             brain_response = self._brain.capsule_statement(capsule, reason_types=True, create_label=True)
             brain_response = brain_response_to_json(brain_response)
-            # Calculate brain state
+
+            # Calculate brain state and select response
             self._selector.reward_thought()
             profile = self.selector.state_evaluator.calculate_brain_statistics(brain_response)
             self.statistics_history.append(profile)
-
             brain_response["thoughts"] = self._selector.select(brain_response)
+
+            # Reply
             say, response_template = self._replier.reply_to_statement(brain_response, persist=True)
-            response_template = template_to_statement_capsule(response_template, self)
+            response_template = self._prepare_capsule(response_template)
 
         # Add information to capsule
         capsule["last_reward"] = self.selector.reward_history[-1]
@@ -224,8 +231,26 @@ class Chatbot(object):
         # Keep track of everything
         self.chat_history["capsules_submitted"].append(brain_response_to_json(capsule))
         self.chat_history["say_history"].append(say)
-        self.chat_history["capsules_suggested"].append(response_template)
+        self.chat_history["capsules_suggested"].append(brain_response_to_json(response_template))
 
         if return_br:
             return say, response_template, brain_response
         return say, response_template
+
+    def _prepare_capsule(self, capsule):
+        capsule['chat'] = self.chat_id
+        capsule['turn'] = self.turns + 1
+        capsule["author"] = {"label": self.speaker.lower(),
+                             "type": ["person"],
+                             "uri": f"http://cltl.nl/leolani/world/{self.speaker.lower()}"}
+        capsule['utterance_type'] = UtteranceType["STATEMENT"]
+        capsule['context_id'] = CONTEXT_ID
+        capsule["timestamp"] = datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S.%f")
+
+        capsule['triple'] = self._brain._rdf_builder.fill_triple(capsule['subject'], # TODO does not work with none, change to empty string
+                                                                 capsule['predicate'],
+                                                                 capsule['object'])
+        capsule['perspective'] = self._brain._rdf_builder.fill_perspective(capsule['perspective']) \
+            if 'perspective' in capsule.keys() else self._brain._rdf_builder.fill_perspective({})
+
+        return capsule

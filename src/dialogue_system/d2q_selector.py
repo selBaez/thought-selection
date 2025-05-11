@@ -23,7 +23,7 @@ from dialogue_system.utils.helpers import download_from_triplestore
 from dialogue_system.utils.rl_parameters import DEVICE, STATE_HIDDEN_SIZE, STATE_EMBEDDING_SIZE, REPLAY_POOL_SIZE, \
     BATCH_SIZE, DQN_HIDDEN_SIZE, LR, EPSILON_INFO, GAMMA, TAU, ACTION_THOUGHTS, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, \
     ACTION_TYPES_REVERSED, Transition
-from results_analysis.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, \
+from results_analysis.utils.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, \
     plot_metrics_over_time
 
 

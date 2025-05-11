@@ -4,8 +4,10 @@ from random import choice
 from rdflib import ConjunctiveGraph, URIRef
 
 from cltl.brain.infrastructure.rdf_builder import RdfBuilder
+from cltl.brain.utils.helper_functions import brain_response_to_json
 from cltl.brain.utils.helper_functions import hash_claim_id
-from cltl.commons.discrete import Certainty, Polarity, Sentiment
+from cltl.commons.discrete import UtteranceType, Certainty, Polarity, Sentiment
+from cltl.reply_generation.llama_phraser import LlamaPhraser
 from dialogue_system.utils.global_variables import HARRYPOTTER_NS, HARRYPOTTER_PREFIX, RESOURCES_PATH, \
     RAW_VANILLA_USER_PATH
 from user_model import logger
@@ -34,15 +36,17 @@ class User(object):
         self._log.info("Booted")
 
         self._graph = ConjunctiveGraph()
-        self._rdf_builer = RdfBuilder(ontology_details={"filepath": ontology_filepath,
-                                                        "namespace": HARRYPOTTER_NS, "prefix": HARRYPOTTER_PREFIX})
+        self._rdf_builder = RdfBuilder(ontology_details={"filepath": ontology_filepath,
+                                                         "namespace": HARRYPOTTER_NS, "prefix": HARRYPOTTER_PREFIX})
+
+        self._replier = LlamaPhraser()
 
         # parse data and namespaces
         self._graph.parse(kb_filepath)
         self._log.info(f"Parsed file {kb_filepath}, size of graph is {len(self._graph)}")
 
     def init_capsule(self, args, chatbot):
-        init_cap = {
+        capsule = {
             "chat": chatbot.chat_id,
             "turn": chatbot.turns,
             "author": {
@@ -61,29 +65,25 @@ class User(object):
             'perspective': {'certainty': 1, 'polarity': 1, 'sentiment': 0},
             'timestamp': datetime.now(), 'context_id': args.context_id}
 
-        init_cap = self.random_triple(init_cap)
+        # Choose a random triple
+        action = "random triple"
+        capsule = self._random_triple(capsule)
 
-        return init_cap
+        # Prepare capsule as brain response
+        capsule = self._prepare_capsule(capsule)
 
-    def replace_namespace(self, txt):
-        txt = txt.replace(HARRYPOTTER_NS, f'{HARRYPOTTER_PREFIX}:')
-
-        prefixes = ""
-        for prefix, namespace in self._rdf_builer.namespaces.items():
-            if namespace in txt:
-                txt = txt.replace(namespace, f'{prefix.lower()}:')
-                prefixes = prefixes + f"prefix {prefix.lower()}: <{namespace}>\n"
-
-        return prefixes + txt
+        return action, capsule
 
     def query_database(self, response_template):
         # Full triple in response template, just looking for perspective
         if (response_template['subject']['uri'] is not None) and \
                 (response_template['predicate']['uri'] is not None) and \
                 (response_template['object']['uri'] is not None):
-            response_template = self.response_perspective(response_template)
 
-            return response_template
+            action = "response perspective"
+            response_template = self._response_perspective(response_template)
+
+            return action, response_template
 
         # Missing triple element, query
         else:
@@ -115,29 +115,56 @@ class User(object):
             {filter_clause} }}"""
 
             self._log.debug(f"Query from given template")
-            query = self.replace_namespace(query)
+            query = self._replace_namespace(query)
             response = self._graph.query(query)
 
             if len(list(response)) > 0:
-                response_template = self.response_triple(response_template, response)
+                action = "response triple"
+                response_template = self._response_triple(response_template, response)
 
             else:
-                response_template = self.random_triple(response_template)
+                action = "random triple"
+                response_template = self._random_triple(response_template)
+
+        # Prepare capsule as brain response
+        response_template = self._prepare_capsule(response_template)
+
+        return action, response_template
+
+    def _prepare_capsule(self, response_template):
+        response_template['triple'] = self._rdf_builder.fill_triple(response_template['subject'],
+                                                                    response_template['predicate'],
+                                                                    response_template['object'])
+        response_template['perspective'] = self._rdf_builder.fill_perspective(response_template['perspective']) \
+            if 'perspective' in response_template.keys() else self._rdf_builder.fill_perspective({})
+        response_template['utterance_type'] = UtteranceType[response_template['utterance_type']] \
+            if type(response_template['utterance_type']) == str else response_template['utterance_type']
+        response_template = brain_response_to_json(response_template)
+        response_template['utterance'] = self._replier.phrase_triple(response_template)
 
         return response_template
 
-    def response_perspective(self, response_template):
+    def _replace_namespace(self, txt):
+        txt = txt.replace(HARRYPOTTER_NS, f'{HARRYPOTTER_PREFIX}:')
+
+        prefixes = ""
+        for prefix, namespace in self._rdf_builder.namespaces.items():
+            if namespace in txt:
+                txt = txt.replace(namespace, f'{prefix.lower()}:')
+                prefixes = prefixes + f"prefix {prefix.lower()}: <{namespace}>\n"
+
+        return prefixes + txt
+
+    def _response_perspective(self, response_template):
         # perspective
-        response_template = self.query_perspective_on_claim(response_template)
+        response_template = self._query_perspective_on_claim(response_template)
 
         # utterance
-        response_template['utterance'] = f"{response_template['subject']['label']} " \
-                                         f"{response_template['predicate']['label']} " \
-                                         f"{response_template['object']['label']}"
+        response_template['utterance'] = self._replier.phrase_triple(response_template)
 
         return response_template
 
-    def response_triple(self, response_template, response):
+    def _response_triple(self, response_template, response):
         selection = choice(list(response))
 
         # Subject
@@ -153,21 +180,19 @@ class User(object):
             response_template = uri_to_capsule_triple(selection[2], response_template, role='object')
 
         # perspective
-        response_template = self.query_perspective_on_claim(response_template)
+        response_template = self._query_perspective_on_claim(response_template)
 
         # utterance
-        response_template['utterance'] = f"{response_template['subject']['label']} " \
-                                         f"{response_template['predicate']['label']} " \
-                                         f"{response_template['object']['label']}"
+        response_template['utterance'] = self._replier.phrase_triple(response_template)
 
         return response_template
 
-    def random_triple(self, response_template):
+    def _random_triple(self, response_template):
         query = f"""SELECT ?s ?p ?o  WHERE {{ ?s ?p ?o . ?s a gaf:Instance . ?o a gaf:Instance . 
         FILTER (STRSTARTS(STR(?p), STR(hp:))) }}"""
 
         self._log.debug(f"Query for random triple")
-        query = self.replace_namespace(query)
+        query = self._replace_namespace(query)
         response = self._graph.query(query)
 
         if len(list(response)) > 0:
@@ -179,16 +204,11 @@ class User(object):
         response_template = uri_to_capsule_triple(response['o'], response_template, role='object')
 
         # perspective
-        response_template = self.query_perspective_on_claim(response_template)
-
-        # utterance
-        response_template['utterance'] = f"{response_template['subject']['label']} " \
-                                         f"{response_template['predicate']['label']} " \
-                                         f"{response_template['object']['label']}"
+        response_template = self._query_perspective_on_claim(response_template)
 
         return response_template
 
-    def query_perspective_on_claim(self, response_template):
+    def _query_perspective_on_claim(self, response_template):
         claim = "http://cltl.nl/leolani/world/" + hash_claim_id([response_template["subject"]["label"],
                                                                  response_template["predicate"]["label"],
                                                                  response_template["object"]["label"]])
@@ -205,7 +225,7 @@ class User(object):
                 ?attribution rdf:value ?sentiment .  }}"""
 
         self._log.debug(f"Query to obtain perspective")
-        query = self.replace_namespace(query)
+        query = self._replace_namespace(query)
         response = self._graph.query(query)
 
         # Fact is known and has a perspective
@@ -216,8 +236,9 @@ class User(object):
             response_template['perspective'] = {'certainty': Certainty.from_str(response["certainty"].split('#')[-1]),
                                                 'polarity': Polarity.from_str(response["polarity"].split('#')[-1]),
                                                 'sentiment': Sentiment.from_str(response["sentiment"].split('#')[-1])}
+
         # Fact is not known or has no perspective attached, need another random triple
         else:
-            response_template = self.random_triple(response_template)
+            response_template = self._random_triple(response_template)
 
         return response_template

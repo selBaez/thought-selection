@@ -1,10 +1,21 @@
 import argparse
+import logging
 from datetime import datetime
 
+from cltl.brain import logger as brain_logger
 from cltl.brain.utils.helper_functions import brain_response_to_json
+from cltl.reply_generation import logger as replier_logger
+from cltl.reply_generation.utils.phraser_utils import prepare_triple, prepare_perspective
+from cltl.thoughts.thought_selection import logger as thoughts_logger
 from dialogue_system.chatbot import Chatbot
 from dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, RAW_VANILLA_USER_PATH
+from user_model import logger as user_logger
 from user_model.user import User
+
+brain_logger.setLevel(logging.ERROR)
+thoughts_logger.setLevel(logging.ERROR)
+user_logger.setLevel(logging.ERROR)
+replier_logger.setLevel(logging.ERROR)
 
 
 def create_context_capsule(args):
@@ -17,17 +28,15 @@ def create_context_capsule(args):
             "city": args.city}
 
 
-def print_bot(bot_utterance):
-    print("Bot:", bot_utterance)
+def print_user_model(user_action, capsule):
+    print(f"\nTURN:{capsule['turn']}\n"
+          f"{capsule['author']['label']} [{user_action}]: ({prepare_triple(capsule)} {prepare_perspective(capsule)})\n"
+          f"\t{capsule['utterance']}")
 
 
-def print_user_model(capsule):
-    print(f"\nTURN:{capsule['turn']}\n{capsule['author']['label']}: {capsule['utterance']}")
-
-
-def print_template(response_template):
-    print(f"\tResponse template: {response_template['subject']['label']} "
-          f"{response_template['predicate']['label']} {response_template['object']['label']}")
+def print_bot(brain_response, response_template):
+    print(f"Bot [{list(brain_response['thoughts'].keys())[0]}]: ({prepare_triple(response_template)} {prepare_perspective(response_template)})\n"
+          f"\t{response_template['utterance']}")
 
 
 def main(args):
@@ -45,18 +54,20 @@ def main(args):
     chatbot.situate_chat(capsule_for_context)
 
     # Interaction loop
-    capsule = user_model.init_capsule(args, chatbot)
+    user_action, capsule = user_model.init_capsule(args, chatbot)
     for index in range(args.turn_limit):
         # process with brain, get template for response
         say, response_template, brain_response = chatbot.respond(capsule)
 
-        print_user_model(capsule)
-        print_bot(say)
-        print_template(response_template)
+        # Formatting
+        capsule = brain_response_to_json(capsule)
+        response_template = brain_response_to_json(response_template)
+
+        print_user_model(user_action, capsule)
+        print_bot(brain_response, response_template)
 
         # use response template to query HP dataset
-        response_template = brain_response_to_json(response_template)
-        capsule = user_model.query_database(response_template)
+        user_action, capsule = user_model.query_database(response_template)
 
     # Farewell + update savefile
     print("\nBot:", chatbot.farewell)

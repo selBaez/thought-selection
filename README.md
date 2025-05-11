@@ -9,20 +9,21 @@ thoughts in a conversation.
 
 The code base consists of the following files:
 
-| Files            | Description                                            |
-|------------------|:-------------------------------------------------------|
-| main.py          | Runs an interaction with the chatbot via command line. |
-| web_app.py       | Runs an interaction with the chatbot via a web app     |
-| requirements.txt | Requirements file.                                     |
-
-[comment]: <> (| interactive_chatbot.py  | Runs an interaction with the chatbot via a Jupyter notebook|)
+| Files              | Description                                                                          |
+|--------------------|:-------------------------------------------------------------------------------------|
+| run_experiments.py | Trains chatbot with user model conversations for dialogue policy learning.           |
+| run_evaluation.py  | Evaluates the dialogue policies of trained chatbots by conversing with a user model. |
+| web_interaction.py | Allows for real user interaction with the chatbot via a web app.                     |
+| requirements.txt   | Requirements file.                                                                   |
 
 <p> The implementations of the chatbot functionality and the UI for ease of interaction are divided in different folders:</p>
 
-| Folders      | Description                                                                      |
-|--------------|:---------------------------------------------------------------------------------|
-| \\chatbot    | Implements a triple-based chatbot. It contains a Replier and a Thought Selector. |
-| \\chatbot_ui | Implements a backend API and web front end to interact with the chatbot.         |
+| Folders            | Description                                                                            |
+|--------------------|:---------------------------------------------------------------------------------------|
+| \\dialogue_system  | Implements a triple-based chatbot. It contains a Replier and a Response Selector.      |
+| \\user_interface   | Implements a backend API and web front end to interact with the chatbot.               |
+| \\user_model       | Creates different user models, as databases, with different knowledge characteristics. |
+| \\results_analysis | Gathers experiment results and calculates relevant statistics and plots.               |
 
 ## Getting started
 

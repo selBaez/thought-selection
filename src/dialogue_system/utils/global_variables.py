@@ -17,7 +17,7 @@ ATTRIBUTE_TYPE_PATH = RESOURCES_PATH + "hp_data/attribute_types.csv"
 
 OG_DATA_PATHS = [RESOURCES_PATH + "hp_data/test_set_en/", RESOURCES_PATH + "hp_data/train_set_en/"]
 USER_PATH = RESOURCES_PATH + "users"
-RAW_USER_PATH = USER_PATH + "/raw" # TODO when running locally to raw_test
+RAW_USER_PATH = USER_PATH + "/raw" # TODO when running in server to raw_large
 RAW_VANILLA_USER_PATH = RAW_USER_PATH + "/vanilla.trig"
 PROCESSED_USER_PATH = USER_PATH + "/processed"
 
@@ -40,9 +40,9 @@ BASE_CAPSULE = {
     "utterance": "",
     "utterance_type": None,
     "position": "",
-    "subject": {"label": None, "type": [], 'uri': None},
-    "predicate": {"label": None, 'uri': None},
-    "object": {"label": None, "type": [], 'uri': None},
+    "subject": {"label": "", "type": [], 'uri': None},
+    "predicate": {"label": "", 'uri': None},
+    "object": {"label": "", "type": [], 'uri': None},
     "perspective": {"certainty": None, "polarity": None, "sentiment": None},
     "context_id": CONTEXT_ID
 }
