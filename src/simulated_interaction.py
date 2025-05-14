@@ -11,6 +11,7 @@ from dialogue_system.chatbot import Chatbot
 from dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, RAW_VANILLA_USER_PATH
 from user_model import logger as user_logger
 from user_model.user import User
+from dialogue_system.utils.hp_rdf_dataset import HarryPotterRDF
 
 brain_logger.setLevel(logging.ERROR)
 thoughts_logger.setLevel(logging.ERROR)
@@ -35,8 +36,9 @@ def print_user_model(user_action, capsule):
 
 
 def print_bot(brain_response, response_template):
-    print(f"Bot [{list(brain_response['thoughts'].keys())[0]}]: ({prepare_triple(response_template)} {prepare_perspective(response_template)})\n"
-          f"\t{response_template['utterance']}")
+    print(
+        f"Bot [{list(brain_response['thoughts'].keys())[0]}]: ({prepare_triple(response_template)} {prepare_perspective(response_template)})\n"
+        f"\t{response_template['utterance']}")
 
 
 def main(args):
@@ -47,7 +49,9 @@ def main(args):
     # Create dialogue_system
     chatbot = Chatbot()
     chatbot.begin_session(args.experiment_id, args.run_id,
-                          args.context_id, args.chat_id, args.speaker, args.reward, args.init_brain, args.test_model)
+                          args.context_id, args.chat_id, args.speaker,
+                          args.reward, args.init_brain, args.dm_model, HarryPotterRDF('.'),
+                          args.test_model)
 
     # Situate chat
     capsule_for_context = create_context_capsule(args)
@@ -76,19 +80,13 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--experiment_id", default="e1", type=str, help="ID for an experiment")
+    # Experiment variables
+    parser.add_argument("--experiment_id", default="e0", type=str, help="ID for an experiment")
     parser.add_argument("--run_id", default="run1", type=str, help="ID for a run")
+
+    # Chat variables
     parser.add_argument("--chat_id", default=42, type=int, help="ID for a chat")
-    parser.add_argument("--init_brain", default="None", type=str, help="trig file to read if swapping brains")
-    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str,
-                        help="Filepath of the user model (e.g. 'vanilla.trig')")
-    parser.add_argument("--speaker", default="john", type=str, help="Name of the speaker (e.g. 'john')")
-    parser.add_argument("--reward", default="Total triples", type=str, help="Graph metric to use as reward",
-                        choices=['Average degree', 'Sparseness', 'Shortest path',
-                                 'Total triples', 'Average population',
-                                 'Ratio claims to triples',
-                                 'Ratio perspectives to claims', 'Ratio conflicts to claims'
-                                 ])
+    parser.add_argument("--turn_limit", default=15, type=int, help="Number of turns for this interaction")
     parser.add_argument("--context_id", default=CONTEXT_ID, type=int, help="ID for a situated context")
     parser.add_argument("--context_date", default=datetime.today(), type=str, help="Date of a situated context")
     parser.add_argument("--place_id", default=PLACE_ID, type=int, help="ID for a physical location")
@@ -96,8 +94,19 @@ if __name__ == "__main__":
     parser.add_argument("--country", default=LOCATION["country"], type=str, help="Country of a physical location")
     parser.add_argument("--region", default=LOCATION["region"], type=str, help="Region of a physical location")
     parser.add_argument("--city", default=LOCATION["city"], type=str, help="City of a physical location")
-    parser.add_argument("--turn_limit", default=15, type=int, help="Number of turns for this interaction")
+    parser.add_argument("--speaker", default="john", type=str, help="Name of the speaker (e.g. 'john')")
+    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="Filepath of the user model")
 
+    # RL variables
+    parser.add_argument("--init_brain", default="None", type=str, help="trig file to read if swapping brains")
+    parser.add_argument("--reward", default="Total triples", type=str, help="Graph metric to use as reward",
+                        choices=['Average degree', 'Sparseness', 'Shortest path',
+                                 'Total triples', 'Average population',
+                                 'Ratio claims to triples',
+                                 'Ratio perspectives to claims', 'Ratio conflicts to claims'
+                                 ])
+    parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
+                        choices=["random", "rl(full)", "rl(abstract)", "rl(specific)"])
     parser.add_argument("--test_model", default=None, type=str, help="Use trained network and freeze learning")
 
     args = parser.parse_args()

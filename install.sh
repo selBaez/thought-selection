@@ -36,6 +36,10 @@ cd thought-selection
 pip install -r requirements.txt
 cd ..
 
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull llama3.2
+ollama run llama3.2
+
 ## on your local
 scp Downloads/graphdb-desktop_10.6.3-1_amd64.deb sbaezsanta@145.38.194.106:/home/sbaezsanta/data/sbs-graphs2/
 ##

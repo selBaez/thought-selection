@@ -12,3 +12,8 @@ HP_CONTEXT_CAPSULE = {"context_id": CONTEXT_ID,
                       "region": "Scotland",
                       "city": "Edinburgh"}
 
+user_model_names = {"vanilla": "valeria",
+                    "amateur": "alicia",
+                    "doubtful": "daniela",
+                    "incoherent": "irma",
+                    "confused": "camila"}

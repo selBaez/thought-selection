@@ -19,11 +19,14 @@ from cltl.commons.casefolding import casefold_capsule
 from cltl.commons.discrete import UtteranceType
 from cltl.commons.language_data.sentences import (GOODBYE, GREETING, SORRY, TALK_TO_ME)
 from cltl.reply_generation.triple_phraser import TriplePhraser
+# Code for this project
 from dialogue_system.d2q_selector import D2Q
-from dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS
-from dialogue_system.utils.global_variables import CONTEXT_ID
-from dialogue_system.utils.helpers import create_session_folder
-from dialogue_system.utils.rl_parameters import RESET_FREQUENCY
+from dialogue_system.d2qabstract_selector import D2QAbstract
+from dialogue_system.d2qrandom_selector import D2QRandom
+from dialogue_system.d2qspecific_selector import D2QSpecific
+from dialogue_system.rl_utils.rl_parameters import RESET_FREQUENCY
+from dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS, CONTEXT_ID
+from dialogue_system.utils.helpers import create_session_folder, cast_actions_to_json
 
 # Set up Java PATH (required for Windows)
 os.environ["JAVAHOME"] = "C:/Program Files/Java/jre1.8.0_311/bin/java.exe"
@@ -36,6 +39,7 @@ class Chatbot(object):
         returns: None
         """
         self.scenario_folder = None
+        self._dataset = None
         self._brain = None
         self.chat_id = None
         self.speaker = None
@@ -74,7 +78,9 @@ class Chatbot(object):
         string = choice(GOODBYE)
         return string
 
-    def begin_session(self, experiment_id, run_id, context_id, chat_id, speaker, reward, init_brain, test_model=None):
+    def begin_session(self, experiment_id, run_id, context_id, chat_id, speaker,
+                      reward, init_brain, dm_model, dataset,
+                      test_model=None):
         """Sets up a session .
 
         params
@@ -86,6 +92,7 @@ class Chatbot(object):
         """
         # Set up Leolani backend modules
         self.scenario_folder = create_session_folder(experiment_id, run_id, context_id, reward, chat_id, speaker)
+        self._dataset = dataset
 
         # Initialize brain
         shuffling_brain = init_brain != "None"
@@ -122,8 +129,22 @@ class Chatbot(object):
                                                     speaker)
             prev_chat_model = f"{prev_chat_model}/thoughts.pt"
 
-        self._selector = D2Q(self._brain, reward=reward, trained_model=prev_chat_model,
-                             states_folder=self.scenario_folder / "cumulative_states/")
+        # Run RL or run baselines
+        if dm_model == "rl(abstract)":
+            self._selector = D2QAbstract(self._dataset, self._brain, reward=reward, trained_model=prev_chat_model,
+                                         states_folder=self.scenario_folder / "cumulative_states/")
+        elif dm_model == "rl(specific)":
+            self._selector = D2QSpecific(self._dataset, self._brain, reward=reward, trained_model=prev_chat_model,
+                                         states_folder=self.scenario_folder / "cumulative_states/")
+        elif dm_model == "random":
+            self._selector = D2QRandom(self._dataset, self._brain, reward=reward, trained_model=prev_chat_model,
+                                       states_folder=self.scenario_folder / "cumulative_states/")
+        elif dm_model == "rl(full)":
+            self._selector = D2Q(self._dataset, self._brain, reward=reward, trained_model=prev_chat_model,
+                                 states_folder=self.scenario_folder / "cumulative_states/")
+        else:
+            raise NotImplementedError()
+
         self.thoughts_file = self.scenario_folder / "thoughts.pt"
         self.statistics_history = []
         self._replier = TriplePhraser()
@@ -141,10 +162,7 @@ class Chatbot(object):
         self._selector.save(self.thoughts_file)
 
         # Save chat history
-        history = self.report_chat_to_json()
-
-        # Plot
-        # self._selector.plot(history, plots_folder=self.scenario_folder / f"plots/")
+        self.report_chat_to_json()
 
     def report_chat_to_json(self):
         # Write capsules file
@@ -158,20 +176,15 @@ class Chatbot(object):
         # Write chat history file
         with open(self.scenario_folder / "selection_history.json", "w") as file:
             # cast for json
-            action_history = []
-            for el in self.selector.action_history:
-                if el:
-                    action_history.append(int(el[0][0]))
-                else:
-                    action_history.append(None)
+            abs_action_history = cast_actions_to_json(self.selector.abstract_action_history)
+            spe_action_history = cast_actions_to_json(self.selector.specific_action_history)
 
-            hist = {"actions": action_history,
+            hist = {"abstract_actions": abs_action_history,
+                    "specific_actions": spe_action_history,
                     "rewards": self.selector.reward_history,
                     "states": self.selector.state_history["metrics"],
                     "selections": self.selector.selection_history}
             json.dump(hist, file, indent=4)
-
-        return hist
 
     def situate_chat(self, capsule_for_context):
         self._brain.capsule_context(capsule_for_context)
@@ -247,7 +260,7 @@ class Chatbot(object):
         capsule['context_id'] = CONTEXT_ID
         capsule["timestamp"] = datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S.%f")
 
-        capsule['triple'] = self._brain._rdf_builder.fill_triple(capsule['subject'], # TODO does not work with none, change to empty string
+        capsule['triple'] = self._brain._rdf_builder.fill_triple(capsule['subject'],
                                                                  capsule['predicate'],
                                                                  capsule['object'])
         capsule['perspective'] = self._brain._rdf_builder.fill_perspective(capsule['perspective']) \

@@ -1,17 +1,13 @@
 from collections import defaultdict
-from collections import defaultdict
 from itertools import product
 from pathlib import Path
 
 import numpy as np
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
 from iribaker import to_iri
 from rdflib import URIRef
 from sklearn.preprocessing import MultiLabelBinarizer
 from torch_geometric.data import HeteroData, InMemoryDataset
-from torch_geometric.nn import RGATConv, global_mean_pool
 
 from cltl.brain.utils.helper_functions import hash_claim_id
 from dialogue_system import logger
@@ -21,9 +17,6 @@ from dialogue_system.utils.helpers import build_graph, get_all_characters, get_a
 
 TEST = True
 PROCESS_FOR_GRAPH_CLASSIFIER = False
-
-HIDDEN_SIZE = 64  # original features per node is 87
-STATE_EMBEDDING_SIZE = 16
 
 
 def one_hot_feature(entity, entities_dict):
@@ -323,41 +316,3 @@ class HarryPotterRDF(InMemoryDataset):
             node_features[index] = self.node_features[index]
 
         return node_features
-
-
-class EncoderAttention(nn.Module):
-    def __init__(self, in_channels, hidden_channels, out_channels, num_relations):
-        super().__init__()
-        # in_channels is the number_features
-        self.conv1 = RGATConv(in_channels, hidden_channels, num_relations)
-        self.conv2 = RGATConv(hidden_channels, hidden_channels, num_relations)
-        self.lin = torch.nn.Linear(hidden_channels, out_channels)
-
-    def forward(self, x, edge_index, edge_type):
-        x = self.conv1(x, edge_index, edge_type)
-        x = F.relu(x)
-        x = self.conv2(x, edge_index, edge_type)
-        x = F.relu(x)
-        x = self.lin(x)
-        x = global_mean_pool(x, None)
-        x = F.log_softmax(x, dim=-1)
-        return x
-
-
-def main():
-    dataset = HarryPotterRDF('.')
-
-    # test_file = dataset.download_from_triplestore(chatbot)
-    test_file = dataset.raw_file_names[0]
-    data = dataset.process_one_graph(test_file)
-
-    # RGAT - Conv
-    model_attention = EncoderAttention(dataset.NUM_FEATURES, HIDDEN_SIZE, STATE_EMBEDDING_SIZE,
-                                       dataset.NUM_RELATIONS)
-    encoded_attention = model_attention(data.node_features.float(), data.edge_index, data.edge_type)
-
-    print(f"Encoded the brain!: {encoded_attention}")
-
-
-if __name__ == "__main__":
-    main()

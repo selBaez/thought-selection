@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 from dialogue_system.utils.global_variables import RAW_VANILLA_USER_PATH, RESOURCES_PATH
-from dialogue_system.utils.rl_parameters import METRICS
+from dialogue_system.rl_utils.rl_parameters import METRICS
 
 print(f"\n\n{sys.path}\n\n")
 
