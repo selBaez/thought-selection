@@ -88,9 +88,6 @@ class D2QAbstract(D2Q):
             self.optimizer.zero_grad()
             loss_abs.backward()
             self._log.info(f"Optimizing the policy net")
-            for name, param in self.policy_net.named_parameters():
-                if param.grad is not None:
-                    print(f"{name} grad norm: {param.grad.norm().item():.6f}")
 
             # In-place gradient clipping
             torch.nn.utils.clip_grad_value_(self.policy_net.parameters(), 100)

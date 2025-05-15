@@ -2,10 +2,12 @@ wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
 chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
 ./Anaconda3-2024.02-1-Linux-x86_64.sh
 
-conda create --name thought-selection python=3.8
+### exit the server and go back in
+
+conda create --name thought-selection python=3.8.18
 conda activate thought-selection
 
-cd data/sbs-graphs
+cd data/sbsgraph
 
 git clone https://github.com/leolani/cltl-combot.git
 cd cltl-combot
@@ -41,7 +43,7 @@ ollama pull llama3.2
 ollama run llama3.2
 
 ## on your local
-scp Downloads/graphdb-desktop_10.6.3-1_amd64.deb sbaezsanta@145.38.194.106:/home/sbaezsanta/data/sbs-graphs2/
+scp Downloads/graphdb-desktop_10.6.3-1_amd64.deb sbaezsanta@145.38.189.135:/home/sbaezsanta/data/sbsgraph/
 ##
 
 apt install default-jdk
@@ -59,4 +61,7 @@ false             # disable same as
 true              #enable context id
 ##
 
-bash graphdb -d -s -Xmx30g
+bash graphdb -d -s -Xmx100g
+
+### move user models to raw
+scp Documents/PhD/research/thought-selection/resources/users/raw_large sbaezsanta@145.38.189.135:/home/sbaezsanta/data/sbsgraph/thought-selection/resources/users/raw/
