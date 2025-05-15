@@ -134,73 +134,73 @@ grasp:wasAttributedTo rdf:type owl:ObjectProperty ;
 ###  http://harrypotter.org/affiliation
 hp:affiliation rdf:type owl:ObjectProperty ;
                rdfs:domain hp:character ;
-               rdfs:range hp:attribute .
+               rdfs:range hp:institution .
 
 
 ###  http://harrypotter.org/age
 hp:age rdf:type owl:ObjectProperty ;
        rdfs:domain hp:character ;
-       rdfs:range hp:attribute .
+       rdfs:range hp:age .
 
 
 ###  http://harrypotter.org/belongings
 hp:belongings rdf:type owl:ObjectProperty ;
               rdfs:domain hp:character ;
-              rdfs:range hp:attribute .
+              rdfs:range hp:object .
 
 
 ###  http://harrypotter.org/export
 hp:export rdf:type owl:ObjectProperty ;
           rdfs:domain hp:character ;
-          rdfs:range hp:attribute .
+          rdfs:range hp:product .
 
 
 ###  http://harrypotter.org/gender
 hp:gender rdf:type owl:ObjectProperty ;
           rdfs:domain hp:character ;
-          rdfs:range hp:attribute .
+          rdfs:range hp:gender .
 
 
 ###  http://harrypotter.org/hobbies
 hp:hobbies rdf:type owl:ObjectProperty ;
            rdfs:domain hp:character ;
-           rdfs:range hp:attribute .
+           rdfs:range hp:activity .
 
 
 ###  http://harrypotter.org/lineage
 hp:lineage rdf:type owl:ObjectProperty ;
            rdfs:domain hp:character ;
-           rdfs:range hp:attribute .
+           rdfs:range hp:ancestry .
 
 
 ###  http://harrypotter.org/looks
 hp:looks rdf:type owl:ObjectProperty ;
          rdfs:domain hp:character ;
-         rdfs:range hp:attribute .
+         rdfs:range hp:physical-appearance .
 
 
 ###  http://harrypotter.org/personality
 hp:personality rdf:type owl:ObjectProperty ;
                rdfs:domain hp:character ;
-               rdfs:range hp:attribute .
+               rdfs:range hp:personality-trait .
 
 
 ###  http://harrypotter.org/spells
 hp:spells rdf:type owl:ObjectProperty ;
           rdfs:domain hp:character ;
-          rdfs:range hp:attribute .
+          rdfs:range hp:enchantment .
 
 
 ###  http://harrypotter.org/talents
 hp:talents rdf:type owl:ObjectProperty ;
            rdfs:domain hp:character ;
-           rdfs:range hp:attribute .
+           rdfs:range hp:ability .
 
 
 ###  http://harrypotter.org/title
 hp:title rdf:type owl:ObjectProperty ;
          rdfs:domain hp:character ;
-         rdfs:range hp:attribute .
+         rdfs:range hp:designation .
 
 
 ###  http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty

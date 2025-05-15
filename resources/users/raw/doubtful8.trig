@@ -8572,7 +8572,7 @@ leolaniWorld:Ontology {
     hp:activity rdfs:subClassOf hp:attribute .
 
     hp:affiliation rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:institution .
 
     hp:age rdfs:domain hp:character ;
         rdfs:range hp:attribute ;
@@ -8581,7 +8581,7 @@ leolaniWorld:Ontology {
     hp:ancestry rdfs:subClassOf hp:attribute .
 
     hp:belongings rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:object .
 
     hp:centaur rdfs:subClassOf hp:character .
 
@@ -8592,7 +8592,7 @@ leolaniWorld:Ontology {
     hp:enchantment rdfs:subClassOf hp:attribute .
 
     hp:export rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:product .
 
     hp:gender rdfs:domain hp:character ;
         rdfs:range hp:attribute ;
@@ -8605,22 +8605,22 @@ leolaniWorld:Ontology {
     hp:goblin rdfs:subClassOf hp:character .
 
     hp:hobbies rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:activity .
 
     hp:institution rdfs:subClassOf hp:attribute .
 
     hp:lineage rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:ancestry .
 
     hp:looks rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:physical-appearance .
 
     hp:muggle rdfs:subClassOf hp:character .
 
     hp:object rdfs:subClassOf hp:attribute .
 
     hp:personality rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:personality-trait .
 
     hp:personality-trait rdfs:subClassOf hp:attribute .
 
@@ -8629,17 +8629,17 @@ leolaniWorld:Ontology {
     hp:product rdfs:subClassOf hp:attribute .
 
     hp:spells rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:enchantment .
 
     hp:spider rdfs:subClassOf hp:character .
 
     hp:squib rdfs:subClassOf hp:character .
 
     hp:talents rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:ability .
 
     hp:title rdfs:domain hp:character ;
-        rdfs:range hp:attribute .
+        rdfs:range hp:designation .
 
     hp:werewolf rdfs:subClassOf hp:character .
 
