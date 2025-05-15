@@ -5,6 +5,7 @@ from rdflib import ConjunctiveGraph
 
 from dialogue_system.utils.global_variables import RESOURCES_PATH, RAW_USER_PATH, HARRYPOTTER_PREFIX, HARRYPOTTER_NS
 
+
 def cast_actions_to_json(actions):
     action_history = []
     for el in actions:
@@ -16,7 +17,14 @@ def cast_actions_to_json(actions):
     return action_history
 
 
-def create_session_folder(experiment_id, run_id, context_id, reward, chat_id, speaker):
+def search_session_folder(experiment_id, run_id, context_id, reward, chat_id):
+    prev_sess = create_session_folder(experiment_id, f"{run_id}", context_id, reward, chat_id, '*', make_folder=False)
+    prev_sess = list(prev_sess.parent.glob(prev_sess.name))[0]
+
+    return prev_sess
+
+
+def create_session_folder(experiment_id, run_id, context_id, reward, chat_id, speaker, make_folder=True):
     # Create folder to store session
     session_folder = Path(f"{RESOURCES_PATH}"
                           f"experiments/"
@@ -27,7 +35,8 @@ def create_session_folder(experiment_id, run_id, context_id, reward, chat_id, sp
                           f"{chat_id}_"
                           f"{speaker.replace(' ', '-')}"
                           f"({context_id})/")
-    session_folder.mkdir(parents=True, exist_ok=True)
+    if make_folder:
+        session_folder.mkdir(parents=True, exist_ok=True)
 
     return session_folder
 

@@ -26,7 +26,7 @@ from dialogue_system.d2qrandom_selector import D2QRandom
 from dialogue_system.d2qspecific_selector import D2QSpecific
 from dialogue_system.rl_utils.rl_parameters import RESET_FREQUENCY
 from dialogue_system.utils.global_variables import BASE_CAPSULE, BRAIN_ADDRESS, ONTOLOGY_DETAILS, CONTEXT_ID
-from dialogue_system.utils.helpers import create_session_folder, cast_actions_to_json
+from dialogue_system.utils.helpers import create_session_folder, cast_actions_to_json, search_session_folder
 
 # Set up Java PATH (required for Windows)
 os.environ["JAVAHOME"] = "C:/Program Files/Java/jre1.8.0_311/bin/java.exe"
@@ -125,8 +125,7 @@ class Chatbot(object):
             prev_chat_model = test_model
         elif chat_id != 1:
             # load saved model from previous chat
-            prev_chat_model = create_session_folder(experiment_id, run_id, context_id - 100, reward, chat_id - 1,
-                                                    speaker)
+            prev_chat_model = search_session_folder(experiment_id, run_id, context_id - 100, reward, chat_id - 1)
             prev_chat_model = f"{prev_chat_model}/thoughts.pt"
 
         # Run RL or run baselines
