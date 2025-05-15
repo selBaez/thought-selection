@@ -1,0 +1,1751 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 2,
+            "turn": 0,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " I was just talking to Harry the other day and I noticed he's been wearing glasses. He seems really confident about it too.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "wearing-glasses",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/wearing-glasses"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T23:32:31.897041",
+            "context_id": 3214,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/wearing-glasses",
+                    "_label": "wearing-glasses",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 3553.0,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 579,
+                "Total edges": 3553,
+                "Average degree": 12.272884283246977,
+                "Sparseness": 0.008581885867182117,
+                "Shortest path": 2.463189725753148,
+                "Total triples": 3553.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 14.862745098039216,
+                "Total claims": 5.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0014072614691809737,
+                "Ratio perspectives to triples": 0.0014072614691809737,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what does harry have?"
+        },
+        {
+            "chat": 2,
+            "turn": 3,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " So Harry's belongings include a flying broom. I'm quite certain about that, and I'd say it's a pretty positive thing - he must be really into Quidditch!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "flying-broom",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/flying-broom"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:36.361290",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/flying-broom",
+                    "_label": "flying-broom",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0222347312130593,
+            "brain_state": 3632.0,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 592,
+                "Total edges": 3632,
+                "Average degree": 12.27027027027027,
+                "Sparseness": 0.008408852264426588,
+                "Shortest path": 2.4760198015274155,
+                "Total triples": 3632.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.588235294117647,
+                "Total claims": 6.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0016519823788546256,
+                "Ratio perspectives to triples": 0.0016519823788546256,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what kind of belongings does harry have?"
+        },
+        {
+            "chat": 2,
+            "turn": 5,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " So Harry's belongings include a flying broom. I'm quite certain about that, and I'd say it's a pretty positive thing - he must be really into Quidditch!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "flying-broom",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/flying-broom"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:41.901154",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/flying-broom",
+                    "_label": "flying-broom",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.01128854625550657,
+            "brain_state": 3673.0,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 597,
+                "Total edges": 3673,
+                "Average degree": 12.304857621440537,
+                "Sparseness": 0.008358374788515442,
+                "Shortest path": 2.4816644744977685,
+                "Total triples": 3673.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.803921568627452,
+                "Total claims": 6.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0016335420637081405,
+                "Ratio perspectives to triples": 0.0016335420637081405,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what kind of belongings does harry have?"
+        },
+        {
+            "chat": 2,
+            "turn": 7,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " So I've been told that Harry belongs to a gray mouse. That's definitely true, and I'm quite certain about it. It sounds like this is a pretty reliable piece of information.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:47.548535",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.02069153280696967,
+            "brain_state": 3749.0,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 2,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 609,
+                "Total edges": 3749,
+                "Average degree": 12.311986863711002,
+                "Sparseness": 0.008212876906608858,
+                "Shortest path": 2.4945445510327544,
+                "Total triples": 3749.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.50980392156863,
+                "Total claims": 7.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0018671645772205922,
+                "Ratio perspectives to triples": 0.0018671645772205922,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what kind of belongings does harry have?"
+        },
+        {
+            "chat": 2,
+            "turn": 9,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " So Harry has an owl as one of his belongings. I'm quite certain about that, and I think it's a pretty standard thing for wizards to have an owl, you know? It's just a part of the whole wizarding world.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "owl",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/owl"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:53.050098",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/owl",
+                    "_label": "owl",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.02027207255268082,
+            "brain_state": 3825.0,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 3,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 621,
+                "Total edges": 3825,
+                "Average degree": 12.318840579710145,
+                "Sparseness": 0.00807227447289059,
+                "Shortest path": 2.506950288296712,
+                "Total triples": 3825.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.215686274509803,
+                "Total claims": 8.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0020915032679738564,
+                "Ratio perspectives to triples": 0.0020915032679738564,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what kind of belongings does harry have?"
+        },
+        {
+            "chat": 2,
+            "turn": 11,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " So I've been told that Harry has a gray mouse as one of his belongings. That's confirmed and certain, right?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:59.081074",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.010718954248366108,
+            "brain_state": 3866.0,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 3,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 627,
+                "Total edges": 3866,
+                "Average degree": 12.331738437001595,
+                "Sparseness": 0.007999918601782112,
+                "Shortest path": 2.5144330474749172,
+                "Total triples": 3866.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.431372549019606,
+                "Total claims": 8.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0020693222969477496,
+                "Ratio perspectives to triples": 0.0020693222969477496,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what kind of belongings does harry have?"
+        },
+        {
+            "chat": 2,
+            "turn": 13,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " So Harry's belongings include a flying broom. I'm quite certain about that, and I'd say it's a pretty positive thing - he must be an avid Quidditch player or something!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "flying-broom",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/flying-broom"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:33:04.914056",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/flying-broom",
+                    "_label": "flying-broom",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.010605276771857186,
+            "brain_state": 3907.0,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 3,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 633,
+                "Total edges": 3907,
+                "Average degree": 12.344391785150078,
+                "Sparseness": 0.007928842568675456,
+                "Shortest path": 2.5217819505269263,
+                "Total triples": 3907.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.647058823529413,
+                "Total claims": 8.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.002047606859482979,
+                "Ratio perspectives to triples": 0.002047606859482979,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that makes my day! so harry has a gray mouse, but i also know that he owns a flying broom."
+        },
+        {
+            "chat": 2,
+            "turn": 15,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " You know, I was talking to someone about Harry and his belongings, and apparently he has a gray mouse. I'm not really sure how that's going, but it seems like the mouse is just kind of... there. I'd say I'm fairly certain about this, actually - I mean, I've seen pictures of Harry with that mouse before. It's not like he's hiding it or anything. As for whether it's a good thing or a bad thing, I think it's more of a neutral thing. The sentiment around it is pretty neutral too, to be honest.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute",
+                    "object"
+                ],
+                "uri": "http://cltl.nl/leolani/world/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:33:10.766421",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "object",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.017404658305605336,
+            "brain_state": 3975.0,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 4,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 642,
+                "Total edges": 3975,
+                "Average degree": 12.383177570093459,
+                "Sparseness": 0.007851243679700314,
+                "Shortest path": 2.529522115464058,
+                "Total triples": 3975.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.215686274509803,
+                "Total claims": 8.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.002012578616352201,
+                "Ratio perspectives to triples": 0.0022641509433962265,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.125,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what kind of belongings does harry have?"
+        },
+        {
+            "chat": 2,
+            "turn": 17,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " So I've been told that Harry has a gray mouse as one of his belongings. That's definitely true, and I'm quite certain about it. It sounds like a pretty ordinary item to have around, but I guess you never know what someone might be attached to.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:33:16.666620",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.010314465408804985,
+            "brain_state": 4016.0,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 4,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 648,
+                "Total edges": 4016,
+                "Average degree": 12.395061728395062,
+                "Sparseness": 0.007782731290961744,
+                "Shortest path": 2.5365790829469343,
+                "Total triples": 4016.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.431372549019606,
+                "Total claims": 8.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.00199203187250996,
+                "Ratio perspectives to triples": 0.0022410358565737054,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.125,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "nice! so, it seems that harry's belongings include a gray mouse, which is different from his usual wand."
+        },
+        {
+            "chat": 2,
+            "turn": 19,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": " So, I'm saying that Harry's belongings include a wand. I think this is true with high certainty, and it's a fact that many people would agree on. The sentiment around this statement is neutral, but if I had to describe the emotion behind it, I'd say it's more of a sense of familiarity or recognition, rather than anything strong like excitement or surprise.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "wand",
+                "type": [
+                    "attribute",
+                    "object"
+                ],
+                "uri": "http://cltl.nl/leolani/world/wand"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:33:22.933797",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/wand",
+                    "_label": "wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "object",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.01269920318725104,
+            "brain_state": 4067.0,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 3,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 4,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 655,
+                "Total edges": 4067,
+                "Average degree": 12.418320610687022,
+                "Sparseness": 0.0077151681137462855,
+                "Shortest path": 2.542671055396036,
+                "Total triples": 4067.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.784313725490197,
+                "Total claims": 8.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.001967051880993361,
+                "Ratio perspectives to triples": 0.0022129333661175315,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.125,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. who is the character that has a lineage of a wand?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 2,
+            "turn": 3,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "i am curious. what does harry have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "object"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:36.361290",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 2,
+            "turn": 5,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "if you don't mind me asking. what kind of belongings does harry have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "object"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:41.901154",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 2,
+            "turn": 7,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "i am curious. what kind of belongings does harry have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "object"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:47.548535",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 2,
+            "turn": 9,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "i am curious. what kind of belongings does harry have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "object"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:53.050098",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 2,
+            "turn": 11,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "i am curious. what kind of belongings does harry have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "object"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:32:59.081074",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 2,
+            "turn": 13,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "if you don't mind me asking. what kind of belongings does harry have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "object"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:33:04.914056",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 2,
+            "turn": 15,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "that makes my day! so harry has a gray mouse, but i also know that he owns a flying broom.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute",
+                    "object"
+                ],
+                "uri": "http://cltl.nl/leolani/world/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:33:10.766421",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 2,
+            "turn": 17,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "i would like to know. what kind of belongings does harry have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "object"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:33:16.666620",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 2,
+            "turn": 19,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "nice! so, it seems that harry's belongings include a gray mouse, which is different from his usual wand.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "wand",
+                "type": [
+                    "attribute",
+                    "object"
+                ],
+                "uri": "http://cltl.nl/leolani/world/wand"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:33:22.933797",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/wand",
+                    "_label": "wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 2,
+            "turn": 21,
+            "author": {
+                "label": "camila1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila1"
+            },
+            "utterance": "let me ask you something. who is the character that has a lineage of a wand?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "wand",
+                "type": [
+                    "attribute",
+                    "object"
+                ],
+                "uri": "http://cltl.nl/leolani/world/wand"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 23:33:28.399464",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/wand",
+                    "_label": "wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "object"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "i am curious. what does harry have?",
+        "if you don't mind me asking. what kind of belongings does harry have?",
+        "i am curious. what kind of belongings does harry have?",
+        "i am curious. what kind of belongings does harry have?",
+        "i am curious. what kind of belongings does harry have?",
+        "if you don't mind me asking. what kind of belongings does harry have?",
+        "that makes my day! so harry has a gray mouse, but i also know that he owns a flying broom.",
+        "i would like to know. what kind of belongings does harry have?",
+        "nice! so, it seems that harry's belongings include a gray mouse, which is different from his usual wand.",
+        "let me ask you something. who is the character that has a lineage of a wand?"
+    ]
+}

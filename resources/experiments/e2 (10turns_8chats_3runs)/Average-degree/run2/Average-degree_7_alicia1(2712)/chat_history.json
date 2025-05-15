@@ -1,0 +1,1777 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 7,
+            "turn": 0,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " So I was talking to my friend Harry the other day and he told me that Hermione is only 11 years old. I completely agree with him, I've seen her in class and she definitely looks like she's around that age. I'm pretty sure of it too, I mean, have you seen her grades? They're always so impressive!",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T23:11:58.674637",
+            "context_id": 2712,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 10.985714285714286,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 420,
+                "Total edges": 2307,
+                "Average degree": 10.985714285714286,
+                "Sparseness": 0.01056689342403628,
+                "Shortest path": 2.3403682236617795,
+                "Total triples": 2307.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.588235294117647,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008669267446900737,
+                "Ratio perspectives to triples": 0.00043346337234503684,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i think i trust you."
+        },
+        {
+            "chat": 7,
+            "turn": 3,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " I've heard that Hermione is only 11 years old, but I'm not sure if that's really true. To be honest, it seems like she's been through so much already and has accomplished so much, it's hard to believe she's still just a kid.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:01.256034",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.00583078149251226,
+            "brain_state": 10.921658986175116,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 434,
+                "Total edges": 2370,
+                "Average degree": 10.921658986175116,
+                "Sparseness": 0.010182845250483128,
+                "Shortest path": 2.3651302135992593,
+                "Total triples": 2370.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.96078431372549,
+                "Total claims": 2.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008438818565400844,
+                "Ratio perspectives to triples": 0.0008438818565400844,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i think i trust you."
+        },
+        {
+            "chat": 7,
+            "turn": 5,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " I've heard that Hermione is only 11 years old, but I'm not sure if that's really true. To be honest, it seems like an incredibly young age for someone with her level of intelligence and magical abilities. It makes me a bit skeptical about the accuracy of this information.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:03.851329",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00032147880249144833,
+            "brain_state": 10.92517006802721,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 441,
+                "Total edges": 2409,
+                "Average degree": 10.92517006802721,
+                "Sparseness": 0.010016402630591163,
+                "Shortest path": 2.3810657596371883,
+                "Total triples": 2409.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.137254901960784,
+                "Total claims": 2.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008302200083022001,
+                "Ratio perspectives to triples": 0.0008302200083022001,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. alicia, how old is hermione?"
+        },
+        {
+            "chat": 7,
+            "turn": 7,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " So I was just talking to Harry and Ron about Hermione, and it's amazing how young she is. I mean, 11 years old is really young for someone with so much responsibility already. She's like a little adult, you know?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:07.473062",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.002549165461733338,
+            "brain_state": 10.953020134228188,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 447,
+                "Total edges": 2448,
+                "Average degree": 10.953020134228188,
+                "Sparseness": 0.009899453978549515,
+                "Shortest path": 2.3929635537364193,
+                "Total triples": 2448.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.313725490196079,
+                "Total claims": 2.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008169934640522876,
+                "Ratio perspectives to triples": 0.0008169934640522876,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, you have my trust."
+        },
+        {
+            "chat": 7,
+            "turn": 9,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " I've heard that Hermione is 11 years old, and I have to say, it's really impressive how much she's accomplished at such a young age. She seems like a very responsible and intelligent person, which is no surprise given her reputation as one of the brightest witches of our age.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:11.187922",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00026723244363813237,
+            "brain_state": 10.955947136563877,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 454,
+                "Total edges": 2487,
+                "Average degree": 10.955947136563877,
+                "Sparseness": 0.009742086980147101,
+                "Shortest path": 2.4080676060720987,
+                "Total triples": 2487.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.490196078431373,
+                "Total claims": 2.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008041817450743868,
+                "Ratio perspectives to triples": 0.0008041817450743868,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i believe you"
+        },
+        {
+            "chat": 7,
+            "turn": 11,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " I think Hermione is only 11 years old, which seems really young to be attending Hogwarts. I'm not sure if that's accurate, but it's definitely an interesting perspective on the character.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:14.266631",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00025904769879292466,
+            "brain_state": 10.958785249457701,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 461,
+                "Total edges": 2526,
+                "Average degree": 10.958785249457701,
+                "Sparseness": 0.009589640553168863,
+                "Shortest path": 2.422738847495992,
+                "Total triples": 2526.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.666666666666666,
+                "Total claims": 2.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.000791765637371338,
+                "Ratio perspectives to triples": 0.000791765637371338,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. alicia1 is 11 years old."
+        },
+        {
+            "chat": 7,
+            "turn": 13,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " So I was talking to Dudley the other day and he's actually 11 years old. I'm pretty sure that's correct, it feels like a fact to me.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:17.685631",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0031695681369454665,
+            "brain_state": 10.924050632911392,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 474,
+                "Total edges": 2589,
+                "Average degree": 10.924050632911392,
+                "Sparseness": 0.00931118588545283,
+                "Shortest path": 2.4439835505481664,
+                "Total triples": 2589.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.117647058823529,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011587485515643105,
+                "Ratio perspectives to triples": 0.0011587485515643105,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i think i trust you."
+        },
+        {
+            "chat": 7,
+            "turn": 15,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " Dudley is 11 years old, and I have to say, that's still pretty young. I'm not sure how he's managing with his schoolwork at such a tender age, but I suppose it's great for him to be learning so early on. (CERTAINTY: high POLARITY: neutral SENTIMENT: calm EMOTION: concern)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:20.963097",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0003190756881119583,
+            "brain_state": 10.927536231884059,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 483,
+                "Total edges": 2639,
+                "Average degree": 10.927536231884059,
+                "Sparseness": 0.009143165772925427,
+                "Shortest path": 2.459704646787454,
+                "Total triples": 2639.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.392156862745098,
+                "Total claims": 3.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011367942402425162,
+                "Ratio perspectives to triples": 0.0015157256536566881,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i trust you"
+        },
+        {
+            "chat": 7,
+            "turn": 17,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " So, I was talking to Dudley the other day and he's actually 11 years old. I think that's really young for him, but at the same time, it's kind of cool that he's already established as a certain age. I'd say I'm fairly certain about this information, and I'd describe it as neutral - I don't have any strong feelings one way or the other. It's just a fact, you know?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:24.549679",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00028149190710768934,
+            "brain_state": 10.93061224489796,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 490,
+                "Total edges": 2678,
+                "Average degree": 10.93061224489796,
+                "Sparseness": 0.00900874635568513,
+                "Shortest path": 2.4728517173740663,
+                "Total triples": 2678.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.568627450980392,
+                "Total claims": 3.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011202389843166542,
+                "Ratio perspectives to triples": 0.0014936519790888724,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that rings a bell. alicia, you mentioned that dudley is 11 years old."
+        },
+        {
+            "chat": 7,
+            "turn": 19,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " I've got a friend named Dudley, and he's only 11 years old. I think that's really young to be in the fifth grade, but I guess every kid is different. (CERTAINTY: medium) (POLARITY: neutral) (SENTIMENT: calm) (EMOTION: slight concern)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:28.958719",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0002734855736359343,
+            "brain_state": 10.933601609657948,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 497,
+                "Total edges": 2717,
+                "Average degree": 10.933601609657948,
+                "Sparseness": 0.008878219012262711,
+                "Shortest path": 2.485647757512819,
+                "Total triples": 2717.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.745098039215685,
+                "Total claims": 3.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001104158998895841,
+                "Ratio perspectives to triples": 0.001472211998527788,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "wow! so, dudley and hermione are both eleven years old."
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 7,
+            "turn": 3,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:01.256034",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 5,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:03.851329",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 7,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "let me ask you something. alicia, how old is hermione?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "age"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:07.473062",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "age"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 9,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:11.187922",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 11,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:14.266631",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 13,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "i am curious. alicia1 is 11 years old.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "spells",
+                "uri": "http://harrypotter.org/spells"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:17.685631",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/spells",
+                    "_label": "spells",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 15,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:20.963097",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 17,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:24.549679",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 19,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "that rings a bell. alicia, you mentioned that dudley is 11 years old.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:28.958719",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 21,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "wow! so, dudley and hermione are both eleven years old.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 188,
+            "timestamp": "2025-05-15 23:12:33.281446",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "alicia1, i think i trust you.",
+        "alicia1, i think i trust you.",
+        "let me ask you something. alicia, how old is hermione?",
+        "alicia1, you have my trust.",
+        "alicia1, i believe you",
+        "i am curious. alicia1 is 11 years old.",
+        "alicia1, i think i trust you.",
+        "alicia1, i trust you",
+        "that rings a bell. alicia, you mentioned that dudley is 11 years old.",
+        "wow! so, dudley and hermione are both eleven years old."
+    ]
+}

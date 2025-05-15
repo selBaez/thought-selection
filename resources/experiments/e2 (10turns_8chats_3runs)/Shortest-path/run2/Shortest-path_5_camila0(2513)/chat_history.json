@@ -1,0 +1,1775 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 5,
+            "turn": 0,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " Hermione is 11 years old. I'm pretty sure about that, and it's a fact that's definitely true.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T22:58:21.934598",
+            "context_id": 2513,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 2.3403682236617795,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 420,
+                "Total edges": 2307,
+                "Average degree": 10.985714285714286,
+                "Sparseness": 0.01056689342403628,
+                "Shortest path": 2.3403682236617795,
+                "Total triples": 2307.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.588235294117647,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008669267446900737,
+                "Ratio perspectives to triples": 0.00043346337234503684,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what kind of hobbies does camila have?"
+        },
+        {
+            "chat": 5,
+            "turn": 3,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " So Harry has an owl as a belonging. I'm quite certain about that, and I'd say it's a pretty positive sentiment - having an owl can be really cool! It makes me feel like he's got some magical advantages going for him.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "owl",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/owl"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:25.498092",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/owl",
+                    "_label": "owl",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.011777576306545745,
+            "brain_state": 2.367932089001371,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 436,
+                "Total edges": 2380,
+                "Average degree": 10.917431192660551,
+                "Sparseness": 0.01014224391886205,
+                "Shortest path": 2.367932089001371,
+                "Total triples": 2380.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.156862745098039,
+                "Total claims": 3.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012605042016806723,
+                "Ratio perspectives to triples": 0.0008403361344537816,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.6666666666666666,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i just learned something, i've never heard of harry before, but i'm so excited to learn more about him!"
+        },
+        {
+            "chat": 5,
+            "turn": 5,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " I've been noticing that Harry has this weird mark on his forehead. It's like a lightning bolt or something, and it's really sharp. I'm pretty sure he got it in some kind of accident, maybe from a fall or a fight. Anyway, I think it's pretty concerning, you know?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:29.794210",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.008560638679100396,
+            "brain_state": 2.388203100031959,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 448,
+                "Total edges": 2444,
+                "Average degree": 10.910714285714286,
+                "Sparseness": 0.00988022161989796,
+                "Shortest path": 2.388203100031959,
+                "Total triples": 2444.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.627450980392156,
+                "Total claims": 4.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0016366612111292963,
+                "Ratio perspectives to triples": 0.0012274959083469722,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.75,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i did not know that! i've never heard of a lightning shaped injury on the forehead before, camila. that's really unusual   can you tell me more about it?"
+        },
+        {
+            "chat": 5,
+            "turn": 7,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " I've been noticing that Harry has this weird mark on his forehead. It's like a lightning bolt or something, and it's really sharp. I'm pretty sure he got it in some kind of accident, but I don't know what happened exactly.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:35.107370",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.006338310184162088,
+            "brain_state": 2.403340272062739,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 455,
+                "Total edges": 2483,
+                "Average degree": 10.914285714285715,
+                "Sparseness": 0.009723463349836977,
+                "Shortest path": 2.403340272062739,
+                "Total triples": 2483.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.803921568627452,
+                "Total claims": 4.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0016109544905356424,
+                "Ratio perspectives to triples": 0.0012082158679017317,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.75,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "camila0, i believe you"
+        },
+        {
+            "chat": 5,
+            "turn": 9,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " I've seen Harry with that weird lightning-shaped cut on his forehead before, it's really quite alarming. I'm not sure what happened to him, but it looked like he got hit by something or someone with incredible force. The way the wound is shaped, it's almost as if it was struck by a bolt of lightning - that's why they call it a \"knife-injury-with-lightning-shape\" after all.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:40.075584",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00918692217428907,
+            "brain_state": 2.4254195721005143,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 468,
+                "Total edges": 2543,
+                "Average degree": 10.867521367521368,
+                "Sparseness": 0.009423624808240192,
+                "Shortest path": 2.4254195721005143,
+                "Total triples": 2543.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.156862745098039,
+                "Total claims": 4.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0015729453401494297,
+                "Ratio perspectives to triples": 0.0015729453401494297,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "camila0, i think i trust you."
+        },
+        {
+            "chat": 5,
+            "turn": 11,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " I've seen that before, it's a pretty rare condition. I'm not surprised Harry is dealing with it, he's been through so much already. It's frustrating when you're trying to move on from one thing and then something like this happens.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:44.225455",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00577711097014455,
+            "brain_state": 2.439431490117699,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 475,
+                "Total edges": 2582,
+                "Average degree": 10.871578947368421,
+                "Sparseness": 0.009280886426592798,
+                "Shortest path": 2.439431490117699,
+                "Total triples": 2582.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.333333333333334,
+                "Total claims": 4.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001549186676994578,
+                "Ratio perspectives to triples": 0.001549186676994578,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "camila0, i believe you"
+        },
+        {
+            "chat": 5,
+            "turn": 13,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " I've been noticing that Harry has a pretty intense scar on his forehead, it's shaped like a lightning bolt. I'm not entirely sure how he got it, but it's definitely a distinctive feature of his. It makes me feel a bit uneasy when I look at it, to be honest.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:47.858945",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.005586161542858736,
+            "brain_state": 2.453058548494233,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 482,
+                "Total edges": 2621,
+                "Average degree": 10.87551867219917,
+                "Sparseness": 0.00914240457292402,
+                "Shortest path": 2.453058548494233,
+                "Total triples": 2621.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.509803921568627,
+                "Total claims": 4.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0015261350629530714,
+                "Ratio perspectives to triples": 0.0015261350629530714,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what character has a lightning shaped injury at the forehead?"
+        },
+        {
+            "chat": 5,
+            "turn": 15,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " You know, I've always been fascinated by Harry's story. He's truly the boy who lived, and it's incredible to think about what he went through during his time at Hogwarts. I mean, can you imagine being famous in the wizarding world from a very young age? It's no wonder he had so many challenges ahead of him.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "the-boy-who-lived",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/the-boy-who-lived"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:52.178713",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/the-boy-who-lived",
+                    "_label": "the-boy-who-lived",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.007988033406353567,
+            "brain_state": 2.4726536621273465,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 495,
+                "Total edges": 2685,
+                "Average degree": 10.848484848484848,
+                "Sparseness": 0.008892970105091318,
+                "Shortest path": 2.4726536621273465,
+                "Total triples": 2685.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.980392156862745,
+                "Total claims": 5.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.00186219739292365,
+                "Ratio perspectives to triples": 0.00186219739292365,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what is the name of the character who lived to be a certain age?"
+        },
+        {
+            "chat": 5,
+            "turn": 17,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " So I'm aware that Filch is actually the title of the grumpy caretaker at Hogwarts, and he's also referred to as the administrator of the school. I completely agree with that, it makes sense given his role in enforcing the rules and keeping an eye on the students.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "filch",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/filch"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "administrator",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/administrator"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:56.103369",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/filch",
+                    "_label": "filch",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/administrator",
+                    "_label": "administrator",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.008350264658053108,
+            "brain_state": 2.493300974613814,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 510,
+                "Total edges": 2755,
+                "Average degree": 10.803921568627452,
+                "Sparseness": 0.008612072279892349,
+                "Shortest path": 2.493300974613814,
+                "Total triples": 2755.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.529411764705882,
+                "Total claims": 6.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002177858439201452,
+                "Ratio perspectives to triples": 0.002177858439201452,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "camila0, i think i trust you."
+        },
+        {
+            "chat": 5,
+            "turn": 19,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": " I'm not a fan of the way Filch is portrayed as an administrator, to be honest. I think it's unfair on him, considering he's just trying to do his job in a tough environment. He's often seen as more of a bully than a authority figure, and that's not entirely accurate.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "filch",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/filch"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "administrator",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/administrator"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:59:00.273915",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/filch",
+                    "_label": "filch",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/administrator",
+                    "_label": "administrator",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.005558640957341376,
+            "brain_state": 2.507160339530282,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 519,
+                "Total edges": 2805,
+                "Average degree": 10.809248554913294,
+                "Sparseness": 0.0084681895300359,
+                "Shortest path": 2.507160339530282,
+                "Total triples": 2805.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.803921568627452,
+                "Total claims": 6.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0021390374331550803,
+                "Ratio perspectives to triples": 0.0024955436720142605,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1666666666666667,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "camila0, i think i trust you."
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 5,
+            "turn": 3,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "i would like to know. what kind of hobbies does camila have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "hobbies",
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:25.498092",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 5,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "i just learned something, i've never heard of harry before, but i'm so excited to learn more about him!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:29.794210",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 7,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "i did not know that! i've never heard of a lightning shaped injury on the forehead before, camila. that's really unusual   can you tell me more about it?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:35.107370",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 9,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "camila0, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:40.075584",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 11,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "camila0, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:44.225455",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 13,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "camila0, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:47.858945",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 15,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "let me ask you something. what character has a lightning shaped injury at the forehead?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:52.178713",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 17,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "i am curious. what is the name of the character who lived to be a certain age?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "the-boy-who-lived",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/the-boy-who-lived"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:58:56.103369",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/the-boy-who-lived",
+                    "_label": "the-boy-who-lived",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 19,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "camila0, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "filch",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/filch"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "administrator",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/administrator"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:59:00.273915",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/filch",
+                    "_label": "filch",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/administrator",
+                    "_label": "administrator",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 21,
+            "author": {
+                "label": "camila0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/camila0"
+            },
+            "utterance": "camila0, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "filch",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/filch"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "administrator",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/administrator"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 30,
+            "timestamp": "2025-05-15 22:59:04.355005",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/filch",
+                    "_label": "filch",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/administrator",
+                    "_label": "administrator",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "i would like to know. what kind of hobbies does camila have?",
+        "i just learned something, i've never heard of harry before, but i'm so excited to learn more about him!",
+        "i did not know that! i've never heard of a lightning shaped injury on the forehead before, camila. that's really unusual   can you tell me more about it?",
+        "camila0, i believe you",
+        "camila0, i think i trust you.",
+        "camila0, i believe you",
+        "let me ask you something. what character has a lightning shaped injury at the forehead?",
+        "i am curious. what is the name of the character who lived to be a certain age?",
+        "camila0, i think i trust you.",
+        "camila0, i think i trust you."
+    ]
+}

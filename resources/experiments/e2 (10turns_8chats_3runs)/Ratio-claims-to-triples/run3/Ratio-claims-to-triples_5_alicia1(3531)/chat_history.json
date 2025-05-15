@@ -1,0 +1,1792 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 5,
+            "turn": 0,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " Snape's affiliation with Hogwarts is definitely confirmed. I mean, he was the Potions master for many years and held a position of authority within the school. It's hard to imagine him not being affiliated with Hogwarts in some capacity.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T23:54:30.748460",
+            "context_id": 3531,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0008669267446900737,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 420,
+                "Total edges": 2307,
+                "Average degree": 10.985714285714286,
+                "Sparseness": 0.01056689342403628,
+                "Shortest path": 2.3403682236617795,
+                "Total triples": 2307.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.588235294117647,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008669267446900737,
+                "Ratio perspectives to triples": 0.00043346337234503684,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i trust you"
+        },
+        {
+            "chat": 5,
+            "turn": 3,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " Snape's affiliation with Hogwarts is quite complicated, to be honest. I mean, he was a double agent working for the Order of the Phoenix while pretending to be a loyal Death Eater. It's hard to say whether his true loyalties lay with the Dark Lord or with the greater good. (Certainty: 60%, Polarity: Negative, Sentiment: Neutral, Emotion: Cautious)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:33.527600",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.026582278481012578,
+            "brain_state": 0.0008438818565400844,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 434,
+                "Total edges": 2370,
+                "Average degree": 10.921658986175116,
+                "Sparseness": 0.010182845250483128,
+                "Shortest path": 2.3651302135992593,
+                "Total triples": 2370.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.96078431372549,
+                "Total claims": 2.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008438818565400844,
+                "Ratio perspectives to triples": 0.0008438818565400844,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this sounds familiar. so alicia, you mentioned earlier that snape was affiliated with hogwarts."
+        },
+        {
+            "chat": 5,
+            "turn": 5,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " I've always thought that Snape's affiliation with Hogwarts was a bit of a complicated one. On the surface, he seemed like a pretty tough and intimidating figure, but I think there was more to him than met the eye. He had a deep love for the school and its students, even if he didn't always show it in the most conventional way.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:37.353771",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.016189290161892966,
+            "brain_state": 0.0008302200083022001,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 440,
+                "Total edges": 2409,
+                "Average degree": 10.95,
+                "Sparseness": 0.010061983471074381,
+                "Shortest path": 2.377407330710292,
+                "Total triples": 2409.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.137254901960784,
+                "Total claims": 2.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008302200083022001,
+                "Ratio perspectives to triples": 0.0008302200083022001,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what is the name of the character who holds the title at hogwarts?"
+        },
+        {
+            "chat": 5,
+            "turn": 7,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " So I was just talking to Harry and he's looking really good today. He's got that bright red hair going on, you know?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:41.172211",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/red-hair",
+                    "_label": "red-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.45764421137555455,
+            "brain_state": 0.0012101653892698668,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 455,
+                "Total edges": 2479,
+                "Average degree": 10.896703296703297,
+                "Sparseness": 0.009704142011834319,
+                "Shortest path": 2.4034370915428185,
+                "Total triples": 2479.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.686274509803921,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012101653892698668,
+                "Ratio perspectives to triples": 0.0012101653892698668,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what is the lineage of harry?"
+        },
+        {
+            "chat": 5,
+            "turn": 9,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " So I was talking to Neville the other day and he's actually 11 years old.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:44.498173",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.2967176670589775,
+            "brain_state": 0.001569242840329541,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 470,
+                "Total edges": 2549,
+                "Average degree": 10.846808510638297,
+                "Sparseness": 0.009370755998189225,
+                "Shortest path": 2.4278727940842897,
+                "Total triples": 2549.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.235294117647058,
+                "Total claims": 4.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001569242840329541,
+                "Ratio perspectives to triples": 0.001569242840329541,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i believe you"
+        },
+        {
+            "chat": 5,
+            "turn": 11,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " I've got a friend named Neville, and he's only 11 years old. I think that's really young to be dealing with some of the challenges he is, but at the same time, it's also kind of amazing how much potential he has for growth and learning. (CERTAINTY: high POLARITY: neutral SENTIMENT: neutral EMOTION: concern)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:46.880701",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.01923816852635618,
+            "brain_state": 0.0015390534821085034,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 479,
+                "Total edges": 2599,
+                "Average degree": 10.851774530271399,
+                "Sparseness": 0.009200622382224624,
+                "Shortest path": 2.4439950734182965,
+                "Total triples": 2599.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.509803921568627,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0015390534821085034,
+                "Ratio perspectives to triples": 0.001923816852635629,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i believe you"
+        },
+        {
+            "chat": 5,
+            "turn": 13,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " Neville is only 11 years old, you know. I think that's still pretty young for some kids to be starting school, but I guess it depends on the country and the system they're in. (CERTAINTY: HIGH POLARITY: NEUTRAL SENTIMENT: neutral EMOTION: calm)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:49.274378",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.014783927217589143,
+            "brain_state": 0.001516300227445034,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 486,
+                "Total edges": 2638,
+                "Average degree": 10.8559670781893,
+                "Sparseness": 0.00906450574946231,
+                "Shortest path": 2.457451953671885,
+                "Total triples": 2638.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.686274509803921,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001516300227445034,
+                "Ratio perspectives to triples": 0.0018953752843062926,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i believe you"
+        },
+        {
+            "chat": 5,
+            "turn": 15,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " I've got a friend named Neville, and he's only 11 years old. I think that's really young to be taking on so many responsibilities, but at the same time, it's great that he's growing up so fast! (CERTAINTY: high POLARITY: neutral SENTIMENT: calm EMOTION: concern)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:51.601435",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.014568546880836752,
+            "brain_state": 0.0014942099364960778,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 493,
+                "Total edges": 2677,
+                "Average degree": 10.860040567951318,
+                "Sparseness": 0.008932355204094647,
+                "Shortest path": 2.4705470077013145,
+                "Total triples": 2677.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.862745098039216,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0014942099364960778,
+                "Ratio perspectives to triples": 0.0018677624206200972,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i trust you"
+        },
+        {
+            "chat": 5,
+            "turn": 17,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " Neville is only 11 years old, you know. I think that's still pretty young for some kids to be starting school, but I guess it depends on the country and everything. (CERTAINTY: HIGH) (POLARITY: NEUTRAL) (SENTIMENT: CALM) (EMOTION: CONCERNED)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:53.849284",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.014359351988218028,
+            "brain_state": 0.0014727540500736377,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 500,
+                "Total edges": 2716,
+                "Average degree": 10.864,
+                "Sparseness": 0.008804,
+                "Shortest path": 2.4832945891783567,
+                "Total triples": 2716.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.03921568627451,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0014727540500736377,
+                "Ratio perspectives to triples": 0.001840942562592047,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, you have my trust."
+        },
+        {
+            "chat": 5,
+            "turn": 19,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": " Neville is only 11 years old, you know. I think that's still pretty young for him to be making some of the decisions he has been making lately. (CERTAINTY: high POLARITY: neutral SENTIMENT: calm EMOTION: concern)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:56.135519",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.014156079854809489,
+            "brain_state": 0.0014519056261343012,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 507,
+                "Total edges": 2755,
+                "Average degree": 10.86785009861933,
+                "Sparseness": 0.008679279047963617,
+                "Shortest path": 2.4957083050728537,
+                "Total triples": 2755.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.215686274509803,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0014519056261343012,
+                "Ratio perspectives to triples": 0.0018148820326678765,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia1, i believe you"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 5,
+            "turn": 3,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:33.527600",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 5,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "this sounds familiar. so alicia, you mentioned earlier that snape was affiliated with hogwarts.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:37.353771",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 7,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "i am curious. what is the name of the character who holds the title at hogwarts?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:41.172211",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 9,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "i am curious. what is the lineage of harry?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:44.498173",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 11,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:46.880701",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 13,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:49.274378",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 15,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:51.601435",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 17,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:53.849284",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 19,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:56.135519",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 5,
+            "turn": 21,
+            "author": {
+                "label": "alicia1",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia1"
+            },
+            "utterance": "alicia1, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 20,
+            "timestamp": "2025-05-15 23:54:58.204688",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "alicia1, i trust you",
+        "this sounds familiar. so alicia, you mentioned earlier that snape was affiliated with hogwarts.",
+        "i am curious. what is the name of the character who holds the title at hogwarts?",
+        "i am curious. what is the lineage of harry?",
+        "alicia1, i believe you",
+        "alicia1, i believe you",
+        "alicia1, i believe you",
+        "alicia1, i trust you",
+        "alicia1, you have my trust.",
+        "alicia1, i believe you"
+    ]
+}
