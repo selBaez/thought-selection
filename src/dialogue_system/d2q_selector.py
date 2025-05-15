@@ -388,7 +388,7 @@ class D2Q(ThoughtSelector):
         # Greedy selection
         selected_action, action_score = max(action_scores, key=lambda x: x[1])
         most_important_type = max(selected_action['entity_types'], key=selected_action['entity_types'].get)
-        subaction_tensor = torch.tensor(ACTION_TYPES_REVERSED[most_important_type]).view(1, 1)
+        subaction_tensor = torch.tensor(ACTION_TYPES_REVERSED.get(most_important_type, 24)).view(1, 1)
         self._log.debug(f"Selected action: {selected_action['thought_type']} - "
                         f"{'/'.join(selected_action['entity_types'].keys())} "
                         f"with score {action_score}")
