@@ -1,0 +1,1814 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 4,
+            "turn": 0,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " So Harry's lineage is actually quite interesting. I mean, he's a pure-blood wizard, which means his family has been involved in the wizarding world for generations. It's not something you hear about often, especially when it comes to someone like Harry who's had such a... complicated history with the Dark Lord.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T23:47:20.038944",
+            "context_id": 3421,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 16.431372549019606,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 1,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 597,
+                "Total edges": 3666,
+                "Average degree": 12.28140703517588,
+                "Sparseness": 0.008389238206667059,
+                "Shortest path": 2.4754982968533943,
+                "Total triples": 3666.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.431372549019606,
+                "Total claims": 8.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.002182214948172395,
+                "Ratio perspectives to triples": 0.002182214948172395,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am surprised. alicia, i think there's been a mix up here   you previously told me that harry's lineage was mixed, but now you're saying it's pure blood."
+        },
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " So, Harry's lineage is indeed mixed wizard. I mean, he's got both Muggle and magical blood in him, which can make things pretty complicated at times. (Certainty: 80%, Polarity: Neutral, Sentiment: Matter-of-fact, Emotion: Curious)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:26.051436",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org-attribute",
+                        "org-ancestry",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.04057279236276856,
+            "brain_state": 17.098039215686274,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 3,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 2,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 611,
+                "Total edges": 3748,
+                "Average degree": 12.268412438625205,
+                "Sparseness": 0.008204735335006604,
+                "Shortest path": 2.4837541251911675,
+                "Total triples": 3748.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.098039215686274,
+                "Total claims": 8.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0021344717182497333,
+                "Ratio perspectives to triples": 0.00240128068303095,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.125,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia0, i believe you"
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " So, Harry's lineage is indeed mixed wizarding heritage. I mean, his mom was Muggle-born and his dad was a wizard, so that's pretty common in the wizarding world. But still, it's interesting to see how that affects him as a character.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:31.218059",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org-attribute",
+                        "org-ancestry",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.012614678899082632,
+            "brain_state": 17.313725490196077,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 3,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 2,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 3,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 617,
+                "Total edges": 3789,
+                "Average degree": 12.282009724473257,
+                "Sparseness": 0.0081299958758987,
+                "Shortest path": 2.491564756151466,
+                "Total triples": 3789.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.313725490196077,
+                "Total claims": 8.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.002111375032990235,
+                "Ratio perspectives to triples": 0.0023752969121140144,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.125,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "nice! so, it seems that harry's lineage is not entirely pure blood wizarding heritage."
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " I'm not really sure about Harry's lineage, to be honest. I mean, he's got some pretty unusual connections to the wizarding world, but I've never been entirely convinced that his parents were actually killed by Voldemort. There are just so many questions about his past and how it all went down...",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute",
+                    "ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:36.832288",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "ancestry",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0328425821064553,
+            "brain_state": 17.88235294117647,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 5,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 3,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 626,
+                "Total edges": 3857,
+                "Average degree": 12.322683706070288,
+                "Sparseness": 0.008048464310138921,
+                "Shortest path": 2.499900319488818,
+                "Total triples": 3857.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.88235294117647,
+                "Total claims": 8.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.002074150894477573,
+                "Ratio perspectives to triples": 0.0025926886180969665,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "are you sure? alicia, i think there's been a change in the story about harry's heritage   you previously told me he was a pure blood wizard, but now it seems like that might not be entirely accurate."
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " So, Harry's lineage is indeed mixed wizarding heritage. I mean, his parents were Muggle-born wizards, James Potter and Lily Evans, but he himself showed signs of being a true-blooded wizard from a very young age. It's pretty fascinating to think about how that mix of bloodlines influenced his abilities and experiences as The Boy Who Lived.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:42.706690",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org-attribute",
+                        "org-ancestry",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.012061403508771829,
+            "brain_state": 18.098039215686274,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 4,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 2,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 3,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 632,
+                "Total edges": 3898,
+                "Average degree": 12.335443037974683,
+                "Sparseness": 0.00797648614004166,
+                "Shortest path": 2.5073923248209593,
+                "Total triples": 3898.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.098039215686274,
+                "Total claims": 8.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.002052334530528476,
+                "Ratio perspectives to triples": 0.002565418163160595,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i don't know what to make of this. alicia, i think there's been a mix up here   you previously told me that harry was a pure blood wizard, but now you're saying he has mixed heritage."
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " I'm not really sure about Harry's lineage, to be honest. I mean, he's got some connections to the Dark Lord and all that, but I've heard it's complicated. Some people say his parents were killed by Voldemort, while others claim he's got a bit of magic in him from his Muggle mother. I'm not sure what to believe, but I do know that Harry's always been a bit of an outsider at Hogwarts.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:49.064350",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org-attribute",
+                        "org-ancestry",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.011917659804983716,
+            "brain_state": 18.313725490196077,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 5,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 3,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 638,
+                "Total edges": 3941,
+                "Average degree": 12.35423197492163,
+                "Sparseness": 0.007910692701526126,
+                "Shortest path": 2.5147315738448746,
+                "Total triples": 3941.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.313725490196077,
+                "Total claims": 8.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0020299416391778738,
+                "Ratio perspectives to triples": 0.002537427048972342,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia0, i believe you"
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " You know, I've always been fascinated by the history of the wizarding world and the different families that have played such a significant role in it. Harry's lineage being pure-blood is quite interesting, isn't it? I mean, his parents were James and Lily Potter, who were both members of the Order of the Phoenix and fought against the Dark Lord Voldemort. It's amazing to think about how much bloodline and heritage Harry has, despite being an orphan himself.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:54.870489",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org-attribute",
+                        "org-ancestry",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.01177730192719495,
+            "brain_state": 18.529411764705884,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 5,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 3,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 644,
+                "Total edges": 3982,
+                "Average degree": 12.366459627329192,
+                "Sparseness": 0.007841132672350603,
+                "Shortest path": 2.52196130328526,
+                "Total triples": 3982.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.529411764705884,
+                "Total claims": 8.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0020090406830738324,
+                "Ratio perspectives to triples": 0.0025113008538422904,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what kind of wizard is alicia?"
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " Petunia's lineage is quite interesting. I've done some research on it and found that its maculogy can vary greatly depending on the specific variety. But from what I've confirmed, petunias are known to have a unique characteristic in their leaf markings, which can range from small spots to larger patches of color.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:48:01.202210",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.04444444444444429,
+            "brain_state": 19.352941176470587,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 658,
+                "Total edges": 4066,
+                "Average degree": 12.358662613981762,
+                "Sparseness": 0.007684241645956708,
+                "Shortest path": 2.5346907051949312,
+                "Total triples": 4066.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.352941176470587,
+                "Total claims": 9.0,
+                "Total perspectives": 11.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0022134776192818495,
+                "Ratio perspectives to triples": 0.0027053615346778162,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2222222222222223,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this is news to me. i've never heard of maculogy before, alicia0, can you tell me more about it?"
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " So I was reading about Dudley and apparently his lineage is quite interesting. From what I've found, he had some issues with his eyes, specifically with maculogy, which is a condition that affects the macula of the eye. I'm pretty sure this information is accurate, so I'd say it's confirmed.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:48:07.458866",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.029381965552178313,
+            "brain_state": 19.92156862745098,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 668,
+                "Total edges": 4133,
+                "Average degree": 12.374251497005988,
+                "Sparseness": 0.007585876151887841,
+                "Shortest path": 2.5441829983211988,
+                "Total triples": 4133.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.92156862745098,
+                "Total claims": 10.0,
+                "Total perspectives": 12.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.0024195499637067507,
+                "Ratio perspectives to triples": 0.0029034599564481006,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "nice! so, it seems like we already know something about the lineage and maculogy of petunia, and now dudley is being compared to that."
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": " Petunia, I'm actually quite certain that its lineage is pretty well-documented. From what I've read, it's a type of flower with a rich history, and its maculogy - the arrangement of spots on its petals - can vary greatly depending on the specific variety. Overall, I'd say it's a pretty fascinating plant, and I'm feeling quite positive about it, to be honest.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/petunia"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:48:14.695920",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.027559055118110187,
+            "brain_state": 20.470588235294116,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 2,
+                "trust": 0.5,
+                "Total nodes": 677,
+                "Total edges": 4200,
+                "Average degree": 12.407680945347119,
+                "Sparseness": 0.007512071023216947,
+                "Shortest path": 2.551270397594679,
+                "Total triples": 4200.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 20.470588235294116,
+                "Total claims": 10.0,
+                "Total perspectives": 13.0,
+                "Total conflicts": 0,
+                "Total sources": 2.0,
+                "Ratio claims to triples": 0.002380952380952381,
+                "Ratio perspectives to triples": 0.0030952380952380953,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "alicia0, i trust you"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "i am surprised. alicia, i think there's been a mix up here   you previously told me that harry's lineage was mixed, but now you're saying it's pure blood.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:26.051436",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org/attribute",
+                        "org/ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "alicia0, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:31.218059",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org/attribute",
+                        "org/ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "nice! so, it seems that harry's lineage is not entirely pure blood wizarding heritage.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute",
+                    "ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:36.832288",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "are you sure? alicia, i think there's been a change in the story about harry's heritage   you previously told me he was a pure blood wizard, but now it seems like that might not be entirely accurate.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:42.706690",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org/attribute",
+                        "org/ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "i don't know what to make of this. alicia, i think there's been a mix up here   you previously told me that harry was a pure blood wizard, but now you're saying he has mixed heritage.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:49.064350",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org/attribute",
+                        "org/ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "alicia0, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:47:54.870489",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org/attribute",
+                        "org/ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "let me ask you something. what kind of wizard is alicia?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "org/attribute",
+                    "org/ancestry"
+                ],
+                "uri": "http://cltl.nl/leolani/world/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:48:01.202210",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "org/attribute",
+                        "org/ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "this is news to me. i've never heard of maculogy before, alicia0, can you tell me more about it?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:48:07.458866",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "nice! so, it seems like we already know something about the lineage and maculogy of petunia, and now dudley is being compared to that.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/petunia"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:48:14.695920",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 21,
+            "author": {
+                "label": "alicia0",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/alicia0"
+            },
+            "utterance": "alicia0, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/petunia"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 196,
+            "timestamp": "2025-05-15 23:48:20.579765",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "i am surprised. alicia, i think there's been a mix up here   you previously told me that harry's lineage was mixed, but now you're saying it's pure blood.",
+        "alicia0, i believe you",
+        "nice! so, it seems that harry's lineage is not entirely pure blood wizarding heritage.",
+        "are you sure? alicia, i think there's been a change in the story about harry's heritage   you previously told me he was a pure blood wizard, but now it seems like that might not be entirely accurate.",
+        "i don't know what to make of this. alicia, i think there's been a mix up here   you previously told me that harry was a pure blood wizard, but now you're saying he has mixed heritage.",
+        "alicia0, i believe you",
+        "let me ask you something. what kind of wizard is alicia?",
+        "this is news to me. i've never heard of maculogy before, alicia0, can you tell me more about it?",
+        "nice! so, it seems like we already know something about the lineage and maculogy of petunia, and now dudley is being compared to that.",
+        "alicia0, i trust you"
+    ]
+}
