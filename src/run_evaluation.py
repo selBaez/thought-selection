@@ -1,12 +1,10 @@
 import argparse
 import subprocess
-import sys
 from pathlib import Path
 
-from dialogue_system.utils.global_variables import RAW_VANILLA_USER_PATH, RESOURCES_PATH
 from dialogue_system.rl_utils.rl_parameters import METRICS
-
-print(f"\n\n{sys.path}\n\n")
+from dialogue_system.utils.global_variables import RAW_VANILLA_USER_PATH, RESOURCES_PATH
+from dialogue_system.utils.helpers import replace_user_name
 
 
 def get_trained_models(experiment_id, run_id, reward):
@@ -20,6 +18,8 @@ def get_trained_models(experiment_id, run_id, reward):
 
 
 def main(args):
+    user_model = replace_user_name(args.user_model)
+
     for run_id in range(1, args.num_runs + 1):
         r = run_id * 1000
 
@@ -37,24 +37,24 @@ def main(args):
 
                 subprocess.run([
                     "python", "-u", "simulated_interaction.py",
-                    "--experiment_id", f"{args.experiment_id}",
-                    "--turn_limit", f"{args.num_turns}", "--chat_id", f"{chat_id}", "--run_id", f"run{run_id}",
-                    "--reward", reward,
-                    "--init_brain", "None",
-                    "--test_model", trained_model,
-                    "--user_model", f"{args.user_model}", "--speaker", "vanilla",
-                    "--context_id", f"{context_id}", "--place_id", "44", "--place_label", "bookstore"
+                    "--experiment_id", f"{args.experiment_id}", "--run_id", f"run{run_id}",
+                    "--chat_id", f"{chat_id}", "--turn_limit", f"{args.num_turns}",
+                    "--context_id", f"{context_id}", "--place_id", "44", "--place_label", "bookstore",
+                    "--user_model", f"{args.user_model}", "--speaker", f"{user_model}",
+                    "--init_brain", "None", "--reward", reward, "--dm_model", f"{args.dm_model}",
+                    "--test_model", trained_model
                 ])
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--experiment_id", default="t1 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
-    parser.add_argument("--testing_id", default="e1 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--experiment_id", default="t5 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
+    parser.add_argument("--testing_id", default="e5 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
     parser.add_argument("--num_turns", default=10, type=int, help="Number of turns for this experiment")
     parser.add_argument("--num_runs", default=3, type=int, help="Number of runs for this experiment")
-    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str,
-                        help="Filepath of the user model (e.g. 'vanilla.trig')")
+    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
+    parser.add_argument("--dm_model", default="random", type=str, help="Type of selector to use",
+                        choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
     args = parser.parse_args()
     main(args)

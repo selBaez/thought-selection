@@ -4,9 +4,8 @@ from pathlib import Path
 from random import shuffle, choice
 
 from dialogue_system.rl_utils.rl_parameters import SHUFFLE_FREQUENCY, RESET_FREQUENCY, METRICS
-from dialogue_system.utils.global_variables import RAW_VANILLA_USER_PATH, RAW_USER_PATH
-from dialogue_system.utils.helpers import create_session_folder, search_session_folder
-from user_model.utils.constants import user_model_names
+from dialogue_system.utils.global_variables import RAW_USER_PATH
+from dialogue_system.utils.helpers import create_session_folder, search_session_folder, replace_user_name
 
 
 # print(f"\n\n{sys.path}\n\n")
@@ -42,14 +41,6 @@ def get_user_models(users_path):
     users_pool = sorted(f for f in users_path.iterdir() if f.name != "vanilla.trig")
 
     return users_pool
-
-
-def replace_user_name(user_model):
-    x = user_model.split("/")[-1].split(".")[0]
-    for user_type, user_name in user_model_names.items():
-        x = x.replace(user_type, user_name)
-
-    return x
 
 
 def main(args):

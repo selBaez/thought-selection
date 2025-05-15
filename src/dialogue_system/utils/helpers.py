@@ -4,6 +4,7 @@ from pathlib import Path
 from rdflib import ConjunctiveGraph
 
 from dialogue_system.utils.global_variables import RESOURCES_PATH, RAW_USER_PATH, HARRYPOTTER_PREFIX, HARRYPOTTER_NS
+from user_model.utils.constants import user_model_names
 
 
 def cast_actions_to_json(actions):
@@ -105,3 +106,11 @@ def get_all_attributes(graph_data):
     print(f"\tATTRIBUTES IN DATASET: {len(all_attributes)}")
 
     return all_attributes
+
+
+def replace_user_name(user_model):
+    x = user_model.split("/")[-1].split(".")[0]
+    for user_type, user_name in user_model_names.items():
+        x = x.replace(user_type, user_name)
+
+    return x
