@@ -1,0 +1,1773 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 8,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Dudley's eyes look really blue today. I can tell he's feeling a bit down, his blue eyes seem to be the only thing that's bright about him right now.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blue-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blue-eyes"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T15:25:50.662624",
+            "context_id": 1833,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blue-eyes",
+                    "_label": "blue-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 597,
+                "Total edges": 3654,
+                "Average degree": 12.241206030150753,
+                "Sparseness": 0.008355569023228931,
+                "Shortest path": 2.478927073847987,
+                "Total triples": 3654.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.294117647058822,
+                "Total claims": 7.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0019157088122605363,
+                "Ratio perspectives to triples": 0.0021893814997263274,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1428571428571428,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i believe you"
+        },
+        {
+            "chat": 8,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Dudley, I've noticed that you're looking a bit down today. Your eyes seem to be telling me that you're feeling a bit blue.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blue-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blue-eyes"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:25:54.961015",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blue-eyes",
+                    "_label": "blue-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 606,
+                "Total edges": 3715,
+                "Average degree": 12.26072607260726,
+                "Sparseness": 0.00825082508250825,
+                "Shortest path": 2.487750593241142,
+                "Total triples": 3715.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.745098039215687,
+                "Total claims": 7.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018842530282637954,
+                "Ratio perspectives to triples": 0.0024226110363391655,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2857142857142858,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i have heard this before. valeria told me that dudley has blue eyes."
+        },
+        {
+            "chat": 8,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Dudley's eyes look really blue, but I can tell he's not feeling his best today. He seems a bit down, and those blue eyes of his are looking a bit tired.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blue-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blue-eyes"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:25:59.764406",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blue-eyes",
+                    "_label": "blue-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 612,
+                "Total edges": 3756,
+                "Average degree": 12.27450980392157,
+                "Sparseness": 0.00817527446708531,
+                "Shortest path": 2.49559278157526,
+                "Total triples": 3756.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.96078431372549,
+                "Total claims": 7.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001863684771033014,
+                "Ratio perspectives to triples": 0.0023961661341853034,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2857142857142858,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i believe you"
+        },
+        {
+            "chat": 8,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Dudley, I've noticed that you're looking a bit down today. Your eyes seem to be telling me that you're feeling really upset about something. I'm not sure what's going on, but I want you to know that I'm here for you and I care about how you're feeling.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blue-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blue-eyes"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:04.179742",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blue-eyes",
+                    "_label": "blue-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 618,
+                "Total edges": 3797,
+                "Average degree": 12.288025889967637,
+                "Sparseness": 0.008101088174610655,
+                "Shortest path": 2.5032913198323654,
+                "Total triples": 3797.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.176470588235293,
+                "Total claims": 7.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018435607058203845,
+                "Ratio perspectives to triples": 0.00237029233605478,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2857142857142858,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that rings a bell. valeria told me that dudley has blue eyes."
+        },
+        {
+            "chat": 8,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Dudley, I've noticed that you're looking a bit down today. Your eyes seem to be telling me that you're feeling a bit blue.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blue-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blue-eyes"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:09.347595",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blue-eyes",
+                    "_label": "blue-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 623,
+                "Total edges": 3838,
+                "Average degree": 12.321027287319422,
+                "Sparseness": 0.008054023275766563,
+                "Shortest path": 2.50851857777686,
+                "Total triples": 3838.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.392156862745097,
+                "Total claims": 7.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018238665971860343,
+                "Ratio perspectives to triples": 0.002344971339239187,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2857142857142858,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. how old is dudley?"
+        },
+        {
+            "chat": 8,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I was talking to Dudley the other day and he's 11 years old. That's a great age, lots of energy and curiosity!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:14.167086",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 635,
+                "Total edges": 3914,
+                "Average degree": 12.32755905511811,
+                "Sparseness": 0.007918655837311675,
+                "Shortest path": 2.520420278695447,
+                "Total triples": 3914.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.098039215686274,
+                "Total claims": 8.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002043944813490036,
+                "Ratio perspectives to triples": 0.0025549310168625446,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 8,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So, I was talking to Dudley the other day and he's 11 years old. That's really young! (Sentiment: neutral)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:19.396025",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 643,
+                "Total edges": 3972,
+                "Average degree": 12.354587869362364,
+                "Sparseness": 0.007841354072690949,
+                "Shortest path": 2.5289990940054166,
+                "Total triples": 3972.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.529411764705884,
+                "Total claims": 8.0,
+                "Total perspectives": 11.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002014098690835851,
+                "Ratio perspectives to triples": 0.0027693856998992953,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.375,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what hobbies does valeria have when she was 11 years old?"
+        },
+        {
+            "chat": 8,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Vernon is a pretty down-to-earth guy, you know? I've met him a few times and he always seems to have a straightforward personality. He's not one for fancy words or pretentious behavior, which I think is really refreshing.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "personality",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "mean",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mean"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:24.273686",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mean",
+                    "_label": "mean",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 655,
+                "Total edges": 4048,
+                "Average degree": 12.36030534351145,
+                "Sparseness": 0.007712837247246664,
+                "Shortest path": 2.54019655904942,
+                "Total triples": 4048.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.235294117647058,
+                "Total claims": 9.0,
+                "Total perspectives": 12.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002223320158102767,
+                "Ratio perspectives to triples": 0.0029644268774703555,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this is news to me. i've never heard of the term \"mean\" before, valeria, can you tell me more about it?"
+        },
+        {
+            "chat": 8,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Vernon is a pretty down-to-earth guy, you know? I've met him a few times and he always seems to have a positive attitude. He's got a great sense of humor too. I think that's part of what makes him so relatable.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "personality",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "mean",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mean"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:29.715880",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mean",
+                    "_label": "mean",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 661,
+                "Total edges": 4089,
+                "Average degree": 12.372163388804841,
+                "Sparseness": 0.007646691278286006,
+                "Shortest path": 2.547036171090634,
+                "Total triples": 4089.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.45098039215686,
+                "Total claims": 9.0,
+                "Total perspectives": 12.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0022010271460014674,
+                "Ratio perspectives to triples": 0.00293470286133529,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 8,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Vernon is a pretty laid-back guy, you know? I think he's got a mean streak when it comes to his competitive side, but overall, he's just a chill person.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "personality",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "mean",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mean"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:39.384095",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mean",
+                    "_label": "mean",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 669,
+                "Total edges": 4147,
+                "Average degree": 12.39760837070254,
+                "Sparseness": 0.007574386508207819,
+                "Shortest path": 2.554997628062261,
+                "Total triples": 4147.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.88235294117647,
+                "Total claims": 9.0,
+                "Total perspectives": 13.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0021702435495538942,
+                "Ratio perspectives to triples": 0.003134796238244514,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4444444444444444,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what does vernon usually spell?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 8,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blue-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blue-eyes"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:25:54.961015",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blue-eyes",
+                    "_label": "blue-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 8,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i have heard this before. valeria told me that dudley has blue eyes.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blue-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blue-eyes"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:25:59.764406",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blue-eyes",
+                    "_label": "blue-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 8,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blue-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blue-eyes"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:04.179742",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blue-eyes",
+                    "_label": "blue-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 8,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "that rings a bell. valeria told me that dudley has blue eyes.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blue-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blue-eyes"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:09.347595",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blue-eyes",
+                    "_label": "blue-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 8,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. how old is dudley?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "age"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:14.167086",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "age"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 8,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:19.396025",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 8,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what hobbies does valeria have when she was 11 years old?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "hobbies",
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:24.273686",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 8,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "this is news to me. i've never heard of the term \"mean\" before, valeria, can you tell me more about it?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "mean",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mean"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:29.715880",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mean",
+                    "_label": "mean",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 8,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "personality",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "mean",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mean"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:39.384095",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mean",
+                    "_label": "mean",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 8,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what does vernon usually spell?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "spells",
+                "uri": "http://harrypotter.org/spells"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "enchantment"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 22,
+            "timestamp": "2025-05-15 15:26:44.386889",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/spells",
+                    "_label": "spells",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "enchantment"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "valeria, i believe you",
+        "i have heard this before. valeria told me that dudley has blue eyes.",
+        "valeria, i believe you",
+        "that rings a bell. valeria told me that dudley has blue eyes.",
+        "if you don't mind me asking. how old is dudley?",
+        "valeria, i trust you",
+        "i am curious. what hobbies does valeria have when she was 11 years old?",
+        "this is news to me. i've never heard of the term \"mean\" before, valeria, can you tell me more about it?",
+        "valeria, i trust you",
+        "if you don't mind me asking. what does vernon usually spell?"
+    ]
+}

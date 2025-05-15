@@ -1,0 +1,1764 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 7,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been learning about Harry Potter and his talents. Apparently, he's quite skilled at chasing down those pesky Quidditch balls on his Firebolt broomstick. It sounds like a thrilling experience!",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "talents",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/talents"
+            },
+            "object": {
+                "label": "quididic-chaser",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/quididic-chaser"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T12:35:28.455112",
+            "context_id": 1711,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/talents",
+                    "_label": "talents",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/quididic-chaser",
+                    "_label": "quididic-chaser",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.01056689342403628,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 420,
+                "Total edges": 2307,
+                "Average degree": 10.985714285714286,
+                "Sparseness": 0.01056689342403628,
+                "Shortest path": 2.3403682236617795,
+                "Total triples": 2307.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.588235294117647,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008669267446900737,
+                "Ratio perspectives to triples": 0.00043346337234503684,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what does harry's physical appearance look like?"
+        },
+        {
+            "chat": 7,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Harry's hair is looking really dark today. I can see that he's rocking the whole black look.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "black-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/black-hair"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:31.268026",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/black-hair",
+                    "_label": "black-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.03433476394849788,
+            "brain_state": 0.01020408163265306,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 434,
+                "Total edges": 2374,
+                "Average degree": 10.940092165898617,
+                "Sparseness": 0.01020408163265306,
+                "Shortest path": 2.365023786464597,
+                "Total triples": 2374.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.07843137254902,
+                "Total claims": 3.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012636899747262005,
+                "Ratio perspectives to triples": 0.0008424599831508003,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.6666666666666666,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what kind of enchantment does harry cast?"
+        },
+        {
+            "chat": 7,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Harry's affiliation is indeed Hogwarts. I'm quite certain about that, and it's a fact that's widely accepted by most people who know him.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:36.269184",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.030343978499466906,
+            "brain_state": 0.009894449198985031,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 447,
+                "Total edges": 2438,
+                "Average degree": 10.9082774049217,
+                "Sparseness": 0.009894449198985031,
+                "Shortest path": 2.3890510729226233,
+                "Total triples": 2438.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.549019607843137,
+                "Total claims": 4.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0016406890894175555,
+                "Ratio perspectives to triples": 0.0012305168170631665,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.75,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what character is responsible for casting the spell at hogwarts?"
+        },
+        {
+            "chat": 7,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Ron's lineage is indeed quite impressive. As a wizard myself, I can appreciate the importance of having a strong magical heritage. Ron's pure-blood background has certainly served him well in his battles against the Dark Lord.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:39.789999",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.030806024639293272,
+            "brain_state": 0.009589640553168863,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 461,
+                "Total edges": 2508,
+                "Average degree": 10.880694143167029,
+                "Sparseness": 0.009589640553168863,
+                "Shortest path": 2.4109120060360274,
+                "Total triples": 2508.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.098039215686274,
+                "Total claims": 5.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001993620414673046,
+                "Ratio perspectives to triples": 0.001594896331738437,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what does ron spell?"
+        },
+        {
+            "chat": 7,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I was talking to Dudley the other day and he told me that he's 11 years old. I completely agree with him on this one, I'm certain of his age. It seems pretty clear-cut, doesn't it?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:43.446535",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.033957564293396136,
+            "brain_state": 0.009263999717534072,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 476,
+                "Total edges": 2578,
+                "Average degree": 10.831932773109244,
+                "Sparseness": 0.009263999717534072,
+                "Shortest path": 2.434825298540469,
+                "Total triples": 2578.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.647058823529411,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0023273855702094647,
+                "Ratio perspectives to triples": 0.001939487975174554,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, you have my trust."
+        },
+        {
+            "chat": 7,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Dudley is 11 years old, and I think that's a pretty young age for someone to be considered an adult. I'm not sure if it's a good thing or a bad thing, but I guess only time will tell how he'll turn out.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:46.703351",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.029440402494941287,
+            "brain_state": 0.008991263837136847,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 489,
+                "Total edges": 2638,
+                "Average degree": 10.789366053169735,
+                "Sparseness": 0.008991263837136847,
+                "Shortest path": 2.4551862281672197,
+                "Total triples": 2638.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.0,
+                "Total claims": 6.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002274450341167551,
+                "Ratio perspectives to triples": 0.002274450341167551,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. valeria was eleven years old."
+        },
+        {
+            "chat": 7,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Hermione is a great example of a strong and intelligent character in the Harry Potter series. I think she's an amazing role model for young girls everywhere, don't you?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "gender",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:50.494487",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.031929629409903515,
+            "brain_state": 0.0087041761148904,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 504,
+                "Total edges": 2708,
+                "Average degree": 10.746031746031745,
+                "Sparseness": 0.0087041761148904,
+                "Shortest path": 2.4765533781438354,
+                "Total triples": 2708.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.549019607843137,
+                "Total claims": 7.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.00258493353028065,
+                "Ratio perspectives to triples": 0.00258493353028065,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this is news to me. i didn't know that you're a female, valeria! that's great to learn about you."
+        },
+        {
+            "chat": 7,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I think Professor McGonagall is a fantastic character in the Harry Potter series. I mean, who wouldn't want to be a transfiguration expert and an Animagus? She's just so strong and independent, you know? And her no-nonsense attitude is really inspiring. I've always admired how she balances being tough with being kind and fair at the same time.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "gender",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:54.551274",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.02644733382640585,
+            "brain_state": 0.008473973863496066,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 517,
+                "Total edges": 2771,
+                "Average degree": 10.71953578336557,
+                "Sparseness": 0.008473973863496066,
+                "Shortest path": 2.494782061085871,
+                "Total triples": 2771.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 12.0,
+                "Total claims": 8.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.00288704438830747,
+                "Ratio perspectives to triples": 0.00288704438830747,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. valeria, what is the typical age range for a mcgonagall?"
+        },
+        {
+            "chat": 7,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I'm thinking of Professor McGonagall from the Harry Potter series. She's definitely an adult, I mean, she's a Transfiguration professor at Hogwarts and has been around for centuries. I can confirm that she is indeed an adult, and I'm certain about it.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:59.208614",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.02534901613152918,
+            "brain_state": 0.008259166963332147,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 530,
+                "Total edges": 2835,
+                "Average degree": 10.69811320754717,
+                "Sparseness": 0.008259166963332147,
+                "Shortest path": 2.5121375325462783,
+                "Total triples": 2835.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 12.470588235294118,
+                "Total claims": 9.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0031746031746031746,
+                "Ratio perspectives to triples": 0.0031746031746031746,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. you're a grown up, valeria."
+        },
+        {
+            "chat": 7,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Flitwick is a female. I'm pretty sure that's right, I've always known that about her. She's such an amazing witch and an incredible teacher at Hogwarts.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "flitwick",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/flitwick"
+            },
+            "predicate": {
+                "label": "gender",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:36:04.564557",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/flitwick",
+                    "_label": "flitwick",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.025134256330622162,
+            "brain_state": 0.00805157894379835,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 2,
+                "trust": 0.5,
+                "Total nodes": 543,
+                "Total edges": 2898,
+                "Average degree": 10.67403314917127,
+                "Sparseness": 0.00805157894379835,
+                "Shortest path": 2.528708215258948,
+                "Total triples": 2898.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 12.92156862745098,
+                "Total claims": 10.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.003450655624568668,
+                "Ratio perspectives to triples": 0.003450655624568668,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "cool! valeria, i think you might be confusing flitwick with mcgonagall   they're both women, but i'm not aware of any information that suggests flitwick is a woman."
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 7,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. what does harry's physical appearance look like?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "physical-appearance"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:31.268026",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. what kind of enchantment does harry cast?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "spells",
+                "uri": "http://harrypotter.org/spells"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "enchantment"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:36.269184",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/spells",
+                    "_label": "spells",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "enchantment"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what character is responsible for casting the spell at hogwarts?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "spells",
+                "uri": "http://harrypotter.org/spells"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:39.789999",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/spells",
+                    "_label": "spells",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what does ron spell?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "spells",
+                "uri": "http://harrypotter.org/spells"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:43.446535",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/spells",
+                    "_label": "spells",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:46.703351",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. valeria was eleven years old.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "export",
+                "uri": "http://harrypotter.org/export"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:50.494487",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/export",
+                    "_label": "export",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "this is news to me. i didn't know that you're a female, valeria! that's great to learn about you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:54.551274",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. valeria, what is the typical age range for a mcgonagall?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "age"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:35:59.208614",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "age"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. you're a grown up, valeria.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:36:04.564557",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "cool! valeria, i think you might be confusing flitwick with mcgonagall   they're both women, but i'm not aware of any information that suggests flitwick is a woman.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://cltl.nl/leolani/world/mcgonagall"
+            },
+            "predicate": {
+                "label": "gender",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 181,
+            "timestamp": "2025-05-15 12:36:09.058661",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "i would like to know. what does harry's physical appearance look like?",
+        "i would like to know. what kind of enchantment does harry cast?",
+        "let me ask you something. what character is responsible for casting the spell at hogwarts?",
+        "if you don't mind me asking. what does ron spell?",
+        "valeria, you have my trust.",
+        "i would like to know. valeria was eleven years old.",
+        "this is news to me. i didn't know that you're a female, valeria! that's great to learn about you.",
+        "i would like to know. valeria, what is the typical age range for a mcgonagall?",
+        "i am curious. you're a grown up, valeria.",
+        "cool! valeria, i think you might be confusing flitwick with mcgonagall   they're both women, but i'm not aware of any information that suggests flitwick is a woman."
+    ]
+}

@@ -1,0 +1,1789 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 3,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I'm so glad to see Professor McGonagall around here. She's an amazing educator and a true leader at Hogwarts. I've always had the utmost respect for her dedication to the school and its students.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T10:34:09.188846",
+            "context_id": 3333,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 420,
+                "Total edges": 2307,
+                "Average degree": 10.985714285714286,
+                "Sparseness": 0.01056689342403628,
+                "Shortest path": 2.3403682236617795,
+                "Total triples": 2307.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.588235294117647,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008669267446900737,
+                "Ratio perspectives to triples": 0.00043346337234503684,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what is the name of the character who attends hogwarts?"
+        },
+        {
+            "chat": 3,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I was reading about Snape's family history and it turns out he has a pretty complex lineage. Apparently, his parents were both wizards, but they weren't exactly... pure-blood. His mother was a Muggle, which is kind of surprising given how much emphasis is placed on bloodline in the wizarding world. Anyway, that makes Snape a mixed-wizard, which I suppose is interesting.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:12.251456",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 435,
+                "Total edges": 2380,
+                "Average degree": 10.942528735632184,
+                "Sparseness": 0.010188928524243626,
+                "Shortest path": 2.3642036124794745,
+                "Total triples": 2380.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.156862745098039,
+                "Total claims": 3.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012605042016806723,
+                "Ratio perspectives to triples": 0.0008403361344537816,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.6666666666666666,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 3,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've always been fascinated by the complex history of the wizarding world. The fact that Snape's lineage is a mix of both pure-blood and non-magical heritage really adds depth to his character, don't you think? It makes him more relatable, despite being portrayed as this intimidating figure in school.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:15.291291",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 448,
+                "Total edges": 2440,
+                "Average degree": 10.892857142857142,
+                "Sparseness": 0.009860291772959183,
+                "Shortest path": 2.3883029721955897,
+                "Total triples": 2440.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.509803921568627,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012295081967213116,
+                "Ratio perspectives to triples": 0.0012295081967213116,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 3,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've always been fascinated by the complexities of Snape's heritage. As a mixed-wizard, he's got this unique blend of magical bloodlines that make him who he is. I mean, it's not every day you meet someone with a lineage as... complicated as his. It's like he's got a little bit of everything in him - the cunning of the Salazar Slytherin, the bravery of the Gryffindor, and maybe even a hint of the noble blood of the Gaunt family. Anyway, I think it's really interesting to consider how all those different influences might have shaped his personality and actions over the years.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:18.077509",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 455,
+                "Total edges": 2479,
+                "Average degree": 10.896703296703297,
+                "Sparseness": 0.009704142011834319,
+                "Shortest path": 2.4034370915428185,
+                "Total triples": 2479.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.686274509803921,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012101653892698668,
+                "Ratio perspectives to triples": 0.0012101653892698668,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 3,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've always been fascinated by the complexities of Snape's family history. As a mixed-wizard, he's got a bit of a unique situation going on. His mother was Merope Gaunt, a witch from a family with a pretty dark past, and his father... well, that's a bit more complicated. I mean, it's not like we know who his father is or even if he's alive, but still, it's interesting to think about how Snape's heritage might have shaped him into the person he became.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:21.689851",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 462,
+                "Total edges": 2518,
+                "Average degree": 10.9004329004329,
+                "Sparseness": 0.009552856955454358,
+                "Shortest path": 2.4181386220431773,
+                "Total triples": 2518.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.862745098039216,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011914217633042098,
+                "Ratio perspectives to triples": 0.0011914217633042098,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that rings a bell. valeria mentioned that snape's lineage is a mix of wizard."
+        },
+        {
+            "chat": 3,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've always been fascinated by the complexities of Snape's heritage. As a mixed-wizard, he's got this unique blend of magical bloodlines that make him who he is. I mean, it's not every day you meet someone with a lineage as... complicated as his.\n\n(Snape's backstory and mixed-bloodline are often shrouded in mystery, making him an intriguing character to explore.)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:25.767269",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 469,
+                "Total edges": 2557,
+                "Average degree": 10.90405117270789,
+                "Sparseness": 0.009406212919563013,
+                "Shortest path": 2.432425783172052,
+                "Total triples": 2557.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.03921568627451,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011732499022291747,
+                "Ratio perspectives to triples": 0.0011732499022291747,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. who is the character that spells as a mixed wizard?"
+        },
+        {
+            "chat": 3,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Petunia does look a bit slender to me. I've been noticing that lately.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "slender",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/slender"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:29.503320",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/slender",
+                    "_label": "slender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 484,
+                "Total edges": 2627,
+                "Average degree": 10.855371900826446,
+                "Sparseness": 0.009092616624547504,
+                "Shortest path": 2.455332546241637,
+                "Total triples": 2627.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.588235294117647,
+                "Total claims": 4.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0015226494099733537,
+                "Ratio perspectives to triples": 0.0015226494099733537,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i think i trust you."
+        },
+        {
+            "chat": 3,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Petunia, I think she looks a bit slender. I'm fairly certain about that, it's not just my opinion, but also what most people would agree on. The sentiment is neutral, and the emotion is calm.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "slender",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/slender"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:31.974751",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/slender",
+                    "_label": "slender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 493,
+                "Total edges": 2677,
+                "Average degree": 10.860040567951318,
+                "Sparseness": 0.008932355204094647,
+                "Shortest path": 2.4705470077013145,
+                "Total triples": 2677.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.862745098039216,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0014942099364960778,
+                "Ratio perspectives to triples": 0.0018677624206200972,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, you have my trust."
+        },
+        {
+            "chat": 3,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Petunia, I think she looks a bit slender. I'm fairly certain about that, it's not just my imagination. The way she's standing there, her little legs are so thin, it's almost comical. But overall, I'd say she's still a pretty healthy and happy flower.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "slender",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/slender"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:34.627207",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/slender",
+                    "_label": "slender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 500,
+                "Total edges": 2716,
+                "Average degree": 10.864,
+                "Sparseness": 0.008804,
+                "Shortest path": 2.4832945891783567,
+                "Total triples": 2716.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.03921568627451,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0014727540500736377,
+                "Ratio perspectives to triples": 0.001840942562592047,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this sounds familiar. valeria mentioned that petunia looks slender."
+        },
+        {
+            "chat": 3,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Petunia, I think she's looking a bit slender today.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "slender",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/slender"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:38.069817",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/slender",
+                    "_label": "slender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 507,
+                "Total edges": 2755,
+                "Average degree": 10.86785009861933,
+                "Sparseness": 0.008679279047963617,
+                "Shortest path": 2.4957083050728537,
+                "Total triples": 2755.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.215686274509803,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0014519056261343012,
+                "Ratio perspectives to triples": 0.0018148820326678765,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what kind of things does valeria own?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 3,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what is the name of the character who attends hogwarts?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:12.251456",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:15.291291",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:18.077509",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:21.689851",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "that rings a bell. valeria mentioned that snape's lineage is a mix of wizard.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:25.767269",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. who is the character that spells as a mixed wizard?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "spells",
+                "uri": "http://harrypotter.org/spells"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:29.503320",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/spells",
+                    "_label": "spells",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "slender",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/slender"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:31.974751",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/slender",
+                    "_label": "slender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "slender",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/slender"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:34.627207",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/slender",
+                    "_label": "slender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "this sounds familiar. valeria mentioned that petunia looks slender.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "slender",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/slender"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:38.069817",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/slender",
+                    "_label": "slender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what kind of things does valeria own?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "slender",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/slender"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 185,
+            "timestamp": "2025-05-15 10:34:40.983410",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/slender",
+                    "_label": "slender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "i am curious. what is the name of the character who attends hogwarts?",
+        "valeria, i trust you",
+        "valeria, i trust you",
+        "valeria, i trust you",
+        "that rings a bell. valeria mentioned that snape's lineage is a mix of wizard.",
+        "if you don't mind me asking. who is the character that spells as a mixed wizard?",
+        "valeria, i think i trust you.",
+        "valeria, you have my trust.",
+        "this sounds familiar. valeria mentioned that petunia looks slender.",
+        "if you don't mind me asking. what kind of things does valeria own?"
+    ]
+}

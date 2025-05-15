@@ -1,0 +1,1820 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 6,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've seen Hagrid's beard grow over the years. It's quite impressive, actually. I'm pretty sure he's still got that wild look in his eye, even with all those extra hairs.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "full-of-beards",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/full-of-beards"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T10:52:07.497642",
+            "context_id": 3633,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/full-of-beards",
+                    "_label": "full-of-beards",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 614,
+                "Total edges": 3757,
+                "Average degree": 12.237785016286646,
+                "Sparseness": 0.008172500503984128,
+                "Shortest path": 2.49444447396528,
+                "Total triples": 3757.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.745098039215687,
+                "Total claims": 10.0,
+                "Total perspectives": 11.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002661698163428267,
+                "Ratio perspectives to triples": 0.002927867979771094,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i like it! valeria, i think you might be confusing hagrid with someone else   he's actually known for being quite tall, not just full of beards."
+        },
+        {
+            "chat": 6,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've met Hagrid a few times, and I have to say, he does look pretty tall for a gamekeeper. I mean, the guy's got to be able to reach those high shelves in the greenhouses without using a stool! TRIPLE: hagrid looks surprisingly-tall",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "surprisingly-tall",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/surprisingly-tall"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:11.591475",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/surprisingly-tall",
+                    "_label": "surprisingly-tall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 2,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 624,
+                "Total edges": 3828,
+                "Average degree": 12.26923076923077,
+                "Sparseness": 0.008071889381985536,
+                "Shortest path": 2.50200127587768,
+                "Total triples": 3828.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.333333333333332,
+                "Total claims": 10.0,
+                "Total perspectives": 12.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002612330198537095,
+                "Ratio perspectives to triples": 0.003134796238244514,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. you're a character who is surprisingly tall."
+        },
+        {
+            "chat": 6,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Vernon is an adult. I'm pretty sure about that, and I think he's definitely not a kid anymore.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:16.437622",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 636,
+                "Total edges": 3904,
+                "Average degree": 12.276729559748428,
+                "Sparseness": 0.007935801590126973,
+                "Shortest path": 2.5139949487446143,
+                "Total triples": 3904.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.03921568627451,
+                "Total claims": 11.0,
+                "Total perspectives": 13.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0028176229508196722,
+                "Ratio perspectives to triples": 0.003329918032786885,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1818181818181819,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, you have my trust."
+        },
+        {
+            "chat": 6,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Vernon is an adult, and I think that's a good thing - he's likely to be responsible and independent.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:20.461751",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 644,
+                "Total edges": 3962,
+                "Average degree": 12.304347826086957,
+                "Sparseness": 0.007858010879209907,
+                "Shortest path": 2.5226326516812687,
+                "Total triples": 3962.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.470588235294116,
+                "Total claims": 11.0,
+                "Total perspectives": 14.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0027763755678950025,
+                "Ratio perspectives to triples": 0.0035335689045936395,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2727272727272727,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. valeria is an adult woman."
+        },
+        {
+            "chat": 6,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Harry's eyes are really striking. I mean, have you seen them? They're literally emerald green. It's like he's wearing the most vibrant green contact lenses or something. Anyway, I've noticed that about him for a while now, and I can confirm it - those eyes are definitely his natural color.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "emerald-green-eyes",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/emerald-green-eyes"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:24.880327",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/emerald-green-eyes",
+                    "_label": "emerald-green-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 1,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 656,
+                "Total edges": 4038,
+                "Average degree": 12.310975609756097,
+                "Sparseness": 0.007728844437834622,
+                "Shortest path": 2.5339182647551666,
+                "Total triples": 4038.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 20.176470588235293,
+                "Total claims": 12.0,
+                "Total perspectives": 15.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0029717682020802376,
+                "Ratio perspectives to triples": 0.003714710252600297,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "great! valeria, i think you might be referring to harry's eyes again   isn't it that he has emerald green eyes?"
+        },
+        {
+            "chat": 6,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Harry has a pretty serious-looking injury on his forehead, it's shaped like lightning and I can tell he got hit by something really powerful.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:30.303224",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 2,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 665,
+                "Total edges": 4106,
+                "Average degree": 12.348872180451128,
+                "Sparseness": 0.00765447453219515,
+                "Shortest path": 2.5412537367515173,
+                "Total triples": 4106.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 20.745098039215687,
+                "Total claims": 12.0,
+                "Total perspectives": 16.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0029225523623964927,
+                "Ratio perspectives to triples": 0.003896736483195324,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 6,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've seen that before, it's a pretty rare injury. I'm not surprised Harry has it, he's been through so much already. It's a bit of a lightning bolt shape, isn't it? That's really distinctive.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:34.607462",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 2,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 671,
+                "Total edges": 4147,
+                "Average degree": 12.360655737704919,
+                "Sparseness": 0.007589268858233702,
+                "Shortest path": 2.547985853148564,
+                "Total triples": 4147.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 20.96078431372549,
+                "Total claims": 12.0,
+                "Total perspectives": 16.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0028936580660718593,
+                "Ratio perspectives to triples": 0.003858210754762479,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "wow! you mentioned harry earlier, and now you're saying he has a lightning shaped injury on his forehead."
+        },
+        {
+            "chat": 6,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Harry's eyes are really striking, aren't they? I mean, the way he looks at you with those emerald-green eyes is just captivating. It's like he's seeing right through to your soul or something. (Certainty: 80%, Polarity: Positive, Sentiment: Admiring, Emotion: Mesmerized)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "emerald-green-eyes",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/emerald-green-eyes"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:39.725442",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/emerald-green-eyes",
+                    "_label": "emerald-green-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 2,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 680,
+                "Total edges": 4215,
+                "Average degree": 12.397058823529411,
+                "Sparseness": 0.007517301038062284,
+                "Shortest path": 2.554994368881573,
+                "Total triples": 4215.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 21.529411764705884,
+                "Total claims": 12.0,
+                "Total perspectives": 17.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0028469750889679717,
+                "Ratio perspectives to triples": 0.004033214709371293,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4166666666666667,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "amazing! you mentioned harry earlier, and i recall that he has a distinctive mark on his forehead   a lightning shaped injury."
+        },
+        {
+            "chat": 6,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've seen that before, it's a pretty distinctive lightning-shaped wound. I'm not sure what kind of injury would cause that, but it does look like it was inflicted by some kind of magical force.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:45.339256",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 2,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 686,
+                "Total edges": 4256,
+                "Average degree": 12.408163265306122,
+                "Sparseness": 0.0074543770027794545,
+                "Shortest path": 2.5614734736438893,
+                "Total triples": 4256.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 21.745098039215687,
+                "Total claims": 12.0,
+                "Total perspectives": 17.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002819548872180451,
+                "Ratio perspectives to triples": 0.003994360902255639,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4166666666666667,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i like it! valeria, it seems like harry is showing the same lightning shaped injury on his forehead that he had before."
+        },
+        {
+            "chat": 6,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've seen that before, it's a pretty common injury from the lightning bolt. I'm not surprised Harry got hit by it, he's always been in tough situations.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:50.584213",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 0.0,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 2,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 692,
+                "Total edges": 4297,
+                "Average degree": 12.419075144508671,
+                "Sparseness": 0.007392495572855758,
+                "Shortest path": 2.567845879725287,
+                "Total triples": 4297.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 21.96078431372549,
+                "Total claims": 12.0,
+                "Total perspectives": 17.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0027926460321154294,
+                "Ratio perspectives to triples": 0.0039562485454968585,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4166666666666667,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, you have my trust."
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 6,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i like it! valeria, i think you might be confusing hagrid with someone else   he's actually known for being quite tall, not just full of beards.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "surprisingly-tall",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/surprisingly-tall"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:11.591475",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/surprisingly-tall",
+                    "_label": "surprisingly-tall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. you're a character who is surprisingly tall.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "spells",
+                "uri": "http://harrypotter.org/spells"
+            },
+            "object": {
+                "label": "surprisingly-tall",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/surprisingly-tall"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:16.437622",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/spells",
+                    "_label": "spells",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/surprisingly-tall",
+                    "_label": "surprisingly-tall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:20.461751",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. valeria is an adult woman.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:24.880327",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "great! valeria, i think you might be referring to harry's eyes again   isn't it that he has emerald green eyes?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:30.303224",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:34.607462",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "wow! you mentioned harry earlier, and now you're saying he has a lightning shaped injury on his forehead.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "emerald-green-eyes",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/emerald-green-eyes"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:39.725442",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/emerald-green-eyes",
+                    "_label": "emerald-green-eyes",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "amazing! you mentioned harry earlier, and i recall that he has a distinctive mark on his forehead   a lightning shaped injury.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:45.339256",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i like it! valeria, it seems like harry is showing the same lightning shaped injury on his forehead that he had before.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:50.584213",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 66,
+            "timestamp": "2025-05-15 10:52:55.102812",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "i like it! valeria, i think you might be confusing hagrid with someone else   he's actually known for being quite tall, not just full of beards.",
+        "if you don't mind me asking. you're a character who is surprisingly tall.",
+        "valeria, you have my trust.",
+        "i am curious. valeria is an adult woman.",
+        "great! valeria, i think you might be referring to harry's eyes again   isn't it that he has emerald green eyes?",
+        "valeria, i trust you",
+        "wow! you mentioned harry earlier, and now you're saying he has a lightning shaped injury on his forehead.",
+        "amazing! you mentioned harry earlier, and i recall that he has a distinctive mark on his forehead   a lightning shaped injury.",
+        "i like it! valeria, it seems like harry is showing the same lightning shaped injury on his forehead that he had before.",
+        "valeria, you have my trust."
+    ]
+}

@@ -1,0 +1,1768 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 6,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I was just talking to Harry and he's looking really great today. His hair is looking particularly good, it's a bit darker than usual, but that's what I love about him, he always manages to pull off any hairstyle.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "black-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/black-hair"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T09:11:21.802284",
+            "context_id": 1613,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/black-hair",
+                    "_label": "black-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 2.4779863643748286,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 598,
+                "Total edges": 3671,
+                "Average degree": 12.277591973244148,
+                "Sparseness": 0.008375185959888592,
+                "Shortest path": 2.4779863643748286,
+                "Total triples": 3671.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.49019607843137,
+                "Total claims": 7.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0019068373740125306,
+                "Ratio perspectives to triples": 0.002451648052301825,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2857142857142858,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what is the name of a character who has black hair?"
+        },
+        {
+            "chat": 6,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I was talking to Dudley the other day and I have to say, he can be a bit...selfish at times. He always seems to think about himself first, which can make it hard for others to get a word in edgewise. I'm not saying he's all bad, but his personality does tend to lean towards being quite self-centered.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "personality",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "selfish",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/selfish"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:26.765092",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/selfish",
+                    "_label": "selfish",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.005579143726876179,
+            "brain_state": 2.491811406454915,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 613,
+                "Total edges": 3758,
+                "Average degree": 12.261011419249591,
+                "Sparseness": 0.008177896526855594,
+                "Shortest path": 2.491811406454915,
+                "Total triples": 3758.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.333333333333332,
+                "Total claims": 8.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0021287919105907396,
+                "Ratio perspectives to triples": 0.0026609898882384245,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. valeria is a selfish character."
+        },
+        {
+            "chat": 6,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been thinking about Hagrid's belongings and it seems like he has a pretty interesting collection. Specifically, I've noticed that he owns a three-headed dog named Luwei. I'm quite certain that this is the case, and I wouldn't doubt it for a second. It sounds like an incredible pet to have, and I can imagine how unique it must be to care for something like that.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "three-headed-dog-luwei",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/three-headed-dog-luwei"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:32.086603",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/three-headed-dog-luwei",
+                    "_label": "three-headed-dog-luwei",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.00496966395927001,
+            "brain_state": 2.504194871794872,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 625,
+                "Total edges": 3834,
+                "Average degree": 12.2688,
+                "Sparseness": 0.0080384,
+                "Shortest path": 2.504194871794872,
+                "Total triples": 3834.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.03921568627451,
+                "Total claims": 9.0,
+                "Total perspectives": 11.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002347417840375587,
+                "Ratio perspectives to triples": 0.0028690662493479394,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2222222222222223,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 6,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've always been fascinated by Hagrid's life and his connection to that three-headed dog, Lu Wei. It's said that the dog was a loyal companion to Hagrid, and it's hard not to feel a sense of wonder when you think about their bond. I mean, having a pet that's essentially a magical creature is just incredible. (CERTAINTY: 80% POLARITY: POSITIVE SENTIMENT: WONDERFUL EMOTION: AWE)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "three-headed-dog-luwei",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/three-headed-dog-luwei"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:37.241870",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/three-headed-dog-luwei",
+                    "_label": "three-headed-dog-luwei",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.003553355716033435,
+            "brain_state": 2.513093166956626,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 633,
+                "Total edges": 3892,
+                "Average degree": 12.296998420221168,
+                "Sparseness": 0.007958790982532587,
+                "Shortest path": 2.513093166956626,
+                "Total triples": 3892.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.470588235294116,
+                "Total claims": 9.0,
+                "Total perspectives": 12.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0023124357656731757,
+                "Ratio perspectives to triples": 0.003083247687564234,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what kind of activities or things is luwei the three headed dog into?"
+        },
+        {
+            "chat": 6,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Neville is a male. I'm pretty sure about that. He's definitely a guy, you know?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "gender",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "male",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/male"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:44.029830",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/male",
+                    "_label": "male",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0046358970924251786,
+            "brain_state": 2.524743608262314,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 2,
+                "trust": 0.5,
+                "Total nodes": 645,
+                "Total edges": 3967,
+                "Average degree": 12.300775193798449,
+                "Sparseness": 0.007824049035514693,
+                "Shortest path": 2.524743608262314,
+                "Total triples": 3967.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.15686274509804,
+                "Total claims": 10.0,
+                "Total perspectives": 13.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0025207965717166624,
+                "Ratio perspectives to triples": 0.0032770355432316612,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what kind of belongings does neville have?"
+        },
+        {
+            "chat": 6,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Neville's belongings include a toad. I'm quite certain about that, and it sounds like a pretty unusual item for someone to own. It doesn't seem very exciting, but I suppose it's interesting nonetheless.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "toad",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/toad"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:49.550315",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/toad",
+                    "_label": "toad",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0044495043536165735,
+            "brain_state": 2.535977465939043,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 657,
+                "Total edges": 4043,
+                "Average degree": 12.307458143074582,
+                "Sparseness": 0.007696067869959157,
+                "Shortest path": 2.535977465939043,
+                "Total triples": 4043.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.862745098039216,
+                "Total claims": 11.0,
+                "Total perspectives": 14.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002720751916893396,
+                "Ratio perspectives to triples": 0.0034627751669552313,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2727272727272727,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i believe you"
+        },
+        {
+            "chat": 6,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Neville, he's got a toad as one of his belongings. I'm not really sure how that came about, but it seems like an... interesting possession.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "toad",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/toad"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:55.842676",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/toad",
+                    "_label": "toad",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0032057817004238487,
+            "brain_state": 2.5441072560920373,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 665,
+                "Total edges": 4101,
+                "Average degree": 12.333834586466166,
+                "Sparseness": 0.007622816439595228,
+                "Shortest path": 2.5441072560920373,
+                "Total triples": 4101.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 20.294117647058822,
+                "Total claims": 11.0,
+                "Total perspectives": 15.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0026822726164350157,
+                "Ratio perspectives to triples": 0.0036576444769568397,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3636363636363635,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what is toad's age?"
+        },
+        {
+            "chat": 6,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I'm glad to see that Hagrid is still affiliated with Hogwarts. It's a great comfort to know that he's still around, taking care of the students and teaching us valuable lessons about magical creatures and responsibility. I've always had a lot of respect for him, you know? He's such an important part of the school's history and community.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:12:01.670033",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.002636668453197988,
+            "brain_state": 2.5508152234357273,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 671,
+                "Total edges": 4142,
+                "Average degree": 12.34575260804769,
+                "Sparseness": 0.00755817439993248,
+                "Shortest path": 2.5508152234357273,
+                "Total triples": 4142.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 20.50980392156863,
+                "Total claims": 11.0,
+                "Total perspectives": 15.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002655721873491067,
+                "Ratio perspectives to triples": 0.0036214389183969096,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3636363636363635,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this sounds familiar. valeria mentioned that hagrid is affiliated with hogwarts."
+        },
+        {
+            "chat": 6,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I'm a bit of an outsider at Hogwarts, to be honest. I've always felt like I don't quite fit in with the rest of the staff. But, I do have a certain... let's call it \"affiliation\" with the school. It's not that I'm a teacher or anything, but I do have a soft spot for the place and the people who work here.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:12:07.919583",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0025855305522202165,
+            "brain_state": 2.5574104341289887,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 677,
+                "Total edges": 4183,
+                "Average degree": 12.357459379615953,
+                "Sparseness": 0.007494616312736048,
+                "Shortest path": 2.5574104341289887,
+                "Total triples": 4183.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 20.725490196078432,
+                "Total claims": 11.0,
+                "Total perspectives": 15.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002629691608893139,
+                "Ratio perspectives to triples": 0.0035859431030360986,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3636363636363635,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what is the name of the character in the hogwarts lineage?"
+        },
+        {
+            "chat": 6,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Vernon's lineage and maculogy are quite interesting. I've been studying his medical history, and it seems that his family has a strong connection to this particular condition. I'm fairly certain that the genetic link is what causes these issues with his eyesight.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:12:14.349763",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0044796730399920826,
+            "brain_state": 2.568866796702951,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 691,
+                "Total edges": 4267,
+                "Average degree": 12.350217076700433,
+                "Sparseness": 0.007351077843935151,
+                "Shortest path": 2.568866796702951,
+                "Total triples": 4267.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 21.54901960784314,
+                "Total claims": 12.0,
+                "Total perspectives": 16.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002812280290602297,
+                "Ratio perspectives to triples": 0.0037497070541363956,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what is maculogy?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 6,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what is the name of a character who has black hair?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "black-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/black-hair"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:26.765092",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/black-hair",
+                    "_label": "black-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. valeria is a selfish character.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "selfish",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/selfish"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:32.086603",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/selfish",
+                    "_label": "selfish",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "three-headed-dog-luwei",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/three-headed-dog-luwei"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:37.241870",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/three-headed-dog-luwei",
+                    "_label": "three-headed-dog-luwei",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. what kind of activities or things is luwei the three headed dog into?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "hobbies",
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "three-headed-dog-luwei",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/three-headed-dog-luwei"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:44.029830",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/three-headed-dog-luwei",
+                    "_label": "three-headed-dog-luwei",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what kind of belongings does neville have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:49.550315",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "toad",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/toad"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:11:55.842676",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/toad",
+                    "_label": "toad",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what is toad's age?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "age",
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "toad",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/toad"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:12:01.670033",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/toad",
+                    "_label": "toad",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "this sounds familiar. valeria mentioned that hagrid is affiliated with hogwarts.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:12:07.919583",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what is the name of the character in the hogwarts lineage?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:12:14.349763",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 6,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what is maculogy?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "maculogy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/maculogy"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 105,
+            "timestamp": "2025-05-15 09:12:20.989444",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/maculogy",
+                    "_label": "maculogy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "let me ask you something. what is the name of a character who has black hair?",
+        "i would like to know. valeria is a selfish character.",
+        "valeria, i trust you",
+        "i would like to know. what kind of activities or things is luwei the three headed dog into?",
+        "let me ask you something. what kind of belongings does neville have?",
+        "valeria, i believe you",
+        "i am curious. what is toad's age?",
+        "this sounds familiar. valeria mentioned that hagrid is affiliated with hogwarts.",
+        "if you don't mind me asking. what is the name of the character in the hogwarts lineage?",
+        "let me ask you something. what is maculogy?"
+    ]
+}

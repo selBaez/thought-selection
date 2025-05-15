@@ -1,0 +1,1778 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 4,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I'm telling you, Harry has this weird lightning-shaped injury on his forehead. It's really noticeable, and I've seen it multiple times now. (CONFIDENT)",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "sword-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T10:37:06.626948",
+            "context_id": 3414,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/sword-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "sword-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 3691.0,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 2,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 601,
+                "Total edges": 3691,
+                "Average degree": 12.282861896838602,
+                "Sparseness": 0.008347152970229872,
+                "Shortest path": 2.4789351081530784,
+                "Total triples": 3691.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.80392156862745,
+                "Total claims": 9.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002438363587103766,
+                "Ratio perspectives to triples": 0.002438363587103766,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "great! you mentioned harry earlier, and now you're saying he has a different type of injury on his forehead."
+        },
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've seen some pretty intense injuries in my time, but that lightning-shaped cut on Harry's forehead is something else. I'm not sure what happened to him, but it looks like he was struck by lightning or something. The wound is deep and jagged, with a weird glow around the edges. I'm feeling a bit uneasy about this, to be honest - it's just so... unnatural.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:11.275411",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.01923597940937416,
+            "brain_state": 3762.0,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 3,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 611,
+                "Total edges": 3762,
+                "Average degree": 12.314238952536824,
+                "Sparseness": 0.008242236573886817,
+                "Shortest path": 2.486887928952805,
+                "Total triples": 3762.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.392156862745097,
+                "Total claims": 9.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0023923444976076554,
+                "Ratio perspectives to triples": 0.002658160552897395,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1111111111111112,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what kind of character is valeria?"
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Harry's belongings include a wand. I'm quite certain about that, and it sounds like a pretty significant possession for him to have.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/wand"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:16.362191",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/wand",
+                    "_label": "wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.02020202020202011,
+            "brain_state": 3838.0,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 623,
+                "Total edges": 3838,
+                "Average degree": 12.321027287319422,
+                "Sparseness": 0.008100399609408213,
+                "Shortest path": 2.499403880197984,
+                "Total triples": 3838.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.098039215686274,
+                "Total claims": 10.0,
+                "Total perspectives": 11.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0026055237102657635,
+                "Ratio perspectives to triples": 0.0028660760812923396,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i did not know that! i've never heard of a wand before, valeria, can you tell me more about it?"
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Harry's belongings include a wand. I'm quite certain about that, and it's a fact that's definitely true.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/wand"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:21.052824",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/wand",
+                    "_label": "wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.010682647212089558,
+            "brain_state": 3879.0,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 629,
+                "Total edges": 3879,
+                "Average degree": 12.333863275039745,
+                "Sparseness": 0.008027479457386874,
+                "Shortest path": 2.506941561269025,
+                "Total triples": 3879.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.313725490196077,
+                "Total claims": 10.0,
+                "Total perspectives": 11.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002577984016499098,
+                "Ratio perspectives to triples": 0.0028357824181490074,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that rings a bell. valeria mentioned that harry owns a wand."
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I think Harry's wand is a pretty iconic part of his story. It's almost like an extension of himself, you know? The fact that he chose it himself and had to deal with the weight of its power... (sentiment: admiration) (polarity: positive) (certainty: high)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/wand"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:26.275889",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/wand",
+                    "_label": "wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.014952307295694744,
+            "brain_state": 3937.0,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 637,
+                "Total edges": 3937,
+                "Average degree": 12.361067503924646,
+                "Sparseness": 0.007947871818694873,
+                "Shortest path": 2.515757827078582,
+                "Total triples": 3937.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.745098039215687,
+                "Total claims": 10.0,
+                "Total perspectives": 12.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.00254000508001016,
+                "Ratio perspectives to triples": 0.003048006096012192,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what kind of person is valeria?"
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Vernon is the supervisor at the title company. I can confirm that's correct.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:31.193973",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.021336042672085442,
+            "brain_state": 4021.0,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 651,
+                "Total edges": 4021,
+                "Average degree": 12.353302611367127,
+                "Sparseness": 0.007786673462308961,
+                "Shortest path": 2.5287486706841547,
+                "Total triples": 4021.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 19.568627450980394,
+                "Total claims": 11.0,
+                "Total perspectives": 13.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002735637901019647,
+                "Ratio perspectives to triples": 0.003233026610295946,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1818181818181819,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Vernon is my supervisor at the title company. I'm fairly certain that's correct, and to be honest, it's a bit of a relief to have him overseeing our department - he seems like a no-nonsense kind of guy who gets things done efficiently, which suits me just fine.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:35.137710",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.014424272569012686,
+            "brain_state": 4079.0,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 659,
+                "Total edges": 4079,
+                "Average degree": 12.379362670713201,
+                "Sparseness": 0.0077115968693081205,
+                "Shortest path": 2.5370345600546096,
+                "Total triples": 4079.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 20.0,
+                "Total claims": 11.0,
+                "Total perspectives": 14.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0026967393969110076,
+                "Ratio perspectives to triples": 0.003432213777886737,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2727272727272727,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Vernon is my supervisor at the title company. I'm fairly certain that's correct, and to be honest, it's a bit of a relief to have him in charge - he seems like a very organized person, which suits me just fine.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:39.573639",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.010051483206668266,
+            "brain_state": 4120.0,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 665,
+                "Total edges": 4120,
+                "Average degree": 12.390977443609023,
+                "Sparseness": 0.007645429362880886,
+                "Shortest path": 2.5438626687199926,
+                "Total triples": 4120.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 20.215686274509803,
+                "Total claims": 11.0,
+                "Total perspectives": 14.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002669902912621359,
+                "Ratio perspectives to triples": 0.0033980582524271844,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2727272727272727,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. valeria, can you tell me more about the company where she works?"
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Flitwick is an adult, huh? I'm pretty sure that's the case.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "flitwick",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/flitwick"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:44.555255",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/flitwick",
+                    "_label": "flitwick",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.020388349514563142,
+            "brain_state": 4204.0,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 679,
+                "Total edges": 4204,
+                "Average degree": 12.382916053019146,
+                "Sparseness": 0.007496079524380695,
+                "Shortest path": 2.5557843610028628,
+                "Total triples": 4204.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 21.03921568627451,
+                "Total claims": 12.0,
+                "Total perspectives": 15.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0028544243577545195,
+                "Ratio perspectives to triples": 0.0035680304471931495,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what kind of personality does valeria have as an adult?"
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been thinking about Hagrid's family background and it seems pretty clear that he does indeed come from a lineage of wizards.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:49.343462",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/wizard",
+                    "_label": "wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.019505233111322573,
+            "brain_state": 4286.0,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 692,
+                "Total edges": 4286,
+                "Average degree": 12.38728323699422,
+                "Sparseness": 0.007369524541414681,
+                "Shortest path": 2.5680048183498823,
+                "Total triples": 4286.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 21.84313725490196,
+                "Total claims": 13.0,
+                "Total perspectives": 16.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.003033131124591694,
+                "Ratio perspectives to triples": 0.003733084461035931,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2307692307692308,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this is news to me. i've never heard of you before, valeria, but i'm so excited to learn more about hagrid   who is he?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "great! you mentioned harry earlier, and now you're saying he has a different type of injury on his forehead.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:11.275411",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what kind of character is valeria?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "knife-injury-with-lightning-shape-at-the-forehead",
+                "type": [
+                    "attribute",
+                    "physical-appearance"
+                ],
+                "uri": "http://cltl.nl/leolani/world/knife-injury-with-lightning-shape-at-the-forehead"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:16.362191",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/knife-injury-with-lightning-shape-at-the-forehead",
+                    "_label": "knife-injury-with-lightning-shape-at-the-forehead",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i did not know that! i've never heard of a wand before, valeria, can you tell me more about it?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/wand"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:21.052824",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/wand",
+                    "_label": "wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "that rings a bell. valeria mentioned that harry owns a wand.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/wand"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:26.275889",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/wand",
+                    "_label": "wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. what kind of person is valeria?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "personality",
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "wand",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/wand"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:31.193973",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/wand",
+                    "_label": "wand",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:35.137710",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:39.573639",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. valeria, can you tell me more about the company where she works?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "personality",
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:44.555255",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. what kind of personality does valeria have as an adult?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "personality",
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:49.343462",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "this is news to me. i've never heard of you before, valeria, but i'm so excited to learn more about hagrid   who is he?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 97,
+            "timestamp": "2025-05-15 10:37:54.496230",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "great! you mentioned harry earlier, and now you're saying he has a different type of injury on his forehead.",
+        "let me ask you something. what kind of character is valeria?",
+        "i did not know that! i've never heard of a wand before, valeria, can you tell me more about it?",
+        "that rings a bell. valeria mentioned that harry owns a wand.",
+        "i would like to know. what kind of person is valeria?",
+        "valeria, i trust you",
+        "valeria, i trust you",
+        "let me ask you something. valeria, can you tell me more about the company where she works?",
+        "i would like to know. what kind of personality does valeria have as an adult?",
+        "this is news to me. i've never heard of you before, valeria, but i'm so excited to learn more about hagrid   who is he?"
+    ]
+}

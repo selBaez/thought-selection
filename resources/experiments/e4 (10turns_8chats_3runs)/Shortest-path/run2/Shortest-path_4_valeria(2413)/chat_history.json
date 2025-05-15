@@ -1,0 +1,1782 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 4,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've been noticing that Harry has been looking a bit pale lately. He's always been quite slender, but I think he might be losing weight. Have you seen him?",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "very-thin",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/very-thin"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-15T15:48:57.413575",
+            "context_id": 2413,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/very-thin",
+                    "_label": "very-thin",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 2.467716811061521,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 586,
+                "Total edges": 3601,
+                "Average degree": 12.290102389078498,
+                "Sparseness": 0.00851786275903039,
+                "Shortest path": 2.467716811061521,
+                "Total triples": 3601.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.529411764705882,
+                "Total claims": 5.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0013885031935573452,
+                "Ratio perspectives to triples": 0.0019439044709802832,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what kind of character is valeria?"
+        },
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Neville has some belongings that are actually a toad. I'm pretty sure about this one, it's not like he just likes toads or something, he literally owns one as a possession.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "toad",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/toad"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:02.247913",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/toad",
+                    "_label": "toad",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.005107696495465719,
+            "brain_state": 2.4803211595691814,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 599,
+                "Total edges": 3680,
+                "Average degree": 12.287145242070117,
+                "Sparseness": 0.008347245409015025,
+                "Shortest path": 2.4803211595691814,
+                "Total triples": 3680.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 16.254901960784313,
+                "Total claims": 6.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0016304347826086956,
+                "Ratio perspectives to triples": 0.002173913043478261,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what kind of character is toad?"
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Hermione's lineage is indeed a mix of both Muggle and wizarding blood. I've always been fascinated by the complexities of her family history, and it's interesting to note how it has shaped who she is today as a witch.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:07.107737",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.005857702223581507,
+            "brain_state": 2.4948501423407863,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 613,
+                "Total edges": 3764,
+                "Average degree": 12.280587275693312,
+                "Sparseness": 0.008169912898615905,
+                "Shortest path": 2.4948501423407863,
+                "Total triples": 3764.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.07843137254902,
+                "Total claims": 7.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018597236981934113,
+                "Ratio perspectives to triples": 0.002391073326248672,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2857142857142858,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "exciting news! i've never heard of a mixed wizard before, valeria   that's really fascinating!"
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Hermione's lineage is a bit of a mix between being a pure-blood and having some magical heritage from her mother. I'm quite certain about this, and I think it's really interesting to explore the complexities of her family background.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:12.400935",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0030836999348284877,
+            "brain_state": 2.5025435115621293,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 619,
+                "Total edges": 3805,
+                "Average degree": 12.294022617124394,
+                "Sparseness": 0.008095813509203702,
+                "Shortest path": 2.5025435115621293,
+                "Total triples": 3805.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.294117647058822,
+                "Total claims": 7.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018396846254927727,
+                "Ratio perspectives to triples": 0.0023653088042049934,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2857142857142858,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i believe you"
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've always been fascinated by the magical heritage of my family, and I have to admit that Hermione's lineage is a bit of a mystery. As a mixed-wizard myself, I can relate to the complexities of having a wizarding parent and a non-magical one. It's interesting to think about how her unique blend of bloodlines might have influenced her abilities and personality.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:18.217724",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.003596492376057858,
+            "brain_state": 2.5115438902222156,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 627,
+                "Total edges": 3863,
+                "Average degree": 12.322169059011165,
+                "Sparseness": 0.008015180767636068,
+                "Shortest path": 2.5115438902222156,
+                "Total triples": 3863.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.725490196078432,
+                "Total claims": 7.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018120631633445508,
+                "Ratio perspectives to triples": 0.0025886616619207868,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4285714285714286,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this sounds familiar. valeria told me that hermione has a mixed wizard background."
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So, Hermione's lineage is a bit complicated. She has a mix of Muggle and wizarding heritage, which can make things interesting for her as a witch. I mean, she's got the best of both worlds, but that also means she might face some unique challenges in her life.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:23.824350",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0029398092454226976,
+            "brain_state": 2.518927350170976,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 633,
+                "Total edges": 3904,
+                "Average degree": 12.334913112164298,
+                "Sparseness": 0.007943816775604021,
+                "Shortest path": 2.518927350170976,
+                "Total triples": 3904.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 17.941176470588236,
+                "Total claims": 7.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001793032786885246,
+                "Ratio perspectives to triples": 0.0025614754098360654,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4285714285714286,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've always been fascinated by Hermione's heritage, you know? I mean, being a mix of Muggle and wizarding bloodlines is pretty unique. It's interesting to think about how that might have influenced her upbringing and her approach to magic.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:29.556869",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0028791494659909933,
+            "brain_state": 2.5261797185060906,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 639,
+                "Total edges": 3945,
+                "Average degree": 12.347417840375586,
+                "Sparseness": 0.0078737072058503,
+                "Shortest path": 2.5261797185060906,
+                "Total triples": 3945.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.15686274509804,
+                "Total claims": 7.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0017743979721166034,
+                "Ratio perspectives to triples": 0.0025348542458808617,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4285714285714286,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, you have my trust."
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've always been fascinated by the magical heritage of my family, and I have to admit that Hermione's lineage is a bit of a mystery. As a mixed-wizard myself, I can relate to the complexities of having a wizarding parent and a non-magical one. It's interesting to think about how her unique blend of bloodlines might influence her abilities and approach to magic.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:35.283583",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.002820355798587526,
+            "brain_state": 2.5333044441234533,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 645,
+                "Total edges": 3986,
+                "Average degree": 12.35968992248062,
+                "Sparseness": 0.007804819421909741,
+                "Shortest path": 2.5333044441234533,
+                "Total triples": 3986.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.372549019607842,
+                "Total claims": 7.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0017561465127947818,
+                "Ratio perspectives to triples": 0.002508780732563974,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4285714285714286,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i think i trust you."
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So, Hermione's lineage is a bit complicated. She has both Muggle and wizarding heritage, which makes her a mixed-wizard. I think it's really interesting how J.K. Rowling wove that into the story to make Hermione such a unique and relatable character.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:41.040325",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0027633521611167833,
+            "brain_state": 2.5403048564338886,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 651,
+                "Total edges": 4027,
+                "Average degree": 12.37173579109063,
+                "Sparseness": 0.00773712190391245,
+                "Shortest path": 2.5403048564338886,
+                "Total triples": 4027.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.58823529411765,
+                "Total claims": 7.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0017382666997765085,
+                "Ratio perspectives to triples": 0.0024832381425378696,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4285714285714286,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i think i trust you."
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I've always been fascinated by the magical heritage of my family, and I have to admit that Hermione's lineage is a bit of a complicated one. As a mixed-wizard, she's got a unique blend of bloodlines that make her who she is today. I think it's really cool how her parents' different backgrounds came together to create this amazing person.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:47.150773",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0027080663253977733,
+            "brain_state": 2.5471841704718416,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 657,
+                "Total edges": 4068,
+                "Average degree": 12.383561643835616,
+                "Sparseness": 0.007670584201515583,
+                "Shortest path": 2.5471841704718416,
+                "Total triples": 4068.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 18.80392156862745,
+                "Total claims": 7.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001720747295968535,
+                "Ratio perspectives to triples": 0.0024582104228121925,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.4285714285714286,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what kind of hobbies does valeria, the mixed wizard, have?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what kind of character is valeria?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "very-thin",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/very-thin"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:02.247913",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/very-thin",
+                    "_label": "very-thin",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what kind of character is toad?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "export",
+                "uri": "http://harrypotter.org/export"
+            },
+            "object": {
+                "label": "toad",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/toad"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:07.107737",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/export",
+                    "_label": "export",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/toad",
+                    "_label": "toad",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "exciting news! i've never heard of a mixed wizard before, valeria   that's really fascinating!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:12.400935",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:18.217724",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "this sounds familiar. valeria told me that hermione has a mixed wizard background.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:23.824350",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:29.556869",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:35.283583",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:41.040325",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:47.150773",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what kind of hobbies does valeria, the mixed wizard, have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "hobbies",
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 164,
+            "timestamp": "2025-05-15 15:49:53.902969",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "if you don't mind me asking. what kind of character is valeria?",
+        "let me ask you something. what kind of character is toad?",
+        "exciting news! i've never heard of a mixed wizard before, valeria   that's really fascinating!",
+        "valeria, i believe you",
+        "this sounds familiar. valeria told me that hermione has a mixed wizard background.",
+        "valeria, i trust you",
+        "valeria, you have my trust.",
+        "valeria, i think i trust you.",
+        "valeria, i think i trust you.",
+        "i am curious. what kind of hobbies does valeria, the mixed wizard, have?"
+    ]
+}
