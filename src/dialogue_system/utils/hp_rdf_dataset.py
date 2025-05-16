@@ -138,9 +138,9 @@ class HarryPotterRDF(InMemoryDataset):
                                  These are used as features of the main nodes.
         """
         # Get everything from the instance graph in the oracle user
-        all_characters = [str(node["character"]) for node in get_all_characters(full_graph)]
-        all_attributes = [str(node["attribute"]) for node in get_all_attributes(full_graph)]
-        all_predicates = [str(rel["predicate"]) for rel in get_all_predicates(full_graph)]
+        all_characters = [str(node["character"].replace("_", "")) for node in get_all_characters(full_graph)]
+        all_attributes = [str(node["attribute"].replace("_", "")) for node in get_all_attributes(full_graph)]
+        all_predicates = [str(rel["predicate"].replace("_", "")) for rel in get_all_predicates(full_graph)]
         self.characters_dict = {node: i for i, node in enumerate(all_characters)}
         self.attributes_dict = {node: i for i, node in enumerate(all_attributes)}
         self.predicates_dict = {rel: i for i, rel in enumerate(all_predicates)}
