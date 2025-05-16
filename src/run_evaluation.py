@@ -57,17 +57,17 @@ if __name__ == "__main__":
     # parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
     #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
     #
-    # parser.add_argument("--experiment_id", default="t2 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
-    # parser.add_argument("--testing_id", default="e2 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
-    # parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
-    #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
-
-    parser.add_argument("--experiment_id", default="t3 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
-    parser.add_argument("--testing_id", default="e3 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--experiment_id", default="t2 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
+    parser.add_argument("--testing_id", default="e2 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
     parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
-    parser.add_argument("--dm_model", default="rl(abstract)", type=str, help="Type of selector to use",
+    parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
                         choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
+
+    # parser.add_argument("--experiment_id", default="t3 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
+    # parser.add_argument("--testing_id", default="e3 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
+    # parser.add_argument("--dm_model", default="rl(abstract)", type=str, help="Type of selector to use",
+    #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
     # parser.add_argument("--experiment_id", default="t4 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
     # parser.add_argument("--testing_id", default="e4 (10turns_8chats_3runs)", type=str, help="ID for an experiment")

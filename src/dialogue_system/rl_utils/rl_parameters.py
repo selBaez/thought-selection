@@ -7,7 +7,7 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 BATCH_SIZE = 4  # 16 for D2Q, 128 tutorial
 DQN_HIDDEN_SIZE = 64  # 80 for DQN
 LR = 1e-4  # 1e-4 for D2Q
-EPSILON_INFO = {"start": 0.6, "end": 0.05, "decay": 1000}
+EPSILON_INFO = {"start": 0.9, "end": 0.05, "decay": 1000}
 GAMMA = 0.99
 TAU = 0.005
 

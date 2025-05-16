@@ -4,7 +4,7 @@ from pathlib import Path
 from random import shuffle, choice
 
 from dialogue_system.rl_utils.rl_parameters import SHUFFLE_FREQUENCY, RESET_FREQUENCY, METRICS
-from dialogue_system.utils.global_variables import RAW_USER_PATH
+from dialogue_system.utils.global_variables import RAW_VANILLA_USER_PATH
 from dialogue_system.utils.helpers import create_session_folder, search_session_folder, replace_user_name
 
 
@@ -88,49 +88,39 @@ def main(args):
                     "--context_id", f"{context_id}", "--place_id", "44", "--place_label", "bookstore",
                     "--user_model", f"{user_model}", "--speaker", f"{printable_user_model}",
                     "--init_brain", brain, "--reward", reward, "--dm_model", f"{args.dm_model}"
-                ])
+                ], check=True)
 
 
 if __name__ == "__main__":
-    # Parameters for local test of experiment
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument("--experiment_id", default="e1 (5turns_3chats_2runs)", type=str, help="ID for an experiment")
+    parser = argparse.ArgumentParser()
+    # # test
     # parser.add_argument("--num_turns", default=5, type=int, help="Number of turns for this experiment")
     # parser.add_argument("--num_chats", default=3, type=int, help="Number of chats for this experiment")
     # parser.add_argument("--num_runs", default=2, type=int, help="Number of runs for this experiment")
-    # parser.add_argument("--switch_users", default=False, action='store_true', help="Switch users between chats")
-    # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
-    # parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
-    #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
+
+    # real
+    parser.add_argument("--num_turns", default=10, type=int, help="Number of turns for this experiment")
+    parser.add_argument("--num_chats", default=8, type=int, help="Number of chats for this experiment")
+    parser.add_argument("--num_runs", default=3, type=int, help="Number of runs for this experiment")
 
     # # Parameters for experiment 1 (vanilla user)
-    # parser = argparse.ArgumentParser()
     # parser.add_argument("--experiment_id", default="e1 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    # parser.add_argument("--num_turns", default=10, type=int, help="Number of turns for this experiment")
-    # parser.add_argument("--num_chats", default=8, type=int, help="Number of chats for this experiment")
-    # parser.add_argument("--num_runs", default=3, type=int, help="Number of runs for this experiment")
     # parser.add_argument("--switch_users", default=False, action='store_true', help="Switch users between chats")
     # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
     # parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
     #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
     #
     # Parameters for experiment 2 (mixed users)
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--experiment_id", default="e2 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    parser.add_argument("--num_turns", default=10, type=int, help="Number of turns for this experiment")
-    parser.add_argument("--num_chats", default=8, type=int, help="Number of chats for this experiment")
-    parser.add_argument("--num_runs", default=3, type=int, help="Number of runs for this experiment")
-    parser.add_argument("--switch_users", default=True, action='store_true', help="Switch users between chats")
-    parser.add_argument("--user_model", default=RAW_USER_PATH, type=str, help="File or folder of user model")
-    parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
-                        choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("--experiment_id", default="e2 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    # parser.add_argument("--switch_users", default=True, action='store_true', help="Switch users between chats")
+    # parser.add_argument("--user_model", default=RAW_USER_PATH, type=str, help="File or folder of user model")
+    # parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
+    #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
     # # Parameters for experiment 3 (baseline: random specific)
     # parser = argparse.ArgumentParser()
     # parser.add_argument("--experiment_id", default="e3 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    # parser.add_argument("--num_turns", default=10, type=int, help="Number of turns for this experiment")
-    # parser.add_argument("--num_chats", default=8, type=int, help="Number of chats for this experiment")
-    # parser.add_argument("--num_runs", default=3, type=int, help="Number of runs for this experiment")
     # parser.add_argument("--switch_users", default=False, action='store_true', help="Switch users between chats")
     # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
     # parser.add_argument("--dm_model", default="rl(abstract)", type=str, help="Type of selector to use",
@@ -139,24 +129,18 @@ if __name__ == "__main__":
     # # Parameters for experiment 4 (baseline: random abstract)
     # parser = argparse.ArgumentParser()
     # parser.add_argument("--experiment_id", default="e4 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    # parser.add_argument("--num_turns", default=10, type=int, help="Number of turns for this experiment")
-    # parser.add_argument("--num_chats", default=8, type=int, help="Number of chats for this experiment")
-    # parser.add_argument("--num_runs", default=3, type=int, help="Number of runs for this experiment")
     # parser.add_argument("--switch_users", default=False, action='store_true', help="Switch users between chats")
     # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
     # parser.add_argument("--dm_model", default="rl(specific)", type=str, help="Type of selector to use",
     #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
-    # # Parameters for experiment 5 (baseline: random)
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument("--experiment_id", default="e5 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    # parser.add_argument("--num_turns", default=10, type=int, help="Number of turns for this experiment")
-    # parser.add_argument("--num_chats", default=8, type=int, help="Number of chats for this experiment")
-    # parser.add_argument("--num_runs", default=3, type=int, help="Number of runs for this experiment")
-    # parser.add_argument("--switch_users", default=False, action='store_true', help="Switch users between chats")
-    # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
-    # parser.add_argument("--dm_model", default="random", type=str, help="Type of selector to use",
-    #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
+    # Parameters for experiment 5 (baseline: random)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--experiment_id", default="e5 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--switch_users", default=False, action='store_true', help="Switch users between chats")
+    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
+    parser.add_argument("--dm_model", default="random", type=str, help="Type of selector to use",
+                        choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
     args = parser.parse_args()
     main(args)

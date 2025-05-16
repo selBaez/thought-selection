@@ -17,7 +17,7 @@ ATTRIBUTE_TYPE_PATH = RESOURCES_PATH + "hp_data/attribute_types.csv"
 
 OG_DATA_PATHS = [RESOURCES_PATH + "hp_data/test_set_en/", RESOURCES_PATH + "hp_data/train_set_en/"]
 USER_PATH = RESOURCES_PATH + "users"
-RAW_USER_PATH = USER_PATH + "/raw" # TODO when running in server to raw_large
+RAW_USER_PATH = USER_PATH + "/raw_large" # TODO when running in server to raw_large
 RAW_VANILLA_USER_PATH = RAW_USER_PATH + "/vanilla.trig"
 PROCESSED_USER_PATH = USER_PATH + "/processed"
 
