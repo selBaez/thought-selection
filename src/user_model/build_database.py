@@ -14,8 +14,8 @@ from dialogue_system.utils.helpers import get_all_characters, get_all_attributes
 from user_model.utils.constants import CONTEXT_ID, START_DATE, HP_CONTEXT_CAPSULE
 from user_model.utils.helpers import *
 
-TEST = True
-NUM_USERS_PER_TYPE = 10 if TEST else 100
+DATA_SIZE = "MED"  # Choose SMA, MED, LAR
+NUM_USERS_PER_TYPE = 10 if DATA_SIZE == "SMA" else 100
 
 
 def add_triple(book, chapter, position, counter, name, character, relation, val, brain):
@@ -308,19 +308,19 @@ def add_types():
 
 def main():
     # print("---------------------------- Ingest triples per book  ----------------------------")
-    # # iterate through JSONs
+    # # iterate through JSONs to create the trig correspondant -> book1_train.trig
     # files = get_all_files(extension="json")
     # for file in files:
     #     process_file(file)
-    #
-    # print("---------------------------- Make users  ----------------------------")
-    # # Make types of users
-    # graph_data = merge_all_graphs(TEST)
-    # create_users(graph_data)
 
-    # print("---------------------------- Add entity types  ----------------------------")
-    # # Add entity types
-    # add_types()
+    print("---------------------------- Make users  ----------------------------")
+    # Make types of users
+    graph_data = merge_all_graphs(DATA_SIZE)
+    create_users(graph_data)
+
+    print("---------------------------- Add entity types  ----------------------------")
+    # Add entity types
+    add_types()
 
     print("DONE")
 

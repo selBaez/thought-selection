@@ -4,7 +4,7 @@ from random import getrandbits, sample
 from rdflib import URIRef, Literal, RDF, RDFS
 
 from cltl.brain.utils.helper_functions import hash_claim_id
-from dialogue_system.utils.global_variables import OG_DATA_PATHS, \
+from dialogue_system.utils.global_variables import OG_DATA_PATHS, PREPROCESSED_DATA_PATHS, \
     PERSPECTIVE_GRAPH, CLAIM_GRAPH, INSTANCE_GRAPH, TYPE_EVENT, TYPE_ASSERTION, TYPE_ATTRIBUTION, TYPE_ATTRIBUTIONVALUE, \
     TYPE_CERTAINTYVALUE, TYPE_POLARITYVALUE, CERTAINTY_CERTAIN, CERTAINTY_POSSIBLE, POLARITY_POSITIVE, \
     POLARITY_NEGATIVE, SENTIMENT_NEUTRAL, EMOTION_UNDERSPECIFIED, GRASP_HASATT, GRASP_ATTFOR, GAF_DENOTEDBY, \
@@ -67,12 +67,12 @@ def get_book_number(file):
     return book
 
 
-def get_all_files(extension="json"):
+def get_all_files(extension="json", folder=OG_DATA_PATHS):
     """
     Get all JSON files that belong to the dataset
     """
     files = []
-    for folder in OG_DATA_PATHS:
+    for folder in folder:
         files.extend(list(Path(folder).glob(f'*.{extension}')))
 
     files.sort()
@@ -80,17 +80,22 @@ def get_all_files(extension="json"):
     return files
 
 
-def merge_all_graphs(test=False):
+def merge_all_graphs(data_size):
     """
     Put together triples from different trig files
     """
     graph_data = build_graph()
-    trig_files = get_all_files(extension="trig")
+    trig_files = get_all_files(extension="trig", folder=PREPROCESSED_DATA_PATHS)
+
+    # Filter to make small/large/medium size users
+    if data_size == "SMA":
+        trig_files = trig_files[0:1]
+    elif data_size == "MED":
+        trig_files = [el for el in trig_files if "test" in el.name]
+
     for trig_file in trig_files:
         graph_data.parse(trig_file)
         print(f"READ DATASET in {trig_file.stem}: {len(graph_data)}")
-        if test:
-            break
 
     return graph_data
 
