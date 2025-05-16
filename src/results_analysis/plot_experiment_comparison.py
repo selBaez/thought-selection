@@ -11,11 +11,11 @@ import torch
 from sklearn.preprocessing import MinMaxScaler
 
 from dialogue_system.d2q_selector import DQN
-from dialogue_system.rl_utils.state_encoder import StateEncoder
-from dialogue_system.utils.encode_state import HarryPotterRDF
-from dialogue_system.utils.global_variables import RESOURCES_PATH
 from dialogue_system.rl_utils.rl_parameters import DEVICE, STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, \
     ACTION_THOUGHTS, ACTION_TYPES, METRICS_TOINCLUDE
+from dialogue_system.rl_utils.state_encoder import StateEncoder
+from dialogue_system.utils.global_variables import RESOURCES_PATH
+from dialogue_system.utils.hp_rdf_dataset import HarryPotterRDF
 
 EXPERIMENTS_PATH = Path(f"{RESOURCES_PATH}/experiments").resolve()
 PLOTS_PATH = Path(f"{RESOURCES_PATH}/plots").resolve()
@@ -54,22 +54,23 @@ def get_qvalues(policy_net, state_encoder, state_file=None):
     return action_tensor[0].tolist(), subaction_tensor[0].tolist()
 
 
-def plot_action_count(data, plots_folder):
-    data["thought_types"] = data["actions"].apply(lambda a: ACTION_THOUGHTS.get(a, None))
+def plot_action_count(data, plots_folder, action_type='abstract'):
+    mapping_dict = ACTION_THOUGHTS if action_type == "abstract" else ACTION_TYPES
+    data[f"{action_type}_action_names"] = data[f"{action_type}_actions"].apply(lambda a: mapping_dict.get(a, None))
 
     # Count the occurrences of each action per condition
-    action_counts = data.groupby(['condition', 'thought_types']).size().reset_index(name='counts')
+    action_counts = data.groupby(['condition', f"{action_type}_action_names"]).size().reset_index(name='counts')
 
     # Plotting
     plt.figure(figsize=(12, 8), tight_layout=True)
-    sns.barplot(data=action_counts, x='thought_types', y='counts', hue='condition')
+    sns.barplot(data=action_counts, x=f"{action_type}_action_names", y='counts', hue='condition')
 
-    plt.title('Action Counts by Intention')
-    plt.xlabel('Action')
+    plt.title(f'{action_type.title()} Action Counts by Intention')
+    plt.xlabel(f'{action_type.title()} Action')
     plt.ylabel('Counts')
     plt.legend(title='Intention / Reward')
     plt.xticks(rotation=45, ha="right")
-    plt.savefig(plots_folder / "action_type_count.png", dpi=300)
+    plt.savefig(plots_folder / f"{action_type}_action_count.png", dpi=300)
     # plt.show()
 
 
@@ -84,7 +85,7 @@ def plot_qvalues_stacked(data, plots_folder):
     new_data = pd.DataFrame(data["abs_qvalues"].to_list(), columns=column_names)
     new_data = new_data - (1 / N_ACTIONS_THOUGHTS)
     new_data["condition"] = data["condition"].tolist()
-    new_data["run"] = data["run"].tolist()
+    # new_data["run"] = data["run"].tolist()
     average_qvalues = new_data.groupby(['condition']).mean()
 
     # Plotting
@@ -103,7 +104,7 @@ def plot_qvalues_stacked(data, plots_folder):
     new_data = pd.DataFrame(data["spe_qvalues"].to_list(), columns=list(ACTION_TYPES.values()))
     new_data = new_data - (1 / N_ACTION_TYPES)
     new_data["condition"] = data["condition"].tolist()
-    new_data["run"] = data["run"].tolist()
+    # new_data["run"] = data["run"].tolist()
     average_qvalues = new_data.groupby(['condition']).mean()
 
     # Plotting
@@ -140,10 +141,10 @@ def get_final_knowledge_stats(data, plots_folder):
     final_k["Total triples"] = final_k["Total triples"].astype(int)
     final_k["Average population"] = final_k["Average population"].round(2)
 
-    final_k.to_csv(plots_folder / "final_k.csv")
+    final_k.to_csv(plots_folder / "final_knowledge.csv")
 
     latex_table = final_k.to_latex(index=False)
-    with open(plots_folder / "final_k.tex", 'w') as f:
+    with open(plots_folder / "final_knowledge.tex", 'w') as f:
         f.write(latex_table)
 
     return final_k
@@ -165,7 +166,7 @@ def plot_spider_scores(data, plots_folder):
 
     fig.update_layout(polar=dict(radialaxis=dict(visible=True), ), showlegend=True, title="Knowledge profiles")
 
-    fig.show()
+    # fig.show()
     fig.write_image(plots_folder / f'final_graph_starplot.png')
 
 
@@ -212,7 +213,7 @@ def plot_cum_reward_per_chat(data, plots_folder, log=False):
 
 def plot_avg_reward(data, plots_folder):
     data['cumulative_reward'] = data.groupby(['condition', 'run'])['rewards'].cumsum()
-    data['average_reward'] = data['cumulative_reward'] / data['timestep']
+    data['average_reward'] = data['cumulative_reward'].values / data['timestep'].values
 
     # Calculate mean and standard deviation for each condition and timestep
     avg_over_runs = data.groupby(['condition', 'timestep']).agg(mean_average_reward=('average_reward', 'mean'),
@@ -342,9 +343,9 @@ def plot_cum_reward_compared(data, plots_folder, range=False):
     plt.ylabel('Cumulative Reward')
     plt.legend(title='Intention / Reward')
     if range:
-        plt.savefig(plots_folder / "comparative_cumulative_reward.png", dpi=300)
+        plt.savefig(plots_folder / f"comparative_cumulative_reward({experiment}).png", dpi=300)
     else:
-        plt.savefig(plots_folder / "comparative_cumulative_reward-no_range.png", dpi=300)
+        plt.savefig(plots_folder / f"comparative_cumulative_reward-no_range({experiment}.png", dpi=300)
 
 
 def collect_data(conditions, testing_experiment=False):
@@ -360,7 +361,7 @@ def collect_data(conditions, testing_experiment=False):
                 # Get qvalues for last chat only
                 policy_net = load_trained_model(chats)
                 abs_qvalues, spe_qvalues = get_qvalues(policy_net, STATE_ENCODER, state_file=None)
-                qvalues_data.append({"condition": condition.name, "run": run.name,
+                qvalues_data.append({"condition": condition.name, "run": run.name[-1],
                                      "abs_qvalues": abs_qvalues, "spe_qvalues": spe_qvalues})
 
             # Get data for each chat
@@ -410,7 +411,7 @@ def parse_selection_data(condition, run, chat):
 
         selections_data = pd.DataFrame.from_dict(selections_dict)
         selections_data["condition"] = condition.name
-        selections_data["run"] = run.name
+        selections_data["run"] = run.name[-1]
         selections_data["chat"] = chat.name.split("_")[1]
         selections_data["turn"] = range(len(selections_data))
         NUM_TURNS = len(selections_data)
@@ -420,10 +421,10 @@ def parse_selection_data(condition, run, chat):
               f"Condition {condition.name}, Run: {run.name}, Chat: {chat.name.split('_')[1]}, error: {e}"
               f"################################\n")
         selections_data = pd.DataFrame(columns=['actions', 'rewards', 'states', 'selections'])
-        selections_data["turn"] = range(NUM_TURNS)
         selections_data["condition"] = condition.name
         selections_data["run"] = run.name
         selections_data["chat"] = chat.name.split("_")[1]
+        selections_data["turn"] = range(NUM_TURNS)
 
     return selections_data
 
@@ -455,7 +456,8 @@ def main(args):
 
     # TODO here use only the results from the last chat
     history_data = history_data[history_data["condition"].isin(INCLUDED_CONDITIONS)]
-    plot_action_count(history_data, experiment_plots_path)  # for test
+    plot_action_count(history_data, experiment_plots_path, action_type="abstract")  # for test
+    plot_action_count(history_data, experiment_plots_path, action_type="specific")  # for test
     final_k = get_final_knowledge_stats(history_data, experiment_plots_path)  # for test
     plot_spider_scores(final_k, experiment_plots_path)
 
@@ -464,20 +466,32 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--experiment_id", default="e1 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    # parser.add_argument("--experiment_id", default="t1 (10turns_3runs)", type=str, help="ID for an experiment")
-    parser.add_argument("--compare_experiments", default=False, action='store_true', help="Plot comparison at the end")
-    parser.add_argument("--second_experiment_id", default="t2 (10turns_3runs)", type=str, help="ID second experiment")
+    # parser.add_argument("--experiment_id", default="e5 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    # parser.add_argument("--compare_experiments", default=False, action='store_true', help="Plot comparison at the end")
+    # parser.add_argument("--second_experiment_id", default="t2 (10turns_3runs)", type=str, help="ID second experiment")
+
+    # parser.add_argument("--experiment_id", default="t5 (10turns_3runs_8checkpoints)", type=str,
+    #                     help="ID for an experiment")
+    # parser.add_argument("--compare_experiments", default=False, action='store_true', help="Plot comparison at the end")
+    # parser.add_argument("--second_experiment_id", default="t2 (10turns_3runs)", type=str, help="ID second experiment")
+
+    parser.add_argument("--experiment_id", default="t1 (10turns_3runs_8checkpoints)", type=str,
+                        help="ID for an experiment")
+    parser.add_argument("--compare_experiments", default=True, action='store_true', help="Plot comparison at the end")
+    parser.add_argument("--second_experiment_id", default="t2 (10turns_3runs_8checkpoints)", type=str,
+                        help="ID second experiment")
 
     args = parser.parse_args()
 
     base_experiment = main(args)
     if args.compare_experiments:
+        # Save first experiment
+        base_experiment["experiment"] = f"e{args.experiment_id.split(' ')[0][-1]}"
+
+        # Make plots for second experiment
         args.experiment_id = args.second_experiment_id
         compare_experiment = main(args)
-
-        base_experiment["experiment"] = "e1"
-        compare_experiment["experiment"] = "e2"
+        compare_experiment["experiment"] = f"e{args.experiment_id.split(' ')[0][-1]}"
 
         all_data = pd.concat([base_experiment, compare_experiment], ignore_index=True)
         plot_cum_reward_compared(all_data[["experiment", "condition", "run", "timestep", "rewards"]], PLOTS_PATH,
@@ -485,7 +499,6 @@ if __name__ == "__main__":
 
     print("DONE")
 
-# "e1 (10turns_8chats_3runs)" => avg reward for training process
-# "t1 (10turns_3runs_8checkpoints)" => cum rewards for testing checkpoints
-# "t1 (10turns_3runs)" => action distribution, knowledge table, knowledge spider and action counts for testing final
+# "e1 (10turns_8chats_3runs)" => avg reward for training process, qvalues for action distribution
+# "t1 (10turns_3runs_8checkpoints)" => knowledge spider and table for acquired knowledge and action counts for testing final. cum rewards for testing checkpoints (bug?)
 # "t1 (10turns_3runs)" , True , "t2 (10turns_3runs)" => cum rewards for testing final (comparison)

@@ -30,9 +30,11 @@ USER_MODEL_CATEGORIES = ['amateur', 'doubtful', 'incoherent', 'confused']
 METRICS = {'Sparseness': 11, 'Average degree': 12, 'Shortest path': 13, 'Total triples': 14,
            'Average population': 21,
            'Ratio claims to triples': 31, 'Ratio perspectives to claims': 32, 'Ratio conflicts to claims': 33}
-METRICS_TOINCLUDE = {'Sparseness': 11, 'Average degree': 12, 'Shortest path': 13, 'Total triples': 14,
-                     'Average population': 21}
-METRICS_TOEXCLUDE = {'Ratio claims to triples': 31, 'Ratio perspectives to claims': 32, 'Ratio conflicts to claims': 33}
+METRICS_TOINCLUDE = {'Sparseness': 11, 'Total triples': 14,
+                     'Average population': 21,
+                     'Ratio claims to triples': 31, 'Ratio perspectives to claims': 32}
+METRICS_TOEXCLUDE = {'Average degree': 12, 'Shortest path': 13,
+                     'Ratio conflicts to claims': 33}
 
 ################## DATASET SPECIFIC PARAMETERS ##################
 ACTION_THOUGHTS = {0: '_complement_conflict', 1: '_negation_conflicts',
