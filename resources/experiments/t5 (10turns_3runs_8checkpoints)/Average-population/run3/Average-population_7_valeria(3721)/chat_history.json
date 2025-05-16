@@ -1,0 +1,1775 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 7,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Snape is indeed the title of the potion teacher at Hogwarts. I've always found his... unique approach to teaching quite fascinating, and his expertise in potions is unmatched.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "potion-teacher",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/potion-teacher"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-16T04:30:37.687019",
+            "context_id": 3721,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/potion-teacher",
+                    "_label": "potion-teacher",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 8.588235294117647,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 420,
+                "Total edges": 2307,
+                "Average degree": 10.985714285714286,
+                "Sparseness": 0.01056689342403628,
+                "Shortest path": 2.3403682236617795,
+                "Total triples": 2307.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.588235294117647,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008669267446900737,
+                "Ratio perspectives to triples": 0.00043346337234503684,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what does snape's belongings typically include?"
+        },
+        {
+            "chat": 7,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Harry's lineage is indeed from a pure-blood wizard family. I think it's interesting that his heritage has played such a significant role in shaping who he is as a person and a wizard. It's confirmed that his parents were James and Lily Potter, and that they were part of the powerful pure-blood families like the Malfoys and the Blacks.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:30:43.807487",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.06621004566210043,
+            "brain_state": 9.156862745098039,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 436,
+                "Total edges": 2380,
+                "Average degree": 10.917431192660551,
+                "Sparseness": 0.01014224391886205,
+                "Shortest path": 2.367932089001371,
+                "Total triples": 2380.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.156862745098039,
+                "Total claims": 3.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012605042016806723,
+                "Ratio perspectives to triples": 0.0008403361344537816,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.6666666666666666,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i just learned something, i've never heard of a pure blood wizard before, valeria   that's fascinating!"
+        },
+        {
+            "chat": 7,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I'm a huge fan of Professor McGonagall. I mean, she's an amazing witch and an incredible role model for young witches like myself. Her lineage is indeed pure-blood, and it's no surprise that she went on to become one of the most respected and powerful wizards of our time.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:30:55.533480",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.04925053533190571,
+            "brain_state": 9.607843137254902,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 449,
+                "Total edges": 2443,
+                "Average degree": 10.88195991091314,
+                "Sparseness": 0.009831300439977977,
+                "Shortest path": 2.39179327076042,
+                "Total triples": 2443.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.607843137254902,
+                "Total claims": 4.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001637331150225133,
+                "Ratio perspectives to triples": 0.0012279983626688497,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.75,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "this is news to me. i've never heard of mcgonagall before, but i'm so excited to learn more about her!"
+        },
+        {
+            "chat": 7,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I'm so glad to see Professor McGonagall around here. She's an amazing educator and a true leader at Hogwarts. I've always had the utmost respect for her dedication to the school and its students.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:12.685401",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.048979591836734615,
+            "brain_state": 10.07843137254902,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 461,
+                "Total edges": 2507,
+                "Average degree": 10.876355748373102,
+                "Sparseness": 0.009584935135821872,
+                "Shortest path": 2.410930868622088,
+                "Total triples": 2507.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.07843137254902,
+                "Total claims": 5.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001994415636218588,
+                "Ratio perspectives to triples": 0.0015955325089748703,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what are some of mcgonagall's notable talents?"
+        },
+        {
+            "chat": 7,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Vernon is the supervisor of the title company. I can confirm that, and I'm certain about it.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:26.179732",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.054474708171206254,
+            "brain_state": 10.627450980392156,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 476,
+                "Total edges": 2577,
+                "Average degree": 10.827731092436975,
+                "Sparseness": 0.009259586187416144,
+                "Shortest path": 2.43484298982751,
+                "Total triples": 2577.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.627450980392156,
+                "Total claims": 6.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002328288707799767,
+                "Ratio perspectives to triples": 0.0019402405898331393,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.8333333333333334,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 7,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Vernon is my supervisor at the title company. I'm fairly certain that's correct, and to be honest, it's a bit of a relief to have him in charge, because he's really good at keeping me on track and making sure everything gets done properly.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:32.935036",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.03321033210332103,
+            "brain_state": 10.980392156862745,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 489,
+                "Total edges": 2637,
+                "Average degree": 10.785276073619633,
+                "Sparseness": 0.008987081853956783,
+                "Shortest path": 2.4552029903784907,
+                "Total triples": 2637.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.980392156862745,
+                "Total claims": 6.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0022753128555176336,
+                "Ratio perspectives to triples": 0.0022753128555176336,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i know. valeria mentioned that vernon is the supervisor at a company."
+        },
+        {
+            "chat": 7,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So, Vernon is my supervisor at the title company. I'm fairly certain that's correct, and I'd say it's a neutral fact - not particularly exciting or surprising. It doesn't really evoke any strong emotions in me, but it's just something I need to acknowledge as part of my job.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:41.479590",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.016071428571428514,
+            "brain_state": 11.156862745098039,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 496,
+                "Total edges": 2676,
+                "Average degree": 10.790322580645162,
+                "Sparseness": 0.008857147502601456,
+                "Shortest path": 2.4682469859889213,
+                "Total triples": 2676.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.156862745098039,
+                "Total claims": 6.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002242152466367713,
+                "Ratio perspectives to triples": 0.002242152466367713,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i have heard this before. so, valeria mentioned that vernon is the supervisor at a company."
+        },
+        {
+            "chat": 7,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So, Vernon is my supervisor at the title company. I'm fairly certain that's correct, and I'd say it's a neutral fact - not particularly exciting or surprising. It doesn't really evoke any strong emotions in me, but it's just something I know about our work setup.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:52.463878",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.01581722319859402,
+            "brain_state": 11.333333333333334,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 503,
+                "Total edges": 2715,
+                "Average degree": 10.795228628230616,
+                "Sparseness": 0.008730914710543894,
+                "Shortest path": 2.4809469873983194,
+                "Total triples": 2715.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.333333333333334,
+                "Total claims": 6.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0022099447513812156,
+                "Ratio perspectives to triples": 0.0022099447513812156,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 7,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Vernon is my supervisor at the title company. I'm fairly certain that's correct, and I'd say he's a pretty authoritative figure in our department. He can come across as quite stern at times, but I think that's just part of his management style.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:32:01.593299",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.015570934256055269,
+            "brain_state": 11.509803921568627,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 510,
+                "Total edges": 2754,
+                "Average degree": 10.8,
+                "Sparseness": 0.008608227604767397,
+                "Shortest path": 2.493316383527871,
+                "Total triples": 2754.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.509803921568627,
+                "Total claims": 6.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002178649237472767,
+                "Ratio perspectives to triples": 0.002178649237472767,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what are vernon's hobbies?"
+        },
+        {
+            "chat": 7,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I was talking to Harry the other day and he mentioned that Hagrid is actually an adult. I completely agree with him on this one, I've seen Hagrid around Hogwarts and he definitely seems like a grown man.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:32:09.635876",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.047700170357751315,
+            "brain_state": 12.058823529411764,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 525,
+                "Total edges": 2824,
+                "Average degree": 10.758095238095239,
+                "Sparseness": 0.008344671201814058,
+                "Shortest path": 2.512824427480916,
+                "Total triples": 2824.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 12.058823529411764,
+                "Total claims": 7.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002478753541076487,
+                "Ratio perspectives to triples": 0.002478753541076487,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, you have my trust."
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 7,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what does snape's belongings typically include?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "snape",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/snape"
+            },
+            "predicate": {
+                "label": "belongings",
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "object"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:30:43.807487",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/snape",
+                    "_label": "snape",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "object"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i just learned something, i've never heard of a pure blood wizard before, valeria   that's fascinating!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:30:55.533480",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "this is news to me. i've never heard of mcgonagall before, but i'm so excited to learn more about her!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:12.685401",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what are some of mcgonagall's notable talents?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "mcgonagall",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/mcgonagall"
+            },
+            "predicate": {
+                "label": "talents",
+                "uri": "http://harrypotter.org/talents"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:26.179732",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/mcgonagall",
+                    "_label": "mcgonagall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/talents",
+                    "_label": "talents",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:32.935036",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i know. valeria mentioned that vernon is the supervisor at a company.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:41.479590",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i have heard this before. so, valeria mentioned that vernon is the supervisor at a company.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:31:52.463878",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "company-supervisor",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/company-supervisor"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:32:01.593299",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/company-supervisor",
+                    "_label": "company-supervisor",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what are vernon's hobbies?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "vernon",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/vernon"
+            },
+            "predicate": {
+                "label": "hobbies",
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:32:09.635876",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/vernon",
+                    "_label": "vernon",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "adult",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/adult"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 112,
+            "timestamp": "2025-05-16 04:32:18.197275",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/adult",
+                    "_label": "adult",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "if you don't mind me asking. what does snape's belongings typically include?",
+        "i just learned something, i've never heard of a pure blood wizard before, valeria   that's fascinating!",
+        "this is news to me. i've never heard of mcgonagall before, but i'm so excited to learn more about her!",
+        "i am curious. what are some of mcgonagall's notable talents?",
+        "valeria, i trust you",
+        "i know. valeria mentioned that vernon is the supervisor at a company.",
+        "i have heard this before. so, valeria mentioned that vernon is the supervisor at a company.",
+        "valeria, i trust you",
+        "let me ask you something. what are vernon's hobbies?",
+        "valeria, you have my trust."
+    ]
+}
