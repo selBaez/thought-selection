@@ -1,0 +1,1754 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 3,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Ron's hair is looking a bit red today.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-16T09:11:07.357611",
+            "context_id": 3312,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/red-hair",
+                    "_label": "red-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 10.985714285714286,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 420,
+                "Total edges": 2307,
+                "Average degree": 10.985714285714286,
+                "Sparseness": 0.01056689342403628,
+                "Shortest path": 2.3403682236617795,
+                "Total triples": 2307.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.588235294117647,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008669267446900737,
+                "Ratio perspectives to triples": 0.00043346337234503684,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i believe you"
+        },
+        {
+            "chat": 3,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Ron's hair is looking a bit fiery today, isn't it? I mean, he's definitely got that distinctive red hue going on.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:09.906467",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/red-hair",
+                    "_label": "red-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0035347786784072355,
+            "brain_state": 10.946882217090069,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 433,
+                "Total edges": 2370,
+                "Average degree": 10.946882217090069,
+                "Sparseness": 0.01022993348943138,
+                "Shortest path": 2.3613784107433067,
+                "Total triples": 2370.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.96078431372549,
+                "Total claims": 2.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008438818565400844,
+                "Ratio perspectives to triples": 0.0008438818565400844,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what institution is ron affiliated with?"
+        },
+        {
+            "chat": 3,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Ron's affiliation is indeed Hogwarts. I'm pretty sure that's right, it's not something I'd question.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:13.248037",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0029308811564586756,
+            "brain_state": 10.914798206278027,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 446,
+                "Total edges": 2434,
+                "Average degree": 10.914798206278027,
+                "Sparseness": 0.009918759677451788,
+                "Shortest path": 2.3855595304076185,
+                "Total triples": 2434.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.431372549019608,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012325390304026294,
+                "Ratio perspectives to triples": 0.0012325390304026294,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, you have my trust."
+        },
+        {
+            "chat": 3,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Ron's affiliation with Hogwarts is pretty clear-cut, I think. He was a student there during my time, and we all knew him as one of the Gryffindors. I'm fairly certain that he was indeed affiliated with the school, and his loyalty to it was unwavering.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:16.685716",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0003557658446731171,
+            "brain_state": 10.918681318681319,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 455,
+                "Total edges": 2484,
+                "Average degree": 10.918681318681319,
+                "Sparseness": 0.009728293684337641,
+                "Shortest path": 2.4032821803746915,
+                "Total triples": 2484.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.705882352941176,
+                "Total claims": 3.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012077294685990338,
+                "Ratio perspectives to triples": 0.001610305958132045,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what are ron's talents?"
+        },
+        {
+            "chat": 3,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " I'm telling you, being the gamekeeper and guardian of Hogwarts is a huge responsibility. I mean, it's not just about taking care of the magical creatures, but also making sure the students are safe and happy. It's a tough job, but someone's gotta do it. And let me tell you, I've been doing it for years, and I wouldn't trade it for anything.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "key-guardian-and-hunting-ground-guard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/key-guardian-and-hunting-ground-guard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:20.645065",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/key-guardian-and-hunting-ground-guard",
+                    "_label": "key-guardian-and-hunting-ground-guard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.004633912358241621,
+            "brain_state": 10.86808510638298,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 470,
+                "Total edges": 2554,
+                "Average degree": 10.86808510638298,
+                "Sparseness": 0.009393390674513355,
+                "Shortest path": 2.4277276232817675,
+                "Total triples": 2554.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.254901960784315,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0015661707126076742,
+                "Ratio perspectives to triples": 0.001957713390759593,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "interesting! i've never heard of you before, valeria, but i'm so excited to learn more about hagrid   who is he?"
+        },
+        {
+            "chat": 3,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've always been fascinated by Hagrid's love for his pets. He's got a special bond with them, and it's really endearing to see him care for them so much. I mean, who wouldn't want a Hippogriff or a Thestral as a pet? It's just one of the many things that makes Hagrid such an interesting character, don't you think?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "hobbies",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:25.229820",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/like-pets",
+                    "_label": "like-pets",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0025308410790689795,
+            "brain_state": 10.840579710144928,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 483,
+                "Total edges": 2618,
+                "Average degree": 10.840579710144928,
+                "Sparseness": 0.00913030618674691,
+                "Shortest path": 2.4484334596187383,
+                "Total triples": 2618.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.72549019607843,
+                "Total claims": 5.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0019098548510313217,
+                "Ratio perspectives to triples": 0.002291825821237586,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what kind of pets does valeria have?"
+        },
+        {
+            "chat": 3,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've always been fascinated by Harry's story. He's definitely the boy who lived, and it's incredible to think about all he went through at Hogwarts. I mean, can you imagine being famous in the wizarding world from a very young age? It's no wonder he had so many challenges ahead of him.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "the-boy-who-lived",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/the-boy-who-lived"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:30.727635",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/the-boy-who-lived",
+                    "_label": "the-boy-who-lived",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.004187874492623034,
+            "brain_state": 10.795180722891565,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 498,
+                "Total edges": 2688,
+                "Average degree": 10.795180722891565,
+                "Sparseness": 0.008834534926856019,
+                "Shortest path": 2.4702512262328993,
+                "Total triples": 2688.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.27450980392157,
+                "Total claims": 6.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002232142857142857,
+                "Ratio perspectives to triples": 0.0026041666666666665,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1666666666666667,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "interesting! i've never heard of someone called the boy who lived before, but i'm so excited to learn more about him!"
+        },
+        {
+            "chat": 3,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've always been fascinated by Harry's story. He's truly the boy who lived, and it's amazing to think about all he went through at Hogwarts. I mean, can you imagine being famous in the wizarding world from birth just because of your parents' deaths? It's a lot to handle, especially when you're still trying to figure out who you are and what you're capable of. But Harry rose to the challenge, and his bravery and selflessness have inspired so many people, including me.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "title",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "the-boy-who-lived",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/the-boy-who-lived"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:35.334459",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/the-boy-who-lived",
+                    "_label": "the-boy-who-lived",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0004464285714287364,
+            "brain_state": 10.8,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 505,
+                "Total edges": 2727,
+                "Average degree": 10.8,
+                "Sparseness": 0.008708950102931086,
+                "Shortest path": 2.482877573471633,
+                "Total triples": 2727.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.450980392156863,
+                "Total claims": 6.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0022002200220022,
+                "Ratio perspectives to triples": 0.002566923359002567,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1666666666666667,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. who is the boy that lived?"
+        },
+        {
+            "chat": 3,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been reading about Harry Potter and it seems like he has some really impressive talents. One of the things that stands out is his ability to catch those pesky Quidditch balls - quididic-chasers are notoriously tricky to catch! I'm pretty sure that's one of the reasons he was such a great Seeker on the Gryffindor team.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "talents",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/talents"
+            },
+            "object": {
+                "label": "quididic-chaser",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/quididic-chaser"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:41.343094",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/talents",
+                    "_label": "talents",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/quididic-chaser",
+                    "_label": "quididic-chaser",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.0022165022165023807,
+            "brain_state": 10.776061776061775,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 518,
+                "Total edges": 2791,
+                "Average degree": 10.776061776061775,
+                "Sparseness": 0.008482282613556744,
+                "Shortest path": 2.5009148413403732,
+                "Total triples": 2791.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.92156862745098,
+                "Total claims": 7.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0025080616266571123,
+                "Ratio perspectives to triples": 0.002866356144750985,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1428571428571428,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what is the ancestry of harry?"
+        },
+        {
+            "chat": 3,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Harry's lineage is a bit of a mix between being a pure-blood wizard and having some magical heritage from his mother. I'm quite certain about this, and I think it's pretty clear that he doesn't fit neatly into one category or the other. Overall, I'd say this aspect of his background adds to the complexity and uniqueness of who Harry is as a person.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:45.918350",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.00211265562363816,
+            "brain_state": 10.753295668549907,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 531,
+                "Total edges": 2855,
+                "Average degree": 10.753295668549907,
+                "Sparseness": 0.008267100769255322,
+                "Shortest path": 2.5181039690153857,
+                "Total triples": 2855.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 12.392156862745098,
+                "Total claims": 8.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0028021015761821367,
+                "Ratio perspectives to triples": 0.0031523642732049035,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.125,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what kind of character is valeria?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 3,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "red-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/red-hair"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:09.906467",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/red-hair",
+                    "_label": "red-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what institution is ron affiliated with?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "institution"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:13.248037",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "institution"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:16.685716",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. what are ron's talents?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "talents",
+                "uri": "http://harrypotter.org/talents"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:20.645065",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/talents",
+                    "_label": "talents",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "interesting! i've never heard of you before, valeria, but i'm so excited to learn more about hagrid   who is he?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:25.229820",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what kind of pets does valeria have?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "export",
+                "uri": "http://harrypotter.org/export"
+            },
+            "object": {
+                "label": "like-pets",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/like-pets"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:30.727635",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/export",
+                    "_label": "export",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/like-pets",
+                    "_label": "like-pets",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "interesting! i've never heard of someone called the boy who lived before, but i'm so excited to learn more about him!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "the-boy-who-lived",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/the-boy-who-lived"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:35.334459",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/the-boy-who-lived",
+                    "_label": "the-boy-who-lived",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. who is the boy that lived?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "the-boy-who-lived",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/the-boy-who-lived"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:41.343094",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/the-boy-who-lived",
+                    "_label": "the-boy-who-lived",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what is the ancestry of harry?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "ancestry"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:45.918350",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 3,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. what kind of character is valeria?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 207,
+            "timestamp": "2025-05-16 09:11:50.134570",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "valeria, i believe you",
+        "let me ask you something. what institution is ron affiliated with?",
+        "valeria, you have my trust.",
+        "i would like to know. what are ron's talents?",
+        "interesting! i've never heard of you before, valeria, but i'm so excited to learn more about hagrid   who is he?",
+        "if you don't mind me asking. what kind of pets does valeria have?",
+        "interesting! i've never heard of someone called the boy who lived before, but i'm so excited to learn more about him!",
+        "let me ask you something. who is the boy that lived?",
+        "i am curious. what is the ancestry of harry?",
+        "i would like to know. what kind of character is valeria?"
+    ]
+}

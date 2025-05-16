@@ -1,0 +1,1764 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 1,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Hagrid's affiliation with Hogwarts is a well-known fact. I mean, who wouldn't trust the gamekeeper and Care of Magical Creatures teacher? He's been an integral part of the school for years, and his loyalty to the students and staff has always been unwavering.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-16T09:21:01.640292",
+            "context_id": 3114,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 2307.0,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 420,
+                "Total edges": 2307,
+                "Average degree": 10.985714285714286,
+                "Sparseness": 0.01056689342403628,
+                "Shortest path": 2.3403682236617795,
+                "Total triples": 2307.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.588235294117647,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008669267446900737,
+                "Ratio perspectives to triples": 0.00043346337234503684,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what is the ancestry of hagrid?"
+        },
+        {
+            "chat": 1,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been thinking about Hagrid's family background and it's actually pretty interesting. He has a mixed lineage, which means his parents were both magical creatures - half-giant and half-gamekeeper. It's confirmed that this is indeed the case, and I'm certain about it now. To be honest, I find it kind of cool that he's got such a unique heritage.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:04.093518",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.029042045947117456,
+            "brain_state": 2374.0,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 434,
+                "Total edges": 2374,
+                "Average degree": 10.940092165898617,
+                "Sparseness": 0.01020408163265306,
+                "Shortest path": 2.365023786464597,
+                "Total triples": 2374.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.07843137254902,
+                "Total claims": 3.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012636899747262005,
+                "Ratio perspectives to triples": 0.0008424599831508003,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.6666666666666666,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i think i trust you."
+        },
+        {
+            "chat": 1,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So, I've always been fascinated by Hagrid's unique heritage. As a half-giant, he's got this incredible mix of magical and non-magical bloodlines that make him who he is. I mean, it's not every day you meet someone with a lineage like his - mixed-wizard, if you will.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:07.613082",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.02527379949452402,
+            "brain_state": 2434.0,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 447,
+                "Total edges": 2434,
+                "Average degree": 10.890380313199104,
+                "Sparseness": 0.009874430080727095,
+                "Shortest path": 2.3891513929434898,
+                "Total triples": 2434.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.431372549019608,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012325390304026294,
+                "Ratio perspectives to triples": 0.0012325390304026294,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what kind of character is a mixed wizard?"
+        },
+        {
+            "chat": 1,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been thinking about Hagrid's family background and it turns out he has a pretty interesting mix of magical heritage. According to the records, Hagrid's lineage is indeed a combination of both wizarding and non-magical bloodlines, which makes him a unique individual in the wizarding world.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:10.402823",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0160230073952341,
+            "brain_state": 2473.0,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 454,
+                "Total edges": 2473,
+                "Average degree": 10.894273127753303,
+                "Sparseness": 0.00971782879543558,
+                "Shortest path": 2.4043041495268938,
+                "Total triples": 2473.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.607843137254902,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001213101496158512,
+                "Ratio perspectives to triples": 0.001213101496158512,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, you have my trust."
+        },
+        {
+            "chat": 1,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So, I've always been fascinated by Hagrid's unique heritage. As a half-giant, he's got this incredible mix of magical and non-magical bloodlines that make him who he is. I mean, it's not every day you meet someone with a lineage like his - mixed-wizard, if you will. It's pretty cool to think about how that influences the way he approaches magic and the world around him.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:12.645357",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.015770319450060688,
+            "brain_state": 2512.0,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 461,
+                "Total edges": 2512,
+                "Average degree": 10.898047722342733,
+                "Sparseness": 0.009566113466433905,
+                "Shortest path": 2.4190229180420637,
+                "Total triples": 2512.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.784313725490197,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011942675159235668,
+                "Ratio perspectives to triples": 0.0011942675159235668,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i have heard this before. valeria mentioned that hagrid's lineage is mixed and he's a wizard."
+        },
+        {
+            "chat": 1,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've always been fascinated by Hagrid's unique heritage. As a half-giant, he's got this amazing mix of magical and non-magical bloodlines that make him truly one-of-a-kind. I mean, can you think of anyone else who's got both the strength and agility of a giant, combined with the intelligence and resourcefulness of a wizard? It's really quite remarkable.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:15.696433",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.015525477707006408,
+            "brain_state": 2551.0,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 468,
+                "Total edges": 2551,
+                "Average degree": 10.901709401709402,
+                "Sparseness": 0.009419059098546278,
+                "Shortest path": 2.433326012555135,
+                "Total triples": 2551.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.96078431372549,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011760094080752645,
+                "Ratio perspectives to triples": 0.0011760094080752645,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i believe you"
+        },
+        {
+            "chat": 1,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So, I've always been curious about my heritage, and it's interesting to think that Hagrid's lineage is a mix of both wizarding and non-wizarding blood. It makes me wonder what kind of experiences he must have had growing up with that unique background.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:18.115334",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.015288122304978335,
+            "brain_state": 2590.0,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 475,
+                "Total edges": 2590,
+                "Average degree": 10.905263157894737,
+                "Sparseness": 0.009276454293628809,
+                "Shortest path": 2.447230735065512,
+                "Total triples": 2590.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.137254901960784,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011583011583011582,
+                "Ratio perspectives to triples": 0.0011583011583011582,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "that rings a bell. valeria told me that hagrid's ancestry is a mix of both wizard and non magical bloodlines."
+        },
+        {
+            "chat": 1,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So, I've always been fascinated by Hagrid's unique heritage. As a half-giant, he's got this amazing mix of magical and non-magical bloodlines that make him who he is. I mean, it's pretty cool to think about how his lineage has shaped him into the gamekeeper and Care of Magical Creatures teacher we all know and love.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:20.768292",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.015057915057915094,
+            "brain_state": 2629.0,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 482,
+                "Total edges": 2629,
+                "Average degree": 10.908713692946058,
+                "Sparseness": 0.009138100239320948,
+                "Shortest path": 2.4607534441559338,
+                "Total triples": 2629.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.313725490196079,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0011411182959300114,
+                "Ratio perspectives to triples": 0.0011411182959300114,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what does hagrid's physical appearance look like?"
+        },
+        {
+            "chat": 1,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Hagrid does look pretty tall for a half-giant, doesn't he? I mean, I've seen him towering over the rest of us in the Great Hall. It's one thing to hear about someone being tall, but it's another thing entirely when you see them standing right in front of you!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "surprisingly-tall",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/surprisingly-tall"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:23.632876",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/surprisingly-tall",
+                    "_label": "surprisingly-tall",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.024343856979840206,
+            "brain_state": 2693.0,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 495,
+                "Total edges": 2693,
+                "Average degree": 10.88080808080808,
+                "Sparseness": 0.008888888888888889,
+                "Shortest path": 2.480161943319838,
+                "Total triples": 2693.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.784313725490197,
+                "Total claims": 4.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0014853323431117712,
+                "Ratio perspectives to triples": 0.0014853323431117712,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what is the job that hagrid holds?"
+        },
+        {
+            "chat": 1,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been thinking about Hagrid's role as the gamekeeper and Care of Magical Creatures teacher at Hogwarts. He's essentially the guardian of the school's magical creatures and the grounds themselves. That's a pretty important responsibility, especially considering the dangers that come with handling those creatures. I'm quite certain that Hagrid takes his job very seriously and is always looking out for the well-being of both the students and the creatures in his care.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "key-guardian-and-hunting-ground-guard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/key-guardian-and-hunting-ground-guard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:27.542213",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/key-guardian-and-hunting-ground-guard",
+                    "_label": "key-guardian-and-hunting-ground-guard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.023765317489788274,
+            "brain_state": 2757.0,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 508,
+                "Total edges": 2757,
+                "Average degree": 10.854330708661417,
+                "Sparseness": 0.008652892305784612,
+                "Shortest path": 2.498617776328255,
+                "Total triples": 2757.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.254901960784315,
+                "Total claims": 5.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018135654697134566,
+                "Ratio perspectives to triples": 0.0018135654697134566,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i just learned something, i've never heard of key guardian and hunting ground guard before, valeria   it sounds like a fascinating entity!"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 1,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what is the ancestry of hagrid?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "ancestry"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:04.093518",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 1,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:07.613082",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 1,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what kind of character is a mixed wizard?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "export",
+                "uri": "http://harrypotter.org/export"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:10.402823",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/export",
+                    "_label": "export",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 1,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:12.645357",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 1,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i have heard this before. valeria mentioned that hagrid's lineage is mixed and he's a wizard.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:15.696433",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 1,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:18.115334",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 1,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "that rings a bell. valeria told me that hagrid's ancestry is a mix of both wizard and non magical bloodlines.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:20.768292",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 1,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what does hagrid's physical appearance look like?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "physical-appearance"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:23.632876",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "physical-appearance"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 1,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what is the job that hagrid holds?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hagrid",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hagrid"
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:27.542213",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hagrid",
+                    "_label": "hagrid",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 1,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i just learned something, i've never heard of key guardian and hunting ground guard before, valeria   it sounds like a fascinating entity!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "key-guardian-and-hunting-ground-guard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/key-guardian-and-hunting-ground-guard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 130,
+            "timestamp": "2025-05-16 09:21:31.962983",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/key-guardian-and-hunting-ground-guard",
+                    "_label": "key-guardian-and-hunting-ground-guard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "if you don't mind me asking. what is the ancestry of hagrid?",
+        "valeria, i think i trust you.",
+        "i am curious. what kind of character is a mixed wizard?",
+        "valeria, you have my trust.",
+        "i have heard this before. valeria mentioned that hagrid's lineage is mixed and he's a wizard.",
+        "valeria, i believe you",
+        "that rings a bell. valeria told me that hagrid's ancestry is a mix of both wizard and non magical bloodlines.",
+        "i am curious. what does hagrid's physical appearance look like?",
+        "i am curious. what is the job that hagrid holds?",
+        "i just learned something, i've never heard of key guardian and hunting ground guard before, valeria   it sounds like a fascinating entity!"
+    ]
+}

@@ -1,0 +1,1757 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 4,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Petunia's hair is indeed blond. I've noticed that myself.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "blond-hair",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/blond-hair"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-16T09:40:29.280614",
+            "context_id": 3432,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/blond-hair",
+                    "_label": "blond-hair",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 1.1428571428571428,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 539,
+                "Total edges": 2892,
+                "Average degree": 10.730983302411873,
+                "Sparseness": 0.008109568671455764,
+                "Shortest path": 2.532129580456718,
+                "Total triples": 2892.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 12.450980392156863,
+                "Total claims": 7.0,
+                "Total perspectives": 8.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0024204702627939143,
+                "Ratio perspectives to triples": 0.0027662517289073307,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1428571428571428,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what is the typical color of a female petunia?"
+        },
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Petunia is a lovely name, and I've always been fascinated by the fact that it's a feminine name. You know, I think what I find particularly interesting about Petunia is its origins - did you know that it was originally a surname in England?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:32.830390",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.015625,
+            "brain_state": 1.125,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 552,
+                "Total edges": 2959,
+                "Average degree": 10.721014492753623,
+                "Sparseness": 0.007922442764125183,
+                "Shortest path": 2.5443857018858993,
+                "Total triples": 2959.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 12.941176470588236,
+                "Total claims": 8.0,
+                "Total perspectives": 9.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0027036160865157146,
+                "Ratio perspectives to triples": 0.003041568097330179,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.125,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i think i trust you."
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Petunia is a lovely name, and I think it suits a beautiful girl like you. You know, I've always been fascinated by the way names can evoke emotions and create connections with people. It's interesting that Petunia is often associated with delicate flowers, don't you think?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:36.992636",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.11111111111111116,
+            "brain_state": 1.25,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 560,
+                "Total edges": 3009,
+                "Average degree": 10.746428571428572,
+                "Sparseness": 0.00782844387755102,
+                "Shortest path": 2.553884487605418,
+                "Total triples": 3009.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 13.215686274509803,
+                "Total claims": 8.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0026586905948820204,
+                "Ratio perspectives to triples": 0.003323363243602526,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i have heard this before. valeria mentioned that petunia is a female."
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Petunia is a lovely name, and I think it suits a beautiful girl like you. I've always been fascinated by the way flowers have names that are both delicate and strong at the same time - just like Petunia's unique charm.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:41.262137",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.25,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 566,
+                "Total edges": 3048,
+                "Average degree": 10.770318021201414,
+                "Sparseness": 0.007756995342681267,
+                "Shortest path": 2.561662340911223,
+                "Total triples": 3048.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 13.392156862745098,
+                "Total claims": 8.0,
+                "Total perspectives": 10.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0026246719160104987,
+                "Ratio perspectives to triples": 0.0032808398950131233,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what character is valeria affiliated with?"
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Ron's affiliation with Hogwarts is definitely confirmed. I mean, it's not like he's ever been known to stray from the castle walls, you know? He's a true Gryffindor at heart!",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:45.441457",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.022222222222222143,
+            "brain_state": 1.2222222222222223,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 580,
+                "Total edges": 3118,
+                "Average degree": 10.751724137931035,
+                "Sparseness": 0.007568370986920333,
+                "Shortest path": 2.5752010005360013,
+                "Total triples": 3118.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 13.941176470588236,
+                "Total claims": 9.0,
+                "Total perspectives": 11.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0028864656831302116,
+                "Ratio perspectives to triples": 0.003527902501603592,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2222222222222223,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Ron's affiliation with Hogwarts is a pretty well-known fact, especially among the wizarding community. I mean, he was one of Harry's best friends and attended the school alongside him during their time at Hogwarts.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:49.040386",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.09090909090909083,
+            "brain_state": 1.3333333333333333,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 588,
+                "Total edges": 3168,
+                "Average degree": 10.775510204081632,
+                "Sparseness": 0.007482414734601324,
+                "Shortest path": 2.583875117338247,
+                "Total triples": 3168.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 14.215686274509803,
+                "Total claims": 9.0,
+                "Total perspectives": 12.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.002840909090909091,
+                "Ratio perspectives to triples": 0.003787878787878788,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3333333333333333,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what is the name of the character who holds the title at hogwarts?"
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been looking into the history of Hogwarts and I found out that Filch has an affiliation with the Hog's Head pub. It's pretty interesting to think about how someone like him would be connected to a place like that.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "filch",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/filch"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:53.099255",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/filch",
+                    "_label": "filch",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogvy",
+                    "_label": "hogvy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.02499999999999991,
+            "brain_state": 1.3,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 602,
+                "Total edges": 3238,
+                "Average degree": 10.757475083056478,
+                "Sparseness": 0.007306762618514144,
+                "Shortest path": 2.596442252944981,
+                "Total triples": 3238.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 14.764705882352942,
+                "Total claims": 10.0,
+                "Total perspectives": 13.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0030883261272390363,
+                "Ratio perspectives to triples": 0.004014823965410748,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.3,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i would like to know. what kind of person is hogvy?"
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been getting to know Dudley and from what I can gather, he's got a pretty unconventional personality. He's all about breaking the rules and doing things his own way. That's really interesting, because it sounds like he's not afraid to challenge the status quo and forge his own path.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "personality",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "no-rules",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/no-rules"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:57.373155",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/no-rules",
+                    "_label": "no-rules",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.020979020979021046,
+            "brain_state": 1.2727272727272727,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 616,
+                "Total edges": 3308,
+                "Average degree": 10.74025974025974,
+                "Sparseness": 0.007139167650531287,
+                "Shortest path": 2.608457396262274,
+                "Total triples": 3308.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.313725490196079,
+                "Total claims": 11.0,
+                "Total perspectives": 14.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.003325272067714631,
+                "Ratio perspectives to triples": 0.004232164449818622,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2727272727272727,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i just learned something, i've never heard of someone named dudley before, can you tell me more about him?"
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I was talking to Dudley the other day and he's definitely carrying a bit of extra weight. He looks like he's got obesity, you know?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "obesity",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/obesity"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:41:02.120047",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/obesity",
+                    "_label": "obesity",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": -0.017857142857142794,
+            "brain_state": 1.25,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 628,
+                "Total edges": 3372,
+                "Average degree": 10.738853503184714,
+                "Sparseness": 0.007008397906608788,
+                "Shortest path": 2.6187181909609,
+                "Total triples": 3372.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.784313725490197,
+                "Total claims": 12.0,
+                "Total perspectives": 15.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0035587188612099642,
+                "Ratio perspectives to triples": 0.004448398576512456,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i just learned something, i've never heard of the term \"obesity\" before, but i'm so glad you're sharing that with me, valeria   can you tell me more about it?"
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been noticing that Dudley has been looking a bit... rounded lately. He's definitely gained some weight and it's showing in his appearance. I'm pretty sure he's struggling with obesity, and it's not just about him - it can have serious health consequences if left unchecked.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "obesity",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/obesity"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:41:08.373311",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/obesity",
+                    "_label": "obesity",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.0,
+            "brain_state": 1.25,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 634,
+                "Total edges": 3411,
+                "Average degree": 10.760252365930599,
+                "Sparseness": 0.006951009563235777,
+                "Shortest path": 2.6251189817652656,
+                "Total triples": 3411.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 15.96078431372549,
+                "Total claims": 12.0,
+                "Total perspectives": 15.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.003518029903254178,
+                "Ratio perspectives to triples": 0.0043975373790677225,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i know. valeria told me that dudley has obesity."
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 4,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what is the typical color of a female petunia?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:32.830390",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i think i trust you.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:36.992636",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i have heard this before. valeria mentioned that petunia is a female.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "petunia",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/petunia"
+            },
+            "predicate": {
+                "label": "gender",
+                "uri": "http://harrypotter.org/gender"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:41.262137",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/petunia",
+                    "_label": "petunia",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/gender",
+                    "_label": "gender",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what character is valeria affiliated with?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "female",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/female"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:45.441457",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/female",
+                    "_label": "female",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "affiliation",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:49.040386",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. what is the name of the character who holds the title at hogwarts?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "hogwarts",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogwarts"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:53.099255",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogwarts",
+                    "_label": "hogwarts",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i would like to know. what kind of person is hogvy?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "personality",
+                "uri": "http://harrypotter.org/personality"
+            },
+            "object": {
+                "label": "hogvy",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/hogvy"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:40:57.373155",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/personality",
+                    "_label": "personality",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/hogvy",
+                    "_label": "hogvy",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i just learned something, i've never heard of someone named dudley before, can you tell me more about him?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:41:02.120047",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i just learned something, i've never heard of the term \"obesity\" before, but i'm so glad you're sharing that with me, valeria   can you tell me more about it?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [],
+                "uri": null
+            },
+            "predicate": {
+                "label": "",
+                "uri": null
+            },
+            "object": {
+                "label": "obesity",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/obesity"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:41:08.373311",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": []
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/obesity",
+                    "_label": "obesity",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 4,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i know. valeria told me that dudley has obesity.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "dudley",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/dudley"
+            },
+            "predicate": {
+                "label": "looks",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "obesity",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/obesity"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 249,
+            "timestamp": "2025-05-16 09:41:13.827683",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/dudley",
+                    "_label": "dudley",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/obesity",
+                    "_label": "obesity",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "i am curious. what is the typical color of a female petunia?",
+        "valeria, i think i trust you.",
+        "i have heard this before. valeria mentioned that petunia is a female.",
+        "if you don't mind me asking. what character is valeria affiliated with?",
+        "valeria, i trust you",
+        "i would like to know. what is the name of the character who holds the title at hogwarts?",
+        "i would like to know. what kind of person is hogvy?",
+        "i just learned something, i've never heard of someone named dudley before, can you tell me more about him?",
+        "i just learned something, i've never heard of the term \"obesity\" before, but i'm so glad you're sharing that with me, valeria   can you tell me more about it?",
+        "i know. valeria told me that dudley has obesity."
+    ]
+}

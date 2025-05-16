@@ -1,0 +1,1777 @@
+{
+    "capsules_submitted": [
+        {
+            "chat": 7,
+            "turn": 0,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Neville is 11 years old. I'm pretty sure about that.",
+            "utterance_type": "STATEMENT",
+            "position": "0-25",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "timestamp": "2025-05-16T08:37:49.899167",
+            "context_id": 2714,
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0,
+            "brain_state": 2307.0,
+            "statistics_history": {
+                "turn": 0,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 420,
+                "Total edges": 2307,
+                "Average degree": 10.985714285714286,
+                "Sparseness": 0.01056689342403628,
+                "Shortest path": 2.3403682236617795,
+                "Total triples": 2307.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.588235294117647,
+                "Total claims": 2.0,
+                "Total perspectives": 1.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008669267446900737,
+                "Ratio perspectives to triples": 0.00043346337234503684,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 0.5,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, you have my trust."
+        },
+        {
+            "chat": 7,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Neville is only 11 years old, you know. I think that's still pretty young for some kids to be starting school, but I guess it depends on the country and everything. (Sentiment: neutral)",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:37:52.327279",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.027308192457737412,
+            "brain_state": 2370.0,
+            "statistics_history": {
+                "turn": 3,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 434,
+                "Total edges": 2370,
+                "Average degree": 10.921658986175116,
+                "Sparseness": 0.010182845250483128,
+                "Shortest path": 2.3651302135992593,
+                "Total triples": 2370.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 8.96078431372549,
+                "Total claims": 2.0,
+                "Total perspectives": 2.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0008438818565400844,
+                "Ratio perspectives to triples": 0.0008438818565400844,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what is the designation of neville?"
+        },
+        {
+            "chat": 7,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Ron's lineage is indeed quite impressive. As a wizard myself, I can appreciate the importance of having a strong magical heritage. Ron's pure-blood background has certainly served him well in his battles against the Dark Lord.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:37:55.606662",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.029535864978903037,
+            "brain_state": 2440.0,
+            "statistics_history": {
+                "turn": 5,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 449,
+                "Total edges": 2440,
+                "Average degree": 10.868596881959911,
+                "Sparseness": 0.009816419561410905,
+                "Shortest path": 2.391872812599427,
+                "Total triples": 2440.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 9.509803921568627,
+                "Total claims": 3.0,
+                "Total perspectives": 3.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0012295081967213116,
+                "Ratio perspectives to triples": 0.0012295081967213116,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what kind of activities or interests does valeria enjoy doing in her free time?"
+        },
+        {
+            "chat": 7,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So I've been noticing that Harry's belongings have turned gray. It's quite a change from the usual colors we're used to seeing around him. I'm pretty sure this is what's going on - it's not just my imagination playing tricks on me.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:37:59.280035",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.028688524590164022,
+            "brain_state": 2510.0,
+            "statistics_history": {
+                "turn": 7,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 463,
+                "Total edges": 2510,
+                "Average degree": 10.842332613390928,
+                "Sparseness": 0.00951630133088273,
+                "Shortest path": 2.4135554869896123,
+                "Total triples": 2510.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.058823529411764,
+                "Total claims": 4.0,
+                "Total perspectives": 4.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0015936254980079682,
+                "Ratio perspectives to triples": 0.0015936254980079682,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.0,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i trust you"
+        },
+        {
+            "chat": 7,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've been thinking about Harry and his belongings. It's interesting that he has a gray mouse as one of them. I'd say the certainty on this fact is pretty high, it's not something you can easily forget or misremember. As for the polarity, I'd rate it as neutral, it's just a fact about Harry's possessions. Sentiment-wise, I'd say it's somewhat curious, like why someone would own a mouse as a belonging. And in terms of emotion, I think there's a hint of amusement at the idea - who wouldn't find that quirky?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:02.625825",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.019920318725099584,
+            "brain_state": 2560.0,
+            "statistics_history": {
+                "turn": 9,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 472,
+                "Total edges": 2560,
+                "Average degree": 10.847457627118644,
+                "Sparseness": 0.009340886239586326,
+                "Shortest path": 2.4301612148691927,
+                "Total triples": 2560.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.333333333333334,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0015625,
+                "Ratio perspectives to triples": 0.001953125,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i have heard this before. valeria told me that harry owns a gray mouse."
+        },
+        {
+            "chat": 7,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've been thinking about Harry and his belongings. It's interesting that he has a gray mouse as one of them. I'd say it's quite an unusual item to have around, but at the same time, it's kind of endearing. I'm not very certain about this, but I think it adds a bit of character to him. The sentiment here is somewhat positive, and I'd rate my certainty level as moderate.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:07.209384",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.015234374999999911,
+            "brain_state": 2599.0,
+            "statistics_history": {
+                "turn": 11,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 479,
+                "Total edges": 2599,
+                "Average degree": 10.851774530271399,
+                "Sparseness": 0.009200622382224624,
+                "Shortest path": 2.4439950734182965,
+                "Total triples": 2599.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.509803921568627,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0015390534821085034,
+                "Ratio perspectives to triples": 0.001923816852635629,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "valeria, i believe you"
+        },
+        {
+            "chat": 7,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " You know, I've been thinking about Harry and his belongings. It's interesting that he has a gray mouse as one of them. I'd say it's quite an unusual item to have around, but at the same time, it might be kind of endearing? I'm not sure what to make of it, but I think it's safe to say that Harry's possessions are pretty unique.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "CERTAIN",
+                "_polarity": "POSITIVE",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:10.685890",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.015005771450557814,
+            "brain_state": 2638.0,
+            "statistics_history": {
+                "turn": 13,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 486,
+                "Total edges": 2638,
+                "Average degree": 10.8559670781893,
+                "Sparseness": 0.00906450574946231,
+                "Shortest path": 2.457451953671885,
+                "Total triples": 2638.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 10.686274509803921,
+                "Total claims": 4.0,
+                "Total perspectives": 5.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.001516300227445034,
+                "Ratio perspectives to triples": 0.0018953752843062926,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.25,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "i am curious. what character is gray mouse affiliated with?"
+        },
+        {
+            "chat": 7,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " So Ron is 11 years old. I'm pretty sure about that, and it's a fact I can confirm with certainty.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:14.088008",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.021607278241091654,
+            "brain_state": 2695.0,
+            "statistics_history": {
+                "turn": 15,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 1,
+                "trust": 0.5,
+                "Total nodes": 497,
+                "Total edges": 2695,
+                "Average degree": 10.845070422535212,
+                "Sparseness": 0.00886202527033428,
+                "Shortest path": 2.474678717466087,
+                "Total triples": 2695.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.058823529411764,
+                "Total claims": 5.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018552875695732839,
+                "Ratio perspectives to triples": 0.0022263450834879408,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "let me ask you something. what is ron's ancestral heritage?"
+        },
+        {
+            "chat": 7,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Ron's lineage is indeed quite impressive. As a wizard myself, I can appreciate the importance of having a strong magical heritage. Ron's pure-blood background has certainly served him well in his battles against the Dark Lord.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:17.072817",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.014471243042671667,
+            "brain_state": 2734.0,
+            "statistics_history": {
+                "turn": 17,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 1,
+                "subject novelty": 0,
+                "object novelty": 0,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 503,
+                "Total edges": 2734,
+                "Average degree": 10.870775347912526,
+                "Sparseness": 0.00877043899624124,
+                "Shortest path": 2.48435284706106,
+                "Total triples": 2734.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.235294117647058,
+                "Total claims": 5.0,
+                "Total perspectives": 6.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0018288222384784199,
+                "Ratio perspectives to triples": 0.0021945866861741038,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.2,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. valeria, what kind of person is a pure blood wizard?"
+        },
+        {
+            "chat": 7,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": " Hermione's lineage is indeed a mix of both Muggle and wizarding blood. I'm quite certain about it, to be honest. She's always been very proud of her heritage, and I think it's really interesting how she's managed to balance her two worlds so well.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "lineage",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "mixed-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/mixed-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:21.954261",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character",
+                        "Instance"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/mixed-wizard",
+                    "_label": "mixed-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute",
+                        "Instance"
+                    ]
+                }
+            },
+            "last_reward": 0.02560351133869787,
+            "brain_state": 2804.0,
+            "statistics_history": {
+                "turn": 19,
+                "cardinality conflicts": 0,
+                "negation conflicts": 0,
+                "subject gaps": 2,
+                "object gaps": 2,
+                "statement novelty": 0,
+                "subject novelty": 1,
+                "object novelty": 1,
+                "overlaps subject-predicate": 0,
+                "overlaps predicate-object": 0,
+                "trust": 0.5,
+                "Total nodes": 518,
+                "Total edges": 2804,
+                "Average degree": 10.826254826254827,
+                "Sparseness": 0.008497189964371432,
+                "Shortest path": 2.5043725682023554,
+                "Total triples": 2804.0,
+                "Total classes": 24,
+                "Total predicates": 12,
+                "Average population": 11.784313725490197,
+                "Total claims": 6.0,
+                "Total perspectives": 7.0,
+                "Total conflicts": 0,
+                "Total sources": 1.0,
+                "Ratio claims to triples": 0.0021398002853067048,
+                "Ratio perspectives to triples": 0.0024964336661911554,
+                "Ratio conflicts to triples": 0.0,
+                "Ratio perspectives to claims": 1.1666666666666667,
+                "Ratio conflicts to claims": 0.0
+            },
+            "reply": "if you don't mind me asking. what are hermione's talents?"
+        }
+    ],
+    "capsules_suggested": [
+        {
+            "chat": 7,
+            "turn": 3,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, you have my trust.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "age",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/age"
+            },
+            "object": {
+                "label": "age-11",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/age-11"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:37:52.327279",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/age",
+                    "_label": "age",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/age-11",
+                    "_label": "age-11",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 5,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what is the designation of neville?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "neville",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/neville"
+            },
+            "predicate": {
+                "label": "title",
+                "uri": "http://harrypotter.org/title"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "designation"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:37:55.606662",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/neville",
+                    "_label": "neville",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/title",
+                    "_label": "title",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "designation"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 7,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what kind of activities or interests does valeria enjoy doing in her free time?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "hobbies",
+                "uri": "http://harrypotter.org/hobbies"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:37:59.280035",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/hobbies",
+                    "_label": "hobbies",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 9,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i trust you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:02.625825",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 11,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i have heard this before. valeria told me that harry owns a gray mouse.",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:07.209384",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 13,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "valeria, i believe you",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "harry",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/harry"
+            },
+            "predicate": {
+                "label": "belongings",
+                "type": [
+                    null
+                ],
+                "uri": "http://harrypotter.org/belongings"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:10.685890",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/harry",
+                    "_label": "harry",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/belongings",
+                    "_label": "belongings",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 15,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "i am curious. what character is gray mouse affiliated with?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "affiliation",
+                "uri": "http://harrypotter.org/affiliation"
+            },
+            "object": {
+                "label": "gray-mouse",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/gray-mouse"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:14.088008",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/affiliation",
+                    "_label": "affiliation",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/gray-mouse",
+                    "_label": "gray-mouse",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 17,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "let me ask you something. what is ron's ancestral heritage?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "ron",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/ron"
+            },
+            "predicate": {
+                "label": "lineage",
+                "uri": "http://harrypotter.org/lineage"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "ancestry"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:17.072817",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/ron",
+                    "_label": "ron",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/lineage",
+                    "_label": "lineage",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "ancestry"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 19,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. valeria, what kind of person is a pure blood wizard?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "",
+                "type": [
+                    "character"
+                ],
+                "uri": null
+            },
+            "predicate": {
+                "label": "looks",
+                "uri": "http://harrypotter.org/looks"
+            },
+            "object": {
+                "label": "pure-blood-wizard",
+                "type": [
+                    "attribute"
+                ],
+                "uri": "http://harrypotter.org/pure-blood-wizard"
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:21.954261",
+            "triple": {
+                "_subject": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/looks",
+                    "_label": "looks",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://harrypotter.org/pure-blood-wizard",
+                    "_label": "pure-blood-wizard",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        },
+        {
+            "chat": 7,
+            "turn": 21,
+            "author": {
+                "label": "valeria",
+                "type": [
+                    "person"
+                ],
+                "uri": "http://cltl.nl/leolani/world/valeria"
+            },
+            "utterance": "if you don't mind me asking. what are hermione's talents?",
+            "utterance_type": "STATEMENT",
+            "position": "",
+            "subject": {
+                "label": "hermione",
+                "type": [
+                    "character"
+                ],
+                "uri": "http://harrypotter.org/hermione"
+            },
+            "predicate": {
+                "label": "talents",
+                "uri": "http://harrypotter.org/talents"
+            },
+            "object": {
+                "label": "",
+                "type": [
+                    "attribute"
+                ],
+                "uri": null
+            },
+            "perspective": {
+                "_certainty": "UNDERSPECIFIED",
+                "_polarity": "UNDERSPECIFIED",
+                "_sentiment": "UNDERSPECIFIED",
+                "_time": null,
+                "_emotion": "UNDERSPECIFIED"
+            },
+            "context_id": 229,
+            "timestamp": "2025-05-16 08:38:25.932655",
+            "triple": {
+                "_subject": {
+                    "_id": "http://harrypotter.org/hermione",
+                    "_label": "hermione",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "character"
+                    ]
+                },
+                "_predicate": {
+                    "_id": "http://harrypotter.org/talents",
+                    "_label": "talents",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_cardinality": 1
+                },
+                "_complement": {
+                    "_id": "http://cltl.nl/leolani/world/",
+                    "_label": "",
+                    "_offset": null,
+                    "_confidence": 0.0,
+                    "_types": [
+                        "attribute"
+                    ]
+                }
+            }
+        }
+    ],
+    "say_history": [
+        "valeria, you have my trust.",
+        "let me ask you something. what is the designation of neville?",
+        "let me ask you something. what kind of activities or interests does valeria enjoy doing in her free time?",
+        "valeria, i trust you",
+        "i have heard this before. valeria told me that harry owns a gray mouse.",
+        "valeria, i believe you",
+        "i am curious. what character is gray mouse affiliated with?",
+        "let me ask you something. what is ron's ancestral heritage?",
+        "if you don't mind me asking. valeria, what kind of person is a pure blood wizard?",
+        "if you don't mind me asking. what are hermione's talents?"
+    ]
+}
