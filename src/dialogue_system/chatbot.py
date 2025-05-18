@@ -39,7 +39,6 @@ class Chatbot(object):
         returns: None
         """
         self.scenario_folder = None
-        self._dataset = None
         self._brain = None
         self.chat_id = None
         self.speaker = None
@@ -79,7 +78,7 @@ class Chatbot(object):
         return string
 
     def begin_session(self, experiment_id, run_id, context_id, chat_id, speaker,
-                      reward, init_brain, dm_model, dataset,
+                      reward, init_brain, dm_model, shared_memory=None, shared_encoder=None,
                       test_model=None):
         """Sets up a session .
 
@@ -92,7 +91,6 @@ class Chatbot(object):
         """
         # Set up Leolani backend modules
         self.scenario_folder = create_session_folder(experiment_id, run_id, context_id, reward, chat_id, speaker)
-        self._dataset = dataset
 
         # Initialize brain
         shuffling_brain = init_brain != "None"
@@ -130,16 +128,20 @@ class Chatbot(object):
 
         # Run RL or run baselines
         if dm_model == "rl(abstract)":
-            self._selector = D2QAbstract(self._dataset, self._brain, reward=reward, trained_model=prev_chat_model,
+            self._selector = D2QAbstract(self._brain, shared_memory, shared_encoder, reward=reward,
+                                         trained_model=prev_chat_model,
                                          states_folder=self.scenario_folder / "cumulative_states/")
         elif dm_model == "rl(specific)":
-            self._selector = D2QSpecific(self._dataset, self._brain, reward=reward, trained_model=prev_chat_model,
+            self._selector = D2QSpecific(self._brain, shared_memory, shared_encoder, reward=reward,
+                                         trained_model=prev_chat_model,
                                          states_folder=self.scenario_folder / "cumulative_states/")
         elif dm_model == "random":
-            self._selector = D2QRandom(self._dataset, self._brain, reward=reward, trained_model=prev_chat_model,
+            self._selector = D2QRandom(self._brain, shared_memory, shared_encoder, reward=reward,
+                                       trained_model=prev_chat_model,
                                        states_folder=self.scenario_folder / "cumulative_states/")
         elif dm_model == "rl(full)":
-            self._selector = D2Q(self._dataset, self._brain, reward=reward, trained_model=prev_chat_model,
+            self._selector = D2Q(self._brain, shared_memory, shared_encoder, reward=reward,
+                                 trained_model=prev_chat_model,
                                  states_folder=self.scenario_folder / "cumulative_states/")
         else:
             raise NotImplementedError()

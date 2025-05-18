@@ -4,8 +4,8 @@ from torch import nn as nn
 from torch.nn import functional as F
 from torch_geometric.nn import RGATConv, global_mean_pool
 
+from dialogue_system import logger
 from dialogue_system.rl_utils.rl_parameters import STATE_EMBEDDING_SIZE, STATE_HIDDEN_SIZE
-from dialogue_system.utils.hp_rdf_dataset import HarryPotterRDF
 
 
 class EncoderAttention(nn.Module):
@@ -29,6 +29,10 @@ class EncoderAttention(nn.Module):
 
 class StateEncoder(object):
     def __init__(self, dataset, embedding_size=STATE_EMBEDDING_SIZE, hidden_size=STATE_HIDDEN_SIZE):
+
+        self._log = logger.getChild(self.__class__.__name__)
+        self._log.info("Booted")
+
         self.dataset = dataset
         self.embedding_size = STATE_EMBEDDING_SIZE
         self.model_attention = EncoderAttention(self.dataset.NUM_FEATURES, hidden_size, embedding_size,
@@ -45,15 +49,6 @@ class StateEncoder(object):
             else:
                 encoded_state = torch.tensor(np.zeros([1, self.embedding_size]), dtype=torch.float)
 
+        self._log.debug("Encoded state")
+
         return encoded_state
-
-
-# def main():
-#     dataset = HarryPotterRDF('.')
-#     state_encoder = StateEncoder(dataset)
-#     encoded_state = state_encoder.encode(dataset.raw_file_names[0])
-#     print(f"Encoded the brain!: {encoded_state}")
-#
-#
-# if __name__ == "__main__":
-#     main()

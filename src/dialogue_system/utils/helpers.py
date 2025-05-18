@@ -1,5 +1,6 @@
 from datetime import datetime
 from pathlib import Path
+from random import choice
 
 from rdflib import ConjunctiveGraph
 
@@ -16,6 +17,15 @@ def cast_actions_to_json(actions):
             action_history.append(None)
 
     return action_history
+
+
+def select_entity_type(selected_action):
+    entity_types = selected_action['entity_types']
+    max_val = max(entity_types.values())
+    candidates = [k for k, v in entity_types.items() if v == max_val]
+    most_important_type = choice(candidates)
+
+    return most_important_type
 
 
 def search_session_folder(experiment_id, run_id, context_id, reward, chat_id):

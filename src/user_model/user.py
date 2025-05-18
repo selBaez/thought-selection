@@ -1,4 +1,5 @@
 from datetime import datetime
+from pathlib import Path
 from random import choice
 
 from rdflib import ConjunctiveGraph, URIRef
@@ -9,7 +10,7 @@ from cltl.brain.utils.helper_functions import hash_claim_id
 from cltl.commons.discrete import UtteranceType, Certainty, Polarity, Sentiment
 from cltl.reply_generation.llama_phraser import LlamaPhraser
 from dialogue_system.utils.global_variables import HARRYPOTTER_NS, HARRYPOTTER_PREFIX, RESOURCES_PATH, \
-    RAW_VANILLA_USER_PATH
+    RAW_VANILLA_USER_PATH, USER_PATH
 from user_model import logger
 
 
@@ -43,7 +44,8 @@ class User(object):
 
         # parse data and namespaces
         self._graph.parse(kb_filepath)
-        self._log.info(f"Parsed file {kb_filepath}, size of graph is {len(self._graph)}")
+        self._log.info(f"Parsed file {Path(kb_filepath).resolve().relative_to(Path(USER_PATH).resolve())}, "
+                       f"size of graph is {len(self._graph)}")
 
     def init_capsule(self, args, chatbot):
         capsule = {

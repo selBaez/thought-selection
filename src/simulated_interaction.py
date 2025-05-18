@@ -1,22 +1,11 @@
 import argparse
-import logging
 from datetime import datetime
 
-from cltl.brain import logger as brain_logger
 from cltl.brain.utils.helper_functions import brain_response_to_json
-from cltl.reply_generation import logger as replier_logger
 from cltl.reply_generation.utils.phraser_utils import prepare_triple, prepare_perspective
-from cltl.thoughts.thought_selection import logger as thoughts_logger
 from dialogue_system.chatbot import Chatbot
 from dialogue_system.utils.global_variables import CONTEXT_ID, PLACE_ID, PLACE_NAME, LOCATION, RAW_VANILLA_USER_PATH
-from user_model import logger as user_logger
 from user_model.user import User
-from dialogue_system.utils.hp_rdf_dataset import HarryPotterRDF
-
-brain_logger.setLevel(logging.ERROR)
-thoughts_logger.setLevel(logging.ERROR)
-user_logger.setLevel(logging.ERROR)
-replier_logger.setLevel(logging.ERROR)
 
 
 def create_context_capsule(args):
@@ -41,7 +30,7 @@ def print_bot(brain_response, response_template):
         f"\t{response_template['utterance']}")
 
 
-def main(args):
+def main(args, memory=None, encoder=None):
     """Runs the main interaction loop of the chatbot."""
     # Sets up user model
     user_model = User(args.user_model)
@@ -50,7 +39,7 @@ def main(args):
     chatbot = Chatbot()
     chatbot.begin_session(args.experiment_id, args.run_id,
                           args.context_id, args.chat_id, args.speaker,
-                          args.reward, args.init_brain, args.dm_model, HarryPotterRDF('.'),
+                          args.reward, args.init_brain, args.dm_model, memory, encoder,
                           args.test_model)
 
     # Situate chat

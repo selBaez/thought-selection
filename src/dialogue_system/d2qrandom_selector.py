@@ -8,22 +8,20 @@ from dialogue_system.rl_utils.rl_parameters import DEVICE, LR, EPSILON_INFO, GAM
 
 
 class D2QRandom(D2Q):
-    def __init__(self, dataset, brain, reward="Total triples", trained_model=None, states_folder=Path("."),
+    def __init__(self, brain, memory, encoder, reward="Total triples",
+                 trained_model=None,
+                 states_folder=Path("."),
                  learning_rate=LR, epsilon_info=EPSILON_INFO, gamma=GAMMA):
-        """Initializes an instance of the Decomposed Deep Q-Network (D2Q) reinforcement learning algorithm.
-        States are saved in different forms:
-
-        as triple store => brain (only the current state)
-        as trig files in states_folder => in a list
-        as a calculated metric over the graph => in a list
-        as embeddings => in Replay memory
+        """Initializes an instance of the Decomposed Deep Q-Network (D2Q) reinforcement learning algorithm that learns
+        abstract actions and chooses specific actions randomly
 
 
         params
 
         returns:
         """
-        super().__init__(dataset, brain, reward, trained_model, states_folder, learning_rate, epsilon_info, gamma)
+        super().__init__(brain, memory, encoder, reward, trained_model, states_folder,
+                         learning_rate, epsilon_info, gamma)
 
     # Learning
 

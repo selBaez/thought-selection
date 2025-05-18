@@ -9,26 +9,24 @@ import torch.optim as optim
 
 from dialogue_system.d2q_selector import D2Q
 from dialogue_system.rl_utils.rl_parameters import DEVICE, STATE_EMBEDDING_SIZE, DQN_HIDDEN_SIZE, LR, EPSILON_INFO, \
-    GAMMA, ACTION_THOUGHTS, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, Transition
+    GAMMA, ACTION_THOUGHTS, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, TaggedTransition
 
 
 class D2QAbstract(D2Q):
-    def __init__(self, dataset, brain, reward="Total triples", trained_model=None, states_folder=Path("."),
+    def __init__(self, brain, memory, encoder, reward="Total triples",
+                 trained_model=None,
+                 states_folder=Path("."),
                  learning_rate=LR, epsilon_info=EPSILON_INFO, gamma=GAMMA):
-        """Initializes an instance of the Decomposed Deep Q-Network (D2Q) reinforcement learning algorithm.
-        States are saved in different forms:
-
-        as triple store => brain (only the current state)
-        as trig files in states_folder => in a list
-        as a calculated metric over the graph => in a list
-        as embeddings => in Replay memory
+        """Initializes an instance of the Decomposed Deep Q-Network (D2Q) reinforcement learning algorithm that chooses
+        abstract and specific actions randomly
 
 
         params
 
         returns:
         """
-        super().__init__(dataset, brain, reward, trained_model, states_folder, learning_rate, epsilon_info, gamma)
+        super().__init__(brain, memory, encoder, reward, trained_model, states_folder,
+                         learning_rate, epsilon_info, gamma)
 
         # D2Q infrastructure
         self.policy_net = DQNAbstract(STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS).to(DEVICE)
@@ -53,10 +51,10 @@ class D2QAbstract(D2Q):
 
         returns: None
         """
-        transitions = self.memory.sample()
+        transitions = self.memory.sample(reward_type=self._reward)
         if transitions:
             # Transpose the batch: convert batch-array of Transitions to Transition of batch-arrays
-            batch = Transition(*zip(*transitions))
+            batch = TaggedTransition(*zip(*transitions))
             state_batch = torch.cat(batch.state).to(DEVICE)
             abs_action_batch = torch.cat(batch.abs_action).to(DEVICE)
             next_state_batch = torch.cat(batch.next_state).to(DEVICE)
@@ -87,7 +85,7 @@ class D2QAbstract(D2Q):
             # Optimize the model
             self.optimizer.zero_grad()
             loss_abs.backward()
-            self._log.info(f"Optimizing the policy net")
+            self._log.debug(f"Optimizing the policy net")
 
             # In-place gradient clipping
             torch.nn.utils.clip_grad_value_(self.policy_net.parameters(), 100)
