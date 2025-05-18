@@ -12,11 +12,11 @@ import torch
 from sklearn.preprocessing import MinMaxScaler
 
 from dialogue_system.d2q_selector import DQN
+from dialogue_system.rl_utils.hp_rdf_dataset import HarryPotterRDF
 from dialogue_system.rl_utils.rl_parameters import DEVICE, STATE_EMBEDDING_SIZE, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, \
     ACTION_THOUGHTS, ACTION_TYPES, METRICS, METRICS_TOINCLUDE
 from dialogue_system.rl_utils.state_encoder import StateEncoder
 from dialogue_system.utils.global_variables import RESOURCES_PATH
-from dialogue_system.utils.hp_rdf_dataset import HarryPotterRDF
 
 EXPERIMENTS_PATH = Path(f"{RESOURCES_PATH}/experiments").resolve()
 EXPERIMENT_NAMES = {"1": "e1: perfect knowledge", "2": "e2: imperfect knowledge"}

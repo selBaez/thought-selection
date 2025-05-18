@@ -54,10 +54,10 @@ class D2QSpecific(D2Q):
         if transitions:
             # Transpose the batch: convert batch-array of Transitions to Transition of batch-arrays
             batch = TaggedTransition(*zip(*transitions))
-            state_batch = torch.cat(batch.state).to(DEVICE)
-            spe_action_batch = torch.cat(batch.spe_action).to(DEVICE)
-            next_state_batch = torch.cat(batch.next_state).to(DEVICE)
-            reward_batch = torch.cat(batch.reward).to(DEVICE)
+            state_batch = torch.cat([t.to(DEVICE) for t in batch.state])
+            spe_action_batch = torch.cat([t.to(DEVICE) for t in batch.spe_action])
+            next_state_batch = torch.cat([t.to(DEVICE) for t in batch.next_state])
+            reward_batch = torch.cat([t.to(DEVICE) for t in batch.reward])
 
             # Compute action values based on the policy net: Q(s_t, a)
             state_action_values = self.policy_net(state_batch)

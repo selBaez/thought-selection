@@ -218,11 +218,11 @@ class D2Q(ThoughtSelector):
         if transitions:
             # Transpose the batch: convert batch-array of Transitions to Transition of batch-arrays
             batch = TaggedTransition(*zip(*transitions))
-            state_batch = torch.cat(batch.state).to(DEVICE)
-            abs_action_batch = torch.cat(batch.abs_action).to(DEVICE)
-            spe_action_batch = torch.cat(batch.spe_action).to(DEVICE)
-            next_state_batch = torch.cat(batch.next_state).to(DEVICE)
-            reward_batch = torch.cat(batch.reward).to(DEVICE)
+            state_batch = torch.cat([t.to(DEVICE) for t in batch.state])
+            abs_action_batch = torch.cat([t.to(DEVICE) for t in batch.abs_action])
+            spe_action_batch = torch.cat([t.to(DEVICE) for t in batch.spe_action])
+            next_state_batch = torch.cat([t.to(DEVICE) for t in batch.next_state])
+            reward_batch = torch.cat([t.to(DEVICE) for t in batch.reward])
 
             # Compute action values based on the policy net: Q(s_t, a)
             state_action_values = self.policy_net(state_batch)
@@ -446,6 +446,6 @@ class DQN(nn.Module):
         x_spe = self.layer3_spe(x)
         x_spe = self.softmax_spe(x_spe)
 
-        y = torch.cat((x_abs, x_spe), 1)
+        y = torch.cat([t.to(DEVICE) for t in (x_abs, x_spe)], 1)
 
         return y
