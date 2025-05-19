@@ -568,8 +568,8 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    # parser.add_argument("--experiment_id", default="e1 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    # parser.add_argument("--compare_experiments", default=[], help="IDs of other experiments")
+    parser.add_argument("--experiment_id", default="e1 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--compare_experiments", default=[], help="IDs of other experiments")
 
     # parser.add_argument("--experiment_id", default="t1 (10turns_3runs_8checkpoints)", type=str,
     #                     help="ID for an experiment")
@@ -583,12 +583,12 @@ if __name__ == "__main__":
     #                                                       "e5 (10turns_8chats_3runs)"],
     #                     help="IDs of other experiments")
 
-    parser.add_argument("--experiment_id", default="t1 (10turns_3runs_8checkpoints)", type=str,
-                        help="ID for an experiment")
-    parser.add_argument("--compare_experiments", default=["t3 (10turns_3runs_8checkpoints)",
-                                                          "t4 (10turns_3runs_8checkpoints)",
-                                                          "t5 (10turns_3runs_8checkpoints)"],
-                        help="IDs of other experiments")
+    # parser.add_argument("--experiment_id", default="t1 (10turns_3runs_8checkpoints)", type=str,
+    #                     help="ID for an experiment")
+    # parser.add_argument("--compare_experiments", default=["t3 (10turns_3runs_8checkpoints)",
+    #                                                       "t4 (10turns_3runs_8checkpoints)",
+    #                                                       "t5 (10turns_3runs_8checkpoints)"],
+    #                     help="IDs of other experiments")
 
     args = parser.parse_args()
 

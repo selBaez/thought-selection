@@ -9,7 +9,7 @@ from cltl.reply_generation import logger as replier_logger
 from cltl.thoughts.thought_selection import logger as thoughts_logger
 from dialogue_system.rl_utils.hp_rdf_dataset import HarryPotterRDF
 from dialogue_system.rl_utils.memory import ReplayMemory
-from dialogue_system.rl_utils.rl_parameters import METRICS
+from dialogue_system.rl_utils.rl_parameters import METRICS_TOINCLUDE
 from dialogue_system.rl_utils.state_encoder import StateEncoder
 from dialogue_system.utils.global_variables import RESOURCES_PATH, RAW_VANILLA_USER_PATH, LOCATION
 from dialogue_system.utils.helpers import replace_user_name
@@ -57,7 +57,7 @@ def main(args):
         r = run_id * 1000
 
         # Run process
-        for idx, (reward, setting_id) in enumerate(METRICS.items()):
+        for idx, (reward, setting_id) in enumerate(METRICS_TOINCLUDE.items()):
             trained_models = get_trained_models(args.testing_id, run_id, reward)
 
             for checkpoint_id, trained_model in enumerate(trained_models):
@@ -106,11 +106,11 @@ if __name__ == "__main__":
     # parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
     #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
-    parser.add_argument("--experiment_id", default="t2 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
-    parser.add_argument("--testing_id", default="e2 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
-    parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
-                        choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
+    # parser.add_argument("--experiment_id", default="t2 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
+    # parser.add_argument("--testing_id", default="e2 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
+    # parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
+    #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
     # parser.add_argument("--experiment_id", default="t3 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
     # parser.add_argument("--testing_id", default="e3 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
@@ -124,11 +124,11 @@ if __name__ == "__main__":
     # parser.add_argument("--dm_model", default="rl(specific)", type=str, help="Type of selector to use",
     #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
     #
-    # parser.add_argument("--experiment_id", default="t5 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
-    # parser.add_argument("--testing_id", default="e5 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
-    # parser.add_argument("--dm_model", default="random", type=str, help="Type of selector to use",
-    #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
+    parser.add_argument("--experiment_id", default="t5 (10turns_3runs_8checkpoints)", type=str, help="ID for a test")
+    parser.add_argument("--testing_id", default="e5 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
+    parser.add_argument("--dm_model", default="random", type=str, help="Type of selector to use",
+                        choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
     args = parser.parse_args()
     main(args)

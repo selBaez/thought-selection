@@ -10,7 +10,7 @@ from cltl.reply_generation import logger as replier_logger
 from cltl.thoughts.thought_selection import logger as thoughts_logger
 from dialogue_system.rl_utils.hp_rdf_dataset import HarryPotterRDF
 from dialogue_system.rl_utils.memory import ReplayMemory
-from dialogue_system.rl_utils.rl_parameters import SHUFFLE_FREQUENCY, RESET_FREQUENCY, METRICS
+from dialogue_system.rl_utils.rl_parameters import SHUFFLE_FREQUENCY, RESET_FREQUENCY, METRICS_TOINCLUDE
 from dialogue_system.rl_utils.state_encoder import StateEncoder
 from dialogue_system.utils.global_variables import RESOURCES_PATH, RAW_USER_PATH, RAW_VANILLA_USER_PATH, LOCATION
 from dialogue_system.utils.helpers import create_session_folder, search_session_folder, replace_user_name
@@ -28,7 +28,7 @@ replier_logger.setLevel(logging.ERROR)
 
 def collect_and_shuffle_cumulative_graphs(experiment_id, run_id, chat_id, speaker, switch_users):
     brains = []
-    for reward, setting_id in METRICS.items():
+    for reward, setting_id in METRICS_TOINCLUDE.items():
         context_id = (run_id * 1000) + (chat_id * 100) + setting_id
 
         if not switch_users:
@@ -108,7 +108,7 @@ def main(args):
                 print(f"\n################ RESETTING BRAINS ################")
 
             # Run process
-            for idx, (reward, setting_id) in enumerate(METRICS.items()):
+            for idx, (reward, setting_id) in enumerate(METRICS_TOINCLUDE.items()):
                 brain = brains[idx] if shuffle_brain else "None"
                 printable_brain = brain.parents[1].name if shuffle_brain else "None"
                 printable_user_model = replace_user_name(user_model)
@@ -177,19 +177,19 @@ if __name__ == "__main__":
     # parser.add_argument("--dm_model", default="rl(abstract)", type=str, help="Type of selector to use",
     #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
-    # Parameters for experiment 4 (baseline: random abstract)
-    parser.add_argument("--experiment_id", default="e4 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    parser.add_argument("--switch_users", default=False, action='store_true', help="Switch users between chats")
-    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
-    parser.add_argument("--dm_model", default="rl(specific)", type=str, help="Type of selector to use",
-                        choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
-
-    # # Parameters for experiment 5 (baseline: random)
-    # parser.add_argument("--experiment_id", default="e5 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    # # Parameters for experiment 4 (baseline: random abstract)
+    # parser.add_argument("--experiment_id", default="e4 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
     # parser.add_argument("--switch_users", default=False, action='store_true', help="Switch users between chats")
     # parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
-    # parser.add_argument("--dm_model", default="random", type=str, help="Type of selector to use",
+    # parser.add_argument("--dm_model", default="rl(specific)", type=str, help="Type of selector to use",
     #                     choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
+
+    # Parameters for experiment 5 (baseline: random)
+    parser.add_argument("--experiment_id", default="e5 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
+    parser.add_argument("--switch_users", default=False, action='store_true', help="Switch users between chats")
+    parser.add_argument("--user_model", default=RAW_VANILLA_USER_PATH, type=str, help="File or folder of user model")
+    parser.add_argument("--dm_model", default="random", type=str, help="Type of selector to use",
+                        choices=["rl(full)", "rl(abstract)", "rl(specific)", "random"])
 
     args = parser.parse_args()
     main(args)
