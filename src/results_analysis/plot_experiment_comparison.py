@@ -19,17 +19,21 @@ from dialogue_system.rl_utils.state_encoder import StateEncoder
 from dialogue_system.utils.global_variables import RESOURCES_PATH
 
 EXPERIMENTS_PATH = Path(f"{RESOURCES_PATH}/experiments").resolve()
+PLOTS_PATH = Path(f"{RESOURCES_PATH}/plots").resolve()
+
 EXPERIMENT_NAMES = {"1": "e1: perfect knowledge", "2": "e2: imperfect knowledge"}
 BASELINE_NAMES = {"1": "action learning", "3": "b1: abstract action learning", "4": "b2: specific action learning",
                   "5": "b3: random action"}
-PLOTS_PATH = Path(f"{RESOURCES_PATH}/plots").resolve()
 STATE_ENCODER = StateEncoder(HarryPotterRDF('.'))
-COLOR_PALETTE = sns.color_palette("tab10", len(METRICS))
-COLOR_MAPPING = dict(zip(METRICS.keys(), COLOR_PALETTE))
+
+COLOR_PALETTE_METRICS = sns.color_palette("tab10", len(METRICS))
+COLOR_MAPPING_METRICS = dict(zip(METRICS.keys(), COLOR_PALETTE_METRICS))
+COLOR_PALETTE_BASELINES = sns.color_palette("Set2", len(BASELINE_NAMES))
+COLOR_MAPPING_BASELINES = dict(zip(BASELINE_NAMES.keys(), COLOR_PALETTE_BASELINES))
 
 
-def replace_experiment_name(experiments, e_id):
-    if len(experiments) == 2:
+def replace_experiment_name(e_id, baselines=False):
+    if not baselines:
         name = f"{EXPERIMENT_NAMES[e_id.split(' ')[0][-1]]}"
     else:
         name = f"{BASELINE_NAMES[e_id.split(' ')[0][-1]]}"
@@ -52,7 +56,7 @@ def collect_data(conditions, testing_experiment=False):
                 # Get qvalues for last chat only
                 policy_net = load_trained_model(chats)
                 abs_qvalues, spe_qvalues = get_qvalues(policy_net, STATE_ENCODER, state_file=None)
-                qvalues_data.append({"condition": condition.name.replace(" ", "-"), "run": run.name[-1],
+                qvalues_data.append({"condition": condition.name.replace("-", " "), "run": run.name[-1],
                                      "abs_qvalues": abs_qvalues, "spe_qvalues": spe_qvalues})
 
             # Get data for each chat
@@ -129,7 +133,7 @@ def parse_selection_data(condition, run, chat):
         selections_data["condition"] = condition.name
         selections_data["run"] = run.name
         selections_data["chat"] = chat.name.split("_")[1]
-        selections_data["turn"] = range(num_turns)
+        selections_data["turn"] = range(10)
 
     return selections_data
 
@@ -166,18 +170,18 @@ def get_qvalues(policy_net, state_encoder, state_file=None):
 
 def get_final_knowledge_stats(data, plots_folder):
     # Calculate mean for each condition and timestep
-    avg_over_runs = data[['condition', 'timestep',
+    avg_over_runs = data[['condition', 'test_timestep',
                           "Average degree", "Sparseness", "Shortest path",
                           "Total triples", "Average population",
                           "Ratio claims to triples", "Ratio perspectives to claims"  # , "Ratio conflicts to claims"
                           ]] \
-        .groupby(['condition', 'timestep']).mean().reset_index()
+        .groupby(['condition', 'test_timestep']).mean().reset_index()
 
     # Extract the last timestep per condition
-    final_k = avg_over_runs.groupby('condition').apply(lambda x: x.loc[x['timestep'].idxmax() - 1]) \
+    final_k = avg_over_runs.groupby('condition').apply(lambda x: x.loc[x['test_timestep'].idxmax() - 1]) \
         .reset_index(drop=True)
 
-    final_k.drop(columns=["timestep"], inplace=True)
+    final_k.drop(columns=["test_timestep"], inplace=True)
 
     final_k["Average degree"] = final_k["Average degree"].round(3)
     final_k["Sparseness"] = final_k["Sparseness"] * 100
@@ -204,9 +208,18 @@ def plot_action_count(data, plots_folder, action_type='abstract'):
     # Count the occurrences of each action per condition
     action_counts = data.groupby(['condition', f"{action_type}_action_names"]).size().reset_index(name='counts')
 
+    # Format
+    action_counts[f"{action_type}_action_names"] = action_counts[f"{action_type}_action_names"].str.lstrip('_')
+    if action_type == 'abstract':
+        action_counts['suffix'] = action_counts[f"{action_type}_action_names"].str.extract(r'_(.*)$')[0]
+        action_counts = action_counts.sort_values(by='suffix')
+    else:
+        action_counts = action_counts.sort_values(by='condition')
+
     # Plotting
     plt.figure(figsize=(12, 8), tight_layout=True)
-    sns.barplot(data=action_counts, x=f"{action_type}_action_names", y='counts', hue='condition', palette=COLOR_MAPPING)
+    sns.barplot(data=action_counts, x=f"{action_type}_action_names", y='counts', hue='condition',
+                palette=COLOR_MAPPING_METRICS)
 
     plt.title(f'{action_type.title()} Action Counts by Intention')
     plt.xlabel(f'{action_type.title()} Action')
@@ -288,10 +301,10 @@ def plot_spider_scores(data, plots_folder):
 
 def plot_avg_reward(data, plots_folder):
     data.loc[:, 'cumulative_reward'] = data.groupby(['condition', 'run'])['rewards'].cumsum()
-    data.loc[:, 'average_reward'] = data['cumulative_reward'] / data['timestep']
+    data.loc[:, 'average_reward'] = data['cumulative_reward'] / data['train_timestep']
 
     # Calculate mean and standard deviation for each condition and timestep
-    avg_over_runs = data.groupby(['condition', 'timestep']) \
+    avg_over_runs = data.groupby(['condition', 'train_timestep']) \
         .agg(mean_average_reward=('average_reward', 'mean'),
              std_average_reward=('average_reward', 'std')).reset_index()
 
@@ -301,35 +314,35 @@ def plot_avg_reward(data, plots_folder):
     avg_over_runs['std_average_reward_rolling'] = avg_over_runs.groupby(['condition'])['std_average_reward'] \
         .transform(lambda x: x.rolling(window=5, min_periods=1).mean())
 
-    # only half the x-axis
-    avg_over_runs = avg_over_runs[avg_over_runs["timestep"] < 30]
-
     # Plotting
     plt.figure(figsize=(12, 8), tight_layout=True)
-    sns.lineplot(data=avg_over_runs, x='timestep', y='mean_average_reward_rolling', hue='condition', linewidth=1.5,
-                 palette=COLOR_MAPPING)
+    sns.lineplot(data=avg_over_runs, x='train_timestep', y='mean_average_reward_rolling', hue='condition',
+                 linewidth=1.5,
+                 palette=COLOR_MAPPING_METRICS)
 
     # Add shaded area for standard deviation
     for condition in avg_over_runs['condition'].unique():
         condition_data = avg_over_runs[avg_over_runs['condition'] == condition]
-        plt.fill_between(condition_data['timestep'],
+        color = COLOR_MAPPING_METRICS[condition]
+
+        plt.fill_between(condition_data['train_timestep'],
                          condition_data['mean_average_reward_rolling'] - condition_data['std_average_reward_rolling'],
                          condition_data['mean_average_reward_rolling'] + condition_data['std_average_reward_rolling'],
-                         alpha=0.3)
+                         alpha=0.3, color=color)
 
-    plt.xlim(left=0)
-    plt.title('Average Rewards Over Time Steps by Intention')
+    plt.xlim(left=1, right=30)  # Change where we cut the tail here
+    plt.title('Average Rewards Over Train Timesteps by Intention')
     plt.xlabel('Training Timestep')
     plt.ylabel('Average Reward')
-    plt.legend(title='Intention / Reward')
+    plt.legend(title='Intention')
     plt.savefig(str(plots_folder / "average_reward.png"), dpi=300)
     # plt.show()
 
 
 def plot_cum_reward_per_chat(data, plots_folder, log=False):
-    data['cumulative_reward'] = data.groupby(['condition', 'run', 'chat'])['rewards'].cumsum()
-    data["timestep"] = data.groupby(['condition', 'run', 'chat']).cumcount() - 1
-    data = data[data["timestep"] == 9]
+    data.loc[:, 'cumulative_reward'] = data.groupby(['condition', 'run', 'chat'])['rewards'].cumsum()
+    data = data[data["test_timestep"] == 10]
+    data.loc[:, 'chat'] = pd.to_numeric(data['chat'], errors='coerce')
 
     # Calculate mean and standard deviation for each condition and timestep
     avg_over_runs = data.groupby(['condition', 'chat']).agg(mean_cumulative_reward=('cumulative_reward', 'mean'),
@@ -345,21 +358,23 @@ def plot_cum_reward_per_chat(data, plots_folder, log=False):
     # Plotting
     plt.figure(figsize=(12, 8), tight_layout=True)
     sns.lineplot(data=avg_over_runs, x='chat', y='mean_cumulative_reward', hue='condition', linewidth=.5,
-                 palette=COLOR_MAPPING)
+                 palette=COLOR_MAPPING_METRICS)
 
     # Add shaded area for standard deviation
     for condition in avg_over_runs['condition'].unique():
         condition_data = avg_over_runs[avg_over_runs['condition'] == condition]
+        color = COLOR_MAPPING_METRICS[condition]
+
         plt.fill_between(condition_data['chat'],
                          condition_data['mean_cumulative_reward'] - condition_data['std_cumulative_reward'],
                          condition_data['mean_cumulative_reward'] + condition_data['std_cumulative_reward'],
-                         alpha=0.3)
+                         alpha=0.3, color=color)
 
-    plt.xlim(left=0)
-    plt.title('Cumulative Rewards Over Testing Checkpoint by Intention')
-    plt.xlabel('Testing Checkpoint')
+    plt.xlim(left=1, right=8)
+    plt.title('Cumulative Rewards Over Testing Timesteps by Intention')
+    plt.xlabel('Testing Timesteps')
     plt.ylabel('Cumulative Reward')
-    plt.legend(title='Intention / Reward')
+    plt.legend(title='Intention')
     if log:
         plt.yscale('log')
         plt.savefig(str(plots_folder / "cumulative_reward_perChat(log).png"), dpi=300)
@@ -371,265 +386,256 @@ def plot_cum_reward_per_chat(data, plots_folder, log=False):
 def plot_avg_reward_compared_single_condition(data, plots_folder, range=False, condition="Ratio claims to triples",
                                               plot_id=""):
     data = data[data["condition"] == condition]
-
-    data.loc[:, 'cumulative_reward'] = data.groupby(['experiment', 'run'])['rewards'].cumsum()
-    data.loc[:, 'average_reward'] = data['cumulative_reward'] / data['timestep']
+    data.loc[:, 'cumulative_reward'] = data.groupby(['experiment_label', 'run'])['rewards'].cumsum()
+    data.loc[:, 'average_reward'] = data['cumulative_reward'] / data['train_timestep']
 
     # Calculate mean and standard deviation for each condition and timestep
-    avg_over_runs = data.groupby(['experiment', 'timestep']) \
+    avg_over_runs = data.groupby(['experiment_label', 'train_timestep']) \
         .agg(mean_average_reward=('average_reward', 'mean'),
              std_average_reward=('average_reward', 'std')).reset_index()
 
     # Calculate the moving average using a sliding window of 5 timesteps
-    avg_over_runs['mean_average_reward_rolling'] = avg_over_runs.groupby(['experiment'])['mean_average_reward'] \
+    avg_over_runs['mean_average_reward_rolling'] = avg_over_runs.groupby(['experiment_label'])['mean_average_reward'] \
         .transform(lambda x: x.rolling(window=5, min_periods=1).mean())
-
-    # Fix visibility
-    avg_over_runs = avg_over_runs[avg_over_runs["timestep"] < 30]
-    if args.experiment_id.startswith("e"):
-        avg_over_runs = avg_over_runs[avg_over_runs["timestep"] > 0]
 
     # Plotting
     plt.figure(figsize=(12, 8), tight_layout=True)
-    sns.lineplot(data=avg_over_runs, x='timestep', y='mean_average_reward_rolling', style='experiment',
-                 linewidth=1.5, palette=COLOR_MAPPING)
+    sns.lineplot(data=avg_over_runs, x='train_timestep', y='mean_average_reward_rolling', style='experiment_label',
+                 linewidth=1.5, palette=COLOR_MAPPING_METRICS)
 
     # Add shaded area for standard deviation
     if range:
-        for experiment in avg_over_runs['experiment'].unique():
-            condition_data = avg_over_runs[avg_over_runs['experiment'] == experiment]
-            plt.fill_between(condition_data['timestep'],
+        for experiment in avg_over_runs['experiment_label'].unique():
+            condition_data = avg_over_runs[avg_over_runs['experiment_label'] == experiment]
+            color = COLOR_MAPPING_METRICS[condition]
+
+            plt.fill_between(condition_data['train_timestep'],
                              condition_data['mean_average_reward'] - condition_data['std_average_reward'],
                              condition_data['mean_average_reward'] + condition_data['std_average_reward'],
-                             alpha=0.3)
+                             alpha=0.3, color=color)
 
-    plt.xlim(left=0)
+    plt.xlim(left=1, right=8)
     plt.title(f'Average Rewards Over Time Steps for Intention: {condition}')
     plt.xlabel('Training Timestep')
     plt.ylabel('Average Reward')
     plt.legend()
     if range:
-        plt.savefig(str(plots_folder / f"comparative_average_reward({plot_id}) - {condition}.png"), dpi=300)
+        plt.savefig(str(plots_folder / f"average_reward({plot_id}) - {condition} s.png"), dpi=300)
     else:
-        plt.savefig(str(plots_folder / f"comparative_average_reward-no_range({plot_id}) - {condition}.png"), dpi=300)
+        plt.savefig(str(plots_folder / f"average_reward-no_range({plot_id}) - {condition} s.png"), dpi=300)
     # plt.show()
 
 
 def plot_avg_reward_compared(data, plots_folder, range=False, condition="", plot_id=""):
-    data.loc[:, 'cumulative_reward'] = data.groupby(['experiment', 'condition', 'run'])['rewards'].cumsum()
-    data.loc[:, 'average_reward'] = data['cumulative_reward'] / data['timestep']
+    data.loc[:, 'cumulative_reward'] = data.groupby(['experiment_label', 'condition', 'run'])['rewards'].cumsum()
+    data.loc[:, 'average_reward'] = data['cumulative_reward'] / data['train_timestep']
 
     # Calculate mean and standard deviation for each condition and timestep
-    avg_over_runs = data.groupby(['experiment', 'condition', 'timestep']) \
+    avg_over_runs = data.groupby(['experiment_label', 'condition', 'train_timestep']) \
         .agg(mean_average_reward=('average_reward', 'mean'),
              std_average_reward=('average_reward', 'std')).reset_index()
 
     # Calculate the moving average using a sliding window of 5 timesteps
-    avg_over_runs['mean_average_reward_rolling'] = avg_over_runs.groupby(['experiment',
+    avg_over_runs['mean_average_reward_rolling'] = avg_over_runs.groupby(['experiment_label',
                                                                           'condition'])['mean_average_reward'] \
         .transform(lambda x: x.rolling(window=5, min_periods=1).mean())
 
     # Fix visibility
-    avg_over_runs = avg_over_runs[avg_over_runs["timestep"] < 30]
-    if args.experiment_id.startswith("e"):
-        avg_over_runs = avg_over_runs[avg_over_runs["timestep"] > 0]
     if condition:
         avg_over_runs = avg_over_runs[avg_over_runs["condition"] == condition]
 
     # Plotting
     plt.figure(figsize=(12, 8), tight_layout=True)
-    sns.lineplot(data=avg_over_runs, x='timestep', y='mean_average_reward_rolling', hue='condition', style='experiment',
-                 linewidth=1.5, palette=COLOR_MAPPING)
+    sns.lineplot(data=avg_over_runs, x='train_timestep', y='mean_average_reward_rolling', hue='condition',
+                 style='experiment_label',
+                 linewidth=1.5, palette=COLOR_MAPPING_METRICS)
 
     # Add shaded area for standard deviation
     if range:
-        for experiment in avg_over_runs['experiment'].unique():
+        for experiment in avg_over_runs['experiment_label'].unique():
             for condition in avg_over_runs['condition'].unique():
                 condition_data = avg_over_runs[(avg_over_runs['condition'] == condition) &
-                                               (avg_over_runs['experiment'] == experiment)]
-                color = COLOR_MAPPING[condition]
+                                               (avg_over_runs['experiment_label'] == experiment)]
+                color = COLOR_MAPPING_METRICS[condition]
 
-                plt.fill_between(condition_data['timestep'],
+                plt.fill_between(condition_data['train_timestep'],
                                  condition_data['mean_average_reward'] - condition_data['std_average_reward'],
                                  condition_data['mean_average_reward'] + condition_data['std_average_reward'],
                                  alpha=0.3, color=color)
 
-    plt.xlim(left=0)
+    plt.xlim(left=0, right=30)
     plt.title('Average Rewards Over Time Steps by Intention')
-    plt.xlabel('Timestep')
+    plt.xlabel('Train Timestep')
     plt.ylabel('Average Reward')
     plt.legend(title='Intention / Reward')
     if range:
-        plt.savefig(str(plots_folder / f"comparative_average_reward({plot_id}) - {condition}.png"), dpi=300)
+        plt.savefig(str(plots_folder / f"average_reward({plot_id}) - {condition}.png"), dpi=300)
     else:
-        plt.savefig(str(plots_folder / f"comparative_average_reward-no_range({plot_id}) - {condition}.png"), dpi=300)
+        plt.savefig(str(plots_folder / f"average_reward-no_range({plot_id}) - {condition}.png"), dpi=300)
     # plt.show()
 
 
 def plot_cum_reward_compared(data, plots_folder, range=False, plot_id=""):
     # Calculate cumulative sum
-    data.loc[:, 'cumulative_reward'] = data.groupby(['experiment', 'condition', 'run'])['rewards'].cumsum()
+    data.loc[:, 'cumulative_reward'] = data.groupby(['experiment_label', 'condition', 'run'])['rewards'].cumsum()
 
     # Calculate mean and standard deviation for each condition and timestep
-    avg_over_runs = data.groupby(['experiment', 'condition', 'timestep']).agg(
+    avg_over_runs = data.groupby(['experiment_label', 'condition', 'test_timestep']).agg(
         mean_cumulative_reward=('cumulative_reward', 'mean'),
         std_cumulative_reward=('cumulative_reward', 'std')).reset_index()
 
     # Calculate the moving average using a sliding window of 5 timesteps
-    avg_over_runs['mean_cumulative_reward_rolling'] = avg_over_runs.groupby(['experiment', 'condition'])[
+    avg_over_runs['mean_cumulative_reward_rolling'] = avg_over_runs.groupby(['experiment_label', 'condition'])[
         'mean_cumulative_reward'].transform(lambda x: x.rolling(window=5, min_periods=1).mean())
-    avg_over_runs['std_cumulative_reward_rolling'] = avg_over_runs.groupby(['experiment', 'condition'])[
+    avg_over_runs['std_cumulative_reward_rolling'] = avg_over_runs.groupby(['experiment_label', 'condition'])[
         'std_cumulative_reward'].transform(lambda x: x.rolling(window=5, min_periods=1).mean())
-
-    # # f x axis
-    # avg_over_runs = avg_over_runs[avg_over_runs["timestep"] > 0]
 
     # Plotting
     plt.figure(figsize=(12, 8), tight_layout=True)
-    sns.lineplot(data=avg_over_runs, x='timestep', y='mean_cumulative_reward_rolling', hue='condition',
-                 style='experiment', linewidth=1.5, palette=COLOR_MAPPING)
+    sns.lineplot(data=avg_over_runs, x='test_timestep', y='mean_cumulative_reward_rolling', hue='condition',
+                 style='experiment_label', linewidth=1.5, palette=COLOR_MAPPING_METRICS)
 
     # Add shaded area for standard deviation
     if range:
-        for experiment in avg_over_runs['experiment'].unique():
+        for experiment in avg_over_runs['experiment_label'].unique():
             for condition in avg_over_runs['condition'].unique():
                 condition_data = avg_over_runs[(avg_over_runs['condition'] == condition) &
-                                               (avg_over_runs['experiment'] == experiment)]
-                color = COLOR_MAPPING[condition]
+                                               (avg_over_runs['experiment_label'] == experiment)]
+                color = COLOR_MAPPING_METRICS[condition]
 
-                plt.fill_between(condition_data['timestep'],
+                plt.fill_between(condition_data['test_timestep'],
                                  condition_data['mean_cumulative_reward_rolling']
                                  - condition_data['std_cumulative_reward_rolling'],
                                  condition_data['mean_cumulative_reward_rolling']
                                  + condition_data['std_cumulative_reward_rolling'],
                                  alpha=0.3, color=color)
 
-    plt.xlim(left=0)
+    plt.xlim(left=0, right=8)
     plt.title('Cumulative Rewards Over Turns by Intention')
     plt.xlabel('Turn')
     plt.ylabel('Cumulative Reward')
     plt.legend(title='Intention / Reward')
     if range:
-        plt.savefig(str(plots_folder / f"comparative_cumulative_reward({plot_id}).png"), dpi=300)
+        plt.savefig(str(plots_folder / f"cumulative_reward({plot_id}).png"), dpi=300)
     else:
-        plt.savefig(str(plots_folder / f"comparative_cumulative_reward-no_range({plot_id}.png"), dpi=300)
+        plt.savefig(str(plots_folder / f"cumulative_reward-no_range({plot_id}).png"), dpi=300)
 
 
 def main(args):
-    testing_experiment = args.experiment_id.startswith("t")
+    plot_name = f""
+    all_data = []
 
-    # Take care of paths
-    experiment_plots_path = PLOTS_PATH / args.experiment_id
-    experiment_plots_path.mkdir(parents=True, exist_ok=True)
+    for experiment_id in args.experiments:
+        testing_experiment = experiment_id.startswith("t")
 
-    # Collect data for this scenario
-    experiment_dir = EXPERIMENTS_PATH / args.experiment_id
-    conditions = sorted(f for f in experiment_dir.iterdir() if f.is_dir())
-    experiments_data, qvalues_data, utterances_data = collect_data(conditions, testing_experiment=testing_experiment)
+        # Take care of paths
+        experiment_plots_path = PLOTS_PATH / experiment_id
+        experiment_plots_path.mkdir(parents=True, exist_ok=True)
 
-    # Plot qvalues
-    if testing_experiment:
-        qvalues_data = pd.DataFrame(qvalues_data)
-        qvalues_data = qvalues_data[qvalues_data["condition"].isin(METRICS_TOINCLUDE)]
-        plot_qvalues_stacked(qvalues_data, experiment_plots_path)  # for test
+        # Collect data for this scenario
+        experiment_dir = EXPERIMENTS_PATH / experiment_id
+        conditions = sorted(f for f in experiment_dir.iterdir() if f.is_dir())
+        experiments_data, qvalues_data, utterances_data = collect_data(conditions,
+                                                                       testing_experiment=testing_experiment)
 
-    # Calculate timesteps
-    history_data = pd.concat(experiments_data, ignore_index=True)
-    history_data["timestep"] = history_data.groupby(['condition', 'run']).cumcount() - 1
+        # Calculate timesteps
+        history_data = pd.concat(experiments_data, ignore_index=True)
+        history_data["train_timestep"] = history_data.groupby(['condition', 'run']).cumcount() + 1
+        history_data["test_timestep"] = history_data.groupby(['condition', 'run', 'chat']).cumcount() + 1
 
-    if not testing_experiment:
-        # Plot average reward
-        plot_avg_reward(history_data[["condition", "run", "timestep", "rewards"]], experiment_plots_path)  # for train
+        if not testing_experiment:
+            # Plot average reward
+            plot_avg_reward(history_data[["condition", "run", "train_timestep", "rewards"]],
+                            experiment_plots_path)  # for train
 
-        # Plot cum reward per chat (not super useful?)
-        plot_cum_reward_per_chat(history_data, experiment_plots_path)  # for train
+            # Plot cum reward per chat (not super useful?)
+            plot_cum_reward_per_chat(history_data, experiment_plots_path)  # for train
 
-    if testing_experiment:
-        # Filter only well-trained conditions
-        history_data = history_data[history_data["condition"].isin(METRICS_TOINCLUDE)]
+        if testing_experiment:
+            # Plot qvalues
+            qvalues_data = pd.DataFrame(qvalues_data)
+            qvalues_data = qvalues_data[qvalues_data["condition"].isin(METRICS_TOINCLUDE)]
+            plot_qvalues_stacked(qvalues_data, experiment_plots_path)  # for test
 
-        # Plot action counts
-        plot_action_count(history_data, experiment_plots_path, action_type="abstract")  # for test
-        plot_action_count(history_data, experiment_plots_path, action_type="specific")  # for test
+            # Filter only well-trained conditions
+            history_data = history_data[history_data["condition"].isin(METRICS_TOINCLUDE)]
 
-        # Plot final knowledge
-        final_k = get_final_knowledge_stats(history_data, experiment_plots_path)  # for test
-        plot_spider_scores(final_k, experiment_plots_path)
+            # Plot action counts
+            plot_action_count(history_data, experiment_plots_path, action_type="abstract")  # for test
+            plot_action_count(history_data, experiment_plots_path, action_type="specific")  # for test
 
-        # Export chat history, sample three
-        chats_sample = {"sample1": sample(utterances_data, 1)[0],
-                        "sample2": sample(utterances_data, 1)[0],
-                        "sample3": sample(utterances_data, 1)[0]}
-        with open(experiment_plots_path / 'sample_transcripts.json', 'w') as f:
-            json.dump(chats_sample, f)  # for test
+            # Plot final knowledge
+            final_k = get_final_knowledge_stats(history_data, experiment_plots_path)  # for test
+            plot_spider_scores(final_k, experiment_plots_path)
 
-    return history_data
+            # Export chat history, sample three
+            chats_sample = {"sample1": sample(utterances_data, 1)[0],
+                            "sample2": sample(utterances_data, 1)[0],
+                            "sample3": sample(utterances_data, 1)[0]}
+            with open(experiment_plots_path / 'sample_transcripts.json', 'w') as f:
+                json.dump(chats_sample, f)  # for test
+
+        # Collect data
+        plot_name += f",{experiment_id.split(' ')[0]}"
+        history_data["experiment_id"] = experiment_id.split(' ')[0][-1]
+        history_data["experiment_label"] = replace_experiment_name(experiment_id, baselines=len(args.experiments) > 2)
+        all_data.append(history_data)
+
+    if args.compare_experiments:
+        all_data = pd.concat(all_data, ignore_index=True)
+
+        if not testing_experiment:
+            # Plot average reward
+            plot_avg_reward_compared(all_data[["experiment_id", "experiment_label",
+                                               "condition", "run", "train_timestep", "rewards"]],
+                                     PLOTS_PATH, range=False, plot_id=plot_name)  # too crowded
+            plot_avg_reward_compared(all_data[["experiment_id", "experiment_label",
+                                               "condition", "run", "train_timestep", "rewards"]],
+                                     PLOTS_PATH, range=False, condition="Ratio claims to triples", plot_id=plot_name)
+
+            # Plot average reward (better plot?)
+            plot_avg_reward_compared_single_condition(all_data[["experiment_id", "experiment_label",
+                                                                "condition", "run", "train_timestep", "rewards"]],
+                                                      PLOTS_PATH, range=False, condition="Ratio claims to triples",
+                                                      plot_id=plot_name)
+            plot_avg_reward_compared_single_condition(all_data[["experiment_id", "experiment_label",
+                                                                "condition", "run", "train_timestep", "rewards"]],
+                                                      PLOTS_PATH, range=True, condition="Ratio claims to triples",
+                                                      plot_id=plot_name)  # std overlap too much
+
+        if testing_experiment:
+            # Plot cumulative reward
+            plot_cum_reward_compared(all_data[["experiment_id", "experiment_label",
+                                               "condition", "run", "test_timestep", "rewards"]],
+                                     PLOTS_PATH, range=False, plot_id=plot_name)
+
+    print("DONE")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--experiment_id", default="e1 (10turns_8chats_3runs)", type=str, help="ID for an experiment")
-    parser.add_argument("--compare_experiments", default=[], help="IDs of other experiments")
+    # parser.add_argument("--experiments", default=["e1 (10turns_8chats_3runs)"], help="Experiment IDs")
+    # parser.add_argument("--compare_experiments", default=False, help="Plot across experiments")
 
-    # parser.add_argument("--experiment_id", default="t1 (10turns_3runs_8checkpoints)", type=str,
-    #                     help="ID for an experiment")
-    # parser.add_argument("--compare_experiments", default=["t2 (10turns_3runs_8checkpoints)"],
-    #                     help="IDs of other experiments")
+    # parser.add_argument("--experiments", default=["t1 (10turns_3runs_8checkpoints)",
+    #                                                 "t2 (10turns_3runs_8checkpoints)"], help="Experiment IDs")
+    # parser.add_argument("--compare_experiments", default=True, help="Plot across experiments")
 
-    # parser.add_argument("--experiment_id", default="e1 (10turns_8chats_3runs)", type=str,
-    #                     help="ID for an experiment")
-    # parser.add_argument("--compare_experiments", default=["e3 (10turns_8chats_3runs)",
-    #                                                       "e4 (10turns_8chats_3runs)",
-    #                                                       "e5 (10turns_8chats_3runs)"],
-    #                     help="IDs of other experiments")
+    # parser.add_argument("--experiments", default=["e1 (10turns_8chats_3runs)",
+    #                                               "e3 (10turns_8chats_3runs)",
+    #                                               "e4 (10turns_8chats_3runs)",
+    #                                               "e5 (10turns_8chats_3runs)"], help="Experiment IDs")
+    # parser.add_argument("--compare_experiments", default=True, help="Plot across experiments")
 
-    # parser.add_argument("--experiment_id", default="t1 (10turns_3runs_8checkpoints)", type=str,
-    #                     help="ID for an experiment")
-    # parser.add_argument("--compare_experiments", default=["t3 (10turns_3runs_8checkpoints)",
-    #                                                       "t4 (10turns_3runs_8checkpoints)",
-    #                                                       "t5 (10turns_3runs_8checkpoints)"],
-    #                     help="IDs of other experiments")
+    parser.add_argument("--experiments", default=["t1 (10turns_3runs_8checkpoints)",
+                                                  "t3 (10turns_3runs_8checkpoints)",
+                                                  "t4 (10turns_3runs_8checkpoints)",
+                                                  "t5 (10turns_3runs_8checkpoints)"], help="Experiment IDs")
+    parser.add_argument("--compare_experiments", default=True, help="Plot across experiments")
 
     args = parser.parse_args()
 
-    base_experiment = main(args)
-    if args.compare_experiments:
-        # Save first experiment
-        base_experiment["experiment"] = replace_experiment_name(args.compare_experiments, args.experiment_id)
-        plot_name = f"{args.experiment_id.split(' ')[0]}"
-
-        all_data = [base_experiment]
-        for experiment_id in args.compare_experiments:
-            # Make plots for second experiment
-            args.experiment_id = experiment_id
-            compare_experiment = main(args)
-
-            # Fix names
-            plot_name += f",{args.experiment_id.split(' ')[0]}"
-            compare_experiment["experiment"] = replace_experiment_name(args.compare_experiments, args.experiment_id)
-            all_data.append(compare_experiment)
-
-        all_data = pd.concat(all_data, ignore_index=True)
-        plot_avg_reward_compared(all_data[["experiment", "condition", "run", "timestep", "rewards"]], PLOTS_PATH,
-                                 range=False, plot_id=plot_name)  # too crowded
-        plot_avg_reward_compared(all_data[["experiment", "condition", "run", "timestep", "rewards"]], PLOTS_PATH,
-                                 range=False, condition="Ratio claims to triples", plot_id=plot_name)
-        plot_avg_reward_compared_single_condition(all_data[["experiment", "condition", "run", "timestep", "rewards"]],
-                                                  PLOTS_PATH, range=False, condition="Ratio claims to triples",
-                                                  plot_id=plot_name)
-        plot_avg_reward_compared_single_condition(all_data[["experiment", "condition", "run", "timestep", "rewards"]],
-                                                  PLOTS_PATH, range=True, condition="Ratio claims to triples",
-                                                  plot_id=plot_name)  # std overlap too much
-        plot_avg_reward_compared_single_condition(all_data[["experiment", "condition", "run", "timestep", "rewards"]],
-                                                  PLOTS_PATH, range=True, condition="Ratio perspectives to claims",
-                                                  plot_id=plot_name)  # our condition does not stand out
-
-        # Cumulative rewards only if testing
-        if args.experiment_id.startswith("t"):
-            plot_cum_reward_compared(all_data[["experiment", "condition", "run", "timestep", "rewards"]], PLOTS_PATH,
-                                     range=False, plot_id=plot_name)
-
-    print("DONE")
+    main(args)
 
 # "e1 (10turns_8chats_3runs)" => avg reward for training process, qvalues for action distribution. cum reward per chat to see if we are improving
 # "t1 (10turns_3runs_8checkpoints)" => knowledge spider and table for acquired knowledge and action counts for testing final.
