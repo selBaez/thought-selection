@@ -8,7 +8,7 @@ from dialogue_system.rl_utils.rl_parameters import DEVICE, LR, EPSILON_INFO, GAM
 
 
 class D2QRandom(D2Q):
-    def __init__(self, brain, memory, encoder, reward="Total triples",
+    def __init__(self, brain, replay_memory, experience_memory, encoder, reward="Total triples",
                  trained_model=None,
                  states_folder=Path("."),
                  learning_rate=LR, epsilon_info=EPSILON_INFO, gamma=GAMMA):
@@ -20,7 +20,7 @@ class D2QRandom(D2Q):
 
         returns:
         """
-        super().__init__(brain, memory, encoder, reward, trained_model, states_folder,
+        super().__init__(brain, replay_memory, experience_memory, encoder, reward, trained_model, states_folder,
                          learning_rate, epsilon_info, gamma)
 
     # Learning

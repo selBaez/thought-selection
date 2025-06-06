@@ -13,7 +13,7 @@ from dialogue_system.rl_utils.rl_parameters import DEVICE, STATE_EMBEDDING_SIZE,
 
 
 class D2QSpecific(D2Q):
-    def __init__(self, brain, memory, encoder, reward="Total triples",
+    def __init__(self, brain, replay_memory, experience_memory, encoder, reward="Total triples",
                  trained_model=None,
                  states_folder=Path("."),
                  learning_rate=LR, epsilon_info=EPSILON_INFO, gamma=GAMMA):
@@ -25,7 +25,7 @@ class D2QSpecific(D2Q):
 
         returns:
         """
-        super().__init__(brain, memory, encoder, reward, trained_model, states_folder,
+        super().__init__(brain, replay_memory, experience_memory, encoder, reward, trained_model, states_folder,
                          learning_rate, epsilon_info, gamma)
 
         # D2Q infrastructure
@@ -35,7 +35,7 @@ class D2QSpecific(D2Q):
         self.optimizer = optim.AdamW(self.policy_net.parameters(), lr=learning_rate, amsgrad=True)
 
     # Learning
-    def _update_policy_network(self):
+    def _update_policy_network(self, replay=False):
         """Updates the policy network by
         1) sampling a batch,
         2) computing the states Q-values using the policy network,
@@ -50,7 +50,13 @@ class D2QSpecific(D2Q):
 
         returns: None
         """
-        transitions = self.memory.sample(reward_type=self._reward)
+        # Which memory are we using to train
+        if replay:
+            transitions = self.replay_memory.sample(reward_type=self._reward)
+        else:
+            transitions = self.experience_memory.sample(reward_type=self._reward)
+
+        # Can we actually train?
         if transitions:
             # Transpose the batch: convert batch-array of Transitions to Transition of batch-arrays
             batch = TaggedTransition(*zip(*transitions))

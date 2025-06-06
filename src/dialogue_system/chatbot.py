@@ -78,7 +78,7 @@ class Chatbot(object):
         return string
 
     def begin_session(self, experiment_id, run_id, context_id, chat_id, speaker,
-                      reward, init_brain, dm_model, shared_memory=None, shared_encoder=None,
+                      reward, init_brain, dm_model, replay_memory=None, shared_memory=None, shared_encoder=None,
                       test_model=None):
         """Sets up a session .
 
@@ -128,19 +128,19 @@ class Chatbot(object):
 
         # Run RL or run baselines
         if dm_model == "rl(abstract)":
-            self._selector = D2QAbstract(self._brain, shared_memory, shared_encoder, reward=reward,
+            self._selector = D2QAbstract(self._brain, replay_memory, shared_memory, shared_encoder, reward=reward,
                                          trained_model=prev_chat_model,
                                          states_folder=self.scenario_folder / "cumulative_states/")
         elif dm_model == "rl(specific)":
-            self._selector = D2QSpecific(self._brain, shared_memory, shared_encoder, reward=reward,
+            self._selector = D2QSpecific(self._brain, replay_memory, shared_memory, shared_encoder, reward=reward,
                                          trained_model=prev_chat_model,
                                          states_folder=self.scenario_folder / "cumulative_states/")
-        elif dm_model == "random":
-            self._selector = D2QRandom(self._brain, shared_memory, shared_encoder, reward=reward,
+        elif dm_model == "rl(random)":
+            self._selector = D2QRandom(self._brain, replay_memory, shared_memory, shared_encoder, reward=reward,
                                        trained_model=prev_chat_model,
                                        states_folder=self.scenario_folder / "cumulative_states/")
         elif dm_model == "rl(full)":
-            self._selector = D2Q(self._brain, shared_memory, shared_encoder, reward=reward,
+            self._selector = D2Q(self._brain, replay_memory, shared_memory, shared_encoder, reward=reward,
                                  trained_model=prev_chat_model,
                                  states_folder=self.scenario_folder / "cumulative_states/")
         else:

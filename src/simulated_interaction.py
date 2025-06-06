@@ -30,7 +30,7 @@ def print_bot(brain_response, response_template):
         f"\t{response_template['utterance']}")
 
 
-def main(args, memory=None, encoder=None):
+def main(args, replay_memory=None, shared_memory=None, encoder=None):
     """Runs the main interaction loop of the chatbot."""
     # Sets up user model
     user_model = User(args.user_model)
@@ -39,7 +39,7 @@ def main(args, memory=None, encoder=None):
     chatbot = Chatbot()
     chatbot.begin_session(args.experiment_id, args.run_id,
                           args.context_id, args.chat_id, args.speaker,
-                          args.reward, args.init_brain, args.dm_model, memory, encoder,
+                          args.reward, args.init_brain, args.dm_model, replay_memory, shared_memory, encoder,
                           args.test_model)
 
     # Situate chat
@@ -61,6 +61,11 @@ def main(args, memory=None, encoder=None):
 
         # use response template to query HP dataset
         user_action, capsule = user_model.query_database(response_template)
+
+        # Ugly hack to signal that there was a random change of topic. TODO fix this properly
+        if user_action == "random triple":
+            capsule["utterance"] = "I do not know about that. I have to change the topic. " + capsule["utterance"]
+
 
     # Farewell + update savefile
     print("\nBot:", chatbot.farewell)
@@ -95,7 +100,7 @@ if __name__ == "__main__":
                                  'Ratio perspectives to claims', 'Ratio conflicts to claims'
                                  ])
     parser.add_argument("--dm_model", default="rl(full)", type=str, help="Type of selector to use",
-                        choices=["random", "rl(full)", "rl(abstract)", "rl(specific)"])
+                        choices=["rl(random)", "rl(full)", "rl(abstract)", "rl(specific)"])
     parser.add_argument("--test_model", default=None, type=str, help="Use trained network and freeze learning")
 
     args = parser.parse_args()

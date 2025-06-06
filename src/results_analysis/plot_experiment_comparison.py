@@ -578,7 +578,7 @@ def main(args):
         # Collect data
         plot_name += f",{experiment_id.split(' ')[0]}"
         history_data["experiment_id"] = experiment_id.split(' ')[0][-1]
-        history_data["experiment_label"] = replace_experiment_name(experiment_id, baselines=len(args.experiments) > 2)
+        history_data["experiment_label"] = replace_experiment_name(experiment_id, baselines=len(args.experiments) > 1)
         all_data.append(history_data)
 
     if args.compare_experiments:
@@ -614,24 +614,26 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    # parser.add_argument("--experiments", default=["e1 (10turns_8chats_3runs)"], help="Experiment IDs")
-    # parser.add_argument("--compare_experiments", default=False, help="Plot across experiments")
+    parser.add_argument("--experiments", default=["e1 (10turns_5chats_3runs)"], help="Experiment IDs")
+    parser.add_argument("--compare_experiments", default=False, help="Plot across experiments")
 
     # parser.add_argument("--experiments", default=["t1 (10turns_3runs_8checkpoints)",
     #                                                 "t2 (10turns_3runs_8checkpoints)"], help="Experiment IDs")
     # parser.add_argument("--compare_experiments", default=True, help="Plot across experiments")
 
-    # parser.add_argument("--experiments", default=["e1 (10turns_8chats_3runs)",
-    #                                               "e3 (10turns_8chats_3runs)",
-    #                                               "e4 (10turns_8chats_3runs)",
-    #                                               "e5 (10turns_8chats_3runs)"], help="Experiment IDs")
+    # parser.add_argument("--experiments", default=["e1 (10turns_20chats_3runs)",
+    #                                               "e3 (10turns_20chats_3runs)",
+    #                                               # "e4 (10turns_20chats_3runs)",
+    #                                               # "e5 (10turns_20chats_3runs)"
+    #                                               ], help="Experiment IDs")
     # parser.add_argument("--compare_experiments", default=True, help="Plot across experiments")
 
-    parser.add_argument("--experiments", default=["t1 (10turns_3runs_8checkpoints)",
-                                                  "t3 (10turns_3runs_8checkpoints)",
-                                                  "t4 (10turns_3runs_8checkpoints)",
-                                                  "t5 (10turns_3runs_8checkpoints)"], help="Experiment IDs")
-    parser.add_argument("--compare_experiments", default=True, help="Plot across experiments")
+    # parser.add_argument("--experiments", default=["t1 (10turns_3runs_8checkpoints)",
+    #                                               "t3 (10turns_3runs_8checkpoints)",
+    #                                               "t4 (10turns_3runs_8checkpoints)",
+    #                                               "t5 (10turns_3runs_8checkpoints)"
+    #                                               ], help="Experiment IDs")
+    # parser.add_argument("--compare_experiments", default=True, help="Plot across experiments")
 
     args = parser.parse_args()
 

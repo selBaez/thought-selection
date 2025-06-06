@@ -1,11 +1,53 @@
+import pickle
 from datetime import datetime
 from pathlib import Path
 from random import choice
 
 from rdflib import ConjunctiveGraph
 
+from dialogue_system.rl_utils.memory import ReplayMemory
+from dialogue_system.rl_utils.rl_parameters import REPLAY_BATCH_SIZE, REPLAY_POOL_SIZE
 from dialogue_system.utils.global_variables import RESOURCES_PATH, RAW_USER_PATH, HARRYPOTTER_PREFIX, HARRYPOTTER_NS
 from user_model.utils.constants import user_model_names
+
+
+def replace_user_name(user_model):
+    x = user_model.split("/")[-1].split(".")[0]
+    for user_type, user_name in user_model_names.items():
+        x = x.replace(user_type, user_name)
+
+    return x
+
+
+def populate_replay_memory():
+    # Create and pre-populate experience_memory from prev experiments
+    initial_memory_path = Path(RESOURCES_PATH) / "experiments"
+    initial_memory_path.mkdir(parents=True, exist_ok=True)
+    initial_memory_path = initial_memory_path / "initial_memory.pkl"
+
+    if initial_memory_path.exists():
+        with open(initial_memory_path, "rb") as f:
+            shared_memory = pickle.load(f)
+
+    else:
+        shared_memory = ReplayMemory(capacity=REPLAY_POOL_SIZE, batch_size=REPLAY_BATCH_SIZE)
+        paths = [Path(RESOURCES_PATH) / "2025_experiments_small",
+                 Path(RESOURCES_PATH) / "2025_experiments_medium",
+                 Path(RESOURCES_PATH) / "2025_experiments_medium_taggedTransitions",
+                 Path(RESOURCES_PATH) / "2025_experiments_fail",
+                 Path(RESOURCES_PATH) / "2025_experiments_fail_taggedTransitions"]
+
+        for p in paths:
+            if p.exists():
+                tagged = str(p).split("_")[-1] != "taggedTransitions"
+                shared_memory.pre_populate(p, add_reward_type=tagged)
+
+        with open(initial_memory_path, "wb") as f:
+            pickle.dump(shared_memory, f)
+
+    shared_memory._log.info(f"Shared memory preloaded with: {len(shared_memory)} transitions")
+
+    return shared_memory
 
 
 def cast_actions_to_json(actions):
@@ -17,15 +59,6 @@ def cast_actions_to_json(actions):
             action_history.append(None)
 
     return action_history
-
-
-def select_entity_type(selected_action):
-    entity_types = selected_action['entity_types']
-    max_val = max(entity_types.values())
-    candidates = [k for k, v in entity_types.items() if v == max_val]
-    most_important_type = choice(candidates)
-
-    return most_important_type
 
 
 def search_session_folder(experiment_id, run_id, context_id, reward, chat_id):
@@ -50,6 +83,15 @@ def create_session_folder(experiment_id, run_id, context_id, reward, chat_id, sp
         session_folder.mkdir(parents=True, exist_ok=True)
 
     return session_folder
+
+
+def select_entity_type(selected_action):
+    entity_types = selected_action['entity_types']
+    max_val = max(entity_types.values())
+    candidates = [k for k, v in entity_types.items() if v == max_val]
+    most_important_type = choice(candidates)
+
+    return most_important_type
 
 
 def download_from_triplestore(brain, directory=RAW_USER_PATH):
@@ -116,11 +158,3 @@ def get_all_attributes(graph_data):
     print(f"\tATTRIBUTES IN DATASET: {len(all_attributes)}")
 
     return all_attributes
-
-
-def replace_user_name(user_model):
-    x = user_model.split("/")[-1].split(".")[0]
-    for user_type, user_name in user_model_names.items():
-        x = x.replace(user_type, user_name)
-
-    return x

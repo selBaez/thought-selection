@@ -18,7 +18,7 @@ ATTRIBUTE_TYPE_PATH = RESOURCES_PATH + "hp_data/attribute_types.csv"
 OG_DATA_PATHS = [RESOURCES_PATH + "hp_data/test_set_en/", RESOURCES_PATH + "hp_data/train_set_en/"]
 PREPROCESSED_DATA_PATHS = [RESOURCES_PATH + "hp_data/trig per book/"]
 USER_PATH = RESOURCES_PATH + "users"
-RAW_USER_PATH = USER_PATH + "/raw_medium"
+RAW_USER_PATH = USER_PATH + "/raw_small"
 RAW_VANILLA_USER_PATH = RAW_USER_PATH + "/vanilla.trig"
 PROCESSED_USER_PATH = USER_PATH + "/processed"
 

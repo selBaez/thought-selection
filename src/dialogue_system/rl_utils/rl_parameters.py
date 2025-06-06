@@ -4,20 +4,22 @@ import torch
 
 ################## RL PARAMETERS ##################
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-BATCH_SIZE = 32
-REPLAY_PER_TURN = 10
 DQN_HIDDEN_SIZE = 64
-LR = 1e-5
-EPSILON_INFO = {"start": 0.9, "end": 0.05, "decay": 1000}
-GAMMA = 0.99
+LR = 1e-5  # 1e-3 for DQN
+EPSILON_INFO = {"start": 0.2, "end": 0.05, "decay": 1000}
+GAMMA = 0.9
 TAU = 0.005
 
 ################## STATE REPRESENTATION PARAMETERS ##################
-STATE_HIDDEN_SIZE = 64  # original features per node is 87
+STATE_HIDDEN_SIZE = 64  # 60 for DQN, original features per node is 87
 STATE_EMBEDDING_SIZE = 16  # also n_observations
 
 ################## MEMORY PARAMETERS ##################
-REPLAY_POOL_SIZE = 500000  # 5000 for DQN, 10000 for tutorial
+REPLAY_POOL_SIZE = 150000  # 5000 for DQN, 10000 for tutorial
+REPLAY_BATCH_SIZE = 32
+REPLAY_PER_TURN = 10
+EXPERIENCE_POOL_SIZE = 5000
+EXPERIENCE_BATCH_SIZE = 32
 Transition = namedtuple('Transition', ('state', 'abs_action', 'spe_action', 'next_state', 'reward'))
 TaggedTransition = namedtuple('TaggedTransition', ('state', 'abs_action', 'spe_action', 'next_state', 'reward', 'reward_type'))
 

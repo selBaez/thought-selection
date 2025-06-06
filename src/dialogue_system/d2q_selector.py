@@ -14,14 +14,15 @@ from cltl.thoughts.api import ThoughtSelector
 from cltl.thoughts.thought_selection.utils.rl_utils import BrainEvaluator
 from cltl.thoughts.thought_selection.utils.thought_utils import decompose_thoughts
 from dialogue_system.rl_utils.rl_parameters import DEVICE, STATE_EMBEDDING_SIZE, DQN_HIDDEN_SIZE, LR, REPLAY_PER_TURN, \
-    EPSILON_INFO, GAMMA, TAU, ACTION_THOUGHTS, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, ACTION_TYPES_REVERSED, TaggedTransition
+    EPSILON_INFO, GAMMA, TAU, ACTION_THOUGHTS, N_ACTIONS_THOUGHTS, N_ACTION_TYPES, ACTION_TYPES_REVERSED, \
+    TaggedTransition
 from dialogue_system.utils.helpers import download_from_triplestore, select_entity_type
 from results_analysis.utils.plotting import separate_thought_elements, plot_action_counts, plot_cumulative_reward, \
     plot_metrics_over_time
 
 
 class D2Q(ThoughtSelector):
-    def __init__(self, brain, memory, encoder, reward="Total triples",
+    def __init__(self, brain, replay_memory, experience_memory, encoder, reward="Total triples",
                  trained_model=None,
                  states_folder=Path("."),
                  learning_rate=LR, epsilon_info=EPSILON_INFO, gamma=GAMMA):
@@ -31,7 +32,7 @@ class D2Q(ThoughtSelector):
         as triple store => brain (only the current state)
         as trig files in states_folder => in a list
         as a calculated metric over the graph => in a list
-        as embeddings => in Replay memory
+        as embeddings => in experience memory
 
 
         params
@@ -68,7 +69,9 @@ class D2Q(ThoughtSelector):
         self._log.info(f"Reward: {self._reward}")
 
         # infrastructure to keep track of selections.
-        self.memory = memory
+        self.experience_memory = experience_memory
+        self.replay_memory = replay_memory
+
         self._state_history = {"trig_files": [], "metrics": [], "embeddings": []}
         self._update_states()
         self._reward_history = [0]
@@ -129,13 +132,6 @@ class D2Q(ThoughtSelector):
         model_dict.update(new_dict)
         self.policy_net.load_state_dict(model_dict)
 
-        # Load memory replay
-        memory_filename = filename.parent / "memory.pkl"
-        with open(memory_filename, 'rb') as file:
-            self.memory = pickle.load(file)
-
-        self._log.info(f"Loaded model from {filename} and memory from {memory_filename}")
-
     def save(self, filename):
         """Writes the trained model to a file.
 
@@ -148,11 +144,11 @@ class D2Q(ThoughtSelector):
         torch.save(self.policy_net.state_dict(), filename)
         self._log.info(f"Saved model to {filename.name}")
 
-        # Save memory replay
+        # Save experience memory
         memory_filename = filename.parent / "memory.pkl"
         with open(memory_filename, 'wb') as file:
-            pickle.dump(self.memory, file)
-        self._log.info(f"Saved memory to {memory_filename.name}")
+            pickle.dump(self.experience_memory, file)
+        self._log.info(f"Saved experience memory to {memory_filename.name}")
 
     def _preprocess(self, brain_response, thought_options=None):
         # Manage types of capsules
@@ -199,7 +195,7 @@ class D2Q(ThoughtSelector):
 
     # Learning
 
-    def _update_policy_network(self):
+    def _update_policy_network(self, replay=False):
         """Updates the policy network by
         1) sampling a batch,
         2) computing the states Q-values using the policy network,
@@ -214,7 +210,13 @@ class D2Q(ThoughtSelector):
 
         returns: None
         """
-        transitions = self.memory.sample(reward_type=self._reward)
+        # Which memory are we using to train
+        if replay:
+            transitions = self.replay_memory.sample(reward_type=self._reward)
+        else:
+            transitions = self.experience_memory.sample(reward_type=self._reward)
+
+        # Can we actually train?
         if transitions:
             # Transpose the batch: convert batch-array of Transitions to Transition of batch-arrays
             batch = TaggedTransition(*zip(*transitions))
@@ -345,19 +347,24 @@ class D2Q(ThoughtSelector):
             if reward < 0:
                 self._log.debug(f"Negative reward! {reward}")
 
-            # Store the transition in memory
-            self._log.debug("Pushing state transition to Memory Replay")
-            self.memory.push(self._state_history["embeddings"][-2],
-                             self._abstract_action_history[-1], self._specific_action_history[-1],
-                             self._state_history["embeddings"][-1],
-                             torch.tensor([reward], device=DEVICE),
-                             self._reward)
+            # Store the transition in experience memory
+            self._log.debug("Pushing state transition to Experience Memory")
+            self.experience_memory.push(self._state_history["embeddings"][-2],
+                                        self._abstract_action_history[-1], self._specific_action_history[-1],
+                                        self._state_history["embeddings"][-1],
+                                        torch.tensor([reward], device=DEVICE),
+                                        self._reward)
 
-            if not self.prediction_mode:  # TODO: Instead of 1 update per turn, do K updates from the replay buffer (e.g., 5–10)
-                # Perform one step of the optimization (on the policy network) and update target network
+            if not self.prediction_mode:
+                # Perform optimization
                 self._log.debug("Updating networks")
+
+                # First do K updates from the replay buffer (K * batch size)
                 for update in range(REPLAY_PER_TURN):
-                    self._update_policy_network()
+                    self._update_policy_network(replay=True)
+
+                # Then do one update from experience (1 * batch size) and update target network
+                self._update_policy_network(replay=False)
                 self._update_target_network()
 
         self.reward_history.append(reward)

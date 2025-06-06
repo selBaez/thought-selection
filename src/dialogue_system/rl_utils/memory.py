@@ -4,12 +4,13 @@ from collections import deque, defaultdict
 from pathlib import Path
 
 from dialogue_system import logger
-from dialogue_system.rl_utils.rl_parameters import REPLAY_POOL_SIZE, BATCH_SIZE, TaggedTransition
+from dialogue_system.rl_utils.rl_parameters import REPLAY_POOL_SIZE, REPLAY_BATCH_SIZE, TaggedTransition
 
 
 class ReplayMemory(object):
 
-    def __init__(self, capacity=REPLAY_POOL_SIZE, batch_size=BATCH_SIZE, prepopulate_path=None, add_reward_type=True):
+    def __init__(self, capacity=REPLAY_POOL_SIZE, batch_size=REPLAY_BATCH_SIZE,
+                 prepopulate_path=None, add_reward_type=True):
 
         self._log = logger.getChild(self.__class__.__name__)
         self._log.info("Booted")
@@ -20,7 +21,7 @@ class ReplayMemory(object):
         if prepopulate_path:
             self.pre_populate(prepopulate_path, add_reward_type=add_reward_type)
 
-        self._log.info(f"Memory size: {len(self)}")
+        self._log.debug(f"Memory size: {len(self)}")
 
     def push(self, *args):
         """Save a transition"""
@@ -50,14 +51,14 @@ class ReplayMemory(object):
             reward = pkl_path.relative_to(experiments_path).parts[1]  # reward is 3rd level
             pkl_by_reward[reward].append(pkl_path)
 
-        # Read them into memory
+        # Read them into experience_memory
         for reward_type, pkl_files in pkl_by_reward.items():
             for pkl_path in pkl_files:
                 printable_path = Path(pkl_path).resolve().relative_to(experiments_path.resolve())
                 try:
                     with open(pkl_path, 'rb') as file:
                         temp_memory = pickle.load(file)
-                    for trans in temp_memory.memory:
+                    for trans in temp_memory.experience_memory:
                         if add_reward_type:
                             self.push(*trans, reward_type)
                         else:
